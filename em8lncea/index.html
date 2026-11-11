@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gentlemen's Barber Shop – Newark, NJ</title>
+<style>
+  :root{
+    --ink:#1b1b1f;
+    --muted:#5c5c66;
+    --bg:#f6f4f0;
+    --card:#ffffff;
+    --accent:#8c5a2b;
+    --accent-dark:#6d4420;
+    --line:#e3ded5;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.5;
+  }
+  .banner{
+    background:#111;
+    color:#fff;
+    font-size:13px;
+    text-align:center;
+    padding:6px 12px;
+  }
+  header{
+    background:var(--ink);
+    color:#fff;
+    padding:40px 20px 44px;
+    text-align:center;
+  }
+  header h1{
+    margin:0 0 8px;
+    font-size:clamp(28px,7vw,44px);
+    line-height:1.15;
+    letter-spacing:.5px;
+  }
+  .sub{margin:0 0 16px;color:#d9d3c8}
+  .rating{
+    display:inline-block;
+    background:rgba(255,255,255,.1);
+    border-radius:999px;
+    padding:6px 14px;
+    font-size:15px;
+    margin-bottom:22px;
+  }
+  .stars{color:#f2b84b;letter-spacing:2px}
+  .actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+  }
+  .btn{
+    display:inline-block;
+    border:0;
+    border-radius:8px;
+    padding:14px 26px;
+    font-size:17px;
+    font-weight:600;
+    text-decoration:none;
+    cursor:pointer;
+    font-family:inherit;
+  }
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-dark)}
+  .btn-call{background:#fff;color:var(--ink)}
+  .btn-disabled{
+    background:rgba(255,255,255,.15);
+    color:#d9d3c8;
+    cursor:default;
+    font-weight:500;
+    font-size:15px;
+  }
+  main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
+  section{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:24px 20px;
+    margin-top:20px;
+  }
+  h2{margin:0 0 14px;font-size:22px}
+  .hours{list-style:none;margin:0;padding:0}
+  .hours li{padding:9px 0;border-bottom:1px solid var(--line)}
+  .hours li:last-child{border-bottom:0}
+  address{font-style:normal}
+  label{display:block;font-weight:600;font-size:14px;margin:14px 0 4px}
+  input,select,textarea{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    font-family:inherit;
+    border:1px solid #c9c3b8;
+    border-radius:8px;
+    background:#fff;
+    color:var(--ink);
+  }
+  textarea{min-height:90px;resize:vertical}
+  .row{display:grid;gap:0 14px;grid-template-columns:1fr}
+  @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+  #demoBtn{width:100%;margin-top:20px;background:var(--accent);color:#fff}
+  #demoBtn:hover{background:var(--accent-dark)}
+  #demoMsg{
+    margin-top:14px;
+    padding:12px;
+    border-radius:8px;
+    background:#fff4e0;
+    border:1px solid #f0d49b;
+    font-weight:600;
+    display:none;
+  }
+  .note{font-size:13px;color:var(--muted);margin:12px 0 0}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:0 16px 32px}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for The Gentlemen's Barber Shop. Not their official website.</div>
+
+<header>
+  <h1>The Gentlemen's Barber Shop</h1>
+  <p class="sub">Barber shop in Newark, NJ</p>
+  <div class="rating" aria-label="Google rating 4.3 out of 5 from 81 reviews">
+    <span class="stars" aria-hidden="true">★★★★☆</span>
+    4.3 on Google · 81 reviews
+  </div>
+  <div class="actions">
+    <a class="btn btn-primary" href="#book">Book Now</a>
+    <span class="btn btn-disabled" aria-disabled="true">Phone number not listed</span>
+  </div>
+</header>
+
+<main>
+  <section id="visit">
+    <h2>Visit</h2>
+    <address>
+      The Gentlemen's Barber Shop<br>
+      131 Elm St, Newark, NJ 07105, USA
+    </address>
+  </section>
+
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
+      <li>Tuesday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
+      <li>Wednesday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
+      <li>Thursday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
+      <li>Friday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
+      <li>Saturday: 8:30&#8239;AM&#8201;&ndash;&#8201;8:45&#8239;PM</li>
+      <li>Sunday: 8:30&#8239;AM&#8201;&ndash;&#8201;8:45&#8239;PM</li>
+    </ul>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form onsubmit="return false;" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="off">
+
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel" autocomplete="off">
+
+      <div class="row">
+        <div>
+          <label for="day">Preferred day</label>
+          <select id="day" name="day">
+            <option value="">Select a day</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+          </select>
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input id="time" name="time" type="time">
+        </div>
+      </div>
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn" id="demoBtn">Request appointment</button>
+      <div id="demoMsg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>Sample concept page. Not the official website of The Gentlemen's Barber Shop.</footer>
+
+<script>
+  document.getElementById('demoBtn').addEventListener('click', function () {
+    var msg = document.getElementById('demoMsg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
