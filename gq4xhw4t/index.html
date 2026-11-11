@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The corner hair salon – Paterson, NJ</title>
+<style>
+  :root {
+    --ink: #2a2230;
+    --muted: #6b6273;
+    --accent: #a8325e;
+    --accent-dark: #85254a;
+    --bg: #faf7f8;
+    --card: #ffffff;
+    --line: #e9e1e5;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #2a2230;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #f6e6ed 0%, #fff 100%);
+    padding: 40px 20px 36px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
+  .rating { font-size: 1.05rem; color: var(--muted); margin: 6px 0 4px; }
+  .rating strong { color: var(--ink); }
+  .stars { color: #d98a00; letter-spacing: 2px; }
+  .address { margin: 4px 0 20px; color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    font-family: inherit;
+    min-height: 48px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .btn-outline { background: #fff; color: var(--accent); }
+  .btn-outline:hover { background: #f6e6ed; }
+  section { padding: 36px 20px; }
+  h2 { margin: 0 0 16px; font-size: 1.5rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: none; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #cfc5cb;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  #demo-msg {
+    display: none;
+    background: #fff4d6;
+    border: 1px solid #e6c766;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
+  footer { text-align: center; padding: 24px 20px 40px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for The corner hair salon. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>The corner hair salon</h1>
+    <p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.7</strong> on Google · 137 reviews</p>
+    <p class="address">893 Main St, Paterson, NJ 07503, USA</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-outline" href="tel:+19733333468">Call (973) 333-3468</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 9:30 AM – 9:00 PM</li>
+        <li>Tuesday: 9:30 AM – 9:00 PM</li>
+        <li>Wednesday: 9:30 AM – 9:00 PM</li>
+        <li>Thursday: 9:30 AM – 9:00 PM</li>
+        <li>Friday: 9:30 AM – 9:00 PM</li>
+        <li>Saturday: 9:30 AM – 9:00 PM</li>
+        <li>Sunday: 9:30 AM – 8:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Services</h2>
+    <div class="card">
+      <p style="margin:0">Call to ask about services.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demo-form" onsubmit="return false;">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </div>
+        <div class="row">
+          <div>
+            <label for="day">Preferred day</label>
+            <input id="day" name="day" type="date">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input id="time" name="time" type="time">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for The corner hair salon. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
