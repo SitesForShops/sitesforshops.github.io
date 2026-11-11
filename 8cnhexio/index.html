@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Most Wanted Cuts | Barber Shop in Newark, NJ</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1d1d1f;background:#f6f6f4;line-height:1.5}
+  .banner{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+  header{background:#1b1b1b;color:#fff;padding:40px 20px 44px;text-align:center}
+  header h1{font-size:2.2rem;letter-spacing:.5px;margin-bottom:6px}
+  header p.type{color:#c9a24a;text-transform:uppercase;letter-spacing:2px;font-size:.85rem;margin-bottom:18px}
+  .rating{display:inline-block;background:#2a2a2a;border-radius:999px;padding:6px 16px;font-size:.95rem;margin-bottom:14px}
+  .rating .star{color:#c9a24a}
+  .address{color:#ddd;margin-bottom:22px}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font-size:1.05rem;font-weight:600;padding:14px 28px;border-radius:8px;min-width:160px}
+  .btn-primary{background:#c9a24a;color:#111}
+  .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+  .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+  main{max-width:720px;margin:0 auto;padding:28px 18px 40px}
+  section{background:#fff;border-radius:12px;padding:24px 20px;margin-bottom:22px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
+  h2{font-size:1.35rem;margin-bottom:14px}
+  ul.hours{list-style:none}
+  ul.hours li{padding:9px 0;border-bottom:1px solid #eee}
+  ul.hours li:last-child{border-bottom:0}
+  label{display:block;font-weight:600;margin:14px 0 5px;font-size:.95rem}
+  input,select,textarea{width:100%;padding:12px;font-size:1rem;border:1px solid #bbb;border-radius:8px;font-family:inherit;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:2px solid #c9a24a;border-color:#c9a24a}
+  form .btn{width:100%;margin-top:20px}
+  #demo-msg{display:none;margin-top:16px;padding:12px;border-radius:8px;background:#fff4d6;border:1px solid #c9a24a;font-weight:600;text-align:center}
+  .note{font-size:.85rem;color:#666;margin-top:14px;text-align:center}
+  footer{text-align:center;font-size:.85rem;color:#666;padding:10px 18px 30px}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Most Wanted Cuts. Not their official website.</div>
+
+<header>
+  <h1>Most Wanted Cuts</h1>
+  <p class="type">Barber Shop · Newark, NJ</p>
+  <div class="rating"><span class="star">★</span> 4.5 on Google · 110 reviews</div>
+  <p class="address">404 Bloomfield Ave #406, Newark, NJ 07107, USA</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#book">Book Now</a>
+    <a class="btn btn-secondary" href="tel:+19734834800">Call (973) 483-4800</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 8:30 AM – 7:30 PM</li>
+      <li>Tuesday: 8:30 AM – 7:30 PM</li>
+      <li>Wednesday: 8:30 AM – 7:30 PM</li>
+      <li>Thursday: 8:30 AM – 7:30 PM</li>
+      <li>Friday: 8:30 AM – 7:30 PM</li>
+      <li>Saturday: 8:30 AM – 7:30 PM</li>
+      <li>Sunday: 8:30 AM – 7:30 PM</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>404 Bloomfield Ave #406, Newark, NJ 07107, USA</p>
+    <p style="margin:8px 0 16px">Phone: <a href="tel:+19734834800">(973) 483-4800</a></p>
+    <p>Call to ask about services.</p>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="booking-form" onsubmit="return false;" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+      <label for="day">Preferred day</label>
+      <input type="date" id="day" name="day">
+
+      <label for="time">Preferred time</label>
+      <input type="time" id="time" name="time">
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn btn-primary" id="submit-btn">Request appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>Sample homepage concept for Most Wanted Cuts. Not their official website.</footer>
+
+<script>
+  document.getElementById('submit-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
