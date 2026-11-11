@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Dog House Pet Salon | Kearny, NJ</title>
+<style>
+  :root {
+    --ink: #1f2a37;
+    --muted: #5b6675;
+    --brand: #1f6f8b;
+    --brand-dark: #16566d;
+    --accent: #f2a541;
+    --bg: #f6f8fa;
+    --card: #ffffff;
+    --line: #e2e8ee;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #1f2a37;
+    color: #fff;
+    text-align: center;
+    font-size: 0.82rem;
+    padding: 8px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+    color: #fff;
+    padding: 48px 20px 56px;
+    text-align: center;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
+  .rating {
+    display: inline-block;
+    background: rgba(255,255,255,0.16);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    margin: 8px 0 14px;
+  }
+  .rating .star { color: var(--accent); }
+  .address { margin: 0 0 24px; opacity: 0.95; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px 26px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-book { background: var(--accent); color: #1f2a37; }
+  .btn-book:hover { background: #e59a2f; }
+  .btn-call { background: #fff; color: var(--brand-dark); }
+  .btn-call:hover { background: #eef5f8; }
+  main { padding: 28px 16px 40px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 20px;
+    margin: 0 auto 22px;
+    max-width: 860px;
+  }
+  h2 { margin: 0 0 14px; font-size: 1.4rem; color: var(--brand-dark); }
+  .hours { list-style: none; margin: 0; padding: 0; }
+  .hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .hours li:last-child { border-bottom: 0; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #c7d0da;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--brand); border-color: var(--brand); }
+  textarea { min-height: 90px; resize: vertical; }
+  .two { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) {
+    .two { grid-template-columns: 1fr 1fr; }
+    h1 { font-size: 2.5rem; }
+  }
+  .btn-submit { background: var(--brand); color: #fff; width: 100%; }
+  .btn-submit:hover { background: var(--brand-dark); }
+  #demo-msg {
+    display: none;
+    background: #fff6e5;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+  }
+  .note { color: var(--muted); font-size: 0.85rem; margin: 12px 0 0; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 0 16px 32px; }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for The Dog House Pet Salon. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>The Dog House Pet Salon</h1>
+    <div class="rating"><span class="star">★</span> 4.8 on Google · 83 reviews</div>
+    <p class="address">866 Kearny Ave, Kearny, NJ 07032, USA</p>
+    <div class="btn-row">
+      <a class="btn btn-book" href="#book">Book Now</a>
+      <a class="btn btn-call" href="tel:+17327995865">Call (732) 799-5865</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: Closed</li>
+      <li>Tuesday: 9:00 AM – 5:00 PM</li>
+      <li>Wednesday: 9:00 AM – 5:00 PM</li>
+      <li>Thursday: 10:00 AM – 5:00 PM</li>
+      <li>Friday: 9:00 AM – 5:00 PM</li>
+      <li>Saturday: 8:00 AM – 8:00 PM</li>
+      <li>Sunday: 9:00 AM – 5:00 PM</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Find the salon</h2>
+    <p>The Dog House Pet Salon is a dog groomer located at 866 Kearny Ave, Kearny, NJ 07032, USA. Call to ask about services.</p>
+    <p><a class="btn btn-call" style="background:var(--brand);color:#fff" href="tel:+17327995865">Tap to call (732) 799-5865</a></p>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" onsubmit="return false;">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="two">
+        <div>
+          <label for="day">Preferred day</label>
+          <input type="date" id="day" name="day">
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input type="time" id="time" name="time">
+        </div>
+      </div>
+      <div>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="button" class="btn btn-submit" id="demo-btn">Request appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>
+  Sample concept page. Not the official website of The Dog House Pet Salon.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
