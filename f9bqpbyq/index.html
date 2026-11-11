@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alba Nails &amp; Beauty Lounge | Paterson, NJ</title>
+<style>
+  :root {
+    --ink: #2a2230;
+    --muted: #6b6273;
+    --accent: #b0487a;
+    --accent-dark: #8e3562;
+    --bg: #fbf7f9;
+    --card: #ffffff;
+    --line: #eadfe5;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: var(--ink);
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    text-align: center;
+    padding: 40px 20px 32px;
+    background: linear-gradient(180deg, #f6e8ef 0%, var(--bg) 100%);
+  }
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    margin: 0 0 8px;
+    line-height: 1.15;
+  }
+  .rating {
+    font-size: 1.05rem;
+    margin: 6px 0 4px;
+  }
+  .rating .star { color: #e0a100; }
+  .address { color: var(--muted); margin: 4px 0 20px; }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .btn-outline { background: #fff; color: var(--accent); }
+  .btn-outline:hover { background: #f6e8ef; }
+  main { max-width: 720px; margin: 0 auto; padding: 0 16px 40px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 24px 20px;
+    margin-top: 20px;
+  }
+  h2 { margin: 0 0 14px; font-size: 1.4rem; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: none; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #cfc3cb;
+    border-radius: 10px;
+    font-family: inherit;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  #demo-msg {
+    display: none;
+    background: #fff4d6;
+    border: 1px solid #e6c766;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 12px 0 0; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    padding: 0 16px 32px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Alba Nails &amp; Beauty Lounge. Not their official website.</div>
+
+<header class="hero">
+  <h1>Alba Nails &amp; Beauty Lounge</h1>
+  <p class="rating"><span class="star">★</span> 4.5 on Google · 125 reviews</p>
+  <p class="address">85 Market St, Paterson, NJ 07505, USA</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#book">Book Now</a>
+    <a class="btn btn-outline" href="tel:+19739251199">Call (973) 925-1199</a>
+  </div>
+</header>
+
+<main>
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 9:00 AM – 7:00 PM</li>
+      <li>Tuesday: 9:00 AM – 7:00 PM</li>
+      <li>Wednesday: 9:00 AM – 7:00 PM</li>
+      <li>Thursday: 9:00 AM – 7:00 PM</li>
+      <li>Friday: 9:00 AM – 7:00 PM</li>
+      <li>Saturday: 8:00 AM – 7:00 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </section>
+
+  <section id="visit">
+    <h2>Visit or call</h2>
+    <p>Located at 85 Market St, Paterson, NJ 07505, USA. Call to ask about services.</p>
+    <p><a class="btn btn-outline" href="tel:+19739251199">Tap to call (973) 925-1199</a></p>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" onsubmit="return false;">
+      <div class="row">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="day">Preferred day</label>
+          <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
+        </div>
+      </div>
+      <div>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>Sample homepage concept for Alba Nails &amp; Beauty Lounge. Not their official website.</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
