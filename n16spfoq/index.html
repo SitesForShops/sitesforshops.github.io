@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuts on the Ave Barbershop – Newark, NJ</title>
+<style>
+  :root {
+    --ink: #1c1c1e;
+    --muted: #5c5c63;
+    --bg: #f6f4f0;
+    --card: #ffffff;
+    --accent: #b3261e;
+    --accent-dark: #8c1d17;
+    --line: #e2ded6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  .banner {
+    background: #1c1c1e;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: var(--ink);
+    color: #fff;
+    padding: 40px 20px 48px;
+    text-align: center;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
+  .address { margin: 0 0 12px; color: #d8d8dc; }
+  .rating { display: inline-block; background: rgba(255,255,255,0.1); border-radius: 999px; padding: 6px 14px; font-size: 0.95rem; margin-bottom: 24px; }
+  .stars { color: #f5b301; letter-spacing: 2px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px 24px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 48px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary { background: #fff; color: var(--ink); }
+  .btn-secondary:hover { background: #ececec; }
+  section { padding: 36px 20px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  h2 { margin: 0 0 16px; font-size: 1.5rem; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: 0; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #bdb8ad;
+    border-radius: 8px;
+    background: #fff;
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } h1 { font-size: 2.5rem; } }
+  #demo-message {
+    display: none;
+    background: #fff4d6;
+    border: 1px solid #e6c766;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 24px 20px 40px; }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Cuts on the Ave Barbershop. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Cuts on the Ave Barbershop</h1>
+    <p class="address">242-244 S Orange Ave, Newark, NJ 07103, USA</p>
+    <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 on Google · 54 reviews</div>
+    <div class="actions">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+15512327029">Call (551) 232-7029</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h2>Opening hours</h2>
+      <ul class="hours">
+        <li>Monday: 8:00 AM – 8:00 PM</li>
+        <li>Tuesday: 8:00 AM – 8:00 PM</li>
+        <li>Wednesday: 8:00 AM – 8:00 PM</li>
+        <li>Thursday: 8:00 AM – 8:00 PM</li>
+        <li>Friday: 8:00 AM – 8:00 PM</li>
+        <li>Saturday: 8:00 AM – 8:00 PM</li>
+        <li>Sunday: 8:00 AM – 8:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="card">
+      <h2>Book an appointment</h2>
+      <form id="booking-form" onsubmit="return false;">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="row">
+          <div>
+            <label for="day">Preferred day</label>
+            <input type="date" id="day" name="day">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input type="time" id="time" name="time">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+        <div id="demo-message" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Cuts on the Ave Barbershop. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-message');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
