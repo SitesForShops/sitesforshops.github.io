@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glozzo Hand Car Wash – Jersey City, NJ</title>
+<style>
+  :root {
+    --blue: #0b5fa5;
+    --blue-dark: #083f70;
+    --accent: #f5a623;
+    --bg: #f4f8fb;
+    --text: #1b2733;
+    --muted: #5a6b7b;
+    --white: #fff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  .banner {
+    background: #1b2733;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding: 6px 10px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: var(--white);
+    padding: 44px 20px 48px;
+    text-align: center;
+  }
+  .hero h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
+  .hero p.sub { margin: 0 0 18px; opacity: .92; }
+  .rating {
+    display: inline-block;
+    background: rgba(255,255,255,.15);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    margin-bottom: 22px;
+  }
+  .rating .star { color: var(--accent); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 14px 26px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-book { background: var(--accent); color: #1b2733; }
+  .btn-call { background: var(--white); color: var(--blue-dark); }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; }
+  section {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 22px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  }
+  h2 { margin: 0 0 12px; font-size: 1.35rem; color: var(--blue-dark); }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 8px 0; border-bottom: 1px solid #e6edf3; }
+  ul.hours li:last-child { border-bottom: none; }
+  address { font-style: normal; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: .95rem; margin-bottom: 4px; }
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #c4d1dd;
+    border-radius: 8px;
+    font-family: inherit;
+    background: #fff;
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .btn-submit { background: var(--blue); color: #fff; width: 100%; }
+  #demo-msg {
+    display: none;
+    background: #fff4dc;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+  }
+  .note { font-size: .85rem; color: var(--muted); margin: 12px 0 0; }
+  footer { text-align: center; font-size: .8rem; color: var(--muted); padding: 0 16px 28px; }
+  @media (min-width: 600px) { .hero h1 { font-size: 2.6rem; } }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Glozzo Hand Car Wash. Not their official website.</div>
+
+<header class="hero">
+  <h1>Glozzo Hand Car Wash</h1>
+  <p class="sub">Auto detailing and hand car wash in Jersey City, NJ</p>
+  <div class="rating"><span class="star">★</span> 4.7 on Google · 192 reviews</div>
+  <div class="btn-row">
+    <a class="btn btn-book" href="#book">Book Now</a>
+    <a class="btn btn-call" href="tel:+13476144199">📞 Call (347) 614-4199</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>Location &amp; Contact</h2>
+    <address>Glozzo Hand Car Wash<br>758 Garfield Ave, Jersey City, NJ 07305, USA</address>
+    <p>Phone: <a href="tel:+13476144199">(347) 614-4199</a></p>
+    <p>Call to ask about services.</p>
+  </section>
+
+  <section>
+    <h2>Opening Hours</h2>
+    <ul class="hours">
+      <li>Monday: 8:00 AM – 7:00 PM</li>
+      <li>Tuesday: 8:00 AM – 7:00 PM</li>
+      <li>Wednesday: 8:00 AM – 7:00 PM</li>
+      <li>Thursday: 8:00 AM – 7:00 PM</li>
+      <li>Friday: 8:00 AM – 7:00 PM</li>
+      <li>Saturday: 8:00 AM – 7:00 PM</li>
+      <li>Sunday: 9:00 AM – 6:00 PM</li>
+    </ul>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" onsubmit="return false;">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+      <div>
+        <label for="day">Preferred day</label>
+        <input type="date" id="day" name="day">
+      </div>
+      <div>
+        <label for="time">Preferred time</label>
+        <input type="time" id="time" name="time">
+      </div>
+      <div>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="button" class="btn btn-submit" id="demo-btn">Request Appointment</button>
+      <div id="demo-msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>Sample homepage concept for Glozzo Hand Car Wash. Not their official website.</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    document.getElementById('demo-msg').style.display = 'block';
+  });
+</script>
+</body>
+</html>
