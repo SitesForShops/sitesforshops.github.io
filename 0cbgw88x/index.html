@@ -1,120 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Best Barbershop in Newark | La cancha barbershop | near to me – Sample Homepage Concept</title>
+<title>The Best Barbershop in Newark | La cancha barbershop | near to me - Sample Homepage Concept</title>
+<meta name="description" content="Sample homepage concept for a Newark, NJ barbershop. Not the official website.">
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1d1f24;background:#f5f4f1;line-height:1.5}
-  .banner{background:#111;color:#fff;font-size:.8rem;text-align:center;padding:.45rem .75rem}
-  header.hero{background:#1c2430;color:#fff;padding:2.5rem 1.25rem 2.75rem;text-align:center}
-  .wrap{max-width:720px;margin:0 auto}
-  h1{font-size:1.5rem;line-height:1.25;margin-bottom:.75rem}
-  .rating{display:inline-block;background:rgba(255,255,255,.12);border-radius:999px;padding:.35rem .9rem;font-size:.95rem;margin-bottom:.75rem}
-  .rating .star{color:#f5b301}
-  .addr{opacity:.9;margin-bottom:1.25rem}
-  .btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
-  .btn{display:inline-block;border:0;border-radius:10px;padding:.9rem 1.5rem;font-size:1.05rem;font-weight:600;text-decoration:none;cursor:pointer;font-family:inherit}
-  .btn-primary{background:#e0a526;color:#1c1c1c}
-  .btn-secondary{background:#fff;color:#1c2430}
-  .btn:focus-visible{outline:3px solid #7fb4ff;outline-offset:2px}
-  section{padding:2rem 1.25rem}
-  h2{font-size:1.3rem;margin-bottom:1rem}
-  .card{background:#fff;border-radius:12px;padding:1.25rem;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-  ul.hours{list-style:none}
-  ul.hours li{padding:.5rem 0;border-bottom:1px solid #eee}
-  ul.hours li:last-child{border-bottom:0}
-  label{display:block;font-weight:600;margin:.9rem 0 .3rem;font-size:.95rem}
-  input,textarea{width:100%;padding:.7rem;border:1px solid #bbb;border-radius:8px;font-size:1rem;font-family:inherit}
-  textarea{min-height:90px;resize:vertical}
-  form .btn{margin-top:1.1rem;width:100%}
-  #demo-msg{margin-top:1rem;padding:.75rem;border-radius:8px;background:#fff4d6;border:1px solid #e0a526;font-weight:600;display:none}
-  .note{font-size:.85rem;color:#555;margin-top:.9rem}
-  footer{text-align:center;font-size:.8rem;color:#666;padding:1.5rem 1.25rem 2.5rem}
+:root{
+  --ink:#0f1012;
+  --char:#1a1c20;
+  --char2:#24272d;
+  --red:#e11d2e;
+  --red2:#ff4757;
+  --gold:#f5b942;
+  --white:#fff;
+  --mute:#b9bdc6;
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--ink);color:var(--white);line-height:1.6;
+  padding-bottom:70px;overflow-x:hidden;
+}
+a{color:inherit}
+h1,h2,h3{font-family:Impact,"Arial Narrow Bold","Franklin Gothic Heavy","Helvetica Neue",Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;font-weight:800}
+section{scroll-margin-top:70px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.banner{background:var(--gold);color:#111;text-align:center;font-size:.8rem;font-weight:700;padding:7px 12px;line-height:1.3}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(15,16,18,.94);backdrop-filter:blur(10px);border-bottom:1px solid #2c2f36}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;text-decoration:none}
+.pole{width:14px;height:30px;border-radius:7px;border:2px solid #fff;background:repeating-linear-gradient(135deg,var(--red) 0 6px,#fff 6px 12px,#2a5bd7 12px 18px,#fff 18px 24px);background-size:200% 200%;animation:spin 3s linear infinite}
+@keyframes spin{to{background-position:0 48px}}
+nav ul{list-style:none;display:flex;gap:6px}
+nav a.link{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);transition:.2s}
+nav a.link:hover{color:#fff;background:var(--char2)}
+.menu-btn{display:none;background:var(--red);border:0;color:#fff;font-weight:800;border-radius:12px;padding:9px 14px;font-size:.85rem;letter-spacing:.08em;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav ul{position:absolute;left:0;right:0;top:60px;background:var(--char);flex-direction:column;padding:10px 20px 18px;border-bottom:3px solid var(--red);display:none}
+  nav ul.open{display:flex}
+  nav a.link{padding:14px;font-size:1rem}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 90px;background:
+  radial-gradient(circle at 85% 10%,rgba(225,29,46,.35),transparent 45%),
+  radial-gradient(circle at 5% 90%,rgba(245,185,66,.18),transparent 40%),
+  linear-gradient(160deg,#1c1e23,#0f1012 70%)}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 38px,rgba(255,255,255,.025) 38px 76px)}
+.hero .wrap{position:relative}
+.badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:8px 16px;border-radius:999px;font-weight:700;font-size:.92rem}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.hero h1{font-size:clamp(2.2rem,7.5vw,4.6rem);margin:22px 0 16px;max-width:900px;overflow-wrap:anywhere}
+.hero h1 span{background:linear-gradient(90deg,#fff,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-size:1.2rem;color:var(--mute);max-width:560px;margin-bottom:30px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:14px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;font-size:.95rem;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px)}
+.btn.red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;box-shadow:0 10px 28px rgba(225,29,46,.4)}
+.btn.line{border-color:#fff;color:#fff;background:transparent}
+.btn.line:hover{background:#fff;color:#111}
+.btn.gold{background:var(--gold);color:#111}
+.scissor{position:absolute;right:-20px;bottom:-30px;font-size:15rem;opacity:.07;transform:rotate(-20deg)}
+.stripe{height:10px;background:repeating-linear-gradient(135deg,var(--red) 0 16px,#fff 16px 32px,#2a5bd7 32px 48px,#fff 48px 64px)}
+
+/* sections */
+.sec{padding:80px 0}
+.sec.alt{background:var(--char)}
+.eyebrow{color:var(--red2);font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;margin-bottom:8px}
+.sec h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
+.lead{color:var(--mute);max-width:620px;margin-bottom:26px}
+.example{display:inline-block;background:rgba(245,185,66,.14);border:1px dashed var(--gold);color:var(--gold);font-size:.8rem;font-weight:700;padding:6px 12px;border-radius:10px;margin-bottom:22px}
+
+/* services */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:linear-gradient(160deg,var(--char2),#17191d);border:1px solid #30343b;border-radius:var(--radius);padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(0,0,0,.45);border-color:var(--red)}
+.card .ic{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-size:1.9rem;background:linear-gradient(135deg,var(--red),#8f0f1b);margin-bottom:16px}
+.card h3{font-size:1.4rem;margin-bottom:8px}
+.card p{color:var(--mute);font-size:.95rem;margin-bottom:14px}
+.price{font-weight:800;color:var(--gold);margin-bottom:12px}
+.ex-tag{display:block;font-size:.72rem;font-weight:700;color:var(--gold);border-top:1px dashed #4a4f58;padding-top:10px}
+
+/* hours */
+.hours-grid{display:grid;gap:30px;grid-template-columns:1fr;align-items:start}
+@media(min-width:800px){.hours-grid{grid-template-columns:1fr 1fr}}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--char2);border-radius:var(--radius);overflow:hidden;border:1px solid #30343b}
+td{padding:15px 20px;border-bottom:1px solid #30343b}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem}
+td:last-child{text-align:right;color:#e8eaee}
+tr.closed td:last-child{color:var(--red2);font-weight:800}
+tr:hover td{background:#2c3036}
+.hours-side{background:linear-gradient(135deg,var(--red),#7a0c16);border-radius:var(--radius);padding:34px}
+.hours-side h3{font-size:1.8rem;margin-bottom:10px}
+
+/* reviews */
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:30px;background:linear-gradient(135deg,var(--char2),#121316);border:1px solid #30343b;border-radius:28px;padding:34px;margin-bottom:40px}
+.big{font-family:Impact,"Arial Narrow Bold",Arial,sans-serif;font-size:6rem;line-height:1;color:var(--gold)}
+.stars{font-size:1.9rem;letter-spacing:4px;color:var(--gold);line-height:1}
+.stars .part{background:linear-gradient(90deg,var(--gold) 60%,#4a4f58 60%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.rating-box p{color:var(--mute);margin:6px 0 16px}
+.row-label{margin-top:10px}
+.rev-row{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rev{background:var(--char2);border:1px solid #30343b;border-radius:var(--radius);padding:22px;transition:transform .25s}
+.rev:hover{transform:translateY(-5px)}
+.rev .ebadge{display:block;margin-bottom:12px}
+.rev .ebadge span{display:inline-block;background:var(--gold);color:#111;font-weight:800;font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;padding:3px 10px;border-radius:8px}
+.rev .stars{font-size:1.2rem;letter-spacing:2px;margin-bottom:12px}
+.rev p{color:var(--mute);font-style:italic;margin-bottom:14px}
+.rev strong{font-size:.9rem}
+
+/* contact */
+.contact-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.c-card{background:var(--char2);border:1px solid #30343b;border-radius:var(--radius);padding:28px;transition:transform .25s}
+.c-card:hover{transform:translateY(-5px)}
+.c-card .ic{font-size:2rem;margin-bottom:10px}
+.c-card h3{font-size:1.2rem;margin-bottom:8px}
+.c-card p{color:var(--mute);margin-bottom:16px}
+.c-card .btn{padding:12px 20px}
+
+/* form */
+.form{max-width:640px;background:var(--char2);border:1px solid #30343b;border-radius:28px;padding:30px;display:grid;gap:16px}
+.two{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:700;font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px;color:var(--mute)}
+input,select,textarea{width:100%;padding:14px;border-radius:12px;border:2px solid #3a3e47;background:#111214;color:#fff;font:inherit;font-size:1rem}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red2)}
+textarea{min-height:100px;resize:vertical}
+#demoMsg{display:none;background:rgba(245,185,66,.15);border:2px solid var(--gold);color:var(--gold);font-weight:800;padding:14px;border-radius:12px;text-align:center}
+.note{color:var(--mute);font-size:.85rem;margin-top:14px;max-width:640px}
+
+footer{background:#08090a;border-top:4px solid var(--red);padding:40px 0;text-align:center;color:var(--mute);font-size:.9rem}
+footer strong{display:block;color:#fff;font-size:1.05rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.06em;overflow-wrap:anywhere}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;background:linear-gradient(135deg,var(--red),#a30f1d);color:#fff;text-align:center;padding:16px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;text-decoration:none;font-size:1.05rem;box-shadow:0 -6px 20px rgba(0,0,0,.5)}
+@media(max-width:900px){.callbar{display:block}}
+@media(min-width:901px){body{padding-bottom:0}}
+
+.js .fade{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.js .fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pole{animation:none}.js .fade{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
+<script>document.body.classList.add('js');</script>
 
 <div class="banner">Sample homepage concept for The Best Barbershop in Newark | La cancha barbershop | near to me. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>The Best Barbershop in Newark | La cancha barbershop | near to me</h1>
-    <div class="rating" aria-label="Google rating 4.6 from 169 reviews"><span class="star">★</span> 4.6 on Google · 169 reviews</div>
-    <p class="addr">371 Lyons Ave, Newark, NJ 07112, USA</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+19737327276">Call (973) 732-7276</a>
-    </div>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#home"><span class="pole"></span>La Cancha</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <nav>
+      <ul id="menu">
+        <li><a class="link" href="#home">Home</a></li>
+        <li><a class="link" href="#services">Services</a></li>
+        <li><a class="link" href="#hours">Hours</a></li>
+        <li><a class="link" href="#reviews">Reviews</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<section>
+<section class="hero" id="home">
+  <div class="scissor">✂️</div>
   <div class="wrap">
-    <h2>Opening hours</h2>
-    <div class="card">
-      <ul class="hours">
-        <li>Monday: 8:30&#8239;AM&#8201;–&#8201;8:00&#8239;PM</li>
-        <li>Tuesday: 8:30&#8239;AM&#8201;–&#8201;9:00&#8239;PM</li>
-        <li>Wednesday: 8:30&#8239;AM&#8201;–&#8201;8:00&#8239;PM</li>
-        <li>Thursday: 8:30&#8239;AM&#8201;–&#8201;8:00&#8239;PM</li>
-        <li>Friday: 8:30&#8239;AM&#8201;–&#8201;8:00&#8239;PM</li>
-        <li>Saturday: 8:30&#8239;AM&#8201;–&#8201;8:00&#8239;PM</li>
-        <li>Sunday: Closed</li>
-      </ul>
+    <div class="badge"><span class="st">★★★★★</span> 4.6 on Google · 169 reviews</div>
+    <h1><span>The Best Barbershop in Newark | La cancha barbershop | near to me</span></h1>
+    <p class="tag">Fresh cuts, clean lines and a sharp new look.</p>
+    <div class="btns">
+      <a class="btn red" href="#book">Book Now</a>
+      <a class="btn line" href="tel:+19737327276">📞 Call (973) 732-7276</a>
+    </div>
+  </div>
+</section>
+<div class="stripe"></div>
+
+<section class="sec alt" id="services">
+  <div class="wrap">
+    <p class="eyebrow fade">What to expect</p>
+    <h2 class="fade">Services</h2>
+    <p class="example fade">Example layout - the owner's real services and prices go here</p>
+    <div class="grid">
+      <article class="card fade"><div class="ic">✂️</div><h3>Classic Haircut</h3><p>A tidy, timeless cut finished with clean edges.</p><div class="price">Price: add yours</div><span class="ex-tag">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">💈</div><h3>Fade &amp; Taper</h3><p>Smooth gradients from skin to length, blended with care.</p><div class="price">Price: add yours</div><span class="ex-tag">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">🧔</div><h3>Beard Trim &amp; Shape-Up</h3><p>Defined lines and a groomed beard shape.</p><div class="price">Price: add yours</div><span class="ex-tag">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">🪒</div><h3>Hot Towel Shave</h3><p>A relaxing straight-razor style shave with a warm towel.</p><div class="price">Price: add yours</div><span class="ex-tag">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">👦</div><h3>Kids' Haircut</h3><p>Neat, comfortable cuts for younger clients.</p><div class="price">Price: add yours</div><span class="ex-tag">Example layout - the owner's real services and prices go here</span></article>
     </div>
   </div>
 </section>
 
-<section>
+<section class="sec" id="hours">
   <div class="wrap">
-    <h2>Find the shop</h2>
-    <div class="card">
-      <p>371 Lyons Ave, Newark, NJ 07112, USA</p>
-      <p style="margin-top:.5rem">Phone: <a href="tel:+19737327276">(973) 732-7276</a></p>
-      <p style="margin-top:.5rem">Call to ask about services.</p>
+    <p class="eyebrow fade">Plan your visit</p>
+    <h2 class="fade">Hours</h2>
+    <div class="hours-grid">
+      <table class="fade" aria-label="Opening hours">
+        <tbody>
+          <tr><td>Monday</td><td>8:30&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><td>Tuesday</td><td>8:30&#8239;AM&#8201;&ndash;&#8201;9:00&#8239;PM</td></tr>
+          <tr><td>Wednesday</td><td>8:30&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><td>Thursday</td><td>8:30&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><td>Friday</td><td>8:30&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><td>Saturday</td><td>8:30&#8239;AM&#8201;&ndash;&#8201;9:00&#8201;&#8239;PM</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="hours-side fade">
+        <h3>Ready for a fresh cut?</h3>
+        <p style="margin-bottom:20px">Call the shop or send a booking request using the demo form below.</p>
+        <a class="btn gold" href="tel:+19737327276">📞 (973) 732-7276</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="book">
+<section class="sec alt" id="reviews">
   <div class="wrap">
-    <h2>Book an appointment</h2>
-    <div class="card">
-      <form onsubmit="return false" autocomplete="off">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text">
-
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel">
-
-        <label for="day">Preferred day</label>
-        <input id="day" name="day" type="text" placeholder="e.g. Friday">
-
-        <label for="time">Preferred time</label>
-        <input id="time" name="time" type="text" placeholder="e.g. 3:00 PM">
-
-        <label for="notes">Notes</label>
-        <textarea id="notes" name="notes"></textarea>
-
-        <button type="button" class="btn btn-primary" onclick="showDemo()">Request appointment</button>
-        <div id="demo-msg" role="status" aria-live="polite"></div>
-      </form>
-      <p class="note">This is a sample of how online booking could work.</p>
+    <p class="eyebrow fade">What people say</p>
+    <h2 class="fade">Reviews</h2>
+    <div class="rating-box fade">
+      <div class="big">4.6</div>
+      <div>
+        <div class="stars" aria-label="4.6 out of 5 stars">★★★★<span class="part">★</span></div>
+        <p>based on 169 Google reviews</p>
+        <a class="btn red" href="https://maps.google.com/?cid=13621868302670927561&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 169 reviews on Google</a>
+      </div>
+    </div>
+    <h3 class="fade" style="font-size:1.8rem;margin-bottom:12px">Top reviews</h3>
+    <p class="example row-label fade">Example layout - your best reviews show here</p>
+    <div class="rev-row">
+      <article class="rev fade"><div class="ebadge"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></article>
+      <article class="rev fade"><div class="ebadge"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></article>
+      <article class="rev fade"><div class="ebadge"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></article>
+      <article class="rev fade"><div class="ebadge"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></article>
+      <article class="rev fade"><div class="ebadge"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></article>
     </div>
   </div>
 </section>
 
-<footer>Sample homepage concept. Not the official website of The Best Barbershop in Newark | La cancha barbershop | near to me.</footer>
+<section class="sec" id="contact">
+  <div class="wrap">
+    <p class="eyebrow fade">Find the shop</p>
+    <h2 class="fade">Contact</h2>
+    <div class="contact-grid">
+      <div class="c-card fade"><div class="ic">📍</div><h3>Address</h3><p>371 Lyons Ave, Newark, NJ 07112, USA</p><a class="btn red" href="https://maps.google.com/?cid=13621868302670927561&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="c-card fade"><div class="ic">📞</div><h3>Phone</h3><p>(973) 732-7276</p><a class="btn line" href="tel:+19737327276">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="book">
+  <div class="wrap">
+    <p class="eyebrow fade">Request a time</p>
+    <h2 class="fade">Book an appointment</h2>
+    <form class="form fade" id="demoForm" onsubmit="return false">
+      <div class="two">
+        <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+      </div>
+      <div class="two">
+        <div><label for="d">Preferred day</label>
+          <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+        <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+      </div>
+      <div><label for="m">Notes</label><textarea id="m"></textarea></div>
+      <button class="btn red" type="button" id="demoBtn">Request appointment</button>
+      <div id="demoMsg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note fade">This is a sample of how online booking could work. Nothing entered here is sent anywhere.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong>The Best Barbershop in Newark | La cancha barbershop | near to me</strong>
+    Sample homepage concept made by a third party. Not their official website.
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+19737327276">📞 Call</a>
 
 <script>
-  function showDemo(){
-    var m = document.getElementById('demo-msg');
-    m.textContent = 'Demo only: online booking is not connected yet.';
-    m.style.display = 'block';
-  }
+(function(){
+  var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){
+    var o=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',o);
+    btn.textContent=o?'✕ Close':'☰ Menu';
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded',false);btn.textContent='☰ Menu';}
+  });
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    document.getElementById('demoMsg').style.display='block';
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('show');});}
+})();
 </script>
 </body>
 </html>
