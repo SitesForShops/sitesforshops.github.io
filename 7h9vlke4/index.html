@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nails by Casandra – Paterson, NJ</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#2b2430;background:#fdf8f9;line-height:1.5}
+  .banner{background:#2b2430;color:#fff;font-size:13px;text-align:center;padding:6px 10px}
+  header{background:linear-gradient(135deg,#f9d9e3,#f3e5f7);padding:40px 20px;text-align:center}
+  h1{margin:0 0 8px;font-size:2rem}
+  .sub{margin:0 0 14px;color:#5b4a62}
+  .rating{display:inline-block;background:#fff;border-radius:999px;padding:6px 16px;font-weight:600;margin-bottom:18px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;padding:14px 26px;border-radius:999px;font-size:1rem;font-weight:700;text-decoration:none;border:0;cursor:pointer}
+  .primary{background:#c2185b;color:#fff}
+  .secondary{background:#fff;color:#c2185b;border:2px solid #c2185b}
+  main{max-width:720px;margin:0 auto;padding:10px 20px 40px}
+  section{background:#fff;border-radius:16px;padding:22px;margin-top:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  h2{margin-top:0;font-size:1.35rem}
+  ul.hours{list-style:none;padding:0;margin:0}
+  ul.hours li{padding:8px 0;border-bottom:1px solid #f0e6ea}
+  ul.hours li:last-child{border-bottom:0}
+  label{display:block;font-weight:600;margin-top:14px;margin-bottom:4px}
+  input,textarea{width:100%;padding:12px;font-size:1rem;border:1px solid #cdbfd0;border-radius:10px;font-family:inherit}
+  textarea{min-height:90px;resize:vertical}
+  form .btn{margin-top:18px;width:100%}
+  #msg{margin-top:14px;font-weight:700;color:#8a0f46}
+  .note{font-size:.85rem;color:#6b5d71;margin-top:12px}
+  footer{text-align:center;font-size:.8rem;color:#6b5d71;padding:20px}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Nails by Casandra. Not their official website.</div>
+
+<header>
+  <h1>Nails by Casandra</h1>
+  <p class="sub">85 Prospect St, Paterson, NJ 07505, USA</p>
+  <div class="rating">★ 4.9 on Google · 317 reviews</div>
+  <div class="btns">
+    <a class="btn primary" href="#book">Book Now</a>
+    <a class="btn secondary" href="tel:+19733339926">Call (973) 333-9926</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>About</h2>
+    <p>Nails by Casandra is a nail salon in Paterson, New Jersey. Call to ask about services.</p>
+  </section>
+
+  <section>
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 9:00 AM – 6:30 PM</li>
+      <li>Tuesday: 9:00 AM – 6:30 PM</li>
+      <li>Wednesday: 9:00 AM – 6:30 PM</li>
+      <li>Thursday: 9:00 AM – 6:30 PM</li>
+      <li>Friday: 9:00 AM – 6:30 PM</li>
+      <li>Saturday: 9:00 AM – 6:30 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Location &amp; contact</h2>
+    <p>85 Prospect St, Paterson, NJ 07505, USA</p>
+    <a class="btn primary" href="tel:+19733339926">Tap to call (973) 333-9926</a>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demoForm" onsubmit="return false;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="off">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="off">
+
+      <label for="day">Preferred day</label>
+      <input type="text" id="day" name="day" placeholder="e.g. Saturday" autocomplete="off">
+
+      <label for="time">Preferred time</label>
+      <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM" autocomplete="off">
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn primary" id="submitBtn">Request appointment</button>
+      <div id="msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>Sample homepage concept for Nails by Casandra. Not their official website.</footer>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function () {
+    document.getElementById('msg').textContent = 'Demo only: online booking is not connected yet.';
+  });
+</script>
+</body>
+</html>
