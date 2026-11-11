@@ -1,212 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta name="robots" content="noindex">
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Gentlemen's Barber Shop – Newark, NJ</title>
+<title>The Gentlemen's Barber Shop – Newark, NJ (Sample Concept)</title>
 <style>
-  :root{
-    --ink:#1b1b1f;
-    --muted:#5c5c66;
-    --bg:#f6f4f0;
-    --card:#ffffff;
-    --accent:#8c5a2b;
-    --accent-dark:#6d4420;
-    --line:#e3ded5;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.5;
-  }
-  .banner{
-    background:#111;
-    color:#fff;
-    font-size:13px;
-    text-align:center;
-    padding:6px 12px;
-  }
-  header{
-    background:var(--ink);
-    color:#fff;
-    padding:40px 20px 44px;
-    text-align:center;
-  }
-  header h1{
-    margin:0 0 8px;
-    font-size:clamp(28px,7vw,44px);
-    line-height:1.15;
-    letter-spacing:.5px;
-  }
-  .sub{margin:0 0 16px;color:#d9d3c8}
-  .rating{
-    display:inline-block;
-    background:rgba(255,255,255,.1);
-    border-radius:999px;
-    padding:6px 14px;
-    font-size:15px;
-    margin-bottom:22px;
-  }
-  .stars{color:#f2b84b;letter-spacing:2px}
-  .actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    justify-content:center;
-  }
-  .btn{
-    display:inline-block;
-    border:0;
-    border-radius:8px;
-    padding:14px 26px;
-    font-size:17px;
-    font-weight:600;
-    text-decoration:none;
-    cursor:pointer;
-    font-family:inherit;
-  }
-  .btn-primary{background:var(--accent);color:#fff}
-  .btn-primary:hover{background:var(--accent-dark)}
-  .btn-call{background:#fff;color:var(--ink)}
-  .btn-disabled{
-    background:rgba(255,255,255,.15);
-    color:#d9d3c8;
-    cursor:default;
-    font-weight:500;
-    font-size:15px;
-  }
-  main{max-width:760px;margin:0 auto;padding:24px 16px 48px}
-  section{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:12px;
-    padding:24px 20px;
-    margin-top:20px;
-  }
-  h2{margin:0 0 14px;font-size:22px}
-  .hours{list-style:none;margin:0;padding:0}
-  .hours li{padding:9px 0;border-bottom:1px solid var(--line)}
-  .hours li:last-child{border-bottom:0}
-  address{font-style:normal}
-  label{display:block;font-weight:600;font-size:14px;margin:14px 0 4px}
-  input,select,textarea{
-    width:100%;
-    padding:12px;
-    font-size:16px;
-    font-family:inherit;
-    border:1px solid #c9c3b8;
-    border-radius:8px;
-    background:#fff;
-    color:var(--ink);
-  }
-  textarea{min-height:90px;resize:vertical}
-  .row{display:grid;gap:0 14px;grid-template-columns:1fr}
-  @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
-  #demoBtn{width:100%;margin-top:20px;background:var(--accent);color:#fff}
-  #demoBtn:hover{background:var(--accent-dark)}
-  #demoMsg{
-    margin-top:14px;
-    padding:12px;
-    border-radius:8px;
-    background:#fff4e0;
-    border:1px solid #f0d49b;
-    font-weight:600;
-    display:none;
-  }
-  .note{font-size:13px;color:var(--muted);margin:12px 0 0}
-  footer{text-align:center;color:var(--muted);font-size:13px;padding:0 16px 32px}
+:root{
+  --ink:#0f0f11;
+  --char:#1a1b1f;
+  --char2:#26272d;
+  --red:#e11d2e;
+  --red2:#ff4757;
+  --gold:#f2b632;
+  --paper:#f6f4f0;
+  --white:#fff;
+  --muted:#a9acb5;
+  --radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.6;font-size:17px;
+  padding-bottom:70px;
+}
+h1,h2,h3{font-family:Impact,"Arial Narrow Bold","Franklin Gothic Medium",Haettenschweiler,"Helvetica Neue",Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;line-height:1.05;font-weight:700}
+a{color:inherit}
+.banner{background:var(--gold);color:#1a1300;text-align:center;font-size:.85rem;font-weight:600;padding:8px 14px}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(15,15,17,.96);backdrop-filter:blur(8px);border-bottom:3px solid var(--red)}
+.nav-in{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:Impact,"Arial Narrow Bold",Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#fff;text-decoration:none;font-size:1.1rem;display:flex;align-items:center;gap:8px}
+.logo span{color:var(--red2)}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;color:#e8e8ec;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-weight:700;font-size:.82rem;padding:10px 14px;border-radius:8px;transition:.2s}
+.menu a:hover{background:var(--red);color:#fff}
+.burger{display:none;background:var(--red);border:0;color:#fff;font-size:1rem;font-weight:800;letter-spacing:.08em;padding:10px 16px;border-radius:10px;cursor:pointer;text-transform:uppercase}
+@media(max-width:780px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--ink);flex-direction:column;padding:10px 16px 18px;border-bottom:3px solid var(--red)}
+  .menu.open{display:flex}
+  .menu a{padding:14px;font-size:.95rem}
+}
+section{scroll-margin-top:70px}
+.wrap{max-width:1150px;margin:auto;padding:84px 20px}
+/* HERO */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(225,29,46,.45),transparent 45%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 14px,transparent 14px 28px),
+    linear-gradient(160deg,#0b0b0d,#22232a 70%);
+}
+.pole{position:absolute;right:-30px;top:0;bottom:0;width:90px;transform:rotate(12deg);opacity:.35;
+  background:repeating-linear-gradient(45deg,var(--red) 0 22px,#fff 22px 44px,#2a5bd7 44px 66px,#fff 66px 88px)}
+.pole.b{right:auto;left:-40px;transform:rotate(-12deg);opacity:.18}
+.hero .wrap{position:relative;padding-top:90px;padding-bottom:100px;text-align:center}
+.badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);padding:10px 18px;border-radius:999px;font-weight:700;margin-bottom:26px}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.hero h1{font-size:clamp(2.8rem,10vw,6.4rem);text-shadow:0 4px 0 var(--red);margin-bottom:18px}
+.hero p.tag{font-size:clamp(1.05rem,3vw,1.4rem);color:#d9dbe2;max-width:620px;margin:0 auto 34px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 30px;border-radius:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(0,0,0,.3)}
+.btn.red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff}
+.btn.ghost{background:transparent;border-color:#fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.gold{background:var(--gold);color:#1a1300}
+.addr-line{margin-top:30px;color:var(--muted);font-size:.95rem}
+/* headings */
+.eyebrow{color:var(--red);font-weight:800;letter-spacing:.25em;text-transform:uppercase;font-size:.8rem;margin-bottom:10px}
+h2{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:14px}
+.lead{max-width:640px;color:#4a4c55;margin-bottom:34px}
+.example{display:inline-block;background:#fff4d1;color:#6b4a00;border:1.5px dashed #d79a00;border-radius:10px;padding:7px 12px;font-size:.82rem;font-weight:700;line-height:1.3}
+/* services */
+.services{background:var(--paper)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:30px}
+.card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 8px 24px rgba(15,15,17,.08);border-top:6px solid var(--red);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 36px rgba(15,15,17,.16)}
+.ico{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--ink),var(--char2));display:grid;place-items:center;font-size:1.8rem}
+.card h3{font-size:1.5rem}
+.price{font-weight:800;color:var(--red)}
+/* hours */
+.hours{background:linear-gradient(160deg,var(--ink),var(--char2));color:#fff}
+.hours .lead{color:#c9cbd3}
+.hours-box{max-width:640px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);overflow:hidden}
+table{width:100%;border-collapse:collapse}
+td{padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.12);font-size:1.02rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);width:42%}
+tr:hover td{background:rgba(225,29,46,.18)}
+/* reviews */
+.reviews{background:#fff}
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:30px;background:linear-gradient(135deg,var(--ink),var(--char2));color:#fff;border-radius:28px;padding:36px;margin-bottom:46px;border-left:10px solid var(--red)}
+.big{font-family:Impact,Arial,sans-serif;font-size:clamp(4.5rem,16vw,7.5rem);line-height:1;color:var(--gold)}
+.stars{position:relative;display:inline-block;font-size:2rem;letter-spacing:4px;color:#555;line-height:1}
+.stars .fill{position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;color:var(--gold)}
+.rating-box p{color:#d9dbe2;margin:8px 0 18px;font-size:1.1rem}
+.row-label{margin-bottom:6px}
+.rev-title{font-size:2rem;margin:10px 0 12px}
+.rev-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:20px}
+.rev{background:var(--paper);border-radius:var(--radius);padding:22px;display:flex;flex-direction:column;gap:12px;transition:transform .25s,box-shadow .25s;border:1px solid #e4e0d8}
+.rev:hover{transform:translateY(-6px);box-shadow:0 14px 28px rgba(0,0,0,.12)}
+.rev .tagrow{display:block}
+.rev .tagrow span{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.rev .s{color:var(--gold);font-size:1.3rem;letter-spacing:3px;line-height:1.2}
+.rev .txt{color:#555;font-style:italic}
+.rev .nm{font-weight:800}
+/* contact */
+.contact{background:var(--paper)}
+.c-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.c-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:0 8px 24px rgba(15,15,17,.08);border-bottom:6px solid var(--red);transition:transform .25s}
+.c-card:hover{transform:translateY(-6px)}
+.c-card h3{font-size:1.3rem;margin-bottom:8px}
+.c-card .btn{margin-top:14px;padding:13px 22px;font-size:.9rem}
+.small{font-size:.88rem;color:#666}
+/* booking */
+.book{background:linear-gradient(150deg,var(--red),#8f0d1a 70%);color:#fff}
+.book .wrap{display:grid;gap:40px;grid-template-columns:1fr;max-width:820px}
+.book .eyebrow{color:var(--gold)}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:30px;display:grid;gap:16px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+label{font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+input,textarea,select{width:100%;padding:14px;border:2px solid #d8d6d0;border-radius:12px;font:inherit;background:#faf9f7}
+input:focus,textarea:focus{outline:none;border-color:var(--red)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+#demoMsg{display:none;background:#fff4d1;border:2px solid var(--gold);color:#5c4000;padding:14px;border-radius:12px;font-weight:700}
+.note{color:#ffe3e6;font-size:.9rem;text-align:center}
+/* footer */
+footer{background:var(--ink);color:#c9cbd3;text-align:center;padding:44px 20px}
+footer strong{display:block;color:#fff;font-family:Impact,Arial,sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:1.5rem;margin-bottom:8px}
+/* call bar */
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);color:#fff;text-align:center;padding:16px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;box-shadow:0 -4px 18px rgba(0,0,0,.3)}
+@media(max-width:780px){.callbar{display:block}}
+@media(min-width:781px){body{padding-bottom:0}}
+/* reveal */
+.fade{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+.nojs .fade{opacity:1;transform:none}
 </style>
 </head>
-<body>
+<body class="nojs">
 
 <div class="banner">Sample homepage concept for The Gentlemen's Barber Shop. Not their official website.</div>
 
-<header>
-  <h1>The Gentlemen's Barber Shop</h1>
-  <p class="sub">Barber shop in Newark, NJ</p>
-  <div class="rating" aria-label="Google rating 4.3 out of 5 from 81 reviews">
-    <span class="stars" aria-hidden="true">★★★★☆</span>
-    4.3 on Google · 81 reviews
-  </div>
-  <div class="actions">
-    <a class="btn btn-primary" href="#book">Book Now</a>
-    <span class="btn btn-disabled" aria-disabled="true">Phone number not listed</span>
-  </div>
-</header>
-
-<main>
-  <section id="visit">
-    <h2>Visit</h2>
-    <address>
-      The Gentlemen's Barber Shop<br>
-      131 Elm St, Newark, NJ 07105, USA
-    </address>
-  </section>
-
-  <section id="hours">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
-      <li>Tuesday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
-      <li>Wednesday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
-      <li>Thursday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
-      <li>Friday: 8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</li>
-      <li>Saturday: 8:30&#8239;AM&#8201;&ndash;&#8201;8:45&#8239;PM</li>
-      <li>Sunday: 8:30&#8239;AM&#8201;&ndash;&#8201;8:45&#8239;PM</li>
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">✂️ <span>The Gentlemen's</span> Barber Shop</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-  </section>
+  </div>
+</nav>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form onsubmit="return false;" novalidate>
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" autocomplete="off">
+<section id="home" class="hero">
+  <div class="pole b"></div><div class="pole"></div>
+  <div class="wrap">
+    <div class="badge"><span class="st">★★★★★</span> 4.3 on Google · 81 reviews</div>
+    <h1>The Gentlemen's Barber Shop</h1>
+    <p class="tag">Fresh cuts, clean lines and classic grooming in Newark, NJ.</p>
+    <div class="btns">
+      <a class="btn red" href="#book">✂️ Book Now</a>
+      <a class="btn ghost" href="tel:">📞 Tap to Call</a>
+    </div>
+    <p class="addr-line">📍 131 Elm St, Newark, NJ 07105, USA</p>
+  </div>
+</section>
 
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" autocomplete="off">
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="fade">
+      <div class="eyebrow">What's on the chair</div>
+      <h2>Services</h2>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+      <p class="lead" style="margin-top:16px">A sample of how a barber shop's service menu could look on this page.</p>
+    </div>
+    <div class="grid">
+      <div class="card fade"><div class="ico">💈</div><h3>Classic Haircut</h3><p>A tidy, traditional cut finished with clean edges.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🧔</div><h3>Beard Trim</h3><p>Shaping and trimming to keep facial hair sharp.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🪒</div><h3>Hot Towel Shave</h3><p>A smooth straight-razor style shave with a warm towel.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">⚡</div><h3>Fade &amp; Taper</h3><p>Blended fades and tapers with crisp detail.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">👦</div><h3>Kids' Cut</h3><p>A neat, comfortable cut for younger clients.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">📐</div><h3>Line-up &amp; Edge-up</h3><p>Sharp hairline and neckline touch-ups between cuts.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
 
-      <div class="row">
-        <div>
-          <label for="day">Preferred day</label>
-          <select id="day" name="day">
-            <option value="">Select a day</option>
-            <option>Monday</option>
-            <option>Tuesday</option>
-            <option>Wednesday</option>
-            <option>Thursday</option>
-            <option>Friday</option>
-            <option>Saturday</option>
-            <option>Sunday</option>
-          </select>
-        </div>
-        <div>
-          <label for="time">Preferred time</label>
-          <input id="time" name="time" type="time">
-        </div>
+<section id="hours" class="hours">
+  <div class="wrap">
+    <div class="fade">
+      <div class="eyebrow">Plan your visit</div>
+      <h2>Hours</h2>
+      <p class="lead">Opening hours as listed on Google.</p>
+    </div>
+    <div class="hours-box fade">
+      <table>
+        <tr><td>Monday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>8:30 AM – 8:45 PM</td></tr>
+        <tr><td>Sunday</td><td>8:30 AM – 8:45 PM</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="reviews">
+  <div class="wrap">
+    <div class="fade">
+      <div class="eyebrow">What people say</div>
+      <h2>Reviews</h2>
+    </div>
+    <div class="rating-box fade">
+      <div class="big">4.3</div>
+      <div>
+        <div class="stars" aria-label="4.3 out of 5 stars">★★★★★<span class="fill" style="width:86%">★★★★★</span></div>
+        <p>based on 81 Google reviews</p>
+        <a class="btn red" href="https://maps.google.com/?cid=9308994529736802152&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 81 reviews on Google</a>
       </div>
+    </div>
+    <h3 class="rev-title fade">Top reviews</h3>
+    <span class="example row-label">Example layout - your best reviews show here</span>
+    <div class="rev-row">
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="s">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="s">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="s">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="s">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="s">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
 
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="fade">
+      <div class="eyebrow">Find the shop</div>
+      <h2>Contact</h2>
+    </div>
+    <div class="c-grid">
+      <div class="c-card fade"><h3>📍 Address</h3><p>131 Elm St<br>Newark, NJ 07105, USA</p>
+        <a class="btn dark" href="https://maps.google.com/?cid=9308994529736802152&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="c-card fade"><h3>📞 Phone</h3><p>Phone number not listed yet.</p><p class="small">The owner's number goes here.</p>
+        <a class="btn red" href="tel:">Call</a></div>
+      <div class="c-card fade"><h3>🕗 Hours</h3><p>Open daily. See the full schedule in the Hours section above.</p>
+        <a class="btn gold" href="#hours">See hours</a></div>
+    </div>
+  </div>
+</section>
 
-      <button type="button" class="btn" id="demoBtn">Request appointment</button>
-      <div id="demoMsg" role="status" aria-live="polite"></div>
+<section id="book" class="book">
+  <div class="wrap">
+    <div class="fade">
+      <div class="eyebrow">Reserve your spot</div>
+      <h2>Book an appointment</h2>
+    </div>
+    <form id="demoForm" class="fade" onsubmit="return false">
+      <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+      <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+      <div class="two">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. 2:00 PM"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn red" id="demoBtn">Request appointment</button>
+      <div id="demoMsg" role="status"></div>
     </form>
     <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-</main>
+  </div>
+</section>
 
-<footer>Sample concept page. Not the official website of The Gentlemen's Barber Shop.</footer>
+<footer>
+  <strong>The Gentlemen's Barber Shop</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:">📞 Call</a>
 
 <script>
-  document.getElementById('demoBtn').addEventListener('click', function () {
-    var msg = document.getElementById('demoMsg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
+(function(){
+  document.body.classList.remove('nojs');
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);
   });
+  m.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    var s=document.getElementById('demoMsg');
+    s.textContent='Demo only: online booking is not connected yet.';
+    s.style.display='block';
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  } else {els.forEach(function(e){e.classList.add('in');});}
+})();
 </script>
 </body>
 </html>
