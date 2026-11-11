@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marta’s Beauty Salon – Paterson, NJ</title>
+<style>
+  :root{
+    --accent:#b5446e;
+    --accent-dark:#8f3256;
+    --ink:#2a2226;
+    --muted:#6b5f65;
+    --bg:#fbf7f8;
+    --card:#ffffff;
+    --line:#ecdfe4;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.5;
+  }
+  .banner{
+    background:#2a2226;
+    color:#fff;
+    font-size:.8rem;
+    text-align:center;
+    padding:.45rem .75rem;
+  }
+  header.hero{
+    background:linear-gradient(135deg,#f7dfe8,#fbf7f8);
+    padding:2.5rem 1.25rem 2.25rem;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .wrap{max-width:720px;margin:0 auto}
+  h1{margin:0 0 .4rem;font-size:2rem;line-height:1.2}
+  .tagline{margin:0 0 1rem;color:var(--muted)}
+  .rating{
+    display:inline-block;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:.35rem .9rem;
+    font-weight:600;
+    margin-bottom:1rem;
+  }
+  .rating .star{color:#e0a100}
+  .address{margin:.25rem 0 1.25rem;color:var(--ink)}
+  .actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+  .btn{
+    display:inline-block;
+    border:0;
+    border-radius:10px;
+    padding:.9rem 1.5rem;
+    font-size:1.05rem;
+    font-weight:700;
+    text-decoration:none;
+    cursor:pointer;
+    min-width:160px;
+    text-align:center;
+  }
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:var(--accent-dark)}
+  .btn-secondary{background:#fff;color:var(--accent-dark);border:2px solid var(--accent)}
+  .btn-secondary:hover{background:#f7dfe8}
+  section{padding:2rem 1.25rem}
+  h2{margin:0 0 1rem;font-size:1.5rem}
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:1.25rem;
+  }
+  ul.hours{list-style:none;margin:0;padding:0}
+  ul.hours li{padding:.55rem 0;border-bottom:1px solid var(--line)}
+  ul.hours li:last-child{border-bottom:0}
+  form{display:grid;gap:1rem}
+  label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.3rem}
+  input,textarea{
+    width:100%;
+    font:inherit;
+    padding:.7rem .8rem;
+    border:1px solid #cdbcc4;
+    border-radius:8px;
+    background:#fff;
+    color:var(--ink);
+  }
+  input:focus,textarea:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+  textarea{min-height:90px;resize:vertical}
+  .row{display:grid;gap:1rem}
+  @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
+  #demo-msg{
+    display:none;
+    background:#fff4d6;
+    border:1px solid #e6c765;
+    border-radius:8px;
+    padding:.75rem .9rem;
+    font-weight:600;
+  }
+  .note{font-size:.85rem;color:var(--muted);margin:.9rem 0 0}
+  footer{
+    text-align:center;
+    font-size:.8rem;
+    color:var(--muted);
+    padding:1.5rem 1.25rem 2.5rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Marta’s Beauty Salon. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Marta’s Beauty Salon</h1>
+    <p class="tagline">Hair salon in Paterson, New Jersey</p>
+    <div class="rating"><span class="star">★</span> 4.4 on Google · 56 reviews</div>
+    <p class="address">329 21st Ave, Paterson, NJ 07501, USA</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+19735230969">Call (973) 523-0969</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 10:00 AM – 8:00 PM</li>
+        <li>Tuesday: 10:00 AM – 8:00 PM</li>
+        <li>Wednesday: 10:00 AM – 8:00 PM</li>
+        <li>Thursday: 9:00 AM – 8:00 PM</li>
+        <li>Friday: 8:00 AM – 8:00 PM</li>
+        <li>Saturday: 8:00 AM – 8:00 PM</li>
+        <li>Sunday: 9:00 AM – 4:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Services</h2>
+    <div class="card">
+      <p style="margin:0">Call to ask about services.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="booking-form" onsubmit="return false;">
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="day">Preferred day</label>
+            <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Marta’s Beauty Salon. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
