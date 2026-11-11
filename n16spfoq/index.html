@@ -1,178 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cuts on the Ave Barbershop – Newark, NJ</title>
+<title>Cuts on the Ave Barbershop – Newark, NJ (Sample Homepage Concept)</title>
 <style>
-  :root {
-    --ink: #1c1c1e;
-    --muted: #5c5c63;
-    --bg: #f6f4f0;
-    --card: #ffffff;
-    --accent: #b3261e;
-    --accent-dark: #8c1d17;
-    --line: #e2ded6;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.5;
-  }
-  .banner {
-    background: #1c1c1e;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-  }
-  header.hero {
-    background: var(--ink);
-    color: #fff;
-    padding: 40px 20px 48px;
-    text-align: center;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; }
-  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
-  .address { margin: 0 0 12px; color: #d8d8dc; }
-  .rating { display: inline-block; background: rgba(255,255,255,0.1); border-radius: 999px; padding: 6px 14px; font-size: 0.95rem; margin-bottom: 24px; }
-  .stars { color: #f5b301; letter-spacing: 2px; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .btn {
-    display: inline-block;
-    border: 0;
-    border-radius: 10px;
-    padding: 14px 24px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    min-height: 48px;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-secondary { background: #fff; color: var(--ink); }
-  .btn-secondary:hover { background: #ececec; }
-  section { padding: 36px 20px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 24px;
-  }
-  h2 { margin: 0 0 16px; font-size: 1.5rem; }
-  ul.hours { list-style: none; margin: 0; padding: 0; }
-  ul.hours li { padding: 10px 0; border-bottom: 1px solid var(--line); }
-  ul.hours li:last-child { border-bottom: 0; }
-  form { display: grid; gap: 14px; }
-  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    font-family: inherit;
-    border: 1px solid #bdb8ad;
-    border-radius: 8px;
-    background: #fff;
-  }
-  input:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
-  textarea { min-height: 90px; resize: vertical; }
-  .row { display: grid; gap: 14px; }
-  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } h1 { font-size: 2.5rem; } }
-  #demo-message {
-    display: none;
-    background: #fff4d6;
-    border: 1px solid #e6c766;
-    border-radius: 8px;
-    padding: 12px;
-    font-weight: 600;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
-  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 24px 20px 40px; }
+:root{
+  --ink:#0f0f11;
+  --char:#1a1b1f;
+  --char2:#24262c;
+  --white:#ffffff;
+  --paper:#f4f2ee;
+  --red:#e0202f;
+  --red2:#b5121f;
+  --gold:#e2b13c;
+  --mute:#b9bcc4;
+  --radius:20px;
+  --head:"Impact","Haettenschweiler","Arial Narrow Bold","Franklin Gothic Heavy","Helvetica Neue",Arial,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--ink);color:var(--white);line-height:1.6;font-size:17px;padding-bottom:70px;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;font-weight:400;line-height:1.05}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.banner{background:var(--gold);color:#111;text-align:center;font-size:.82rem;font-weight:700;padding:8px 14px;line-height:1.35}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(15,15,17,.94);backdrop-filter:blur(10px);border-bottom:3px solid var(--red)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:1.15rem;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo .pole{width:12px;height:26px;border-radius:6px;border:2px solid #fff;background:repeating-linear-gradient(135deg,var(--red) 0 5px,#fff 5px 10px,#2b5fd9 10px 15px,#fff 15px 20px)}
+nav ul{list-style:none;display:none;gap:6px}
+nav a.link{display:block;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-weight:700;font-size:.85rem;padding:10px 14px;border-radius:999px;transition:background .2s,color .2s}
+nav a.link:hover{background:var(--red);color:#fff}
+.menu-btn{background:var(--red);border:0;color:#fff;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.8rem;padding:10px 16px;border-radius:999px;cursor:pointer}
+nav.open ul{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:60px;background:var(--ink);padding:12px 20px 20px;border-bottom:3px solid var(--red)}
+nav.open a.link{padding:14px;font-size:1rem;border-bottom:1px solid var(--char2);border-radius:0}
+@media(min-width:820px){
+  nav ul{display:flex}
+  .menu-btn{display:none}
+}
+
+/* hero */
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;padding:70px 0 90px;overflow:hidden;
+  background:
+   radial-gradient(900px 500px at 85% 10%,rgba(224,32,47,.35),transparent 60%),
+   radial-gradient(700px 500px at 0% 100%,rgba(226,177,60,.2),transparent 60%),
+   linear-gradient(160deg,#17181c,#0b0b0d)}
+.hero:before{content:"";position:absolute;right:-60px;top:-40px;bottom:-40px;width:90px;transform:rotate(8deg);opacity:.9;
+  background:repeating-linear-gradient(135deg,var(--red) 0 28px,#fff 28px 56px,#2b5fd9 56px 84px,#fff 84px 112px);
+  border-radius:45px;border:4px solid #fff;box-shadow:0 0 60px rgba(224,32,47,.4)}
+.hero .wrap{position:relative;z-index:2}
+.eyebrow{display:inline-block;color:var(--gold);text-transform:uppercase;letter-spacing:.3em;font-weight:800;font-size:.8rem;margin-bottom:14px}
+.hero h1{font-size:clamp(2.8rem,12vw,6.6rem);max-width:12ch;text-shadow:0 4px 0 var(--red2)}
+.hero h1 span{color:var(--gold)}
+.tag{font-size:clamp(1.1rem,3.5vw,1.5rem);color:var(--mute);margin:18px 0 22px;max-width:30ch}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#111;border-radius:999px;padding:8px 18px 8px 10px;font-weight:800;box-shadow:0 8px 24px rgba(0,0,0,.4);margin-bottom:28px}
+.badge .g{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#4285f4,#34a853 50%,#fbbc05 75%,#ea4335);display:grid;place-items:center;color:#fff;font-weight:900;font-size:.95rem}
+.badge .st{color:#e0a100}
+.badge small{font-weight:600;color:#555}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.95rem;padding:16px 28px;border-radius:999px;border:2px solid transparent;cursor:pointer;font-family:var(--body);transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-red{background:linear-gradient(135deg,var(--red),var(--red2));color:#fff;box-shadow:0 10px 26px rgba(224,32,47,.45)}
+.btn-line{border-color:#fff;color:#fff;background:transparent}
+.btn-line:hover{background:#fff;color:#111}
+.btn-gold{background:var(--gold);color:#111;box-shadow:0 10px 26px rgba(226,177,60,.35)}
+
+/* sections */
+section{padding:90px 0;position:relative}
+.sec-head{margin-bottom:36px}
+.sec-head .eyebrow{margin-bottom:8px}
+.sec-head h2{font-size:clamp(2.2rem,7vw,3.8rem)}
+.sec-head h2:after{content:"";display:block;width:90px;height:6px;margin-top:14px;border-radius:3px;background:repeating-linear-gradient(135deg,var(--red) 0 8px,#fff 8px 16px)}
+.example-label{display:inline-block;background:rgba(226,177,60,.14);border:1px dashed var(--gold);color:var(--gold);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:10px;margin-top:6px}
+
+#services{background:var(--paper);color:#15161a}
+#services .sec-head h2:after{background:repeating-linear-gradient(135deg,var(--red) 0 8px,#15161a 8px 16px)}
+#services .example-label{color:#7a5600;background:#fff3cf;border-color:#c99512}
+.grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:640px){.grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:0 8px 28px rgba(0,0,0,.08);border-top:6px solid var(--red);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(0,0,0,.16)}
+.card .ic{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#1a1b1f,#33363e);display:grid;place-items:center;font-size:1.8rem;margin-bottom:14px}
+.card h3{font-size:1.5rem;margin-bottom:8px}
+.card p{color:#4a4d57;font-size:.97rem}
+.card .price{display:inline-block;margin:12px 0 10px;font-weight:800;color:var(--red2)}
+.card .ex{display:block;font-size:.76rem;font-weight:700;color:#7a5600;background:#fff3cf;border:1px dashed #c99512;border-radius:8px;padding:5px 9px;line-height:1.35}
+
+/* hours */
+#hours{background:linear-gradient(180deg,var(--char),var(--ink))}
+.hours-box{display:grid;gap:30px;align-items:center}
+@media(min-width:860px){.hours-box{grid-template-columns:1fr 1.1fr}}
+table.hrs{width:100%;border-collapse:separate;border-spacing:0;background:var(--char2);border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 34px rgba(0,0,0,.4)}
+.hrs th,.hrs td{padding:14px 20px;text-align:left;border-bottom:1px solid #34363e}
+.hrs tr:last-child td,.hrs tr:last-child th{border-bottom:0}
+.hrs th{font-family:var(--head);letter-spacing:.06em;text-transform:uppercase;font-weight:400;color:var(--gold);font-size:1.1rem}
+.hrs td{text-align:right;font-weight:600}
+.hours-side{font-size:1.1rem;color:var(--mute)}
+.hours-side .big{font-family:var(--head);text-transform:uppercase;font-size:clamp(1.8rem,5vw,2.6rem);color:#fff;line-height:1.1;margin-bottom:12px}
+.hours-side .big em{font-style:normal;color:var(--red)}
+
+/* reviews */
+#reviews{background:var(--paper);color:#15161a}
+#reviews .sec-head h2:after{background:repeating-linear-gradient(135deg,var(--red) 0 8px,#15161a 8px 16px)}
+.rating-panel{background:linear-gradient(135deg,#15161a,#2a2c33);color:#fff;border-radius:28px;padding:34px 26px;display:grid;gap:22px;align-items:center;box-shadow:0 16px 40px rgba(0,0,0,.25);margin-bottom:46px;text-align:center}
+@media(min-width:820px){.rating-panel{grid-template-columns:auto 1fr auto;text-align:left;padding:38px 44px}}
+.rating-num{font-family:var(--head);font-size:clamp(4.5rem,18vw,7rem);line-height:1;color:var(--gold)}
+.stars{font-size:2.2rem;letter-spacing:.08em;line-height:1;background:linear-gradient(90deg,var(--gold) 94%,#555 94%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;display:inline-block}
+.rating-panel p{color:var(--mute);margin-top:8px;font-size:1.05rem}
+.top-title{font-size:clamp(1.7rem,5vw,2.4rem);margin-bottom:8px}
+.row-wrap{margin-top:8px}
+.cards5{display:grid;gap:18px;grid-template-columns:1fr;margin-top:18px}
+@media(min-width:700px){.cards5{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.cards5{grid-template-columns:repeat(5,1fr)}}
+.rev{background:#fff;border-radius:var(--radius);padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.08);display:flex;flex-direction:column;gap:10px;transition:transform .25s,box-shadow .25s;border:1px solid #e6e3dc}
+.rev:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,.15)}
+.rev .exb{display:block;align-self:flex-start;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;background:#fff3cf;color:#7a5600;border:1px dashed #c99512;padding:4px 10px;border-radius:999px}
+.rev .rs{color:#e0a100;font-size:1.25rem;letter-spacing:.1em;line-height:1.2;white-space:nowrap}
+.rev .txt{color:#555;font-style:italic;font-size:.95rem;flex:1}
+.rev .nm{font-weight:800;font-size:.9rem;color:#222}
+.center{text-align:center;margin-top:0}
+
+/* contact */
+#contact{background:radial-gradient(800px 400px at 100% 0,rgba(224,32,47,.25),transparent 60%),var(--char)}
+.contact-grid{display:grid;gap:20px}
+@media(min-width:820px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.ccard{background:var(--char2);border-radius:var(--radius);padding:28px;border:1px solid #373a43;transition:transform .25s,border-color .25s}
+.ccard:hover{transform:translateY(-6px);border-color:var(--red)}
+.ccard .ic{font-size:2rem;margin-bottom:10px}
+.ccard h3{font-size:1.4rem;color:var(--gold);margin-bottom:8px}
+.ccard p,.ccard a{font-size:1.1rem}
+.ccard a.plain{font-weight:800;text-decoration:none;border-bottom:2px solid var(--red)}
+.ccard .btn{margin-top:6px;padding:12px 22px;font-size:.85rem}
+
+/* booking */
+#book{background:linear-gradient(160deg,var(--red2),#7d0c15);}
+#book .sec-head h2:after{background:repeating-linear-gradient(135deg,#fff 0 8px,#111 8px 16px)}
+.formcard{background:#fff;color:#15161a;border-radius:28px;padding:28px 22px;max-width:720px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+@media(min-width:600px){.formcard{padding:38px}}
+.frow{display:grid;gap:16px;margin-bottom:16px}
+@media(min-width:600px){.frow.two{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;margin-bottom:6px;color:#333}
+input,select,textarea{width:100%;font:inherit;padding:14px 16px;border-radius:14px;border:2px solid #d9d9de;background:#fafafa;color:#111;transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--red);box-shadow:0 0 0 4px rgba(224,32,47,.15)}
+textarea{min-height:100px;resize:vertical}
+.msg{display:none;margin-top:16px;padding:14px 18px;border-radius:14px;background:#111;color:var(--gold);font-weight:800}
+.msg.show{display:block}
+.note{margin-top:14px;font-size:.88rem;color:#555}
+
+/* footer */
+footer{background:#000;padding:44px 0 50px;text-align:center;border-top:4px solid var(--red)}
+footer .fn{font-family:var(--head);text-transform:uppercase;letter-spacing:.06em;font-size:1.6rem;margin-bottom:8px}
+footer p{color:var(--mute);font-size:.92rem}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--ink);padding:10px 14px;border-top:3px solid var(--red);gap:10px}
+.callbar a{flex:1;text-align:center;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:13px;border-radius:999px;background:linear-gradient(135deg,var(--red),var(--red2));color:#fff}
+@media(min-width:820px){.callbar{display:none}body{padding-bottom:0}}
+
+/* animations */
+.js .fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .fade{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 
 <div class="banner">Sample homepage concept for Cuts on the Ave Barbershop. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>Cuts on the Ave Barbershop</h1>
-    <p class="address">242-244 S Orange Ave, Newark, NJ 07103, USA</p>
-    <div class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.7 on Google · 54 reviews</div>
-    <div class="actions">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+15512327029">Call (551) 232-7029</a>
-    </div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo"><span class="pole"></span>Cuts on the Ave</a>
+    <nav id="nav" aria-label="Main menu">
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuList">☰ Menu</button>
+      <ul id="menuList">
+        <li><a class="link" href="#home">Home</a></li>
+        <li><a class="link" href="#services">Services</a></li>
+        <li><a class="link" href="#hours">Hours</a></li>
+        <li><a class="link" href="#reviews">Reviews</a></li>
+        <li><a class="link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
-<section>
+<main>
+<section class="hero" id="home">
   <div class="wrap">
-    <div class="card">
-      <h2>Opening hours</h2>
-      <ul class="hours">
-        <li>Monday: 8:00 AM – 8:00 PM</li>
-        <li>Tuesday: 8:00 AM – 8:00 PM</li>
-        <li>Wednesday: 8:00 AM – 8:00 PM</li>
-        <li>Thursday: 8:00 AM – 8:00 PM</li>
-        <li>Friday: 8:00 AM – 8:00 PM</li>
-        <li>Saturday: 8:00 AM – 8:00 PM</li>
-        <li>Sunday: 8:00 AM – 8:00 PM</li>
-      </ul>
+    <span class="eyebrow">✂ Barber Shop · Newark, NJ</span>
+    <h1>Cuts on the Ave <span>Barbershop</span></h1>
+    <p class="tag">Sharp lines. Fresh looks. Walk out feeling your best.</p>
+    <div class="badge"><span class="g">G</span><span><span class="st">★</span> 4.7 <small>· 54 Google reviews</small></span></div>
+    <div class="btns">
+      <a class="btn btn-red" href="#book">Book Now</a>
+      <a class="btn btn-line" href="tel:+15512327029">📞 Call (551) 232-7029</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow" style="color:var(--red2)">What to expect</span>
+      <h2>Services</h2>
+      <span class="example-label">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid g3">
+      <article class="card fade"><div class="ic">✂️</div><h3>Classic Haircut</h3><p>A clean, tailored cut finished with crisp detail.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">💈</div><h3>Fade &amp; Taper</h3><p>Smooth gradients from skin to length, blended with care.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">🧔</div><h3>Beard Trim &amp; Shape</h3><p>Defined edges and a neat shape that suits the face.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">🪒</div><h3>Hot Towel Shave</h3><p>A relaxing, close shave with a warm towel finish.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">👦</div><h3>Kids' Cuts</h3><p>Patient, friendly haircuts for the youngest clients.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ic">📐</div><h3>Line-Up &amp; Edge-Up</h3><p>Sharp hairline and edge touch-ups between full cuts.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Plan your visit</span>
+      <h2>Hours</h2>
+    </div>
+    <div class="hours-box">
+      <div class="hours-side fade">
+        <div class="big">Open <em>7 days</em> a week</div>
+        <p>Hours are listed day by day in the table. Call (551) 232-7029 to check before heading over.</p>
+      </div>
+      <table class="hrs fade" aria-label="Opening hours">
+        <tbody>
+          <tr><th scope="row">Monday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><th scope="row">Friday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><th scope="row">Saturday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+          <tr><th scope="row">Sunday</th><td>8:00&#8239;AM&#8201;&ndash;&#8201;8:00&#8239;PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow" style="color:var(--red2)">Google rating</span>
+      <h2>Reviews</h2>
+    </div>
+    <div class="rating-panel fade">
+      <div class="rating-num">4.7</div>
+      <div>
+        <div class="stars" aria-label="4.7 out of 5 stars">★★★★★</div>
+        <p>based on 54 Google reviews</p>
+      </div>
+      <a class="btn btn-gold" href="https://maps.google.com/?cid=7190207350268786254&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 54 reviews on Google</a>
+    </div>
+
+    <div class="row-wrap fade">
+      <h3 class="top-title">Top reviews</h3>
+      <span class="example-label">Example layout - your best reviews show here</span>
+      <div class="cards5">
+        <article class="rev"><span class="exb">Example</span><div class="rs" aria-label="5 stars">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></article>
+        <article class="rev"><span class="exb">Example</span><div class="rs" aria-label="5 stars">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></article>
+        <article class="rev"><span class="exb">Example</span><div class="rs" aria-label="5 stars">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></article>
+        <article class="rev"><span class="exb">Example</span><div class="rs" aria-label="5 stars">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></article>
+        <article class="rev"><span class="exb">Example</span><div class="rs" aria-label="5 stars">★★★★★</div><p class="txt">Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="eyebrow">Find the shop</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="ccard fade"><div class="ic">📍</div><h3>Address</h3><p>242-244 S Orange Ave<br>Newark, NJ 07103, USA</p></div>
+      <div class="ccard fade"><div class="ic">📞</div><h3>Phone</h3><p><a class="plain" href="tel:+15512327029">(551) 232-7029</a></p></div>
+      <div class="ccard fade"><div class="ic">🧭</div><h3>Directions</h3><p>Open the map in a new tab.</p><a class="btn btn-red" href="https://maps.google.com/?cid=7190207350268786254&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
     </div>
   </div>
 </section>
 
 <section id="book">
   <div class="wrap">
-    <div class="card">
+    <div class="sec-head fade">
+      <span class="eyebrow" style="color:#fff">Reserve your chair</span>
       <h2>Book an appointment</h2>
-      <form id="booking-form" onsubmit="return false;">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name">
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel">
-        </div>
-        <div class="row">
-          <div>
-            <label for="day">Preferred day</label>
-            <input type="date" id="day" name="day">
-          </div>
-          <div>
-            <label for="time">Preferred time</label>
-            <input type="time" id="time" name="time">
-          </div>
-        </div>
-        <div>
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes"></textarea>
-        </div>
-        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-        <div id="demo-message" role="status" aria-live="polite"></div>
-      </form>
-      <p class="note">This is a sample of how online booking could work.</p>
     </div>
+    <form class="formcard fade" id="demoForm" onsubmit="return false;" novalidate>
+      <div class="frow two">
+        <div><label for="fn">Name</label><input id="fn" type="text" autocomplete="name" placeholder="Your name"></div>
+        <div><label for="fp">Phone</label><input id="fp" type="tel" autocomplete="tel" placeholder="Your phone number"></div>
+      </div>
+      <div class="frow two">
+        <div><label for="fd">Preferred day</label>
+          <select id="fd"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+        <div><label for="ft">Preferred time</label><input id="ft" type="time"></div>
+      </div>
+      <div class="frow"><div><label for="fnotes">Notes</label><textarea id="fnotes" placeholder="Anything to add?"></textarea></div></div>
+      <button type="button" class="btn btn-red" id="demoBtn">Request appointment</button>
+      <div class="msg" id="demoMsg" role="status" aria-live="polite"></div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
   </div>
 </section>
+</main>
 
 <footer>
-  Sample homepage concept for Cuts on the Ave Barbershop. Not their official website.
+  <div class="wrap">
+    <div class="fn">Cuts on the Ave Barbershop</div>
+    <p>Sample homepage concept made by a third party. Not their official website.</p>
+  </div>
 </footer>
 
+<div class="callbar"><a href="tel:+15512327029">📞 Call (551) 232-7029</a></div>
+
 <script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-message');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
+(function(){
+  var nav=document.getElementById('nav'),btn=document.getElementById('menuBtn');
+  btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',o?'true':'false');
   });
+  document.querySelectorAll('#menuList a').forEach(function(a){
+    a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');});
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    var m=document.getElementById('demoMsg');
+    m.textContent='Demo only: online booking is not connected yet.';
+    m.classList.add('show');
+  });
+})();
 </script>
 </body>
 </html>
