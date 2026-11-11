@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VIP Barbershop – Paterson, NJ</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1f2430;background:#f6f4f0;line-height:1.5}
+  .banner{background:#111;color:#f1e6c8;font-size:13px;text-align:center;padding:7px 12px}
+  header{background:#1b1f2a;color:#fff;text-align:center;padding:44px 20px 40px}
+  header h1{font-size:2.2rem;letter-spacing:.5px;margin-bottom:8px}
+  .rating{display:inline-block;background:rgba(255,255,255,.1);border-radius:999px;padding:6px 14px;font-size:.95rem;margin-bottom:14px}
+  .rating .star{color:#f5c04a}
+  .addr{color:#d6d9e0;margin-bottom:22px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font-size:1.05rem;font-weight:600;padding:14px 26px;border-radius:10px;min-width:170px}
+  .btn-primary{background:#c9a24a;color:#1b1f2a}
+  .btn-secondary{background:transparent;color:#fff;border:2px solid #fff}
+  .btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #7aa7ff;outline-offset:2px}
+  main{max-width:720px;margin:0 auto;padding:28px 18px 40px}
+  section{background:#fff;border-radius:14px;padding:24px 20px;margin-bottom:22px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  h2{font-size:1.4rem;margin-bottom:14px}
+  ul.hours{list-style:none}
+  ul.hours li{padding:9px 0;border-bottom:1px solid #eee}
+  ul.hours li:last-child{border-bottom:0}
+  label{display:block;font-weight:600;margin:14px 0 5px}
+  input,textarea{width:100%;font:inherit;padding:12px;border:1px solid #c8ccd4;border-radius:8px;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  form .btn{width:100%;margin-top:20px;background:#1b1f2a;color:#fff}
+  #demoMsg{margin-top:14px;font-weight:600;color:#8a3b00;min-height:1.4em}
+  .note{font-size:.85rem;color:#666;margin-top:10px}
+  footer{text-align:center;font-size:.85rem;color:#666;padding:0 18px 30px}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for VIP Barbershop. Not their official website.</div>
+
+<header>
+  <h1>VIP Barbershop</h1>
+  <div class="rating"><span class="star">★</span> 4.4 on Google · 74 reviews</div>
+  <p class="addr">332 Main St # A, Paterson, NJ 07505, USA</p>
+  <div class="btns">
+    <a class="btn btn-primary" href="#book">Book Now</a>
+    <a class="btn btn-secondary" href="tel:+19736843600">Call (973) 684-3600</a>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>About</h2>
+    <p>VIP Barbershop is a barber shop located on Main St in Paterson, New Jersey. Call to ask about services.</p>
+  </section>
+
+  <section>
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 12:00 – 7:00 PM</li>
+      <li>Tuesday: 12:00 – 7:00 PM</li>
+      <li>Wednesday: 12:00 – 7:00 PM</li>
+      <li>Thursday: 12:00 – 7:00 PM</li>
+      <li>Friday: 12:00 – 7:00 PM</li>
+      <li>Saturday: 12:00 – 7:00 PM</li>
+      <li>Sunday: 12:00 – 7:00 PM</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Find the shop</h2>
+    <p>332 Main St # A, Paterson, NJ 07505, USA</p>
+    <p style="margin-top:8px">Phone: <a href="tel:+19736843600">(973) 684-3600</a></p>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demoForm" onsubmit="return false;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+      <label for="day">Preferred day</label>
+      <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+
+      <label for="time">Preferred time</label>
+      <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn" id="submitBtn">Request appointment</button>
+      <p id="demoMsg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>Sample homepage concept for VIP Barbershop. Not their official website.</footer>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function () {
+    document.getElementById('demoMsg').textContent = 'Demo only: online booking is not connected yet.';
+  });
+</script>
+</body>
+</html>
