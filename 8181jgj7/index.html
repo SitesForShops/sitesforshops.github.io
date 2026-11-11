@@ -1,103 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Step Up Barbershop - Wilson | Newark, NJ</title>
+<title>Step Up Barbershop - Wilson | Sample Homepage Concept</title>
+<meta name="description" content="Sample homepage concept for Step Up Barbershop - Wilson in Newark, NJ. Not their official website.">
 <style>
-  *{box-sizing:border-box}
-  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1c1c1e;background:#f6f6f4;line-height:1.5}
-  .banner{background:#111;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
-  header{background:#1f2937;color:#fff;padding:40px 20px 44px;text-align:center}
-  header h1{margin:0 0 8px;font-size:clamp(26px,6vw,40px);line-height:1.15}
-  .rating{display:inline-block;background:rgba(255,255,255,.12);border-radius:999px;padding:6px 14px;font-size:15px;margin:8px 0 14px}
-  .address{margin:0 0 22px;color:#d1d5db}
-  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .btn{display:inline-block;border:0;border-radius:8px;padding:14px 26px;font-size:17px;font-weight:700;text-decoration:none;cursor:pointer;font-family:inherit}
-  .btn-primary{background:#f59e0b;color:#111}
-  .btn-secondary{background:#fff;color:#111}
-  main{max-width:720px;margin:0 auto;padding:24px 16px 40px}
-  section{background:#fff;border-radius:12px;padding:24px 20px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
-  h2{margin:0 0 14px;font-size:22px}
-  ul.hours{list-style:none;margin:0;padding:0}
-  ul.hours li{padding:9px 0;border-bottom:1px solid #eee}
-  ul.hours li:last-child{border-bottom:0}
-  label{display:block;font-weight:600;margin:14px 0 6px;font-size:15px}
-  input,textarea{width:100%;padding:12px;font-size:16px;border:1px solid #c9ccd1;border-radius:8px;font-family:inherit}
-  textarea{min-height:90px;resize:vertical}
-  form .btn{margin-top:18px;width:100%}
-  #demo-msg{display:none;margin-top:16px;padding:12px;background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;font-weight:600}
-  .note{font-size:13px;color:#6b7280;margin:14px 0 0}
-  footer{text-align:center;font-size:13px;color:#6b7280;padding:0 16px 30px}
+:root{
+  --char:#111113;
+  --char2:#1c1c20;
+  --char3:#26262b;
+  --red:#d7263d;
+  --red2:#ff4b5f;
+  --gold:#e6b450;
+  --white:#fff;
+  --paper:#f4f1ec;
+  --ink:#16161a;
+  --muted:#6b6b73;
+  --head:"Oswald","Bebas Neue",Impact,Haettenschweiler,"Arial Narrow Bold","Franklin Gothic Medium",sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:68px}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);text-transform:uppercase;letter-spacing:.04em;line-height:1.05}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* top banner */
+.banner{background:var(--gold);color:#111;text-align:center;font-size:.82rem;font-weight:600;padding:8px 12px;line-height:1.35}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(17,17,19,.96);backdrop-filter:blur(8px);border-bottom:3px solid var(--red)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:var(--head);text-transform:uppercase;letter-spacing:.08em;color:#fff;text-decoration:none;font-size:1.05rem;display:flex;align-items:center;gap:10px}
+.brand .dot{width:12px;height:26px;border-radius:6px;background:repeating-linear-gradient(45deg,var(--red) 0 5px,#fff 5px 10px,#2b5fd9 10px 15px)}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;padding:8px 14px;color:#ddd;text-decoration:none;font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;font-size:.95rem;border-radius:6px;transition:.2s}
+.menu a:hover{color:#fff;background:var(--red)}
+.burger{display:none;background:var(--red);border:0;color:#fff;width:46px;height:42px;border-radius:8px;cursor:pointer;font-size:1.4rem;line-height:1}
+@media(max-width:820px){
+  .burger{display:block}
+  .menu{position:absolute;top:62px;left:0;right:0;background:var(--char);flex-direction:column;padding:10px 20px 18px;gap:2px;border-bottom:3px solid var(--red);display:none}
+  .menu.open{display:flex}
+  .menu a{padding:14px 10px;font-size:1.1rem;border-bottom:1px solid #2a2a2e;border-radius:0}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(900px 500px at 85% 10%,rgba(215,38,61,.35),transparent 60%),
+  radial-gradient(700px 500px at 0% 100%,rgba(230,180,80,.18),transparent 60%),
+  linear-gradient(160deg,#18181b,#0b0b0d);
+  color:#fff;padding:72px 0 88px}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 2px,transparent 2px 18px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;gap:40px;grid-template-columns:1.4fr .8fr;align-items:center}
+.kicker{display:inline-block;font-family:var(--head);letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-size:.9rem;margin-bottom:14px}
+.hero h1{font-size:clamp(2.6rem,9vw,5.6rem);letter-spacing:.02em}
+.hero h1 span{color:var(--red2)}
+.tag{margin:18px 0 22px;font-size:clamp(1.05rem,2.6vw,1.35rem);color:#d8d8de;max-width:520px}
+.badge{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:10px 20px 10px 14px;margin-bottom:26px}
+.badge .num{background:var(--gold);color:#111;font-family:var(--head);font-size:1.3rem;border-radius:999px;padding:2px 12px}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.badge small{color:#d8d8de;font-size:.9rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--head);text-transform:uppercase;letter-spacing:.12em;font-size:1.05rem;padding:15px 28px;border-radius:10px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 10px 24px rgba(215,38,61,.4)}
+.btn-red:hover{background:var(--red2);box-shadow:0 14px 30px rgba(215,38,61,.5)}
+.btn-line{border-color:#fff;color:#fff;background:transparent}
+.btn-line:hover{background:#fff;color:#111}
+.btn-gold{background:var(--gold);color:#111}
+.btn-gold:hover{box-shadow:0 12px 26px rgba(230,180,80,.4)}
+.pole-wrap{display:flex;justify-content:center}
+.pole{position:relative;width:120px;height:340px;border-radius:60px;border:6px solid #cfd2d8;background:repeating-linear-gradient(-45deg,var(--red) 0 22px,#fff 22px 44px,#2b5fd9 44px 66px);background-size:93px 93px;animation:spin 3s linear infinite;box-shadow:0 0 0 6px #2a2a2e,0 30px 60px rgba(0,0,0,.6),inset 0 0 30px rgba(0,0,0,.35)}
+.pole::before,.pole::after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:150px;height:28px;border-radius:12px;background:linear-gradient(#f3d58b,#b98a2b)}
+.pole::before{top:-26px}.pole::after{bottom:-26px}
+@keyframes spin{to{background-position:0 93px}}
+.pole-shine{position:absolute;inset:0;border-radius:60px;background:linear-gradient(90deg,rgba(255,255,255,.35),transparent 30%,transparent 70%,rgba(0,0,0,.3))}
+@media(max-width:820px){
+  .hero{padding:48px 0 60px}
+  .hero .wrap{grid-template-columns:1fr}
+  .pole-wrap{order:-1}
+  .pole{height:150px;width:56px;border-width:4px;border-radius:30px;transform:rotate(90deg);margin:40px 0}
+  .pole::before,.pole::after{width:70px;height:16px}
+  .pole::before{top:-16px}.pole::after{bottom:-16px}
+  .pole-shine{border-radius:30px}
+}
+
+/* sections */
+section{padding:84px 0}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head .kicker{color:var(--red)}
+.sec-head h2{font-size:clamp(2rem,6vw,3.4rem)}
+.sec-head h2::after{content:"";display:block;width:70px;height:5px;background:var(--red);margin:14px auto 0;border-radius:3px}
+.example-label{display:inline-block;margin-top:16px;background:#fff3d0;color:#6b4a00;border:2px dashed var(--gold);border-radius:10px;padding:8px 16px;font-size:.9rem;font-weight:700}
+
+/* services */
+#services{background:var(--paper)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:#fff;border-radius:18px;padding:28px;box-shadow:0 6px 24px rgba(0,0,0,.07);border-top:6px solid var(--red);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(0,0,0,.14)}
+.card .ico{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,var(--char),var(--char3));display:grid;place-items:center;font-size:1.8rem;margin-bottom:16px}
+.card h3{font-size:1.5rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.97rem}
+.card .price{display:inline-block;margin:14px 0 12px;font-weight:700;color:var(--red)}
+.card .ex{display:block;font-size:.78rem;font-weight:700;color:#6b4a00;background:#fff3d0;border:1px dashed var(--gold);border-radius:8px;padding:6px 10px;line-height:1.35}
+
+/* hours */
+#hours{background:linear-gradient(160deg,var(--char),#0b0b0d);color:#fff}
+#hours .sec-head .kicker{color:var(--gold)}
+.hours-box{max-width:640px;margin:0 auto;background:var(--char2);border:1px solid #33333a;border-radius:20px;padding:12px 26px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+table{width:100%;border-collapse:collapse}
+td,th{padding:16px 6px;text-align:left;border-bottom:1px solid #303036;font-size:1.05rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}
+td:last-child{text-align:right}
+tr.today{background:linear-gradient(90deg,rgba(215,38,61,.25),transparent)}
+tr.today td:first-child::after{content:" • Today";color:#fff;font-size:.75rem}
+@media(max-width:480px){td,th{font-size:.92rem;padding:14px 2px}}
+
+/* reviews */
+#reviews{background:#fff}
+.rating-big{max-width:620px;margin:0 auto 54px;text-align:center;background:linear-gradient(135deg,var(--char),#2a1014);color:#fff;border-radius:26px;padding:40px 24px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.rating-big .n{font-family:var(--head);font-size:clamp(4.5rem,18vw,7.5rem);line-height:1;color:var(--gold)}
+.rating-big .stars{font-size:2rem;color:var(--gold);letter-spacing:4px;margin:6px 0}
+.rating-big p{color:#ddd;margin-bottom:22px;font-size:1.05rem}
+.top-title{text-align:center;margin-bottom:6px;font-size:clamp(1.6rem,5vw,2.3rem)}
+.row-label{text-align:center;margin-bottom:26px}
+.rev-row{display:grid;gap:18px;grid-template-columns:repeat(5,1fr)}
+.rev{background:var(--paper);border-radius:16px;padding:20px;border:1px solid #e3ded4;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;gap:10px}
+.rev:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+.rev .eb{display:block}
+.rev .eb span{display:inline-block;background:var(--char);color:#fff;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:999px;font-weight:700}
+.rev .stars{color:#d49a1c;font-size:1.15rem;letter-spacing:2px;white-space:nowrap}
+.rev p{color:var(--muted);font-style:italic;font-size:.95rem}
+.rev .who{font-weight:700;margin-top:auto;font-size:.92rem}
+@media(max-width:1020px){.rev-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.rev-row{grid-template-columns:1fr}}
+
+/* contact */
+#contact{background:var(--paper)}
+.contact-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.c-card{background:#fff;border-radius:18px;padding:30px;text-align:center;box-shadow:0 6px 24px rgba(0,0,0,.07);transition:transform .25s}
+.c-card:hover{transform:translateY(-5px)}
+.c-card .ico{font-size:2.2rem;margin-bottom:8px}
+.c-card h3{font-size:1.3rem;margin-bottom:8px;color:var(--red)}
+.c-card p{margin-bottom:16px;font-size:1.05rem}
+.c-card .btn{font-size:.95rem;padding:12px 22px}
+
+/* booking */
+#book{background:linear-gradient(160deg,#1a1a1e,#0b0b0d);color:#fff;position:relative;overflow:hidden}
+#book::before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:repeating-linear-gradient(45deg,var(--red) 0 20px,#fff 20px 40px,#2b5fd9 40px 60px)}
+#book .sec-head .kicker{color:var(--gold)}
+form{max-width:640px;margin:0 auto;background:var(--char2);border:1px solid #33333a;border-radius:22px;padding:30px;display:grid;gap:16px;grid-template-columns:1fr 1fr}
+form .full{grid-column:1/-1}
+label{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;color:var(--gold);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;padding:13px 14px;border-radius:10px;border:2px solid #3a3a42;background:#0f0f12;color:#fff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red2)}
+textarea{min-height:100px;resize:vertical}
+.msg{display:none;background:rgba(230,180,80,.15);border:2px solid var(--gold);color:#fff;padding:14px;border-radius:10px;font-weight:700;text-align:center}
+.msg.show{display:block}
+.note{max-width:640px;margin:16px auto 0;text-align:center;color:#b8b8c0;font-size:.88rem}
+@media(max-width:560px){form{grid-template-columns:1fr;padding:22px}}
+
+/* footer */
+footer{background:#000;color:#bbb;text-align:center;padding:40px 20px 40px}
+footer strong{display:block;font-family:var(--head);text-transform:uppercase;letter-spacing:.1em;color:#fff;font-size:1.3rem;margin-bottom:6px}
+footer small{font-size:.88rem}
+
+/* call bar */
+.callbar{display:none}
+@media(max-width:820px){
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);color:#fff;text-decoration:none;justify-content:center;align-items:center;gap:10px;padding:15px;font-family:var(--head);text-transform:uppercase;letter-spacing:.14em;font-size:1.15rem;box-shadow:0 -6px 20px rgba(0,0,0,.35)}
+  footer{padding-bottom:90px}
+  section{padding:64px 0}
+}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pole{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');</script>
 
 <div class="banner">Sample homepage concept for Step Up Barbershop - Wilson. Not their official website.</div>
 
-<header>
-  <h1>Step Up Barbershop - Wilson</h1>
-  <div class="rating">★ 4.7 on Google · 89 reviews</div>
-  <p class="address">134 Wilson Ave, Newark, NJ 07105, USA</p>
-  <div class="btns">
-    <a class="btn btn-primary" href="#book">Book Now</a>
-    <a class="btn btn-secondary" href="tel:+19735782787">Call (973) 578-2787</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home"><span class="dot"></span>Step Up Barbershop</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </header>
 
 <main>
-  <section>
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 7:30 PM</li>
-      <li>Tuesday: 9:00 AM – 7:30 PM</li>
-      <li>Wednesday: 9:00 AM – 7:30 PM</li>
-      <li>Thursday: 9:00 AM – 7:30 PM</li>
-      <li>Friday: 8:00 AM – 7:30 PM</li>
-      <li>Saturday: 7:30 AM – 7:30 PM</li>
-      <li>Sunday: 9:00 AM – 2:00 PM</li>
-    </ul>
-  </section>
+<section class="hero" id="home">
+  <div class="wrap">
+    <div>
+      <span class="kicker">✂ Newark, NJ · Barber Shop</span>
+      <h1>Step Up Barbershop - Wilson</h1>
+      <p class="tag">Sharp cuts, clean lines and a fresh look.</p>
+      <div class="badge" aria-label="Google rating 4.7 from 89 reviews">
+        <span class="num">4.7</span>
+        <span><span class="st">★★★★★</span><br><small>89 Google reviews</small></span>
+      </div>
+      <div class="cta">
+        <a class="btn btn-red" href="#book">Book Now</a>
+        <a class="btn btn-line" href="tel:+19735782787">📞 (973) 578-2787</a>
+      </div>
+    </div>
+    <div class="pole-wrap" aria-hidden="true">
+      <div class="pole"><div class="pole-shine"></div></div>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2>Visit or call</h2>
-    <p>Step Up Barbershop - Wilson is a barber shop located at 134 Wilson Ave in Newark, NJ. Call to ask about services.</p>
-    <p><a class="btn btn-primary" href="tel:+19735782787">Tap to call (973) 578-2787</a></p>
-  </section>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What to expect</span>
+      <h2>Services</h2>
+      <span class="example-label">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="ico">✂️</div>
+        <h3>Classic Haircut</h3>
+        <p>A clean, tailored cut finished with a crisp neckline.</p>
+        <span class="price">Price: add yours</span>
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">💈</div>
+        <h3>Fade &amp; Taper</h3>
+        <p>Smooth gradients from skin to length, blended with precision.</p>
+        <span class="price">Price: add yours</span>
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">🧔</div>
+        <h3>Beard Trim &amp; Shape-Up</h3>
+        <p>Defined edges and a neat shape to frame the face.</p>
+        <span class="price">Price: add yours</span>
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">🪒</div>
+        <h3>Hot Towel Shave</h3>
+        <p>A relaxing, close shave with a warm towel finish.</p>
+        <span class="price">Price: add yours</span>
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">👦</div>
+        <h3>Kids' Cuts</h3>
+        <p>Patient, tidy haircuts for the younger crowd.</p>
+        <span class="price">Price: add yours</span>
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">📐</div>
+        <h3>Line-Up &amp; Edge</h3>
+        <p>Quick touch-ups that keep every line sharp between cuts.</p>
+        <span class="price">Price: add yours</span>
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+      </article>
+    </div>
+  </div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="booking-form" onsubmit="return false;">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name">
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Plan your visit</span>
+      <h2>Hours</h2>
+    </div>
+    <div class="hours-box reveal">
+      <table>
+        <tbody id="hoursBody">
+          <tr><td>Monday</td><td>9:00 AM – 7:30 PM</td></tr>
+          <tr><td>Tuesday</td><td>9:00 AM – 7:30 PM</td></tr>
+          <tr><td>Wednesday</td><td>9:00 AM – 7:30 PM</td></tr>
+          <tr><td>Thursday</td><td>9:00 AM – 7:30 PM</td></tr>
+          <tr><td>Friday</td><td>8:00 AM – 7:30 PM</td></tr>
+          <tr><td>Saturday</td><td>7:30 AM – 7:30 PM</td></tr>
+          <tr><td>Sunday</td><td>9:00 AM – 2:00 PM</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">What people say</span>
+      <h2>Reviews</h2>
+    </div>
+    <div class="rating-big reveal">
+      <div class="n">4.7</div>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <p>based on 89 Google reviews</p>
+      <a class="btn btn-gold" href="https://maps.google.com/?cid=9121968552923098120&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 89 reviews on Google</a>
+    </div>
+    <h3 class="top-title reveal">Top reviews</h3>
+    <div class="row-label reveal"><span class="example-label">Example layout - your best reviews show here</span></div>
+    <div class="rev-row">
+      <article class="rev reveal">
+        <div class="eb"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev reveal">
+        <div class="eb"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev reveal">
+        <div class="eb"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev reveal">
+        <div class="eb"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev reveal">
+        <div class="eb"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+    </div>
+  </div>
+</section>
 
-      <label for="day">Preferred day</label>
-      <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Find the shop</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card reveal">
+        <div class="ico">📍</div>
+        <h3>Address</h3>
+        <p>134 Wilson Ave<br>Newark, NJ 07105, USA</p>
+        <a class="btn btn-red" href="https://maps.google.com/?cid=9121968552923098120&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="c-card reveal">
+        <div class="ico">📞</div>
+        <h3>Phone</h3>
+        <p>(973) 578-2787</p>
+        <a class="btn btn-red" href="tel:+19735782787">Call now</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <label for="time">Preferred time</label>
-      <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
-
-      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-      <div id="demo-msg" role="status"></div>
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Reserve your chair</span>
+      <h2>Book an appointment</h2>
+    </div>
+    <form class="reveal" id="demoForm" onsubmit="return false" novalidate>
+      <div class="full">
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" autocomplete="off">
+      </div>
+      <div class="full">
+        <label for="f-phone">Phone</label>
+        <input id="f-phone" name="phone" type="tel" autocomplete="off">
+      </div>
+      <div>
+        <label for="f-day">Preferred day</label>
+        <input id="f-day" name="day" type="text" placeholder="e.g. Saturday">
+      </div>
+      <div>
+        <label for="f-time">Preferred time</label>
+        <input id="f-time" name="time" type="text" placeholder="e.g. Afternoon">
+      </div>
+      <div class="full">
+        <label for="f-notes">Notes</label>
+        <textarea id="f-notes" name="notes"></textarea>
+      </div>
+      <div class="full">
+        <button type="button" class="btn btn-red" style="width:100%" id="demoBtn">Request appointment</button>
+      </div>
+      <div class="full msg" id="demoMsg" role="status" aria-live="polite"></div>
     </form>
     <p class="note">This is a sample of how online booking could work.</p>
-  </section>
+  </div>
+</section>
 </main>
 
-<footer>Sample concept only. Business details shown as listed publicly.</footer>
+<footer>
+  <strong>Step Up Barbershop - Wilson</strong>
+  <small>Sample homepage concept made by a third party. Not their official website.</small>
+</footer>
+
+<a class="callbar" href="tel:+19735782787">📞 Call (973) 578-2787</a>
 
 <script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
+(function(){
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open);
+    burger.textContent=open?'✕':'☰';
   });
+  menu.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.textContent='☰';}
+  });
+
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    var m=document.getElementById('demoMsg');
+    m.textContent='Demo only: online booking is not connected yet.';
+    m.classList.add('show');
+  });
+
+  // highlight today's row
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var today=days[new Date().getDay()];
+  document.querySelectorAll('#hoursBody tr').forEach(function(r){
+    if(r.firstElementChild.textContent.trim()===today)r.classList.add('today');
+  });
+
+  // fade-in on scroll
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{
+    els.forEach(function(el){el.classList.add('in');});
+  }
+})();
 </script>
 </body>
 </html>
