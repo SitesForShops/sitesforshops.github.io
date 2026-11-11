@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newark Auto Spa - Carwash &amp; Oil Change | Sample Homepage Concept</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1c2733;background:#f4f7fa;line-height:1.5}
+  .banner{background:#1c2733;color:#fff;font-size:13px;text-align:center;padding:7px 12px}
+  header.hero{background:linear-gradient(135deg,#0b5ea8,#12a0c9);color:#fff;padding:40px 20px 44px;text-align:center}
+  .wrap{max-width:720px;margin:0 auto}
+  h1{font-size:clamp(26px,6vw,40px);line-height:1.15;margin-bottom:10px}
+  .tag{opacity:.92;margin-bottom:18px}
+  .rating{display:inline-block;background:rgba(255,255,255,.16);border-radius:999px;padding:6px 16px;font-weight:600;margin-bottom:22px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;border:none;cursor:pointer;font-size:18px;font-weight:700;padding:14px 28px;border-radius:10px;text-decoration:none;min-width:170px}
+  .btn-book{background:#ffc83d;color:#1c2733}
+  .btn-call{background:#fff;color:#0b5ea8}
+  section{padding:32px 20px}
+  .card{background:#fff;border-radius:14px;padding:24px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  h2{font-size:24px;margin-bottom:14px;color:#0b5ea8}
+  .addr{font-size:17px}
+  ul.hours{list-style:none}
+  ul.hours li{padding:9px 0;border-bottom:1px solid #e6ecf1}
+  ul.hours li:last-child{border-bottom:none}
+  label{display:block;font-weight:600;margin:14px 0 5px}
+  input,textarea{width:100%;font:inherit;padding:12px;border:1px solid #c3cfda;border-radius:8px;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  .submit{background:#0b5ea8;color:#fff;width:100%;margin-top:20px}
+  #demoMsg{display:none;margin-top:16px;padding:12px;border-radius:8px;background:#fff4d6;border:1px solid #ffc83d;font-weight:600;text-align:center}
+  .note{font-size:13px;color:#5b6b7a;margin-top:14px;text-align:center}
+  footer{text-align:center;font-size:13px;color:#5b6b7a;padding:24px 20px 40px}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Newark Auto Spa - Carwash &amp; Oil Change. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Newark Auto Spa - Carwash &amp; Oil Change</h1>
+    <p class="tag">353 S Orange Ave, Newark, NJ 07103, USA</p>
+    <div class="rating">★ 4.9 on Google · 238 reviews</div>
+    <div class="btns">
+      <a class="btn btn-book" href="#book">Book Now</a>
+      <a class="btn btn-call" href="tel:+19733684045">Call (973) 368-4045</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="card">
+      <h2>Location &amp; Contact</h2>
+      <p class="addr"><strong>Address:</strong> 353 S Orange Ave, Newark, NJ 07103, USA</p>
+      <p class="addr" style="margin-top:8px"><strong>Phone:</strong> <a href="tel:+19733684045">(973) 368-4045</a></p>
+      <p class="addr" style="margin-top:8px">Call to ask about services.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="card">
+      <h2>Opening Hours</h2>
+      <ul class="hours">
+        <li>Monday: 8:00 AM – 6:00 PM</li>
+        <li>Tuesday: 8:00 AM – 6:00 PM</li>
+        <li>Wednesday: 8:00 AM – 6:00 PM</li>
+        <li>Thursday: 8:00 AM – 6:00 PM</li>
+        <li>Friday: 8:00 AM – 6:00 PM</li>
+        <li>Saturday: 8:00 AM – 6:00 PM</li>
+        <li>Sunday: 8:00 AM – 4:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:0">
+  <div class="wrap">
+    <div class="card">
+      <h2>Book an appointment</h2>
+      <form id="demoForm" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input id="name" type="text" autocomplete="name">
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" autocomplete="tel">
+
+        <label for="day">Preferred day</label>
+        <input id="day" type="text" placeholder="e.g. Saturday">
+
+        <label for="time">Preferred time</label>
+        <input id="time" type="text" placeholder="e.g. 10:00 AM">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes"></textarea>
+
+        <button type="button" class="btn submit" onclick="showDemo()">Request Appointment</button>
+        <div id="demoMsg" role="status"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept. Not the official website of Newark Auto Spa - Carwash &amp; Oil Change.
+</footer>
+
+<script>
+  function showDemo(){
+    var m = document.getElementById('demoMsg');
+    m.textContent = 'Demo only: online booking is not connected yet.';
+    m.style.display = 'block';
+  }
+</script>
+</body>
+</html>
