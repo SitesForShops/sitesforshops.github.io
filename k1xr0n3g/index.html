@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habibi Cuts – Barber Shop in Paterson, NJ</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1c1c1e;background:#f6f5f2;line-height:1.5}
+  .banner{background:#1c1c1e;color:#fff;font-size:13px;text-align:center;padding:7px 12px}
+  header{background:#fff;border-bottom:1px solid #e4e2dc}
+  .wrap{max-width:720px;margin:0 auto;padding:0 18px}
+  .hero{padding:36px 0 30px;text-align:center}
+  .hero p.type{text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:#8a6d2f;font-weight:600}
+  h1{font-size:2.3rem;margin:8px 0 10px;line-height:1.15}
+  .rating{display:inline-block;background:#faf3e0;border:1px solid #ecdcae;border-radius:999px;padding:6px 14px;font-weight:600;font-size:15px}
+  .rating .stars{color:#c48a00;letter-spacing:2px}
+  .addr{margin-top:14px;color:#444}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
+  .btn{display:inline-block;padding:14px 26px;border-radius:10px;font-size:1.05rem;font-weight:700;text-decoration:none;border:2px solid #1c1c1e;cursor:pointer;font-family:inherit}
+  .btn.primary{background:#1c1c1e;color:#fff}
+  .btn.secondary{background:#fff;color:#1c1c1e}
+  .btn.book{background:#c48a00;border-color:#c48a00;color:#fff;font-size:1.15rem;padding:16px 34px}
+  section{padding:30px 0}
+  h2{font-size:1.5rem;margin-bottom:14px}
+  .card{background:#fff;border:1px solid #e4e2dc;border-radius:14px;padding:20px}
+  ul.hours{list-style:none}
+  ul.hours li{padding:9px 0;border-bottom:1px solid #eee;font-size:1rem}
+  ul.hours li:last-child{border-bottom:none}
+  label{display:block;font-weight:600;margin:14px 0 5px;font-size:.95rem}
+  input,textarea{width:100%;padding:12px;border:1px solid #c9c6bd;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  form .btn{margin-top:20px;width:100%}
+  #demoMsg{display:none;margin-top:16px;padding:12px 14px;background:#fff4d6;border:1px solid #ecdcae;border-radius:8px;font-weight:600}
+  .note{font-size:.85rem;color:#666;margin-top:14px}
+  footer{text-align:center;font-size:.85rem;color:#666;padding:26px 18px 40px}
+  @media(min-width:600px){h1{font-size:3rem}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Habibi Cuts. Not their official website.</div>
+
+<header>
+  <div class="wrap hero">
+    <p class="type">Barber Shop · Paterson, NJ</p>
+    <h1>Habibi Cuts</h1>
+    <div class="rating"><span class="stars">★★★★★</span> 5 rating · 713 Google reviews</div>
+    <p class="addr">376 Getty Ave, Paterson, NJ 07503, USA</p>
+    <div class="btns">
+      <a class="btn book" href="#book">Book Now</a>
+      <a class="btn primary" href="tel:+18622825834">Call (862) 282-5834</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p>Habibi Cuts is a barber shop located on Getty Ave in Paterson, New Jersey. It holds a 5 rating from 713 reviews on Google. Call to ask about services.</p>
+    </div>
+  </section>
+
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 9:00 AM – 8:30 PM</li>
+        <li>Tuesday: 9:00 AM – 8:30 PM</li>
+        <li>Wednesday: 9:00 AM – 8:30 PM</li>
+        <li>Thursday: 9:00 AM – 8:30 PM</li>
+        <li>Friday: 9:00 AM – 8:30 PM</li>
+        <li>Saturday: 9:00 AM – 8:30 PM</li>
+        <li>Sunday: 9:00 AM – 8:00 PM</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demoForm" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="off">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="off">
+
+        <label for="day">Preferred day</label>
+        <input type="text" id="day" name="day" placeholder="e.g. Saturday" autocomplete="off">
+
+        <label for="time">Preferred time</label>
+        <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM" autocomplete="off">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+        <div id="demoMsg" role="status"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact &amp; location</h2>
+    <div class="card">
+      <p><strong>Habibi Cuts</strong></p>
+      <p>376 Getty Ave, Paterson, NJ 07503, USA</p>
+      <div class="btns" style="justify-content:flex-start">
+        <a class="btn secondary" href="tel:+18622825834">Tap to call (862) 282-5834</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>Sample homepage concept for Habibi Cuts. Not their official website.</footer>
+
+<script>
+  document.getElementById('demoBtn').addEventListener('click', function () {
+    var m = document.getElementById('demoMsg');
+    m.textContent = 'Demo only: online booking is not connected yet.';
+    m.style.display = 'block';
+  });
+</script>
+</body>
+</html>
