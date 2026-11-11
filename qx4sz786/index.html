@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfect Style Barbershop – Paterson, NJ</title>
+<style>
+  :root {
+    --ink: #1c1c1e;
+    --muted: #5c5c63;
+    --bg: #f6f4f0;
+    --card: #ffffff;
+    --accent: #b3261e;
+    --accent-dark: #8f1d17;
+    --navy: #14213d;
+    --line: #e2ded6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  .banner {
+    background: #fff3c4;
+    color: #4a3b00;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+    border-bottom: 1px solid #e6d58a;
+  }
+  header.hero {
+    background: var(--navy);
+    color: #fff;
+    padding: 40px 20px 44px;
+    text-align: center;
+  }
+  .hero h1 {
+    margin: 0 0 8px;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    line-height: 1.15;
+  }
+  .rating {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border-radius: 999px;
+    padding: 6px 16px;
+    margin: 10px 0 14px;
+    font-size: 1rem;
+  }
+  .rating .star { color: #ffd166; }
+  .address { margin: 0 0 22px; color: #dfe3ee; }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    min-width: 160px;
+    text-align: center;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary { background: #fff; color: var(--navy); }
+  .btn-secondary:hover { background: #e9ecf4; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 20px;
+    margin-bottom: 20px;
+  }
+  h2 { margin: 0 0 12px; font-size: 1.4rem; color: var(--navy); }
+  .hours { list-style: none; margin: 0; padding: 0; }
+  .hours li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .hours li:last-child { border-bottom: 0; }
+  .info p { margin: 6px 0; }
+  .info a { color: var(--accent); font-weight: 600; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  input, textarea {
+    width: 100%;
+    font: inherit;
+    padding: 11px 12px;
+    border: 1px solid #c9c4b9;
+    border-radius: 8px;
+    background: #fff;
+  }
+  input:focus, textarea:focus {
+    outline: 2px solid var(--navy);
+    outline-offset: 1px;
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  #demo-msg {
+    display: none;
+    background: #e8f1ff;
+    border: 1px solid #a9c4f2;
+    color: #12325f;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 12px 0 0; }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding: 0 16px 28px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Perfect Style Barbershop. Not their official website.</div>
+
+<header class="hero">
+  <h1>Perfect Style Barbershop</h1>
+  <div class="rating" aria-label="Google rating 4.6 from 112 reviews">
+    <span class="star">★</span> 4.6 on Google · 112 reviews
+  </div>
+  <p class="address">460 Broadway, Paterson, NJ 07514, USA</p>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="#book">Book Now</a>
+    <a class="btn btn-secondary" href="tel:+18622644480">Call (862) 264-4480</a>
+  </div>
+</header>
+
+<main>
+  <section class="info">
+    <h2>Visit the barbershop</h2>
+    <p><strong>Address:</strong> 460 Broadway, Paterson, NJ 07514, USA</p>
+    <p><strong>Phone:</strong> <a href="tel:+18622644480">(862) 264-4480</a></p>
+    <p><strong>Google rating:</strong> 4.6 (112 reviews)</p>
+    <p>Call to ask about services.</p>
+  </section>
+
+  <section>
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 9:00 AM – 7:00 PM</li>
+      <li>Tuesday: 9:00 AM – 7:00 PM</li>
+      <li>Wednesday: 9:00 AM – 7:00 PM</li>
+      <li>Thursday: 9:00 AM – 7:00 PM</li>
+      <li>Friday: 9:00 AM – 7:00 PM</li>
+      <li>Saturday: 9:00 AM – 7:00 PM</li>
+      <li>Sunday: 9:00 AM – 7:00 PM</li>
+    </ul>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" novalidate>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+      </div>
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </div>
+      <div class="row">
+        <div>
+          <label for="day">Preferred day</label>
+          <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
+        </div>
+      </div>
+      <div>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary" id="demo-btn">Request Appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>
+  Sample homepage concept for Perfect Style Barbershop. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+  document.getElementById('demo-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+  });
+</script>
+
+</body>
+</html>
