@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D'Class Beauty Salon – Paterson, NJ</title>
+<style>
+  :root {
+    --ink: #2b2230;
+    --muted: #6d6373;
+    --accent: #a8416f;
+    --accent-dark: #8a3359;
+    --bg: #faf6f8;
+    --card: #ffffff;
+    --line: #eadfe5;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #2b2230;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #f3dce7, #fbeef4);
+    padding: 40px 20px 36px;
+    text-align: center;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
+  .type { color: var(--muted); margin: 0 0 14px; }
+  .rating {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .rating span { color: var(--accent); }
+  .address { margin: 0 0 20px; color: var(--ink); }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px 26px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary { background: #fff; color: var(--accent); border: 2px solid var(--accent); padding: 12px 24px; }
+  section { padding: 32px 20px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  h2 { margin: 0 0 14px; font-size: 1.4rem; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: 0; }
+  label { display: block; font-weight: 600; margin: 14px 0 6px; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #cdbfc7;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; grid-template-columns: 1fr; gap: 0 14px; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } h1 { font-size: 2.4rem; } }
+  form .btn { margin-top: 20px; width: 100%; }
+  #demo-msg {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fdf0f5;
+    border: 1px solid var(--accent);
+    color: var(--accent-dark);
+    font-weight: 600;
+    display: none;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 24px 20px 40px; }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for D'Class Beauty Salon. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>D'Class Beauty Salon</h1>
+    <p class="type">Hair salon in Paterson, NJ</p>
+    <div class="rating"><span>★</span> 4.4 on Google · 91 reviews</div>
+    <p class="address">228 Park Ave, Paterson, NJ 07501, USA</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+19733452252">Call (973) 345-2252</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap card">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 9:00 AM – 6:30 PM</li>
+      <li>Tuesday: 9:00 AM – 6:30 PM</li>
+      <li>Wednesday: 9:00 AM – 6:30 PM</li>
+      <li>Thursday: 9:00 AM – 6:30 PM</li>
+      <li>Friday: 9:00 AM – 6:30 PM</li>
+      <li>Saturday: 9:00 AM – 6:30 PM</li>
+      <li>Sunday: 9:00 AM – 3:30 PM</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap card">
+    <h2>Visit the salon</h2>
+    <p>D'Class Beauty Salon is located at 228 Park Ave in Paterson, New Jersey. Call to ask about services.</p>
+    <a class="btn btn-secondary" href="tel:+19733452252">Call (973) 345-2252</a>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap card">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" onsubmit="return false;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+      <div class="row">
+        <div>
+          <label for="day">Preferred day</label>
+          <input type="date" id="day" name="day">
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input type="time" id="time" name="time">
+        </div>
+      </div>
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn btn-primary" id="demo-btn">Request Appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for D'Class Beauty Salon. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
