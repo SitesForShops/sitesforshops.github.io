@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J C Barber Shop | Newark, NJ</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1d1f23;background:#f6f5f2;line-height:1.5}
+  .banner{background:#222;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+  header.hero{background:#1b1d21;color:#fff;padding:48px 20px 56px;text-align:center}
+  .wrap{max-width:720px;margin:0 auto}
+  h1{font-size:2.2rem;line-height:1.15;margin-bottom:8px}
+  .sub{color:#c9ccd2;margin-bottom:16px}
+  .rating{display:inline-block;background:#2b2e34;border-radius:999px;padding:6px 14px;font-size:.95rem;margin-bottom:22px}
+  .star{color:#f5b301}
+  .addr{margin-bottom:22px;color:#e6e7ea}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;padding:14px 26px;border-radius:8px;font-size:1.05rem;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:inherit}
+  .btn-primary{background:#c8102e;color:#fff}
+  .btn-primary:hover{background:#a80d26}
+  .btn-secondary{background:transparent;color:#fff;border-color:#fff}
+  .btn-secondary:hover{background:rgba(255,255,255,.12)}
+  section{padding:40px 20px}
+  h2{font-size:1.5rem;margin-bottom:16px}
+  .card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  ul.hours{list-style:none}
+  ul.hours li{padding:10px 0;border-bottom:1px solid #eee}
+  ul.hours li:last-child{border-bottom:none}
+  label{display:block;font-weight:600;margin:14px 0 6px;font-size:.95rem}
+  input,textarea{width:100%;padding:12px;border:1px solid #c9ccd2;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+  input:focus,textarea:focus{outline:2px solid #c8102e;border-color:#c8102e}
+  textarea{min-height:90px;resize:vertical}
+  form .btn{width:100%;margin-top:20px}
+  #demoMsg{margin-top:16px;padding:12px;border-radius:8px;background:#fff4d6;border:1px solid #f0d58a;display:none;font-weight:600}
+  .note{font-size:.85rem;color:#5b5f66;margin-top:14px}
+  footer{text-align:center;font-size:.85rem;color:#5b5f66;padding:24px 20px 40px}
+  @media(min-width:600px){h1{font-size:3rem}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for J C Barber Shop. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>J C Barber Shop</h1>
+    <p class="sub">Barber shop in Newark, NJ</p>
+    <div class="rating"><span class="star">★</span> 4.6 on Google · 116 reviews</div>
+    <p class="addr">98 Bloomfield Ave, Newark, NJ 07104, USA</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+19732300747">Call (973) 230-0747</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 9:00 AM – 7:30 PM</li>
+        <li>Tuesday: 9:00 AM – 7:30 PM</li>
+        <li>Wednesday: 9:00 AM – 7:30 PM</li>
+        <li>Thursday: 9:00 AM – 7:30 PM</li>
+        <li>Friday: 9:00 AM – 7:30 PM</li>
+        <li>Saturday: 9:00 AM – 7:30 PM</li>
+        <li>Sunday: 9:00 AM – 3:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:0">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demoForm" onsubmit="return false">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+        <label for="day">Preferred day</label>
+        <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+
+        <label for="time">Preferred time</label>
+        <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" class="btn btn-primary" id="demoBtn">Request appointment</button>
+        <div id="demoMsg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>J C Barber Shop · 98 Bloomfield Ave, Newark, NJ 07104, USA · <a href="tel:+19732300747">(973) 230-0747</a></p>
+</footer>
+
+<script>
+  document.getElementById('demoBtn').addEventListener('click', function () {
+    var msg = document.getElementById('demoMsg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
