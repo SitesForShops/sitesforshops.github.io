@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jass Unisex Hair Salon, Newark, NJ</title>
+<style>
+  :root {
+    --ink: #1f2430;
+    --muted: #5d6475;
+    --accent: #b3365b;
+    --accent-dark: #8f2a49;
+    --bg: #faf7f5;
+    --card: #ffffff;
+    --line: #e8e1dd;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #1f2430;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #f6e3e8 0%, #fbeee6 100%);
+    padding: 48px 20px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--line);
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: clamp(1.9rem, 6vw, 2.8rem); margin: 0 0 8px; line-height: 1.15; }
+  .rating { font-size: 1.05rem; margin: 6px 0 14px; color: var(--ink); }
+  .stars { color: #d98a00; letter-spacing: 2px; }
+  .address { color: var(--muted); margin: 0 0 22px; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    font-family: inherit;
+    min-height: 48px;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .btn-outline { background: #fff; color: var(--accent); }
+  .btn-outline:hover { background: #fdf1f4; }
+  main { padding: 28px 20px 40px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 20px;
+    margin: 0 auto 22px;
+    max-width: 760px;
+  }
+  h2 { margin: 0 0 14px; font-size: 1.4rem; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: none; }
+  label { display: block; font-weight: 600; margin: 14px 0 6px; font-size: 0.95rem; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #cfc7c2;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  textarea { min-height: 90px; resize: vertical; }
+  .two { display: grid; grid-template-columns: 1fr; gap: 0 16px; }
+  @media (min-width: 560px) { .two { grid-template-columns: 1fr 1fr; } }
+  form .btn { margin-top: 20px; width: 100%; }
+  #demo-msg {
+    display: none;
+    margin-top: 16px;
+    padding: 12px 14px;
+    background: #fff4d6;
+    border: 1px solid #ecd48a;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 10px 20px 36px; }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Jass Unisex Hair Salon. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Jass Unisex Hair Salon</h1>
+    <p class="rating"><span class="stars" aria-hidden="true">★★★★★</span> <strong>4.6</strong> on Google · 233 reviews</p>
+    <p class="address">328 Bloomfield Ave, Newark, NJ 07107, USA</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-outline" href="tel:+19734829502">Call (973) 482-9502</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 9:00 AM – 7:00 PM</li>
+      <li>Tuesday: 9:00 AM – 7:00 PM</li>
+      <li>Wednesday: 9:00 AM – 7:00 PM</li>
+      <li>Thursday: 9:00 AM – 7:00 PM</li>
+      <li>Friday: 9:00 AM – 7:00 PM</li>
+      <li>Saturday: 9:00 AM – 7:00 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </section>
+
+  <section id="visit">
+    <h2>Contact</h2>
+    <p>Jass Unisex Hair Salon is a hair salon in Newark, New Jersey. Call to ask about services.</p>
+    <p><strong>Address:</strong> 328 Bloomfield Ave, Newark, NJ 07107, USA<br>
+    <strong>Phone:</strong> <a href="tel:+19734829502">(973) 482-9502</a></p>
+    <a class="btn btn-outline" href="tel:+19734829502">Tap to call</a>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" onsubmit="return false;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+      <div class="two">
+        <div>
+          <label for="day">Preferred day</label>
+          <input type="date" id="day" name="day">
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input type="time" id="time" name="time">
+        </div>
+      </div>
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+</main>
+
+<footer>
+  Sample homepage concept for Jass Unisex Hair Salon. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
