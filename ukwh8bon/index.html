@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUV 4 PUPS Pet Grooming – Belleville, NJ</title>
+<style>
+  :root {
+    --bg: #fdf8f3;
+    --ink: #2b2a33;
+    --muted: #6b6a75;
+    --accent: #e0568b;
+    --accent-dark: #b93a6c;
+    --teal: #2a8c8c;
+    --card: #ffffff;
+    --line: #eadfd6;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .banner {
+    background: #2b2a33;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    text-align: center;
+    padding: 40px 20px 32px;
+    background: linear-gradient(180deg, #fde8f0 0%, var(--bg) 100%);
+  }
+  .hero h1 {
+    margin: 0 0 10px;
+    font-size: clamp(1.8rem, 6vw, 2.8rem);
+    line-height: 1.15;
+  }
+  .rating {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    margin: 6px 0 12px;
+  }
+  .rating .star { color: #f2a900; }
+  .address { color: var(--muted); margin: 0 0 20px; }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-call { background: var(--teal); color: #fff; }
+  .btn-call:hover { background: #1f6e6e; }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 18px 40px;
+  }
+  section {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 20px;
+    margin-top: 20px;
+  }
+  h2 { margin: 0 0 12px; font-size: 1.4rem; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  ul.hours li:last-child { border-bottom: none; }
+  label {
+    display: block;
+    font-weight: 600;
+    margin: 14px 0 5px;
+    font-size: 0.95rem;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #cfc4ba;
+    border-radius: 10px;
+    font-family: inherit;
+    background: #fff;
+  }
+  input:focus, textarea:focus {
+    outline: 2px solid var(--teal);
+    border-color: var(--teal);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  form .btn { width: 100%; margin-top: 18px; }
+  #demo-msg {
+    display: none;
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff4d6;
+    border: 1px solid #f0d27a;
+    font-weight: 600;
+    text-align: center;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 10px 18px 30px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for LUV 4 PUPS Pet Grooming. Not their official website.</div>
+
+<header class="hero">
+  <h1>LUV 4 PUPS Pet Grooming</h1>
+  <div class="rating"><span class="star">★</span> 4.8 on Google · 131 reviews</div>
+  <p class="address">328 Washington Ave, Belleville, NJ 07109, USA</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#book">Book Now</a>
+    <a class="btn btn-call" href="tel:+19737594423">Call (973) 759-4423</a>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <h2>Pet grooming in Belleville</h2>
+    <p>LUV 4 PUPS Pet Grooming is a pet groomer located on Washington Ave in Belleville, New Jersey. Call to ask about services.</p>
+  </section>
+
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: Closed</li>
+      <li>Tuesday: 10:00 AM – 5:00 PM</li>
+      <li>Wednesday: 10:00 AM – 5:00 PM</li>
+      <li>Thursday: 10:00 AM – 5:00 PM</li>
+      <li>Friday: 10:00 AM – 5:00 PM</li>
+      <li>Saturday: 10:00 AM – 5:00 PM</li>
+      <li>Sunday: Closed</li>
+    </ul>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="demo-form" onsubmit="return false;">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+      <label for="day">Preferred day</label>
+      <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+
+      <label for="time">Preferred time</label>
+      <input type="text" id="time" name="time" placeholder="e.g. 11:00 AM">
+
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>328 Washington Ave, Belleville, NJ 07109, USA</p>
+    <a class="btn btn-call" href="tel:+19737594423">Call (973) 759-4423</a>
+  </section>
+</main>
+
+<footer>Sample homepage concept for LUV 4 PUPS Pet Grooming. Not their official website.</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
