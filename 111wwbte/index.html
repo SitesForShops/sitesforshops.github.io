@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lenin @ Legends no.1 barber shop | Newark, NJ</title>
+<style>
+  :root {
+    --ink: #1b1b1f;
+    --muted: #5d5f68;
+    --bg: #f6f4f0;
+    --card: #ffffff;
+    --accent: #b8862b;
+    --accent-dark: #8f6718;
+    --line: #e4e0d8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #111;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #1b1b1f 0%, #34343c 100%);
+    color: #fff;
+    padding: 48px 20px 56px;
+    text-align: center;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: clamp(1.7rem, 6vw, 2.6rem); margin: 0 0 10px; line-height: 1.15; }
+  .rating { font-size: 1.05rem; color: #f0d9a0; margin-bottom: 6px; }
+  .address { color: #d8d8de; margin-bottom: 24px; }
+  .btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .1s, background .2s;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary { background: transparent; color: #fff; border: 2px solid #fff; padding: 12px 26px; }
+  .btn-secondary:hover { background: rgba(255,255,255,.12); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  section { padding: 40px 20px; }
+  h2 { margin: 0 0 16px; font-size: 1.5rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: 0; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid #cfcac0;
+    border-radius: 8px;
+    background: #fff;
+  }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  #demo-msg {
+    display: none;
+    background: #fff4d6;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+  footer { text-align: center; font-size: 0.8rem; color: var(--muted); padding: 24px 20px 40px; }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Lenin @ Legends no.1 barber shop. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Lenin @ Legends no.1 barber shop</h1>
+    <div class="rating" aria-label="Google rating 4.7 from 49 reviews">★ 4.7 on Google · 49 reviews</div>
+    <div class="address">477 Clinton Ave, Newark, NJ 07108, USA</div>
+    <div class="actions">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+19733026454">Call (973) 302-6454</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 8:00 AM – 8:00 PM</li>
+        <li>Tuesday: 8:00 AM – 8:00 PM</li>
+        <li>Wednesday: 8:00 AM – 8:00 PM</li>
+        <li>Thursday: 8:00 AM – 8:00 PM</li>
+        <li>Friday: 8:00 AM – 8:00 PM</li>
+        <li>Saturday: 8:00 AM – 8:00 PM</li>
+        <li>Sunday: 8:00 AM – 7:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Visit the shop</h2>
+    <div class="card">
+      <p style="margin-top:0">A barber shop in Newark, New Jersey, located at 477 Clinton Ave, Newark, NJ 07108, USA. Call to ask about services.</p>
+      <a class="btn btn-primary" href="tel:+19733026454">Tap to call (973) 302-6454</a>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demo-form" onsubmit="return false;">
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <label for="day">Preferred day</label>
+            <input type="date" id="day" name="day">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input type="time" id="time" name="time">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Lenin @ Legends no.1 barber shop. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
