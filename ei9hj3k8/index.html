@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luxury Salon | Newark, NJ</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#2b2430;background:#faf7f9;line-height:1.55}
+  .banner{background:#2b2430;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
+  header{background:linear-gradient(160deg,#f6e7ee,#efe3f5);padding:40px 20px 44px;text-align:center}
+  .wrap{max-width:720px;margin:0 auto}
+  h1{font-size:2.2rem;line-height:1.2;margin-bottom:8px;color:#4a2a45}
+  .rating{display:inline-block;background:#fff;border-radius:999px;padding:6px 16px;font-weight:600;margin:10px 0 16px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .rating span{color:#c48a1a}
+  .address{margin-bottom:20px;color:#5b4b57}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;padding:14px 28px;border-radius:999px;font-size:1.05rem;font-weight:700;text-decoration:none;border:2px solid #8e3b78;cursor:pointer;font-family:inherit}
+  .btn.primary{background:#8e3b78;color:#fff}
+  .btn.secondary{background:#fff;color:#8e3b78}
+  section{padding:36px 20px}
+  h2{font-size:1.5rem;margin-bottom:16px;color:#4a2a45;text-align:center}
+  .card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 1px 6px rgba(0,0,0,.07)}
+  ul.hours{list-style:none}
+  ul.hours li{padding:10px 0;border-bottom:1px solid #eee}
+  ul.hours li:last-child{border-bottom:none}
+  label{display:block;font-weight:600;margin:14px 0 6px}
+  input,select,textarea{width:100%;padding:12px;border:1px solid #cdbfca;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  form .btn{width:100%;margin-top:20px}
+  #demoMsg{margin-top:16px;padding:12px;border-radius:8px;background:#fff3cd;color:#5a4500;text-align:center;font-weight:600;display:none}
+  .note{font-size:.85rem;color:#6d5f69;margin-top:14px;text-align:center}
+  footer{text-align:center;padding:24px 20px 40px;color:#6d5f69;font-size:.9rem}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Luxury Salon. Not their official website.</div>
+
+<header>
+  <div class="wrap">
+    <h1>Luxury Salon</h1>
+    <div class="rating"><span>★</span> 4.9 on Google · 123 reviews</div>
+    <p class="address">261 Ferry St, Newark, NJ 07105, USA</p>
+    <div class="btns">
+      <a class="btn primary" href="#book" id="bookNow">Book Now</a>
+      <a class="btn secondary" href="tel:+19732506198">Call (973) 250-6198</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: Closed</li>
+        <li>Tuesday: 8:30 AM – 7:00 PM</li>
+        <li>Wednesday: 8:30 AM – 7:00 PM</li>
+        <li>Thursday: 8:30 AM – 7:00 PM</li>
+        <li>Friday: 8:30 AM – 7:00 PM</li>
+        <li>Saturday: 8:30 AM – 7:00 PM</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="card" style="text-align:center">
+      <p>Call to ask about services.</p>
+      <p style="margin:8px 0 16px">261 Ferry St, Newark, NJ 07105, USA</p>
+      <a class="btn primary" href="tel:+19732506198">Tap to call (973) 250-6198</a>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demoForm" onsubmit="return false">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="off">
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="off">
+
+        <label for="day">Preferred day</label>
+        <input id="day" name="day" type="text" placeholder="e.g. Saturday">
+
+        <label for="time">Preferred time</label>
+        <input id="time" name="time" type="text" placeholder="e.g. 2:00 PM">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" class="btn primary" id="submitBtn">Request appointment</button>
+        <div id="demoMsg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Luxury Salon · 261 Ferry St, Newark, NJ 07105, USA</p>
+  <p>Sample concept only. Not the official website.</p>
+</footer>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function () {
+    var m = document.getElementById('demoMsg');
+    m.textContent = 'Demo only: online booking is not connected yet.';
+    m.style.display = 'block';
+  });
+</script>
+</body>
+</html>
