@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olga Hair Stylist – Paterson, NJ</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#2b2430;background:#faf7f9;line-height:1.55}
+  .banner{background:#2b2430;color:#fff;font-size:.82rem;text-align:center;padding:8px 12px}
+  header.hero{background:linear-gradient(135deg,#f3e3ec,#e8dcf3);padding:44px 20px 40px;text-align:center}
+  .wrap{max-width:720px;margin:0 auto}
+  h1{font-size:2rem;line-height:1.2;margin-bottom:10px;color:#3a2442}
+  .rating{display:inline-block;background:#fff;border-radius:999px;padding:6px 16px;font-weight:600;margin:6px 0 14px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .rating .star{color:#e0a100}
+  .address{margin-bottom:22px;color:#4b3f52}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .btn{display:inline-block;text-decoration:none;border:none;cursor:pointer;font-size:1.05rem;font-weight:600;padding:14px 28px;border-radius:10px;font-family:inherit}
+  .btn-primary{background:#8a3b8f;color:#fff}
+  .btn-primary:hover{background:#722f77}
+  .btn-secondary{background:#fff;color:#8a3b8f;border:2px solid #8a3b8f}
+  section{padding:36px 20px}
+  h2{font-size:1.5rem;margin-bottom:16px;color:#3a2442}
+  .card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  ul.hours{list-style:none}
+  ul.hours li{padding:9px 0;border-bottom:1px solid #eee}
+  ul.hours li:last-child{border-bottom:none}
+  label{display:block;font-weight:600;margin:14px 0 5px;font-size:.95rem}
+  input,textarea{width:100%;padding:12px;border:1px solid #cfc5d6;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,textarea:focus{outline:2px solid #8a3b8f;border-color:#8a3b8f}
+  form .btn{width:100%;margin-top:20px}
+  #demo-msg{margin-top:16px;padding:12px;border-radius:8px;background:#fff4d6;color:#5a4300;font-weight:600;display:none;text-align:center}
+  .note{font-size:.85rem;color:#6b6073;margin-top:14px;text-align:center}
+  footer{text-align:center;font-size:.85rem;color:#6b6073;padding:24px 20px 40px}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Olga Hair Stylist. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Olga Hair Stylist</h1>
+    <div class="rating"><span class="star">★</span> 4.5 on Google · 77 reviews</div>
+    <p class="address">431 21st Ave, Paterson, NJ 07513, USA</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+19732798230">Call (973) 279-8230</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 8:00 AM – 8:00 PM</li>
+        <li>Tuesday: 8:00 AM – 8:00 PM</li>
+        <li>Wednesday: 8:00 AM – 8:00 PM</li>
+        <li>Thursday: 8:00 AM – 8:00 PM</li>
+        <li>Friday: 8:00 AM – 8:00 PM</li>
+        <li>Saturday: 8:00 AM – 8:00 PM</li>
+        <li>Sunday: 8:00 AM – 8:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Address:</strong> 431 21st Ave, Paterson, NJ 07513, USA</p>
+      <p style="margin-top:8px"><strong>Phone:</strong> <a href="tel:+19732798230" style="color:#8a3b8f">(973) 279-8230</a></p>
+      <p style="margin-top:8px">Call to ask about services.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demo-form" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+        <label for="day">Preferred day</label>
+        <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+
+        <label for="time">Preferred time</label>
+        <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Olga Hair Stylist. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
