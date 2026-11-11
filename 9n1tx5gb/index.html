@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ace Pet Shop – Newark, NJ (Sample Homepage Concept)</title>
+<style>
+  :root {
+    --ink: #1f2a37;
+    --muted: #5b6676;
+    --brand: #0f766e;
+    --brand-dark: #0b5a54;
+    --accent: #f59e0b;
+    --bg: #f6f8f9;
+    --card: #ffffff;
+    --line: #e2e8ee;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.5;
+  }
+  .banner {
+    background: #1f2a37;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+    color: #fff;
+    padding: 40px 20px 44px;
+    text-align: center;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: 2.2rem; line-height: 1.15; }
+  .rating { font-size: 1.05rem; margin: 6px 0 4px; }
+  .stars { color: var(--accent); letter-spacing: 2px; }
+  .address { margin: 6px 0 22px; opacity: 0.95; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-book { background: var(--accent); color: #1f2a37; }
+  .btn-book:hover { background: #fbbf24; }
+  .btn-call { background: transparent; color: #fff; border-color: #fff; }
+  .btn-call:hover { background: rgba(255,255,255,0.15); }
+  main { padding: 24px 16px 40px; }
+  section {
+    max-width: 760px;
+    margin: 0 auto 22px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 22px;
+  }
+  h2 { margin: 0 0 12px; font-size: 1.4rem; color: var(--brand-dark); }
+  p { margin: 0 0 10px; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: none; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #c5ced8;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--brand);
+    border-color: var(--brand);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  .btn-submit { background: var(--brand); color: #fff; width: 100%; }
+  .btn-submit:hover { background: var(--brand-dark); }
+  #demo-msg {
+    display: none;
+    background: #fff7e0;
+    border: 1px solid var(--accent);
+    color: #6b4500;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding: 0 16px 30px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Ace Pet Shop. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Ace Pet Shop</h1>
+    <div class="rating">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <strong>4.8</strong> Google rating · 287 reviews
+    </div>
+    <p class="address">232 Miller St, Newark, NJ 07114, USA</p>
+    <div class="actions">
+      <a class="btn btn-book" href="#book" id="book-now">Book Now</a>
+      <a class="btn btn-call" href="tel:+19735049736">Call (973) 504-9736</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About</h2>
+    <p>Ace Pet Shop is a pet business located on Miller St in Newark, New Jersey. Call to ask about services.</p>
+  </section>
+
+  <section id="hours">
+    <h2>Opening hours</h2>
+    <ul class="hours">
+      <li>Monday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
+      <li>Tuesday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
+      <li>Wednesday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
+      <li>Thursday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
+      <li>Friday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
+      <li>Saturday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
+      <li>Sunday: 10:00&#8239;AM&#8201;&ndash;&#8201;2:00&#8239;PM</li>
+    </ul>
+  </section>
+
+  <section id="book">
+    <h2>Book an appointment</h2>
+    <form id="booking-form" onsubmit="return false;" novalidate>
+      <div class="row">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="day">Preferred day</label>
+          <select id="day" name="day">
+            <option value="">Select a day</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+          </select>
+        </div>
+        <div>
+          <label for="time">Preferred time</label>
+          <input type="time" id="time" name="time">
+        </div>
+      </div>
+      <div>
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="button" class="btn btn-submit" id="demo-btn">Request appointment</button>
+      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>232 Miller St, Newark, NJ 07114, USA</p>
+    <p><a href="tel:+19735049736" style="color:var(--brand-dark);font-weight:700;">(973) 504-9736</a></p>
+  </section>
+</main>
+
+<footer>
+  Sample homepage concept for Ace Pet Shop. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+  document.getElementById('book-now').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+
+</body>
+</html>
