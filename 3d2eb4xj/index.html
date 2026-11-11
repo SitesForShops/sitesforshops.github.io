@@ -1,132 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bellissima Unisex Salon Newark NJ – Sample Homepage Concept</title>
+<meta name="description" content="Sample homepage concept for Bellissima Unisex Salon Newark NJ. Not their official website.">
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:Georgia,"Times New Roman",serif;color:#2b2326;background:#faf6f4;line-height:1.55}
-  .banner{background:#2b2326;color:#fff;font:13px/1.4 Arial,Helvetica,sans-serif;text-align:center;padding:8px 12px}
-  header.hero{background:linear-gradient(160deg,#f3e3df,#ead3d6);padding:48px 20px 56px;text-align:center}
-  .wrap{max-width:720px;margin:0 auto}
-  h1{font-size:clamp(1.8rem,6vw,2.8rem);line-height:1.15;margin-bottom:10px;color:#4a1f2e}
-  .addr{font-family:Arial,Helvetica,sans-serif;color:#5a4a50;margin-bottom:14px}
-  .rating{display:inline-block;font-family:Arial,Helvetica,sans-serif;background:#fff;border-radius:999px;padding:8px 16px;font-size:.95rem;margin-bottom:22px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-  .rating strong{color:#a0305a}
-  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .btn{display:inline-block;font:bold 1rem Arial,Helvetica,sans-serif;text-decoration:none;border:2px solid #a0305a;border-radius:10px;padding:14px 26px;cursor:pointer;min-width:170px;text-align:center}
-  .btn.primary{background:#a0305a;color:#fff}
-  .btn.secondary{background:#fff;color:#a0305a}
-  .btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #2b2326;outline-offset:2px}
-  section{padding:44px 20px}
-  h2{font-size:1.6rem;color:#4a1f2e;margin-bottom:16px;text-align:center}
-  .card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.06);font-family:Arial,Helvetica,sans-serif}
-  .hours{list-style:none}
-  .hours li{padding:10px 0;border-bottom:1px solid #eee}
-  .hours li:last-child{border-bottom:none}
-  .about p{font-family:Arial,Helvetica,sans-serif;text-align:center}
-  form{display:grid;gap:14px;font-family:Arial,Helvetica,sans-serif}
-  label{display:block;font-size:.9rem;font-weight:bold;margin-bottom:4px}
-  input,textarea{width:100%;font:inherit;padding:12px;border:1px solid #c9bcc0;border-radius:8px;background:#fff}
-  textarea{min-height:90px;resize:vertical}
-  .row{display:grid;gap:14px}
-  @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
-  #demoMsg{display:none;background:#fff3cd;border:1px solid #e6c866;color:#5c4500;padding:12px;border-radius:8px;font-weight:bold;text-align:center}
-  .note{font:.82rem Arial,Helvetica,sans-serif;color:#6b5d62;margin-top:12px;text-align:center}
-  footer{background:#2b2326;color:#e8dde0;text-align:center;font:.85rem Arial,Helvetica,sans-serif;padding:24px 16px}
-  footer a{color:#fff}
+:root{
+  --plum:#2e0838;
+  --plum2:#4a1259;
+  --magenta:#c026d3;
+  --rose:#f472b6;
+  --teal:#14b8a6;
+  --gold:#f6c767;
+  --cream:#fff8f4;
+  --ink:#241029;
+  --muted:#6b5873;
+  --radius:22px;
+  --shadow:0 12px 34px rgba(46,8,56,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;padding-bottom:64px;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.12;letter-spacing:-.01em}
+a{color:inherit}
+section{scroll-margin-top:72px}
+.wrap{width:min(1120px,92%);margin:0 auto}
+
+/* top banner */
+.banner{background:#12031a;color:#f8e9ff;text-align:center;font-size:.8rem;padding:8px 12px;letter-spacing:.01em}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(46,8,56,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(246,199,103,.25)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:Georgia,serif;color:#fff;text-decoration:none;font-weight:700;display:flex;align-items:center;gap:8px;font-size:1.05rem}
+.brand span.dot{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--rose));color:var(--plum);font-size:.95rem}
+.menu{display:none;list-style:none;gap:6px}
+.menu a{color:#f4e3fa;text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:600;font-size:.95rem;transition:.2s}
+.menu a:hover{background:rgba(255,255,255,.12);color:#fff}
+.menu a.cta{background:linear-gradient(135deg,var(--gold),#f0a95a);color:var(--plum)}
+.burger{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;border-radius:12px;padding:8px 14px;font-size:.95rem;font-weight:700;cursor:pointer}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--plum);padding:12px 4%;border-bottom:3px solid var(--gold);box-shadow:0 18px 30px rgba(0,0,0,.3)}
+.menu.open a{display:block;padding:14px;font-size:1.05rem}
+@media(min-width:820px){
+  .menu{display:flex}
+  .burger{display:none}
+  body{padding-bottom:0}
+  .callbar{display:none!important}
+}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:
+  radial-gradient(900px 500px at 85% -10%,rgba(244,114,182,.55),transparent 60%),
+  radial-gradient(700px 500px at -10% 110%,rgba(20,184,166,.45),transparent 60%),
+  linear-gradient(145deg,var(--plum) 0%,var(--plum2) 55%,#7a1d84 100%);
+  padding:64px 0 84px}
+.hero .blob{position:absolute;border-radius:50%;filter:blur(2px);opacity:.5}
+.b1{width:260px;height:260px;right:-80px;top:40px;background:linear-gradient(135deg,var(--gold),transparent 70%)}
+.b2{width:180px;height:180px;left:-60px;bottom:-40px;background:linear-gradient(135deg,var(--teal),transparent 70%)}
+.hero .wrap{position:relative;z-index:2;display:grid;gap:34px}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(246,199,103,.5);color:var(--gold);padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.hero h1{font-size:clamp(2.4rem,9vw,4.9rem);margin:18px 0 14px;background:linear-gradient(180deg,#fff 40%,#ffd9ef);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.tag{font-size:clamp(1.05rem,3.4vw,1.4rem);color:#f6e3fb;max-width:34ch}
+.badge{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:#fff;color:var(--ink);padding:10px 18px;border-radius:999px;box-shadow:var(--shadow);font-weight:700}
+.badge .st{color:#f5a623;letter-spacing:2px}
+.badge small{font-weight:600;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font-weight:800;padding:15px 28px;border-radius:999px;font-size:1.02rem;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px)}
+.btn.gold{background:linear-gradient(135deg,var(--gold),#f0a95a);color:var(--plum);box-shadow:0 10px 24px rgba(246,199,103,.4)}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.6)}
+.btn.ghost:hover{background:#fff;color:var(--plum)}
+.btn.plum{background:linear-gradient(135deg,var(--magenta),var(--plum2));color:#fff;box-shadow:0 10px 24px rgba(192,38,211,.3)}
+.btn.white{background:#fff;color:var(--plum)}
+
+.hero-art{display:none}
+@media(min-width:900px){
+  .hero .wrap{grid-template-columns:1.25fr .75fr;align-items:center}
+  .hero-art{display:grid;place-items:center}
+}
+.mirror{width:min(300px,100%);aspect-ratio:3/4;border-radius:999px 999px 28px 28px;background:linear-gradient(160deg,rgba(255,255,255,.3),rgba(255,255,255,.05));border:6px solid var(--gold);box-shadow:0 30px 60px rgba(0,0,0,.35),inset 0 0 40px rgba(255,255,255,.18);display:grid;place-items:center;font-size:7rem;position:relative}
+.mirror::after{content:"✨";position:absolute;top:18%;right:12%;font-size:2rem}
+.mirror::before{content:"💖";position:absolute;bottom:14%;left:10%;font-size:1.8rem}
+
+/* sections */
+.sec{padding:80px 0}
+.sec h2{font-size:clamp(2rem,6vw,3.1rem);color:var(--plum)}
+.kicker{display:block;color:var(--magenta);font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;margin-bottom:10px}
+.lead{color:var(--muted);max-width:60ch;margin-top:12px}
+.example{display:inline-block;margin-top:16px;background:#fff3cf;color:#6a4a00;border:2px dashed #e3a82a;padding:8px 14px;border-radius:12px;font-weight:700;font-size:.85rem}
+
+.grid{display:grid;gap:20px;margin-top:34px}
+@media(min-width:620px){.grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:940px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);border:1px solid rgba(74,18,89,.08);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(46,8,56,.2)}
+.card .ico{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:1.9rem;margin-bottom:14px;background:linear-gradient(135deg,#fde4f4,#e5d4ff)}
+.card:nth-child(3n+2) .ico{background:linear-gradient(135deg,#d3f6f1,#e5d4ff)}
+.card:nth-child(3n) .ico{background:linear-gradient(135deg,#fff0c9,#fde4f4)}
+.card h3{font-size:1.4rem;color:var(--plum);margin-bottom:6px}
+.card p{color:var(--muted);font-size:.97rem}
+.card .price{margin-top:12px;font-weight:800;color:var(--magenta)}
+.card .ex{display:block;margin-top:14px;font-size:.76rem;font-weight:700;color:#6a4a00;background:#fff3cf;border:1px dashed #e3a82a;border-radius:10px;padding:6px 10px}
+
+/* hours */
+.hours-bg{background:linear-gradient(160deg,#fdf0fb,#e9fbf8)}
+.hours-wrap{display:grid;gap:30px;align-items:center}
+@media(min-width:880px){.hours-wrap{grid-template-columns:1fr 1.1fr}}
+table.hours{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.hours th,.hours td{padding:15px 20px;text-align:left;border-bottom:1px solid #f0e4f4}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours th{color:var(--plum);font-weight:800;width:42%}
+.hours td{color:var(--ink)}
+.hours tr.today{background:linear-gradient(90deg,#fde4f4,#e4fbf7)}
+.hours tr.closed td{color:#b0306b;font-weight:700}
+
+/* reviews */
+.rev-top{display:grid;gap:26px;align-items:center;background:linear-gradient(145deg,var(--plum),var(--plum2));color:#fff;border-radius:30px;padding:34px 26px;box-shadow:var(--shadow);margin-top:30px}
+@media(min-width:760px){.rev-top{grid-template-columns:auto 1fr;padding:40px 46px;gap:46px}}
+.big{font-family:Georgia,serif;font-size:clamp(4.5rem,18vw,7rem);line-height:1;color:var(--gold);font-weight:700}
+.stars{position:relative;display:inline-block;font-size:2rem;letter-spacing:4px;line-height:1;color:rgba(255,255,255,.28)}
+.stars .fill{position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;color:#ffc83d}
+.rev-top p{font-size:1.15rem;margin:10px 0 18px;color:#f6e3fb}
+.rev-label{margin:44px 0 6px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.rev-label h3{font-size:1.8rem;color:var(--plum)}
+.rev-row{display:grid;gap:18px;margin-top:18px}
+@media(min-width:620px){.rev-row{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rev-row{grid-template-columns:repeat(5,1fr)}}
+.rcard{background:#fff;border-radius:20px;padding:20px;box-shadow:var(--shadow);border:1px solid rgba(74,18,89,.08);display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .tagrow{display:block}
+.rcard .tag{display:inline-block;background:#fff3cf;color:#6a4a00;border:1px dashed #e3a82a;border-radius:999px;font-size:.72rem;font-weight:800;padding:3px 12px;letter-spacing:.06em;text-transform:uppercase}
+.rcard .s{color:#f5a623;font-size:1.2rem;letter-spacing:2px;line-height:1.2}
+.rcard p{color:var(--muted);font-style:italic;font-size:.95rem}
+.rcard .nm{font-weight:800;color:var(--plum);font-size:.9rem;margin-top:auto}
+
+/* contact */
+.contact-bg{background:linear-gradient(145deg,#12031a,var(--plum) 70%);color:#fff}
+.contact-bg h2{color:#fff}
+.contact-bg .kicker{color:var(--gold)}
+.cgrid{display:grid;gap:18px;margin-top:32px}
+@media(min-width:760px){.cgrid{grid-template-columns:repeat(3,1fr)}}
+.cbox{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius);padding:26px;transition:transform .25s,background .25s}
+.cbox:hover{transform:translateY(-5px);background:rgba(255,255,255,.13)}
+.cbox .e{font-size:1.8rem}
+.cbox h3{font-size:1.2rem;color:var(--gold);margin:8px 0 6px}
+.cbox a{color:#fff;font-weight:700}
+
+/* booking */
+.book-card{background:#fff;border-radius:30px;box-shadow:var(--shadow);padding:30px 24px;max-width:720px;margin:34px auto 0;border-top:8px solid;border-image:linear-gradient(90deg,var(--magenta),var(--gold),var(--teal)) 1}
+form{display:grid;gap:16px}
+@media(min-width:620px){form .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
+label{display:block;font-weight:700;color:var(--plum);font-size:.9rem;margin-bottom:6px}
+input,select,textarea{width:100%;padding:14px 16px;border:2px solid #e8d6ee;border-radius:14px;font:inherit;background:#fffafd;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--magenta);box-shadow:0 0 0 4px rgba(192,38,211,.15)}
+textarea{min-height:100px;resize:vertical}
+#demoMsg{display:none;background:#e8fbf7;border:2px solid var(--teal);color:#07574d;padding:14px 16px;border-radius:14px;font-weight:700}
+.note{font-size:.85rem;color:var(--muted);text-align:center;margin-top:14px}
+
+/* footer */
+footer{background:#12031a;color:#d9c3e2;text-align:center;padding:40px 4%}
+footer strong{display:block;font-family:Georgia,serif;color:#fff;font-size:1.3rem;margin-bottom:6px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;background:var(--plum);border-top:3px solid var(--gold);padding:8px 12px;box-shadow:0 -8px 22px rgba(0,0,0,.25)}
+.callbar a{flex:1;text-align:center;text-decoration:none;font-weight:800;color:var(--plum);background:linear-gradient(135deg,var(--gold),#f0a95a);padding:13px;border-radius:999px}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for Bellissima Unisex Salon Newark NJ. Not their official website.</div>
 
-<header class="hero">
+<header class="nav">
   <div class="wrap">
-    <h1>Bellissima Unisex Salon Newark NJ</h1>
-    <p class="addr">44 Wilson Ave, Newark, NJ 07105, USA</p>
-    <div class="rating" aria-label="Google rating 4.8 from 33 reviews"><strong>&#9733; 4.8</strong> on Google &middot; 33 reviews</div>
-    <div class="btns">
-      <a class="btn primary" href="#book">Book Now</a>
-      <a class="btn secondary" href="tel:+19733440211">Call (973) 344-0211</a>
-    </div>
+    <a class="brand" href="#home"><span class="dot">✂</span> Bellissima</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="cta" href="#book">Book Now</a></li>
+    </ul>
   </div>
 </header>
 
-<section class="about">
+<main>
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap">
-    <h2>Hair salon in Newark, NJ</h2>
-    <p>Bellissima Unisex Salon is a hair salon located on Wilson Ave in Newark, New Jersey. Call to ask about services.</p>
+    <div>
+      <span class="eyebrow">Hair salon · Newark, NJ</span>
+      <h1>Bellissima Unisex Salon Newark NJ</h1>
+      <p class="tag">Fresh looks, confident style. Hair for everyone.</p>
+      <div class="badge" aria-label="Google rating 4.8 from 33 reviews">
+        <span class="st">★★★★★</span> <span>4.8</span> <small>· 33 Google reviews</small>
+      </div>
+      <div class="btns">
+        <a class="btn gold" href="#book">✨ Book Now</a>
+        <a class="btn ghost" href="tel:+19733440211">📞 Call (973) 344-0211</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="mirror">💇</div></div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<!-- SERVICES -->
+<section id="services" class="sec">
   <div class="wrap">
-    <h2>Opening hours</h2>
-    <div class="card">
-      <ul class="hours">
-        <li>Monday: 9:00 AM – 7:00 PM</li>
-        <li>Tuesday: 9:00 AM – 7:00 PM</li>
-        <li>Wednesday: 9:00 AM – 7:00 PM</li>
-        <li>Thursday: 9:00 AM – 7:00 PM</li>
-        <li>Friday: 9:00 AM – 7:00 PM</li>
-        <li>Saturday: 9:00 AM – 7:00 PM</li>
-        <li>Sunday: Closed</li>
-      </ul>
+    <div class="reveal">
+      <span class="kicker">Services</span>
+      <h2>Styles for every look</h2>
+      <p class="lead">A sample layout showing how a salon's service menu could be presented.</p>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid g3">
+      <article class="card reveal"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><p>A sample card for cuts and finishing styles for any hair type.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🎨</div><h3>Color &amp; Highlights</h3><p>A sample card for color, highlights and tone refreshes.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">💨</div><h3>Blowout &amp; Styling</h3><p>A sample card for smooth blowouts and event-ready styles.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">💧</div><h3>Conditioning Treatment</h3><p>A sample card for deep conditioning and hair care treatments.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🧒</div><h3>Kids' Cuts</h3><p>A sample card for children's haircuts and tidy-ups.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🪒</div><h3>Beard &amp; Edge-Up</h3><p>A sample card for clean lines, shaping and grooming.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
     </div>
   </div>
 </section>
 
-<section id="book" style="padding-top:0">
+<!-- HOURS -->
+<section id="hours" class="sec hours-bg">
+  <div class="wrap hours-wrap">
+    <div class="reveal">
+      <span class="kicker">Hours</span>
+      <h2>When to stop by</h2>
+      <p class="lead">Opening hours for Bellissima Unisex Salon Newark NJ, as listed on Google. Call to confirm before visiting.</p>
+      <div class="btns"><a class="btn plum" href="tel:+19733440211">📞 Call (973) 344-0211</a></div>
+    </div>
+    <table class="hours reveal" id="hoursTable">
+      <tbody>
+        <tr><th>Monday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+        <tr><th>Tuesday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+        <tr><th>Wednesday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+        <tr><th>Thursday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+        <tr><th>Friday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+        <tr><th>Saturday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+        <tr class="closed"><th>Sunday:</th><td>Closed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="sec">
   <div class="wrap">
-    <h2>Book an appointment</h2>
-    <div class="card">
-      <form id="demoForm" novalidate>
-        <div class="row">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name">
-          </div>
-          <div>
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
-          </div>
+    <div class="reveal">
+      <span class="kicker">Reviews</span>
+      <h2>What the rating says</h2>
+    </div>
+    <div class="rev-top reveal">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars" aria-label="4.8 out of 5 stars">★★★★★<span class="fill" style="width:96%">★★★★★</span></div>
+        <p>based on 33 Google reviews</p>
+        <a class="btn gold" href="https://maps.google.com/?cid=1161677986348702897&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 33 reviews on Google ↗</a>
+      </div>
+    </div>
+
+    <div class="rev-label reveal">
+      <h3>Top reviews</h3>
+      <span class="example">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rev-row">
+      <article class="rcard reveal"><div class="tagrow"><span class="tag">Example</span></div><div class="s" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rcard reveal"><div class="tagrow"><span class="tag">Example</span></div><div class="s" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rcard reveal"><div class="tagrow"><span class="tag">Example</span></div><div class="s" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rcard reveal"><div class="tagrow"><span class="tag">Example</span></div><div class="s" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rcard reveal"><div class="tagrow"><span class="tag">Example</span></div><div class="s" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec contact-bg">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Contact</span>
+      <h2>Find the salon</h2>
+    </div>
+    <div class="cgrid">
+      <div class="cbox reveal"><div class="e">📍</div><h3>Address</h3><p>Bellissima Unisex Salon Newark NJ<br>44 Wilson Ave, Newark, NJ 07105, USA</p></div>
+      <div class="cbox reveal"><div class="e">📞</div><h3>Phone</h3><p><a href="tel:+19733440211">(973) 344-0211</a></p></div>
+      <div class="cbox reveal"><div class="e">🧭</div><h3>Directions</h3><p><a href="https://maps.google.com/?cid=1161677986348702897&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions ↗</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book" class="sec">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center">
+      <span class="kicker">Booking</span>
+      <h2>Book an appointment</h2>
+      <p class="lead" style="margin-inline:auto">Fill in the form below to see how a booking request could look.</p>
+    </div>
+    <div class="book-card reveal">
+      <form id="bookForm" novalidate>
+        <div class="two">
+          <div><label for="bn">Name</label><input id="bn" type="text" autocomplete="name" placeholder="Your name"></div>
+          <div><label for="bp">Phone</label><input id="bp" type="tel" autocomplete="tel" placeholder="(555) 555-5555"></div>
         </div>
-        <div class="row">
-          <div>
-            <label for="day">Preferred day</label>
-            <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-          </div>
-          <div>
-            <label for="time">Preferred time</label>
-            <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-          </div>
+        <div class="two">
+          <div><label for="bd">Preferred day</label>
+            <select id="bd"><option value="">Choose a day</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+          <div><label for="bt">Preferred time</label><input id="bt" type="time"></div>
         </div>
-        <div>
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes"></textarea>
-        </div>
-        <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+        <div><label for="bx">Notes</label><textarea id="bx" placeholder="Anything the salon should know"></textarea></div>
+        <button type="button" class="btn plum" id="bookBtn">Request Appointment</button>
         <div id="demoMsg" role="status" aria-live="polite"></div>
       </form>
       <p class="note">This is a sample of how online booking could work.</p>
     </div>
   </div>
 </section>
+</main>
 
 <footer>
-  <p>Bellissima Unisex Salon Newark NJ &middot; 44 Wilson Ave, Newark, NJ 07105, USA &middot; <a href="tel:+19733440211">(973) 344-0211</a></p>
-  <p style="margin-top:6px">Sample homepage concept. Not their official website.</p>
+  <strong>Bellissima Unisex Salon Newark NJ</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
+<div class="callbar"><a href="tel:+19733440211">📞 Call (973) 344-0211</a></div>
+
 <script>
-  document.getElementById('demoBtn').addEventListener('click', function () {
-    var msg = document.getElementById('demoMsg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
+document.documentElement.classList.add('js');
+
+// mobile menu
+var burger=document.getElementById('burger'), menu=document.getElementById('menu');
+burger.addEventListener('click',function(){
+  var open=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',open);
+  burger.textContent=open?'✕ Close':'☰ Menu';
+});
+menu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded',false);
+    burger.textContent='☰ Menu';
   });
+});
+
+// fade-in on scroll
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}
+    });
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('in');});}
+
+// highlight today in hours
+(function(){
+  var rows=document.querySelectorAll('#hoursTable tr');
+  var map=[6,0,1,2,3,4,5]; // JS Sunday=0 -> row 6
+  var r=rows[map[new Date().getDay()]];
+  if(r) r.classList.add('today');
+})();
+
+// demo booking
+document.getElementById('bookBtn').addEventListener('click',function(){
+  var m=document.getElementById('demoMsg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.style.display='block';
+});
 </script>
 </body>
 </html>
