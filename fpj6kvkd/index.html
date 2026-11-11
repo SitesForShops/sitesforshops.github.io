@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Splash-N-Dash Hand Car Wash – Jersey City, NJ</title>
+<style>
+  :root {
+    --blue: #0b5ea8;
+    --blue-dark: #083f73;
+    --accent: #f5a623;
+    --bg: #f4f8fc;
+    --text: #1b2733;
+    --muted: #5b6b7a;
+    --card: #ffffff;
+    --border: #d9e3ee;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #1b2733;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding: 8px 12px;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+    color: #fff;
+    padding: 40px 20px 48px;
+    text-align: center;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { margin: 0 0 8px; font-size: clamp(28px, 6vw, 42px); line-height: 1.15; }
+  .tagline { margin: 0 0 18px; opacity: .92; font-size: 17px; }
+  .rating {
+    display: inline-block;
+    background: rgba(255,255,255,.15);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  .rating .star { color: var(--accent); }
+  .address { margin: 0 0 22px; font-size: 16px; }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-book { background: var(--accent); color: #1b2733; }
+  .btn-call { background: #fff; color: var(--blue-dark); }
+  .btn:active { transform: translateY(1px); }
+  section { padding: 36px 20px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+  h2 { margin: 0 0 14px; font-size: 24px; color: var(--blue-dark); }
+  .hours { list-style: none; margin: 0; padding: 0; }
+  .hours li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .hours li:last-child { border-bottom: none; }
+  .about p { margin: 0 0 10px; }
+  .info-grid { display: grid; gap: 20px; }
+  @media (min-width: 700px) { .info-grid { grid-template-columns: 1fr 1fr; } }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--text);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .two { display: grid; gap: 14px; }
+  @media (min-width: 600px) { .two { grid-template-columns: 1fr 1fr; } }
+  #demo-msg {
+    display: none;
+    background: #fff4dc;
+    border: 1px solid var(--accent);
+    color: #5a3d00;
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+  .note { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+  footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+    padding: 24px 20px 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Splash-N-Dash Hand Car Wash. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Splash-N-Dash Hand Car Wash</h1>
+    <p class="tagline">Hand car wash and auto detailing in Jersey City, NJ</p>
+    <div class="rating"><span class="star">★</span> 4.4 on Google · 417 reviews</div>
+    <p class="address">157 St Pauls Ave, Jersey City, NJ 07306, USA</p>
+    <div class="btn-row">
+      <a class="btn btn-book" href="#book" id="bookNow">Book Now</a>
+      <a class="btn btn-call" href="tel:+15512253227">📞 Call (551) 225-3227</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap info-grid">
+    <div class="card about">
+      <h2>About</h2>
+      <p>Splash-N-Dash Hand Car Wash is a hand car wash located on St Pauls Ave in Jersey City, New Jersey.</p>
+      <p>Call to ask about services.</p>
+    </div>
+    <div class="card">
+      <h2>Opening hours</h2>
+      <ul class="hours">
+        <li>Monday: Closed</li>
+        <li>Tuesday: 9:00 AM – 6:00 PM</li>
+        <li>Wednesday: 9:00 AM – 6:00 PM</li>
+        <li>Thursday: 9:00 AM – 6:00 PM</li>
+        <li>Friday: 9:00 AM – 6:00 PM</li>
+        <li>Saturday: 9:00 AM – 6:00 PM</li>
+        <li>Sunday: 9:00 AM – 6:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="card">
+      <h2>Book an appointment</h2>
+      <form id="demoForm" onsubmit="return false;">
+        <div class="two">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+          </div>
+        </div>
+        <div class="two">
+          <div>
+            <label for="day">Preferred day</label>
+            <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input type="text" id="time" name="time" placeholder="e.g. 10:00 AM">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button type="button" class="btn btn-book" id="submitBtn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Splash-N-Dash Hand Car Wash. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('submitBtn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
