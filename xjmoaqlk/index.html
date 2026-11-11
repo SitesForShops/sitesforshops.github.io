@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mary Dominican Beauty Salon – Newark, NJ</title>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#2b2430;background:#faf7f9;line-height:1.55}
+  .banner{background:#2b2430;color:#fff;font-size:.82rem;text-align:center;padding:.45rem .75rem}
+  header.hero{background:linear-gradient(135deg,#8e3b6b,#c2557f);color:#fff;padding:2.5rem 1.25rem 2.75rem;text-align:center}
+  .wrap{max-width:720px;margin:0 auto}
+  h1{margin:0 0 .5rem;font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.15}
+  .sub{margin:0 0 1rem;opacity:.95}
+  .rating{display:inline-block;background:rgba(255,255,255,.18);border-radius:999px;padding:.35rem .9rem;font-weight:600;margin-bottom:1.25rem}
+  .addr{margin:0 0 1.25rem}
+  .btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+  .btn{display:inline-block;border:0;border-radius:10px;padding:.9rem 1.5rem;font-size:1.05rem;font-weight:700;text-decoration:none;cursor:pointer;font-family:inherit}
+  .btn-book{background:#fff;color:#8e3b6b}
+  .btn-call{background:#2b2430;color:#fff}
+  section{padding:2.25rem 1.25rem}
+  section h2{margin:0 0 1rem;font-size:1.5rem;color:#8e3b6b}
+  .card{background:#fff;border-radius:14px;padding:1.25rem;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+  ul.hours{list-style:none;margin:0;padding:0}
+  ul.hours li{padding:.5rem 0;border-bottom:1px solid #eee}
+  ul.hours li:last-child{border-bottom:0}
+  label{display:block;font-weight:600;margin:.9rem 0 .3rem}
+  input,select,textarea{width:100%;padding:.7rem;border:1px solid #cfc4cb;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+  textarea{min-height:90px;resize:vertical}
+  .btn-submit{background:#8e3b6b;color:#fff;width:100%;margin-top:1.2rem}
+  #demoMsg{display:none;margin-top:1rem;padding:.8rem;background:#fff3cd;border:1px solid #e6cf7a;border-radius:8px;font-weight:600}
+  .note{font-size:.85rem;color:#6a5f68;margin:1rem 0 0}
+  footer{text-align:center;font-size:.82rem;color:#6a5f68;padding:1.5rem 1.25rem 2.5rem}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Mary Dominican Beauty Salon. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Mary Dominican Beauty Salon</h1>
+    <p class="sub">Hair salon in Newark, New Jersey</p>
+    <div class="rating">★ 4.7 on Google · 596 reviews</div>
+    <p class="addr">763 Broadway, Newark, NJ 07104, USA</p>
+    <div class="btns">
+      <a class="btn btn-book" href="#book">Book Now</a>
+      <a class="btn btn-call" href="tel:+19734857676">Call (973) 485-7676</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 8:00 AM – 5:30 PM</li>
+        <li>Tuesday: 8:00 AM – 5:30 PM</li>
+        <li>Wednesday: 8:00 AM – 5:30 PM</li>
+        <li>Thursday: 8:00 AM – 5:30 PM</li>
+        <li>Friday: 7:30 AM – 5:30 PM</li>
+        <li>Saturday: 7:30 AM – 5:30 PM</li>
+        <li>Sunday: 7:30 AM – 3:30 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Services</h2>
+    <div class="card">
+      <p style="margin:0">Call to ask about services.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demoForm" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+        <label for="day">Preferred day</label>
+        <select id="day" name="day">
+          <option value="">Select a day</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+
+        <label for="time">Preferred time</label>
+        <input type="time" id="time" name="time">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" class="btn btn-submit" id="demoBtn">Request appointment</button>
+        <div id="demoMsg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Mary Dominican Beauty Salon. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demoBtn').addEventListener('click', function () {
+    var msg = document.getElementById('demoMsg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
