@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alexglam Beauty Studio – Paterson, NJ</title>
+<style>
+  :root {
+    --ink: #2a2230;
+    --muted: #6d6474;
+    --accent: #b0457a;
+    --accent-dark: #8f3562;
+    --bg: #faf6f8;
+    --card: #ffffff;
+    --line: #ebe1e7;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #2a2230;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, #f6e3ee, #efe3f6);
+    padding: 48px 20px 40px;
+    text-align: center;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 2rem; margin: 0 0 8px; line-height: 1.2; }
+  .sub { color: var(--muted); margin: 0 0 14px; }
+  .rating {
+    display: inline-block;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .rating .star { color: #e0a100; }
+  .address { margin: 0 0 22px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px 26px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dark); }
+  .btn-secondary { background: #fff; color: var(--accent-dark); border: 2px solid var(--accent); }
+  section { padding: 36px 20px; }
+  h2 { font-size: 1.4rem; margin: 0 0 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+  }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: 0; }
+  label { display: block; font-weight: 600; margin: 14px 0 6px; font-size: 0.95rem; }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #cfc3cb;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  textarea { min-height: 90px; resize: vertical; }
+  form .btn { width: 100%; margin-top: 20px; }
+  #demo-msg {
+    display: none;
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff4d6;
+    border: 1px solid #ecd48a;
+    font-weight: 600;
+    text-align: center;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; text-align: center; }
+  footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 24px 20px 40px; }
+  @media (min-width: 600px) { h1 { font-size: 2.6rem; } }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Alexglam Beauty Studio. Not their official website.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Alexglam Beauty Studio</h1>
+    <p class="sub">Hair salon in Paterson, NJ</p>
+    <div class="rating"><span class="star">★</span> 4.9 on Google · 58 reviews</div>
+    <p class="address">13 Park Ave, Paterson, NJ 07501, USA</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-secondary" href="tel:+18627771010">Call (862) 777-1010</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="card">
+      <p style="margin:0">Alexglam Beauty Studio is a beauty studio located on Park Ave in Paterson, New Jersey. It holds a 4.9 Google rating from 58 reviews. Call to ask about services.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Opening hours</h2>
+    <div class="card">
+      <ul class="hours">
+        <li>Monday: 8:00 AM – 8:00 PM</li>
+        <li>Tuesday: 8:00 AM – 8:00 PM</li>
+        <li>Wednesday: 8:00 AM – 8:00 PM</li>
+        <li>Thursday: 8:00 AM – 9:00 PM</li>
+        <li>Friday: 8:00 AM – 10:00 PM</li>
+        <li>Saturday: 8:00 AM – 10:00 PM</li>
+        <li>Sunday: 8:00 AM – 6:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="card">
+      <p style="margin:0 0 6px"><strong>Address:</strong> 13 Park Ave, Paterson, NJ 07501, USA</p>
+      <p style="margin:0 0 16px"><strong>Phone:</strong> (862) 777-1010</p>
+      <a class="btn btn-primary" href="tel:+18627771010">Tap to Call</a>
+    </div>
+  </div>
+</section>
+
+<section id="book" style="padding-top:0">
+  <div class="wrap">
+    <h2>Book an appointment</h2>
+    <div class="card">
+      <form id="demo-form" onsubmit="return false;">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="off">
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" autocomplete="off">
+
+        <label for="day">Preferred day</label>
+        <input type="text" id="day" name="day" placeholder="e.g. Saturday" autocomplete="off">
+
+        <label for="time">Preferred time</label>
+        <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM" autocomplete="off">
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="button" class="btn btn-primary" id="demo-btn">Request Appointment</button>
+        <div id="demo-msg" role="status">Demo only: online booking is not connected yet.</div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Sample homepage concept for Alexglam Beauty Studio. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    document.getElementById('demo-msg').style.display = 'block';
+  });
+</script>
+</body>
+</html>
