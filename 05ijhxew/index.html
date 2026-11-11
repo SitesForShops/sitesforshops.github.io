@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERIKA BEAUTY – Nail Salon in Newark, NJ (Sample Concept)</title>
+<style>
+  :root {
+    --bg: #fff8f8;
+    --ink: #2b2226;
+    --muted: #6d5f64;
+    --accent: #c2477a;
+    --accent-dark: #9c3260;
+    --card: #ffffff;
+    --line: #f0dde4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .banner {
+    background: #2b2226;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 6px 12px;
+  }
+  header.hero {
+    text-align: center;
+    padding: 40px 20px 32px;
+    background: linear-gradient(180deg, #fde8ef 0%, var(--bg) 100%);
+  }
+  .hero h1 {
+    margin: 0 0 6px;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    letter-spacing: 0.06em;
+  }
+  .hero .type {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+  .rating {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .rating .stars { color: #e0a100; letter-spacing: 2px; }
+  .address { margin: 0 0 20px; color: var(--muted); }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .btn {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 13px 26px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .btn:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+  .btn.secondary { background: #fff; color: var(--accent); }
+  .btn.secondary:hover { background: #fdeef4; }
+  main { max-width: 760px; margin: 0 auto; padding: 0 18px 40px; }
+  section { margin-top: 28px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px;
+  }
+  h2 { margin: 0 0 14px; font-size: 1.4rem; }
+  ul.hours { list-style: none; margin: 0; padding: 0; }
+  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  ul.hours li:last-child { border-bottom: none; }
+  form { display: grid; gap: 14px; }
+  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #d9c3cc;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink);
+  }
+  textarea { min-height: 90px; resize: vertical; }
+  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
+  #demo-msg {
+    display: none;
+    background: #fff3cd;
+    border: 1px solid #e8d38a;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .note { font-size: 0.85rem; color: var(--muted); margin: 12px 0 0; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 20px 16px 36px;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for ERIKA BEAUTY. Not their official website.</div>
+
+<header class="hero">
+  <h1>ERIKA BEAUTY</h1>
+  <p class="type">Nail salon in Newark, NJ</p>
+  <div class="rating" aria-label="Google rating 5 out of 5 from 54 reviews">
+    <span class="stars">★★★★★</span> 5.0 on Google · 54 reviews
+  </div>
+  <p class="address">183 Adams St, Newark, NJ 07105, USA</p>
+  <div class="actions">
+    <a class="btn" href="#book">Book Now</a>
+    <a class="btn secondary" href="tel:+18623152416">Call (862) 315-2416</a>
+  </div>
+</header>
+
+<main>
+  <section id="hours">
+    <div class="card">
+      <h2>Opening hours</h2>
+      <ul class="hours">
+        <li>Monday: 10:00 AM – 7:00 PM</li>
+        <li>Tuesday: 10:00 AM – 7:00 PM</li>
+        <li>Wednesday: 10:00 AM – 7:00 PM</li>
+        <li>Thursday: 10:00 AM – 7:00 PM</li>
+        <li>Friday: 10:00 AM – 7:00 PM</li>
+        <li>Saturday: 10:00 AM – 7:00 PM</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Visit or call</h2>
+      <p style="margin-top:0">183 Adams St, Newark, NJ 07105, USA</p>
+      <p>Call to ask about services.</p>
+      <a class="btn" href="tel:+18623152416">Tap to call (862) 315-2416</a>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="card">
+      <h2>Book an appointment</h2>
+      <form id="demo-form" onsubmit="return false;">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="row">
+          <div>
+            <label for="day">Preferred day</label>
+            <input type="date" id="day" name="day">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input type="time" id="time" name="time">
+          </div>
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+        </div>
+        <button type="button" class="btn" id="demo-btn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Sample homepage concept for ERIKA BEAUTY. Not their official website.
+</footer>
+
+<script>
+  document.getElementById('demo-btn').addEventListener('click', function () {
+    var msg = document.getElementById('demo-msg');
+    msg.textContent = 'Demo only: online booking is not connected yet.';
+    msg.style.display = 'block';
+  });
+</script>
+</body>
+</html>
