@@ -1,185 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Magic Center Barber Shop – Paterson, NJ</title>
+<title>Magic Center Barber Shop – Sample Homepage Concept</title>
 <style>
-  :root {
-    --ink: #1c1c22;
-    --muted: #5d6068;
-    --accent: #b3261e;
-    --accent-dark: #8e1d17;
-    --bg: #f6f4f1;
-    --card: #ffffff;
-    --line: #e2ded8;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.5;
-  }
-  .banner {
-    background: #1c1c22;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-  }
-  header.hero {
-    background: linear-gradient(135deg, #1c1c22, #34343f);
-    color: #fff;
-    padding: 40px 20px 44px;
-    text-align: center;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; }
-  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
-  .rating { font-size: 1.05rem; margin: 6px 0 4px; }
-  .star { color: #f5b301; }
-  .addr { color: #d6d6dc; margin: 4px 0 20px; }
-  .btn-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .btn {
-    display: inline-block;
-    padding: 14px 26px;
-    border-radius: 999px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    text-decoration: none;
-    border: 2px solid transparent;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-ghost { background: transparent; color: #fff; border-color: #fff; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.12); }
-  main { padding: 24px 16px 40px; }
-  section {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 24px 20px;
-    margin: 0 auto 20px;
-    max-width: 720px;
-  }
-  h2 { margin: 0 0 12px; font-size: 1.4rem; }
-  ul.hours { list-style: none; margin: 0; padding: 0; }
-  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
-  ul.hours li:last-child { border-bottom: none; }
-  label { display: block; font-weight: 600; margin: 14px 0 6px; font-size: 0.95rem; }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #c9c5be;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    background: #fff;
-  }
-  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
-  textarea { min-height: 90px; resize: vertical; }
-  .two { display: grid; grid-template-columns: 1fr; gap: 0 14px; }
-  @media (min-width: 520px) { .two { grid-template-columns: 1fr 1fr; } }
-  form .btn { width: 100%; margin-top: 20px; }
-  #demo-msg {
-    display: none;
-    margin-top: 16px;
-    padding: 12px 14px;
-    background: #fff4d6;
-    border: 1px solid #e8c766;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
-  footer { text-align: center; font-size: 0.8rem; color: var(--muted); padding: 0 16px 28px; }
+:root{--ink:#111;--paper:#fff;--coral:#ff5a4d;--grey:#6b6b6b;--rule:#111;--soft:#f5f3ef}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;padding-bottom:64px}
+.sans,nav,button,.btn,label,input,select,textarea,.tag,th,td{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:inherit}
+.banner{background:var(--coral);color:#111;font:600 13px/1.4 -apple-system,"Segoe UI",Arial,sans-serif;text-align:center;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule)}
+.bar{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.logo{font-weight:800;text-decoration:none;font-family:-apple-system,"Segoe UI",Arial,sans-serif;letter-spacing:.02em;font-size:15px;text-transform:uppercase}
+.logo span{color:var(--coral)}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{text-decoration:none;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{border-color:var(--coral)}
+.menu-btn{display:none;background:none;border:1px solid var(--ink);padding:8px 14px;font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer}
+section{padding:96px 22px;border-bottom:1px solid var(--rule)}
+.wrap{max-width:1200px;margin:auto}
+.eyebrow{font:700 12px/1 -apple-system,"Segoe UI",Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.eyebrow:after{content:"";height:1px;background:var(--ink);width:60px}
+h1{font-size:clamp(48px,11vw,150px);line-height:.92;letter-spacing:-.04em;font-weight:900;font-family:Georgia,serif}
+h1 em{color:var(--coral);font-style:normal}
+h2{font-size:clamp(38px,7vw,84px);line-height:.98;letter-spacing:-.03em;font-weight:900;margin-bottom:24px}
+.hero{padding-top:70px}
+.hero p.lead{font-size:clamp(19px,2.4vw,26px);max-width:620px;margin:32px 0;color:#333}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:10px 18px;font:600 15px -apple-system,"Segoe UI",Arial,sans-serif;margin-bottom:8px}
+.badge .st{color:var(--coral);letter-spacing:2px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;padding:17px 32px;font-weight:700;font-size:16px;border:2px solid var(--ink);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;background:var(--paper);color:var(--ink)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.btn.primary{background:var(--coral);border-color:var(--ink)}
+.btn.dark{background:var(--ink);color:#fff}
+.heroline{display:flex;gap:40px;flex-wrap:wrap;margin-top:70px;border-top:1px solid var(--rule);padding-top:20px;font:600 13px -apple-system,"Segoe UI",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.heroline span b{color:var(--coral)}
+.notice{display:inline-block;font:700 12px/1.4 -apple-system,"Segoe UI",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:#fff;padding:8px 14px;margin-bottom:20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-top:40px}
+.card{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:32px 28px;transition:background .25s,transform .25s;background:#fff}
+.card:hover{background:var(--soft);transform:translateY(-4px)}
+.card .ico{font-size:34px;margin-bottom:14px}
+.card h3{font-size:28px;letter-spacing:-.02em;margin-bottom:8px}
+.card p{color:var(--grey);margin-bottom:14px}
+.tag{display:block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--coral);border-top:1px solid var(--ink);padding-top:10px;margin-top:10px}
+.price{font:600 14px -apple-system,"Segoe UI",Arial,sans-serif}
+table{width:100%;max-width:760px;border-collapse:collapse;margin-top:30px}
+th,td{text-align:left;padding:18px 4px;border-bottom:1px solid var(--rule);font-size:18px}
+th{font-weight:800}
+td{text-align:right;font-weight:500}
+tr:hover td,tr:hover th{color:var(--coral)}
+.rating{display:flex;align-items:flex-end;gap:28px;flex-wrap:wrap;margin:20px 0 30px}
+.big{font-size:clamp(90px,18vw,200px);font-weight:900;line-height:.8;letter-spacing:-.05em}
+.stars{color:var(--coral);font-size:34px;letter-spacing:4px;line-height:1}
+.rating p{font:500 17px -apple-system,"Segoe UI",Arial,sans-serif;margin-top:8px}
+h3.top{font-size:32px;margin:60px 0 6px;letter-spacing:-.02em}
+.rcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:20px}
+.rc{border:1px solid var(--ink);padding:22px;background:#fff;transition:transform .25s,box-shadow .25s}
+.rc:hover{transform:translateY(-5px);box-shadow:6px 6px 0 var(--coral)}
+.rc .ex{display:block;margin-bottom:12px}
+.rc .ex span{display:inline-block;background:var(--ink);color:#fff;font:700 11px -apple-system,Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px}
+.rc .stars{font-size:20px;margin-bottom:12px}
+.rc p{color:var(--grey);font-style:italic;margin-bottom:14px}
+.rc strong{font:700 14px -apple-system,Arial,sans-serif}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:30px}
+.contact-grid div{border-top:3px solid var(--ink);padding-top:16px}
+.contact-grid h4{font:700 12px -apple-system,Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
+.contact-grid p,.contact-grid a{font-size:22px;font-weight:700}
+form{max-width:760px;margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+input,select,textarea{border:0;border-bottom:2px solid var(--ink);padding:12px 2px;font-size:17px;background:transparent;border-radius:0;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--coral)}
+#msg{display:none;margin-top:6px;padding:14px 18px;background:var(--coral);border:2px solid var(--ink);font:700 16px -apple-system,Arial,sans-serif}
+.small{font:14px -apple-system,Arial,sans-serif;color:var(--grey);margin-top:16px;max-width:760px}
+footer{background:var(--ink);color:#fff;padding:50px 22px;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+footer strong{font-size:22px;display:block;margin-bottom:6px}
+footer span{color:#bbb;font-size:14px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--coral);color:#111;text-align:center;padding:16px;font:800 17px -apple-system,Arial,sans-serif;text-decoration:none;border-top:2px solid var(--ink)}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+@media(max-width:800px){
+.menu-btn{display:block}
+nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--rule);display:none}
+nav.open{display:block}
+nav ul{flex-direction:column;gap:0}
+nav a{display:block;padding:16px 22px;border-bottom:1px solid #ddd}
+section{padding:64px 20px}
+form{grid-template-columns:1fr}
+.callbar{display:block}
+td,th{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.fade{transition:none;opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-
 <div class="banner">Sample homepage concept for Magic Center Barber Shop. Not their official website.</div>
-
-<header class="hero">
-  <div class="wrap">
-    <h1>Magic Center Barber Shop</h1>
-    <p class="rating"><span class="star" aria-hidden="true">★</span> 4.8 on Google · 42 reviews</p>
-    <p class="addr">410 Market St, Paterson, NJ 07501, USA</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-ghost" href="tel:+18628233530">Call (862) 823-3530</a>
-    </div>
-  </div>
+<header>
+<div class="bar">
+<a class="logo" href="#home">Magic Center <span>●</span></a>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="nav">MENU</button>
+<nav id="nav"><ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+</div>
 </header>
 
-<main>
-  <section id="about">
-    <h2>Barber shop in Paterson, NJ</h2>
-    <p>Magic Center Barber Shop is a barber shop located on Market St in Paterson, New Jersey. Call to ask about services.</p>
-  </section>
+<section id="home" class="hero">
+<div class="wrap">
+<div class="eyebrow">Barber shop · Paterson, NJ</div>
+<h1>Magic Center <em>Barber</em> Shop</h1>
+<p class="lead">Sharp cuts, clean lines and a fresh look, right on Market Street.</p>
+<div class="badge"><span class="st">★★★★★</span> 4.8 · 42 Google reviews</div>
+<div class="ctas">
+<a class="btn primary" href="#book">Book Now</a>
+<a class="btn dark" href="tel:+18628233530">📞 Call (862) 823-3530</a>
+</div>
+<div class="heroline"><span><b>●</b> 410 Market St</span><span><b>●</b> Paterson, NJ 07501</span><span><b>●</b> Open 7 days</span></div>
+</div>
+</section>
 
-  <section id="hours">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 9:00 PM</li>
-      <li>Tuesday: 9:00 AM – 9:00 PM</li>
-      <li>Wednesday: 9:00 AM – 9:00 PM</li>
-      <li>Thursday: 9:00 AM – 9:00 PM</li>
-      <li>Friday: 9:00 AM – 9:00 PM</li>
-      <li>Saturday: 9:00 AM – 10:00 PM</li>
-      <li>Sunday: 9:00 AM – 5:00 PM</li>
-    </ul>
-  </section>
+<section id="services">
+<div class="wrap fade">
+<div class="eyebrow">Services</div>
+<h2>What's on the menu.</h2>
+<div class="notice">Example layout - the owner's real services and prices go here</div>
+<div class="cards">
+<div class="card"><div class="ico">✂️</div><h3>Classic Haircut</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card"><div class="ico">💈</div><h3>Fade &amp; Taper</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card"><div class="ico">🧔</div><h3>Beard Trim</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card"><div class="ico">🪒</div><h3>Hot Towel Shave</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card"><div class="ico">👦</div><h3>Kids' Cuts</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card"><div class="ico">✨</div><h3>Line-Up</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="demo-form" novalidate>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name">
+<section id="hours">
+<div class="wrap fade">
+<div class="eyebrow">Hours</div>
+<h2>Open seven days.</h2>
+<table>
+<tr><th>Monday</th><td>9:00 AM – 9:00 PM</td></tr>
+<tr><th>Tuesday</th><td>9:00 AM – 9:00 PM</td></tr>
+<tr><th>Wednesday</th><td>9:00 AM – 9:00 PM</td></tr>
+<tr><th>Thursday</th><td>9:00 AM – 9:00 PM</td></tr>
+<tr><th>Friday</th><td>9:00 AM – 9:00 PM</td></tr>
+<tr><th>Saturday</th><td>9:00 AM – 10:00 PM</td></tr>
+<tr><th>Sunday</th><td>9:00 AM – 5:00 PM</td></tr>
+</table>
+</div>
+</section>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
+<section id="reviews">
+<div class="wrap fade">
+<div class="eyebrow">Reviews</div>
+<h2>Rated by the neighborhood.</h2>
+<div class="rating">
+<div class="big">4.8</div>
+<div><div class="stars">★★★★★</div><p>based on 42 Google reviews</p></div>
+</div>
+<a class="btn primary" href="https://maps.google.com/?cid=18414812206287637400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 42 reviews on Google</a>
+<h3 class="top">Top reviews</h3>
+<div class="notice">Example layout - your best reviews show here</div>
+<div class="rcards">
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+</div>
+</div>
+</section>
 
-      <div class="two">
-        <div>
-          <label for="day">Preferred day</label>
-          <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-        </div>
-        <div>
-          <label for="time">Preferred time</label>
-          <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-        </div>
-      </div>
+<section id="contact">
+<div class="wrap fade">
+<div class="eyebrow">Contact</div>
+<h2>Come say hello.</h2>
+<div class="contact-grid">
+<div><h4>Address</h4><p>410 Market St<br>Paterson, NJ 07501, USA</p></div>
+<div><h4>Phone</h4><a href="tel:+18628233530">(862) 823-3530</a></div>
+<div><h4>Directions</h4><a href="https://maps.google.com/?cid=18414812206287637400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener" style="color:var(--coral)">Get directions →</a></div>
+</div>
+</div>
+</section>
 
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
+<section id="book">
+<div class="wrap fade">
+<div class="eyebrow">Booking</div>
+<h2>Book an appointment</h2>
+<form id="bf" onsubmit="return false">
+<div class="f"><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div class="f"><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+<div class="f"><label for="d">Preferred day</label><select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+<div class="f"><label for="t">Preferred time</label><input id="t" type="time"></div>
+<div class="f full"><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+<div class="f full"><button type="button" class="btn primary" id="send">Request appointment</button><div id="msg" role="status"></div></div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
 
-      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-      <div id="demo-msg" role="status" aria-live="polite"></div>
-    </form>
-    <p class="note">This is a sample of how online booking could work.</p>
-  </section>
+<footer>
+<div class="wrap">
+<strong>Magic Center Barber Shop</strong>
+<span>Sample homepage concept made by a third party. Not their official website.</span>
+</div>
+</footer>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>410 Market St, Paterson, NJ 07501, USA</p>
-    <p><a class="btn btn-primary" href="tel:+18628233530">Call (862) 823-3530</a></p>
-  </section>
-</main>
-
-<footer>Sample homepage concept for Magic Center Barber Shop. Not their official website.</footer>
+<a class="callbar" href="tel:+18628233530">📞 Call (862) 823-3530</a>
 
 <script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-  document.getElementById('demo-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-  });
+var mb=document.getElementById('mb'),nav=document.getElementById('nav');
+mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+document.getElementById('send').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
 </script>
 </body>
 </html>
