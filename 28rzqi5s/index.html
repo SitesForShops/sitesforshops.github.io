@@ -1,261 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: ELECTRIC SPORT -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sammy Barber Shop | Paterson, NJ</title>
-<meta name="description" content="Sample homepage concept for Sammy Barber Shop, a barber shop at 250 Union Ave, Paterson, NJ.">
+<title>Sammy Barber Shop – Paterson, NJ (Sample Concept)</title>
 <style>
-  :root {
-    --ink: #1c1c1e;
-    --muted: #5b5b61;
-    --bg: #f7f5f1;
-    --card: #ffffff;
-    --accent: #b3261e;
-    --accent-dark: #8c1d17;
-    --navy: #14213d;
-    --line: #e4e0d8;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.55;
-  }
-  .banner {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 7px 12px;
-    letter-spacing: 0.01em;
-  }
-  header.hero {
-    background: linear-gradient(135deg, var(--navy), #22345f);
-    color: #fff;
-    padding: 48px 20px 56px;
-    text-align: center;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  .hero h1 {
-    margin: 0 0 8px;
-    font-size: clamp(2rem, 8vw, 3rem);
-    line-height: 1.15;
-  }
-  .hero .type {
-    margin: 0 0 18px;
-    color: #cfd6e6;
-    font-size: 1.05rem;
-  }
-  .rating {
-    display: inline-block;
-    background: rgba(255,255,255,0.12);
-    border-radius: 999px;
-    padding: 8px 18px;
-    font-weight: 600;
-    margin-bottom: 18px;
-  }
-  .rating .star { color: #ffc94d; }
-  .address { margin: 0 0 24px; color: #e6eaf4; }
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  .btn {
-    display: inline-block;
-    border: 0;
-    border-radius: 10px;
-    padding: 14px 26px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: inherit;
-    min-width: 170px;
-    text-align: center;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-secondary { background: #fff; color: var(--navy); }
-  .btn-secondary:hover { background: #eef1f8; }
-  section { padding: 40px 20px; }
-  section h2 {
-    margin: 0 0 16px;
-    font-size: 1.6rem;
-    color: var(--navy);
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 22px;
-  }
-  .hours { list-style: none; margin: 0; padding: 0; }
-  .hours li {
-    padding: 10px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .hours li:last-child { border-bottom: 0; }
-  .info-grid { display: grid; gap: 16px; }
-  .info-grid p { margin: 4px 0; }
-  .label {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    font-weight: 700;
-  }
-  form { display: grid; gap: 14px; }
-  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    font-family: inherit;
-    border: 1px solid #c9c4b9;
-    border-radius: 8px;
-    background: #fff;
-  }
-  input:focus, textarea:focus {
-    outline: 2px solid var(--navy);
-    border-color: var(--navy);
-  }
-  textarea { min-height: 90px; resize: vertical; }
-  .row { display: grid; gap: 14px; }
-  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
-  #demoMessage {
-    display: none;
-    background: #fff4e5;
-    border: 1px solid #f0c27a;
-    color: #6a4300;
-    padding: 12px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
-  footer {
-    text-align: center;
-    padding: 28px 20px 40px;
-    color: var(--muted);
-    font-size: 0.85rem;
-  }
+:root{
+  --red:#e10600;
+  --red-d:#a80400;
+  --blue:#1034c8;
+  --blue-d:#0a1f7a;
+  --navy:#07124a;
+  --white:#fff;
+  --ice:#eef3ff;
+  --gold:#ffd23f;
+  --cut:clamp(28px,6vw,80px);
+  --font:"Segoe UI","Helvetica Neue",Arial,system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--navy);background:var(--navy);line-height:1.55;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-style:italic;text-transform:uppercase;font-weight:900;letter-spacing:-.5px;line-height:1.02}
+.banner{background:#000;color:#fff;text-align:center;font-size:.82rem;padding:8px 12px;font-weight:600}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:4px solid var(--red);box-shadow:0 4px 18px rgba(7,18,74,.25)}
+.nav-in{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:900;font-style:italic;text-transform:uppercase;color:var(--blue);text-decoration:none;font-size:1.1rem;display:flex;align-items:center;gap:8px}
+.logo span{background:var(--red);color:#fff;padding:2px 8px;transform:skewX(-12deg);display:inline-block}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;text-decoration:none;font-weight:800;text-transform:uppercase;font-style:italic;font-size:.9rem;padding:8px 14px;color:var(--navy);transform:skewX(-10deg);transition:.2s}
+.menu a:hover{background:var(--blue);color:#fff}
+.burger{display:none;background:var(--blue);color:#fff;border:0;font:inherit;font-weight:800;text-transform:uppercase;padding:9px 14px;cursor:pointer;transform:skewX(-10deg)}
+@media(max-width:820px){
+  .burger{display:block}
+  .menu{position:absolute;left:0;right:0;top:100%;background:var(--white);flex-direction:column;gap:0;border-bottom:4px solid var(--red);max-height:0;overflow:hidden;transition:max-height .3s}
+  .menu.open{max-height:420px}
+  .menu a{transform:none;padding:15px 22px;border-top:1px solid #e3e8fa}
+}
+/* SECTIONS */
+section{position:relative;scroll-margin-top:64px}
+.cut{clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);margin-top:calc(var(--cut)*-1);padding-top:calc(var(--cut) + 60px)}
+.cut2{clip-path:polygon(0 0,100% var(--cut),100% 100%,0 100%);margin-top:calc(var(--cut)*-1);padding-top:calc(var(--cut) + 60px)}
+.pad{padding-bottom:calc(var(--cut) + 50px)}
+.wrap{max-width:1200px;margin:auto;padding:0 20px}
+h2{font-size:clamp(2.2rem,7vw,4.2rem);margin-bottom:14px}
+.kicker{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-style:italic;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;padding:4px 14px;transform:skewX(-12deg);margin-bottom:14px}
+.lead{max-width:640px;font-size:1.1rem}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:900;font-style:italic;text-transform:uppercase;font-size:1.05rem;padding:15px 30px;border:0;cursor:pointer;font-family:inherit;transform:skewX(-10deg);transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:skewX(-10deg) translateY(-4px);box-shadow:0 10px 0 rgba(0,0,0,.25)}
+.btn-red{background:var(--red);color:#fff}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-blue{background:var(--blue);color:#fff}
+/* HERO */
+#home{background:var(--blue);color:#fff;overflow:hidden;padding:0;clip-path:none;margin:0}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;min-height:640px}
+.hero-l{padding:70px 20px 150px max(20px,calc((100vw - 1200px)/2 + 20px));position:relative;z-index:2;background:
+  repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 14px,transparent 14px 40px),linear-gradient(160deg,var(--blue),var(--blue-d))}
+.hero h1{font-size:clamp(3rem,10.5vw,6.8rem);margin:10px 0 18px;text-shadow:5px 5px 0 var(--red)}
+.hero p.tag{font-size:clamp(1.1rem,2.5vw,1.45rem);font-weight:700;font-style:italic;max-width:520px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:12px;background:#fff;color:var(--navy);padding:10px 20px;transform:skewX(-10deg);margin-bottom:26px;box-shadow:6px 6px 0 var(--red)}
+.badge b{font-size:1.9rem;font-style:italic;color:var(--blue);line-height:1}
+.badge .st{color:#f5a800;letter-spacing:2px}
+.badge small{display:block;font-weight:700;font-size:.8rem}
+.ctas{display:flex;flex-wrap:wrap;gap:16px}
+.hero-r{background:linear-gradient(200deg,var(--red),var(--red-d));position:relative;clip-path:polygon(18% 0,100% 0,100% 100%,0 100%);margin-left:-12%;display:flex;align-items:center;justify-content:center;padding:40px}
+.hero-r::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.1) 0 10px,transparent 10px 36px)}
+.hero-r svg{position:relative;width:min(260px,70%);filter:drop-shadow(10px 12px 0 rgba(0,0,0,.25));animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
+.hero-end{position:absolute;left:0;right:0;bottom:0;height:var(--cut);background:#fff;clip-path:polygon(0 100%,100% 0,100% 100%);z-index:3}
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr}
+  .hero-l{padding:50px 20px 40px}
+  .hero-r{clip-path:polygon(0 12%,100% 0,100% 100%,0 100%);margin:0;min-height:260px;padding:60px 20px 90px}
+}
+/* SERVICES */
+#services{background:#fff;color:var(--navy)}
+#services h2{color:var(--blue)}
+.ex-label{display:inline-block;background:var(--navy);color:var(--gold);font-weight:800;font-size:.82rem;padding:6px 12px;margin:6px 0 0;border-left:5px solid var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:34px}
+.card{background:var(--ice);border:3px solid var(--blue);padding:24px;position:relative;transition:transform .25s,box-shadow .25s;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 22px,100% 100%,0 100%)}
+.card:hover{transform:translateY(-8px);box-shadow:0 14px 0 -4px var(--red)}
+.card .ic{font-size:2.4rem;display:inline-grid;place-items:center;width:64px;height:64px;background:var(--blue);margin-bottom:12px;transform:skewX(-10deg)}
+.card h3{font-size:1.45rem;color:var(--blue);margin-bottom:8px}
+.card .price{font-weight:800;color:var(--red);margin:10px 0}
+.card .ex-label{font-size:.72rem;margin:0}
+/* HOURS */
+#hours{background:var(--red);color:#fff;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.07) 0 14px,transparent 14px 44px)}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+table{width:100%;border-collapse:collapse;background:#fff;color:var(--navy);box-shadow:10px 10px 0 var(--navy)}
+td{padding:14px 18px;border-bottom:2px solid var(--ice);font-weight:700}
+td:last-child{text-align:right;color:var(--blue)}
+tr:last-child td{border-bottom:0}
+tr:nth-child(odd){background:var(--ice)}
+tr:hover td{background:var(--gold)}
+@media(max-width:820px){.hours-grid{grid-template-columns:1fr}}
+.big-clock{font-size:5rem;line-height:1}
+/* REVIEWS */
+#reviews{background:#fff;color:var(--navy)}
+#reviews h2{color:var(--blue)}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:28px;background:var(--blue);color:#fff;padding:30px;margin:26px 0;box-shadow:10px 10px 0 var(--red)}
+.rating .num{font-size:clamp(4rem,14vw,7rem);font-weight:900;font-style:italic;line-height:1}
+.rating .stars{color:var(--gold);font-size:2rem;letter-spacing:4px}
+.rev-row-label{margin:34px 0 4px}
+.rev-title{font-size:1.8rem;color:var(--red)}
+.rev-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:16px}
+.rev{background:var(--ice);border:3px dashed var(--blue);padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rev:hover{transform:translateY(-6px)}
+.rev .tagrow{display:block}
+.rev .tagrow span{display:inline-block;background:var(--red);color:#fff;font-size:.72rem;font-weight:800;text-transform:uppercase;padding:3px 10px}
+.rev .stars{color:#f5a800;font-size:1.25rem;letter-spacing:2px;white-space:nowrap}
+.rev p{font-style:italic;color:#44507f}
+.rev .nm{font-weight:800;margin-top:auto}
+@media(max-width:1000px){.rev-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.rev-grid{grid-template-columns:1fr}}
+/* CONTACT */
+#contact{background:linear-gradient(160deg,var(--blue),var(--navy));color:#fff}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
+.cbox{background:#fff;color:var(--navy);padding:26px;border-left:10px solid var(--red);transition:transform .25s}
+.cbox:hover{transform:translateY(-6px)}
+.cbox .ic{font-size:2rem}
+.cbox h3{color:var(--blue);margin:6px 0 8px;font-size:1.3rem}
+.cbox a.link{font-weight:800;color:var(--red)}
+/* BOOK */
+#book{background:#fff;color:var(--navy)}
+#book h2{color:var(--red)}
+form{background:var(--ice);border:3px solid var(--blue);padding:28px;margin-top:26px;max-width:760px;display:grid;grid-template-columns:1fr 1fr;gap:18px;box-shadow:10px 10px 0 var(--blue)}
+form .full{grid-column:1/-1}
+label{display:block;font-weight:800;text-transform:uppercase;font-size:.8rem;margin-bottom:5px;color:var(--blue)}
+input,textarea,select{width:100%;padding:13px;border:2px solid var(--navy);font:inherit;background:#fff;border-radius:0}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--red)}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+#demo-msg{display:none;background:var(--navy);color:var(--gold);font-weight:800;padding:14px;border-left:6px solid var(--red)}
+.note{margin-top:16px;font-size:.9rem;color:#44507f}
+/* FOOTER */
+footer{background:var(--navy);color:#fff;text-align:center;padding:40px 20px 50px;border-top:6px solid var(--red)}
+footer strong{font-size:1.4rem;font-style:italic;text-transform:uppercase;display:block;margin-bottom:6px}
+footer small{opacity:.85}
+/* CALL BAR */
+.callbar{display:none}
+@media(max-width:820px){
+  body{padding-bottom:64px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--red);color:#fff;justify-content:center;align-items:center;gap:10px;padding:16px;font-weight:900;font-style:italic;text-transform:uppercase;text-decoration:none;font-size:1.1rem;border-top:3px solid #fff;box-shadow:0 -6px 18px rgba(0,0,0,.3)}
+}
+/* REVEAL */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none}.hero-r svg{animation:none}}
 </style>
 </head>
 <body>
-
 <div class="banner">Sample homepage concept for Sammy Barber Shop. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>Sammy Barber Shop</h1>
-    <p class="type">Barber shop in Paterson, NJ</p>
-    <div class="rating"><span class="star">★</span> 4.9 on Google · 106 reviews</div>
-    <p class="address">250 Union Ave, Paterson, NJ 07502, USA</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="#book" id="bookNow">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+16469459903">Call (646) 945-9903</a>
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home"><span>✂</span> Sammy Barber Shop</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="hero">
+    <div class="hero-l">
+      <span class="kicker">Paterson, NJ</span>
+      <h1>Sammy Barber Shop</h1>
+      <p class="tag">Fresh cuts. Sharp style. Big energy.</p>
+      <div class="badge">
+        <b>4.9</b>
+        <div><span class="st">★★★★★</span><small>Google rating · 106 reviews</small></div>
+      </div>
+      <div class="ctas">
+        <a class="btn btn-red" href="#book">Book Now</a>
+        <a class="btn btn-white" href="tel:+16469459903">📞 (646) 945-9903</a>
+      </div>
+    </div>
+    <div class="hero-r" aria-hidden="true">
+      <svg viewBox="0 0 120 300">
+        <defs>
+          <clipPath id="pole"><rect x="30" y="50" width="60" height="200" rx="10"/></clipPath>
+        </defs>
+        <rect x="24" y="20" width="72" height="34" rx="12" fill="#fff"/>
+        <rect x="24" y="246" width="72" height="34" rx="12" fill="#fff"/>
+        <g clip-path="url(#pole)">
+          <rect x="30" y="50" width="60" height="200" fill="#fff"/>
+          <g fill="#1034c8"><polygon points="20,70 100,30 100,70 20,110"/><polygon points="20,150 100,110 100,150 20,190"/><polygon points="20,230 100,190 100,230 20,270"/></g>
+          <g fill="#e10600"><polygon points="20,110 100,70 100,110 20,150"/><polygon points="20,190 100,150 100,190 20,230"/><polygon points="20,270 100,230 100,270 20,310"/><polygon points="20,30 100,-10 100,30 20,70"/></g>
+        </g>
+        <rect x="30" y="50" width="60" height="200" rx="10" fill="none" stroke="#07124a" stroke-width="5"/>
+      </svg>
     </div>
   </div>
-</header>
+  <div class="hero-end"></div>
+</section>
 
-<section>
+<section id="services" class="cut2 pad">
   <div class="wrap">
-    <h2>Visit &amp; contact</h2>
-    <div class="card info-grid">
-      <div>
-        <div class="label">Address</div>
-        <p>250 Union Ave, Paterson, NJ 07502, USA</p>
-      </div>
-      <div>
-        <div class="label">Phone</div>
-        <p><a href="tel:+16469459903">(646) 945-9903</a></p>
-      </div>
-      <div>
-        <div class="label">Google rating</div>
-        <p>4.9 stars from 106 reviews</p>
-      </div>
-      <div>
-        <div class="label">Services</div>
-        <p>Call to ask about services.</p>
-      </div>
+    <span class="kicker rv">What to expect</span>
+    <h2 class="rv">Services</h2>
+    <p class="lead rv">A sample of how a barber shop's service menu can look on a website.</p>
+    <span class="ex-label rv">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <article class="card rv"><div class="ic">✂️</div><h3>Classic Haircut</h3><p>A clean, tailored cut finished with crisp edges.</p><div class="price">Price: add yours</div><span class="ex-label">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ic">💈</div><h3>Fade &amp; Taper</h3><p>Smooth blends from short to shorter, styled to suit you.</p><div class="price">Price: add yours</div><span class="ex-label">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ic">🧔</div><h3>Beard Trim</h3><p>Shaped lines and a neat, balanced finish.</p><div class="price">Price: add yours</div><span class="ex-label">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ic">🪒</div><h3>Razor Shave</h3><p>A smooth, traditional shave with a sharp look.</p><div class="price">Price: add yours</div><span class="ex-label">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ic">🧒</div><h3>Kids' Cuts</h3><p>Friendly, tidy haircuts for younger clients.</p><div class="price">Price: add yours</div><span class="ex-label">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ic">⚡</div><h3>Cut + Beard Combo</h3><p>A full refresh: haircut and beard work together.</p><div class="price">Price: add yours</div><span class="ex-label">Example layout - the owner's real services and prices go here</span></article>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section id="hours" class="cut pad">
+  <div class="wrap hours-grid">
+    <div class="rv">
+      <div class="big-clock">⏱️</div>
+      <span class="kicker" style="background:#fff;color:var(--red)">Open 7 days</span>
+      <h2>Hours</h2>
+      <p class="lead">Opening hours for Sammy Barber Shop, as listed on Google.</p>
+    </div>
+    <table class="rv" aria-label="Opening hours">
+      <tbody>
+        <tr><td>Monday:</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Tuesday:</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Wednesday:</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Thursday:</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Friday:</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Saturday:</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Sunday:</td><td>9:00 AM – 5:00 PM</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="reviews" class="cut2 pad">
   <div class="wrap">
-    <h2>Opening hours</h2>
-    <div class="card">
-      <ul class="hours">
-        <li>Monday: 9:00 AM – 8:00 PM</li>
-        <li>Tuesday: 9:00 AM – 8:00 PM</li>
-        <li>Wednesday: 9:00 AM – 8:00 PM</li>
-        <li>Thursday: 9:00 AM – 8:00 PM</li>
-        <li>Friday: 9:00 AM – 8:00 PM</li>
-        <li>Saturday: 9:00 AM – 8:00 PM</li>
-        <li>Sunday: 9:00 AM – 5:00 PM</li>
-      </ul>
+    <span class="kicker rv">Google reviews</span>
+    <h2 class="rv">Reviews</h2>
+    <div class="rating rv">
+      <div class="num">4.9</div>
+      <div>
+        <div class="stars" aria-label="4.9 out of 5 stars">★★★★★</div>
+        <div style="font-weight:800;font-size:1.2rem">based on 106 Google reviews</div>
+      </div>
+      <a class="btn btn-red" style="margin-left:auto" href="https://maps.google.com/?cid=17089315249517792747&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 106 reviews on Google</a>
+    </div>
+    <h3 class="rev-title rev-row-label rv">Top reviews</h3>
+    <span class="ex-label rv">Example layout - your best reviews show here</span>
+    <div class="rev-grid">
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
     </div>
   </div>
 </section>
 
-<section id="book" style="padding-top:0">
+<section id="contact" class="cut pad">
   <div class="wrap">
-    <h2>Book an appointment</h2>
-    <div class="card">
-      <form id="demoForm" onsubmit="return false;">
-        <div class="row">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name">
-          </div>
-          <div>
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
-          </div>
-        </div>
-        <div class="row">
-          <div>
-            <label for="day">Preferred day</label>
-            <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-          </div>
-          <div>
-            <label for="time">Preferred time</label>
-            <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-          </div>
-        </div>
-        <div>
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes"></textarea>
-        </div>
-        <button type="button" class="btn btn-primary" id="submitBtn">Request appointment</button>
-        <div id="demoMessage" role="status" aria-live="polite"></div>
-      </form>
-      <p class="note">This is a sample of how online booking could work.</p>
+    <span class="kicker rv">Find the shop</span>
+    <h2 class="rv">Contact</h2>
+    <div class="contact-grid">
+      <div class="cbox rv"><div class="ic">📍</div><h3>Address</h3><p>Sammy Barber Shop<br>250 Union Ave<br>Paterson, NJ 07502, USA</p></div>
+      <div class="cbox rv"><div class="ic">📞</div><h3>Phone</h3><p><a class="link" href="tel:+16469459903">(646) 945-9903</a></p></div>
+      <div class="cbox rv"><div class="ic">🗺️</div><h3>Directions</h3><p><a class="link" href="https://maps.google.com/?cid=17089315249517792747&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a></p></div>
     </div>
+  </div>
+</section>
+
+<section id="book" class="cut2 pad">
+  <div class="wrap">
+    <span class="kicker rv">Demo form</span>
+    <h2 class="rv">Book an appointment</h2>
+    <form id="bookForm" class="rv" onsubmit="return false">
+      <div><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name"></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+      <div><label for="f-day">Preferred day</label><input id="f-day" type="date"></div>
+      <div><label for="f-time">Preferred time</label><input id="f-time" type="time"></div>
+      <div class="full"><label for="f-notes">Notes</label><textarea id="f-notes" rows="4"></textarea></div>
+      <div class="full"><button type="button" class="btn btn-red" id="bookBtn">Request appointment</button></div>
+      <div class="full" id="demo-msg" role="status"></div>
+    </form>
+    <p class="note rv">This is a sample of how online booking could work.</p>
   </div>
 </section>
 
 <footer>
-  Sample homepage concept for Sammy Barber Shop. Not their official website.
+  <strong>Sammy Barber Shop</strong>
+  <small>Sample homepage concept made by a third party. Not their official website.</small>
 </footer>
 
-<script>
-  document.getElementById('submitBtn').addEventListener('click', function () {
-    var msg = document.getElementById('demoMessage');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-  document.getElementById('bookNow').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
-  });
-</script>
+<a class="callbar" href="tel:+16469459903">📞 Call</a>
 
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);
+  });
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+  document.getElementById('bookBtn').addEventListener('click',function(){
+    var s=document.getElementById('demo-msg');
+    s.textContent='Demo only: online booking is not connected yet.';
+    s.style.display='block';
+  });
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  } else {els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
 </body>
 </html>
