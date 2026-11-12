@@ -1,219 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ace Pet Shop – Newark, NJ (Sample Homepage Concept)</title>
+<title>Ace Pet Shop – Sample Homepage Concept</title>
 <style>
-  :root {
-    --ink: #1f2a37;
-    --muted: #5b6676;
-    --brand: #0f766e;
-    --brand-dark: #0b5a54;
-    --accent: #f59e0b;
-    --bg: #f6f8f9;
-    --card: #ffffff;
-    --line: #e2e8ee;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.5;
-  }
-  .banner {
-    background: #1f2a37;
-    color: #fff;
-    text-align: center;
-    font-size: 0.8rem;
-    padding: 6px 12px;
-  }
-  header.hero {
-    background: linear-gradient(135deg, var(--brand), var(--brand-dark));
-    color: #fff;
-    padding: 40px 20px 44px;
-    text-align: center;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  h1 { margin: 0 0 8px; font-size: 2.2rem; line-height: 1.15; }
-  .rating { font-size: 1.05rem; margin: 6px 0 4px; }
-  .stars { color: var(--accent); letter-spacing: 2px; }
-  .address { margin: 6px 0 22px; opacity: 0.95; }
-  .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .btn {
-    display: inline-block;
-    padding: 14px 26px;
-    border-radius: 999px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-decoration: none;
-    border: 2px solid transparent;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .btn-book { background: var(--accent); color: #1f2a37; }
-  .btn-book:hover { background: #fbbf24; }
-  .btn-call { background: transparent; color: #fff; border-color: #fff; }
-  .btn-call:hover { background: rgba(255,255,255,0.15); }
-  main { padding: 24px 16px 40px; }
-  section {
-    max-width: 760px;
-    margin: 0 auto 22px;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 24px 22px;
-  }
-  h2 { margin: 0 0 12px; font-size: 1.4rem; color: var(--brand-dark); }
-  p { margin: 0 0 10px; }
-  ul.hours { list-style: none; margin: 0; padding: 0; }
-  ul.hours li { padding: 9px 0; border-bottom: 1px solid var(--line); }
-  ul.hours li:last-child { border-bottom: none; }
-  form { display: grid; gap: 14px; }
-  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-  input, select, textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    font-family: inherit;
-    border: 1px solid #c5ced8;
-    border-radius: 8px;
-    background: #fff;
-    color: var(--ink);
-  }
-  input:focus, select:focus, textarea:focus {
-    outline: 2px solid var(--brand);
-    border-color: var(--brand);
-  }
-  textarea { min-height: 90px; resize: vertical; }
-  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
-  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
-  .btn-submit { background: var(--brand); color: #fff; width: 100%; }
-  .btn-submit:hover { background: var(--brand-dark); }
-  #demo-msg {
-    display: none;
-    background: #fff7e0;
-    border: 1px solid var(--accent);
-    color: #6b4500;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-align: center;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin-top: 12px; }
-  footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
-    padding: 0 16px 30px;
-  }
+:root{
+  --green:#12392b;
+  --green2:#0c271d;
+  --green3:#1d5240;
+  --cream:#f6efdc;
+  --cream2:#ece2c8;
+  --brass:#b98a2e;
+  --brass2:#d9b25a;
+  --ink:#1b241f;
+  --slab:Rockwell,"Roboto Slab","Rockwell Nova","Courier New",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:var(--slab);line-height:1.1;font-weight:800}
+a{color:inherit}
+section{scroll-margin-top:64px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.banner{background:var(--brass);color:var(--green2);text-align:center;font-size:.82rem;font-weight:700;padding:7px 12px;letter-spacing:.02em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:var(--green2);border-bottom:3px solid var(--brass);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:0 22px;height:58px}
+.logo{font-family:var(--slab);font-weight:800;color:var(--cream);text-decoration:none;font-size:1.15rem;display:flex;gap:8px;align-items:center}
+.logo span{color:var(--brass2)}
+.menu{display:flex;gap:4px;list-style:none}
+.menu a{display:block;padding:8px 14px;color:var(--cream);text-decoration:none;font-weight:600;font-size:.95rem;border-radius:4px;transition:.2s}
+.menu a:hover{background:var(--brass);color:var(--green2)}
+.burger{display:none;background:none;border:2px solid var(--brass2);color:var(--cream);border-radius:6px;padding:6px 12px;font-size:1rem;font-weight:700;cursor:pointer;font-family:var(--sans)}
+
+/* hero */
+.hero{position:relative;color:var(--cream);background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px),
+  linear-gradient(160deg,var(--green3),var(--green) 45%,var(--green2));
+  padding:72px 0 88px;overflow:hidden}
+.hero::after{content:"🐾";position:absolute;right:-20px;bottom:-40px;font-size:15rem;opacity:.07;transform:rotate(-15deg)}
+.hero-grid{display:grid;gap:34px;align-items:center}
+.hero-text{max-width:680px}
+.kicker{display:inline-block;color:var(--brass2);font-family:var(--slab);letter-spacing:.18em;text-transform:uppercase;font-size:.82rem;font-weight:700;margin-bottom:16px;border-bottom:2px solid var(--brass);padding-bottom:4px}
+.hero h1{font-size:clamp(2.8rem,10vw,5.6rem);margin-bottom:18px;letter-spacing:-.01em}
+.hero p.tag{font-size:1.25rem;color:var(--cream2);margin-bottom:26px;max-width:520px}
+.badge{display:inline-flex;align-items:center;gap:14px;border:3px double var(--brass2);padding:12px 20px;margin-bottom:28px;background:rgba(0,0,0,.2);border-radius:4px;outline:1px solid var(--brass);outline-offset:4px}
+.badge .num{font-family:var(--slab);font-size:2.4rem;font-weight:800;color:var(--brass2);line-height:1}
+.badge .stars{color:var(--brass2);letter-spacing:2px;font-size:1.05rem}
+.badge small{display:block;font-size:.85rem;color:var(--cream2)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;font-family:var(--slab);font-weight:800;text-decoration:none;padding:15px 28px;border-radius:4px;font-size:1.05rem;border:2px solid var(--brass2);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;text-align:center}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.25)}
+.btn-primary{background:var(--brass2);color:var(--green2)}
+.btn-ghost{background:transparent;color:var(--cream)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--green);color:var(--cream);border-color:var(--green)}
+
+/* sections */
+.sec{padding:84px 0}
+.sec h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--green);margin-bottom:12px}
+.sec h2::after{content:"";display:block;width:70px;height:5px;background:var(--brass);margin-top:12px}
+.lead{max-width:620px;margin:16px 0 28px;color:#3b4a42}
+.example-tag{display:inline-block;background:var(--green);color:var(--brass2);border:1px dashed var(--brass2);padding:7px 14px;font-size:.85rem;font-weight:700;border-radius:3px;margin-bottom:8px}
+
+.stripe{background:repeating-linear-gradient(90deg,rgba(18,57,43,.045) 0 2px,transparent 2px 22px),var(--cream2)}
+
+/* services */
+.cards{display:grid;gap:20px;margin-top:30px;grid-template-columns:1fr}
+.card{background:var(--cream);border:2px solid var(--green);border-radius:6px;padding:26px;box-shadow:6px 6px 0 var(--brass);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--brass)}
+.card .ico{font-size:2.3rem;width:62px;height:62px;display:grid;place-items:center;background:var(--green);border-radius:50%;margin-bottom:14px;border:3px solid var(--brass2)}
+.card h3{font-size:1.4rem;color:var(--green);margin-bottom:6px}
+.card p{font-size:.97rem;color:#3b4a42}
+.card .price{margin-top:12px;font-weight:800;color:var(--brass);font-family:var(--slab)}
+.card .ex{display:block;margin-top:14px;font-size:.78rem;font-weight:700;background:var(--green);color:var(--brass2);padding:6px 10px;border-radius:3px}
+
+/* hours */
+.hours-box{display:grid;gap:30px;grid-template-columns:1fr;align-items:start}
+table{width:100%;border-collapse:collapse;background:var(--cream);border:3px solid var(--green);border-radius:6px;overflow:hidden;box-shadow:6px 6px 0 var(--brass)}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid rgba(18,57,43,.2)}
+tr:last-child td,tr:last-child th{border-bottom:0}
+th{font-family:var(--slab);color:var(--green);width:42%}
+tbody tr:nth-child(odd){background:rgba(185,138,46,.12)}
+.hours-side{background:var(--green);color:var(--cream);padding:28px;border-radius:6px;border:3px double var(--brass2)}
+.hours-side h3{color:var(--brass2);margin-bottom:8px;font-size:1.4rem}
+
+/* reviews */
+.rev-top{display:flex;flex-wrap:wrap;gap:28px;align-items:center;background:var(--green);color:var(--cream);padding:34px;border-radius:6px;border:3px double var(--brass2);margin-top:26px}
+.big{font-family:var(--slab);font-size:5.5rem;font-weight:800;color:var(--brass2);line-height:1}
+.bigstars{font-size:2rem;color:var(--brass2);letter-spacing:4px;line-height:1.2}
+.row-label{margin-top:44px}
+.rev-cards{display:grid;gap:18px;grid-template-columns:1fr;margin-top:10px}
+.rev{background:var(--cream);border:2px solid var(--green);border-radius:6px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rev:hover{transform:translateY(-4px)}
+.rev .badge-row{display:block}
+.rev .ex-badge{display:inline-block;background:var(--brass);color:var(--green2);font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;padding:3px 10px;border-radius:3px}
+.rev .st{color:var(--brass);font-size:1.2rem;letter-spacing:2px}
+.rev p{color:#55625b;font-style:italic}
+.rev .nm{font-family:var(--slab);font-weight:700;color:var(--green)}
+
+/* contact */
+.contact-grid{display:grid;gap:22px;grid-template-columns:1fr;margin-top:28px}
+.cbox{background:var(--cream);border:2px solid var(--green);border-radius:6px;padding:26px;box-shadow:6px 6px 0 var(--brass)}
+.cbox h3{color:var(--green);margin-bottom:8px;font-size:1.3rem}
+.cbox a.tel{font-family:var(--slab);font-size:1.5rem;font-weight:800;color:var(--green);text-decoration:none}
+
+/* booking */
+.book{background:
+  repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 22px),
+  linear-gradient(160deg,var(--green3),var(--green2));color:var(--cream)}
+.book h2{color:var(--cream)}
+.book h2::after{background:var(--brass2)}
+form{background:var(--cream);color:var(--ink);padding:28px;border-radius:6px;border:3px double var(--brass);max-width:640px;margin-top:28px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;color:var(--green);font-size:.95rem}
+input,select,textarea{font:inherit;padding:12px;border:2px solid var(--green);border-radius:4px;background:#fffdf6;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--brass2);outline-offset:1px}
+.two{display:grid;gap:16px;grid-template-columns:1fr}
+#msg{display:none;background:var(--green);color:var(--brass2);padding:14px;border-radius:4px;font-weight:700;border:1px dashed var(--brass2)}
+.note{margin-top:14px;font-size:.88rem;color:var(--cream2)}
+
+/* footer */
+footer{background:var(--green2);color:var(--cream2);text-align:center;padding:40px 20px;border-top:4px solid var(--brass)}
+footer strong{display:block;font-family:var(--slab);font-size:1.4rem;color:var(--brass2);margin-bottom:6px}
+
+/* call bar */
+.callbar{display:none}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .rv.in{opacity:1;transform:none}
+
+@media(min-width:700px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .two{grid-template-columns:1fr 1fr}
+  .rev-cards{grid-template-columns:repeat(2,1fr)}
+  .hours-box{grid-template-columns:1.3fr 1fr}
+}
+@media(min-width:1000px){
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .rev-cards{grid-template-columns:repeat(5,1fr)}
+  .rev{padding:16px}
+}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:58px;left:0;right:0;background:var(--green2);flex-direction:column;padding:10px 16px 16px;border-bottom:3px solid var(--brass)}
+  .menu.open{display:flex}
+  .menu a{padding:14px}
+  .hero{padding:52px 0 64px}
+  .sec{padding:60px 0}
+  body{padding-bottom:62px}
+  .callbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--brass2);color:var(--green2);text-align:center;padding:16px;font-family:var(--slab);font-weight:800;font-size:1.1rem;text-decoration:none;border-top:3px solid var(--green2)}
+  .big{font-size:4.2rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{transition:none}.btn,.card,.rev{transition:none}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for Ace Pet Shop. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>Ace Pet Shop</h1>
-    <div class="rating">
-      <span class="stars" aria-hidden="true">★★★★★</span>
-      <strong>4.8</strong> Google rating · 287 reviews
-    </div>
-    <p class="address">232 Miller St, Newark, NJ 07114, USA</p>
-    <div class="actions">
-      <a class="btn btn-book" href="#book" id="book-now">Book Now</a>
-      <a class="btn btn-call" href="tel:+19735049736">Call (973) 504-9736</a>
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">🐾 <span>Ace</span> Pet Shop</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="kicker">Dog grooming · Newark, NJ</span>
+      <h1>Ace Pet Shop</h1>
+      <p class="tag">Clean coats, trimmed nails and happy tails.</p>
+      <div class="badge" aria-label="Google rating 4.8 from 287 reviews">
+        <span class="num">4.8</span>
+        <span>
+          <span class="stars">★★★★★</span>
+          <small>287 Google reviews</small>
+        </span>
+      </div>
+      <div class="btns">
+        <a class="btn btn-primary" href="#book">Book Now</a>
+        <a class="btn btn-ghost" href="tel:+19735049736">📞 Call (973) 504-9736</a>
+      </div>
     </div>
   </div>
 </header>
 
-<main>
-  <section id="about">
-    <h2>About</h2>
-    <p>Ace Pet Shop is a pet business located on Miller St in Newark, New Jersey. Call to ask about services.</p>
-  </section>
+<section class="sec" id="services">
+  <div class="wrap">
+    <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+    <h2 class="rv">Grooming Services</h2>
+    <p class="lead rv">A sample of how a grooming menu could look on this page.</p>
+    <div class="cards">
+      <article class="card rv"><div class="ico">🛁</div><h3>Bath &amp; Brush</h3><p>A sample card for a wash, dry and brush-out.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ico">✂️</div><h3>Full Haircut &amp; Style</h3><p>A sample card for breed-style or custom trims.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ico">💅</div><h3>Nail Trim</h3><p>A sample card for nail clipping and filing.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ico">👂</div><h3>Ear Cleaning</h3><p>A sample card for gentle ear care.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ico">🧼</div><h3>De-shedding Treatment</h3><p>A sample card for coat-thinning and shed control.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card rv"><div class="ico">🐶</div><h3>Puppy's First Groom</h3><p>A sample card for a gentle introduction to grooming.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></article>
+    </div>
+  </div>
+</section>
 
-  <section id="hours">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
-      <li>Tuesday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
-      <li>Wednesday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
-      <li>Thursday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
-      <li>Friday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
-      <li>Saturday: 10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</li>
-      <li>Sunday: 10:00&#8239;AM&#8201;&ndash;&#8201;2:00&#8239;PM</li>
-    </ul>
-  </section>
+<section class="sec stripe" id="hours">
+  <div class="wrap">
+    <h2 class="rv">Hours</h2>
+    <div class="hours-box">
+      <table class="rv" aria-label="Opening hours">
+        <tbody>
+          <tr><th scope="row">Monday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</td></tr>
+          <tr><th scope="row">Tuesday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</td></tr>
+          <tr><th scope="row">Wednesday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</td></tr>
+          <tr><th scope="row">Thursday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</td></tr>
+          <tr><th scope="row">Friday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</td></tr>
+          <tr><th scope="row">Saturday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;6:00&#8239;PM</td></tr>
+          <tr><th scope="row">Sunday</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;2:00&#8239;PM</td></tr>
+        </tbody>
+      </table>
+      <div class="hours-side rv">
+        <h3>🕒 Plan your visit</h3>
+        <p>Questions about timing? Give the shop a call.</p>
+        <p style="margin-top:16px"><a class="btn btn-primary" href="tel:+19735049736">Call (973) 504-9736</a></p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="booking-form" onsubmit="return false;" novalidate>
-      <div class="row">
-        <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" autocomplete="name">
-        </div>
-        <div>
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel">
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <label for="day">Preferred day</label>
-          <select id="day" name="day">
-            <option value="">Select a day</option>
-            <option>Monday</option>
-            <option>Tuesday</option>
-            <option>Wednesday</option>
-            <option>Thursday</option>
-            <option>Friday</option>
-            <option>Saturday</option>
-            <option>Sunday</option>
-          </select>
-        </div>
-        <div>
-          <label for="time">Preferred time</label>
-          <input type="time" id="time" name="time">
-        </div>
-      </div>
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <h2 class="rv">Reviews</h2>
+    <div class="rev-top rv">
+      <div class="big">4.8</div>
       <div>
-        <label for="notes">Notes</label>
-        <textarea id="notes" name="notes"></textarea>
+        <div class="bigstars" aria-label="4.8 out of 5 stars">★★★★★</div>
+        <p>based on 287 Google reviews</p>
+        <p style="margin-top:16px"><a class="btn btn-primary" href="https://maps.google.com/?cid=3864663923589465106&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 287 reviews on Google</a></p>
       </div>
-      <button type="button" class="btn btn-submit" id="demo-btn">Request appointment</button>
-      <div id="demo-msg" role="status" aria-live="polite"></div>
+    </div>
+
+    <div class="row-label">
+      <h3 style="font-size:1.8rem;color:var(--green)" class="rv">Top reviews</h3>
+      <span class="example-tag" style="margin-top:10px">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rev-cards">
+      <article class="rev rv"><div class="badge-row"><span class="ex-badge">Example</span></div><div class="st">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="badge-row"><span class="ex-badge">Example</span></div><div class="st">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="badge-row"><span class="ex-badge">Example</span></div><div class="st">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="badge-row"><span class="ex-badge">Example</span></div><div class="st">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <article class="rev rv"><div class="badge-row"><span class="ex-badge">Example</span></div><div class="st">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec stripe" id="contact">
+  <div class="wrap">
+    <h2 class="rv">Contact</h2>
+    <div class="contact-grid">
+      <div class="cbox rv"><h3>📍 Address</h3><p>232 Miller St<br>Newark, NJ 07114, USA</p><p style="margin-top:16px"><a class="btn btn-dark" href="https://maps.google.com/?cid=3864663923589465106&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></p></div>
+      <div class="cbox rv"><h3>📞 Phone</h3><p><a class="tel" href="tel:+19735049736">(973) 504-9736</a></p><p style="margin-top:8px">Tap to call from your phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec book" id="book">
+  <div class="wrap">
+    <h2 class="rv">Book an appointment</h2>
+    <p class="lead rv" style="color:var(--cream2)">Pick a preferred day and time below.</p>
+    <form id="bookForm" class="rv" onsubmit="return false" novalidate>
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <div class="two">
+        <label>Preferred day<input type="text" name="day" placeholder="e.g. Saturday"></label>
+        <label>Preferred time<input type="text" name="time" placeholder="e.g. 11:00 AM"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn btn-primary" id="bookBtn">Request appointment</button>
+      <div id="msg" role="status" aria-live="polite"></div>
     </form>
     <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>232 Miller St, Newark, NJ 07114, USA</p>
-    <p><a href="tel:+19735049736" style="color:var(--brand-dark);font-weight:700;">(973) 504-9736</a></p>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>
-  Sample homepage concept for Ace Pet Shop. Not their official website.
+  <strong>Ace Pet Shop</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
-<script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-  document.getElementById('book-now').addEventListener('click', function (e) {
-    e.preventDefault();
-    document.getElementById('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-</script>
+<a class="callbar" href="tel:+19735049736">📞 Call Ace Pet Shop</a>
 
+<script>
+document.documentElement.classList.add('js');
+var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',function(){
+  var o=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',o);
+});
+menu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');});
+});
+document.getElementById('bookBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.style.display='block';
+});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('in');});}
+</script>
 </body>
 </html>
