@@ -1,118 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head><meta name="robots" content="noindex"><!-- design: PASTEL POP -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Auto Detailing Center | Kearny, NJ</title>
+<title>Auto Detailing Center – Sample Homepage Concept</title>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#1c2430;background:#f4f6f9;line-height:1.55}
-  .banner{background:#1c2430;color:#fff;font-size:.8rem;text-align:center;padding:.5rem .75rem}
-  header.hero{background:linear-gradient(135deg,#0f3d66,#1b6ca8);color:#fff;padding:2.5rem 1.25rem 3rem;text-align:center}
-  .wrap{max-width:760px;margin:0 auto}
-  h1{font-size:2rem;line-height:1.2;margin-bottom:.5rem}
-  .rating{display:inline-block;background:rgba(255,255,255,.15);border-radius:999px;padding:.35rem .9rem;margin:.5rem 0 1rem;font-size:.95rem}
-  .addr{margin-bottom:1.25rem;opacity:.95}
-  .btns{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
-  .btn{display:inline-block;padding:.9rem 1.5rem;border-radius:8px;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer}
-  .btn-primary{background:#ffb703;color:#1c2430}
-  .btn-secondary{background:#fff;color:#0f3d66}
-  section{padding:2rem 1.25rem}
-  .card{background:#fff;border-radius:12px;padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-  h2{font-size:1.4rem;margin-bottom:1rem;color:#0f3d66}
-  ul.hours{list-style:none}
-  ul.hours li{padding:.5rem 0;border-bottom:1px solid #e6eaf0}
-  ul.hours li:last-child{border-bottom:0}
-  label{display:block;font-weight:600;margin:.9rem 0 .3rem}
-  input,select,textarea{width:100%;padding:.75rem;border:1px solid #c5cdd8;border-radius:8px;font:inherit;background:#fff}
-  textarea{min-height:90px;resize:vertical}
-  form .btn{width:100%;margin-top:1.25rem;background:#0f3d66;color:#fff}
-  #demoMsg{margin-top:1rem;padding:.75rem;border-radius:8px;background:#fff4d6;border:1px solid #ffb703;font-weight:600;display:none}
-  .note{font-size:.85rem;color:#5b6675;margin-top:1rem}
-  footer{text-align:center;font-size:.8rem;color:#5b6675;padding:1.5rem 1.25rem 2.5rem}
+:root{
+  --lilac:#c9b6ff;--lilac-d:#6b4bd6;--ink:#2a1f4d;--pink:#ffb3d1;--pink-d:#d63384;--butter:#fff1a8;--butter-d:#f5c518;--cream:#fffaf0;--white:#fff;
+  --font:"Nunito","Quicksand","Trebuchet MS","Segoe UI Rounded","Arial Rounded MT Bold",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;padding-bottom:64px;overflow-x:hidden}
+a{color:inherit}
+.banner{background:var(--ink);color:var(--butter);text-align:center;font-size:13px;font-weight:700;padding:8px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,250,240,.92);backdrop-filter:blur(10px);border-bottom:3px solid var(--lilac)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:900;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{background:var(--pink);border-radius:50%;width:32px;height:32px;display:grid;place-items:center;font-size:17px}
+.menu{display:none;list-style:none;gap:6px}
+.menu a{display:block;padding:8px 14px;border-radius:99px;text-decoration:none;font-weight:800;transition:.2s}
+.menu a:hover{background:var(--butter)}
+.burger{background:var(--lilac);border:0;border-radius:99px;padding:10px 16px;font:inherit;font-weight:900;color:var(--ink);cursor:pointer}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);padding:12px 18px 18px;border-bottom:3px solid var(--lilac)}
+@media(min-width:800px){.menu{display:flex}.burger{display:none}}
+section{padding:80px 20px;position:relative;overflow:hidden}
+.wrap{max-width:1100px;margin:auto;position:relative;z-index:2}
+h1,h2,h3{line-height:1.1;font-weight:900}
+h2{font-size:clamp(32px,6vw,52px);margin-bottom:14px}
+.sticker{display:inline-block;background:var(--butter);border:3px solid var(--ink);border-radius:99px;padding:5px 14px;font-weight:900;font-size:13px;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--ink)}
+.blob{position:absolute;border-radius:50%;z-index:1;filter:blur(1px)}
+/* hero */
+#home{background:linear-gradient(160deg,var(--lilac),#f3d9ff 55%,var(--pink));padding:70px 20px 100px;text-align:center}
+#home h1{font-size:clamp(46px,12vw,110px);letter-spacing:-2px;margin:18px 0;color:var(--ink);text-shadow:4px 4px 0 var(--butter)}
+.tag{font-size:clamp(18px,3vw,24px);font-weight:700;max-width:560px;margin:0 auto 22px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:3px solid var(--ink);border-radius:99px;padding:8px 18px;font-weight:900;box-shadow:4px 4px 0 var(--ink);transform:rotate(2deg);margin-bottom:28px}
+.badge .st{color:var(--butter-d);letter-spacing:2px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;border:3px solid var(--ink);border-radius:99px;padding:15px 30px;font:inherit;font-weight:900;font-size:18px;text-decoration:none;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:.2s;color:var(--ink)}
+.btn:hover{transform:translate(-2px,-4px);box-shadow:6px 8px 0 var(--ink)}
+.btn.y{background:var(--butter)}.btn.w{background:var(--white)}.btn.p{background:var(--pink)}
+.car{font-size:70px;margin-top:30px;display:inline-block;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(-3deg)}}
+/* services */
+#services{background:var(--cream)}
+.example{display:inline-block;background:var(--pink);border:2px dashed var(--pink-d);color:#7a1245;border-radius:14px;padding:6px 12px;font-weight:800;font-size:14px;margin-bottom:12px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:26px}
+.card{background:var(--white);border:3px solid var(--ink);border-radius:30px;padding:26px;box-shadow:6px 6px 0 var(--lilac);transition:.25s}
+.card:hover{transform:translateY(-8px)}
+.card .ic{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;font-size:30px;margin-bottom:12px;border:3px solid var(--ink)}
+.card h3{font-size:22px;margin-bottom:6px}
+.card .pr{font-weight:900;color:var(--lilac-d);margin-top:10px}
+.card:nth-child(3n+1) .ic{background:var(--butter)}.card:nth-child(3n+2) .ic{background:var(--pink)}.card:nth-child(3n) .ic{background:var(--lilac)}
+/* hours */
+#hours{background:var(--butter)}
+table{width:100%;max-width:640px;border-collapse:separate;border-spacing:0 10px;margin-top:20px}
+td{background:var(--white);padding:14px 20px;font-weight:800;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+td:first-child{border-left:3px solid var(--ink);border-radius:99px 0 0 99px}
+td:last-child{border-right:3px solid var(--ink);border-radius:0 99px 99px 0;text-align:right}
+/* reviews */
+#reviews{background:linear-gradient(180deg,#f3d9ff,var(--pink))}
+.big{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin:18px 0 26px}
+.num{font-size:clamp(70px,16vw,130px);font-weight:900;line-height:1;background:var(--white);border:4px solid var(--ink);border-radius:40px;padding:10px 28px;box-shadow:6px 6px 0 var(--ink);transform:rotate(-2deg)}
+.stars{color:var(--butter-d);font-size:34px;letter-spacing:3px;text-shadow:1px 1px 0 var(--ink)}
+.rgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:16px}
+.rc{background:var(--white);border:3px solid var(--ink);border-radius:26px;padding:20px;transition:.25s}
+.rc:hover{transform:translateY(-6px) rotate(-1deg)}
+.rc .ex{display:block;margin-bottom:10px}
+.rc .ex span{display:inline-block;background:var(--butter);border:2px solid var(--ink);border-radius:99px;padding:2px 12px;font-size:12px;font-weight:900}
+.rc .stars{font-size:22px;display:block;margin-bottom:8px}
+.rc p{color:#5a4d80;font-style:italic;margin-bottom:10px}
+.rc b{font-size:15px}
+/* contact */
+#contact{background:var(--cream)}
+.cgrid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:22px}
+.cbox{background:var(--lilac);border:3px solid var(--ink);border-radius:32px;padding:28px;box-shadow:6px 6px 0 var(--ink)}
+.cbox:nth-child(2){background:var(--pink)}.cbox:nth-child(3){background:var(--butter)}
+.cbox h3{margin-bottom:8px}
+.cbox a.l{font-weight:900;font-size:20px}
+/* booking */
+#book{background:linear-gradient(160deg,var(--butter),#ffe0ef)}
+form{background:var(--white);border:3px solid var(--ink);border-radius:36px;padding:28px;max-width:640px;margin-top:20px;box-shadow:6px 6px 0 var(--ink);display:grid;gap:16px}
+label{font-weight:900;font-size:15px;display:block;margin-bottom:4px}
+input,textarea,select{width:100%;font:inherit;padding:13px 16px;border:3px solid var(--ink);border-radius:18px;background:var(--cream);color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--lilac-d)}
+.msg{display:none;background:var(--lilac);border:3px solid var(--ink);border-radius:18px;padding:12px 16px;font-weight:900}
+.note{font-size:14px;margin-top:14px;max-width:640px;font-weight:700}
+footer{background:var(--ink);color:var(--cream);text-align:center;padding:40px 20px}
+footer b{font-size:22px;color:var(--butter);display:block;margin-bottom:6px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--pink);border-top:3px solid var(--ink);text-align:center;padding:14px;font-weight:900;font-size:18px;text-decoration:none;color:var(--ink)}
+@media(min-width:800px){.callbar{display:none}body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.car{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-
 <div class="banner">Sample homepage concept for Auto Detailing Center. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>Auto Detailing Center</h1>
-    <div class="rating">★ 4.7 on Google · 138 reviews</div>
-    <p class="addr">184 Garfield Ave, Kearny, NJ 07032, USA</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+12019975523">Call (201) 997-5523</a>
-    </div>
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo"><span>🚗</span>Auto Detailing Center</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<section>
+<section id="home">
+  <div class="blob" style="width:300px;height:300px;background:var(--butter);top:-80px;left:-90px;opacity:.8"></div>
+  <div class="blob" style="width:240px;height:240px;background:var(--pink);bottom:-70px;right:-60px;opacity:.9"></div>
+  <div class="blob" style="width:120px;height:120px;background:#fff;top:40%;right:8%;opacity:.5"></div>
   <div class="wrap">
-    <div class="card">
-      <h2>Opening hours</h2>
-      <ul class="hours">
-        <li>Monday: 8:00 AM – 5:30 PM</li>
-        <li>Tuesday: 8:00 AM – 5:30 PM</li>
-        <li>Wednesday: 8:00 AM – 5:30 PM</li>
-        <li>Thursday: 8:00 AM – 5:30 PM</li>
-        <li>Friday: 8:00 AM – 5:30 PM</li>
-        <li>Saturday: 8:30 AM – 1:00 PM</li>
-        <li>Sunday: 9:00 AM – 1:00 PM</li>
-      </ul>
+    <span class="sticker">✨ Kearny, NJ ✨</span>
+    <h1>Auto Detailing Center</h1>
+    <p class="tag">Fresh, shiny and ready to roll. A cleaner ride starts here.</p>
+    <div class="badge"><span class="st">★★★★★</span> 4.7 · 138 Google reviews</div>
+    <div class="btns">
+      <a class="btn y" href="#book">Book Now</a>
+      <a class="btn w" href="tel:+12019975523">📞 Call (201) 997-5523</a>
+    </div>
+    <div class="car" aria-hidden="true">🚗🫧</div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="blob" style="width:260px;height:260px;background:var(--lilac);top:-100px;right:-80px;opacity:.5"></div>
+  <div class="wrap">
+    <span class="sticker">🫧 Services</span>
+    <h2 style="margin-top:14px">What a detail shop might offer</h2>
+    <div class="example">Example layout - the owner's real services and prices go here</div>
+    <div class="grid">
+      <div class="card fade"><div class="ic">🧼</div><h3>Exterior Hand Wash</h3><p>A gentle wash and dry for a spotless finish.</p><div class="example" style="margin-top:10px">Example layout - the owner's real services and prices go here</div><div class="pr">Price: add yours</div></div>
+      <div class="card fade"><div class="ic">🛋️</div><h3>Interior Deep Clean</h3><p>Vacuum, wipe-down and fresh seats and carpets.</p><div class="example" style="margin-top:10px">Example layout - the owner's real services and prices go here</div><div class="pr">Price: add yours</div></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Wax &amp; Polish</h3><p>Shine and protection for glossy paint.</p><div class="example" style="margin-top:10px">Example layout - the owner's real services and prices go here</div><div class="pr">Price: add yours</div></div>
+      <div class="card fade"><div class="ic">💡</div><h3>Headlight Restoration</h3><p>Clearer lenses for a brighter look.</p><div class="example" style="margin-top:10px">Example layout - the owner's real services and prices go here</div><div class="pr">Price: add yours</div></div>
+      <div class="card fade"><div class="ic">🛞</div><h3>Wheels &amp; Tires</h3><p>Brake dust off, tire shine on.</p><div class="example" style="margin-top:10px">Example layout - the owner's real services and prices go here</div><div class="pr">Price: add yours</div></div>
+      <div class="card fade"><div class="ic">🚘</div><h3>Full Detail Package</h3><p>Inside and out, a complete refresh.</p><div class="example" style="margin-top:10px">Example layout - the owner's real services and prices go here</div><div class="pr">Price: add yours</div></div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="hours">
+  <div class="blob" style="width:280px;height:280px;background:var(--pink);bottom:-110px;right:-70px;opacity:.6"></div>
+  <div class="wrap fade">
+    <span class="sticker">🕘 Hours</span>
+    <h2 style="margin-top:14px">Opening hours</h2>
+    <table>
+      <tr><td>Monday</td><td>8:00 AM – 5:30 PM</td></tr>
+      <tr><td>Tuesday</td><td>8:00 AM – 5:30 PM</td></tr>
+      <tr><td>Wednesday</td><td>8:00 AM – 5:30 PM</td></tr>
+      <tr><td>Thursday</td><td>8:00 AM – 5:30 PM</td></tr>
+      <tr><td>Friday</td><td>8:00 AM – 5:30 PM</td></tr>
+      <tr><td>Saturday</td><td>8:30 AM – 1:00 PM</td></tr>
+      <tr><td>Sunday</td><td>9:00 AM – 1:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="blob" style="width:220px;height:220px;background:var(--butter);top:-60px;left:-60px;opacity:.7"></div>
   <div class="wrap">
-    <div class="card">
-      <h2>Services</h2>
-      <p>Call to ask about services.</p>
+    <span class="sticker">💬 Reviews</span>
+    <h2 style="margin-top:14px">Google rating</h2>
+    <div class="big fade">
+      <div class="num">4.7</div>
+      <div><div class="stars">★★★★★</div><p style="font-weight:900;font-size:20px">based on 138 Google reviews</p></div>
+    </div>
+    <a class="btn y" target="_blank" rel="noopener" href="https://maps.google.com/?cid=13466350502093136197&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 138 reviews on Google</a>
+    <h3 style="font-size:28px;margin-top:44px">Top reviews</h3>
+    <div class="example" style="margin-top:8px">Example layout - your best reviews show here</div>
+    <div class="rgrid">
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="sticker">📍 Contact</span>
+    <h2 style="margin-top:14px">Find Auto Detailing Center</h2>
+    <div class="cgrid">
+      <div class="cbox fade"><h3>📍 Address</h3><p>184 Garfield Ave<br>Kearny, NJ 07032, USA</p></div>
+      <div class="cbox fade"><h3>📞 Phone</h3><a class="l" href="tel:+12019975523">(201) 997-5523</a></div>
+      <div class="cbox fade"><h3>🗺️ Directions</h3><a class="btn w" style="font-size:16px;padding:12px 22px" target="_blank" rel="noopener" href="https://maps.google.com/?cid=13466350502093136197&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></div>
     </div>
   </div>
 </section>
 
 <section id="book">
+  <div class="blob" style="width:260px;height:260px;background:var(--lilac);top:-90px;right:-70px;opacity:.6"></div>
   <div class="wrap">
-    <div class="card">
-      <h2>Book an appointment</h2>
-      <form id="demoForm" onsubmit="return false;">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" autocomplete="name">
-
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" autocomplete="tel">
-
-        <label for="day">Preferred day</label>
-        <input id="day" name="day" type="date">
-
-        <label for="time">Preferred time</label>
-        <input id="time" name="time" type="time">
-
-        <label for="notes">Notes</label>
-        <textarea id="notes" name="notes"></textarea>
-
-        <button type="button" class="btn" id="demoBtn">Request appointment</button>
-      </form>
-      <div id="demoMsg" role="status"></div>
-      <p class="note">This is a sample of how online booking could work.</p>
-    </div>
+    <span class="sticker">📅 Booking</span>
+    <h2 style="margin-top:14px">Book an appointment</h2>
+    <form id="bookForm" onsubmit="return false">
+      <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+      <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+      <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+      <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. Morning"></div>
+      <div><label for="o">Notes</label><textarea id="o" rows="3"></textarea></div>
+      <button type="button" class="btn p" id="sendBtn">Request appointment</button>
+      <div class="msg" id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
   </div>
 </section>
 
 <footer>
-  Sample homepage concept for Auto Detailing Center. Not their official website.
+  <b>Auto Detailing Center</b>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
+<a class="callbar" href="tel:+12019975523">📞 Call (201) 997-5523</a>
+
 <script>
-  document.getElementById('demoBtn').addEventListener('click', function () {
-    var msg = document.getElementById('demoMsg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+document.getElementById('sendBtn').addEventListener('click',function(){
+  var s=document.getElementById('msg');s.textContent='Demo only: online booking is not connected yet.';s.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
 </script>
 </body>
 </html>
