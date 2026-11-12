@@ -1,191 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head><meta name="robots" content="noindex"><!-- design: ROYAL GOLD -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>D'Class Beauty Salon – Paterson, NJ</title>
+<title>D'Class Beauty Salon - Sample Homepage Concept</title>
 <style>
-  :root {
-    --ink: #2b2230;
-    --muted: #6d6373;
-    --accent: #a8416f;
-    --accent-dark: #8a3359;
-    --bg: #faf6f8;
-    --card: #ffffff;
-    --line: #eadfe5;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.55;
-  }
-  .banner {
-    background: #2b2230;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-  }
-  header.hero {
-    background: linear-gradient(135deg, #f3dce7, #fbeef4);
-    padding: 40px 20px 36px;
-    text-align: center;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.2; }
-  .type { color: var(--muted); margin: 0 0 14px; }
-  .rating {
-    display: inline-block;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-weight: 600;
-    margin-bottom: 14px;
-  }
-  .rating span { color: var(--accent); }
-  .address { margin: 0 0 20px; color: var(--ink); }
-  .btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .btn {
-    display: inline-block;
-    border: 0;
-    border-radius: 10px;
-    padding: 14px 26px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-secondary { background: #fff; color: var(--accent); border: 2px solid var(--accent); padding: 12px 24px; }
-  section { padding: 32px 20px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 24px;
-  }
-  h2 { margin: 0 0 14px; font-size: 1.4rem; }
-  ul.hours { list-style: none; margin: 0; padding: 0; }
-  ul.hours li { padding: 8px 0; border-bottom: 1px solid var(--line); }
-  ul.hours li:last-child { border-bottom: 0; }
-  label { display: block; font-weight: 600; margin: 14px 0 6px; }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    font-family: inherit;
-    border: 1px solid #cdbfc7;
-    border-radius: 8px;
-    background: #fff;
-    color: var(--ink);
-  }
-  textarea { min-height: 90px; resize: vertical; }
-  .row { display: grid; grid-template-columns: 1fr; gap: 0 14px; }
-  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } h1 { font-size: 2.4rem; } }
-  form .btn { margin-top: 20px; width: 100%; }
-  #demo-msg {
-    margin-top: 16px;
-    padding: 12px;
-    border-radius: 8px;
-    background: #fdf0f5;
-    border: 1px solid var(--accent);
-    color: var(--accent-dark);
-    font-weight: 600;
-    display: none;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
-  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 24px 20px 40px; }
+:root{
+  --black:#0b0708;
+  --burg:#4a0f1f;
+  --burg2:#2c0812;
+  --gold:#d4af37;
+  --gold2:#f3d98b;
+  --cream:#f6ecd6;
+  --muted:#cdbfa6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",Times,serif;background:var(--black);color:var(--cream);line-height:1.6;padding-bottom:64px;overflow-x:hidden}
+a{color:inherit}
+.sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.banner{background:var(--gold);color:#1a0b0f;text-align:center;font:600 13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:8px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(11,7,8,.96);border-bottom:1px solid var(--gold);backdrop-filter:blur(6px)}
+.nav-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.logo{font-size:18px;color:var(--gold2);letter-spacing:.08em;text-decoration:none;font-weight:700}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{font:600 13px system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--cream);padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+.menu a:hover{color:var(--gold);border-color:var(--gold)}
+.burger{display:none;background:none;border:1px solid var(--gold);color:var(--gold);font:600 14px system-ui,sans-serif;padding:8px 14px;border-radius:4px;cursor:pointer;letter-spacing:.1em}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--black);border-bottom:1px solid var(--gold)}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:16px 22px;border-bottom:1px solid rgba(212,175,55,.2)}
+}
+section{padding:84px 20px;position:relative}
+.wrap{max-width:1100px;margin:0 auto}
+h1,h2,h3{font-weight:700;line-height:1.1}
+h2{font-size:clamp(32px,6vw,52px);text-align:center;color:var(--gold2);letter-spacing:.02em}
+.eyebrow{display:block;text-align:center;font:600 12px system-ui,sans-serif;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px auto 30px;color:var(--gold);max-width:340px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{background:linear-gradient(270deg,transparent,var(--gold))}
+.divider span{font-size:16px;letter-spacing:.3em}
+/* hero */
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;background:
+ radial-gradient(circle at 50% 0%,rgba(122,24,48,.75),transparent 60%),
+ radial-gradient(circle at 50% 100%,rgba(74,15,31,.8),transparent 55%),
+ linear-gradient(180deg,var(--burg2),var(--black));
+ border-bottom:1px solid var(--gold)}
+.hero::before{content:"";position:absolute;inset:14px;border:1px solid rgba(212,175,55,.45);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:22px;border:1px solid rgba(212,175,55,.2);pointer-events:none}
+.crest{font-size:42px;color:var(--gold)}
+.hero h1{font-size:clamp(44px,11vw,104px);background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,#9c7a1c);-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0;letter-spacing:.01em}
+.tag{font-size:clamp(18px,3.5vw,26px);font-style:italic;color:var(--cream);max-width:620px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:10px;margin:26px 0;padding:10px 22px;border:1px solid var(--gold);border-radius:50px;background:rgba(0,0,0,.4);font:600 15px system-ui,sans-serif}
+.stars{color:var(--gold);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-block;font:700 14px system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:16px 32px;border:1px solid var(--gold);cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;border-radius:2px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(212,175,55,.25)}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a0b0f}
+.btn.ghost{background:transparent;color:var(--gold2)}
+.btn.ghost:hover{background:rgba(212,175,55,.12)}
+/* services */
+#services{background:linear-gradient(180deg,var(--black),var(--burg2))}
+.exlabel{display:block;text-align:center;font:600 12px/1.4 system-ui,sans-serif;letter-spacing:.06em;color:#1a0b0f;background:var(--gold2);padding:8px 14px;border-radius:3px;max-width:max-content;margin:0 auto 12px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:36px}
+.card{background:linear-gradient(160deg,rgba(74,15,31,.85),rgba(20,6,10,.95));border:1px solid rgba(212,175,55,.55);padding:28px 24px;text-align:center;position:relative;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(0,0,0,.5);border-color:var(--gold2)}
+.card .ic{font-size:40px;margin-bottom:8px}
+.card h3{font-size:24px;color:var(--gold2);margin-bottom:8px}
+.card p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.card .price{font:600 14px system-ui,sans-serif;color:var(--gold);letter-spacing:.08em}
+.card .ex{display:block;margin-top:14px;font:600 11px/1.4 system-ui,sans-serif;color:#1a0b0f;background:var(--gold2);padding:6px 8px;border-radius:3px}
+/* hours */
+#hours{background:var(--black)}
+table{width:100%;max-width:640px;margin:0 auto;border-collapse:collapse;border:1px solid var(--gold);background:rgba(74,15,31,.35)}
+td{padding:16px 20px;border-bottom:1px solid rgba(212,175,55,.25);font-size:17px}
+td:first-child{color:var(--gold2);font-weight:700}
+td:last-child{text-align:right}
+tr:last-child td{border-bottom:0}
+tr:hover td{background:rgba(212,175,55,.08)}
+/* reviews */
+#reviews{background:linear-gradient(180deg,var(--burg2),var(--black))}
+.big{text-align:center;margin:10px 0 24px}
+.big .num{font-size:clamp(70px,16vw,130px);font-weight:700;line-height:1;background:linear-gradient(180deg,var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.big .stars{font-size:32px;display:block}
+.big p{font:500 16px system-ui,sans-serif;color:var(--muted);margin-top:6px}
+.center{text-align:center}
+.rtitle{text-align:center;font-size:30px;color:var(--gold2);margin:56px 0 10px}
+.rgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:20px}
+.rcard{border:1px solid rgba(212,175,55,.5);background:rgba(0,0,0,.45);padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .3s}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .exrow{display:block}
+.rcard .exb{display:inline-block;font:700 11px system-ui,sans-serif;letter-spacing:.15em;text-transform:uppercase;background:var(--gold2);color:#1a0b0f;padding:4px 10px;border-radius:3px}
+.rcard .stars{font-size:18px}
+.rcard p{font-style:italic;color:var(--muted);font-size:15px}
+.rcard .nm{font:600 13px system-ui,sans-serif;color:var(--gold2)}
+/* contact */
+#contact{background:var(--black)}
+.cgrid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:860px;margin:0 auto}
+.cbox{border:1px solid var(--gold);padding:30px 24px;text-align:center;background:linear-gradient(160deg,rgba(74,15,31,.6),rgba(0,0,0,.6))}
+.cbox .ic{font-size:34px}
+.cbox h3{color:var(--gold2);font-size:22px;margin:6px 0}
+.cbox p,.cbox a.t{font-size:18px;color:var(--cream)}
+/* booking */
+#book{background:linear-gradient(180deg,var(--black),var(--burg2))}
+form{max-width:640px;margin:0 auto;border:1px solid var(--gold);padding:32px 24px;background:rgba(0,0,0,.45);display:grid;gap:16px}
+label{display:grid;gap:6px;font:600 12px system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--gold2)}
+input,select,textarea{font:16px system-ui,sans-serif;padding:13px 14px;background:#150a0d;border:1px solid rgba(212,175,55,.6);color:var(--cream);border-radius:2px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#demoMsg{display:none;text-align:center;font:600 15px system-ui,sans-serif;color:#1a0b0f;background:var(--gold2);padding:12px;border-radius:3px}
+.note{text-align:center;font:14px system-ui,sans-serif;color:var(--muted);margin-top:16px}
+footer{background:#050304;border-top:1px solid var(--gold);text-align:center;padding:44px 20px}
+footer h3{color:var(--gold2);font-size:26px;margin-bottom:8px}
+footer p{font:14px system-ui,sans-serif;color:var(--muted)}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a0b0f;text-align:center;font:700 16px system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:18px}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for D'Class Beauty Salon. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>D'Class Beauty Salon</h1>
-    <p class="type">Hair salon in Paterson, NJ</p>
-    <div class="rating"><span>★</span> 4.4 on Google · 91 reviews</div>
-    <p class="address">228 Park Ave, Paterson, NJ 07501, USA</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+19733452252">Call (973) 345-2252</a>
-    </div>
-  </div>
-</header>
-
-<section>
-  <div class="wrap card">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 6:30 PM</li>
-      <li>Tuesday: 9:00 AM – 6:30 PM</li>
-      <li>Wednesday: 9:00 AM – 6:30 PM</li>
-      <li>Thursday: 9:00 AM – 6:30 PM</li>
-      <li>Friday: 9:00 AM – 6:30 PM</li>
-      <li>Saturday: 9:00 AM – 6:30 PM</li>
-      <li>Sunday: 9:00 AM – 3:30 PM</li>
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">D'CLASS</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="wrap fade">
+    <div class="crest">♛</div>
+    <div class="divider"><span>✦ ❖ ✦</span></div>
+    <h1>D'Class Beauty Salon</h1>
+    <p class="tag">Hair and beauty, styled with elegance.</p>
+    <div class="divider"><span>✦ ❖ ✦</span></div>
+    <div class="badge"><span class="stars">★★★★★</span><span>4.4 on Google · 91 reviews</span></div>
+    <div class="btns">
+      <a class="btn gold" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+19733452252">📞 Call (973) 345-2252</a>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap card">
-    <h2>Visit the salon</h2>
-    <p>D'Class Beauty Salon is located at 228 Park Ave in Paterson, New Jersey. Call to ask about services.</p>
-    <a class="btn btn-secondary" href="tel:+19733452252">Call (973) 345-2252</a>
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">What to expect</span>
+    <h2>Services</h2>
+    <div class="divider"><span>✦</span></div>
+    <span class="exlabel">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ic">💇‍♀️</div><h3>Haircut &amp; Styling</h3><p>A sample card for cuts and styling.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><p>A sample card for color services.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💨</div><h3>Blowout</h3><p>A sample card for blowouts and finishing.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Treatments</h3><p>A sample card for conditioning treatments.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💅</div><h3>Nails</h3><p>A sample card for nail services.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">👰</div><h3>Special Occasion</h3><p>A sample card for event styling.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap fade">
+    <span class="eyebrow">Visit the salon</span>
+    <h2>Hours</h2>
+    <div class="divider"><span>✦ ❖ ✦</span></div>
+    <table>
+      <tr><td>Monday</td><td>9:00 AM – 6:30 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 6:30 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 6:30 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 6:30 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 6:30 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 6:30 PM</td></tr>
+      <tr><td>Sunday</td><td>9:00 AM – 3:30 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Google rating</span>
+      <h2>Reviews</h2>
+      <div class="divider"><span>✦ ❖ ✦</span></div>
+      <div class="big">
+        <div class="num">4.4</div>
+        <span class="stars">★★★★★</span>
+        <p>based on 91 Google reviews</p>
+      </div>
+      <div class="center"><a class="btn gold" href="https://maps.google.com/?cid=13457819196897071166&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 91 reviews on Google</a></div>
+    </div>
+    <h3 class="rtitle">Top reviews</h3>
+    <span class="exlabel">Example layout - your best reviews show here</span>
+    <div class="rgrid">
+      <div class="rcard fade"><span class="exrow"><span class="exb">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><span class="exrow"><span class="exb">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><span class="exrow"><span class="exb">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><span class="exrow"><span class="exb">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><span class="exrow"><span class="exb">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap fade">
+    <span class="eyebrow">Find the salon</span>
+    <h2>Contact</h2>
+    <div class="divider"><span>✦ ❖ ✦</span></div>
+    <div class="cgrid">
+      <div class="cbox">
+        <div class="ic">📍</div>
+        <h3>Address</h3>
+        <p>228 Park Ave<br>Paterson, NJ 07501, USA</p>
+        <div style="margin-top:18px"><a class="btn ghost" href="https://maps.google.com/?cid=13457819196897071166&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      </div>
+      <div class="cbox">
+        <div class="ic">📞</div>
+        <h3>Phone</h3>
+        <p><a class="t" href="tel:+19733452252">(973) 345-2252</a></p>
+        <div style="margin-top:18px"><a class="btn gold" href="tel:+19733452252">Call now</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="book">
-  <div class="wrap card">
+  <div class="wrap fade">
+    <span class="eyebrow">Reserve your visit</span>
     <h2>Book an appointment</h2>
-    <form id="demo-form" onsubmit="return false;">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name">
-
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
-
-      <div class="row">
-        <div>
-          <label for="day">Preferred day</label>
-          <input type="date" id="day" name="day">
-        </div>
-        <div>
-          <label for="time">Preferred time</label>
-          <input type="time" id="time" name="time">
-        </div>
+    <div class="divider"><span>✦ ❖ ✦</span></div>
+    <form id="bookForm" onsubmit="return false">
+      <label>Name<input type="text" id="bn" autocomplete="off"></label>
+      <label>Phone<input type="tel" id="bp" autocomplete="off"></label>
+      <div class="two">
+        <label>Preferred day
+          <select id="bd">
+            <option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+          </select>
+        </label>
+        <label>Preferred time<input type="time" id="bt"></label>
       </div>
-
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
-
-      <button type="button" class="btn btn-primary" id="demo-btn">Request Appointment</button>
-      <div id="demo-msg" role="status" aria-live="polite"></div>
+      <label>Notes<textarea id="bnotes" rows="4"></textarea></label>
+      <button type="button" class="btn gold" id="demoBtn">Request appointment</button>
+      <div id="demoMsg" role="status"></div>
     </form>
     <p class="note">This is a sample of how online booking could work.</p>
   </div>
 </section>
 
 <footer>
-  Sample homepage concept for D'Class Beauty Salon. Not their official website.
+  <h3>D'Class Beauty Salon</h3>
+  <div class="divider"><span>✦</span></div>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
-<script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-</script>
+<a class="callbar" href="tel:+19733452252">📞 Call</a>
 
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');
+    b.setAttribute('aria-expanded',o);
+  });
+  m.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false');});
+  });
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    var d=document.getElementById('demoMsg');
+    d.textContent='Demo only: online booking is not connected yet.';
+    d.style.display='block';
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  } else {els.forEach(function(e){e.classList.add('in');});}
+})();
+</script>
 </body>
 </html>
