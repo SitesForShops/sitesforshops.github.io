@@ -1,126 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>International Hair Salon – Paterson, NJ</title>
+<title>International Hair Salon - Sample Homepage Concept</title>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#1f2430;background:#f6f7f9;line-height:1.55}
-  .banner{background:#1f2430;color:#fff;font-size:.8rem;text-align:center;padding:.45rem .75rem}
-  header.hero{background:linear-gradient(135deg,#243049,#3b4b73);color:#fff;padding:2.5rem 1.25rem 2.75rem;text-align:center}
-  .wrap{max-width:720px;margin:0 auto}
-  h1{font-size:clamp(1.8rem,6vw,2.6rem);line-height:1.2;margin-bottom:.5rem}
-  .tagline{opacity:.9;margin-bottom:1rem}
-  .rating{display:inline-block;background:rgba(255,255,255,.14);border-radius:999px;padding:.35rem .9rem;font-size:.95rem;margin-bottom:1.25rem}
-  .rating .star{color:#ffd166}
-  .address{margin-bottom:1.25rem;font-size:1rem}
-  .btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
-  .btn{display:inline-block;border:0;cursor:pointer;text-decoration:none;font-size:1.05rem;font-weight:600;padding:.85rem 1.6rem;border-radius:10px;min-width:160px;text-align:center}
-  .btn-primary{background:#ffd166;color:#1f2430}
-  .btn-secondary{background:#fff;color:#243049}
-  .btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #7aa2ff;outline-offset:2px}
-  section{padding:2rem 1.25rem}
-  .card{background:#fff;border-radius:14px;padding:1.5rem;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-  h2{font-size:1.4rem;margin-bottom:1rem;color:#243049}
-  ul.hours{list-style:none}
-  ul.hours li{padding:.55rem 0;border-bottom:1px solid #e8eaef}
-  ul.hours li:last-child{border-bottom:0}
-  label{display:block;font-weight:600;margin:.9rem 0 .3rem;font-size:.95rem}
-  input,select,textarea{width:100%;padding:.75rem;border:1px solid #c9cdd6;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
-  textarea{min-height:90px;resize:vertical}
-  form .btn{width:100%;margin-top:1.25rem;background:#243049;color:#fff}
-  #demo-msg{margin-top:1rem;padding:.75rem;border-radius:8px;background:#fff4d6;border:1px solid #f0d58a;font-weight:600;display:none}
-  .note{font-size:.85rem;color:#5d6475;margin-top:.9rem}
-  footer{text-align:center;font-size:.8rem;color:#5d6475;padding:1.5rem 1.25rem 2.5rem}
+:root{
+  --green:#12382b;
+  --green2:#0c271e;
+  --green3:#1d5240;
+  --cream:#f6efdc;
+  --cream2:#ebe1c6;
+  --brass:#b8893a;
+  --brass2:#d9ae5c;
+  --ink:#16221c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--cream);line-height:1.6;
+  padding-bottom:64px;
+}
+h1,h2,h3,.slab{font-family:"Rockwell","Roboto Slab","Courier New",Georgia,serif;font-weight:800;letter-spacing:-.01em}
+a{color:inherit}
+.banner{background:var(--brass);color:#1a1205;text-align:center;font-size:.82rem;padding:.45rem .8rem;font-weight:600}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:var(--green2);border-bottom:3px solid var(--brass);}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.7rem 1.1rem}
+.logo{font-family:"Rockwell","Roboto Slab",Georgia,serif;font-weight:800;color:var(--cream);text-decoration:none;font-size:1.05rem;display:flex;gap:.5rem;align-items:center}
+.logo span{color:var(--brass2)}
+.menu{display:flex;gap:1.6rem;list-style:none}
+.menu a{color:var(--cream);text-decoration:none;font-weight:600;font-size:.95rem;padding:.3rem 0;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover{border-color:var(--brass2);color:var(--brass2)}
+.burger{display:none;background:none;border:2px solid var(--brass);color:var(--cream);font-size:1rem;padding:.35rem .8rem;border-radius:4px;font-weight:700;cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green2);flex-direction:column;gap:0;border-bottom:3px solid var(--brass)}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:1rem 1.2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+}
+/* sections */
+section{padding:5rem 1.2rem}
+.wrap{max-width:1100px;margin:auto}
+.stripes{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 12px,transparent 12px 24px)}
+.eyebrow{color:var(--brass);text-transform:uppercase;letter-spacing:.2em;font-size:.78rem;font-weight:700;margin-bottom:.6rem}
+h2{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin-bottom:1rem;color:var(--green)}
+.rule{width:70px;height:5px;background:var(--brass);margin:0 0 1.5rem;border-radius:2px}
+/* HERO */
+#home{background-color:var(--green);color:var(--cream);padding:4.5rem 1.2rem 5rem;position:relative;overflow:hidden;
+  background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 12px,transparent 12px 24px),radial-gradient(circle at 85% 20%,var(--green3),transparent 55%)}
+.hero{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.6rem,9vw,5.6rem);line-height:1;margin-bottom:1.2rem;color:var(--cream)}
+.hero h1 em{font-style:normal;color:var(--brass2)}
+.hero p.tag{font-size:1.2rem;max-width:34rem;opacity:.9;margin-bottom:2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:1rem 1.7rem;border-radius:4px;border:2px solid var(--brass2);font-size:1.05rem;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(0,0,0,.25)}
+.btn-primary{background:var(--brass2);color:#1a1205}
+.btn-ghost{background:transparent;color:var(--cream)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.frame{border:3px solid var(--brass2);padding:.7rem;border-radius:6px;max-width:340px;justify-self:center;width:100%}
+.frame-in{border:1px solid var(--brass2);padding:2rem 1.4rem;text-align:center;background:rgba(0,0,0,.22)}
+.frame .scissors{font-size:2.6rem}
+.frame .big{font-family:"Rockwell","Roboto Slab",Georgia,serif;font-size:4.2rem;font-weight:800;color:var(--brass2);line-height:1}
+.stars{color:var(--brass2);letter-spacing:.15em;font-size:1.3rem;margin:.4rem 0}
+.frame small{display:block;opacity:.9;font-size:.95rem}
+.frame .gl{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass2);margin-top:.8rem;font-weight:700}
+/* SERVICES */
+#services{background:var(--cream)}
+.example-note{display:inline-block;background:var(--green);color:var(--cream);padding:.5rem .9rem;border-left:5px solid var(--brass);font-weight:700;font-size:.88rem;margin-bottom:2rem;border-radius:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem}
+.card{background:#fffaf0;border:2px solid var(--green);border-radius:6px;padding:1.6rem;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:6px 6px 0 var(--green)}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--brass)}
+.card .ico{font-size:2.3rem;margin-bottom:.4rem}
+.card h3{font-size:1.35rem;color:var(--green);margin-bottom:.4rem}
+.card p{font-size:.95rem;margin-bottom:.8rem}
+.ex{display:block;font-size:.72rem;font-weight:800;color:#5a3f0b;background:var(--cream2);border:1px dashed var(--brass);padding:.35rem .5rem;border-radius:3px;margin-bottom:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.price{font-weight:800;color:var(--brass);border-top:1px solid var(--cream2);padding-top:.7rem}
+/* HOURS */
+#hours{background:var(--green);color:var(--cream)}
+#hours h2{color:var(--cream)}
+.hours-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:2.5rem;align-items:center}
+@media(max-width:800px){.hours-grid{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;background:var(--cream);color:var(--ink);border-radius:6px;overflow:hidden;border:3px solid var(--brass2)}
+td{padding:.9rem 1.1rem;border-bottom:1px solid var(--cream2);font-size:1rem}
+tr:last-child td{border-bottom:0}
+tr:nth-child(even){background:#efe6cc}
+td:first-child{font-weight:800;font-family:"Rockwell","Roboto Slab",Georgia,serif;color:var(--green)}
+/* REVIEWS */
+#reviews{background:var(--cream2)}
+.rating-box{display:flex;flex-wrap:wrap;gap:2rem;align-items:center;background:var(--green);color:var(--cream);padding:2rem;border-radius:6px;border:3px solid var(--brass);margin-bottom:2.5rem}
+.rating-box .num{font-family:"Rockwell","Roboto Slab",Georgia,serif;font-size:5.5rem;font-weight:800;color:var(--brass2);line-height:1}
+.rating-box .stars{font-size:1.8rem}
+.rcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin-top:1rem}
+.rcard{background:#fffaf0;border:2px solid var(--green);border-radius:6px;padding:1.1rem;transition:transform .25s;display:flex;flex-direction:column;gap:.5rem}
+.rcard:hover{transform:translateY(-5px)}
+.badge-row{display:block}
+.badge{display:inline-block;background:var(--brass);color:#1a1205;font-size:.7rem;font-weight:800;padding:.2rem .6rem;border-radius:3px;text-transform:uppercase;letter-spacing:.08em}
+.rcard .stars{color:var(--brass);margin:0;font-size:1.15rem;letter-spacing:.08em}
+.rcard p{font-style:italic;color:#455;font-size:.95rem}
+.rcard .nm{font-weight:800;color:var(--green);font-size:.9rem}
+.h3s{font-size:1.6rem;color:var(--green);margin-top:1rem}
+/* CONTACT */
+#contact{background:var(--green2);color:var(--cream)}
+#contact h2{color:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem}
+.cbox{border:2px solid var(--brass);padding:1.6rem;border-radius:6px;background:rgba(255,255,255,.04);transition:transform .25s}
+.cbox:hover{transform:translateY(-4px)}
+.cbox .ico{font-size:2rem}
+.cbox h3{color:var(--brass2);margin:.3rem 0}
+.cbox a{color:var(--cream)}
+/* BOOK */
+#book{background:var(--cream)}
+form{background:#fffaf0;border:3px solid var(--green);border-radius:6px;padding:1.8rem;max-width:640px;box-shadow:8px 8px 0 var(--brass)}
+label{display:block;font-weight:700;margin:.9rem 0 .3rem;color:var(--green)}
+input,textarea,select{width:100%;padding:.8rem;border:2px solid var(--green);border-radius:4px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,textarea:focus{outline:3px solid var(--brass2)}
+form .btn{margin-top:1.3rem;background:var(--green);color:var(--cream);border-color:var(--green);width:100%}
+#msg{margin-top:1rem;font-weight:800;color:#7a1f1f;display:none;background:#f8e3c0;padding:.8rem;border-left:5px solid var(--brass)}
+.small{font-size:.85rem;margin-top:1rem;opacity:.8}
+footer{background:var(--green2);color:var(--cream);text-align:center;padding:2.5rem 1.2rem;border-top:4px solid var(--brass)}
+footer strong{font-family:"Rockwell","Roboto Slab",Georgia,serif;font-size:1.3rem;display:block;margin-bottom:.4rem}
+footer p{opacity:.8;font-size:.9rem}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--brass2);color:#1a1205;text-align:center;font-weight:800;padding:1rem;text-decoration:none;font-size:1.1rem;border-top:3px solid var(--green2)}
+@media(max-width:760px){.callbar{display:block}}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for International Hair Salon. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>International Hair Salon</h1>
-    <p class="tagline">Hair salon and barber shop in Paterson, NJ</p>
-    <div class="rating"><span class="star">★</span> 4.9 on Google · 340 reviews</div>
-    <p class="address">871 Main St, Paterson, NJ 07503, USA</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+19739772344">Call (973) 977-2344</a>
-    </div>
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">✂️ <span>International</span> Hair Salon</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<section>
-  <div class="wrap">
-    <div class="card">
-      <h2>Opening hours</h2>
-      <ul class="hours">
-        <li>Monday: 9:00 AM – 8:00 PM</li>
-        <li>Tuesday: 9:00 AM – 8:00 PM</li>
-        <li>Wednesday: 9:00 AM – 8:00 PM</li>
-        <li>Thursday: 9:00 AM – 8:00 PM</li>
-        <li>Friday: 9:00 AM – 8:00 PM</li>
-        <li>Saturday: 9:00 AM – 8:00 PM</li>
-        <li>Sunday: 9:00 AM – 8:00 PM</li>
-      </ul>
+<section id="home">
+  <div class="wrap hero">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--brass2)">Barber &amp; Hair · Paterson, NJ</div>
+      <h1>International Hair Salon</h1>
+      <p class="tag">Fresh cuts, clean lines and a welcoming chair on Main Street.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="#book">Book Now</a>
+        <a class="btn btn-ghost" href="tel:+19739772344">📞 Call (973) 977-2344</a>
+      </div>
+    </div>
+    <div class="frame reveal">
+      <div class="frame-in">
+        <div class="scissors">✂️</div>
+        <div class="big">4.9</div>
+        <div class="stars">★★★★★</div>
+        <small>340 Google reviews</small>
+        <div class="gl">Google rating</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="services">
   <div class="wrap">
-    <div class="card">
-      <h2>Visit or call</h2>
-      <p>871 Main St, Paterson, NJ 07503, USA</p>
-      <p style="margin-top:.5rem">Call to ask about services.</p>
-      <div class="btns" style="margin-top:1rem;justify-content:flex-start">
-        <a class="btn btn-primary" href="tel:+19739772344">Tap to call (973) 977-2344</a>
+    <div class="eyebrow">What to expect</div>
+    <h2 class="reveal">Services</h2>
+    <div class="rule"></div>
+    <span class="example-note">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card reveal"><div class="ico">💈</div><h3>Classic Haircut</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A clean, tailored cut finished with care.</p><div class="price">Price: add yours</div></div>
+      <div class="card reveal"><div class="ico">🧔</div><h3>Beard Trim</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>Shaping and edging for a sharp, tidy look.</p><div class="price">Price: add yours</div></div>
+      <div class="card reveal"><div class="ico">🪒</div><h3>Hot Towel Shave</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A smooth, relaxing straight-razor style shave.</p><div class="price">Price: add yours</div></div>
+      <div class="card reveal"><div class="ico">👦</div><h3>Kids' Cuts</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>Friendly, patient cuts for younger clients.</p><div class="price">Price: add yours</div></div>
+      <div class="card reveal"><div class="ico">💇</div><h3>Styling &amp; Blow-Dry</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>Finishing and styling for any occasion.</p><div class="price">Price: add yours</div></div>
+      <div class="card reveal"><div class="ico">🎨</div><h3>Hair Color</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>Color services from subtle to bold.</p><div class="price">Price: add yours</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="stripes">
+  <div class="wrap hours-grid">
+    <div class="reveal">
+      <div class="eyebrow" style="color:var(--brass2)">Plan your visit</div>
+      <h2>Hours</h2>
+      <div class="rule"></div>
+      <p style="font-size:1.1rem;opacity:.9">Hours as listed on Google. Call (973) 977-2344 to confirm before you visit.</p>
+    </div>
+    <table class="reveal">
+      <tr><td>Monday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Sunday</td><td>9:00 AM – 8:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Google reviews</div>
+    <h2 class="reveal">Reviews</h2>
+    <div class="rule"></div>
+    <div class="rating-box reveal">
+      <div class="num">4.9</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div style="font-size:1.1rem">based on 340 Google reviews</div>
       </div>
+      <a class="btn btn-primary" style="margin-left:auto" target="_blank" rel="noopener" href="https://maps.google.com/?cid=7885324628250897146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 340 reviews on Google</a>
+    </div>
+    <h3 class="h3s">Top reviews</h3>
+    <span class="example-note" style="margin-top:.6rem">Example layout - your best reviews show here</span>
+    <div class="rcards">
+      <div class="rcard reveal"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard reveal"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard reveal"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard reveal"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard reveal"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="stripes">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--brass2)">Find the shop</div>
+    <h2 class="reveal">Contact</h2>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div class="cbox reveal"><div class="ico">📍</div><h3>Address</h3><p>871 Main St<br>Paterson, NJ 07503, USA</p></div>
+      <div class="cbox reveal"><div class="ico">📞</div><h3>Phone</h3><p><a href="tel:+19739772344">(973) 977-2344</a></p></div>
+      <div class="cbox reveal"><div class="ico">🧭</div><h3>Directions</h3><p><a target="_blank" rel="noopener" href="https://maps.google.com/?cid=7885324628250897146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></p></div>
     </div>
   </div>
 </section>
 
 <section id="book">
   <div class="wrap">
-    <div class="card">
-      <h2>Book an appointment</h2>
-      <form id="booking-form" onsubmit="return false;">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" autocomplete="name">
-
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel">
-
-        <label for="day">Preferred day</label>
-        <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-
-        <label for="time">Preferred time</label>
-        <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-
-        <label for="notes">Notes</label>
-        <textarea id="notes" name="notes"></textarea>
-
-        <button type="button" class="btn" id="submit-btn">Request appointment</button>
-        <div id="demo-msg" role="status" aria-live="polite"></div>
-      </form>
-      <p class="note">This is a sample of how online booking could work.</p>
-    </div>
+    <div class="eyebrow">Reserve a chair</div>
+    <h2 class="reveal">Book an appointment</h2>
+    <div class="rule"></div>
+    <form class="reveal" id="bookform" onsubmit="return false">
+      <label for="n">Name</label>
+      <input id="n" type="text" autocomplete="off">
+      <label for="p">Phone</label>
+      <input id="p" type="tel" autocomplete="off">
+      <label for="d">Preferred day</label>
+      <input id="d" type="text" placeholder="e.g. Saturday">
+      <label for="t">Preferred time</label>
+      <input id="t" type="text" placeholder="e.g. 2:00 PM">
+      <label for="o">Notes</label>
+      <textarea id="o" rows="3"></textarea>
+      <button type="button" class="btn" id="sendbtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+      <p class="small">This is a sample of how online booking could work.</p>
+    </form>
   </div>
 </section>
 
 <footer>
-  Sample homepage concept for International Hair Salon. Not their official website.
+  <strong>International Hair Salon</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
+<a class="callbar" href="tel:+19739772344">📞 Call (973) 977-2344</a>
+
 <script>
-  document.getElementById('submit-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+document.getElementById('sendbtn').addEventListener('click',function(){
+  var s=document.getElementById('msg');s.textContent='Demo only: online booking is not connected yet.';s.style.display='block';
+});
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
 </script>
 </body>
 </html>
