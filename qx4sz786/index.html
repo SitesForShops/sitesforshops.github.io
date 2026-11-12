@@ -1,221 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: OCEAN BREEZE -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Perfect Style Barbershop – Paterson, NJ</title>
+<title>Perfect Style Barbershop – Sample Homepage Concept</title>
 <style>
-  :root {
-    --ink: #1c1c1e;
-    --muted: #5c5c63;
-    --bg: #f6f4f0;
-    --card: #ffffff;
-    --accent: #b3261e;
-    --accent-dark: #8f1d17;
-    --navy: #14213d;
-    --line: #e2ded6;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.5;
-  }
-  .banner {
-    background: #fff3c4;
-    color: #4a3b00;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-    border-bottom: 1px solid #e6d58a;
-  }
-  header.hero {
-    background: var(--navy);
-    color: #fff;
-    padding: 40px 20px 44px;
-    text-align: center;
-  }
-  .hero h1 {
-    margin: 0 0 8px;
-    font-size: clamp(1.8rem, 6vw, 2.8rem);
-    line-height: 1.15;
-  }
-  .rating {
-    display: inline-block;
-    background: rgba(255,255,255,0.12);
-    border-radius: 999px;
-    padding: 6px 16px;
-    margin: 10px 0 14px;
-    font-size: 1rem;
-  }
-  .rating .star { color: #ffd166; }
-  .address { margin: 0 0 22px; color: #dfe3ee; }
-  .btn-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  .btn {
-    display: inline-block;
-    border: 0;
-    cursor: pointer;
-    font: inherit;
-    font-weight: 700;
-    font-size: 1.05rem;
-    text-decoration: none;
-    padding: 14px 28px;
-    border-radius: 10px;
-    min-width: 160px;
-    text-align: center;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-secondary { background: #fff; color: var(--navy); }
-  .btn-secondary:hover { background: #e9ecf4; }
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 24px 16px 40px;
-  }
-  section {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 22px 20px;
-    margin-bottom: 20px;
-  }
-  h2 { margin: 0 0 12px; font-size: 1.4rem; color: var(--navy); }
-  .hours { list-style: none; margin: 0; padding: 0; }
-  .hours li {
-    padding: 9px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .hours li:last-child { border-bottom: 0; }
-  .info p { margin: 6px 0; }
-  .info a { color: var(--accent); font-weight: 600; }
-  form { display: grid; gap: 14px; }
-  label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-  input, textarea {
-    width: 100%;
-    font: inherit;
-    padding: 11px 12px;
-    border: 1px solid #c9c4b9;
-    border-radius: 8px;
-    background: #fff;
-  }
-  input:focus, textarea:focus {
-    outline: 2px solid var(--navy);
-    outline-offset: 1px;
-  }
-  textarea { min-height: 90px; resize: vertical; }
-  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
-  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
-  #demo-msg {
-    display: none;
-    background: #e8f1ff;
-    border: 1px solid #a9c4f2;
-    color: #12325f;
-    padding: 12px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 12px 0 0; }
-  footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
-    padding: 0 16px 28px;
-  }
+:root{
+  --teal:#0b7f86;--teal-d:#07565c;--sky:#8fd3f0;--sky-l:#e4f5fc;--sand:#f6ead2;--sand-d:#e8d4a8;--ink:#0d2f36;--white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:8px 12px;letter-spacing:.2px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(11,127,134,.15)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font-weight:800;color:var(--teal-d);text-decoration:none;font-size:18px;display:flex;gap:8px;align-items:center}
+.nav ul{display:flex;gap:6px;list-style:none}
+.nav ul a{text-decoration:none;padding:8px 14px;border-radius:99px;font-weight:600;font-size:15px;color:var(--teal-d);transition:.2s}
+.nav ul a:hover{background:var(--sky-l)}
+.menu-btn{display:none;background:var(--teal);color:#fff;border:0;border-radius:12px;padding:9px 14px;font-size:15px;font-weight:700;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;padding:10px 20px 16px;box-shadow:0 12px 20px rgba(0,0,0,.1)}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:12px 14px}
+}
+section{position:relative}
+.wrap{max-width:1100px;margin:auto;padding:80px 20px}
+.hero{background:linear-gradient(170deg,var(--sky) 0%,#bfe8f6 45%,var(--sand) 100%);overflow:hidden}
+.hero .wrap{padding-top:70px;padding-bottom:150px;position:relative;z-index:2}
+.hero h1{font-size:clamp(40px,9vw,84px);line-height:1.02;color:var(--teal-d);font-weight:900;letter-spacing:-1.5px;max-width:800px}
+.hero p.tag{font-size:clamp(18px,3vw,23px);margin:20px 0 24px;max-width:540px;color:#17454d}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:99px;padding:8px 18px;font-weight:700;box-shadow:0 6px 18px rgba(11,127,134,.2);margin-bottom:28px}
+.stars{color:#f5a623;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 30px;border-radius:99px;border:0;font-size:17px;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(7,86,92,.3)}
+.btn-primary{background:var(--teal);color:#fff}
+.btn-light{background:#fff;color:var(--teal-d)}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.35)}
+.wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;z-index:1}
+.wave svg{display:block;width:100%;height:80px}
+.wave-top{line-height:0}
+.wave-top svg{display:block;width:100%;height:70px}
+h2{font-size:clamp(30px,5vw,44px);color:var(--teal-d);font-weight:900;letter-spacing:-.5px;line-height:1.1}
+.sub{margin-top:10px;color:#3b6169;max-width:640px}
+.example-label{display:inline-block;margin-top:16px;background:#fff3c4;border:2px dashed #d9a400;color:#6b4e00;padding:7px 14px;border-radius:10px;font-weight:700;font-size:14px}
+.grid{display:grid;gap:22px;margin-top:34px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:24px;padding:26px;box-shadow:0 8px 24px rgba(11,127,134,.12);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(11,127,134,.2)}
+.ico{width:60px;height:60px;border-radius:18px;background:linear-gradient(135deg,var(--sky),var(--teal));display:grid;place-items:center;font-size:30px;margin-bottom:14px}
+.card h3{color:var(--teal-d);font-size:20px}
+.card .ex{display:block;font-size:12.5px;font-weight:700;color:#6b4e00;background:#fff3c4;border-radius:8px;padding:5px 9px;margin:12px 0}
+.card .pr{font-weight:700;color:var(--teal)}
+#services{background:var(--sand)}
+#hours{background:var(--sky-l)}
+.hours-box{display:grid;gap:30px;grid-template-columns:1fr;align-items:center;margin-top:30px}
+@media(min-width:800px){.hours-box{grid-template-columns:1.2fr 1fr}}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(11,127,134,.12)}
+td{padding:14px 20px;border-bottom:1px solid #e3f0f4}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;color:var(--teal-d)}
+.hours-side{background:linear-gradient(145deg,var(--teal),var(--teal-d));color:#fff;border-radius:24px;padding:30px;font-size:19px}
+.hours-side .big{font-size:48px}
+#reviews{background:var(--sand)}
+.rating{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin:30px 0 24px}
+.rating .num{font-size:clamp(70px,16vw,110px);font-weight:900;color:var(--teal);line-height:1}
+.rating .stars{font-size:32px;display:block}
+.rev-title{margin-top:44px;font-size:26px;color:var(--teal-d);font-weight:800}
+.rev-card .tagx{display:block}
+.rev-card .tagx span{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px;margin-bottom:10px}
+.rev-card .stars{display:block;font-size:20px;margin-bottom:8px}
+.rev-card p{color:#5c7a80;font-style:italic}
+.rev-card .nm{margin-top:12px;font-weight:700;font-size:15px}
+.rev-grid{display:grid;gap:18px;margin-top:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+#contact{background:var(--sky-l)}
+.contact-grid{display:grid;gap:22px;margin-top:30px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.contact-grid .card .ico{margin-bottom:10px}
+.contact-grid p{font-size:18px}
+#book{background:linear-gradient(170deg,var(--teal),var(--teal-d));color:#fff}
+#book h2{color:#fff}
+form{background:#fff;color:var(--ink);border-radius:26px;padding:28px;margin-top:30px;max-width:620px;box-shadow:0 14px 34px rgba(0,0,0,.25)}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px;color:var(--teal-d)}
+input,textarea{width:100%;padding:13px 14px;border:2px solid #cfe6ec;border-radius:14px;font-size:16px;font-family:inherit;background:#f8fdff}
+input:focus,textarea:focus{outline:none;border-color:var(--teal)}
+form .btn{margin-top:20px;width:100%}
+#msg{margin-top:16px;font-weight:800;color:var(--teal-d);background:var(--sky-l);padding:12px 14px;border-radius:12px;display:none}
+.note{font-size:14px;margin-top:14px;opacity:.9}
+footer{background:var(--ink);color:#d6eef3;text-align:center;padding:36px 20px 40px;font-size:15px}
+footer strong{display:block;font-size:20px;color:#fff;margin-bottom:6px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--teal);color:#fff;text-align:center;padding:16px;font-weight:800;text-decoration:none;font-size:18px;box-shadow:0 -4px 16px rgba(0,0,0,.2);display:none}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-
 <div class="banner">Sample homepage concept for Perfect Style Barbershop. Not their official website.</div>
-
-<header class="hero">
-  <h1>Perfect Style Barbershop</h1>
-  <div class="rating" aria-label="Google rating 4.6 from 112 reviews">
-    <span class="star">★</span> 4.6 on Google · 112 reviews
-  </div>
-  <p class="address">460 Broadway, Paterson, NJ 07514, USA</p>
-  <div class="btn-row">
-    <a class="btn btn-primary" href="#book">Book Now</a>
-    <a class="btn btn-secondary" href="tel:+18622644480">Call (862) 264-4480</a>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">💈 Perfect Style</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </header>
 
-<main>
-  <section class="info">
-    <h2>Visit the barbershop</h2>
-    <p><strong>Address:</strong> 460 Broadway, Paterson, NJ 07514, USA</p>
-    <p><strong>Phone:</strong> <a href="tel:+18622644480">(862) 264-4480</a></p>
-    <p><strong>Google rating:</strong> 4.6 (112 reviews)</p>
-    <p>Call to ask about services.</p>
-  </section>
+<section class="hero" id="home">
+  <div class="bubble" style="width:260px;height:260px;right:-60px;top:40px"></div>
+  <div class="bubble" style="width:120px;height:120px;right:22%;top:230px"></div>
+  <div class="bubble" style="width:70px;height:70px;right:10%;bottom:160px"></div>
+  <div class="wrap">
+    <div class="badge fade"><span class="stars">★★★★★</span> 4.6 · 112 Google reviews</div>
+    <h1 class="fade">Perfect Style Barbershop</h1>
+    <p class="tag fade">Fresh cuts, clean lines and a relaxed seat in the heart of Paterson.</p>
+    <div class="btns fade">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-light" href="tel:+18622644480">📞 Call (862) 264-4480</a>
+    </div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ead2" opacity=".6" d="M0 40C240 80 480 0 720 30s480 50 720 5V80H0z"/><path fill="#f6ead2" d="M0 55C260 15 520 80 780 50s460-30 660 5V80H0z"/></svg></div>
+</section>
 
-  <section>
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 7:00 PM</li>
-      <li>Tuesday: 9:00 AM – 7:00 PM</li>
-      <li>Wednesday: 9:00 AM – 7:00 PM</li>
-      <li>Thursday: 9:00 AM – 7:00 PM</li>
-      <li>Friday: 9:00 AM – 7:00 PM</li>
-      <li>Saturday: 9:00 AM – 7:00 PM</li>
-      <li>Sunday: 9:00 AM – 7:00 PM</li>
-    </ul>
-  </section>
+<section id="services">
+  <div class="wrap">
+    <h2 class="fade">Services</h2>
+    <p class="sub fade">A sample of how a service menu could look on this site.</p>
+    <span class="example-label fade">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ico">✂️</div><h3>Classic Haircut</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="pr">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">💈</div><h3>Fade &amp; Taper</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="pr">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">🧔</div><h3>Beard Trim</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="pr">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">🪒</div><h3>Hot Towel Shave</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="pr">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">👦</div><h3>Kids' Haircut</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="pr">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Line-Up</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="pr">Price: add yours</p></div>
+    </div>
+  </div>
+  <div class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" style="background:#f6ead2"><path fill="#e4f5fc" d="M0 30C240 70 480 0 720 25s480 40 720 0V70H0z"/></svg></div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="demo-form" novalidate>
-      <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" autocomplete="name">
-      </div>
-      <div>
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="row">
-        <div>
-          <label for="day">Preferred day</label>
-          <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-        </div>
-        <div>
-          <label for="time">Preferred time</label>
-          <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-        </div>
-      </div>
-      <div>
-        <label for="notes">Notes</label>
-        <textarea id="notes" name="notes"></textarea>
-      </div>
-      <button type="button" class="btn btn-primary" id="demo-btn">Request Appointment</button>
-      <div id="demo-msg" role="status" aria-live="polite"></div>
+<section id="hours">
+  <div class="wrap">
+    <h2 class="fade">Hours</h2>
+    <div class="hours-box">
+      <table class="fade">
+        <tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Sunday</td><td>9:00 AM – 7:00 PM</td></tr>
+      </table>
+      <div class="hours-side fade"><div class="big">🕘</div><p><strong>Listed as open 7 days a week.</strong></p><p style="margin-top:8px;font-size:16px;opacity:.9">Call (862) 264-4480 to confirm before you visit.</p></div>
+    </div>
+  </div>
+  <div class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" style="background:#e4f5fc"><path fill="#f6ead2" d="M0 40C300 0 520 70 800 35s460-20 640 10V70H0z"/></svg></div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="fade">Reviews</h2>
+    <div class="rating fade">
+      <div class="num">4.6</div>
+      <div><span class="stars">★★★★★</span><p style="font-size:19px;font-weight:700">based on 112 Google reviews</p></div>
+    </div>
+    <a class="btn btn-primary fade" target="_blank" rel="noopener" href="https://maps.google.com/?cid=10728994978346335743&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 112 reviews on Google</a>
+    <h3 class="rev-title fade">Top reviews</h3>
+    <span class="example-label fade" style="margin-top:8px">Example layout - your best reviews show here</span>
+    <div class="rev-grid">
+      <div class="card rev-card fade"><div class="tagx"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card rev-card fade"><div class="tagx"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card rev-card fade"><div class="tagx"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card rev-card fade"><div class="tagx"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card rev-card fade"><div class="tagx"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+  <div class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" style="background:#f6ead2"><path fill="#e4f5fc" d="M0 35C240 70 480 0 720 30s480 35 720 0V70H0z"/></svg></div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="fade">Contact</h2>
+    <div class="contact-grid">
+      <div class="card fade"><div class="ico">📍</div><h3>Address</h3><p>460 Broadway<br>Paterson, NJ 07514, USA</p></div>
+      <div class="card fade"><div class="ico">📞</div><h3>Phone</h3><p><a href="tel:+18622644480" style="font-weight:800;color:var(--teal)">(862) 264-4480</a></p></div>
+      <div class="card fade"><div class="ico">🧭</div><h3>Directions</h3><p style="margin-bottom:12px">Find the shop on Google Maps.</p><a class="btn btn-primary" target="_blank" rel="noopener" href="https://maps.google.com/?cid=10728994978346335743&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></p></div>
+    </div>
+  </div>
+  <div class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" style="background:#e4f5fc"><path fill="#0b7f86" d="M0 40C300 0 520 70 800 35s460-20 640 10V70H0z"/></svg></div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2 class="fade">Book an appointment</h2>
+    <p class="sub fade" style="color:#d6f3f6">Pick a day and time that suits you.</p>
+    <form class="fade" id="bookForm" onsubmit="return false">
+      <label for="n">Name</label><input id="n" type="text" autocomplete="off">
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="off">
+      <label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday">
+      <label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. 2:00 PM">
+      <label for="o">Notes</label><textarea id="o" rows="3"></textarea>
+      <button class="btn btn-primary" type="button" id="bookBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+      <p class="note" style="color:#3b6169">This is a sample of how online booking could work.</p>
     </form>
-    <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>
-  Sample homepage concept for Perfect Style Barbershop. Not their official website.
+  <strong>Perfect Style Barbershop</strong>
+  Sample homepage concept made by a third party. Not their official website.
 </footer>
+<a class="callbar" href="tel:+18622644480">📞 Call (862) 264-4480</a>
 
 <script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-  document.getElementById('demo-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-  });
+var mb=document.getElementById('menuBtn'),mn=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=mn.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+mn.addEventListener('click',function(e){if(e.target.tagName==='A'){mn.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+document.getElementById('bookBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('show')})}
 </script>
-
 </body>
 </html>
