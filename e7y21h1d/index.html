@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: ROYAL GOLD -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meraki Nails by Monic – Sample Homepage Concept</title>
+<style>
+:root{
+  --black:#0c0709;
+  --burg:#4a0e1c;
+  --burg2:#2b0711;
+  --gold:#d4af37;
+  --gold2:#f3dc8a;
+  --cream:#f6ecd9;
+  --serif:Georgia,"Times New Roman","Palatino Linotype",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);background:var(--black);color:var(--cream);line-height:1.6;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--gold);color:#1a0a0e;text-align:center;font-size:.8rem;font-weight:600;padding:7px 12px;letter-spacing:.02em}
+nav{position:sticky;top:0;z-index:50;background:rgba(12,7,9,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--gold)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:var(--serif);color:var(--gold);font-size:1.1rem;font-style:italic;text-decoration:none;letter-spacing:.03em}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{text-decoration:none;font-size:.82rem;text-transform:uppercase;letter-spacing:.16em;color:var(--cream);padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+.menu a:hover{color:var(--gold);border-color:var(--gold)}
+.burger{display:none;background:none;border:1px solid var(--gold);color:var(--gold);padding:7px 12px;font-size:.85rem;border-radius:4px;cursor:pointer;letter-spacing:.1em}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--black);border-bottom:1px solid var(--gold)}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:15px 24px;border-bottom:1px solid #2a1a1f}
+}
+section{padding:90px 20px;position:relative}
+.wrap{max-width:1100px;margin:auto}
+.center{text-align:center}
+h1,h2,h3{font-family:var(--serif);font-weight:700}
+h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--gold2);text-align:center;line-height:1.15}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:18px auto 34px;max-width:360px;color:var(--gold)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{transform:scaleX(-1)}
+.divider span{font-size:1.1rem}
+/* hero */
+#home{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(ellipse at 50% 0%,#6b1428 0%,transparent 60%),radial-gradient(circle at 50% 120%,#5a1022,transparent 60%),linear-gradient(180deg,var(--burg2),var(--black));
+  border-bottom:1px solid var(--gold);overflow:hidden}
+#home::before{content:"";position:absolute;inset:16px;border:1px solid rgba(212,175,55,.5);pointer-events:none}
+#home::after{content:"";position:absolute;inset:24px;border:1px solid rgba(212,175,55,.2);pointer-events:none}
+.hero-in{max-width:800px;position:relative;padding:20px 10px}
+.crown{font-size:2.4rem;filter:drop-shadow(0 0 12px rgba(212,175,55,.6))}
+.eyebrow{text-transform:uppercase;letter-spacing:.35em;font-size:.75rem;color:var(--gold);margin:8px 0}
+h1{font-size:clamp(2.6rem,10vw,5.6rem);line-height:1.05;background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,#a9831a);-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,3.5vw,1.5rem);color:var(--cream);opacity:.92}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);background:rgba(0,0,0,.45);padding:9px 20px;border-radius:50px;margin:8px 0 28px;font-size:.95rem}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-block;text-decoration:none;padding:15px 34px;font-size:.9rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;border:1px solid var(--gold);transition:.25s;cursor:pointer;font-family:var(--sans)}
+.btn-gold{background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a0a0e}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(212,175,55,.35)}
+.btn-line{background:transparent;color:var(--gold2)}
+.btn-line:hover{background:var(--gold);color:#1a0a0e;transform:translateY(-3px)}
+/* services */
+#services{background:linear-gradient(180deg,var(--black),var(--burg2))}
+.note{display:block;text-align:center;color:var(--gold2);border:1px dashed var(--gold);padding:10px 16px;font-size:.88rem;max-width:620px;margin:0 auto 38px;background:rgba(212,175,55,.07)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:linear-gradient(160deg,#3a0b17,#170509);border:1px solid rgba(212,175,55,.55);padding:30px 24px;text-align:center;position:relative;transition:.3s}
+.card::before{content:"";position:absolute;inset:6px;border:1px solid rgba(212,175,55,.2);pointer-events:none}
+.card:hover{transform:translateY(-8px);box-shadow:0 16px 36px rgba(0,0,0,.6),0 0 0 1px var(--gold)}
+.ico{font-size:2.3rem;margin-bottom:8px}
+.card h3{color:var(--gold2);font-size:1.4rem;margin-bottom:8px}
+.card p{font-size:.95rem;opacity:.85}
+.ex{display:block;font-size:.72rem;color:#1a0a0e;background:var(--gold);padding:5px 8px;margin:14px 0 10px;font-weight:700;letter-spacing:.03em}
+.price{color:var(--gold);font-family:var(--serif);font-style:italic}
+/* hours */
+#hours{background:radial-gradient(ellipse at 50% 50%,#3d0a17,var(--black) 75%)}
+table{width:100%;max-width:640px;margin:auto;border-collapse:collapse;border:1px solid var(--gold);background:rgba(0,0,0,.4)}
+td{padding:16px 20px;border-bottom:1px solid rgba(212,175,55,.25)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--serif);color:var(--gold2);font-size:1.1rem}
+td:last-child{text-align:right}
+tr:hover td{background:rgba(212,175,55,.08)}
+/* reviews */
+#reviews{background:linear-gradient(180deg,var(--black),var(--burg2))}
+.big{text-align:center;margin-bottom:26px}
+.big .num{font-family:var(--serif);font-size:clamp(4.5rem,18vw,8rem);line-height:1;color:var(--gold2)}
+.big .stars{color:var(--gold);font-size:2rem;letter-spacing:6px}
+.big p{opacity:.9;margin-top:6px}
+.rev-note{margin-top:60px}
+.rev-title{font-family:var(--serif);color:var(--gold2);font-size:1.8rem;text-align:center;margin-bottom:12px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.rc{border:1px solid rgba(212,175,55,.5);background:#1a0609;padding:18px;text-align:left;transition:.3s}
+.rc:hover{transform:translateY(-6px)}
+.rc .tagrow{display:block;margin-bottom:10px}
+.rc .tagrow span{display:inline-block;font-size:.7rem;background:var(--gold);color:#1a0a0e;font-weight:700;padding:3px 10px;letter-spacing:.08em;text-transform:uppercase}
+.rc .stars{color:var(--gold);letter-spacing:3px;font-size:1.1rem;margin-bottom:8px;display:block}
+.rc p{font-size:.92rem;font-style:italic;opacity:.85}
+.rc .nm{margin-top:12px;font-weight:700;font-size:.85rem;color:var(--gold2);font-style:normal}
+/* contact */
+#contact{background:radial-gradient(ellipse at 50% 100%,#4a0e1c,var(--black) 70%)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:860px;margin:auto}
+.cbox{border:1px solid var(--gold);padding:30px 22px;text-align:center;background:rgba(0,0,0,.4)}
+.cbox .ico{font-size:2rem}
+.cbox h3{color:var(--gold2);margin:6px 0 8px;font-size:1.3rem}
+.cbox a.link{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold)}
+/* booking */
+#book{background:linear-gradient(180deg,var(--burg2),var(--black));border-top:1px solid var(--gold)}
+form{max-width:600px;margin:auto;border:1px solid var(--gold);padding:32px 24px;background:rgba(0,0,0,.45)}
+label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--gold2);margin:16px 0 6px}
+input,textarea{width:100%;padding:13px;background:#150508;border:1px solid rgba(212,175,55,.6);color:var(--cream);font:inherit;border-radius:0}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+form .btn{width:100%;margin-top:24px}
+#msg{display:none;margin-top:18px;text-align:center;padding:14px;background:var(--gold);color:#1a0a0e;font-weight:700}
+.small{text-align:center;font-size:.82rem;opacity:.75;margin-top:16px}
+footer{background:#000;border-top:1px solid var(--gold);text-align:center;padding:40px 20px;font-size:.88rem}
+footer b{font-family:var(--serif);color:var(--gold);font-size:1.3rem;display:block;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a0a0e;text-align:center;padding:16px;font-weight:800;text-decoration:none;letter-spacing:.15em;text-transform:uppercase;border-top:2px solid #fff3}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Meraki Nails by Monic. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">Meraki Nails by Monic</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="hero-in">
+    <div class="crown">👑</div>
+    <div class="eyebrow">Nail Salon · Elizabeth, NJ</div>
+    <div class="divider"><span>❖</span></div>
+    <h1>Meraki Nails by Monic</h1>
+    <p class="tag">Polished looks, finished with a touch of luxury.</p>
+    <div class="divider"><span>✦</span></div>
+    <div class="badge"><span class="st">★★★★★</span><span><b>5.0</b> on Google · 79 reviews</span></div>
+    <div class="btns">
+      <a href="#book" class="btn btn-gold">Book Now</a>
+      <a href="tel:+19739356226" class="btn btn-line">📞 Call (973) 935-6226</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="fade">Services</h2>
+    <div class="divider"><span>❖</span></div>
+    <span class="note fade">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ico">💅</div><h3>Manicure</h3><p>A classic nail care service layout for shaping, care and polish.</p><span class="ex">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">🦶</div><h3>Pedicure</h3><p>A relaxing foot and nail care service layout.</p><span class="ex">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Gel Nails</h3><p>A long-lasting, glossy finish service layout.</p><span class="ex">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">💎</div><h3>Acrylic Set</h3><p>A sculpted length and strength service layout.</p><span class="ex">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Nail Art</h3><p>A creative designs and details service layout.</p><span class="ex">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">🌸</div><h3>Polish Change</h3><p>A quick color refresh service layout.</p><span class="ex">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <h2 class="fade">Hours</h2>
+    <div class="divider"><span>✦</span></div>
+    <table class="fade">
+      <tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Sunday</td><td>10:00 AM – 6:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="fade">Reviews</h2>
+    <div class="divider"><span>❖</span></div>
+    <div class="big fade">
+      <div class="num">5.0</div>
+      <div class="stars">★★★★★</div>
+      <p>based on 79 Google reviews</p>
+    </div>
+    <div class="center fade">
+      <a class="btn btn-gold" href="https://maps.google.com/?cid=11643532591235529885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 79 reviews on Google</a>
+    </div>
+    <div class="rev-note">
+      <h3 class="rev-title">Top reviews</h3>
+      <span class="note">Example layout - your best reviews show here</span>
+      <div class="rgrid">
+        <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+        <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+        <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+        <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+        <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="fade">Contact</h2>
+    <div class="divider"><span>✦</span></div>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="ico">📍</div><h3>Address</h3><p>980 Dehart Pl Ste 3<br>Elizabeth, NJ 07202, USA</p><p style="margin-top:14px"><a class="link" href="https://maps.google.com/?cid=11643532591235529885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></p></div>
+      <div class="cbox fade"><div class="ico">📞</div><h3>Phone</h3><p><a class="link" href="tel:+19739356226">(973) 935-6226</a></p><p style="margin-top:14px"><a class="btn btn-line" style="padding:11px 24px" href="tel:+19739356226">Tap to call</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2 class="fade">Book an appointment</h2>
+    <div class="divider"><span>❖</span></div>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label for="n">Name</label><input id="n" type="text" autocomplete="off">
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="off">
+      <div class="row2">
+        <div><label for="d">Preferred day</label><input id="d" type="date"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+      </div>
+      <label for="no">Notes</label><textarea id="no" rows="3"></textarea>
+      <button type="button" class="btn btn-gold" id="sendBtn">Request Appointment</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="small">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <b>Meraki Nails by Monic</b>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+19739356226">📞 Call</a>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+document.getElementById('sendBtn').addEventListener('click',function(){
+  var s=document.getElementById('msg');s.textContent='Demo only: online booking is not connected yet.';s.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('show')})}
+</script>
+</body>
+</html>
