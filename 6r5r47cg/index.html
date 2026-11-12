@@ -1,111 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head><meta name="robots" content="noindex"><!-- design: ROYAL GOLD -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ana's Beauty Salon – Paterson, NJ</title>
+<title>Ana's Beauty Salon – Sample Homepage Concept</title>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#2b2430;background:#faf7f9;line-height:1.5}
-  .banner{background:#2b2430;color:#fff;font-size:13px;text-align:center;padding:8px 12px}
-  header.hero{background:linear-gradient(135deg,#f6dbe6,#e9d5f2);padding:44px 20px 40px;text-align:center}
-  .hero h1{font-size:2rem;line-height:1.2;margin-bottom:8px;color:#3b2144}
-  .hero p.sub{color:#5b4863;margin-bottom:6px}
-  .rating{display:inline-block;background:#fff;border-radius:999px;padding:6px 16px;font-weight:600;margin:14px 0 20px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-  .rating span{color:#c58a00}
-  .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .btn{display:inline-block;border:0;border-radius:10px;padding:14px 26px;font-size:1.05rem;font-weight:700;text-decoration:none;cursor:pointer;font-family:inherit}
-  .btn-primary{background:#a2386f;color:#fff}
-  .btn-primary:hover{background:#862d5a}
-  .btn-secondary{background:#fff;color:#a2386f;border:2px solid #a2386f}
-  main{max-width:760px;margin:0 auto;padding:0 18px 40px}
-  section{background:#fff;border-radius:14px;padding:24px 20px;margin-top:22px;box-shadow:0 1px 5px rgba(0,0,0,.06)}
-  h2{font-size:1.35rem;margin-bottom:12px;color:#3b2144}
-  ul.hours{list-style:none}
-  ul.hours li{padding:9px 0;border-bottom:1px solid #eee}
-  ul.hours li:last-child{border-bottom:0}
-  address{font-style:normal}
-  label{display:block;font-weight:600;margin:14px 0 5px}
-  input,select,textarea{width:100%;padding:12px;border:1px solid #cfc3d3;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
-  textarea{min-height:90px;resize:vertical}
-  form .btn{margin-top:18px;width:100%}
-  #demo-msg{margin-top:14px;padding:12px;border-radius:8px;background:#fff3cd;color:#614a00;font-weight:600;display:none}
-  .note{font-size:.85rem;color:#6b5f70;margin-top:12px}
-  footer{text-align:center;font-size:.8rem;color:#6b5f70;padding:20px 16px 30px}
-  @media(min-width:600px){.hero h1{font-size:2.6rem}}
+:root{
+  --black:#0b0708;
+  --wine:#4a0e1c;
+  --wine2:#2a0710;
+  --gold:#d4af37;
+  --gold2:#f3d98b;
+  --cream:#f7efe0;
+  --muted:#d9c9b6;
+  --serif:Georgia,"Times New Roman","Playfair Display",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);background:var(--black);color:var(--cream);line-height:1.6;padding-bottom:64px;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15}
+.banner{background:var(--gold);color:#1a0b0e;text-align:center;font-size:.8rem;padding:6px 12px;font-weight:600}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,7,8,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--gold)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 18px}
+.logo{font-family:var(--serif);color:var(--gold);font-size:1.15rem;font-weight:700;text-decoration:none;letter-spacing:.04em}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{text-decoration:none;font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cream);padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+.menu a:hover{color:var(--gold);border-color:var(--gold)}
+.burger{display:none;background:none;border:1px solid var(--gold);color:var(--gold);font-size:1.3rem;width:44px;height:40px;border-radius:6px;cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;gap:0;border-bottom:1px solid var(--gold)}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:16px 22px;border-bottom:1px solid rgba(212,175,55,.2)}
+}
+/* HERO */
+section{padding:84px 20px}
+.wrap{max-width:1050px;margin:auto}
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;
+  background:radial-gradient(ellipse at 50% 0%,var(--wine) 0%,var(--wine2) 45%,var(--black) 90%);position:relative;padding:70px 20px}
+.hero::before{content:"";position:absolute;inset:16px;border:1px solid rgba(212,175,55,.55);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:24px;border:1px solid rgba(212,175,55,.2);pointer-events:none}
+.crest{font-size:2.2rem;color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,9vw,5.8rem);background:linear-gradient(180deg,var(--gold2),var(--gold) 60%,#a37d1b);-webkit-background-clip:text;background-clip:text;color:transparent;margin:10px 0;letter-spacing:.01em}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,3.2vw,1.55rem);color:var(--muted);max-width:620px;margin:0 auto}
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:22px auto;max-width:420px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{transform:scaleX(-1)}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--gold);padding:9px 20px;border-radius:40px;background:rgba(0,0,0,.45);margin:8px 0 28px;font-size:.95rem}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;padding:16px 32px;border-radius:2px;border:1px solid var(--gold);cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;font-family:var(--sans)}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a0b0e}
+.btn.ghost{background:transparent;color:var(--gold)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(212,175,55,.25)}
+.btn.ghost:hover{background:rgba(212,175,55,.1)}
+/* headings */
+.sec-head{text-align:center;margin-bottom:46px}
+.sec-head h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--gold2)}
+.eyebrow{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.example-tag{display:inline-block;border:1px dashed var(--gold);color:var(--gold2);font-size:.8rem;padding:6px 14px;margin-top:10px;background:rgba(212,175,55,.07);border-radius:4px}
+/* services */
+#services{background:linear-gradient(180deg,var(--black),var(--wine2))}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:linear-gradient(160deg,#1a0a0e,var(--wine2));border:1px solid rgba(212,175,55,.5);padding:28px 24px;position:relative;transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(0,0,0,.5),0 0 0 1px var(--gold);border-color:var(--gold)}
+.card .ic{font-size:2rem;width:60px;height:60px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:rgba(212,175,55,.08)}
+.card h3{color:var(--gold2);font-size:1.4rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.card .price{margin:12px 0;font-weight:700;color:var(--gold)}
+.card .ex{display:block;font-size:.75rem;color:var(--gold2);border-top:1px dashed rgba(212,175,55,.5);padding-top:10px;margin-top:12px}
+/* hours */
+#hours{background:radial-gradient(ellipse at 50% 100%,var(--wine) ,var(--black) 70%)}
+table{width:100%;max-width:640px;margin:auto;border-collapse:collapse;border:1px solid var(--gold);background:rgba(0,0,0,.4)}
+td{padding:15px 20px;border-bottom:1px solid rgba(212,175,55,.25)}
+tr:last-child td{border-bottom:none}
+td:first-child{font-family:var(--serif);color:var(--gold2);font-size:1.1rem}
+td:last-child{text-align:right}
+tr:hover{background:rgba(212,175,55,.08)}
+@media(max-width:480px){td{padding:12px 10px;font-size:.88rem}td:first-child{font-size:1rem}}
+/* reviews */
+#reviews{background:linear-gradient(180deg,var(--black),var(--wine2))}
+.big{text-align:center;margin-bottom:30px}
+.big .num{font-family:var(--serif);font-size:clamp(4.5rem,16vw,8rem);color:var(--gold);line-height:1}
+.big .stars{color:var(--gold);font-size:2rem;letter-spacing:4px}
+.big p{color:var(--muted);margin:6px 0 22px;font-size:1.05rem}
+.row-label{text-align:center;margin:56px 0 24px}
+.row-label h3{font-size:1.8rem;color:var(--gold2)}
+.rcards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.rcard{background:#150a0d;border:1px solid rgba(212,175,55,.45);padding:20px 18px;transition:transform .3s}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .exb{display:block;margin-bottom:10px}
+.rcard .exb span{display:inline-block;background:var(--gold);color:#1a0b0e;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:3px}
+.rcard .stars{color:var(--gold);letter-spacing:2px;font-size:1.1rem;margin-bottom:10px}
+.rcard p{font-style:italic;color:var(--muted);font-size:.92rem;margin-bottom:12px}
+.rcard b{font-size:.85rem;color:var(--gold2)}
+/* contact */
+#contact{background:radial-gradient(ellipse at 50% 0%,var(--wine),var(--black) 75%)}
+.cgrid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:860px;margin:auto}
+.cbox{border:1px solid var(--gold);padding:30px 22px;text-align:center;background:rgba(0,0,0,.4);transition:transform .3s}
+.cbox:hover{transform:translateY(-5px)}
+.cbox .ic{font-size:2rem}
+.cbox h3{color:var(--gold2);margin:8px 0}
+.cbox a.link{color:var(--gold);font-weight:600}
+.cbox .btn{margin-top:14px}
+/* booking */
+#book{background:linear-gradient(180deg,var(--wine2),var(--black))}
+form{max-width:640px;margin:auto;border:1px solid var(--gold);padding:32px 24px;background:rgba(0,0,0,.45);display:grid;gap:16px}
+label{display:block;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+input,textarea{width:100%;padding:13px 14px;background:#150a0d;border:1px solid rgba(212,175,55,.5);color:var(--cream);font:inherit;border-radius:2px}
+input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;text-align:center;border:1px solid var(--gold);padding:12px;color:var(--gold2);background:rgba(212,175,55,.1)}
+.note{text-align:center;font-size:.85rem;color:var(--muted);margin-top:16px}
+/* footer */
+footer{text-align:center;padding:46px 20px;border-top:1px solid var(--gold);background:#070405;color:var(--muted);font-size:.9rem}
+footer strong{display:block;font-family:var(--serif);color:var(--gold);font-size:1.4rem;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a0b0e;text-align:center;font-weight:800;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:17px;border-top:1px solid #000}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+/* reveal */
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for Ana's Beauty Salon. Not their official website.</div>
 
-<header class="hero">
-  <h1>Ana's Beauty Salon</h1>
-  <p class="sub">Hair salon in Paterson, NJ</p>
-  <p class="sub">402 Madison Ave, Paterson, NJ 07524, USA</p>
-  <div class="rating"><span>★</span> 4.4 on Google · 178 reviews</div>
-  <div class="actions">
-    <a class="btn btn-primary" href="#book">Book Now</a>
-    <a class="btn btn-secondary" href="tel:+19737421193">Call (973) 742-1193</a>
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">✦ Ana's Beauty Salon</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="wrap fade">
+    <div class="crest">♛</div>
+    <h1>Ana's Beauty Salon</h1>
+    <div class="divider">❖</div>
+    <p class="tag">Hair and beauty, with a touch of elegance.</p>
+    <div class="divider">✦ ❖ ✦</div>
+    <div class="badge"><span class="st">★★★★★</span><span><b>4.4</b> on Google · 178 reviews</span></div>
+    <div class="btns">
+      <a class="btn gold" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+19737421193">📞 Call (973) 742-1193</a>
+    </div>
   </div>
 </header>
 
-<main>
-  <section>
-    <h2>Visit Ana's Beauty Salon</h2>
-    <p><strong>Address:</strong></p>
-    <address>402 Madison Ave, Paterson, NJ 07524, USA</address>
-    <p style="margin-top:12px"><strong>Phone:</strong> <a href="tel:+19737421193" style="color:#a2386f">(973) 742-1193</a></p>
-    <p style="margin-top:12px">Call to ask about services.</p>
-  </section>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">✦ Services ✦</div>
+      <h2>Our Signature Menu</h2>
+      <div class="example-tag">Example layout - the owner's real services and prices go here</div>
+    </div>
+    <div class="grid">
+      <div class="card fade"><div class="ic">✂️</div><h3>Haircut &amp; Styling</h3><p>A sample card for cuts and finishing styles.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><p>A sample card for color, highlights and tones.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💆‍♀️</div><h3>Treatments</h3><p>A sample card for conditioning and care treatments.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💨</div><h3>Blowout</h3><p>A sample card for blow-dry and smoothing services.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">👰</div><h3>Special Occasion Styling</h3><p>A sample card for updos and event looks.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💅</div><h3>Nails &amp; Beauty</h3><p>A sample card for additional beauty services.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
 
-  <section>
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 7:00 PM</li>
-      <li>Tuesday: 9:00 AM – 7:00 PM</li>
-      <li>Wednesday: 9:00 AM – 7:00 PM</li>
-      <li>Thursday: 9:00 AM – 7:00 PM</li>
-      <li>Friday: 9:00 AM – 7:00 PM</li>
-      <li>Saturday: 8:00 AM – 8:00 PM</li>
-      <li>Sunday: 9:00 AM – 3:00 PM</li>
-    </ul>
-  </section>
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">✦ Hours ✦</div>
+      <h2>Opening Hours</h2>
+      <div class="divider">❖</div>
+    </div>
+    <table class="fade" aria-label="Opening hours">
+      <tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
+      <tr><td>Sunday</td><td>9:00 AM – 3:00 PM</td></tr>
+    </table>
+  </div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="demo-form" onsubmit="return false;">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name">
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">✦ Reviews ✦</div>
+      <h2>Guest Ratings</h2>
+    </div>
+    <div class="big fade">
+      <div class="num">4.4</div>
+      <div class="stars">★★★★☆</div>
+      <p>based on 178 Google reviews</p>
+      <a class="btn gold" href="https://maps.google.com/?cid=16260956304825364633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 178 reviews on Google</a>
+    </div>
+    <div class="row-label fade">
+      <h3>Top reviews</h3>
+      <div class="example-tag">Example layout - your best reviews show here</div>
+    </div>
+    <div class="rcards">
+      <div class="rcard fade"><span class="exb"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="exb"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="exb"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="exb"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="exb"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">✦ Contact ✦</div>
+      <h2>Visit the Salon</h2>
+      <div class="divider">❖</div>
+    </div>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="ic">📍</div><h3>Address</h3><p>402 Madison Ave<br>Paterson, NJ 07524, USA</p><a class="btn ghost" href="https://maps.google.com/?cid=16260956304825364633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="cbox fade"><div class="ic">📞</div><h3>Phone</h3><p><a class="link" href="tel:+19737421193">(973) 742-1193</a></p><a class="btn ghost" href="tel:+19737421193">Tap to call</a></div>
+    </div>
+  </div>
+</section>
 
-      <label for="day">Preferred day</label>
-      <input type="date" id="day" name="day">
-
-      <label for="time">Preferred time</label>
-      <input type="time" id="time" name="time">
-
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
-
-      <button type="button" class="btn btn-primary" onclick="showDemo()">Request appointment</button>
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <div class="eyebrow">✦ Reserve ✦</div>
+      <h2>Book an appointment</h2>
+      <div class="divider">❖</div>
+    </div>
+    <form class="fade" id="bookForm" onsubmit="return false">
+      <div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+      <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+      <div class="two">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. Morning"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn gold" id="demoBtn">Request Appointment</button>
+      <div id="msg" role="status"></div>
     </form>
-    <div id="demo-msg" role="status"></div>
     <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-</main>
+  </div>
+</section>
 
-<footer>Sample homepage concept for Ana's Beauty Salon. Not their official website.</footer>
+<footer>
+  <strong>Ana's Beauty Salon</strong>
+  <div class="divider">✦</div>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+19737421193">📞 Call</a>
 
 <script>
-  function showDemo(){
-    var m = document.getElementById('demo-msg');
-    m.textContent = 'Demo only: online booking is not connected yet.';
-    m.style.display = 'block';
-  }
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o);burger.textContent=o?'✕':'☰'});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.textContent='☰';burger.setAttribute('aria-expanded',false)}));
+document.getElementById('demoBtn').addEventListener('click',()=>{const m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
