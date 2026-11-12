@@ -1,204 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: OCEAN BREEZE -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elegant cuts barber studio. | Barber Shop in Paterson, NJ</title>
+<title>Elegant cuts barber studio. | Sample homepage concept</title>
 <style>
-  :root {
-    --ink: #1c1c1e;
-    --muted: #5f6368;
-    --bg: #faf8f5;
-    --card: #ffffff;
-    --accent: #b8893b;
-    --accent-dark: #8f6a2b;
-    --line: #e6e1d8;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    color: var(--ink);
-    background: var(--bg);
-    line-height: 1.55;
-  }
-  .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-  .banner {
-    background: #111;
-    color: #f1e7d3;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-  }
-  header.hero {
-    background: linear-gradient(160deg, #1c1c1e 0%, #2d2a26 100%);
-    color: #fff;
-    padding: 48px 20px 56px;
-    text-align: center;
-  }
-  .wrap { max-width: 760px; margin: 0 auto; }
-  h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); margin: 0 0 8px; letter-spacing: 0.5px; }
-  .tag { color: #d9c9a6; margin: 0 0 18px; font-style: italic; }
-  .rating {
-    display: inline-block;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 0.95rem;
-    margin-bottom: 18px;
-  }
-  .rating .star { color: #f5c04a; }
-  .addr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; margin: 0 0 22px; color: #e8e2d6; }
-  .btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
-  .btn {
-    display: inline-block;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 1.05rem;
-    font-weight: 600;
-    text-decoration: none;
-    padding: 14px 26px;
-    border-radius: 8px;
-    border: 2px solid var(--accent);
-    cursor: pointer;
-    min-width: 170px;
-    text-align: center;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
-  .btn-outline { background: transparent; color: #fff; }
-  .btn-outline:hover { background: rgba(255,255,255,0.1); }
-  section { padding: 40px 20px; }
-  h2 { font-size: 1.6rem; margin: 0 0 16px; text-align: center; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 22px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  }
-  ul.hours { list-style: none; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-  ul.hours li { padding: 10px 0; border-bottom: 1px solid var(--line); }
-  ul.hours li:last-child { border-bottom: none; }
-  form { display: grid; gap: 14px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-  label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #cfc8bb;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-    background: #fff;
-  }
-  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
-  .row { display: grid; gap: 14px; grid-template-columns: 1fr; }
-  @media (min-width: 560px) { .row { grid-template-columns: 1fr 1fr; } }
-  #demoMsg {
-    display: none;
-    background: #fff4de;
-    border: 1px solid var(--accent);
-    color: #5a4318;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-  .note { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 0.82rem; color: var(--muted); margin: 14px 0 0; text-align: center; }
-  footer {
-    text-align: center;
-    padding: 28px 20px 40px;
-    color: var(--muted);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    font-size: 0.85rem;
-  }
+:root{
+  --deep:#0a4a57;
+  --teal:#0e7c86;
+  --teal2:#12a0a0;
+  --sky:#7cc8ee;
+  --skylight:#e4f4fb;
+  --sand:#f7ecd6;
+  --sand2:#efd9b0;
+  --ink:#0d2f38;
+  --white:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Avenir Next","Segoe UI","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;
+  -webkit-font-text-size-adjust:100%;
+}
+a{color:inherit}
+section[id]{scroll-margin-top:64px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.banner{background:var(--deep);color:#d9f3f6;font-size:13px;text-align:center;padding:8px 14px;letter-spacing:.2px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(14,124,134,.15)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;padding:10px 22px;min-height:56px}
+.brand{font-weight:800;color:var(--deep);text-decoration:none;display:flex;align-items:center;gap:8px;font-size:16px}
+.brand span.dot{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--teal));font-size:15px}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;text-decoration:none;font-weight:600;color:var(--deep);padding:8px 14px;border-radius:999px;transition:background .2s,color .2s}
+.menu a:hover{background:var(--skylight);color:var(--teal)}
+.burger{display:none;background:var(--teal);color:#fff;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:700;cursor:pointer}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(160deg,var(--deep) 0%,var(--teal) 50%,var(--sky) 120%);padding:84px 0 170px}
+.hero .sun{position:absolute;right:-70px;top:-60px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#fff3cf,#f7d98d 55%,rgba(247,217,141,0) 72%);opacity:.85}
+.hero .bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero-in{position:relative;z-index:2;max-width:720px;text-align:left}
+.eyebrow{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-weight:600;font-size:14px;margin-bottom:20px}
+.hero h1{font-size:clamp(40px,8.5vw,84px);line-height:1.02;font-weight:800;letter-spacing:-1.5px;margin-bottom:18px;text-shadow:0 4px 24px rgba(0,40,50,.25)}
+.hero p.tag{font-size:clamp(18px,3vw,24px);max-width:560px;opacity:.95;margin-bottom:26px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--deep);padding:10px 18px;border-radius:18px;font-weight:700;box-shadow:0 10px 30px rgba(0,50,60,.25);margin-bottom:28px}
+.badge .st{color:#f5a623;letter-spacing:2px}
+.badge small{font-weight:600;color:var(--teal)}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;font:inherit;font-weight:800;border:0;cursor:pointer;border-radius:999px;padding:16px 30px;font-size:18px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--sand);color:var(--deep);box-shadow:0 10px 24px rgba(0,40,50,.3)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid #fff}
+.btn-ghost:hover{background:rgba(255,255,255,.15)}
+.btn-teal{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(14,124,134,.35)}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;z-index:1}
+
+/* waves */
+.wave-top{display:block;width:100%;height:70px;line-height:0}
+.wave-top svg{width:100%;height:100%;display:block}
+
+section.block{position:relative}
+.pad{padding:30px 0 90px}
+h2{font-size:clamp(30px,5vw,46px);line-height:1.1;color:var(--deep);letter-spacing:-.8px;margin-bottom:12px}
+.lead{max-width:640px;color:#35606a;margin-bottom:18px}
+.example-tag{display:inline-block;background:#fff6dc;border:2px dashed #d9a21b;color:#7a5400;font-weight:700;font-size:14px;padding:6px 12px;border-radius:10px;margin:6px 0 30px}
+
+/* services */
+#services{background:var(--sand)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:22px}
+.card{background:#fff;border-radius:26px;padding:26px;box-shadow:0 8px 28px rgba(10,74,87,.1);transition:transform .25s,box-shadow .25s;border:1px solid rgba(14,124,134,.1)}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(10,74,87,.18)}
+.ico{width:60px;height:60px;border-radius:20px;display:grid;place-items:center;font-size:30px;background:linear-gradient(135deg,var(--skylight),#bfe6f6);margin-bottom:14px}
+.card h3{color:var(--deep);font-size:21px;margin-bottom:6px}
+.card p{color:#4a6b73;font-size:15.5px;margin-bottom:12px}
+.card .ex{display:block;font-size:12.5px;font-weight:700;color:#7a5400;background:#fff6dc;border:1px dashed #d9a21b;border-radius:8px;padding:5px 9px;margin-bottom:10px}
+.price{font-weight:800;color:var(--teal)}
+
+/* hours */
+#hours{background:var(--skylight)}
+.hours-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;align-items:center}
+table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(10,74,87,.12)}
+th,td{padding:14px 20px;text-align:left;border-bottom:1px solid #e3eef2}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;color:var(--deep)}
+td:last-child{color:#25525c}
+tbody tr:hover{background:#f2fafc}
+.shell{font-size:110px;text-align:center;filter:drop-shadow(0 8px 14px rgba(10,74,87,.2))}
+
+/* reviews */
+#reviews{background:#fff}
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:28px;background:linear-gradient(135deg,var(--teal),var(--teal2));color:#fff;border-radius:32px;padding:30px 34px;margin-bottom:34px;box-shadow:0 16px 40px rgba(14,124,134,.3)}
+.big{font-size:clamp(64px,13vw,110px);font-weight:800;line-height:1;letter-spacing:-3px}
+.stars{color:#ffd166;font-size:32px;letter-spacing:4px}
+.rating-box p{font-size:18px;margin:4px 0 14px}
+.rcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:6px}
+.rcard{background:var(--skylight);border-radius:22px;padding:20px;transition:transform .25s;display:flex;flex-direction:column;gap:10px}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .badge-row{display:block}
+.rcard .badge-row span{display:inline-block;background:#fff6dc;border:1px dashed #d9a21b;color:#7a5400;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
+.rcard .stars{font-size:20px;letter-spacing:2px;color:#f5a623}
+.rcard .txt{color:#4a6b73;font-style:italic}
+.rcard .nm{font-weight:800;color:var(--deep);margin-top:auto}
+h3.sub{color:var(--deep);font-size:26px;margin-top:10px}
+
+/* contact */
+#contact{background:var(--sand)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.info{background:#fff;border-radius:26px;padding:28px;box-shadow:0 8px 28px rgba(10,74,87,.1);transition:transform .25s}
+.info:hover{transform:translateY(-5px)}
+.info .ico{margin-bottom:10px}
+.info h3{color:var(--deep);margin-bottom:6px}
+.info a.tel{font-size:24px;font-weight:800;color:var(--teal);text-decoration:none}
+.info .btn{margin-top:14px;font-size:16px;padding:13px 24px}
+
+/* booking */
+#book{background:linear-gradient(170deg,var(--deep),var(--teal));color:#fff}
+#book h2{color:#fff}
+#book .lead{color:#d3f0f3}
+form{background:#fff;color:var(--ink);border-radius:28px;padding:30px;max-width:720px;box-shadow:0 18px 44px rgba(0,30,40,.35);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label{font-weight:700;font-size:14px;color:var(--deep)}
+input,select,textarea{font:inherit;padding:13px 14px;border-radius:14px;border:2px solid #cfe3ea;background:#f8fcfd;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal);background:#fff}
+textarea{min-height:96px;resize:vertical}
+#msg{grid-column:1/-1;display:none;background:#fff6dc;border:2px solid #d9a21b;color:#6b4a00;font-weight:700;padding:12px 16px;border-radius:14px}
+.note{max-width:720px;font-size:14px;color:#cdeef2;margin-top:14px}
+
+footer{background:#06323c;color:#cfe8ec;text-align:center;padding:0 0 30px}
+footer .wave-top{margin-bottom:10px}
+footer strong{color:#fff;font-size:20px;display:block;margin-bottom:6px}
+footer p{font-size:14px;padding:0 20px}
+
+/* call bar */
+.callbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.nojs .rv{opacity:1;transform:none}
+
+@media(max-width:820px){
+  .hours-grid{grid-template-columns:1fr}
+  .shell{display:none}
+}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:10px 22px 18px;border-bottom:1px solid rgba(14,124,134,.2);box-shadow:0 14px 24px rgba(10,74,87,.12)}
+  .menu.open{display:flex}
+  .menu a{padding:13px 14px;font-size:18px}
+  .hero{padding:56px 0 140px}
+  form{grid-template-columns:1fr;padding:22px}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--deep);padding:10px 14px calc(10px + env(safe-area-inset-bottom))}
+  .callbar a{flex:1;text-align:center;text-decoration:none;background:var(--sand);color:var(--deep);font-weight:800;font-size:18px;padding:13px;border-radius:999px}
+  body{padding-bottom:76px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{transition:none;opacity:1;transform:none}
+}
 </style>
 </head>
-<body>
+<body class="nojs">
 
 <div class="banner">Sample homepage concept for Elegant cuts barber studio. Not their official website.</div>
 
-<header class="hero">
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#home"><span class="dot">✂️</span>Elegant cuts</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="sun"></div>
+  <div class="bubble" style="width:90px;height:90px;left:58%;top:70px"></div>
+  <div class="bubble" style="width:46px;height:46px;left:70%;top:240px"></div>
+  <div class="bubble" style="width:130px;height:130px;right:12%;bottom:120px"></div>
   <div class="wrap">
-    <h1>Elegant cuts barber studio.</h1>
-    <p class="tag">Barber shop in Paterson, NJ</p>
-    <div class="rating" aria-label="Google rating 4.9 from 36 reviews"><span class="star">★</span> 4.9 on Google · 36 reviews</div>
-    <p class="addr">375 Totowa Ave, Paterson, NJ 07502, USA</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-outline" href="tel:+19738495664">Call (973) 849-5664</a>
+    <div class="hero-in">
+      <span class="eyebrow">💈 Barber shop · Paterson, NJ</span>
+      <h1>Elegant cuts barber studio.</h1>
+      <p class="tag">Fresh looks, clean lines and a relaxed, friendly chair.</p>
+      <div class="badge"><span class="st">★★★★★</span><span>4.9</span><small>· 36 Google reviews</small></div>
+      <div class="cta">
+        <a class="btn btn-primary" href="#book">📅 Book Now</a>
+        <a class="btn btn-ghost" href="tel:+19738495664">📞 Call (973) 849-5664</a>
+      </div>
     </div>
+  </div>
+  <div class="wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" width="100%" height="110" aria-hidden="true">
+      <path d="M0,60 C200,120 360,0 600,40 C840,80 1000,110 1200,50 C1320,15 1400,30 1440,45 L1440,120 L0,120 Z" fill="#ffffff" opacity=".35"/>
+      <path d="M0,80 C240,20 420,120 700,80 C980,40 1160,110 1440,60 L1440,120 L0,120 Z" fill="#f7ecd6"/>
+    </svg>
   </div>
 </header>
 
-<section>
-  <div class="wrap">
-    <h2>Opening hours</h2>
-    <div class="card">
-      <ul class="hours">
-        <li>Monday: 9:00 AM – 8:00 PM</li>
-        <li>Tuesday: 9:00 AM – 8:00 PM</li>
-        <li>Wednesday: 9:00 AM – 8:00 PM</li>
-        <li>Thursday: 9:00 AM – 8:00 PM</li>
-        <li>Friday: 9:00 AM – 9:00 PM</li>
-        <li>Saturday: 9:00 AM – 9:00 PM</li>
-        <li>Sunday: 9:00 AM – 7:00 PM</li>
-      </ul>
+<section class="block" id="services">
+  <div class="pad" style="padding-top:20px">
+    <div class="wrap">
+      <h2 class="rv">Services</h2>
+      <p class="lead rv">A look at how a services menu could be laid out for a barber studio.</p>
+      <div class="example-tag rv">Example layout - the owner's real services and prices go here</div>
+      <div class="cards">
+        <article class="card rv"><div class="ico">✂️</div><span class="ex">Example layout - the owner's real services and prices go here</span><h3>Classic Haircut</h3><p>A tidy scissor and clipper cut shaped to the client.</p><div class="price">Price: add yours</div></article>
+        <article class="card rv"><div class="ico">💈</div><span class="ex">Example layout - the owner's real services and prices go here</span><h3>Fade</h3><p>Smooth, blended fades from low to high.</p><div class="price">Price: add yours</div></article>
+        <article class="card rv"><div class="ico">🧔</div><span class="ex">Example layout - the owner's real services and prices go here</span><h3>Beard Trim</h3><p>Shaping and sculpting for a neat beard line.</p><div class="price">Price: add yours</div></article>
+        <article class="card rv"><div class="ico">🪒</div><span class="ex">Example layout - the owner's real services and prices go here</span><h3>Hot Towel Shave</h3><p>A warm, relaxing straight-razor style shave.</p><div class="price">Price: add yours</div></article>
+        <article class="card rv"><div class="ico">📐</div><span class="ex">Example layout - the owner's real services and prices go here</span><h3>Line-Up</h3><p>Crisp edges around the hairline and neckline.</p><div class="price">Price: add yours</div></article>
+        <article class="card rv"><div class="ico">🧒</div><span class="ex">Example layout - the owner's real services and prices go here</span><h3>Kids' Cut</h3><p>A comfortable cut for younger clients.</p><div class="price">Price: add yours</div></article>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="book" style="background:#f1ece3;">
-  <div class="wrap">
-    <h2>Book an appointment</h2>
-    <div class="card">
-      <form id="demoForm" onsubmit="return false;">
-        <div class="row">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name">
-          </div>
-          <div>
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
-          </div>
+<section class="block" id="hours">
+  <span class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V25 C1200,75 1000,0 720,30 C440,60 240,5 0,40 Z" fill="#f7ecd6"/></svg></span>
+  <div class="pad">
+    <div class="wrap">
+      <div class="hours-grid">
+        <div class="rv">
+          <h2>Hours</h2>
+          <p class="lead">Open seven days a week, with later evenings on Friday and Saturday.</p>
+          <div class="shell">🐚</div>
         </div>
-        <div class="row">
-          <div>
-            <label for="day">Preferred day</label>
-            <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-          </div>
-          <div>
-            <label for="time">Preferred time</label>
-            <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-          </div>
+        <div class="rv">
+          <table>
+            <tbody>
+              <tr><td>Monday</td><td>9:00&#8239;AM&#8201;–&#8201;8:00&#8239;PM</td></tr>
+              <tr><td>Tuesday</td><td>9:00&#8239;AM&#8201;–&#8201;8:00&#8239;PM</td></tr>
+              <tr><td>Wednesday</td><td>9:00&#8239;AM&#8201;–&#8201;8:00&#8239;PM</td></tr>
+              <tr><td>Thursday</td><td>9:00&#8239;AM&#8201;–&#8201;8:00&#8239;PM</td></tr>
+              <tr><td>Friday</td><td>9:00&#8239;AM&#8201;–&#8201;9:00&#8239;PM</td></tr>
+              <tr><td>Saturday</td><td>9:00&#8239;AM&#8201;–&#8201;9:00&#8239;PM</td></tr>
+              <tr><td>Sunday</td><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reviews">
+  <span class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V40 C1180,0 980,75 700,35 C420,0 220,70 0,30 Z" fill="#e4f4fb"/></svg></span>
+  <div class="pad">
+    <div class="wrap">
+      <h2 class="rv">Reviews</h2>
+      <div class="rating-box rv">
+        <div class="big">4.9</div>
         <div>
-          <label for="notes">Notes</label>
-          <textarea id="notes" name="notes" rows="3"></textarea>
+          <div class="stars">★★★★★</div>
+          <p>based on 36 Google reviews</p>
+          <a class="btn btn-primary" href="https://maps.google.com/?cid=149283200832059822&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 36 reviews on Google</a>
         </div>
-        <button type="button" class="btn btn-primary" id="demoBtn">Request appointment</button>
-        <div id="demoMsg" role="status" aria-live="polite"></div>
+      </div>
+      <h3 class="sub rv">Top reviews</h3>
+      <div class="example-tag rv">Example layout - your best reviews show here</div>
+      <div class="rcards">
+        <div class="rcard rv"><div class="badge-row"><span>Example</span></div><div class="stars">★★★★★</div><div class="txt">Your customer's review goes here</div><div class="nm">Customer name</div></div>
+        <div class="rcard rv"><div class="badge-row"><span>Example</span></div><div class="stars">★★★★★</div><div class="txt">Your customer's review goes here</div><div class="nm">Customer name</div></div>
+        <div class="rcard rv"><div class="badge-row"><span>Example</span></div><div class="stars">★★★★★</div><div class="txt">Your customer's review goes here</div><div class="nm">Customer name</div></div>
+        <div class="rcard rv"><div class="badge-row"><span>Example</span></div><div class="stars">★★★★★</div><div class="txt">Your customer's review goes here</div><div class="nm">Customer name</div></div>
+        <div class="rcard rv"><div class="badge-row"><span>Example</span></div><div class="stars">★★★★★</div><div class="txt">Your customer's review goes here</div><div class="nm">Customer name</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <span class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V30 C1220,70 1000,0 740,35 C480,70 240,5 0,40 Z" fill="#ffffff"/></svg></span>
+  <div class="pad">
+    <div class="wrap">
+      <h2 class="rv">Contact</h2>
+      <p class="lead rv">Find the studio in Paterson or give it a call.</p>
+      <div class="contact-grid">
+        <div class="info rv"><div class="ico">📍</div><h3>Address</h3><p>375 Totowa Ave<br>Paterson, NJ 07502, USA</p>
+          <a class="btn btn-teal" href="https://maps.google.com/?cid=149283200832059822&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">🧭 Get directions</a></div>
+        <div class="info rv"><div class="ico">📞</div><h3>Phone</h3><p><a class="tel" href="tel:+19738495664">(973) 849-5664</a></p><p style="margin-top:6px;color:#4a6b73">Tap to call from your phone.</p>
+          <a class="btn btn-teal" href="tel:+19738495664">Call now</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="book">
+  <span class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V35 C1180,0 960,70 700,30 C440,0 220,65 0,35 Z" fill="#f7ecd6"/></svg></span>
+  <div class="pad">
+    <div class="wrap">
+      <h2 class="rv">Book an appointment</h2>
+      <p class="lead rv">Pick a day and time that suits you.</p>
+      <form id="bookForm" class="rv" novalidate>
+        <div class="f"><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+        <div class="f"><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+        <div class="f"><label for="d">Preferred day</label>
+          <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+        <div class="f"><label for="t">Preferred time</label><input id="t" type="time"></div>
+        <div class="f full"><label for="x">Notes</label><textarea id="x"></textarea></div>
+        <div class="f full"><button type="button" class="btn btn-teal" id="sendBtn">Request appointment</button></div>
+        <div id="msg" role="status" aria-live="polite"></div>
       </form>
-      <p class="note">This is a sample of how online booking could work.</p>
+      <p class="note rv">This is a sample of how online booking could work.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    Elegant cuts barber studio. · 375 Totowa Ave, Paterson, NJ 07502, USA · <a href="tel:+19738495664" style="color:inherit;">(973) 849-5664</a>
-  </div>
+  <span class="wave-top"><svg viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0,0 H1440 V30 C1220,70 1000,0 740,35 C480,70 240,5 0,40 Z" fill="#0a4a57"/></svg></span>
+  <strong>Elegant cuts barber studio.</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
+<div class="callbar"><a href="tel:+19738495664">📞 Call (973) 849-5664</a></div>
+
 <script>
-  document.getElementById('demoBtn').addEventListener('click', function () {
-    var m = document.getElementById('demoMsg');
-    m.textContent = 'Demo only: online booking is not connected yet.';
-    m.style.display = 'block';
+(function(){
+  document.body.classList.remove('nojs');
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var o=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',o?'true':'false');
+    burger.textContent=o?'✕ Close':'☰ Menu';
   });
+  menu.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');burger.textContent='☰ Menu';}
+  });
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+  document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();});
+  document.getElementById('sendBtn').addEventListener('click',function(){
+    var m=document.getElementById('msg');
+    m.textContent='Demo only: online booking is not connected yet.';
+    m.style.display='block';
+  });
+})();
 </script>
 </body>
 </html>
