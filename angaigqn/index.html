@@ -1,212 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: WARM SUNSET -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fancy Nails Art LLC – Nail Salon in Paterson, NJ</title>
+<title>Fancy Nails Art LLC – Sample homepage concept</title>
 <style>
-  :root {
-    --accent: #c2417a;
-    --accent-dark: #9d2d60;
-    --bg: #fff8fb;
-    --text: #2b2230;
-    --muted: #6b5f72;
-    --card: #ffffff;
-    --border: #f0dce6;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.5;
-  }
-  .banner {
-    background: #2b2230;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-  }
-  header.hero {
-    text-align: center;
-    padding: 40px 20px 32px;
-    background: linear-gradient(180deg, #fde6f0 0%, var(--bg) 100%);
-  }
-  .hero h1 {
-    margin: 0 0 6px;
-    font-size: clamp(1.9rem, 7vw, 3rem);
-    color: var(--accent-dark);
-    line-height: 1.15;
-  }
-  .hero .type {
-    margin: 0 0 18px;
-    color: var(--muted);
-    font-size: 1.05rem;
-  }
-  .rating {
-    display: inline-block;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  .rating .star { color: #e0a100; }
-  .btn-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 6px;
-  }
-  .btn {
-    display: inline-block;
-    border: 0;
-    border-radius: 10px;
-    padding: 14px 26px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    font-family: inherit;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-secondary { background: #fff; color: var(--accent-dark); border: 2px solid var(--accent); }
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 16px 40px;
-  }
-  section {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 22px 20px;
-    margin-top: 20px;
-  }
-  h2 {
-    margin: 0 0 12px;
-    font-size: 1.35rem;
-    color: var(--accent-dark);
-  }
-  .hours { list-style: none; margin: 0; padding: 0; }
-  .hours li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border);
-  }
-  .hours li:last-child { border-bottom: 0; }
-  address { font-style: normal; }
-  form { display: grid; gap: 14px; }
-  label { display: grid; gap: 4px; font-weight: 600; font-size: 0.95rem; }
-  input, textarea {
-    font: inherit;
-    padding: 11px 12px;
-    border: 1px solid #d9c3cf;
-    border-radius: 8px;
-    background: #fff;
-    color: var(--text);
-    width: 100%;
-  }
-  input:focus, textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
-  textarea { min-height: 90px; resize: vertical; }
-  .two { display: grid; gap: 14px; grid-template-columns: 1fr; }
-  @media (min-width: 520px) { .two { grid-template-columns: 1fr 1fr; } }
-  #demo-msg {
-    display: none;
-    background: #fff1f7;
-    border: 1px solid var(--accent);
-    color: var(--accent-dark);
-    padding: 12px 14px;
-    border-radius: 8px;
-    font-weight: 600;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 12px 0 0; }
-  footer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: var(--muted);
-    padding: 10px 16px 30px;
-  }
+:root{
+  --cream:#fff6ea;
+  --peach:#fbd3b0;
+  --peach2:#f6a977;
+  --terra:#c4562e;
+  --terra-d:#8f3a1e;
+  --brown:#3a1a10;
+  --sand:#f3e0c9;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--brown);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+section{scroll-margin-top:70px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.banner{background:var(--brown);color:#ffe9d2;text-align:center;font-size:13px;padding:7px 12px;letter-spacing:.02em}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,246,234,.95);backdrop-filter:blur(8px);border-bottom:1px solid #efd3b6}
+.nav-in{max-width:1080px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;text-decoration:none;color:var(--terra-d);display:flex;align-items:center;gap:8px}
+.brand i{width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffd9a8,var(--terra));display:inline-block}
+.links{display:none;list-style:none;gap:6px}
+.links a{text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px;transition:background .2s,color .2s}
+.links a:hover{background:var(--terra);color:#fff}
+.menu-btn{background:var(--terra);color:#fff;border:0;border-radius:999px;padding:9px 16px;font-weight:700;font-size:15px;cursor:pointer}
+.links.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--cream);padding:12px 20px 18px;border-bottom:1px solid #efd3b6;box-shadow:0 14px 24px rgba(58,26,16,.12)}
+.links.open a{display:block;padding:12px 14px;font-size:17px}
+@media(min-width:800px){
+  .links{display:flex}.menu-btn{display:none}
+  body{padding-bottom:0}.callbar{display:none!important}
+}
+
+/* hero */
+.hero{background:linear-gradient(180deg,var(--cream) 0%,#fde3c9 55%,var(--peach) 100%);padding:48px 16px 0;text-align:center;overflow:hidden}
+.arch-wrap{max-width:720px;margin:0 auto;position:relative}
+.arch{position:relative;border-radius:999px 999px 0 0;background:linear-gradient(180deg,#f9b98a 0%,#fcd8b6 45%,#ffeedb 100%);padding:150px 22px 56px;box-shadow:0 0 0 12px rgba(246,169,119,.35),0 0 0 26px rgba(246,169,119,.2),0 0 0 42px rgba(246,169,119,.1)}
+.sun{position:absolute;top:34px;left:50%;transform:translateX(-50%);width:130px;height:130px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff1c9,#ffc27a 55%,#e8794a);box-shadow:0 0 0 14px rgba(255,214,160,.5),0 0 0 30px rgba(255,214,160,.28);animation:glow 5s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 20px rgba(255,214,160,.5),0 0 0 42px rgba(255,214,160,.22)}}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--terra-d)}
+h1{font-family:var(--serif);font-size:clamp(40px,10.5vw,84px);line-height:1.02;color:var(--brown);margin:10px 0 14px;font-weight:700}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(19px,4vw,26px);color:var(--terra-d);margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--terra);border-radius:999px;padding:8px 18px;font-weight:700;box-shadow:0 6px 16px rgba(196,86,46,.18);margin-bottom:24px}
+.badge .st{color:#e08a1e;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--terra);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:var(--sans)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(143,58,30,.25)}
+.btn.primary{background:var(--terra);color:#fff}
+.btn.primary:hover{background:var(--terra-d)}
+.btn.ghost{background:#fff;color:var(--terra-d)}
+.ground{height:36px;background:var(--peach)}
+
+/* sections */
+.sec{padding:84px 0}
+.sec.alt{background:var(--sand)}
+.sec.dark{background:linear-gradient(160deg,var(--terra-d),#b24a28 70%,#d36a3e);color:#fff}
+.head{text-align:center;margin-bottom:40px}
+.kicker{display:inline-block;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--terra)}
+.dark .kicker{color:#ffd9b8}
+h2{font-family:var(--serif);font-size:clamp(32px,7vw,52px);line-height:1.1;margin:8px 0 12px}
+.sun-div{width:64px;height:32px;border-radius:64px 64px 0 0;background:linear-gradient(var(--peach2),var(--terra));margin:0 auto 14px}
+.example{display:inline-block;background:#fff;border:1.5px dashed var(--terra);color:var(--terra-d);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700}
+
+/* services */
+.grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid.three{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:26px;padding:26px 24px;box-shadow:0 8px 24px rgba(143,58,30,.1);border:1px solid #f1d6bb;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(143,58,30,.18)}
+.ico{width:64px;height:64px;border-radius:50% 50% 50% 8px;background:linear-gradient(135deg,var(--peach),var(--peach2));display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:14px}
+.card h3{font-family:var(--serif);font-size:24px;margin-bottom:6px}
+.card p{color:#5c3a2c;font-size:15.5px}
+.price{margin:12px 0 10px;font-weight:700;color:var(--terra-d)}
+.card .example{font-size:12px;border-radius:12px;line-height:1.4}
+
+/* hours */
+.hours-box{max-width:620px;margin:0 auto;background:#fff;border-radius:28px;padding:14px 26px;box-shadow:0 10px 30px rgba(143,58,30,.12);border:1px solid #f1d6bb}
+table{width:100%;border-collapse:collapse}
+td{padding:14px 4px;border-bottom:1px solid #f3e0c9;font-size:17px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;font-family:var(--serif);font-size:19px}
+td:last-child{text-align:right}
+tr.closed td:last-child{color:var(--terra);font-weight:700}
+
+/* reviews */
+.rating{text-align:center;margin-bottom:26px}
+.big{font-family:var(--serif);font-size:clamp(76px,20vw,132px);line-height:1;font-weight:700}
+.stars{font-size:38px;letter-spacing:4px;line-height:1.2}
+.stars .s{color:#ffc15e}
+.stars .part{background:linear-gradient(90deg,#ffc15e 40%,rgba(255,255,255,.35) 40%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.based{font-size:18px;opacity:.95;margin-top:4px}
+.center{text-align:center}
+.btn.light{background:#fff;color:var(--terra-d);border-color:#fff}
+.rev-title{font-family:var(--serif);font-size:30px;text-align:center;margin:54px 0 10px}
+.rev-label{text-align:center;margin-bottom:22px}
+.dark .example{background:rgba(255,255,255,.15);color:#fff;border-color:#ffd9b8}
+.revs{display:flex;gap:16px;overflow-x:auto;padding:6px 4px 20px;scroll-snap-type:x mandatory}
+.rev{flex:0 0 250px;scroll-snap-align:start;background:#fff;color:var(--brown);border-radius:22px;padding:18px 20px 22px;box-shadow:0 8px 22px rgba(0,0,0,.18);transition:transform .25s}
+.rev:hover{transform:translateY(-5px)}
+.rev .ex-row{display:block;margin-bottom:10px}
+.rev .ex-row span{display:inline-block;background:var(--sand);color:var(--terra-d);font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px;border:1px dashed var(--terra)}
+.rev .rs{color:#e08a1e;font-size:20px;letter-spacing:2px;display:block;margin-bottom:8px}
+.rev p{font-style:italic;color:#6a4535;margin-bottom:12px}
+.rev b{font-family:var(--serif)}
+@media(min-width:1100px){.revs{overflow:visible}.rev{flex:1}}
+
+/* contact */
+.contact-grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:760px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.cc{background:#fff;border-radius:26px;padding:28px 22px;text-align:center;border:1px solid #f1d6bb;box-shadow:0 8px 24px rgba(143,58,30,.1);transition:transform .25s}
+.cc:hover{transform:translateY(-5px)}
+.cc .ico{margin:0 auto 12px}
+.cc h3{font-family:var(--serif);font-size:23px;margin-bottom:6px}
+.cc a.link{color:var(--terra-d);font-weight:700}
+
+/* form */
+.form{max-width:640px;margin:0 auto;background:#fff;border-radius:30px;padding:30px 24px;box-shadow:0 12px 34px rgba(143,58,30,.15);border:1px solid #f1d6bb}
+.row{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:560px){.row.two{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;color:var(--terra-d)}
+input,select,textarea{width:100%;padding:13px 14px;border:2px solid #ecd2b8;border-radius:14px;font:inherit;background:var(--cream);color:var(--brown)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terra);background:#fff}
+.field{margin-bottom:16px}
+.form .btn{width:100%;justify-content:center;margin-top:6px}
+.msg{display:none;margin-top:16px;padding:14px;border-radius:14px;background:#ffe9d2;border:2px solid var(--terra);font-weight:700;text-align:center;color:var(--terra-d)}
+.msg.show{display:block}
+.note{font-size:14px;color:#6a4535;text-align:center;margin-top:14px}
+
+/* footer */
+footer{background:var(--brown);color:#ffe9d2;text-align:center;padding:40px 20px}
+footer b{font-family:var(--serif);font-size:24px;display:block;margin-bottom:6px}
+footer p{font-size:14px;opacity:.9}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--terra);color:#fff;text-align:center;padding:16px;font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 -6px 18px rgba(58,26,16,.25)}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none!important}.sun{animation:none}}
 </style>
 </head>
 <body>
-
 <div class="banner">Sample homepage concept for Fancy Nails Art LLC. Not their official website.</div>
 
-<header class="hero">
-  <h1>Fancy Nails Art LLC</h1>
-  <p class="type">Nail salon in Paterson, NJ</p>
-  <div class="rating"><span class="star">★</span> 4.4 on Google · 117 reviews</div>
-  <div class="btn-row">
-    <a class="btn btn-primary" href="#book">Book Now</a>
-    <a class="btn btn-secondary" href="tel:+19735232300">Call (973) 523-2300</a>
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#home"><i></i>Fancy Nails Art LLC</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu ☰</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="arch-wrap">
+    <div class="arch">
+      <div class="sun" aria-hidden="true"></div>
+      <div class="eyebrow">Nail salon · Paterson, NJ</div>
+      <h1>Fancy Nails Art LLC</h1>
+      <p class="tag">Color, shine and creative nail art.</p>
+      <div class="badge"><span class="st" aria-hidden="true">★</span> 4.4 on Google · 117 reviews</div>
+      <div class="btns">
+        <a class="btn primary" href="#book">💅 Book Now</a>
+        <a class="btn ghost" href="tel:+19735232300">📞 Call (973) 523-2300</a>
+      </div>
+    </div>
+  </div>
+  <div class="ground"></div>
 </header>
 
-<main>
-  <section id="contact">
-    <h2>Location &amp; contact</h2>
-    <p><address>86 Broadway, Paterson, NJ 07505, USA</address></p>
-    <p>Phone: <a href="tel:+19735232300">(973) 523-2300</a></p>
-    <p>Call to ask about services.</p>
-  </section>
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="sun-div"></div>
+      <span class="kicker">Services</span>
+      <h2>Treat your hands &amp; feet</h2>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid three">
+      <article class="card reveal"><div class="ico">💅</div><h3>Classic Manicure</h3><p>Shaping, cuticle care and polish in a color you pick.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🦶</div><h3>Pedicure</h3><p>A relaxing foot treatment finished with polish.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">✨</div><h3>Gel Polish</h3><p>Glossy, long-lasting color with a smooth finish.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🌸</div><h3>Full Set Extensions</h3><p>Added length and shape for a polished, custom look.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🎨</div><h3>Nail Art</h3><p>Hand-painted designs, accents and decorative details.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card reveal"><div class="ico">🌅</div><h3>Dip Powder</h3><p>A sturdy, colorful finish with lots of shade options.</p><div class="price">Price: add yours</div><span class="example">Example layout - the owner's real services and prices go here</span></article>
+    </div>
+  </div>
+</section>
 
-  <section id="hours">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 7:00 PM</li>
-      <li>Tuesday: 10:00 AM – 7:00 PM</li>
-      <li>Wednesday: 10:00 AM – 7:00 PM</li>
-      <li>Thursday: 10:00 AM – 7:00 PM</li>
-      <li>Friday: 10:00 AM – 7:00 PM</li>
-      <li>Saturday: 9:30 AM – 7:00 PM</li>
-      <li>Sunday: Closed</li>
-    </ul>
-  </section>
+<section class="sec alt" id="hours">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="sun-div"></div>
+      <span class="kicker">Hours</span>
+      <h2>When to visit</h2>
+    </div>
+    <div class="hours-box reveal">
+      <table>
+        <tbody>
+          <tr><td>Monday:</td><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr><td>Tuesday:</td><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr><td>Wednesday:</td><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr><td>Thursday:</td><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr><td>Friday:</td><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr><td>Saturday:</td><td>9:30&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr class="closed"><td>Sunday:</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="booking-form" novalidate>
-      <label>Name
-        <input type="text" name="name" autocomplete="name">
-      </label>
-      <label>Phone
-        <input type="tel" name="phone" autocomplete="tel">
-      </label>
-      <div class="two">
-        <label>Preferred day
-          <input type="text" name="day" placeholder="e.g. Saturday">
-        </label>
-        <label>Preferred time
-          <input type="text" name="time" placeholder="e.g. 2:00 PM">
-        </label>
+<section class="sec dark" id="reviews">
+  <div class="wrap">
+    <div class="head reveal" style="margin-bottom:10px">
+      <span class="kicker">Reviews</span>
+      <h2>What Google says</h2>
+    </div>
+    <div class="rating reveal">
+      <div class="big">4.4</div>
+      <div class="stars" aria-label="4.4 out of 5 stars"><span class="s">★★★★</span><span class="part">★</span></div>
+      <div class="based">based on 117 Google reviews</div>
+      <div style="margin-top:22px"><a class="btn light" href="https://maps.google.com/?cid=16011109890038128017&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 117 reviews on Google ↗</a></div>
+    </div>
+    <h3 class="rev-title reveal">Top reviews</h3>
+    <div class="rev-label reveal"><span class="example">Example layout - your best reviews show here</span></div>
+    <div class="revs reveal">
+      <div class="rev"><div class="ex-row"><span>Example</span></div><span class="rs">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev"><div class="ex-row"><span>Example</span></div><span class="rs">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev"><div class="ex-row"><span>Example</span></div><span class="rs">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev"><div class="ex-row"><span>Example</span></div><span class="rs">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev"><div class="ex-row"><span>Example</span></div><span class="rs">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="sun-div"></div>
+      <span class="kicker">Contact</span>
+      <h2>Find the salon</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cc reveal"><div class="ico">📍</div><h3>Address</h3><p>86 Broadway<br>Paterson, NJ 07505, USA</p></div>
+      <div class="cc reveal"><div class="ico">📞</div><h3>Phone</h3><p><a class="link" href="tel:+19735232300">(973) 523-2300</a></p></div>
+      <div class="cc reveal"><div class="ico">🧭</div><h3>Directions</h3><p><a class="link" href="https://maps.google.com/?cid=16011109890038128017&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions ↗</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec alt" id="book">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="sun-div"></div>
+      <span class="kicker">Booking</span>
+      <h2>Book an appointment</h2>
+    </div>
+    <form class="form reveal" id="bookForm" onsubmit="return false">
+      <div class="row two">
+        <div class="field"><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+        <div class="field"><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
       </div>
-      <label>Notes
-        <textarea name="notes"></textarea>
-      </label>
-      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-      <div id="demo-msg" role="status" aria-live="polite"></div>
+      <div class="row two">
+        <div class="field"><label for="d">Preferred day</label>
+          <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+        <div class="field"><label for="t">Preferred time</label><input id="t" type="time"></div>
+      </div>
+      <div class="field"><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+      <div class="msg" id="msg" role="status">Demo only: online booking is not connected yet.</div>
+      <p class="note">This is a sample of how online booking could work.</p>
     </form>
-    <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>
-  Sample homepage concept created by a third party. Not the official website of Fancy Nails Art LLC.
+  <b>Fancy Nails Art LLC</b>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
-<script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-</script>
+<a class="callbar" href="tel:+19735232300">📞 Call (973) 523-2300</a>
 
+<script>
+document.documentElement.classList.add('js');
+var btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');btn.setAttribute('aria-expanded',false)})});
+document.getElementById('demoBtn').addEventListener('click',function(){document.getElementById('msg').classList.add('show')});
+var els=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
 </body>
 </html>
