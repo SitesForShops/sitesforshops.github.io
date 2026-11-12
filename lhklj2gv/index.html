@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: OCEAN BREEZE -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mao's Salon – Sample Homepage Concept</title>
+<style>
+:root{
+  --teal:#0b7f8c;
+  --teal-d:#075a66;
+  --deep:#06323b;
+  --sky:#bfe6f5;
+  --sky-l:#e8f6fc;
+  --sand:#f6ead2;
+  --sand-d:#e7d2a6;
+  --coral:#ff7a59;
+  --ink:#10333b;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--deep);color:#fff;text-align:center;font-size:.8rem;padding:.45rem .8rem;letter-spacing:.2px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(6,50,59,.12)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:.6rem 1.1rem}
+.logo{font-weight:800;color:var(--teal-d);text-decoration:none;font-size:1.15rem;display:flex;align-items:center;gap:.4rem}
+nav ul{list-style:none;display:flex;gap:1.4rem}
+nav a{text-decoration:none;font-weight:600;color:var(--ink);padding:.3rem .1rem;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{color:var(--teal);border-color:var(--teal)}
+.menu-btn{display:none;background:var(--teal);color:#fff;border:0;border-radius:10px;padding:.5rem .8rem;font-size:1rem;font-weight:700;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:#fff;max-height:0;overflow:hidden;transition:max-height .3s;box-shadow:0 10px 18px rgba(6,50,59,.15)}
+  nav.open{max-height:360px}
+  nav ul{flex-direction:column;gap:0;padding:.5rem 1.1rem 1rem}
+  nav a{display:block;padding:.8rem 0;border-bottom:1px solid var(--sky-l)}
+}
+section{position:relative}
+.wrap{max-width:1100px;margin:auto;padding:4.5rem 1.2rem}
+.wave{display:block;width:100%;height:60px;position:absolute;left:0;bottom:-1px}
+.wave-top{top:-1px;bottom:auto;transform:rotate(180deg)}
+/* hero */
+#home{background:linear-gradient(170deg,var(--teal) 0%,#27a7b5 55%,var(--sky) 100%);color:#fff;overflow:hidden}
+#home .wrap{padding-top:4rem;padding-bottom:8rem;text-align:left;position:relative;z-index:2}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.14);animation:float 8s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-18px)}}
+.badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.95);color:var(--deep);padding:.45rem 1rem;border-radius:99px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.badge .st{color:#f5a623}
+h1{font-size:clamp(2.8rem,10vw,6rem);line-height:1;margin:1.2rem 0 1rem;font-weight:900;letter-spacing:-1.5px;text-shadow:0 4px 18px rgba(6,50,59,.3)}
+.tag{font-size:clamp(1.1rem,3.4vw,1.5rem);max-width:30ch;margin-bottom:2rem;color:#f1fbff}
+.btns{display:flex;flex-wrap:wrap;gap:.9rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.95rem 1.7rem;border-radius:99px;font-weight:800;font-size:1.05rem;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.2)}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-light{background:#fff;color:var(--teal-d)}
+.btn-teal{background:var(--teal);color:#fff}
+/* headings */
+.eyebrow{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:.8rem}
+h2{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:.3rem 0 1rem;color:var(--deep)}
+.lead{max-width:60ch;margin-bottom:1.5rem}
+.example-label{display:inline-block;background:var(--deep);color:#fff;font-weight:700;font-size:.85rem;padding:.4rem .9rem;border-radius:10px;margin-bottom:1.5rem}
+/* services */
+#services{background:var(--sand)}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#fff;border-radius:22px;padding:1.6rem;box-shadow:0 8px 24px rgba(6,50,59,.1);transition:transform .25s,box-shadow .25s;border-top:6px solid var(--teal)}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(6,50,59,.18)}
+.card .ic{font-size:2.2rem;width:64px;height:64px;display:grid;place-items:center;background:var(--sky-l);border-radius:18px;margin-bottom:.8rem}
+.card h3{color:var(--teal-d);margin-bottom:.3rem}
+.ex{display:block;font-size:.78rem;font-weight:700;color:#8a4a00;background:#fff1d6;border-radius:8px;padding:.35rem .6rem;margin:.8rem 0 .5rem}
+.price{font-weight:700;color:var(--teal-d)}
+/* hours */
+#hours{background:var(--sky-l)}
+.hours-box{display:grid;gap:2rem;grid-template-columns:1fr;align-items:center}
+@media(min-width:800px){.hours-box{grid-template-columns:1fr 1.2fr}}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(6,50,59,.1)}
+td{padding:.9rem 1.2rem;border-bottom:1px solid var(--sky-l)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--teal-d)}
+td:last-child{text-align:right}
+tr:hover td{background:var(--sky-l)}
+/* reviews */
+#reviews{background:var(--sand)}
+.rating-big{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem;margin-bottom:1.5rem}
+.score{font-size:clamp(4rem,14vw,7rem);font-weight:900;color:var(--teal);line-height:1}
+.stars{color:#f5a623;font-size:1.6rem;letter-spacing:2px}
+.rcards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:1rem}
+.rcard{background:#fff;border-radius:18px;padding:1.2rem;box-shadow:0 6px 18px rgba(6,50,59,.1);transition:transform .25s}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .tagrow{display:block;margin-bottom:.6rem}
+.rcard .tagrow span{display:inline-block;background:var(--sky);color:var(--deep);font-size:.75rem;font-weight:800;padding:.2rem .7rem;border-radius:99px}
+.rcard .stars{font-size:1.2rem;display:block;margin-bottom:.5rem}
+.rcard p{font-style:italic;color:#42626a}
+.rcard strong{display:block;margin-top:.7rem}
+h3.top{margin-top:2.5rem;font-size:1.5rem;color:var(--deep)}
+/* contact */
+#contact{background:linear-gradient(180deg,var(--sky) 0%,var(--sky-l) 100%)}
+.cgrid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cbox{background:#fff;border-radius:22px;padding:1.8rem;box-shadow:0 8px 24px rgba(6,50,59,.1)}
+.cbox .ic{font-size:2rem}
+.cbox h3{color:var(--teal-d);margin:.3rem 0}
+.cbox a.link{color:var(--teal);font-weight:700}
+/* booking */
+#book{background:var(--deep);color:#fff}
+#book h2{color:#fff}
+#book .eyebrow{color:var(--sky)}
+form{background:#fff;color:var(--ink);border-radius:24px;padding:1.8rem;max-width:640px;display:grid;gap:1rem;box-shadow:0 14px 36px rgba(0,0,0,.3)}
+label{font-weight:700;font-size:.9rem;display:grid;gap:.3rem}
+input,textarea,select{font:inherit;padding:.75rem .9rem;border:2px solid var(--sky);border-radius:12px;background:var(--sky-l);color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--teal)}
+.two{display:grid;gap:1rem;grid-template-columns:1fr}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+#demoMsg{display:none;background:#fff1d6;color:#7a3d00;font-weight:700;padding:.8rem 1rem;border-radius:12px}
+.note{font-size:.85rem;color:var(--sky);margin-top:1rem;max-width:640px}
+footer{background:#041f25;color:#cfe7ee;text-align:center;padding:2.2rem 1rem 2.5rem;font-size:.9rem}
+footer strong{display:block;font-size:1.2rem;color:#fff;margin-bottom:.3rem}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--coral);color:#fff;text-align:center;font-weight:800;font-size:1.1rem;padding:1rem;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.25)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.bubble{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Mao's Salon. Not their official website.</div>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="logo">🌊 Mao's Salon</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="home">
+  <div class="bubble" style="width:220px;height:220px;right:-60px;top:40px"></div>
+  <div class="bubble" style="width:120px;height:120px;right:25%;bottom:90px;animation-delay:2s"></div>
+  <div class="bubble" style="width:70px;height:70px;right:12%;top:55%;animation-delay:4s"></div>
+  <div class="wrap">
+    <span class="badge"><span class="st">★</span> 4.6 · 141 Google reviews</span>
+    <h1>Mao's Salon</h1>
+    <p class="tag">Fresh looks, relaxed vibes and a breezy visit in Elizabeth, NJ.</p>
+    <div class="btns">
+      <a class="btn btn-primary" href="#book">📅 Book Now</a>
+      <a class="btn btn-light" href="tel:+19083535988">📞 (908) 353-5988</a>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ead2" d="M0 40c120 30 240 30 360 0s240-30 360 0 240 30 360 0 240-30 360 0v40H0z"/></svg>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 class="fade">Hair care, your way</h2>
+    <p class="example-label">Example layout - the owner's real services and prices go here</p>
+    <div class="grid">
+      <div class="card fade"><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ic">💨</div><h3>Blowout</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ic">🌿</div><h3>Treatments</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ic">👧</div><h3>Kids' Cuts</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ic">💇</div><h3>Special Occasion Styling</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#e8f6fc" d="M0 30c140 40 280 40 420 10s280-40 420-10 280 40 420 10l180-20v60H0z"/></svg>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="hours-box">
+      <div class="fade">
+        <span class="eyebrow">Hours</span>
+        <h2>When to visit</h2>
+        <p class="lead">Open seven days a week. Call ahead to confirm before heading over.</p>
+        <a class="btn btn-teal" href="tel:+19083535988">📞 Call (908) 353-5988</a>
+      </div>
+      <table class="fade">
+        <tr><td>Monday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Saturday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Sunday</td><td>10:00 AM – 3:00 PM</td></tr>
+      </table>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ead2" d="M0 40c120-30 240-30 360 0s240 30 360 0 240-30 360 0 240 30 360 0v40H0z"/></svg>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2 class="fade">Rated 4.6 on Google</h2>
+    <div class="rating-big fade">
+      <div class="score">4.6</div>
+      <div>
+        <div class="stars" aria-label="4.6 out of 5 stars">★★★★★</div>
+        <p>based on 141 Google reviews</p>
+      </div>
+    </div>
+    <a class="btn btn-teal" target="_blank" rel="noopener" href="https://maps.google.com/?cid=8163928897493452227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">⭐ Read all 141 reviews on Google</a>
+    <h3 class="top">Top reviews</h3>
+    <p class="example-label" style="margin-top:.6rem;margin-bottom:.4rem">Example layout - your best reviews show here</p>
+    <div class="rcards">
+      <div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#bfe6f5" d="M0 30c140 40 280 40 420 10s280-40 420-10 280 40 420 10l180-20v60H0z"/></svg>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2 class="fade">Find Mao's Salon</h2>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="ic">📍</div><h3>Address</h3><p>325 Morris Ave<br>Elizabeth, NJ 07208, USA</p><p style="margin-top:.8rem"><a class="link" target="_blank" rel="noopener" href="https://maps.google.com/?cid=8163928897493452227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions →</a></p></div>
+      <div class="cbox fade"><div class="ic">📞</div><h3>Phone</h3><p><a class="link" href="tel:+19083535988" style="font-size:1.3rem">(908) 353-5988</a></p><p style="margin-top:.8rem">Tap to call from your phone.</p></div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#06323b" d="M0 40c120 30 240 30 360 0s240-30 360 0 240 30 360 0 240-30 360 0v40H0z"/></svg>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Booking</span>
+    <h2 class="fade">Book an appointment</h2>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn btn-primary" id="demoBtn">Request appointment</button>
+      <div id="demoMsg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Mao's Salon</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+19083535988">📞 Call (908) 353-5988</a>
+
+<script>
+var btn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')})});
+document.getElementById('demoBtn').addEventListener('click',function(){
+  var m=document.getElementById('demoMsg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('show')})}
+</script>
+</body>
+</html>
