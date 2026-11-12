@@ -1,267 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ERIKA BEAUTY | Nail Salon in Newark, NJ (Sample Homepage Concept)</title>
-<meta name="description" content="Sample homepage concept for ERIKA BEAUTY, Newark, NJ. Not their official website.">
+<title>ERIKA BEAUTY | Nail Salon in Newark, NJ (Sample Concept)</title>
 <style>
 :root{
-  --blush:#fff3f4;
-  --blush2:#fde3e8;
-  --rose:#d65a80;
-  --rose-d:#a93a5f;
-  --plum:#4a1730;
-  --gold:#c99a3b;
-  --gold-l:#f1d68a;
-  --ink:#2e1520;
-  --muted:#6e5560;
-  --card:#ffffff;
-  --shadow:0 10px 30px rgba(120,40,70,.12);
-  --serif:Georgia,"Times New Roman","Palatino Linotype",serif;
+  --green:#123524;
+  --green-deep:#0b2418;
+  --green-mid:#1d4a33;
+  --cream:#f6efdc;
+  --cream-2:#efe5ca;
+  --brass:#b8893b;
+  --brass-light:#e0b869;
+  --ink:#1a2a20;
+  --slab:Rockwell,"Roboto Slab","Bitter","Courier New",Georgia,serif;
   --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--blush);line-height:1.6;font-size:17px;-webkit-text-size-adjust:100%}
-h1,h2,h3{font-family:var(--serif);line-height:1.15}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;padding-bottom:64px}
 a{color:inherit}
-section{scroll-margin-top:64px}
+h1,h2,h3{font-family:var(--slab);line-height:1.1;font-weight:800}
+section{scroll-margin-top:70px}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.stripes{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 16px)}
+.stripes-dark{background-image:repeating-linear-gradient(90deg,rgba(18,53,36,.05) 0 2px,transparent 2px 16px)}
 
 /* banner */
-.banner{background:var(--plum);color:#fbe9c3;text-align:center;font-size:.82rem;padding:8px 12px;letter-spacing:.2px}
+.banner{background:var(--brass);color:var(--green-deep);text-align:center;font-size:13px;font-weight:700;padding:8px 14px;letter-spacing:.2px}
 
 /* nav */
-header.nav{position:sticky;top:0;z-index:50;background:rgba(255,243,244,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,154,59,.35)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-family:var(--serif);font-weight:700;letter-spacing:2px;font-size:1.1rem;color:var(--plum);text-decoration:none;display:flex;align-items:center;gap:8px}
-.logo span.dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:inline-block}
-nav ul{list-style:none;display:flex;gap:6px}
-nav a.lnk{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--plum);transition:.2s}
-nav a.lnk:hover{background:var(--blush2);color:var(--rose-d)}
-.menu-btn{display:none;background:var(--plum);color:#fff;border:0;border-radius:12px;padding:9px 14px;font-size:.95rem;font-weight:700;cursor:pointer}
+header{position:sticky;top:0;z-index:50;background:var(--green-deep);border-bottom:3px solid var(--brass);box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--slab);font-weight:800;color:var(--cream);text-decoration:none;letter-spacing:1.5px;font-size:18px}
+.brand span{color:var(--brass-light)}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;text-decoration:none;color:var(--cream);font-weight:600;padding:8px 14px;border-radius:4px;font-size:15px;transition:background .2s,color .2s}
+.menu a:hover{background:var(--brass);color:var(--green-deep)}
+.burger{display:none;background:none;border:2px solid var(--brass);color:var(--cream);width:44px;height:40px;border-radius:4px;font-size:20px;cursor:pointer}
 @media(max-width:760px){
-  .menu-btn{display:block}
-  nav ul{position:absolute;left:0;right:0;top:60px;background:var(--blush);flex-direction:column;padding:10px 20px 18px;gap:2px;border-bottom:1px solid rgba(201,154,59,.4);box-shadow:0 14px 24px rgba(74,23,48,.15);display:none}
-  nav ul.open{display:flex}
-  nav a.lnk{padding:13px 14px;font-size:1.05rem}
+  .burger{display:block}
+  .menu{position:absolute;left:0;right:0;top:60px;background:var(--green-deep);flex-direction:column;gap:0;padding:8px 20px 16px;border-bottom:3px solid var(--brass);display:none}
+  .menu.open{display:flex}
+  .menu a{padding:14px 6px;border-bottom:1px solid rgba(255,255,255,.1);border-radius:0}
 }
-
-/* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border-radius:999px;font-weight:700;font-size:1.02rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:var(--sans)}
-.btn:hover{transform:translateY(-3px)}
-.btn-primary{background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff;box-shadow:0 10px 22px rgba(169,58,95,.35)}
-.btn-ghost{background:#fff;color:var(--plum);border-color:var(--gold)}
-.btn-gold{background:linear-gradient(135deg,var(--gold-l),var(--gold));color:var(--plum);box-shadow:0 10px 22px rgba(201,154,59,.35)}
 
 /* hero */
-.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 15% 20%,#ffd9e2 0,transparent 45%),radial-gradient(circle at 90% 80%,#f7dfa8 0,transparent 40%),linear-gradient(160deg,#fff3f4,#fbd5de);padding:64px 0 80px;text-align:center}
-.hero .blob{position:absolute;border-radius:50%;opacity:.5;filter:blur(2px)}
-.b1{width:220px;height:220px;background:linear-gradient(135deg,#fff,var(--rose));top:-70px;left:-60px}
-.b2{width:160px;height:160px;background:linear-gradient(135deg,var(--gold-l),var(--gold));bottom:-50px;right:6%}
-.b3{width:70px;height:70px;background:var(--rose);top:30%;right:8%;opacity:.25}
-.hero .wrap{position:relative;z-index:2}
-.eyebrow{display:inline-block;font-size:.8rem;letter-spacing:3px;text-transform:uppercase;color:var(--rose-d);font-weight:700;margin-bottom:14px}
-.hero h1{font-size:clamp(2.8rem,11vw,6rem);color:var(--plum);letter-spacing:2px;text-shadow:0 3px 0 rgba(201,154,59,.25)}
-.hero h1 em{font-style:italic;background:linear-gradient(135deg,var(--gold),#e8b94f);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,3.5vw,1.6rem);color:var(--rose-d);margin:14px auto 22px;max-width:600px}
-.badge{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;background:#fff;border:2px solid var(--gold);border-radius:999px;padding:10px 20px;box-shadow:var(--shadow);font-weight:700;color:var(--plum);margin-bottom:28px}
-.badge .st{color:var(--gold);letter-spacing:2px}
-.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero .nails{font-size:2.4rem;margin-top:34px;letter-spacing:12px;animation:float 4s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-8px)}}
+.hero{background:linear-gradient(135deg,var(--green-deep),var(--green) 55%,var(--green-mid));color:var(--cream);position:relative;overflow:hidden;padding:72px 0 84px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.4fr .8fr;gap:40px;align-items:center}
+.eyebrow{display:inline-block;color:var(--brass-light);letter-spacing:3px;text-transform:uppercase;font-size:13px;font-weight:700;margin-bottom:16px}
+.hero h1{font-size:clamp(44px,9vw,92px);letter-spacing:1px;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--brass-light)}
+.hero p.tag{font-size:clamp(18px,2.6vw,22px);max-width:520px;color:#e6dfc8;margin-bottom:26px}
+.frame{display:inline-flex;align-items:center;gap:14px;border:2px solid var(--brass);outline:2px solid var(--brass);outline-offset:5px;padding:12px 20px;margin:6px 6px 28px 6px;background:rgba(0,0,0,.18)}
+.frame .big{font-family:var(--slab);font-size:42px;font-weight:800;color:var(--brass-light);line-height:1}
+.frame .stars{color:var(--brass-light);letter-spacing:2px;font-size:18px;line-height:1.1}
+.frame small{display:block;font-size:13px;color:#e6dfc8}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;font-family:var(--slab);padding:15px 28px;border-radius:4px;border:2px solid var(--brass);font-size:17px;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;letter-spacing:.5px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.25)}
+.btn-brass{background:var(--brass);color:var(--green-deep)}
+.btn-brass:hover{background:var(--brass-light)}
+.btn-line{background:transparent;color:var(--cream)}
+.btn-green{background:var(--green);color:var(--cream);border-color:var(--green)}
+.art{display:flex;justify-content:center}
+.arch{width:min(280px,70vw);aspect-ratio:3/4;border:3px solid var(--brass);border-radius:200px 200px 8px 8px;background:radial-gradient(circle at 50% 30%,var(--green-mid),var(--green-deep));display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 0 8px rgba(184,137,59,.15)}
+.arch svg{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.arch .emo{font-size:96px;position:relative;filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.art{order:-1;justify-content:flex-start}.arch{width:130px;border-radius:80px 80px 6px 6px}.arch .emo{font-size:52px}.hero{padding:40px 0 56px}}
 
 /* sections */
-.sec{padding:76px 0}
-.sec h2{font-size:clamp(2rem,6vw,3rem);color:var(--plum);text-align:center}
-.sec .sub{text-align:center;color:var(--muted);max-width:620px;margin:10px auto 0}
-.rule{width:90px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--gold-l),var(--gold),var(--rose));margin:16px auto 0}
-.example-tag{display:inline-block;background:#fff6dc;border:1.5px dashed var(--gold);color:#7a5200;font-weight:700;font-size:.82rem;padding:6px 14px;border-radius:999px}
-.center{text-align:center}
+.sec{padding:84px 0}
+.sec-head{margin-bottom:38px}
+.kicker{color:var(--brass);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:13px;margin-bottom:10px}
+.sec h2{font-size:clamp(32px,6vw,52px);color:var(--green);margin-bottom:12px}
+.sec-head p{max-width:640px}
+.rule{width:80px;height:5px;background:var(--brass);margin:14px 0 18px;border-radius:2px}
+.example{display:inline-block;background:var(--green);color:var(--brass-light);border-left:4px solid var(--brass);font-size:13px;font-weight:700;padding:6px 12px;letter-spacing:.3px}
 
 /* services */
-#services{background:#fff}
-.grid{display:grid;gap:22px;margin-top:38px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:linear-gradient(180deg,#fff,var(--blush));border:1px solid var(--blush2);border-radius:26px;padding:26px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-6px);box-shadow:0 18px 38px rgba(120,40,70,.2)}
-.ico{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;font-size:1.9rem;background:linear-gradient(135deg,var(--blush2),#ffd0dc);margin-bottom:14px}
-.card h3{font-size:1.4rem;color:var(--plum);margin:12px 0 6px}
-.card p{color:var(--muted);font-size:.97rem}
-.price{margin-top:12px;font-weight:700;color:var(--rose-d)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:#fffaf0;border:2px solid var(--green);border-radius:6px;padding:26px;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:6px 6px 0 var(--brass)}
+.card:hover{transform:translate(-3px,-5px);box-shadow:9px 11px 0 var(--brass)}
+.card .ico{width:60px;height:60px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:16px;border:3px solid var(--brass)}
+.card h3{font-size:24px;color:var(--green);margin-bottom:8px}
+.card p{font-size:15px;margin-bottom:14px}
+.price{font-family:var(--slab);font-weight:700;color:var(--brass);margin:10px 0 14px}
+.card .example{font-size:12px}
 
 /* hours */
-#hours{background:linear-gradient(160deg,var(--plum),#7a2a4f);color:#fff}
-#hours h2{color:#fff}
-.hours-box{max-width:560px;margin:36px auto 0;background:#fff;color:var(--ink);border-radius:26px;padding:12px 26px;box-shadow:0 18px 40px rgba(0,0,0,.3)}
-table{width:100%;border-collapse:collapse}
-td,th{padding:14px 4px;text-align:left;border-bottom:1px solid var(--blush2);font-size:1.02rem}
-tr:last-child td,tr:last-child th{border-bottom:0}
-th{font-weight:700;color:var(--plum)}
-td{text-align:right;color:var(--ink)}
-tr.closed td{color:var(--rose-d);font-weight:700}
+.hours{background:var(--green);color:var(--cream)}
+.hours h2{color:var(--cream)}
+.hours .kicker{color:var(--brass-light)}
+.hours-box{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+table{width:100%;border-collapse:collapse;background:rgba(0,0,0,.22);border:2px solid var(--brass);font-size:17px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid rgba(224,184,105,.3)}
+th{font-family:var(--slab);color:var(--brass-light);font-weight:700;width:42%}
+tr:last-child th,tr:last-child td{border-bottom:none}
+tr.closed td{color:#f0b9a5;font-weight:700}
+@media(max-width:760px){.hours-box{grid-template-columns:1fr}th,td{padding:12px 12px;font-size:15px}}
 
 /* reviews */
-.rating-box{margin:34px auto 0;max-width:520px;background:#fff;border-radius:30px;padding:30px 20px;text-align:center;box-shadow:var(--shadow);border:2px solid var(--gold-l)}
-.big{font-family:var(--serif);font-size:5.5rem;line-height:1;color:var(--plum);font-weight:700}
-.stars{color:var(--gold);letter-spacing:4px;font-size:1.8rem;margin:6px 0}
-.rating-box p{color:var(--muted);font-weight:600;margin-bottom:18px}
-.row-label{text-align:center;margin-top:54px}
-.row-label h3{font-size:1.7rem;color:var(--plum);margin-bottom:10px}
-.rev-row{display:grid;gap:18px;margin-top:22px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
-.rev{background:#fff;border-radius:22px;padding:20px;box-shadow:var(--shadow);border:1px dashed var(--gold);transition:transform .25s;display:flex;flex-direction:column;gap:10px}
-.rev:hover{transform:translateY(-5px)}
-.rev .ex-row{display:block}
-.rev .ex-badge{display:inline-block;background:var(--plum);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:999px}
-.rev .stars{font-size:1.2rem;margin:0;letter-spacing:2px;line-height:1.3}
-.rev p{color:var(--muted);font-style:italic}
-.rev .nm{font-weight:700;color:var(--plum);font-style:normal}
+.rate-box{display:flex;flex-wrap:wrap;align-items:center;gap:28px;background:var(--green);color:var(--cream);padding:30px;border-radius:6px;border:3px solid var(--brass);margin-bottom:40px}
+.rate-num{font-family:var(--slab);font-size:clamp(72px,16vw,120px);font-weight:800;color:var(--brass-light);line-height:.9}
+.rate-stars{color:var(--brass-light);font-size:34px;letter-spacing:4px}
+.rate-box p{font-size:18px;margin:6px 0 16px}
+.rev-label{margin:8px 0 18px}
+.rev-title{font-size:30px;color:var(--green);margin-bottom:10px}
+.rev-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:14px}
+.rev{background:#fffaf0;border:2px dashed var(--brass);border-radius:6px;padding:18px;transition:transform .25s,box-shadow .25s}
+.rev:hover{transform:translateY(-5px);box-shadow:0 10px 18px rgba(18,53,36,.2)}
+.rev .badge-row{display:block;margin-bottom:12px}
+.rev .badge{display:inline-block;background:var(--brass);color:var(--green-deep);font-size:12px;font-weight:800;padding:3px 10px;border-radius:3px;letter-spacing:1px;text-transform:uppercase}
+.rev .st{display:block;color:var(--brass);font-size:20px;letter-spacing:2px;margin-bottom:10px}
+.rev p{font-size:15px;margin-bottom:12px;color:#44524a}
+.rev strong{font-family:var(--slab);color:var(--green);font-size:15px}
 
 /* contact */
-#contact{background:#fff}
-.contact-grid{display:grid;gap:22px;margin-top:38px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.info{background:var(--blush);border-radius:26px;padding:28px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--blush2);transition:transform .25s}
-.info:hover{transform:translateY(-5px)}
-.info .ico{margin:0 auto 12px}
-.info h3{color:var(--plum);font-size:1.3rem;margin-bottom:6px}
-.info a.plain{color:var(--rose-d);font-weight:700;text-decoration:none;font-size:1.1rem}
-.info .btn{margin-top:14px}
+.contact{background:var(--cream-2)}
+.c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.c-card{background:var(--green);color:var(--cream);padding:28px;border-radius:6px;border-bottom:6px solid var(--brass)}
+.c-card .i{font-size:32px;margin-bottom:10px}
+.c-card h3{color:var(--brass-light);font-size:22px;margin-bottom:8px}
+.c-card a{color:var(--cream)}
+.c-card .btn{margin-top:14px;color:var(--green-deep)}
 
 /* booking */
-#book{background:linear-gradient(160deg,#fde3e8,#fff3f4 60%,#f8e6bd)}
-form{max-width:620px;margin:36px auto 0;background:#fff;border-radius:28px;padding:30px 24px;box-shadow:var(--shadow);border:2px solid var(--gold-l);display:grid;gap:16px}
-.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
-@media(max-width:560px){.two{grid-template-columns:1fr}}
-label{display:block;font-weight:700;color:var(--plum);font-size:.92rem;margin-bottom:6px}
-input,select,textarea{width:100%;padding:13px 14px;border:2px solid var(--blush2);border-radius:14px;font:inherit;color:var(--ink);background:var(--blush);transition:border .2s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rose);background:#fff}
-textarea{min-height:100px;resize:vertical}
-#demoMsg{display:none;background:#fff6dc;border:2px solid var(--gold);color:#6a4600;padding:14px;border-radius:14px;font-weight:700;text-align:center}
-.note{text-align:center;color:var(--muted);font-size:.9rem;margin-top:16px}
+.book{background:linear-gradient(135deg,var(--green-deep),var(--green));color:var(--cream)}
+.book h2{color:var(--cream)}
+.book .kicker{color:var(--brass-light)}
+form{background:var(--cream);color:var(--ink);padding:30px;border-radius:6px;border:3px solid var(--brass);max-width:680px;display:grid;gap:16px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+label{font-weight:700;font-size:14px;color:var(--green);display:block;margin-bottom:5px;font-family:var(--slab)}
+input,select,textarea{width:100%;font:inherit;padding:12px;border:2px solid var(--green);border-radius:4px;background:#fffdf7;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--brass-light);outline-offset:1px}
+.msg{display:none;background:var(--green);color:var(--brass-light);font-weight:700;padding:14px;border-left:5px solid var(--brass)}
+.msg.show{display:block}
+.note{font-size:14px;color:#d9d2ba;margin-top:14px;max-width:680px}
 
 /* footer */
-footer{background:var(--plum);color:#f6dfe6;text-align:center;padding:36px 20px 40px}
-footer strong{font-family:var(--serif);font-size:1.4rem;letter-spacing:2px;color:#fff;display:block;margin-bottom:6px}
-footer p{font-size:.92rem;max-width:560px;margin:0 auto}
+footer{background:var(--green-deep);color:var(--cream);text-align:center;padding:40px 20px;border-top:4px solid var(--brass)}
+footer strong{font-family:var(--slab);font-size:22px;letter-spacing:2px;display:block;margin-bottom:8px;color:var(--brass-light)}
+footer p{font-size:14px;color:#d9d2ba}
 
 /* call bar */
-.callbar{display:none}
-@media(max-width:760px){
-  body{padding-bottom:68px}
-  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:linear-gradient(135deg,var(--rose),var(--rose-d));color:#fff;text-decoration:none;font-weight:800;font-size:1.1rem;justify-content:center;align-items:center;gap:10px;padding:18px;box-shadow:0 -6px 20px rgba(74,23,48,.3)}
-  .sec{padding:60px 0}
-}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--brass);color:var(--green-deep);text-align:center;text-decoration:none;font-family:var(--slab);font-weight:800;font-size:18px;padding:16px;border-top:3px solid var(--green-deep)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
 
-/* reveal */
-.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.js .reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}.hero .nails{animation:none}}
+/* fade in */
+.js .fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .fade{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
-<script>document.body.classList.add('js');</script>
 
 <div class="banner">Sample homepage concept for ERIKA BEAUTY. Not their official website.</div>
 
-<header class="nav">
-  <div class="wrap">
-    <a href="#home" class="logo"><span class="dot"></span>ERIKA BEAUTY</a>
-    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuList">☰ Menu</button>
-    <nav aria-label="Main">
-      <ul id="menuList">
-        <li><a class="lnk" href="#home">Home</a></li>
-        <li><a class="lnk" href="#services">Services</a></li>
-        <li><a class="lnk" href="#hours">Hours</a></li>
-        <li><a class="lnk" href="#reviews">Reviews</a></li>
-        <li><a class="lnk" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">ERIKA <span>BEAUTY</span></a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
 </header>
 
-<main>
-<section id="home" class="hero">
-  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<section id="home" class="hero stripes">
   <div class="wrap">
-    <span class="eyebrow">Nail Salon · Newark, NJ</span>
-    <h1>ERIKA BEAUTY</h1>
-    <p class="tag">Polished nails, pretty details.</p>
-    <div class="badge"><span class="st">★★★★★</span><span>5 rating</span><span>·</span><span>54 Google reviews</span></div>
-    <div class="cta">
-      <a class="btn btn-primary" href="#book">💅 Book Now</a>
-      <a class="btn btn-ghost" href="tel:+18623152416">📞 Call (862) 315-2416</a>
+    <div>
+      <span class="eyebrow">Nail salon · Newark, NJ</span>
+      <h1>ERIKA BEAUTY</h1>
+      <p class="tag">Polished nails, a calm space and a friendly welcome.</p>
+      <div class="frame" aria-label="Google rating 5 out of 5 from 54 reviews">
+        <span class="big">5</span>
+        <span><span class="stars">★★★★★</span><small>Google rating · 54 reviews</small></span>
+      </div>
+      <div class="btns">
+        <a class="btn btn-brass" href="#book">Book Now</a>
+        <a class="btn btn-line" href="tel:+18623152416">📞 Call (862) 315-2416</a>
+      </div>
     </div>
-    <div class="nails" aria-hidden="true">💅 ✨ 💖</div>
+    <div class="art" aria-hidden="true">
+      <div class="arch">
+        <svg viewBox="0 0 200 260" fill="none" stroke="#e0b869" stroke-width="1.5">
+          <path d="M100 250V120M100 180C70 170 55 150 52 120c30 5 46 25 48 60zM100 150c28-8 44-28 46-58-28 4-44 22-46 58zM100 110C80 100 72 80 76 56c20 8 28 28 24 54z"/>
+        </svg>
+        <span class="emo">💅</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="services" class="sec">
+<section id="services" class="sec stripes-dark">
   <div class="wrap">
-    <h2 class="reveal">Services</h2>
-    <div class="rule"></div>
-    <p class="center reveal" style="margin-top:16px"><span class="example-tag">Example layout - the owner's real services and prices go here</span></p>
-    <p class="sub reveal">A sample of how a service menu could look on this page.</p>
+    <div class="sec-head fade">
+      <div class="kicker">What to expect</div>
+      <h2>Services</h2>
+      <div class="rule"></div>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+    </div>
     <div class="grid">
-      <article class="card reveal">
+      <article class="card fade">
         <div class="ico">💅</div>
-        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
         <h3>Classic Manicure</h3>
-        <p>Nail shaping, cuticle care and polish, laid out as an example service card.</p>
+        <p>Nail shaping, cuticle care and polish. A sample description for this card.</p>
         <div class="price">Price: add yours</div>
+        <span class="example">Example layout - the owner's real services and prices go here</span>
       </article>
-      <article class="card reveal">
+      <article class="card fade">
         <div class="ico">🦶</div>
-        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
         <h3>Classic Pedicure</h3>
-        <p>A relaxing foot-care service, shown here as an example card.</p>
+        <p>A relaxing foot soak, care and polish. A sample description for this card.</p>
         <div class="price">Price: add yours</div>
+        <span class="example">Example layout - the owner's real services and prices go here</span>
       </article>
-      <article class="card reveal">
+      <article class="card fade">
         <div class="ico">✨</div>
-        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
         <h3>Gel Polish</h3>
-        <p>Long-wear shiny color, listed as an example of a typical nail service.</p>
+        <p>Long-lasting shiny color. A sample description for this card.</p>
         <div class="price">Price: add yours</div>
+        <span class="example">Example layout - the owner's real services and prices go here</span>
       </article>
-      <article class="card reveal">
-        <div class="ico">💎</div>
-        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
-        <h3>Acrylic or Extensions</h3>
-        <p>Length and shape options, shown as a placeholder service description.</p>
-        <div class="price">Price: add yours</div>
-      </article>
-      <article class="card reveal">
+      <article class="card fade">
         <div class="ico">🎨</div>
-        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
         <h3>Nail Art</h3>
-        <p>Custom designs and decorations, included as an example card layout.</p>
+        <p>Custom designs and accents. A sample description for this card.</p>
         <div class="price">Price: add yours</div>
+        <span class="example">Example layout - the owner's real services and prices go here</span>
       </article>
-      <article class="card reveal">
-        <div class="ico">🌸</div>
-        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
-        <h3>Polish Change</h3>
-        <p>A quick color refresh, shown as an example of a simple add-on service.</p>
+      <article class="card fade">
+        <div class="ico">💎</div>
+        <h3>Extensions</h3>
+        <p>Added length and shape options. A sample description for this card.</p>
         <div class="price">Price: add yours</div>
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card fade">
+        <div class="ico">🌿</div>
+        <h3>Nail Repair &amp; Removal</h3>
+        <p>Fixes for broken nails and gentle removal. A sample description for this card.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example">Example layout - the owner's real services and prices go here</span>
       </article>
     </div>
   </div>
 </section>
 
-<section id="hours" class="sec">
-  <div class="wrap">
-    <h2 class="reveal">Hours</h2>
-    <div class="rule"></div>
-    <div class="hours-box reveal">
+<section id="hours" class="sec hours stripes">
+  <div class="wrap hours-box">
+    <div class="fade">
+      <div class="kicker">Plan your visit</div>
+      <h2>Hours</h2>
+      <div class="rule"></div>
+      <p>Opening hours for ERIKA BEAUTY in Newark, NJ.</p>
+      <p style="margin-top:12px"><a class="btn btn-brass" href="tel:+18623152416">📞 Call (862) 315-2416</a></p>
+    </div>
+    <div class="fade">
       <table>
         <tbody>
-          <tr><th scope="row">Monday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
-          <tr><th scope="row">Tuesday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
-          <tr><th scope="row">Wednesday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
-          <tr><th scope="row">Thursday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
-          <tr><th scope="row">Friday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
-          <tr><th scope="row">Saturday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
-          <tr class="closed"><th scope="row">Sunday:</th><td>Closed</td></tr>
+          <tr><th>Monday:</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;7:00&#8239;PM</td></tr>
+          <tr><th>Tuesday:</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;7:00&#8239;PM</td></tr>
+          <tr><th>Wednesday:</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;7:00&#8239;PM</td></tr>
+          <tr><th>Thursday:</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;7:00&#8239;PM</td></tr>
+          <tr><th>Friday:</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;7:00&#8239;PM</td></tr>
+          <tr><th>Saturday:</th><td>10:00&#8239;AM&#8201;&ndash;&#8201;7:00&#8239;PM</td></tr>
+          <tr class="closed"><th>Sunday:</th><td>Closed</td></tr>
         </tbody>
       </table>
     </div>
@@ -270,107 +282,111 @@ footer p{font-size:.92rem;max-width:560px;margin:0 auto}
 
 <section id="reviews" class="sec">
   <div class="wrap">
-    <h2 class="reveal">Reviews</h2>
-    <div class="rule"></div>
-    <div class="rating-box reveal">
-      <div class="big">5</div>
-      <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-      <p>based on 54 Google reviews</p>
-      <a class="btn btn-primary" href="https://maps.google.com/?cid=17377186339944925839&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 54 reviews on Google</a>
+    <div class="sec-head fade">
+      <div class="kicker">What people say</div>
+      <h2>Reviews</h2>
+      <div class="rule"></div>
     </div>
-
-    <div class="row-label reveal">
-      <h3>Top reviews</h3>
-      <span class="example-tag">Example layout - your best reviews show here</span>
+    <div class="rate-box fade">
+      <div class="rate-num">5</div>
+      <div>
+        <div class="rate-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>based on 54 Google reviews</p>
+        <a class="btn btn-brass" href="https://maps.google.com/?cid=17377186339944925839&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 54 reviews on Google</a>
+      </div>
     </div>
+    <h3 class="rev-title fade">Top reviews</h3>
+    <div class="rev-label fade"><span class="example">Example layout - your best reviews show here</span></div>
     <div class="rev-row">
-      <article class="rev reveal"><div class="ex-row"><span class="ex-badge">Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
-      <article class="rev reveal"><div class="ex-row"><span class="ex-badge">Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
-      <article class="rev reveal"><div class="ex-row"><span class="ex-badge">Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
-      <article class="rev reveal"><div class="ex-row"><span class="ex-badge">Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
-      <article class="rev reveal"><div class="ex-row"><span class="ex-badge">Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></article>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><span class="st">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><span class="st">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><span class="st">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><span class="st">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><span class="st">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="sec">
+<section id="contact" class="sec contact stripes-dark">
   <div class="wrap">
-    <h2 class="reveal">Contact</h2>
-    <div class="rule"></div>
-    <div class="contact-grid">
-      <div class="info reveal">
-        <div class="ico">📍</div>
+    <div class="sec-head fade">
+      <div class="kicker">Find the salon</div>
+      <h2>Contact</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="c-grid">
+      <div class="c-card fade">
+        <div class="i">📍</div>
         <h3>Address</h3>
-        <p>183 Adams St<br>Newark, NJ 07105, USA</p>
-        <a class="btn btn-gold" href="https://maps.google.com/?cid=17377186339944925839&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
+        <p>ERIKA BEAUTY<br>183 Adams St<br>Newark, NJ 07105, USA</p>
+        <a class="btn btn-brass" href="https://maps.google.com/?cid=17377186339944925839&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
       </div>
-      <div class="info reveal">
-        <div class="ico">📞</div>
+      <div class="c-card fade">
+        <div class="i">📞</div>
         <h3>Phone</h3>
-        <p><a class="plain" href="tel:+18623152416">(862) 315-2416</a></p>
-        <a class="btn btn-primary" href="tel:+18623152416">Tap to call</a>
+        <p><a href="tel:+18623152416">(862) 315-2416</a></p>
+        <a class="btn btn-brass" href="tel:+18623152416">Tap to call</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="book" class="sec">
+<section id="book" class="sec book stripes">
   <div class="wrap">
-    <h2 class="reveal">Book an appointment</h2>
-    <div class="rule"></div>
-    <form id="bookForm" class="reveal" novalidate>
-      <div class="two">
-        <div><label for="fn">Name</label><input id="fn" name="name" type="text" autocomplete="name"></div>
-        <div><label for="fp">Phone</label><input id="fp" name="phone" type="tel" autocomplete="tel"></div>
+    <div class="sec-head fade">
+      <div class="kicker">Reserve a time</div>
+      <h2>Book an appointment</h2>
+      <div class="rule"></div>
+    </div>
+    <form id="bookForm" class="fade" onsubmit="return false" novalidate>
+      <div class="row2">
+        <div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
       </div>
-      <div class="two">
-        <div><label for="fd">Preferred day</label>
-          <select id="fd" name="day">
-            <option value="">Choose a day</option>
-            <option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option>
-          </select>
+      <div class="row2">
+        <div><label for="d">Preferred day</label>
+          <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select>
         </div>
-        <div><label for="ft">Preferred time</label><input id="ft" name="time" type="time"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="time"></div>
       </div>
-      <div><label for="fnotes">Notes</label><textarea id="fnotes" name="notes"></textarea></div>
-      <button type="button" class="btn btn-primary" id="demoBtn">Request appointment</button>
-      <div id="demoMsg" role="status" aria-live="polite">Demo only: online booking is not connected yet.</div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn btn-green" id="bookBtn">Request appointment</button>
+      <div class="msg" id="msg" role="status"></div>
     </form>
     <p class="note">This is a sample of how online booking could work.</p>
   </div>
 </section>
-</main>
 
 <footer>
   <strong>ERIKA BEAUTY</strong>
   <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
-<a class="callbar" href="tel:+18623152416">📞 Call</a>
+<a class="callbar" href="tel:+18623152416">📞 Call (862) 315-2416</a>
 
 <script>
-(function(){
-  var btn=document.getElementById('menuBtn'),list=document.getElementById('menuList');
-  btn.addEventListener('click',function(){
-    var o=list.classList.toggle('open');
-    btn.setAttribute('aria-expanded',o);
-    btn.textContent=o?'✕ Close':'☰ Menu';
-  });
-  list.addEventListener('click',function(e){
-    if(e.target.tagName==='A'){list.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰ Menu';}
-  });
-  document.getElementById('demoBtn').addEventListener('click',function(){
-    document.getElementById('demoMsg').style.display='block';
-  });
-  document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();});
-  var els=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(es){
-      es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
-    },{threshold:.12});
-    els.forEach(function(el){io.observe(el);});
-  }else{els.forEach(function(el){el.classList.add('in');});}
-})();
+document.documentElement.classList.add('js');
+var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',function(){
+  var o=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',o);
+  burger.textContent=o?'✕':'☰';
+});
+menu.querySelectorAll('a').forEach(function(a){
+  a.addEventListener('click',function(){menu.classList.remove('open');burger.textContent='☰';burger.setAttribute('aria-expanded','false');});
+});
+document.getElementById('bookBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.classList.add('show');
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('in');});}
 </script>
 </body>
 </html>
