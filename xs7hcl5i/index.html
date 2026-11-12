@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: BOLD BRUTALIST -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A&amp;L The Beauty Room - Sample Homepage Concept</title>
+<style>
+:root{--y:#FFE600;--k:#0a0a0a;--w:#fff;--p:#ff3d9a;--b:4px solid var(--k);--sh:8px 8px 0 var(--k)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Arial Black","Helvetica Neue",Impact,Arial,sans-serif;background:var(--y);color:var(--k);line-height:1.45;padding-bottom:70px}
+body *{font-family:inherit}
+p,td,li,label,input,select,textarea,.body{font-family:Arial,Helvetica,sans-serif;font-weight:600}
+a{color:inherit}
+.banner{background:var(--k);color:var(--y);text-align:center;font-size:.78rem;padding:8px 12px;text-transform:uppercase;letter-spacing:.05em;font-family:Arial,sans-serif;font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:var(--w);border-bottom:var(--b);display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.logo{font-size:1.1rem;text-transform:uppercase;text-decoration:none;background:var(--k);color:var(--y);padding:4px 10px}
+.menu{display:none;list-style:none;gap:6px}
+.menu a{display:block;text-decoration:none;text-transform:uppercase;font-weight:900;padding:8px 12px;border:3px solid transparent;font-size:.9rem}
+.menu a:hover{border-color:var(--k);background:var(--y)}
+.burger{background:var(--y);border:3px solid var(--k);box-shadow:3px 3px 0 var(--k);font-weight:900;padding:8px 12px;text-transform:uppercase;cursor:pointer;font-size:.85rem}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--w);border-bottom:var(--b);padding:10px}
+@media(min-width:800px){.menu{display:flex}.burger{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+section{padding:64px 18px;border-bottom:var(--b)}
+.wrap{max-width:1100px;margin:auto}
+h1{font-size:clamp(2.6rem,12vw,6.5rem);line-height:.92;text-transform:uppercase;letter-spacing:-.03em}
+h1 span{background:var(--k);color:var(--y);padding:0 .1em;display:inline-block;transform:rotate(-1.5deg);box-shadow:8px 8px 0 var(--p)}
+h2{font-size:clamp(2rem,8vw,3.8rem);text-transform:uppercase;line-height:1;margin-bottom:18px;letter-spacing:-.02em}
+h2 mark{background:var(--k);color:var(--y);padding:0 .15em}
+.tag{font-size:1.2rem;max-width:560px;margin:24px 0;font-family:Arial,sans-serif;font-weight:700}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--w);border:var(--b);box-shadow:6px 6px 0 var(--k);padding:10px 16px;font-weight:900;margin-bottom:10px;transform:rotate(1.5deg)}
+.stars{color:var(--k);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;text-transform:uppercase;font-weight:900;font-size:1.1rem;padding:16px 26px;border:var(--b);box-shadow:var(--sh);background:var(--k);color:var(--y);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn.alt{background:var(--w);color:var(--k)}
+.btn.pink{background:var(--p);color:var(--k)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--k)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--k)}
+.hero{position:relative;overflow:hidden;padding-top:56px}
+.hero .deco{position:absolute;right:-40px;top:30px;width:200px;height:200px;border:var(--b);background:var(--p);border-radius:50%;box-shadow:var(--sh);opacity:.9;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+.marq{background:var(--k);color:var(--y);overflow:hidden;white-space:nowrap;border-bottom:var(--b);padding:10px 0;text-transform:uppercase;font-weight:900}
+.marq div{display:inline-block;animation:mq 22s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.note{display:inline-block;background:var(--k);color:var(--y);padding:8px 12px;font-size:.85rem;font-weight:800;text-transform:uppercase;font-family:Arial,sans-serif;margin-bottom:22px}
+.grid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:700px){.grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:22px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--k)}
+.card .ic{font-size:2.4rem;display:inline-block;background:var(--y);border:3px solid var(--k);padding:6px 12px;margin-bottom:12px}
+.card h3{text-transform:uppercase;font-size:1.3rem;margin-bottom:8px}
+.card p{margin-bottom:10px}
+.ex{display:block;font-size:.72rem;text-transform:uppercase;background:var(--p);border:3px solid var(--k);padding:5px 8px;font-weight:800;font-family:Arial,sans-serif;margin-top:10px}
+.price{font-weight:800;font-family:Arial,sans-serif}
+#hours,#contact{background:var(--w)}
+table{width:100%;max-width:640px;border-collapse:collapse;border:var(--b);box-shadow:var(--sh);background:var(--y)}
+td{padding:14px 16px;border-bottom:3px solid var(--k);font-size:1.05rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:900;text-transform:uppercase;font-family:"Arial Black",Arial,sans-serif}
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:24px;background:var(--w);border:var(--b);box-shadow:var(--sh);padding:24px;margin-bottom:28px}
+.rate .num{font-size:clamp(4rem,18vw,7rem);line-height:1;font-weight:900}
+.rate .stars{font-size:2rem}
+.rcard{background:var(--w);border:var(--b);box-shadow:6px 6px 0 var(--k);padding:18px}
+.rcard .tagrow{display:block;margin-bottom:10px}
+.rcard .tagrow span{display:inline-block;background:var(--k);color:var(--y);font-size:.75rem;text-transform:uppercase;padding:4px 10px;font-weight:800;font-family:Arial,sans-serif}
+.rcard .stars{font-size:1.4rem;display:block;margin-bottom:8px}
+.rcard p{font-style:italic;margin-bottom:10px}
+.rows{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:700px){.rows{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rows{grid-template-columns:repeat(5,1fr)}}
+.cgrid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:800px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+.big{font-size:1.3rem;font-family:Arial,sans-serif;font-weight:800}
+form{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:24px;max-width:700px;display:grid;gap:16px}
+label{display:block;text-transform:uppercase;font-size:.85rem;font-weight:800;margin-bottom:4px}
+input,select,textarea{width:100%;padding:12px;border:3px solid var(--k);background:var(--y);font-size:1rem;color:var(--k);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:4px solid var(--p)}
+.two{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:var(--k);color:var(--y);padding:14px;font-weight:800;border:3px solid var(--k);font-family:Arial,sans-serif}
+.small{font-size:.9rem;margin-top:14px;max-width:700px}
+footer{background:var(--k);color:var(--y);padding:36px 18px;text-align:center}
+footer strong{display:block;font-size:1.5rem;text-transform:uppercase;margin-bottom:8px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:block;text-align:center;background:var(--p);color:var(--k);border-top:var(--b);padding:16px;text-decoration:none;font-weight:900;text-transform:uppercase;font-size:1.1rem}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.marq div{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for A&amp;L The Beauty Room. Not their official website.</div>
+<nav>
+<a class="logo" href="#home">A&amp;L Beauty Room</a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu ☰</button>
+<ul class="menu" id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<div class="deco" aria-hidden="true"></div>
+<div class="wrap">
+<div class="badge"><span class="stars">★★★★★</span> 4.8 · 67 Google reviews</div>
+<h1><span>A&amp;L The Beauty Room</span></h1>
+<p class="tag">💅 Nails, polish and self-care in Elizabeth, NJ. Come in and treat yourself.</p>
+<div class="btns">
+<a class="btn" href="#book">Book Now</a>
+<a class="btn pink" href="tel:+19083279010">📞 Call (908) 327-9010</a>
+</div>
+</div>
+</section>
+<div class="marq" aria-hidden="true"><div>💅 Nails ★ Polish ★ Self-care ★ Elizabeth NJ ★ 💅 Nails ★ Polish ★ Self-care ★ Elizabeth NJ ★ 💅 Nails ★ Polish ★ Self-care ★ Elizabeth NJ ★ 💅 Nails ★ Polish ★ Self-care ★ Elizabeth NJ ★ </div></div>
+
+<section id="services">
+<div class="wrap">
+<h2 class="fade"><mark>Services</mark></h2>
+<span class="note fade">Example layout - the owner's real services and prices go here</span>
+<div class="grid g3">
+<div class="card fade"><span class="ic">💅</span><h3>Manicure</h3><p>A short description of the service goes here.</p><p class="price">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">🦶</span><h3>Pedicure</h3><p>A short description of the service goes here.</p><p class="price">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">✨</span><h3>Gel Polish</h3><p>A short description of the service goes here.</p><p class="price">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">🎨</span><h3>Nail Art</h3><p>A short description of the service goes here.</p><p class="price">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">💎</span><h3>Acrylic Set</h3><p>A short description of the service goes here.</p><p class="price">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">🌸</span><h3>Beauty Add-Ons</h3><p>A short description of the service goes here.</p><p class="price">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<h2 class="fade"><mark>Hours</mark></h2>
+<table class="fade">
+<tr><td>Monday</td><td>9:30 AM – 7:00 PM</td></tr>
+<tr><td>Tuesday</td><td>9:30 AM – 7:00 PM</td></tr>
+<tr><td>Wednesday</td><td>9:30 AM – 7:00 PM</td></tr>
+<tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Sunday</td><td>Closed</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<h2 class="fade"><mark>Reviews</mark></h2>
+<div class="rate fade">
+<div class="num">4.8</div>
+<div><div class="stars">★★★★★</div><p class="big">based on 67 Google reviews</p></div>
+</div>
+<a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=899995920171845865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 67 reviews on Google</a>
+<h2 style="margin-top:48px;font-size:clamp(1.6rem,6vw,2.6rem)" class="fade">Top reviews</h2>
+<span class="note fade">Example layout - your best reviews show here</span>
+<div class="rows">
+<div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rcard fade"><div class="tagrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<h2 class="fade"><mark>Contact</mark></h2>
+<div class="cgrid">
+<div class="card fade"><span class="ic">📍</span><h3>Address</h3><p class="big">A&amp;L The Beauty Room<br>700 1st Ave<br>Elizabeth, NJ 07201, USA</p><div class="btns"><a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=899995920171845865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></div></div>
+<div class="card fade"><span class="ic">📞</span><h3>Phone</h3><p class="big"><a href="tel:+19083279010">(908) 327-9010</a></p><div class="btns"><a class="btn pink" href="tel:+19083279010">Call now</a></div></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<h2 class="fade"><mark>Book an appointment</mark></h2>
+<form id="bf" class="fade" onsubmit="return false">
+<div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+<div class="two">
+<div><label for="d">Preferred day</label><select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+<div><label for="t">Preferred time</label><input id="t" type="time"></div>
+</div>
+<div><label for="o">Notes</label><textarea id="o" rows="3"></textarea></div>
+<button type="button" class="btn" id="go">Request booking</button>
+<div id="msg" role="status"></div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<strong>A&amp;L The Beauty Room</strong>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+19083279010">📞 Call (908) 327-9010</a>
+
+<script>
+var m=document.getElementById('menu'),b=document.getElementById('burger');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+document.getElementById('go').addEventListener('click',function(){var g=document.getElementById('msg');g.textContent='Demo only: online booking is not connected yet.';g.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
