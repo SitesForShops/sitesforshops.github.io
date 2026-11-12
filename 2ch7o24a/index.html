@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: SOFT LUXE -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grace. | Nail Salon in Elizabeth, NJ (Sample Concept)</title>
+<style>
+:root{
+  --greige:#efe7e0;
+  --greige-deep:#e3d7cd;
+  --cream:#faf6f2;
+  --blush:#f2d9d3;
+  --blush-deep:#e8bfb7;
+  --rose:#b76e79;
+  --rose-dark:#8a4b55;
+  --gold:#c9a089;
+  --ink:#3a2e2c;
+  --muted:#6b5b57;
+  --serif:"Cormorant Garamond","Didot","Bodoni MT",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--greige);color:var(--ink);line-height:1.65;font-size:16px;padding-bottom:70px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:.01em;line-height:1.1}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.banner{background:var(--ink);color:var(--cream);text-align:center;font-size:.8rem;padding:8px 14px;letter-spacing:.03em}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(250,246,242,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--greige-deep)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--serif);font-size:1.8rem;font-weight:400;text-decoration:none;color:var(--ink);letter-spacing:.02em}
+.logo span{color:var(--rose)}
+nav ul{list-style:none;display:flex;gap:6px}
+nav a{display:block;padding:8px 14px;text-decoration:none;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;border-radius:99px;transition:background .25s,color .25s}
+nav a:hover{background:var(--blush);color:var(--rose-dark)}
+.menu-btn{display:none;background:none;border:1px solid var(--gold);border-radius:99px;padding:8px 16px;font:inherit;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:62px;background:var(--cream);border-bottom:1px solid var(--greige-deep);max-height:0;overflow:hidden;transition:max-height .35s ease}
+  nav.open{max-height:360px}
+  nav ul{flex-direction:column;padding:10px 22px 18px;gap:0}
+  nav a{padding:14px 6px;border-radius:0;border-bottom:1px solid var(--greige-deep)}
+}
+
+/* sections */
+section{padding:96px 0;scroll-margin-top:62px}
+.eyebrow{display:inline-block;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose-dark);margin-bottom:16px}
+.sec-title{font-size:clamp(2.3rem,6vw,3.6rem);margin-bottom:14px}
+.sec-head{text-align:center;max-width:680px;margin:0 auto 54px}
+.sec-head p{color:var(--muted)}
+.example-tag{display:inline-block;background:var(--cream);border:1px dashed var(--rose);color:var(--rose-dark);font-size:.78rem;padding:7px 16px;border-radius:99px;margin-top:14px;letter-spacing:.03em}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 32px;border-radius:99px;font:inherit;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid var(--ink);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(138,75,85,.22)}
+.btn-dark{background:var(--ink);color:var(--cream)}
+.btn-dark:hover{background:var(--rose-dark);border-color:var(--rose-dark)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--blush)}
+
+/* hero */
+.hero{padding:56px 0 100px;background:radial-gradient(900px 500px at 85% 10%,var(--blush) 0,transparent 60%),radial-gradient(700px 400px at 0 100%,#e9d5c8 0,transparent 60%),var(--greige)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(4.6rem,15vw,9rem);font-weight:300;line-height:.9;margin:6px 0 22px;color:var(--ink)}
+.hero h1 em{font-style:normal;color:var(--rose)}
+.tagline{font-family:var(--serif);font-size:clamp(1.3rem,3.4vw,1.8rem);font-style:italic;color:var(--muted);max-width:30ch;margin-bottom:28px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--cream);border:1px solid var(--gold);padding:9px 20px;border-radius:99px;font-size:.9rem;margin-bottom:30px;box-shadow:0 6px 18px rgba(138,75,85,.1)}
+.badge .st{color:#b9776f;letter-spacing:2px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.frame{position:relative;aspect-ratio:4/5;border-radius:999px 999px 36px 36px;background:linear-gradient(160deg,#f7e3dd 0%,#e8bfb7 45%,#c9a089 100%);border:10px solid var(--cream);box-shadow:0 30px 60px rgba(138,75,85,.22),0 0 0 1px var(--gold);overflow:hidden;max-width:420px;margin-left:auto;width:100%}
+.frame .c1,.frame .c2,.frame .c3{position:absolute;border-radius:50%}
+.frame .c1{width:70%;aspect-ratio:1;left:-15%;bottom:-8%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.7),rgba(255,255,255,0) 70%)}
+.frame .c2{width:38%;aspect-ratio:1;right:10%;top:22%;background:linear-gradient(135deg,#fff4ee,#d9a99f);opacity:.85}
+.frame .c3{width:16%;aspect-ratio:1;left:18%;top:30%;border:2px solid rgba(255,255,255,.8)}
+.frame .big{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:clamp(5rem,16vw,8rem);filter:drop-shadow(0 12px 14px rgba(138,75,85,.3));animation:float 5s ease-in-out infinite}
+.frame .cap{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--cream)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .frame{margin:0 auto;max-width:320px}
+  section{padding:72px 0}
+}
+
+/* services */
+#services{background:var(--cream)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.card{background:var(--greige);border-radius:28px;padding:34px 28px;border:1px solid var(--greige-deep);transition:transform .3s,box-shadow .3s;position:relative}
+.card:hover{transform:translateY(-8px);box-shadow:0 22px 40px rgba(138,75,85,.15)}
+.ico{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blush),var(--blush-deep));display:flex;align-items:center;justify-content:center;font-size:1.8rem;margin-bottom:20px}
+.card h3{font-size:1.9rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+.price{font-size:.85rem;color:var(--rose-dark);letter-spacing:.06em;margin-bottom:14px}
+.card .example-tag{margin-top:0;font-size:.72rem;border-radius:14px;line-height:1.4}
+
+/* hours */
+.hours-box{max-width:640px;margin:0 auto;background:var(--cream);border-radius:36px;padding:20px 38px;border:1px solid var(--gold);box-shadow:0 20px 44px rgba(138,75,85,.1)}
+table{width:100%;border-collapse:collapse}
+td{padding:17px 0;border-bottom:1px solid var(--greige-deep);font-size:1.02rem}
+tr:last-child td{border-bottom:none}
+td:first-child{font-family:var(--serif);font-size:1.4rem}
+td:last-child{text-align:right;color:var(--muted)}
+tr.closed td:last-child{color:var(--rose-dark)}
+@media(max-width:480px){.hours-box{padding:10px 20px}td{font-size:.88rem}td:first-child{font-size:1.2rem}}
+
+/* reviews */
+#reviews{background:linear-gradient(180deg,var(--blush) 0,var(--greige) 100%)}
+.rating-big{text-align:center;margin-bottom:34px}
+.rating-num{font-family:var(--serif);font-size:clamp(5.5rem,18vw,9rem);line-height:1;font-weight:300;color:var(--rose-dark)}
+.stars-big{font-size:2.4rem;letter-spacing:6px;background:linear-gradient(90deg,#c0766f 86%,#d9c3bb 86%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;display:inline-block}
+.rating-big p{color:var(--muted);margin-top:6px;font-size:1.05rem}
+.center{text-align:center}
+.rev-row{margin-top:64px}
+.rev-row h3{text-align:center;font-size:2.2rem;margin-bottom:8px}
+.rev-row .center{margin-bottom:28px}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.rev{background:var(--cream);border-radius:24px;padding:22px;border:1px solid var(--greige-deep);transition:transform .3s,box-shadow .3s}
+.rev:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(138,75,85,.14)}
+.rev .ex-row{display:block;margin-bottom:12px}
+.rev .ex{display:inline-block;background:var(--blush);color:var(--rose-dark);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:99px}
+.rev .stars{display:block;color:#b9776f;letter-spacing:3px;font-size:1.1rem;margin-bottom:10px;line-height:1.2}
+.rev p{font-style:italic;color:var(--muted);margin-bottom:14px;font-size:.95rem}
+.rev .who{font-size:.85rem;font-weight:600;color:var(--ink)}
+
+/* contact */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:900px;margin:0 auto}
+.info{background:var(--greige);border-radius:28px;padding:36px 28px;text-align:center;border:1px solid var(--greige-deep);transition:transform .3s}
+.info:hover{transform:translateY(-6px)}
+.info .ico{margin:0 auto 18px}
+.info h3{font-size:1.7rem;margin-bottom:8px}
+.info p{color:var(--muted);margin-bottom:18px}
+.info a.tel{font-family:var(--serif);font-size:1.8rem;text-decoration:none;color:var(--rose-dark)}
+
+/* booking */
+#book{background:linear-gradient(160deg,var(--blush) 0,#ecd0c4 100%)}
+.form-card{max-width:660px;margin:0 auto;background:var(--cream);border-radius:36px;padding:42px 34px;box-shadow:0 26px 50px rgba(138,75,85,.18);border:1px solid var(--gold)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-grid .full{grid-column:1/-1}
+label{display:block;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-dark);margin-bottom:6px}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:14px 16px;border:1px solid var(--greige-deep);border-radius:16px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rose);border-color:var(--rose)}
+textarea{min-height:100px;resize:vertical}
+.form-card .btn{width:100%;margin-top:22px}
+#demo-msg{margin-top:18px;text-align:center;font-weight:600;color:var(--rose-dark);min-height:1.5em}
+.note{text-align:center;font-size:.85rem;color:var(--muted);margin-top:10px}
+@media(max-width:560px){.form-grid{grid-template-columns:1fr}.form-card{padding:30px 20px}}
+
+/* footer */
+footer{background:var(--ink);color:var(--greige);text-align:center;padding:56px 22px 48px}
+footer .logo{color:var(--cream);font-size:2.4rem;display:block;margin-bottom:10px}
+footer p{font-size:.88rem;opacity:.8}
+
+/* mobile call bar */
+.callbar{display:none}
+@media(max-width:760px){
+  .callbar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--ink);color:var(--cream);align-items:center;justify-content:center;gap:10px;padding:16px;text-decoration:none;font-size:.95rem;letter-spacing:.18em;text-transform:uppercase;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+}
+@media(min-width:761px){body{padding-bottom:0}}
+
+/* reveal */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.frame .big{animation:none}.js .reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<div class="banner">Sample homepage concept for Grace.. Not their official website.</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#home" class="logo">Grace<span>.</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav id="mainNav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Nail salon · Elizabeth, NJ</span>
+      <h1>Grace<em>.</em></h1>
+      <p class="tagline">A calm, polished place for beautiful hands and feet.</p>
+      <div class="badge" aria-label="Google rating 4.3 from 218 reviews"><span class="st">★★★★★</span><strong>4.3</strong> · 218 Google reviews</div>
+      <div class="cta">
+        <a href="#book" class="btn btn-dark">Book Now</a>
+        <a href="tel:+19083546595" class="btn btn-line">📞 (908) 354-6595</a>
+      </div>
+    </div>
+    <div class="frame reveal" aria-hidden="true">
+      <div class="c1"></div><div class="c2"></div><div class="c3"></div>
+      <div class="big">💅</div>
+      <div class="cap">soft · polished · you</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Services</span>
+      <h2 class="sec-title">Treat yourself</h2>
+      <p>A sample menu showing how services could be presented on this page.</p>
+      <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="cards">
+      <article class="card reveal">
+        <div class="ico">💅</div>
+        <h3>Classic Manicure</h3>
+        <p>Shaping, cuticle care and polish, described here in the owner's own words.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">🦶</div>
+        <h3>Pedicure</h3>
+        <p>A relaxing foot treatment with a finish of choice. Add a real description here.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">✨</div>
+        <h3>Gel Polish</h3>
+        <p>Long-lasting color and shine. Replace with the services actually offered.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">🎨</div>
+        <h3>Nail Art</h3>
+        <p>Custom designs and accents. Add details about real styles here.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">🌸</div>
+        <h3>Nail Extensions</h3>
+        <p>Length and strength options. Add the real service details here.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+      </article>
+      <article class="card reveal">
+        <div class="ico">🤍</div>
+        <h3>Polish Change</h3>
+        <p>A quick refresh of color. Add real details here.</p>
+        <div class="price">Price: add yours</div>
+        <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Hours</span>
+      <h2 class="sec-title">When to visit</h2>
+    </div>
+    <div class="hours-box reveal">
+      <table>
+        <tbody>
+          <tr><td>Monday</td><td>9:30&#8239;AM&#8201;–&#8201;6:30&#8239;PM</td></tr>
+          <tr><td>Tuesday</td><td>9:30&#8239;AM&#8201;–&#8201;6:30&#8239;PM</td></tr>
+          <tr><td>Wednesday</td><td>9:30&#8239;AM&#8201;–&#8201;6:30&#8239;PM</td></tr>
+          <tr><td>Thursday</td><td>9:30&#8239;AM&#8201;–&#8201;6:30&#8239;PM</td></tr>
+          <tr><td>Friday</td><td>9:30&#8239;AM&#8201;–&#8201;6:30&#8239;PM</td></tr>
+          <tr><td>Saturday</td><td>8:00&#8239;AM&#8201;–&#8201;6:30&#8239;PM</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Reviews</span>
+      <h2 class="sec-title">Loved on Google</h2>
+    </div>
+    <div class="rating-big reveal">
+      <div class="rating-num">4.3</div>
+      <div class="stars-big" aria-label="4.3 out of 5 stars">★★★★★</div>
+      <p>based on 218 Google reviews</p>
+    </div>
+    <div class="center reveal">
+      <a class="btn btn-dark" href="https://maps.google.com/?cid=3972056714100874735&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 218 reviews on Google</a>
+    </div>
+
+    <div class="rev-row reveal">
+      <h3>Top reviews</h3>
+      <div class="center"><span class="example-tag">Example layout - your best reviews show here</span></div>
+      <div class="rev-grid">
+        <div class="rev"><span class="ex-row"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+        <div class="rev"><span class="ex-row"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+        <div class="rev"><span class="ex-row"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+        <div class="rev"><span class="ex-row"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+        <div class="rev"><span class="ex-row"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 class="sec-title">Find Grace.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="info reveal">
+        <div class="ico">📍</div>
+        <h3>Address</h3>
+        <p>40 5th St<br>Elizabeth, NJ 07206, USA</p>
+        <a class="btn btn-line" href="https://maps.google.com/?cid=3972056714100874735&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="info reveal">
+        <div class="ico">📞</div>
+        <h3>Phone</h3>
+        <p>Call to ask about availability.</p>
+        <a class="tel" href="tel:+19083546595">(908) 354-6595</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Reservations</span>
+      <h2 class="sec-title">Book an appointment</h2>
+    </div>
+    <div class="form-card reveal">
+      <form onsubmit="return false" novalidate>
+        <div class="form-grid">
+          <div class="full"><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name"></div>
+          <div class="full"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+          <div>
+            <label for="f-day">Preferred day</label>
+            <select id="f-day">
+              <option value="">Choose a day</option>
+              <option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option>
+            </select>
+          </div>
+          <div><label for="f-time">Preferred time</label><input id="f-time" type="time"></div>
+          <div class="full"><label for="f-notes">Notes</label><textarea id="f-notes"></textarea></div>
+        </div>
+        <button type="button" class="btn btn-dark" id="demoBtn">Request appointment</button>
+        <div id="demo-msg" role="status" aria-live="polite"></div>
+      </form>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span class="logo">Grace.</span>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+19083546595">📞 Call (908) 354-6595</a>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+  btn.addEventListener('click',function(){
+    var o=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',o);
+    btn.textContent=o?'Close':'Menu';
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='Menu';});
+  });
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    document.getElementById('demo-msg').textContent='Demo only: online booking is not connected yet.';
+  });
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
