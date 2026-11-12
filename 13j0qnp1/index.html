@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: BOLD BRUTALIST -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Princess Nails – Sample Homepage Concept</title>
+<style>
+:root{--y:#FFE600;--k:#0a0a0a;--w:#fff;--p:#ff4fa3;--b:4px solid var(--k);--sh:6px 6px 0 var(--k)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Arial Black","Helvetica Neue",Impact,Arial,sans-serif;background:var(--y);color:var(--k);line-height:1.5;padding-bottom:64px;overflow-x:hidden}
+body p,body td,body label,body input,body textarea,body select,body .body{font-family:Arial,Helvetica,sans-serif;font-weight:600}
+a{color:inherit}
+.banner{background:var(--k);color:var(--y);text-align:center;font-size:.8rem;padding:8px 12px;font-family:Arial,sans-serif;font-weight:700;letter-spacing:.03em}
+nav{position:sticky;top:0;z-index:50;background:var(--w);border-bottom:var(--b);display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.logo{font-size:1.1rem;text-transform:uppercase;text-decoration:none;background:var(--k);color:var(--y);padding:4px 10px}
+.menu{display:none;list-style:none;gap:8px}
+.menu a{text-decoration:none;text-transform:uppercase;font-size:.85rem;padding:8px 12px;border:3px solid transparent;display:block}
+.menu a:hover{border-color:var(--k);background:var(--y)}
+.burger{background:var(--y);border:3px solid var(--k);box-shadow:3px 3px 0 var(--k);font-weight:900;padding:8px 12px;text-transform:uppercase;font-size:.8rem;cursor:pointer;font-family:inherit}
+nav.open .menu{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--w);border-bottom:var(--b);padding:10px 16px}
+@media(min-width:800px){.menu{display:flex}.burger{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+section{padding:72px 18px;border-bottom:var(--b)}
+.wrap{max-width:1100px;margin:auto}
+h1{font-size:clamp(3rem,13vw,8rem);line-height:.9;text-transform:uppercase;letter-spacing:-.03em}
+h1 span{background:var(--k);color:var(--y);padding:0 .12em;display:inline-block;transform:rotate(-1.5deg);margin-top:8px}
+h2{font-size:clamp(2rem,7vw,3.6rem);text-transform:uppercase;line-height:1;letter-spacing:-.02em;display:inline-block;background:var(--k);color:var(--y);padding:6px 14px;margin-bottom:18px;transform:rotate(-1deg)}
+.hero{padding-top:56px;background:var(--y);position:relative;overflow:hidden}
+.hero .tag{font-size:1.2rem;margin:24px 0;max-width:560px;font-family:Arial,sans-serif;font-weight:700}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--w);border:var(--b);box-shadow:var(--sh);padding:10px 16px;font-size:1.1rem;margin-bottom:8px}
+.stars{color:var(--k);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;text-transform:uppercase;font-family:"Arial Black",Arial,sans-serif;font-weight:900;font-size:1rem;padding:16px 26px;border:var(--b);box-shadow:var(--sh);background:var(--k);color:var(--y);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn.alt{background:var(--w);color:var(--k)}
+.btn.pink{background:var(--p);color:var(--k)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--k)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--k)}
+.shape{position:absolute;border:var(--b);z-index:0}
+.s1{width:140px;height:140px;border-radius:50%;background:var(--p);right:-30px;top:30px}
+.s2{width:90px;height:90px;background:var(--w);right:70px;bottom:40px;transform:rotate(15deg)}
+.hero .wrap{position:relative;z-index:1}
+.note{display:inline-block;background:var(--p);border:3px solid var(--k);padding:6px 10px;font-size:.78rem;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:800;margin-bottom:14px}
+.white{background:var(--w)}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px}
+.card{background:var(--y);border:var(--b);box-shadow:var(--sh);padding:22px;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translate(-4px,-4px);box-shadow:10px 10px 0 var(--k)}
+.card .ico{font-size:2.4rem;display:block;margin-bottom:8px}
+.card h3{text-transform:uppercase;font-size:1.3rem;margin-bottom:8px}
+.card p{font-size:.95rem;margin-bottom:10px}
+.price{display:inline-block;background:var(--k);color:var(--y);padding:4px 10px;font-size:.85rem;font-family:Arial,sans-serif;font-weight:800;margin-bottom:10px}
+.ex{display:block;font-size:.72rem;text-transform:uppercase;font-family:Arial,sans-serif;font-weight:800;background:var(--p);border:3px solid var(--k);padding:4px 8px}
+table{width:100%;max-width:640px;border-collapse:collapse;background:var(--w);border:var(--b);box-shadow:var(--sh);font-size:1.05rem}
+td{padding:14px 16px;border-bottom:3px solid var(--k)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-weight:900}
+tr.closed{background:var(--p)}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-bottom:24px}
+.big{font-size:clamp(5rem,20vw,9rem);line-height:.9;background:var(--k);color:var(--y);padding:6px 20px;border:var(--b);box-shadow:var(--sh)}
+.bigstars{font-size:2rem;letter-spacing:3px}
+.rev{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:16px}
+.rev .card{background:var(--w);box-shadow:5px 5px 0 var(--k)}
+.rev .ex{margin-bottom:12px;display:inline-block;align-self:flex-start}
+.rev .card{display:flex;flex-direction:column}
+.rev .st{font-size:1.2rem;letter-spacing:2px;margin-bottom:10px}
+.rowlabel{margin-top:36px}
+.contact-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.contact-grid .card{background:var(--w)}
+.contact-grid h3{margin-bottom:8px;text-transform:uppercase}
+.contact-grid p{font-size:1.1rem;margin-bottom:12px}
+form{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:24px;max-width:640px;display:grid;gap:16px}
+label{display:grid;gap:6px;text-transform:uppercase;font-size:.8rem;font-weight:800}
+input,textarea{font-size:1rem;padding:12px;border:3px solid var(--k);background:var(--y);width:100%;font-family:Arial,sans-serif;font-weight:600}
+input:focus,textarea:focus{outline:4px solid var(--p)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:480px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--k);color:var(--y);padding:14px;border:3px solid var(--k);font-family:Arial,sans-serif;font-weight:800}
+.small{font-size:.85rem;margin-top:14px;max-width:640px}
+footer{background:var(--k);color:var(--y);padding:36px 18px;text-align:center}
+footer strong{font-size:1.5rem;text-transform:uppercase;display:block;margin-bottom:6px}
+footer p{font-size:.9rem}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--k);padding:8px;display:flex}
+.callbar a{flex:1;text-align:center;text-decoration:none;background:var(--p);color:var(--k);border:3px solid var(--y);padding:12px;font-size:1rem;text-transform:uppercase;font-family:"Arial Black",Arial,sans-serif}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Princess Nails. Not their official website.</div>
+<nav id="nav">
+  <a class="logo" href="#home">Princess Nails</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-label="Toggle menu">Menu ☰</button>
+  <ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#hours">Hours</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <div class="shape s1"></div><div class="shape s2"></div>
+  <div class="wrap">
+    <div class="badge"><span class="stars">★★★★☆</span> 4.4 · 208 Google reviews</div>
+    <h1>Princess<br><span>Nails</span></h1>
+    <p class="tag">Polish, pampering and a fresh set of nails in Elizabeth, NJ.</p>
+    <div class="btns">
+      <a class="btn" href="#book">Book Now</a>
+      <a class="btn alt" href="tel:+19083516558">📞 Call (908) 351-6558</a>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="services">
+  <div class="wrap">
+    <h2 class="fade">Services</h2><br>
+    <span class="note">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><span class="ico">💅</span><h3>Classic Manicure</h3><p>Nail shaping, cuticle care and polish.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><span class="ico">🦶</span><h3>Pedicure</h3><p>A relaxing foot soak, scrub and polish.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><span class="ico">✨</span><h3>Gel Polish</h3><p>Long-lasting shine with a glossy finish.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><span class="ico">💎</span><h3>Acrylic Full Set</h3><p>Length and strength with custom shapes.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><span class="ico">🎨</span><h3>Nail Art</h3><p>Designs, colors and accents.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><span class="ico">🌸</span><h3>Polish Change</h3><p>A quick color refresh.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <h2 class="fade">Hours</h2>
+    <table class="fade">
+      <tr><td>Monday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="white" id="reviews">
+  <div class="wrap">
+    <h2 class="fade">Reviews</h2>
+    <div class="rating fade">
+      <div class="big">4.4</div>
+      <div>
+        <div class="bigstars">★★★★☆</div>
+        <p style="font-size:1.2rem">based on 208 Google reviews</p>
+      </div>
+    </div>
+    <a class="btn pink" target="_blank" rel="noopener" href="https://maps.google.com/?cid=6160788641243420206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 208 reviews on Google</a>
+    <h3 class="rowlabel" style="text-transform:uppercase;font-size:1.6rem">Top reviews</h3>
+    <span class="note" style="margin-top:8px">Example layout - your best reviews show here</span>
+    <div class="rev">
+      <div class="card fade"><span class="ex">Example</span><div class="st">★★★★★</div><p>Your customer's review goes here</p><p><strong>Customer name</strong></p></div>
+      <div class="card fade"><span class="ex">Example</span><div class="st">★★★★★</div><p>Your customer's review goes here</p><p><strong>Customer name</strong></p></div>
+      <div class="card fade"><span class="ex">Example</span><div class="st">★★★★★</div><p>Your customer's review goes here</p><p><strong>Customer name</strong></p></div>
+      <div class="card fade"><span class="ex">Example</span><div class="st">★★★★★</div><p>Your customer's review goes here</p><p><strong>Customer name</strong></p></div>
+      <div class="card fade"><span class="ex">Example</span><div class="st">★★★★★</div><p>Your customer's review goes here</p><p><strong>Customer name</strong></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="fade">Contact</h2>
+    <div class="contact-grid">
+      <div class="card fade"><h3>📍 Address</h3><p>1151 Elizabeth Ave<br>Elizabeth, NJ 07201, USA</p><a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=6160788641243420206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></div>
+      <div class="card fade"><h3>📞 Phone</h3><p>(908) 351-6558</p><a class="btn alt" href="tel:+19083516558">Call now</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="white" id="book">
+  <div class="wrap">
+    <h2 class="fade">Book an appointment</h2>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="off"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+      <div class="two">
+        <label>Preferred day<input type="text" name="day" placeholder="e.g. Saturday"></label>
+        <label>Preferred time<input type="text" name="time" placeholder="e.g. 2:00 PM"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn" id="bookBtn">Request booking</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="small">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Princess Nails</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+19083516558">📞 Call</a></div>
+
+<script>
+var nav=document.getElementById('nav'),bg=document.getElementById('burger');
+bg.addEventListener('click',function(){var o=nav.classList.toggle('open');bg.setAttribute('aria-expanded',o)});
+document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');bg.setAttribute('aria-expanded',false)})});
+document.getElementById('bookBtn').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
