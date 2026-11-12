@@ -1,216 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: MIDNIGHT NEON -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chic Doggie the grooming studio – Dog Groomer in Newark, NJ</title>
+<title>Chic Doggie the grooming studio – Sample Homepage Concept</title>
 <style>
-  :root{
-    --ink:#1f2a37;
-    --muted:#5b6675;
-    --brand:#0f766e;
-    --brand-dark:#0b5a54;
-    --accent:#f59e0b;
-    --bg:#f7f9fa;
-    --card:#ffffff;
-    --line:#e3e8ec;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    color:var(--ink);
-    background:var(--bg);
-    line-height:1.55;
-  }
-  .banner{
-    background:#1f2a37;
-    color:#fff;
-    font-size:.8rem;
-    text-align:center;
-    padding:.4rem .75rem;
-  }
-  header.hero{
-    background:linear-gradient(135deg,#e6f4f1 0%,#fdf3dd 100%);
-    padding:2.5rem 1.25rem 2.25rem;
-    text-align:center;
-    border-bottom:1px solid var(--line);
-  }
-  .wrap{max-width:720px;margin:0 auto}
-  h1{
-    font-size:clamp(1.7rem,6vw,2.5rem);
-    margin:0 0 .4rem;
-    line-height:1.2;
-  }
-  .tagline{color:var(--muted);margin:0 0 1rem}
-  .rating{
-    display:inline-block;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:.35rem .9rem;
-    font-weight:600;
-    margin-bottom:1rem;
-  }
-  .rating .star{color:var(--accent)}
-  .address{margin:.25rem 0 1.25rem;color:var(--ink)}
-  .actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:.75rem;
-    justify-content:center;
-  }
-  .btn{
-    display:inline-block;
-    border:0;
-    border-radius:10px;
-    padding:.85rem 1.4rem;
-    font-size:1.05rem;
-    font-weight:700;
-    text-decoration:none;
-    cursor:pointer;
-    min-width:170px;
-    text-align:center;
-  }
-  .btn-primary{background:var(--brand);color:#fff}
-  .btn-primary:hover{background:var(--brand-dark)}
-  .btn-secondary{background:#fff;color:var(--brand);border:2px solid var(--brand)}
-  .btn-secondary:hover{background:#f0faf8}
-  main{padding:1.5rem 1.25rem 3rem}
-  section{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:1.5rem 1.25rem;
-    margin:0 auto 1.25rem;
-    max-width:720px;
-  }
-  h2{margin:0 0 .75rem;font-size:1.35rem}
-  ul.hours{list-style:none;margin:0;padding:0}
-  ul.hours li{
-    padding:.5rem 0;
-    border-bottom:1px solid var(--line);
-  }
-  ul.hours li:last-child{border-bottom:0}
-  label{display:block;font-weight:600;margin:.9rem 0 .3rem}
-  input,select,textarea{
-    width:100%;
-    font:inherit;
-    padding:.7rem .75rem;
-    border:1px solid #c7d0d8;
-    border-radius:8px;
-    background:#fff;
-    color:var(--ink);
-  }
-  input:focus,select:focus,textarea:focus{
-    outline:2px solid var(--brand);
-    border-color:var(--brand);
-  }
-  textarea{min-height:90px;resize:vertical}
-  .row{display:grid;gap:0 1rem;grid-template-columns:1fr}
-  @media(min-width:560px){.row{grid-template-columns:1fr 1fr}}
-  form .btn{width:100%;margin-top:1.25rem}
-  #demo-message{
-    display:none;
-    margin-top:1rem;
-    padding:.8rem 1rem;
-    background:#fff7e0;
-    border:1px solid #f3d27a;
-    border-radius:8px;
-    font-weight:600;
-  }
-  .note{font-size:.85rem;color:var(--muted);margin:.9rem 0 0}
-  footer{
-    text-align:center;
-    font-size:.8rem;
-    color:var(--muted);
-    padding:0 1.25rem 2rem;
-  }
+:root{
+  --bg:#070b1a;--bg2:#0d1430;--card:#111a3d;--line:#223063;
+  --cyan:#19e3ff;--mag:#ff2fd0;--text:#eef2ff;--muted:#aab4dc;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:"Avenir Next","Century Gothic","Trebuchet MS",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:64px;overflow-x:hidden}
+h1,h2,h3{font-family:"Futura","Century Gothic","Avenir Next","Trebuchet MS",system-ui,sans-serif;letter-spacing:-.02em;line-height:1.1}
+a{color:inherit}
+.banner{background:linear-gradient(90deg,var(--mag),#7a3cff,var(--cyan));color:#06091a;font-weight:700;font-size:.82rem;text-align:center;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,11,26,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;color:var(--cyan);text-decoration:none;text-shadow:0 0 12px rgba(25,227,255,.6);font-family:"Futura","Century Gothic",sans-serif}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;text-decoration:none;padding:8px 14px;border-radius:99px;font-weight:600;font-size:.95rem;color:var(--muted);transition:.2s}
+.menu a:hover{color:#fff;background:var(--card);box-shadow:0 0 0 1px var(--cyan)}
+.burger{display:none;background:none;border:1px solid var(--cyan);color:var(--cyan);border-radius:10px;padding:8px 12px;font-size:1rem;cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg2);flex-direction:column;padding:10px 20px 16px;border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+}
+section{padding:80px 20px}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{color:var(--mag);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin:8px 0 14px}
+.hero{background:radial-gradient(circle at 80% 30%,rgba(255,47,208,.18),transparent 45%),radial-gradient(circle at 10% 80%,rgba(25,227,255,.14),transparent 45%),var(--bg);padding:60px 20px 80px;min-height:80vh;display:flex;align-items:center}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.5rem,8vw,4.8rem);margin:14px 0 16px;background:linear-gradient(90deg,#fff,var(--cyan) 60%,var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.tag{font-size:1.2rem;color:var(--muted);max-width:30em}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--cyan);border-radius:99px;padding:8px 16px;font-weight:700;box-shadow:0 0 18px rgba(25,227,255,.35);background:rgba(25,227,255,.07)}
+.badge .st{color:#ffd54a}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 28px;border-radius:14px;border:2px solid transparent;cursor:pointer;font-size:1rem;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-p{background:linear-gradient(90deg,var(--mag),#a23cff);color:#fff;box-shadow:0 0 24px rgba(255,47,208,.55)}
+.btn-s{border-color:var(--cyan);color:var(--cyan);box-shadow:0 0 18px rgba(25,227,255,.3) inset,0 0 18px rgba(25,227,255,.25)}
+.btn-s:hover{background:rgba(25,227,255,.1)}
+.glow{position:relative;aspect-ratio:1;max-width:420px;margin:auto;width:100%;display:grid;place-items:center}
+.glow .ring{position:absolute;inset:0;border-radius:42% 58% 55% 45%/50% 42% 58% 50%;background:conic-gradient(from 0deg,var(--cyan),var(--mag),#7a3cff,var(--cyan));filter:blur(2px);animation:spin 14s linear infinite;box-shadow:0 0 70px rgba(255,47,208,.5),0 0 120px rgba(25,227,255,.3)}
+.glow .inner{position:absolute;inset:7%;border-radius:42% 58% 55% 45%/50% 42% 58% 50%;background:var(--bg2);animation:spin 14s linear infinite reverse}
+.glow .paw{position:relative;font-size:clamp(5rem,20vw,8.5rem);filter:drop-shadow(0 0 22px var(--cyan))}
+@keyframes spin{to{transform:rotate(360deg)}}
+.warn{display:inline-block;background:rgba(255,47,208,.12);border:1px dashed var(--mag);color:#ffb5ef;font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:10px;margin:6px 0}
+#services{background:var(--bg2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 10px 30px rgba(25,227,255,.2)}
+.card .ic{font-size:2.2rem;width:62px;height:62px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,rgba(255,47,208,.25),rgba(25,227,255,.25));margin-bottom:14px}
+.card h3{font-size:1.3rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.price{margin-top:10px;font-weight:700;color:var(--cyan)}
+.hours-box{max-width:620px;margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 0 40px rgba(122,60,255,.2)}
+table{width:100%;border-collapse:collapse}
+td{padding:15px 22px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;color:var(--cyan)}
+tr.closed td:last-child{color:var(--mag);font-weight:700}
+#reviews{background:var(--bg2)}
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin:20px 0 24px}
+.big{font-size:clamp(4rem,14vw,6.5rem);font-weight:900;line-height:1;background:linear-gradient(90deg,var(--cyan),var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent;font-family:"Futura","Century Gothic",sans-serif}
+.stars{color:#ffd54a;font-size:1.6rem;letter-spacing:3px;text-shadow:0 0 12px rgba(255,213,74,.5)}
+.row-label{margin:40px 0 6px}
+.row-label h3{font-size:1.6rem}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:14px}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rev:hover{transform:translateY(-5px)}
+.ex-row{display:block}
+.ex{display:inline-block;background:var(--mag);color:#fff;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:99px;text-transform:uppercase;letter-spacing:.08em}
+.rev .stars{font-size:1.2rem;letter-spacing:2px}
+.rev p{color:var(--muted);font-style:italic;font-size:.95rem}
+.rev .nm{font-weight:700;font-size:.9rem}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
+.info{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.info h3{color:var(--cyan);margin-bottom:8px;font-size:1.1rem}
+.info p{font-size:1.1rem}
+#book{background:radial-gradient(circle at 20% 20%,rgba(255,47,208,.15),transparent 50%),var(--bg2)}
+form{max-width:620px;margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:16px}
+label{font-weight:700;font-size:.9rem;display:grid;gap:6px;color:var(--cyan)}
+input,select,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--mag);box-shadow:0 0 0 3px rgba(255,47,208,.25)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:rgba(25,227,255,.12);border:1px solid var(--cyan);color:var(--cyan);font-weight:700;padding:12px 16px;border-radius:12px}
+.note{color:var(--muted);font-size:.85rem;margin-top:12px;max-width:620px}
+footer{padding:40px 20px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer strong{display:block;color:var(--cyan);font-size:1.1rem;margin-bottom:4px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:linear-gradient(90deg,var(--mag),#7a3cff);color:#fff;text-align:center;text-decoration:none;font-weight:800;padding:16px;font-size:1.05rem;box-shadow:0 -4px 20px rgba(255,47,208,.4)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.glow .ring,.glow .inner{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-
 <div class="banner">Sample homepage concept for Chic Doggie the grooming studio. Not their official website.</div>
 
-<header class="hero">
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">🐾 Chic Doggie</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
   <div class="wrap">
-    <h1>Chic Doggie the grooming studio</h1>
-    <p class="tagline">Dog groomer in Newark, NJ</p>
-    <div class="rating" aria-label="Google rating 4.7 from 82 reviews"><span class="star">★</span> 4.7 on Google · 82 reviews</div>
-    <p class="address">36 Magazine St, Newark, NJ 07105, USA</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+12016686508">Call (201) 668-6508</a>
+    <div class="fade">
+      <span class="badge"><span class="st">★</span> 4.7 · 82 Google reviews</span>
+      <h1>Chic Doggie the grooming studio</h1>
+      <p class="tag">Fresh, fluffy and ready to strut. A stylish stop for your four-legged friend in Newark, NJ.</p>
+      <div class="btns">
+        <a class="btn btn-p" href="#book">Book Now</a>
+        <a class="btn btn-s" href="tel:+12016686508">📞 Call (201) 668-6508</a>
+      </div>
+    </div>
+    <div class="glow fade" aria-hidden="true">
+      <div class="ring"></div><div class="inner"></div><div class="paw">🐩</div>
     </div>
   </div>
-</header>
+</section>
 
-<main>
-  <section id="hours">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: 9:00 AM – 5:00 PM</li>
-      <li>Tuesday: 9:00 AM – 5:00 PM</li>
-      <li>Wednesday: 9:00 AM – 5:00 PM</li>
-      <li>Thursday: 9:00 AM – 5:00 PM</li>
-      <li>Friday: 9:00 AM – 5:00 PM</li>
-      <li>Saturday: 9:00 AM – 5:00 PM</li>
-      <li>Sunday: Closed</li>
-    </ul>
-  </section>
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2>Grooming menu</h2>
+    <span class="warn">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ic">🛁</div><h3>Bath &amp; Blow-Dry</h3><p>A generic example of a classic wash and fluff service.</p><div class="price">Price: add yours</div><span class="warn">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">✂️</div><h3>Full Haircut &amp; Styling</h3><p>A generic example of breed-style trims and finishing touches.</p><div class="price">Price: add yours</div><span class="warn">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💅</div><h3>Nail Trim</h3><p>A generic example of a quick paw-care add-on.</p><div class="price">Price: add yours</div><span class="warn">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🦷</div><h3>Teeth &amp; Ear Care</h3><p>A generic example of hygiene extras for a fresh finish.</p><div class="price">Price: add yours</div><span class="warn">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🧼</div><h3>De-Shedding Treatment</h3><p>A generic example of a coat-care service for shedding pups.</p><div class="price">Price: add yours</div><span class="warn">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Call to ask about services.</p>
-    <p><strong>Address:</strong><br>36 Magazine St, Newark, NJ 07105, USA</p>
-    <p><strong>Phone:</strong> <a href="tel:+12016686508">(201) 668-6508</a></p>
-  </section>
+<section id="hours">
+  <div class="wrap">
+    <span class="eyebrow">Hours</span>
+    <h2>When to visit</h2>
+    <div class="hours-box fade">
+      <table>
+        <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="booking-form" novalidate>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name">
-
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
-
-      <div class="row">
-        <div>
-          <label for="day">Preferred day</label>
-          <input type="date" id="day" name="day">
-        </div>
-        <div>
-          <label for="time">Preferred time</label>
-          <input type="time" id="time" name="time">
-        </div>
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What Google says</h2>
+    <div class="rate fade">
+      <div class="big">4.7</div>
+      <div>
+        <div class="stars" aria-label="4.7 out of 5 stars">★★★★★</div>
+        <p style="font-size:1.1rem;color:var(--muted)">based on 82 Google reviews</p>
       </div>
+    </div>
+    <a class="btn btn-p" href="https://maps.google.com/?cid=15367282033118106807&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 82 reviews on Google</a>
 
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
+    <div class="row-label">
+      <h3>Top reviews</h3>
+      <span class="warn">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rev-grid">
+      <div class="rev fade"><div class="ex-row"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="ex-row"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="ex-row"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="ex-row"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><div class="ex-row"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
 
-      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-      <div id="demo-message" role="status" aria-live="polite"></div>
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Find the studio</h2>
+    <div class="contact-grid">
+      <div class="info fade"><h3>📍 Address</h3><p>36 Magazine St<br>Newark, NJ 07105, USA</p></div>
+      <div class="info fade"><h3>📞 Phone</h3><p><a href="tel:+12016686508">(201) 668-6508</a></p></div>
+      <div class="info fade"><h3>🧭 Directions</h3><p style="margin-bottom:14px">Open the location in Google Maps.</p><a class="btn btn-s" href="https://maps.google.com/?cid=15367282033118106807&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Booking</span>
+    <h2>Book an appointment</h2>
+    <form id="bookForm" onsubmit="return false">
+      <label>Name<input type="text" name="name" placeholder="Your name"></label>
+      <label>Phone<input type="tel" name="phone" placeholder="Your phone number"></label>
+      <div class="two">
+        <label>Preferred day<select name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></label>
+        <label>Preferred time<input type="time" name="time" value="09:00"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Anything to add?"></textarea></label>
+      <button type="button" class="btn btn-p" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
     </form>
     <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-</main>
+  </div>
+</section>
 
 <footer>
-  Sample homepage concept. Not the official website of Chic Doggie the grooming studio.
+  <strong>Chic Doggie the grooming studio</strong>
+  Sample homepage concept made by a third party. Not their official website.
 </footer>
 
-<script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-message');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
-  document.getElementById('booking-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-  });
-</script>
+<a class="callbar" href="tel:+12016686508">📞 Call (201) 668-6508</a>
 
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+document.getElementById('demoBtn').addEventListener('click',()=>{const m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
 </body>
 </html>
