@@ -1,209 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
-<meta charset="UTF-8">
+<head><meta name="robots" content="noindex"><!-- design: BOLD BRUTALIST -->
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LUV 4 PUPS Pet Grooming – Belleville, NJ</title>
+<title>LUV 4 PUPS Pet Grooming - Sample Homepage Concept</title>
 <style>
-  :root {
-    --bg: #fdf8f3;
-    --ink: #2b2a33;
-    --muted: #6b6a75;
-    --accent: #e0568b;
-    --accent-dark: #b93a6c;
-    --teal: #2a8c8c;
-    --card: #ffffff;
-    --line: #eadfd6;
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.5;
-  }
-  .banner {
-    background: #2b2a33;
-    color: #fff;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 6px 12px;
-  }
-  header.hero {
-    text-align: center;
-    padding: 40px 20px 32px;
-    background: linear-gradient(180deg, #fde8f0 0%, var(--bg) 100%);
-  }
-  .hero h1 {
-    margin: 0 0 10px;
-    font-size: clamp(1.8rem, 6vw, 2.8rem);
-    line-height: 1.15;
-  }
-  .rating {
-    display: inline-block;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 6px 16px;
-    font-weight: 600;
-    margin: 6px 0 12px;
-  }
-  .rating .star { color: #f2a900; }
-  .address { color: var(--muted); margin: 0 0 20px; }
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-  }
-  .btn {
-    display: inline-block;
-    border: none;
-    cursor: pointer;
-    font-size: 1.05rem;
-    font-weight: 700;
-    padding: 14px 28px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-family: inherit;
-  }
-  .btn-primary { background: var(--accent); color: #fff; }
-  .btn-primary:hover { background: var(--accent-dark); }
-  .btn-call { background: var(--teal); color: #fff; }
-  .btn-call:hover { background: #1f6e6e; }
-  main {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 18px 40px;
-  }
-  section {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 22px 20px;
-    margin-top: 20px;
-  }
-  h2 { margin: 0 0 12px; font-size: 1.4rem; }
-  ul.hours { list-style: none; margin: 0; padding: 0; }
-  ul.hours li {
-    padding: 9px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  ul.hours li:last-child { border-bottom: none; }
-  label {
-    display: block;
-    font-weight: 600;
-    margin: 14px 0 5px;
-    font-size: 0.95rem;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #cfc4ba;
-    border-radius: 10px;
-    font-family: inherit;
-    background: #fff;
-  }
-  input:focus, textarea:focus {
-    outline: 2px solid var(--teal);
-    border-color: var(--teal);
-  }
-  textarea { min-height: 90px; resize: vertical; }
-  form .btn { width: 100%; margin-top: 18px; }
-  #demo-msg {
-    display: none;
-    margin-top: 14px;
-    padding: 12px;
-    border-radius: 10px;
-    background: #fff4d6;
-    border: 1px solid #f0d27a;
-    font-weight: 600;
-    text-align: center;
-  }
-  .note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; }
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.8rem;
-    padding: 10px 18px 30px;
-  }
+:root{
+  --y:#FFE500;
+  --y2:#FFF27A;
+  --k:#0a0a0a;
+  --w:#ffffff;
+  --pink:#ff4fa3;
+  --b:4px solid var(--k);
+  --sh:8px 8px 0 var(--k);
+  --sh-s:5px 5px 0 var(--k);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:"Arial Black","Helvetica Neue",Impact,Arial,sans-serif;
+  background:var(--y);
+  color:var(--k);
+  line-height:1.5;
+  font-size:16px;
+  overflow-x:hidden;
+}
+body{padding-bottom:70px}
+a{color:inherit}
+h1,h2,h3{text-transform:uppercase;line-height:.95;letter-spacing:-.02em;font-weight:900}
+p,li,td,th,label,input,textarea,select,small{font-family:"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1150px;margin:0 auto;padding:0 18px}
+
+/* banner */
+.banner{background:var(--k);color:var(--y);text-align:center;font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:13px;padding:8px 12px;letter-spacing:.03em;text-transform:uppercase}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:var(--w);border-bottom:var(--b)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1150px;margin:0 auto;padding:0 18px}
+.logo{font-weight:900;text-transform:uppercase;text-decoration:none;font-size:18px;background:var(--k);color:var(--y);padding:4px 10px;transform:rotate(-2deg);display:inline-block}
+nav ul{display:none;list-style:none}
+nav a.l{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;text-decoration:none;font-size:14px;padding:8px 12px;border:3px solid transparent;display:block}
+nav a.l:hover{border-color:var(--k);background:var(--y);box-shadow:3px 3px 0 var(--k)}
+.burger{width:46px;height:42px;background:var(--y);border:3px solid var(--k);box-shadow:3px 3px 0 var(--k);cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px}
+.burger span{display:block;width:22px;height:4px;background:var(--k);transition:.2s}
+.burger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
+nav ul.open{display:block;position:absolute;top:60px;left:0;right:0;background:var(--w);border-bottom:var(--b)}
+nav ul.open li{border-top:3px solid var(--k)}
+nav ul.open a.l{padding:16px 22px;font-size:20px}
+@media(min-width:820px){
+  .burger{display:none}
+  nav ul{display:flex;gap:6px;position:static}
+}
+
+/* buttons */
+.btn{display:inline-block;font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;text-decoration:none;font-size:18px;padding:16px 26px;border:var(--b);box-shadow:var(--sh-s);cursor:pointer;transition:transform .12s, box-shadow .12s;background:var(--w);color:var(--k);text-align:center}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--k)}
+.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--k)}
+.btn.dark{background:var(--k);color:var(--y)}
+.btn.pink{background:var(--pink)}
+
+/* hero */
+#home{padding:44px 0 0;position:relative;overflow:hidden;background:
+  repeating-linear-gradient(45deg,transparent 0 22px,rgba(0,0,0,.05) 22px 44px),var(--y)}
+.hero-grid{display:grid;gap:30px;align-items:center}
+.kicker{display:inline-block;background:var(--k);color:var(--y);font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:13px;padding:6px 12px;letter-spacing:.08em;margin-bottom:18px}
+h1{font-size:clamp(44px,12.5vw,118px);word-break:break-word}
+h1 .hl{background:var(--k);color:var(--y);padding:0 10px;display:inline-block;transform:rotate(-1.5deg);margin:6px 0}
+h1 .sm{display:block;font-size:.5em;margin-top:8px;-webkit-text-stroke:0}
+.tag{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:clamp(20px,4vw,28px);margin:22px 0;max-width:520px}
+.badge{display:inline-flex;align-items:center;gap:12px;background:var(--w);border:var(--b);box-shadow:var(--sh-s);padding:10px 16px;margin-bottom:22px;font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800}
+.badge .n{font-family:"Arial Black",Arial,sans-serif;font-size:30px}
+.badge .st{color:var(--k);letter-spacing:2px;font-size:18px}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.hero-art{position:relative;min-height:290px;display:flex;align-items:center;justify-content:center}
+.hero-card{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:26px;transform:rotate(3deg);width:min(100%,360px);text-align:center}
+.hero-card svg{width:150px;height:150px}
+.hero-card p{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:22px;margin-top:8px;line-height:1.05}
+.sticker{position:absolute;top:-6px;right:4px;width:96px;height:96px;border-radius:50%;background:var(--pink);border:var(--b);box-shadow:4px 4px 0 var(--k);display:flex;align-items:center;justify-content:center;text-align:center;font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:13px;line-height:1;transform:rotate(14deg)}
+.marquee{margin-top:44px;background:var(--k);color:var(--y);border-top:var(--b);overflow:hidden;white-space:nowrap;padding:14px 0;font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:20px}
+.marquee div{display:inline-block;animation:mq 22s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(min-width:900px){.hero-grid{grid-template-columns:1.4fr .8fr}}
+
+/* sections */
+section{padding:76px 0;border-top:var(--b)}
+.sec-h{display:flex;flex-direction:column;gap:14px;margin-bottom:36px}
+.sec-h h2{font-size:clamp(38px,9vw,76px)}
+.sec-h h2 span{background:var(--k);color:var(--y);padding:0 10px}
+.example{display:inline-block;align-self:flex-start;background:var(--pink);color:var(--k);border:3px solid var(--k);font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;text-transform:uppercase;font-size:12.5px;padding:6px 10px;letter-spacing:.03em}
+#services{background:var(--w)}
+.grid{display:grid;gap:26px}
+@media(min-width:640px){.grid.g3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--y);border:var(--b);box-shadow:var(--sh);padding:22px;display:flex;flex-direction:column;gap:12px;transition:transform .15s, box-shadow .15s}
+.card:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--k)}
+.card .ic{font-size:40px;width:68px;height:68px;background:var(--w);border:var(--b);display:flex;align-items:center;justify-content:center}
+.card h3{font-size:26px}
+.card p{font-weight:600}
+.card .price{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:14px;border-top:3px solid var(--k);padding-top:10px}
+.card .example{font-size:11.5px;background:var(--w)}
+
+/* hours */
+#hours{background:var(--y)}
+.hours-grid{display:grid;gap:30px;align-items:start}
+@media(min-width:860px){.hours-grid{grid-template-columns:1.2fr .8fr}}
+table.hrs{width:100%;border-collapse:collapse;background:var(--w);border:var(--b);box-shadow:var(--sh)}
+table.hrs td{padding:15px 18px;border-bottom:3px solid var(--k);font-size:17px;font-weight:700}
+table.hrs tr:last-child td{border-bottom:0}
+table.hrs td:first-child{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;background:var(--k);color:var(--y);width:42%}
+table.hrs tr.closed td:last-child{background:repeating-linear-gradient(45deg,#fff 0 10px,#eee 10px 20px)}
+.side{background:var(--k);color:var(--y);border:var(--b);box-shadow:var(--sh);padding:26px;transform:rotate(-1.5deg)}
+.side h3{font-size:34px;margin-bottom:10px}
+.side p{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;margin-bottom:16px;color:var(--w)}
+
+/* reviews */
+#reviews{background:var(--w)}
+.big-rate{display:grid;gap:24px;align-items:center;background:var(--k);color:var(--y);border:var(--b);box-shadow:var(--sh);padding:30px;margin-bottom:44px}
+@media(min-width:800px){.big-rate{grid-template-columns:auto 1fr auto}}
+.big-rate .num{font-family:"Arial Black",Arial,sans-serif;font-size:clamp(80px,20vw,150px);line-height:.85}
+.big-rate .stars{font-size:clamp(30px,7vw,48px);letter-spacing:4px}
+.big-rate p{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800;font-size:20px;color:var(--w);margin-top:6px}
+.top-h{display:flex;flex-direction:column;gap:12px;margin-bottom:22px}
+.top-h h3{font-size:clamp(30px,6vw,46px)}
+.rev-row{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:640px){.rev-row{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rev-row{grid-template-columns:repeat(3,1fr)}}
+.rev{background:var(--y);border:var(--b);box-shadow:var(--sh-s);padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .15s}
+.rev:hover{transform:translateY(-5px)}
+.rev .tagrow{display:block}
+.rev .tagrow span{display:inline-block;background:var(--k);color:var(--y);font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:12px;padding:4px 10px}
+.rev .stars{font-size:24px;letter-spacing:2px;line-height:1.2}
+.rev p{font-weight:600;font-style:italic}
+.rev .who{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:14px;border-top:3px solid var(--k);padding-top:8px}
+
+/* contact */
+#contact{background:var(--y)}
+.contact-grid{display:grid;gap:26px}
+@media(min-width:800px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.cbox{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:24px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.cbox .ic{font-size:38px}
+.cbox h3{font-size:26px}
+.cbox p{font-weight:700;font-size:18px}
+.cbox .btn{font-size:15px;padding:12px 18px;margin-top:auto}
+
+/* booking */
+#book{background:var(--k);color:var(--y)}
+#book .sec-h h2 span{background:var(--y);color:var(--k)}
+form{background:var(--y);color:var(--k);border:var(--b);box-shadow:8px 8px 0 var(--pink);padding:26px;display:grid;gap:18px;max-width:760px}
+@media(min-width:640px){form{grid-template-columns:1fr 1fr}.full{grid-column:1/-1}}
+label{display:block;font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:14px;margin-bottom:6px}
+input,select,textarea{width:100%;font-size:17px;padding:13px;border:var(--b);background:var(--w);color:var(--k);border-radius:0;font-weight:600}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:5px 5px 0 var(--k);background:#fffbe0}
+textarea{min-height:110px;resize:vertical}
+#formMsg{display:none;background:var(--k);color:var(--y);padding:14px;border:3px solid var(--k);font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:15px}
+#formMsg.show{display:block}
+.note{font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px;color:var(--w);margin-top:16px;font-weight:600;max-width:760px}
+
+/* footer */
+footer{background:var(--y);border-top:var(--b);padding:36px 0;text-align:center}
+footer strong{font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:22px;display:block;margin-bottom:8px}
+footer p{font-weight:700;font-size:14px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--k);border-top:var(--b);padding:8px 12px}
+.callbar a{display:block;background:var(--y);color:var(--k);border:3px solid var(--y);text-align:center;text-decoration:none;font-family:"Arial Black",Arial,sans-serif;text-transform:uppercase;font-size:19px;padding:10px}
+@media(min-width:820px){.callbar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .6s ease, transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee div{animation:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for LUV 4 PUPS Pet Grooming. Not their official website.</div>
 
-<header class="hero">
-  <h1>LUV 4 PUPS Pet Grooming</h1>
-  <div class="rating"><span class="star">★</span> 4.8 on Google · 131 reviews</div>
-  <p class="address">328 Washington Ave, Belleville, NJ 07109, USA</p>
-  <div class="actions">
-    <a class="btn btn-primary" href="#book">Book Now</a>
-    <a class="btn btn-call" href="tel:+19737594423">Call (973) 759-4423</a>
+<header class="nav">
+  <div class="nav-in">
+    <a href="#home" class="logo">LUV 4 PUPS</a>
+    <nav aria-label="Main menu">
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <ul id="menu">
+        <li><a class="l" href="#home">Home</a></li>
+        <li><a class="l" href="#services">Services</a></li>
+        <li><a class="l" href="#hours">Hours</a></li>
+        <li><a class="l" href="#reviews">Reviews</a></li>
+        <li><a class="l" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <main>
-  <section id="about">
-    <h2>Pet grooming in Belleville</h2>
-    <p>LUV 4 PUPS Pet Grooming is a pet groomer located on Washington Ave in Belleville, New Jersey. Call to ask about services.</p>
-  </section>
+<section id="home" style="border-top:0">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <span class="kicker">Pet grooming / Belleville, NJ</span>
+      <h1>LUV 4 PUPS <span class="hl">Pet Grooming</span></h1>
+      <p class="tag">Fresh cuts. Clean coats. Happy tails.</p>
+      <div class="badge" aria-label="Google rating 4.8 from 131 reviews">
+        <span class="n">4.8</span>
+        <span class="st" aria-hidden="true">★★★★★</span>
+        <span>131 Google reviews</span>
+      </div>
+      <div class="cta">
+        <a class="btn dark" href="#book">Book Now</a>
+        <a class="btn" href="tel:+19737594423">📞 Call (973) 759-4423</a>
+      </div>
+    </div>
+    <div class="hero-art rv">
+      <div class="sticker">Good<br>dogs<br>only</div>
+      <div class="hero-card">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Paw print">
+          <ellipse cx="60" cy="78" rx="30" ry="25" fill="#0a0a0a"/>
+          <ellipse cx="22" cy="48" rx="11" ry="15" fill="#0a0a0a" transform="rotate(-20 22 48)"/>
+          <ellipse cx="44" cy="26" rx="11" ry="15" fill="#0a0a0a" transform="rotate(-6 44 26)"/>
+          <ellipse cx="76" cy="26" rx="11" ry="15" fill="#0a0a0a" transform="rotate(6 76 26)"/>
+          <ellipse cx="98" cy="48" rx="11" ry="15" fill="#0a0a0a" transform="rotate(20 98 48)"/>
+          <path d="M60 90 c-9 -8 -14 -12 -14 -18 a7 7 0 0 1 14 -2 a7 7 0 0 1 14 2 c0 6 -5 10 -14 18z" fill="#FFE500"/>
+        </svg>
+        <p>Bath · Brush · Trim</p>
+      </div>
+    </div>
+  </div>
+  <div class="marquee" aria-hidden="true"><div>🐶 BATH ✂️ BRUSH 🐾 TRIM 🛁 FLUFF 🐶 BATH ✂️ BRUSH 🐾 TRIM 🛁 FLUFF 🐶 BATH ✂️ BRUSH 🐾 TRIM 🛁 FLUFF 🐶 BATH ✂️ BRUSH 🐾 TRIM 🛁 FLUFF </div></div>
+</section>
 
-  <section id="hours">
-    <h2>Opening hours</h2>
-    <ul class="hours">
-      <li>Monday: Closed</li>
-      <li>Tuesday: 10:00 AM – 5:00 PM</li>
-      <li>Wednesday: 10:00 AM – 5:00 PM</li>
-      <li>Thursday: 10:00 AM – 5:00 PM</li>
-      <li>Friday: 10:00 AM – 5:00 PM</li>
-      <li>Saturday: 10:00 AM – 5:00 PM</li>
-      <li>Sunday: Closed</li>
-    </ul>
-  </section>
+<section id="services">
+  <div class="wrap">
+    <div class="sec-h rv">
+      <h2><span>Services</span></h2>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid g3">
+      <article class="card rv"><span class="example">Example layout - the owner's real services and prices go here</span><div class="ic">✂️</div><h3>Full Groom</h3><p>A sample card for a complete bath, cut and finish.</p><div class="price">Price: add yours</div></article>
+      <article class="card rv"><span class="example">Example layout - the owner's real services and prices go here</span><div class="ic">🛁</div><h3>Bath &amp; Brush</h3><p>A sample card for a wash, dry and brush-out.</p><div class="price">Price: add yours</div></article>
+      <article class="card rv"><span class="example">Example layout - the owner's real services and prices go here</span><div class="ic">🐾</div><h3>Nail Trim</h3><p>A sample card for a quick paw and nail tidy-up.</p><div class="price">Price: add yours</div></article>
+      <article class="card rv"><span class="example">Example layout - the owner's real services and prices go here</span><div class="ic">🐶</div><h3>Puppy Intro Groom</h3><p>A sample card for a gentle first visit for young dogs.</p><div class="price">Price: add yours</div></article>
+      <article class="card rv"><span class="example">Example layout - the owner's real services and prices go here</span><div class="ic">🧼</div><h3>De-Shedding Treatment</h3><p>A sample card for coat care that helps cut down loose fur.</p><div class="price">Price: add yours</div></article>
+      <article class="card rv"><span class="example">Example layout - the owner's real services and prices go here</span><div class="ic">🎀</div><h3>Finishing Touches</h3><p>A sample card for bows, bandanas and a fresh scent.</p><div class="price">Price: add yours</div></article>
+    </div>
+  </div>
+</section>
 
-  <section id="book">
-    <h2>Book an appointment</h2>
-    <form id="demo-form" onsubmit="return false;">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" autocomplete="name">
+<section id="hours">
+  <div class="wrap">
+    <div class="sec-h rv"><h2><span>Hours</span></h2></div>
+    <div class="hours-grid">
+      <table class="hrs rv" aria-label="Opening hours">
+        <tbody>
+          <tr class="closed"><td>Monday</td><td>Closed</td></tr>
+          <tr><td>Tuesday</td><td>10:00&#8239;AM&#8201;–&#8201;5:00&#8239;PM</td></tr>
+          <tr><td>Wednesday</td><td>10:00&#8239;AM&#8201;–&#8201;5:00&#8239;PM</td></tr>
+          <tr><td>Thursday</td><td>10:00&#8239;AM&#8201;–&#8201;5:00&#8239;PM</td></tr>
+          <tr><td>Friday</td><td>10:00&#8239;AM&#8201;–&#8201;5:00&#8239;PM</td></tr>
+          <tr><td>Saturday</td><td>10:00&#8239;AM&#8201;–&#8201;5:00&#8239;PM</td></tr>
+          <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="side rv">
+        <h3>Questions?</h3>
+        <p>Give the shop a call to ask about an appointment.</p>
+        <a class="btn" href="tel:+19737594423">📞 (973) 759-4423</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" autocomplete="tel">
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-h rv"><h2><span>Reviews</span></h2></div>
+    <div class="big-rate rv">
+      <div class="num">4.8</div>
+      <div>
+        <div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
+        <p>based on 131 Google reviews</p>
+      </div>
+      <a class="btn" href="https://maps.google.com/?cid=8781599573372919167&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 131 reviews on Google</a>
+    </div>
 
-      <label for="day">Preferred day</label>
-      <input type="text" id="day" name="day" placeholder="e.g. Saturday">
+    <div class="top-h rv">
+      <h3>Top reviews</h3>
+      <span class="example">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rev-row">
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></article>
+      <article class="rev rv"><div class="tagrow"><span>Example</span></div><div class="stars" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></article>
+    </div>
+  </div>
+</section>
 
-      <label for="time">Preferred time</label>
-      <input type="text" id="time" name="time" placeholder="e.g. 11:00 AM">
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-h rv"><h2><span>Contact</span></h2></div>
+    <div class="contact-grid">
+      <div class="cbox rv"><div class="ic">📍</div><h3>Address</h3><p>328 Washington Ave<br>Belleville, NJ 07109, USA</p><a class="btn dark" href="https://maps.google.com/?cid=8781599573372919167&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="cbox rv"><div class="ic">📞</div><h3>Phone</h3><p>(973) 759-4423</p><a class="btn" href="tel:+19737594423">Tap to call</a></div>
+      <div class="cbox rv"><div class="ic">🗓️</div><h3>Book</h3><p>Try the demo booking form to see how online requests could work.</p><a class="btn pink" href="#book">Book Now</a></div>
+    </div>
+  </div>
+</section>
 
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes"></textarea>
-
-      <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-      <div id="demo-msg" role="status" aria-live="polite"></div>
+<section id="book">
+  <div class="wrap">
+    <div class="sec-h rv"><h2><span>Book an appointment</span></h2></div>
+    <form id="bookForm" class="rv" onsubmit="return false" novalidate>
+      <div><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name"></div>
+      <div><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+      <div><label for="f-day">Preferred day</label><input id="f-day" type="date"></div>
+      <div><label for="f-time">Preferred time</label><input id="f-time" type="time"></div>
+      <div class="full"><label for="f-notes">Notes</label><textarea id="f-notes"></textarea></div>
+      <div class="full"><button type="button" class="btn dark" id="bookBtn">Request appointment</button></div>
+      <div class="full" id="formMsg" role="status" aria-live="polite"></div>
     </form>
-    <p class="note">This is a sample of how online booking could work.</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>328 Washington Ave, Belleville, NJ 07109, USA</p>
-    <a class="btn btn-call" href="tel:+19737594423">Call (973) 759-4423</a>
-  </section>
+    <p class="note rv">This is a sample of how online booking could work.</p>
+  </div>
+</section>
 </main>
 
-<footer>Sample homepage concept for LUV 4 PUPS Pet Grooming. Not their official website.</footer>
+<footer>
+  <div class="wrap">
+    <strong>LUV 4 PUPS Pet Grooming</strong>
+    <p>Sample homepage concept made by a third party. Not their official website.</p>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+19737594423">📞 Call (973) 759-4423</a></div>
 
 <script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');
+    b.classList.toggle('open',o);
+    b.setAttribute('aria-expanded',o?'true':'false');
   });
+  m.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){m.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+  document.getElementById('bookBtn').addEventListener('click',function(){
+    var s=document.getElementById('formMsg');
+    s.textContent='Demo only: online booking is not connected yet.';
+    s.classList.add('show');
+  });
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+    },{threshold:.12});
+    els.forEach(function(e){io.observe(e);});
+  }else{els.forEach(function(e){e.classList.add('in');});}
+})();
 </script>
 </body>
 </html>
