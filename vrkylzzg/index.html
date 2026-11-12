@@ -1,123 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head><meta name="robots" content="noindex"><!-- design: SOFT LUXE -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Olga Hair Stylist – Paterson, NJ</title>
+<title>Olga Hair Stylist – Sample Homepage Concept</title>
 <style>
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:#2b2430;background:#faf7f9;line-height:1.55}
-  .banner{background:#2b2430;color:#fff;font-size:.82rem;text-align:center;padding:8px 12px}
-  header.hero{background:linear-gradient(135deg,#f3e3ec,#e8dcf3);padding:44px 20px 40px;text-align:center}
-  .wrap{max-width:720px;margin:0 auto}
-  h1{font-size:2rem;line-height:1.2;margin-bottom:10px;color:#3a2442}
-  .rating{display:inline-block;background:#fff;border-radius:999px;padding:6px 16px;font-weight:600;margin:6px 0 14px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-  .rating .star{color:#e0a100}
-  .address{margin-bottom:22px;color:#4b3f52}
-  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-  .btn{display:inline-block;text-decoration:none;border:none;cursor:pointer;font-size:1.05rem;font-weight:600;padding:14px 28px;border-radius:10px;font-family:inherit}
-  .btn-primary{background:#8a3b8f;color:#fff}
-  .btn-primary:hover{background:#722f77}
-  .btn-secondary{background:#fff;color:#8a3b8f;border:2px solid #8a3b8f}
-  section{padding:36px 20px}
-  h2{font-size:1.5rem;margin-bottom:16px;color:#3a2442}
-  .card{background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
-  ul.hours{list-style:none}
-  ul.hours li{padding:9px 0;border-bottom:1px solid #eee}
-  ul.hours li:last-child{border-bottom:none}
-  label{display:block;font-weight:600;margin:14px 0 5px;font-size:.95rem}
-  input,textarea{width:100%;padding:12px;border:1px solid #cfc5d6;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
-  textarea{min-height:90px;resize:vertical}
-  input:focus,textarea:focus{outline:2px solid #8a3b8f;border-color:#8a3b8f}
-  form .btn{width:100%;margin-top:20px}
-  #demo-msg{margin-top:16px;padding:12px;border-radius:8px;background:#fff4d6;color:#5a4300;font-weight:600;display:none;text-align:center}
-  .note{font-size:.85rem;color:#6b6073;margin-top:14px;text-align:center}
-  footer{text-align:center;font-size:.85rem;color:#6b6073;padding:24px 20px 40px}
+:root{
+  --greige:#efe7e0;
+  --greige2:#e4d8cf;
+  --blush:#f4d9d3;
+  --rose:#b76e79;
+  --rosegold:#c98f84;
+  --deep:#3d2c2e;
+  --ink:#4a3a3b;
+  --cream:#fbf7f3;
+  --serif:"Cormorant Garamond","Didot","Bodoni MT","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;font-size:16px;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:300;color:var(--deep);line-height:1.1}
+.banner{background:var(--deep);color:#f4e6e1;text-align:center;font-size:.8rem;padding:8px 12px;letter-spacing:.02em}
+nav{position:sticky;top:0;z-index:50;background:rgba(251,247,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--greige2)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:var(--serif);font-size:1.4rem;letter-spacing:.04em;text-decoration:none;color:var(--deep)}
+.logo span{color:var(--rose)}
+.links{display:flex;gap:26px;list-style:none}
+.links a{text-decoration:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);padding:6px 0;border-bottom:1px solid transparent;transition:.25s}
+.links a:hover{border-color:var(--rose);color:var(--rose)}
+.menu-btn{display:none;background:none;border:1px solid var(--rosegold);color:var(--deep);border-radius:99px;padding:8px 16px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;border-bottom:1px solid var(--greige2);max-height:0;overflow:hidden;transition:max-height .35s}
+  .links.open{max-height:360px}
+  .links li a{display:block;padding:15px 24px;border-bottom:1px solid var(--greige)}
+}
+section{padding:96px 20px}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;display:block}
+h2{font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:18px}
+.center{text-align:center}
+.lead{max-width:600px;color:#6b5a5b}
+.center .lead{margin:auto}
+
+/* hero */
+#home{background:linear-gradient(160deg,var(--greige) 0%,var(--blush) 100%);padding:48px 20px 80px}
+.frame{max-width:1000px;margin:auto;border-radius:200px 200px 40px 40px;border:1px solid var(--rosegold);padding:12px;background:rgba(255,255,255,.35)}
+.frame-in{border-radius:190px 190px 30px 30px;background:radial-gradient(circle at 50% 0%,#fff8f4 0%,var(--blush) 55%,#e9c3bb 100%);padding:90px 24px 70px;text-align:center;position:relative;overflow:hidden}
+.frame-in:before,.frame-in:after{content:"";position:absolute;border-radius:50%;background:linear-gradient(135deg,rgba(201,143,132,.25),rgba(255,255,255,0));}
+.frame-in:before{width:280px;height:280px;left:-90px;bottom:-100px}
+.frame-in:after{width:200px;height:200px;right:-60px;top:120px}
+.frame-in>*{position:relative;z-index:1}
+.scissor{font-size:2rem;margin-bottom:10px}
+h1{font-size:clamp(3rem,11vw,6.6rem);letter-spacing:-.01em;margin-bottom:18px}
+h1 em{font-style:italic;color:var(--rose)}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3.5vw,1.7rem);color:#6b5253;margin-bottom:26px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--rosegold);border-radius:99px;padding:9px 20px;font-size:.92rem;margin-bottom:30px;box-shadow:0 6px 20px rgba(183,110,121,.15)}
+.stars{color:var(--rosegold);letter-spacing:2px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;border-radius:99px;padding:15px 34px;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--rose);cursor:pointer;font-family:var(--sans);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(183,110,121,.3)}
+.btn.primary{background:linear-gradient(135deg,var(--rose),var(--rosegold));color:#fff;border-color:transparent}
+.btn.ghost{background:transparent;color:var(--deep)}
+@media(max-width:600px){.frame,.frame-in{border-radius:120px 120px 28px 28px}.frame-in{padding:70px 18px 50px}}
+
+/* services */
+#services{background:var(--cream)}
+.exlabel{display:inline-block;background:var(--deep);color:#f9e9e4;font-size:.72rem;letter-spacing:.08em;padding:7px 14px;border-radius:99px;margin-top:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:48px}
+.card{background:#fff;border:1px solid var(--greige2);border-radius:28px;padding:34px 28px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(120,80,80,.12)}
+.ico{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--blush),var(--greige2));display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
+.card h3{font-size:1.7rem;margin-bottom:6px}
+.price{color:var(--rose);font-size:.9rem;margin:6px 0 14px}
+.exnote{font-size:.74rem;color:#7a5f61;background:var(--greige);border-radius:12px;padding:8px 12px;display:block}
+
+/* hours */
+#hours{background:var(--greige)}
+.hours-box{max-width:620px;margin:44px auto 0;background:#fff;border-radius:32px;padding:20px 34px;border:1px solid var(--greige2)}
+table{width:100%;border-collapse:collapse}
+td{padding:16px 4px;border-bottom:1px solid var(--greige);font-size:1rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--serif);font-size:1.35rem;color:var(--deep)}
+td:last-child{text-align:right;color:var(--rose)}
+@media(max-width:480px){.hours-box{padding:12px 18px}td{font-size:.88rem}td:first-child{font-size:1.12rem}}
+
+/* reviews */
+#reviews{background:linear-gradient(180deg,var(--cream),var(--blush))}
+.big{display:flex;flex-direction:column;align-items:center;margin:34px 0 28px}
+.score{font-family:var(--serif);font-size:clamp(5rem,18vw,8rem);font-weight:300;color:var(--deep);line-height:1}
+.big .stars{font-size:2rem}
+.big p{color:#6b5a5b;margin-top:6px}
+.row-label{margin:64px 0 8px;text-align:center}
+.row-label h3{font-size:2.1rem;margin-bottom:10px}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:26px}
+.rcard{background:#fff;border-radius:24px;padding:22px 20px;border:1px solid var(--greige2);display:flex;flex-direction:column;gap:10px;transition:transform .3s}
+.rcard:hover{transform:translateY(-5px)}
+.ex-row{display:block}
+.ex-badge{display:inline-block;background:var(--greige);color:var(--rose);border:1px solid var(--rosegold);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 11px;border-radius:99px}
+.rcard .stars{font-size:1.15rem;display:block}
+.rcard p{font-style:italic;color:#7a6a6b;font-size:.95rem}
+.rcard b{font-weight:600;font-size:.85rem;color:var(--deep)}
+
+/* contact */
+#contact{background:var(--cream)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:44px}
+.cbox{background:var(--greige);border-radius:28px;padding:34px 28px;text-align:center;transition:transform .3s}
+.cbox:hover{transform:translateY(-5px)}
+.cbox .ico{margin:0 auto 14px;background:#fff}
+.cbox h3{font-size:1.6rem;margin-bottom:8px}
+.cbox a.link{color:var(--rose);text-decoration:none;border-bottom:1px solid var(--rosegold)}
+
+/* booking */
+#book{background:linear-gradient(160deg,var(--greige),var(--blush))}
+form{max-width:620px;margin:44px auto 0;background:#fff;border-radius:32px;padding:38px 30px;border:1px solid var(--greige2);display:grid;gap:18px}
+label{display:grid;gap:6px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#7a5f61}
+input,select,textarea{font:inherit;font-size:1rem;letter-spacing:0;text-transform:none;color:var(--ink);border:1px solid var(--greige2);background:var(--cream);border-radius:16px;padding:13px 16px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rosegold);border-color:transparent}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--deep);color:#fff;border-radius:16px;padding:14px 18px;text-align:center}
+.small{text-align:center;font-size:.85rem;color:#7a6a6b;margin-top:18px}
+
+footer{background:var(--deep);color:#e9d6d1;text-align:center;padding:56px 20px}
+footer h3{color:#fff;font-size:2rem;margin-bottom:8px}
+footer p{font-size:.88rem}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:linear-gradient(135deg,var(--rose),var(--rosegold));color:#fff;text-align:center;text-decoration:none;padding:17px;font-size:1rem;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+
+.fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
 <div class="banner">Sample homepage concept for Olga Hair Stylist. Not their official website.</div>
 
-<header class="hero">
-  <div class="wrap">
-    <h1>Olga Hair Stylist</h1>
-    <div class="rating"><span class="star">★</span> 4.5 on Google · 77 reviews</div>
-    <p class="address">431 21st Ave, Paterson, NJ 07513, USA</p>
-    <div class="btns">
-      <a class="btn btn-primary" href="#book">Book Now</a>
-      <a class="btn btn-secondary" href="tel:+19732798230">Call (973) 279-8230</a>
-    </div>
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">Olga <span>Hair Stylist</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<section>
-  <div class="wrap">
-    <h2>Opening hours</h2>
-    <div class="card">
-      <ul class="hours">
-        <li>Monday: 8:00 AM – 8:00 PM</li>
-        <li>Tuesday: 8:00 AM – 8:00 PM</li>
-        <li>Wednesday: 8:00 AM – 8:00 PM</li>
-        <li>Thursday: 8:00 AM – 8:00 PM</li>
-        <li>Friday: 8:00 AM – 8:00 PM</li>
-        <li>Saturday: 8:00 AM – 8:00 PM</li>
-        <li>Sunday: 8:00 AM – 8:00 PM</li>
-      </ul>
+<section id="home">
+  <div class="frame fade">
+    <div class="frame-in">
+      <div class="scissor">✂️</div>
+      <h1>Olga Hair <em>Stylist</em></h1>
+      <p class="tag">Beautiful hair, in a calm and welcoming space.</p>
+      <div class="badge"><span class="stars">★★★★½</span><span><strong>4.5</strong> · 77 Google reviews</span></div>
+      <div class="btns">
+        <a class="btn primary" href="#book">Book Now</a>
+        <a class="btn ghost" href="tel:+19732798230">📞 (973) 279-8230</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section>
+<section id="services">
   <div class="wrap">
-    <h2>Contact</h2>
-    <div class="card">
-      <p><strong>Address:</strong> 431 21st Ave, Paterson, NJ 07513, USA</p>
-      <p style="margin-top:8px"><strong>Phone:</strong> <a href="tel:+19732798230" style="color:#8a3b8f">(973) 279-8230</a></p>
-      <p style="margin-top:8px">Call to ask about services.</p>
+    <div class="center fade">
+      <span class="eyebrow">Services</span>
+      <h2>A menu of possibilities</h2>
+      <p class="lead">Typical salon services shown as a sample layout.</p>
+      <span class="exlabel">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid">
+      <div class="card fade"><div class="ico">💇‍♀️</div><h3>Haircut &amp; Style</h3><p class="price">Price: add yours</p><span class="exnote">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Hair Color</h3><p class="price">Price: add yours</p><span class="exnote">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Highlights</h3><p class="price">Price: add yours</p><span class="exnote">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💆‍♀️</div><h3>Blowout</h3><p class="price">Price: add yours</p><span class="exnote">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🌿</div><h3>Treatments</h3><p class="price">Price: add yours</p><span class="exnote">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Styling</h3><p class="price">Price: add yours</p><span class="exnote">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="center fade">
+      <span class="eyebrow">Hours</span>
+      <h2>When to visit</h2>
+    </div>
+    <div class="hours-box fade">
+      <table>
+        <tr><td>Monday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
+        <tr><td>Sunday</td><td>8:00 AM – 8:00 PM</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap center">
+    <div class="fade">
+      <span class="eyebrow">Reviews</span>
+      <h2>Loved on Google</h2>
+    </div>
+    <div class="big fade">
+      <div class="score">4.5</div>
+      <div class="stars">★★★★½</div>
+      <p>based on 77 Google reviews</p>
+    </div>
+    <a class="btn primary fade" href="https://maps.google.com/?cid=6169448445425129365&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 77 reviews on Google</a>
+
+    <div class="row-label fade">
+      <h3>Top reviews</h3>
+      <span class="exlabel">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rgrid">
+      <div class="rcard fade"><span class="ex-row"><span class="ex-badge">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="ex-row"><span class="ex-badge">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="ex-row"><span class="ex-badge">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="ex-row"><span class="ex-badge">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="ex-row"><span class="ex-badge">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="center fade">
+      <span class="eyebrow">Contact</span>
+      <h2>Find Olga Hair Stylist</h2>
+    </div>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="ico">📍</div><h3>Address</h3><p>431 21st Ave<br>Paterson, NJ 07513, USA</p></div>
+      <div class="cbox fade"><div class="ico">📞</div><h3>Phone</h3><p><a class="link" href="tel:+19732798230">(973) 279-8230</a></p></div>
+      <div class="cbox fade"><div class="ico">🧭</div><h3>Directions</h3><p><a class="link" href="https://maps.google.com/?cid=6169448445425129365&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></p></div>
     </div>
   </div>
 </section>
 
 <section id="book">
   <div class="wrap">
-    <h2>Book an appointment</h2>
-    <div class="card">
-      <form id="demo-form" onsubmit="return false;">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" autocomplete="name">
-
-        <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" autocomplete="tel">
-
-        <label for="day">Preferred day</label>
-        <input type="text" id="day" name="day" placeholder="e.g. Saturday">
-
-        <label for="time">Preferred time</label>
-        <input type="text" id="time" name="time" placeholder="e.g. 2:00 PM">
-
-        <label for="notes">Notes</label>
-        <textarea id="notes" name="notes"></textarea>
-
-        <button type="button" class="btn btn-primary" id="demo-btn">Request appointment</button>
-        <div id="demo-msg" role="status" aria-live="polite"></div>
-      </form>
-      <p class="note">This is a sample of how online booking could work.</p>
+    <div class="center fade">
+      <span class="eyebrow">Reserve</span>
+      <h2>Book an appointment</h2>
+      <p class="lead">Choose a day and time that suits you.</p>
     </div>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="small">This is a sample of how online booking could work.</p>
   </div>
 </section>
 
 <footer>
-  Sample homepage concept for Olga Hair Stylist. Not their official website.
+  <h3>Olga Hair Stylist</h3>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
 </footer>
 
+<a class="callbar" href="tel:+19732798230">📞 Call</a>
+
 <script>
-  document.getElementById('demo-btn').addEventListener('click', function () {
-    var msg = document.getElementById('demo-msg');
-    msg.textContent = 'Demo only: online booking is not connected yet.';
-    msg.style.display = 'block';
-  });
+const btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',()=>{const o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+document.getElementById('demoBtn').addEventListener('click',()=>{document.getElementById('msg').style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
