@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phil's Auto Detailing – Sample Homepage Concept</title>
+<style>
+:root{--ink:#0b0b0b;--paper:#fff;--coral:#ff5a4d;--grey:#6b6b6b;--rule:#0b0b0b;--soft:#f5f3f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;padding-bottom:64px}
+h1,h2,h3,.sans,nav,button,a.btn,label,.badge,.tag{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}
+a{color:inherit}
+.banner{background:var(--ink);color:#fff;text-align:center;font:600 13px/1.4 "Helvetica Neue",Arial,sans-serif;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.bar{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font:900 18px "Helvetica Neue",Arial,sans-serif;text-decoration:none;letter-spacing:-.5px}
+.logo span{color:var(--coral)}
+nav ul{display:none;list-style:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--rule);padding:8px 20px 16px}
+nav ul.open{display:flex}
+nav a{display:block;padding:12px 0;text-decoration:none;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:1.5px;border-bottom:1px solid #e5e5e5}
+nav a:hover{color:var(--coral)}
+.menu-btn{background:none;border:1.5px solid var(--ink);padding:8px 14px;font-weight:700;font-size:13px;letter-spacing:1px;cursor:pointer;text-transform:uppercase}
+section{padding:80px 20px;border-bottom:1px solid var(--rule)}
+.wrap{max-width:1100px;margin:auto}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--coral);margin-bottom:18px}
+h1{font-size:clamp(52px,14vw,150px);line-height:.92;letter-spacing:-.045em;font-weight:900;margin-bottom:28px}
+h1 em{font-style:normal;color:var(--coral)}
+h2{font-size:clamp(38px,9vw,80px);line-height:.98;letter-spacing:-.04em;font-weight:900;margin-bottom:24px}
+.lead{font-size:clamp(18px,2.6vw,24px);max-width:560px;color:#333;margin-bottom:28px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--ink);padding:8px 16px;font-weight:700;font-size:15px;margin-bottom:28px;border-radius:999px}
+.badge .st{color:var(--coral);letter-spacing:2px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+a.btn,button.btn{display:inline-block;padding:16px 28px;font-weight:800;font-size:15px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:.25s;background:#fff;color:var(--ink)}
+.btn.primary{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn:hover{transform:translateY(-3px);box-shadow:4px 4px 0 var(--ink)}
+.hero{position:relative;overflow:hidden;padding-top:70px}
+.hero .big{position:absolute;right:-40px;bottom:-60px;width:320px;height:320px;border-radius:50%;background:var(--coral);opacity:.12}
+.note{display:inline-block;background:var(--ink);color:#fff;font:700 12px/1.4 "Helvetica Neue",Arial,sans-serif;padding:6px 12px;letter-spacing:.5px;margin-bottom:20px}
+.grid{display:grid;gap:0;grid-template-columns:1fr;border-top:1px solid var(--rule)}
+.card{padding:28px 4px;border-bottom:1px solid var(--rule);transition:.3s}
+.card:hover{transform:translateX(8px);background:var(--soft)}
+.card .ic{font-size:34px}
+.card h3{font-size:26px;letter-spacing:-.02em;margin:8px 0}
+.card .pr{font:700 14px "Helvetica Neue",Arial,sans-serif;color:var(--coral);margin:8px 0}
+.card .ex{font:700 11px/1.3 "Helvetica Neue",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;background:var(--soft);border-left:3px solid var(--coral);padding:6px 10px;display:block;margin-top:10px}
+table{width:100%;max-width:640px;border-collapse:collapse;font-family:"Helvetica Neue",Arial,sans-serif}
+td{padding:16px 0;border-bottom:1px solid var(--rule);font-size:18px}
+td:first-child{font-weight:800}
+td:last-child{text-align:right}
+tr.closed td:last-child{color:var(--grey)}
+.score{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.score .n{font:900 clamp(90px,22vw,200px)/.85 "Helvetica Neue",Arial,sans-serif;letter-spacing:-.06em}
+.stars{color:var(--coral);font-size:30px;letter-spacing:4px}
+.rows-label{font:700 13px "Helvetica Neue",Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;background:var(--soft);border-left:3px solid var(--coral);padding:8px 12px;display:inline-block;margin:36px 0 16px}
+.reviews{display:grid;gap:14px;grid-template-columns:1fr}
+.rev{border:1.5px solid var(--ink);padding:20px;background:#fff;transition:.3s}
+.rev:hover{transform:translateY(-5px);box-shadow:5px 5px 0 var(--coral)}
+.rev .ebadge{display:block;margin-bottom:10px}
+.rev .ebadge span{display:inline-block;background:var(--ink);color:#fff;font:700 11px "Helvetica Neue",Arial,sans-serif;padding:3px 10px;letter-spacing:1px;text-transform:uppercase}
+.rev .stars{font-size:20px;display:block;margin-bottom:10px;letter-spacing:2px}
+.rev p{color:#444;font-style:italic}
+.rev b{display:block;margin-top:12px;font-family:"Helvetica Neue",Arial,sans-serif;font-size:14px}
+.contact-grid{display:grid;gap:30px}
+.contact-grid dt{font:700 12px "Helvetica Neue",Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--coral);margin-top:20px}
+.contact-grid dd{font-size:24px;font-weight:700;font-family:"Helvetica Neue",Arial,sans-serif;letter-spacing:-.01em}
+form{display:grid;gap:18px;max-width:640px}
+label{font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:1.5px;display:grid;gap:6px}
+input,textarea,select{font:inherit;font-size:17px;padding:14px;border:1.5px solid var(--ink);border-radius:0;background:#fff;width:100%}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--coral);outline-offset:1px}
+.two{display:grid;gap:18px}
+#msg{display:none;background:var(--ink);color:#fff;padding:14px 16px;font:700 15px "Helvetica Neue",Arial,sans-serif;border-left:6px solid var(--coral)}
+.small{font:14px "Helvetica Neue",Arial,sans-serif;color:var(--grey);margin-top:16px}
+footer{padding:50px 20px;background:var(--ink);color:#fff;font-family:"Helvetica Neue",Arial,sans-serif}
+footer b{font-size:22px;display:block;margin-bottom:6px}
+footer p{color:#bbb;font-size:14px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--coral);color:#fff;text-align:center;padding:16px;font:800 17px "Helvetica Neue",Arial,sans-serif;text-decoration:none;letter-spacing:1px;text-transform:uppercase}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(min-width:760px){
+body{padding-bottom:0}
+.callbar{display:none}
+.menu-btn{display:none}
+nav ul{display:flex;flex-direction:row;position:static;border:0;padding:0;gap:26px;background:none}
+nav a{border:0;padding:4px 0;font-size:12px}
+section{padding:120px 40px}
+.grid{grid-template-columns:1fr 1fr;column-gap:50px}
+.reviews{grid-template-columns:repeat(3,1fr)}
+.two{grid-template-columns:1fr 1fr}
+.contact-grid{grid-template-columns:1fr 1fr}
+}
+@media(min-width:1000px){.reviews{grid-template-columns:repeat(5,1fr)}.rev{padding:16px}}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Phil's Auto Detailing. Not their official website.</div>
+<header>
+<div class="bar">
+<a class="logo" href="#home">Phil's<span>.</span> Auto Detailing</a>
+<nav>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="big"></div>
+<div class="wrap fade">
+<span class="tag">Auto detailing · Ewing Township, NJ</span>
+<h1>Phil's Auto Detailing<em>.</em></h1>
+<p class="lead">A fresh look for your ride, inside and out.</p>
+<div class="badge"><span class="st">★★★★★</span> 4.9 · 126 Google reviews</div>
+<div class="cta">
+<a class="btn primary" href="#book">Book Now</a>
+<a class="btn" href="tel:+16097312297">📞 Call (609) 731-2297</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<span class="tag fade">Services</span>
+<h2 class="fade">What a detail<br>can include.</h2>
+<span class="note fade">Example layout - the owner's real services and prices go here</span>
+<div class="grid">
+<div class="card fade"><div class="ic">🚗</div><h3>Exterior Wash &amp; Wax</h3><p>A sample card describing a hand wash and protective finish.</p><div class="pr">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🧽</div><h3>Interior Deep Clean</h3><p>A sample card for vacuuming, wiping and freshening the cabin.</p><div class="pr">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">✨</div><h3>Full Detail Package</h3><p>A sample card combining inside and outside services.</p><div class="pr">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">💎</div><h3>Polish &amp; Paint Care</h3><p>A sample card for shine restoration and paint protection.</p><div class="pr">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">💡</div><h3>Headlight Restoration</h3><p>A sample card for clearing cloudy, hazy headlights.</p><div class="pr">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🛞</div><h3>Wheels &amp; Tires</h3><p>A sample card for wheel cleaning and tire dressing.</p><div class="pr">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<span class="tag fade">Hours</span>
+<h2 class="fade">When to<br>drop by.</h2>
+<table class="fade">
+<tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+<tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+<tr><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr>
+<tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+<tr><td>Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+<tr class="closed"><td>Saturday</td><td>Closed</td></tr>
+<tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<span class="tag fade">Reviews</span>
+<h2 class="fade">Rated by<br>drivers.</h2>
+<div class="score fade">
+<div class="n">4.9</div>
+<div><div class="stars">★★★★★</div><p class="sans" style="font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:18px">based on 126 Google reviews</p></div>
+</div>
+<a class="btn primary fade" href="https://maps.google.com/?cid=17996652127306342169&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 126 reviews on Google</a>
+<br>
+<span class="rows-label fade">Top reviews · Example layout - your best reviews show here</span>
+<div class="reviews">
+<div class="rev fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<span class="tag fade">Contact</span>
+<h2 class="fade">Find the<br>shop.</h2>
+<div class="contact-grid fade">
+<dl>
+<dt>Address</dt><dd>324 Robbins Ave<br>Ewing Township, NJ 08638, USA</dd>
+<dt>Phone</dt><dd><a href="tel:+16097312297" style="text-decoration-color:var(--coral)">(609) 731-2297</a></dd>
+</dl>
+<div style="align-self:end">
+<a class="btn primary" href="https://maps.google.com/?cid=17996652127306342169&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<span class="tag fade">Booking</span>
+<h2 class="fade">Book an appointment</h2>
+<form class="fade" id="bf" onsubmit="return false">
+<label>Name<input type="text" name="name" autocomplete="off"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+<div class="two">
+<label>Preferred day<input type="text" name="day" placeholder="e.g. a weekday"></label>
+<label>Preferred time<input type="text" name="time" placeholder="e.g. morning"></label>
+</div>
+<label>Notes<textarea name="notes" rows="4"></textarea></label>
+<button type="button" class="btn primary" id="sub">Request appointment</button>
+<div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<b>Phil's Auto Detailing</b>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+16097312297">📞 Call</a>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open')});
+document.getElementById('sub').addEventListener('click',function(){document.getElementById('msg').style.display='block'});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.fade').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
