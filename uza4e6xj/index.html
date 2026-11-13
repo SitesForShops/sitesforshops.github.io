@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: BOLD BRUTALIST -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supreme Clientele Barber Shop - Sample Homepage Concept</title>
+<style>
+:root{--y:#FFE600;--k:#0a0a0a;--w:#fff;--p:#ff3d81;--b:4px solid var(--k);--sh:8px 8px 0 var(--k)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Impact,"Arial Black","Helvetica Neue",Arial,sans-serif;background:var(--y);color:var(--k);line-height:1.5;padding-bottom:70px;overflow-x:hidden}
+p,li,td,label,input,select,textarea,.body{font-family:"Helvetica Neue",Arial,system-ui,sans-serif;font-weight:600}
+a{color:inherit}
+.banner{background:var(--k);color:var(--y);text-align:center;font:700 .8rem Arial,sans-serif;padding:8px 12px;text-transform:uppercase;letter-spacing:.04em}
+nav{position:sticky;top:0;z-index:50;background:var(--k);border-bottom:var(--b);display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.logo{color:var(--y);font-size:1.2rem;text-transform:uppercase;letter-spacing:.04em;text-decoration:none}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;color:var(--w);text-decoration:none;text-transform:uppercase;font:800 .85rem Arial,sans-serif;padding:8px 12px;border:3px solid transparent}
+.menu a:hover{background:var(--y);color:var(--k);border-color:var(--y)}
+#mb{display:none;background:var(--y);border:3px solid var(--w);font:900 .9rem Arial,sans-serif;padding:8px 14px;cursor:pointer;text-transform:uppercase}
+@media(max-width:760px){
+#mb{display:block}
+.menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--k);flex-direction:column;padding:10px 16px 16px;border-bottom:var(--b)}
+.menu.open{display:flex}
+.menu a{font-size:1.1rem;border-bottom:2px solid #333}
+}
+section{padding:72px 20px;border-bottom:var(--b)}
+.wrap{max-width:1050px;margin:0 auto}
+h1,h2,h3{text-transform:uppercase;line-height:.95;font-weight:900}
+h1{font-size:clamp(2.8rem,12vw,7.5rem);letter-spacing:-.02em}
+h1 span{background:var(--k);color:var(--y);padding:0 .12em;display:inline-block;transform:rotate(-1.5deg);box-shadow:8px 8px 0 var(--p)}
+h2{font-size:clamp(2.2rem,7vw,4rem);margin-bottom:18px;display:inline-block;background:var(--k);color:var(--y);padding:6px 14px;box-shadow:6px 6px 0 var(--p)}
+.tag{font-size:clamp(1.1rem,3vw,1.6rem);max-width:560px;margin:26px 0;font-weight:800}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--w);border:var(--b);box-shadow:6px 6px 0 var(--k);padding:10px 16px;font:900 1rem Arial,sans-serif;text-transform:uppercase}
+.badge b{font-size:1.6rem}
+.stars{color:var(--k);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:16px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;text-transform:uppercase;font:900 1.1rem Arial,sans-serif;padding:16px 28px;border:var(--b);box-shadow:var(--sh);background:var(--k);color:var(--y);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn.alt{background:var(--w);color:var(--k)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--k)}
+.btn:active{transform:translate(4px,4px);box-shadow:3px 3px 0 var(--k)}
+.hero{position:relative;overflow:hidden;padding-top:60px}
+.hero .big{position:absolute;right:-30px;bottom:-40px;font-size:15rem;opacity:.12;transform:rotate(-12deg);pointer-events:none}
+.stripe{background:repeating-linear-gradient(45deg,var(--k) 0 20px,var(--y) 20px 40px);height:22px;border-bottom:var(--b)}
+.note{display:inline-block;background:var(--p);color:var(--k);border:3px solid var(--k);padding:6px 12px;font:900 .8rem Arial,sans-serif;text-transform:uppercase;margin:4px 0 22px}
+.grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--k)}
+.card .ic{font-size:2.6rem;display:block;margin-bottom:8px}
+.card h3{font-size:1.7rem;margin-bottom:10px}
+.card .note{font-size:.7rem;margin:12px 0 8px}
+.price{font:800 .95rem Arial,sans-serif;text-transform:uppercase;border-top:3px solid var(--k);padding-top:8px;margin-top:8px}
+#hours{background:var(--w)}
+table{width:100%;max-width:640px;border-collapse:collapse;border:var(--b);box-shadow:var(--sh);background:var(--y);font-size:1.1rem}
+td{padding:14px 18px;border-bottom:3px solid var(--k)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:900;text-transform:uppercase;width:42%}
+tr.today{background:var(--k);color:var(--y)}
+#reviews{background:var(--k);color:var(--y)}
+#reviews h2{background:var(--y);color:var(--k);box-shadow:6px 6px 0 var(--p)}
+.score{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin:10px 0 24px}
+.score .n{font-size:clamp(5rem,20vw,9rem);line-height:.85;color:var(--y)}
+.score .st{font-size:2.2rem;color:var(--y);letter-spacing:4px}
+.score p{color:var(--w);font-size:1.1rem}
+#reviews .btn{background:var(--y);color:var(--k);border-color:var(--y);box-shadow:8px 8px 0 var(--p)}
+#reviews .btn:hover{box-shadow:11px 11px 0 var(--p)}
+.rhead{margin:44px 0 6px;font-size:2rem;color:var(--w)}
+#reviews .note{background:var(--y);}
+.rrow{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.rc{background:var(--y);color:var(--k);border:4px solid var(--w);box-shadow:6px 6px 0 var(--p);padding:16px;display:flex;flex-direction:column;gap:8px;transition:transform .2s}
+.rc:hover{transform:translateY(-5px)}
+.ex{align-self:flex-start;background:var(--k);color:var(--y);font:900 .7rem Arial,sans-serif;text-transform:uppercase;padding:3px 8px}
+.rc .s{font-size:1.2rem;letter-spacing:2px}
+.rc p{font-size:.95rem}
+.rc .nm{font-weight:900;text-transform:uppercase;font-size:.85rem}
+.cgrid{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cgrid .card h3{font-size:1.4rem}
+.cgrid .card p{font-size:1.15rem}
+.cgrid .card a.tel{font-size:1.6rem;font-weight:900}
+#book{background:var(--w)}
+form{max-width:640px;background:var(--y);border:var(--b);box-shadow:var(--sh);padding:24px;display:grid;gap:16px}
+label{display:grid;gap:6px;text-transform:uppercase;font-size:.85rem;font-weight:900}
+input,select,textarea{font:600 1rem Arial,sans-serif;padding:12px;border:3px solid var(--k);background:var(--w);width:100%;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:4px solid var(--p)}
+.row2{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+#msg{display:none;background:var(--k);color:var(--y);padding:14px;border:3px solid var(--k);font:800 1rem Arial,sans-serif}
+.small{font-size:.9rem;margin-top:14px;max-width:640px}
+footer{background:var(--k);color:var(--y);padding:36px 20px;text-align:center}
+footer b{font-size:1.6rem;text-transform:uppercase;display:block;margin-bottom:8px}
+footer p{color:var(--w);font-size:.9rem}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--k);border-top:var(--b);padding:8px}
+.callbar a{display:block;text-align:center;background:var(--y);color:var(--k);text-decoration:none;font:900 1.2rem Arial,sans-serif;text-transform:uppercase;padding:12px;border:3px solid var(--k)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Supreme Clientele Barber Shop. Not their official website.</div>
+<nav>
+<a class="logo" href="#home">✂ Supreme Clientele</a>
+<button id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul class="menu" id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<div class="big">✂</div>
+<div class="wrap" style="position:relative">
+<h1><span>Supreme Clientele</span><br>Barber Shop</h1>
+<p class="tag">Sharp cuts. Clean lines. Camden, NJ.</p>
+<div class="badge"><span class="stars">★</span><b>4.6</b> Google rating · 51 reviews</div>
+<div class="btns">
+<a class="btn" href="#book">Book Now</a>
+<a class="btn alt" href="tel:+18569669899">📞 Call (856) 966-9899</a>
+</div>
+</div>
+</section>
+<div class="stripe"></div>
+
+<section id="services">
+<div class="wrap">
+<h2 class="fade">Services</h2><br>
+<span class="note">Example layout - the owner's real services and prices go here</span>
+<div class="grid">
+<div class="card fade"><span class="ic">💈</span><h3>Classic Haircut</h3><span class="note">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+<div class="card fade"><span class="ic">✂️</span><h3>Fade &amp; Taper</h3><span class="note">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+<div class="card fade"><span class="ic">🧔</span><h3>Beard Trim</h3><span class="note">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+<div class="card fade"><span class="ic">🪒</span><h3>Hot Towel Shave</h3><span class="note">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+<div class="card fade"><span class="ic">👦</span><h3>Kids' Cuts</h3><span class="note">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+<div class="card fade"><span class="ic">📐</span><h3>Line-Up</h3><span class="note">Example layout - the owner's real services and prices go here</span><div class="price">Price: add yours</div></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<h2 class="fade">Hours</h2>
+<table class="fade" id="ht">
+<tr><td>Monday</td><td>8:00 AM – 7:00 PM</td></tr>
+<tr><td>Tuesday</td><td>8:00 AM – 7:00 PM</td></tr>
+<tr><td>Wednesday</td><td>8:00 AM – 7:00 PM</td></tr>
+<tr><td>Thursday</td><td>8:00 AM – 7:00 PM</td></tr>
+<tr><td>Friday</td><td>8:00 AM – 7:00 PM</td></tr>
+<tr><td>Saturday</td><td>8:00 AM – 7:00 PM</td></tr>
+<tr><td>Sunday</td><td>11:00 AM – 4:00 PM</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<h2 class="fade">Reviews</h2>
+<div class="score fade">
+<div class="n">4.6</div>
+<div><div class="st" aria-label="4.6 out of 5 stars">★★★★★</div><p>based on 51 Google reviews</p></div>
+</div>
+<a class="btn fade" href="https://maps.google.com/?cid=11315492574411630634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 51 reviews on Google</a>
+<h3 class="rhead">Top reviews</h3>
+<span class="note">Example layout - your best reviews show here</span>
+<div class="rrow">
+<div class="rc fade"><span class="ex">Example</span><div class="s">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+<div class="rc fade"><span class="ex">Example</span><div class="s">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+<div class="rc fade"><span class="ex">Example</span><div class="s">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+<div class="rc fade"><span class="ex">Example</span><div class="s">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+<div class="rc fade"><span class="ex">Example</span><div class="s">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<h2 class="fade">Contact</h2>
+<div class="cgrid">
+<div class="card fade"><span class="ic">📍</span><h3>Address</h3><p>1215 Haddon Ave<br>Camden, NJ 08103, USA</p></div>
+<div class="card fade"><span class="ic">📞</span><h3>Phone</h3><p><a class="tel" href="tel:+18569669899">(856) 966-9899</a></p></div>
+<div class="card fade"><span class="ic">🧭</span><h3>Directions</h3><p style="margin-top:8px"><a class="btn" href="https://maps.google.com/?cid=11315492574411630634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></p></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<h2 class="fade">Book an appointment</h2>
+<form class="fade" id="bf" onsubmit="return false">
+<label>Name<input type="text" name="name" autocomplete="off"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+<div class="row2">
+<label>Preferred day<select name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
+<label>Preferred time<input type="time" name="time"></label>
+</div>
+<label>Notes<textarea name="notes" rows="3"></textarea></label>
+<button type="button" class="btn" id="bb">Request appointment</button>
+<div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<b>Supreme Clientele Barber Shop</b>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+18569669899">📞 Call (856) 966-9899</a></div>
+
+<script>
+var mb=document.getElementById('mb'),mn=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=mn.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+mn.addEventListener('click',function(e){if(e.target.tagName==='A'){mn.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+document.getElementById('bb').addEventListener('click',function(){document.getElementById('msg').style.display='block'});
+var rows=document.querySelectorAll('#ht tr'),d=(new Date().getDay()+6)%7;
+if(rows[d])rows[d].className='today';
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
