@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan's Barber Shop & Beauty Salon – Sample Homepage Concept</title>
+<style>
+:root{--ink:#0d0d0d;--paper:#fff;--coral:#ff5a4a;--grey:#6b6b6b;--rule:#0d0d0d;--soft:#f5f3f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.6;padding-bottom:64px}
+a{color:inherit}
+.sans{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.banner{background:var(--coral);color:#0d0d0d;text-align:center;font:600 13px/1.4 -apple-system,"Segoe UI",Arial,sans-serif;padding:8px 12px}
+nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule);font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:56px}
+.logo{font-weight:800;letter-spacing:.02em;text-decoration:none;font-size:15px;display:flex;gap:8px;align-items:center}
+.logo i{width:12px;height:12px;background:var(--coral);border-radius:50%;display:inline-block}
+.links{display:none;list-style:none;gap:28px}
+.links a{text-decoration:none;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.links a:hover{border-color:var(--coral)}
+.menu-btn{background:none;border:1px solid var(--ink);padding:8px 14px;font:700 13px inherit;font-family:inherit;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.links.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:var(--paper);padding:12px 20px 20px;border-bottom:1px solid var(--rule);gap:4px}
+.links.open a{display:block;padding:12px 0;border-bottom:1px solid #ddd;font-size:16px}
+@media(min-width:800px){.links{display:flex}.menu-btn{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+section{padding:88px 20px;border-bottom:1px solid var(--rule)}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{font:700 12px/1 -apple-system,"Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.2em;color:var(--coral);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow:after{content:"";height:1px;background:var(--ink);flex:0 0 60px}
+h1{font-size:clamp(46px,12vw,128px);line-height:.95;letter-spacing:-.035em;font-weight:900;margin-bottom:28px}
+h1 span{color:var(--coral)}
+h2{font-size:clamp(38px,8vw,80px);line-height:1;letter-spacing:-.03em;font-weight:900;margin-bottom:24px}
+.hero{padding-top:64px}
+.tag{font-size:clamp(18px,3vw,24px);max-width:560px;color:#333;margin-bottom:32px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:10px 16px;font:600 14px -apple-system,"Segoe UI",Arial,sans-serif;margin-bottom:32px;border-radius:40px}
+.stars{color:var(--coral);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+.btn{display:inline-block;padding:16px 28px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid var(--ink);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;background:var(--paper);font-family:inherit;color:var(--ink)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.btn.primary{background:var(--coral);border-color:var(--ink)}
+.btn.dark{background:var(--ink);color:#fff}
+.hero-art{margin-top:64px;border-top:1px solid var(--rule);padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:600 13px -apple-system,"Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--grey)}
+.note-label{display:inline-block;font:700 12px/1.4 -apple-system,"Segoe UI",Arial,sans-serif;background:var(--ink);color:#fff;padding:6px 12px;margin-bottom:20px;letter-spacing:.03em}
+.grid{display:grid;gap:0;border-top:1px solid var(--rule);margin-top:32px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.grid .card:nth-child(odd){border-right:1px solid var(--rule)}}
+@media(min-width:1000px){.grid.three{grid-template-columns:repeat(3,1fr)}.grid.three .card{border-right:1px solid var(--rule)}.grid.three .card:nth-child(3n){border-right:0}}
+.card{padding:32px 24px;border-bottom:1px solid var(--rule);transition:background .25s,transform .25s;background:var(--paper)}
+.card:hover{background:var(--soft);transform:translateY(-3px)}
+.card .ic{font-size:34px;margin-bottom:14px}
+.card h3{font-size:26px;letter-spacing:-.01em;margin-bottom:8px}
+.card p{font:15px/1.5 -apple-system,"Segoe UI",Arial,sans-serif;color:var(--grey)}
+.card .price{display:block;margin-top:12px;font:700 14px -apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink)}
+.card .ex{display:block;margin-top:12px;font:700 11px/1.4 -apple-system,"Segoe UI",Arial,sans-serif;color:var(--coral);text-transform:uppercase;letter-spacing:.06em}
+table{width:100%;border-collapse:collapse;font-family:-apple-system,"Segoe UI",Arial,sans-serif;margin-top:24px;max-width:700px}
+td{padding:18px 0;border-bottom:1px solid var(--rule);font-size:18px}
+td:last-child{text-align:right;font-weight:600}
+tr.closed td:last-child{color:var(--coral)}
+.rating{display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.big{font-size:clamp(90px,22vw,200px);line-height:.85;font-weight:900;letter-spacing:-.05em}
+.rating .stars{font-size:32px;display:block}
+.rating p{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:17px}
+.rev-row{margin-top:56px;border:1px dashed var(--ink);padding:24px 16px}
+.rev-row h3{font-size:32px;letter-spacing:-.02em;margin-bottom:6px}
+.revs{display:grid;gap:16px;margin-top:20px;grid-template-columns:1fr}
+@media(min-width:640px){.revs{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.revs{grid-template-columns:repeat(5,1fr)}}
+.rev{border:1px solid var(--ink);padding:18px;background:var(--paper);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;gap:10px}
+.rev:hover{transform:translateY(-4px);box-shadow:4px 4px 0 var(--coral)}
+.rev .ex-badge{display:block;align-self:flex-start;background:var(--coral);font:700 11px/1 -apple-system,"Segoe UI",Arial,sans-serif;padding:5px 9px;text-transform:uppercase;letter-spacing:.08em}
+.rev .stars{font-size:18px;white-space:nowrap}
+.rev p{font-style:italic;font-size:15px;color:#333}
+.rev b{font:700 13px -apple-system,"Segoe UI",Arial,sans-serif}
+.contact-grid{display:grid;gap:40px;margin-top:32px}
+@media(min-width:800px){.contact-grid{grid-template-columns:1fr 1fr}}
+.contact-grid dt{font:700 12px -apple-system,"Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.18em;color:var(--coral);margin-top:24px}
+.contact-grid dd{font-size:24px;border-bottom:1px solid var(--rule);padding-bottom:14px;margin-top:4px}
+.contact-grid dd a{text-decoration:none}
+.mapbox{min-height:260px;background:linear-gradient(#0d0d0d11 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,#0d0d0d11 1px,transparent 1px) 0 0/40px 40px,var(--soft);border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;text-align:center;padding:24px}
+.mapbox .pin{font-size:48px}
+form{display:grid;gap:20px;max-width:700px;margin-top:32px;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+label{font:700 12px -apple-system,"Segoe UI",Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;display:block}
+input,select,textarea{width:100%;margin-top:8px;padding:14px 0;border:0;border-bottom:2px solid var(--ink);font:18px inherit;font-family:inherit;background:transparent;border-radius:0;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--coral)}
+.two{display:grid;gap:20px}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;padding:16px;border:2px solid var(--ink);background:var(--coral);font-weight:700}
+.small{font:14px -apple-system,"Segoe UI",Arial,sans-serif;color:var(--grey);margin-top:16px}
+footer{background:var(--ink);color:#fff;padding:56px 20px;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+footer b{font:900 clamp(24px,5vw,40px) Georgia,serif;display:block;margin-bottom:12px;letter-spacing:-.02em}
+footer b span{color:var(--coral)}
+footer p{color:#bbb;font-size:14px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:flex;background:var(--coral);border-top:2px solid var(--ink)}
+.callbar a{flex:1;text-align:center;padding:18px;font:800 17px -apple-system,"Segoe UI",Arial,sans-serif;text-decoration:none;color:var(--ink);letter-spacing:.04em}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Juan's Barber Shop &amp; Beauty Salon. Not their official website.</div>
+<nav>
+<div class="nav-in">
+<a class="logo" href="#home"><i></i>JUAN'S</a>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="links">Menu</button>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div class="wrap">
+<div class="eyebrow">Camden, New Jersey</div>
+<h1>Juan's Barber Shop &amp; Beauty Salon<span>.</span></h1>
+<p class="tag">Fresh looks, friendly chairs and a neighborhood spot for hair care.</p>
+<div class="badge"><span class="stars">★★★★★</span> 4.3 on Google · 116 reviews</div>
+<div class="btns">
+<a class="btn primary" href="#book">Book Now</a>
+<a class="btn dark" href="tel:+18566350876">📞 Call (856) 635-0876</a>
+</div>
+<div class="hero-art"><span>✂ Barber</span><span>💇 Beauty</span><span>2701 Westfield Ave</span></div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="eyebrow fade">Services</div>
+<h2 class="fade">What a visit could include.</h2>
+<span class="note-label">Example layout - the owner's real services and prices go here</span>
+<div class="grid three">
+<div class="card fade"><div class="ic">✂️</div><h3>Haircut</h3><p>A classic cut, styled to suit the client.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🪒</div><h3>Beard Trim</h3><p>Shaping and clean edges for a sharp finish.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">💈</div><h3>Line-Up &amp; Fade</h3><p>Crisp lines and smooth blends.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">💇‍♀️</div><h3>Women's Cut &amp; Style</h3><p>Trim, shape and blow-dry.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><p>Color services for a fresh new look.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">👦</div><h3>Kids' Cuts</h3><p>Comfortable cuts for younger clients.</p><span class="price">Price: add yours</span><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<div class="eyebrow fade">Hours</div>
+<h2 class="fade">Open six days a week.</h2>
+<table class="fade">
+<tr><td>Monday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Tuesday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Wednesday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+<tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<div class="eyebrow fade">Reviews</div>
+<h2 class="fade">Rated on Google.</h2>
+<div class="rating fade">
+<div class="big">4.3</div>
+<div><span class="stars" aria-label="4.3 out of 5 stars">★★★★☆</span><p>based on 116 Google reviews</p></div>
+</div>
+<a class="btn primary" href="https://maps.google.com/?cid=1991462001543319965&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 116 reviews on Google</a>
+<div class="rev-row fade">
+<h3>Top reviews</h3>
+<span class="note-label">Example layout - your best reviews show here</span>
+<div class="revs">
+<div class="rev"><span class="ex-badge">Example</span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev"><span class="ex-badge">Example</span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev"><span class="ex-badge">Example</span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev"><span class="ex-badge">Example</span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev"><span class="ex-badge">Example</span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<div class="eyebrow fade">Contact</div>
+<h2 class="fade">Find the shop.</h2>
+<div class="contact-grid">
+<dl class="fade">
+<dt>Address</dt><dd>2701 Westfield Ave<br>Camden, NJ 08105, USA</dd>
+<dt>Phone</dt><dd><a href="tel:+18566350876">(856) 635-0876</a></dd>
+</dl>
+<div class="mapbox fade"><div class="pin">📍</div><p>2701 Westfield Ave, Camden, NJ 08105</p><a class="btn primary" href="https://maps.google.com/?cid=1991462001543319965&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<div class="eyebrow fade">Book</div>
+<h2 class="fade">Book an appointment</h2>
+<form id="bf" class="fade" onsubmit="return false">
+<div class="two">
+<label>Name<input type="text" name="name" autocomplete="name"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+</div>
+<div class="two">
+<label>Preferred day<input type="date" name="day"></label>
+<label>Preferred time<input type="time" name="time"></label>
+</div>
+<label>Notes<textarea name="notes" rows="3"></textarea></label>
+<div><button type="button" class="btn primary" id="bb">Request appointment</button></div>
+<div id="msg" role="status"></div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<b>Juan's Barber Shop &amp; Beauty Salon<span>.</span></b>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</div>
+</footer>
+
+<div class="callbar"><a href="tel:+18566350876">📞 CALL (856) 635-0876</a></div>
+
+<script>
+var mb=document.getElementById('mb'),ln=document.getElementById('links');
+mb.addEventListener('click',function(){var o=ln.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+ln.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ln.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+document.getElementById('bb').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
