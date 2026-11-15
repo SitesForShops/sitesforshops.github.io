@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: PASTEL POP -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stop N Stare Hand Car Wash - Sample Homepage Concept</title>
+<style>
+:root{
+  --lilac:#c9b6ff;--lilac-d:#6b4bd6;--ink:#2b1f4d;--pink:#ffb3d1;--pink-d:#e0457f;--butter:#fff1a8;--butter-d:#f5c518;--cream:#fffaf0;--white:#fff;
+  --font:"Nunito","Quicksand","Trebuchet MS","Segoe UI Rounded","Arial Rounded MT Bold",system-ui,-apple-system,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--font);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;overflow-x:hidden;padding-bottom:70px}
+a{color:inherit}
+.banner{background:var(--ink);color:var(--butter);text-align:center;font-size:.82rem;padding:8px 12px;font-weight:700}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,250,240,.94);backdrop-filter:blur(8px);border-bottom:3px solid var(--lilac)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:900;font-size:1.05rem;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span.dot{width:30px;height:30px;border-radius:50%;background:var(--pink);display:grid;place-items:center;font-size:1rem;border:2px solid var(--ink)}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{text-decoration:none;font-weight:800;padding:8px 14px;border-radius:999px;transition:.2s;display:block}
+.menu a:hover{background:var(--butter)}
+.burger{display:none;background:var(--pink);border:2px solid var(--ink);border-radius:999px;padding:8px 16px;font:inherit;font-weight:900;color:var(--ink);cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;padding:12px 18px 18px;border-bottom:3px solid var(--lilac)}
+  .menu.open{display:flex}
+  .menu a{background:var(--white);border:2px solid var(--lilac);margin-top:6px;text-align:center}
+}
+section{position:relative;padding:84px 20px;overflow:hidden}
+.wrap{max-width:1100px;margin:auto;position:relative;z-index:2}
+h1,h2,h3{line-height:1.1;font-weight:900}
+h2{font-size:clamp(2rem,6vw,3.2rem);margin-bottom:12px}
+.sticker{display:inline-block;background:var(--butter);border:2px solid var(--ink);border-radius:999px;padding:6px 16px;font-weight:900;font-size:.85rem;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
+.blob{position:absolute;border-radius:50% 50% 45% 55%/55% 45% 55% 45%;z-index:1;filter:blur(.5px)}
+/* hero */
+#home{background:linear-gradient(160deg,var(--lilac) 0%,#e5d9ff 50%,var(--pink) 130%);padding-top:70px;padding-bottom:100px;min-height:86vh;display:flex;align-items:center}
+.hero-grid{display:grid;gap:40px;grid-template-columns:1.2fr .8fr;align-items:center}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}}
+h1{font-size:clamp(2.6rem,9vw,5.6rem);letter-spacing:-1px;margin:16px 0}
+h1 em{font-style:normal;color:var(--pink-d);display:inline-block;transform:rotate(-2deg)}
+.tag{font-size:1.25rem;max-width:520px;font-weight:700;margin-bottom:22px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--white);border:3px solid var(--ink);border-radius:22px;padding:8px 18px;font-weight:900;box-shadow:5px 5px 0 var(--ink);margin-bottom:26px}
+.badge .st{color:var(--butter-d);font-size:1.2rem;letter-spacing:1px;text-shadow:0 0 1px var(--ink)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:900;font-size:1.1rem;text-decoration:none;padding:15px 30px;border-radius:999px;border:3px solid var(--ink);cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .2s,box-shadow .2s;color:var(--ink)}
+.btn:hover{transform:translate(-2px,-4px);box-shadow:7px 8px 0 var(--ink)}
+.btn.pink{background:var(--pink)}.btn.butter{background:var(--butter)}.btn.white{background:var(--white)}
+.hero-art{position:relative;aspect-ratio:1;max-width:380px;margin:auto;width:100%}
+.hero-art .big{position:absolute;inset:6%;background:var(--butter);border:4px solid var(--ink);border-radius:46% 54% 50% 50%/52% 46% 54% 48%;display:grid;place-items:center;font-size:clamp(6rem,22vw,9rem);animation:float 5s ease-in-out infinite}
+.hero-art .b{position:absolute;border-radius:50%;background:var(--white);border:3px solid var(--ink);display:grid;place-items:center;animation:float 4s ease-in-out infinite}
+.b1{width:70px;height:70px;top:0;right:8%;font-size:2rem}
+.b2{width:50px;height:50px;bottom:6%;left:0;font-size:1.5rem;animation-delay:.8s!important;background:var(--pink)!important}
+.b3{width:36px;height:36px;top:30%;left:-4%;animation-delay:1.4s!important}
+@keyframes float{50%{transform:translateY(-14px) rotate(2deg)}}
+/* services */
+#services{background:var(--cream)}
+.ex{display:inline-block;background:var(--pink);border:2px dashed var(--ink);border-radius:14px;padding:6px 14px;font-weight:900;font-size:.85rem;margin:6px 0 10px}
+.lead{max-width:620px;font-weight:600;margin-bottom:28px}
+.cards{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--white);border:3px solid var(--ink);border-radius:30px;padding:26px;box-shadow:6px 6px 0 var(--lilac);transition:.25s}
+.card:hover{transform:translateY(-8px) rotate(-.6deg);box-shadow:8px 12px 0 var(--pink)}
+.card .ic{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;font-size:2rem;border:3px solid var(--ink);margin-bottom:14px}
+.card h3{font-size:1.4rem;margin-bottom:6px}
+.card .ex{font-size:.75rem;margin:10px 0 6px}
+.price{font-weight:900;color:var(--lilac-d)}
+.c1 .ic{background:var(--butter)}.c2 .ic{background:var(--pink)}.c3 .ic{background:var(--lilac)}.c4 .ic{background:#c8f2e4}.c5 .ic{background:var(--butter)}.c6 .ic{background:var(--pink)}
+/* hours */
+#hours{background:linear-gradient(180deg,var(--butter),#fff7cc)}
+.hours-grid{display:grid;gap:34px;grid-template-columns:1fr 1fr;align-items:center}
+@media(max-width:800px){.hours-grid{grid-template-columns:1fr}}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:3px solid var(--ink);border-radius:26px;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
+td{padding:13px 20px;font-weight:700;border-bottom:2px dashed var(--lilac)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:900;color:var(--lilac-d)}
+tr:nth-child(even){background:#faf5ff}
+.clock{font-size:clamp(5rem,18vw,8rem);text-align:center}
+/* reviews */
+#reviews{background:var(--lilac)}
+.rate-box{background:var(--white);border:3px solid var(--ink);border-radius:36px;padding:30px;box-shadow:7px 7px 0 var(--ink);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;margin:20px 0 38px}
+.rate-big{font-size:clamp(4rem,15vw,6.5rem);font-weight:900;line-height:1;color:var(--pink-d)}
+.stars{color:var(--butter-d);font-size:1.8rem;letter-spacing:2px;text-shadow:0 0 1px var(--ink),1px 1px 0 var(--ink)}
+.rrow{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rev{background:var(--white);border:3px solid var(--ink);border-radius:26px;padding:20px;transition:.25s}
+.rev:hover{transform:translateY(-6px)}
+.rev .tagrow{display:block;margin-bottom:10px}
+.rev .ex{margin:0;font-size:.75rem;padding:3px 12px}
+.rev .stars{font-size:1.3rem;display:block;margin-bottom:8px}
+.rev p{font-weight:600}.rev .nm{font-weight:900;margin-top:10px;color:var(--lilac-d)}
+.top-t{font-size:1.6rem;margin:6px 0}
+/* contact */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cbox{background:var(--white);border:3px solid var(--ink);border-radius:30px;padding:28px;box-shadow:6px 6px 0 var(--pink)}
+.cbox .ic{font-size:2.2rem}
+.cbox h3{margin:6px 0}
+.cbox a.tel{font-size:1.5rem;font-weight:900;text-decoration:none;color:var(--lilac-d)}
+/* booking */
+#book{background:linear-gradient(160deg,var(--pink),#ffd9e8 60%,var(--butter))}
+form{background:var(--white);border:3px solid var(--ink);border-radius:34px;padding:28px;box-shadow:7px 7px 0 var(--ink);max-width:640px;display:grid;gap:16px}
+label{font-weight:900;display:grid;gap:6px;font-size:.95rem}
+input,textarea{font:inherit;padding:13px 16px;border:3px solid var(--ink);border-radius:18px;background:#fbf8ff;color:var(--ink)}
+input:focus,textarea:focus{outline:3px solid var(--butter-d);background:#fff}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{font-weight:900;background:var(--butter);border:2px solid var(--ink);border-radius:16px;padding:12px 16px;display:none}
+.note{font-size:.88rem;font-weight:700;margin-top:14px;max-width:640px}
+footer{background:var(--ink);color:#fff;text-align:center;padding:36px 20px}
+footer strong{color:var(--butter);font-size:1.2rem}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--pink);border-top:3px solid var(--ink);padding:10px;text-align:center}
+.callbar a{display:block;background:var(--butter);border:3px solid var(--ink);border-radius:999px;padding:11px;font-weight:900;text-decoration:none;font-size:1.1rem}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}*{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Stop N Stare Hand Car Wash. Not their official website.</div>
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home"><span class="dot">🫧</span>Stop N Stare</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="blob" style="width:360px;height:360px;background:var(--pink);top:-120px;right:-100px;opacity:.7"></div>
+  <div class="blob" style="width:300px;height:300px;background:var(--butter);bottom:-110px;left:-90px;opacity:.9"></div>
+  <div class="wrap hero-grid">
+    <div class="fade">
+      <span class="sticker">🫧 Hand car wash &amp; detailing · Bronx, NY</span>
+      <h1>Stop N Stare <em>Hand Car Wash</em></h1>
+      <p class="tag">Sparkly clean rides, washed by hand. Come see the shine.</p>
+      <div class="badge"><span class="st">★★★★★</span><span>4.5 · 1,210 Google reviews</span></div>
+      <div class="btns">
+        <a class="btn pink" href="#book">✨ Book Now</a>
+        <a class="btn butter" href="tel:+17188233003">📞 (718) 823-3003</a>
+      </div>
+    </div>
+    <div class="hero-art fade" aria-hidden="true">
+      <div class="big">🚗</div>
+      <div class="b b1">🫧</div><div class="b b2">✨</div><div class="b b3">💦</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="blob" style="width:280px;height:280px;background:var(--lilac);top:-100px;left:-100px;opacity:.5"></div>
+  <div class="wrap">
+    <span class="sticker">Services</span>
+    <h2 style="margin-top:14px">What a car wash menu can look like</h2>
+    <div class="ex">Example layout - the owner's real services and prices go here</div>
+    <p class="lead">Below is a sample of how service cards could be arranged. These are generic examples, not a list of what this business offers.</p>
+    <div class="cards">
+      <div class="card c1 fade"><div class="ic">🚿</div><h3>Exterior Hand Wash</h3><p>A gentle wash and dry for the outside of the vehicle.</p><div class="ex">Example layout - the owner's real services and prices go here</div><div class="price">Price: add yours</div></div>
+      <div class="card c2 fade"><div class="ic">🧽</div><h3>Interior Cleaning</h3><p>Vacuuming and wipe-down of seats, dash and mats.</p><div class="ex">Example layout - the owner's real services and prices go here</div><div class="price">Price: add yours</div></div>
+      <div class="card c3 fade"><div class="ic">✨</div><h3>Wax &amp; Polish</h3><p>A glossy finish to help paint stand out.</p><div class="ex">Example layout - the owner's real services and prices go here</div><div class="price">Price: add yours</div></div>
+      <div class="card c4 fade"><div class="ic">🛞</div><h3>Wheel &amp; Tire Care</h3><p>Brake dust and road grime cleaned off rims and tires.</p><div class="ex">Example layout - the owner's real services and prices go here</div><div class="price">Price: add yours</div></div>
+      <div class="card c5 fade"><div class="ic">🪟</div><h3>Window Cleaning</h3><p>Streak-free glass inside and out.</p><div class="ex">Example layout - the owner's real services and prices go here</div><div class="price">Price: add yours</div></div>
+      <div class="card c6 fade"><div class="ic">💎</div><h3>Full Detail Package</h3><p>A combined inside-and-out service example.</p><div class="ex">Example layout - the owner's real services and prices go here</div><div class="price">Price: add yours</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="blob" style="width:300px;height:300px;background:var(--pink);bottom:-130px;right:-90px;opacity:.5"></div>
+  <div class="wrap">
+    <span class="sticker">Hours</span>
+    <h2 style="margin-top:14px">Opening hours</h2>
+    <div class="hours-grid">
+      <table class="fade">
+        <tbody>
+          <tr><td>Monday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Thursday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Friday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Saturday</td><td>8:00 AM – 6:00 PM</td></tr>
+          <tr><td>Sunday</td><td>8:00 AM – 6:00 PM</td></tr>
+        </tbody>
+      </table>
+      <div class="clock fade" aria-hidden="true">🕗🫧</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="blob" style="width:320px;height:320px;background:var(--butter);top:-120px;right:-100px;opacity:.6"></div>
+  <div class="wrap">
+    <span class="sticker">Reviews</span>
+    <h2 style="margin-top:14px">What Google says</h2>
+    <div class="rate-box fade">
+      <div>
+        <div class="rate-big">4.5</div>
+        <div class="stars" aria-label="4.5 out of 5 stars">★★★★½</div>
+        <div style="font-weight:800">based on 1,210 Google reviews</div>
+      </div>
+      <a class="btn pink" target="_blank" rel="noopener" href="https://maps.google.com/?cid=11170432902394957145&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">⭐ Read all 1,210 reviews on Google</a>
+    </div>
+    <h3 class="top-t">Top reviews</h3>
+    <div class="ex">Example layout - your best reviews show here</div>
+    <div class="rrow">
+      <div class="rev fade"><span class="tagrow"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><span class="tagrow"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><span class="tagrow"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><span class="tagrow"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rev fade"><span class="tagrow"><span class="ex">Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="blob" style="width:260px;height:260px;background:var(--lilac);bottom:-100px;left:-80px;opacity:.5"></div>
+  <div class="wrap">
+    <span class="sticker">Contact</span>
+    <h2 style="margin-top:14px">Find the wash</h2>
+    <div class="contact-grid">
+      <div class="cbox fade"><div class="ic">📍</div><h3>Address</h3><p>1748 Castle Hill Ave<br>Bronx, NY 10462, USA</p><br><a class="btn butter" target="_blank" rel="noopener" href="https://maps.google.com/?cid=11170432902394957145&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">🧭 Get directions</a></div>
+      <div class="cbox fade"><div class="ic">📞</div><h3>Phone</h3><p style="margin-bottom:8px">Call to ask about availability.</p><a class="tel" href="tel:+17188233003">(718) 823-3003</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="blob" style="width:340px;height:340px;background:var(--lilac);top:-120px;right:-120px;opacity:.6"></div>
+  <div class="wrap">
+    <span class="sticker">Booking</span>
+    <h2 style="margin-top:14px">Book an appointment</h2>
+    <p class="lead">Pick a day and time that suits you.</p>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="off" placeholder="Your name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="off" placeholder="Your phone number"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Anything to add?"></textarea></label>
+      <button type="button" class="btn pink" id="bookBtn">✨ Request booking</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Stop N Stare Hand Car Wash</strong>
+  <p style="margin-top:6px">Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+17188233003">📞 Call (718) 823-3003</a></div>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);
+  });
+  m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false')})});
+  document.getElementById('bookBtn').addEventListener('click',function(){
+    var s=document.getElementById('msg');
+    s.textContent='Demo only: online booking is not connected yet.';
+    s.style.display='block';
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e){io.observe(e)});
+  }else{els.forEach(function(e){e.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
