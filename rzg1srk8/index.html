@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FRESH MINT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ace Of Barbers | Sample Homepage Concept</title>
+<style>
+:root{
+  --mint:#d9f7e8;
+  --mint2:#a8ecc9;
+  --mint3:#6fd9a5;
+  --deep:#0b4a36;
+  --deeper:#06301f;
+  --white:#ffffff;
+  --ink:#10281f;
+  --muted:#4a6a5d;
+  --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:"Nunito","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  color:var(--ink);background:#f4fdf8;line-height:1.6;font-size:17px;
+  padding-bottom:64px;
+}
+a{color:inherit}
+.banner{background:var(--deeper);color:var(--mint);text-align:center;font-size:.82rem;padding:8px 12px;font-weight:600}
+nav{
+  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--mint2);
+}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font-weight:900;color:var(--deep);text-decoration:none;font-size:1.1rem;display:flex;gap:8px;align-items:center}
+.logo span{background:var(--deep);color:var(--mint);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:1rem}
+.links{display:flex;gap:6px;list-style:none}
+.links a{text-decoration:none;font-weight:700;padding:8px 14px;border-radius:999px;color:var(--deep);transition:.2s}
+.links a:hover{background:var(--mint)}
+.menu-btn{display:none;background:var(--deep);color:#fff;border:0;border-radius:999px;padding:9px 16px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:inherit}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;padding:10px 20px 18px;border-bottom:1px solid var(--mint2);display:none;box-shadow:0 12px 24px rgba(11,74,54,.12)}
+  .links.open{display:flex}
+  .links a{display:block;padding:12px 14px}
+}
+section{padding:80px 20px}
+.wrap{max-width:1100px;margin:auto}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);color:var(--deep);line-height:1.15;margin-bottom:12px;font-weight:900}
+.eyebrow{display:inline-block;background:var(--mint);color:var(--deep);font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.sub{color:var(--muted);max-width:640px}
+
+/* hero */
+#home{position:relative;overflow:hidden;background:linear-gradient(160deg,#e9fff3 0%,var(--mint) 60%,var(--mint2) 100%);padding:90px 20px 100px;min-height:84vh;display:flex;align-items:center}
+.circle{position:absolute;border-radius:50%;z-index:0}
+.c1{width:420px;height:420px;background:radial-gradient(circle at 30% 30%,var(--mint3),#9be8c1);opacity:.55;right:-120px;top:-100px}
+.c2{width:300px;height:300px;background:var(--deep);opacity:.9;right:8%;bottom:-120px}
+.c3{width:200px;height:200px;background:#fff;opacity:.7;left:-60px;bottom:10%}
+.c4{width:120px;height:120px;background:var(--mint3);opacity:.6;right:30%;top:14%}
+.hero-in{position:relative;z-index:1;max-width:1100px;margin:auto;width:100%}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 18px;font-weight:800;color:var(--deep);box-shadow:0 8px 20px rgba(11,74,54,.12);margin-bottom:22px}
+.badge .st{color:#f5b400;letter-spacing:1px}
+h1{font-size:clamp(3rem,11vw,6.4rem);line-height:.98;color:var(--deep);font-weight:900;letter-spacing:-.03em;max-width:800px}
+h1 em{font-style:normal;color:#17a672}
+.tag{font-size:clamp(1.1rem,3vw,1.4rem);margin:22px 0 32px;color:var(--deeper);max-width:520px;font-weight:600}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;border-radius:999px;padding:16px 30px;font-size:1.05rem;border:2px solid var(--deep);transition:transform .2s,box-shadow .2s;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 22px rgba(11,74,54,.22)}
+.btn.primary{background:var(--deep);color:#fff}
+.btn.ghost{background:#fff;color:var(--deep)}
+
+/* cards */
+.note{display:inline-block;background:#fff7d6;color:#6b5200;border:1px dashed #d9b400;border-radius:12px;padding:6px 12px;font-size:.82rem;font-weight:800;margin-top:12px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:36px}
+.card{background:#fff;border-radius:var(--radius);padding:28px;border:2px solid var(--mint);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(11,74,54,.14)}
+.ico{width:60px;height:60px;border-radius:20px;background:var(--mint);display:grid;place-items:center;font-size:1.9rem;margin-bottom:16px}
+.card h3{color:var(--deep);font-size:1.25rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.price{display:block;margin-top:12px;font-weight:800;color:var(--deep)}
+.card .note{margin-top:12px;font-size:.75rem}
+#services{background:#fff}
+#services .card{background:#f4fdf8}
+
+/* hours */
+#hours{background:linear-gradient(180deg,#f4fdf8,var(--mint))}
+.hours-box{margin-top:30px;background:#fff;border-radius:var(--radius);padding:12px 28px;box-shadow:0 14px 30px rgba(11,74,54,.1);max-width:640px}
+table{width:100%;border-collapse:collapse}
+td{padding:15px 4px;border-bottom:1px solid var(--mint);font-weight:600}
+tr:last-child td{border-bottom:0}
+td:last-child{text-align:right;color:var(--deep);font-weight:800}
+tr.closed td:last-child{color:#a13a3a}
+
+/* reviews */
+.big{display:flex;flex-wrap:wrap;align-items:center;gap:28px;margin:30px 0;background:var(--deep);color:#fff;border-radius:32px;padding:34px;position:relative;overflow:hidden}
+.big::after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;background:var(--mint3);opacity:.18;right:-60px;top:-80px}
+.score{font-size:clamp(4rem,14vw,6.5rem);font-weight:900;line-height:1;color:var(--mint)}
+.big .stars{color:#ffd23f;font-size:1.8rem;letter-spacing:3px}
+.big p{font-weight:700;margin:4px 0 16px}
+.big .btn{background:var(--mint);color:var(--deep);border-color:var(--mint)}
+.row-label{margin:36px 0 0}
+.row-label h3{font-size:1.5rem;color:var(--deep)}
+.rev{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.ex{display:block;background:var(--mint);color:var(--deep);font-size:.75rem;font-weight:800;border-radius:999px;padding:3px 12px}
+.rev .stars{color:#f5b400;font-size:1.25rem;letter-spacing:2px;line-height:1.2}
+.rev .who{font-weight:800;color:var(--deep)}
+.rev p{font-style:italic}
+.reviews-row{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:20px}
+
+/* contact */
+#contact{background:#fff}
+.cgrid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:30px}
+.cgrid .card{background:var(--mint);border-color:var(--mint2)}
+.cgrid a.link{color:var(--deep);font-weight:800}
+
+/* booking */
+#book{background:linear-gradient(160deg,var(--mint),var(--mint2))}
+form{margin-top:30px;background:#fff;border-radius:32px;padding:30px;max-width:640px;box-shadow:0 16px 36px rgba(11,74,54,.14);display:grid;gap:16px}
+label{font-weight:800;color:var(--deep);font-size:.9rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;padding:13px 16px;border:2px solid var(--mint2);border-radius:16px;background:#f9fffc;color:var(--ink);width:100%}
+input:focus,textarea:focus,select:focus{outline:3px solid var(--mint3);border-color:var(--deep)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--deep);color:#fff;border-radius:16px;padding:14px 18px;font-weight:800}
+.small{font-size:.85rem;color:var(--muted);margin-top:14px;max-width:640px}
+
+footer{background:var(--deeper);color:var(--mint);text-align:center;padding:40px 20px}
+footer strong{display:block;font-size:1.3rem;color:#fff;margin-bottom:6px}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--deep);color:#fff;text-align:center;padding:16px;font-weight:900;text-decoration:none;font-size:1.1rem;box-shadow:0 -6px 18px rgba(0,0,0,.2)}
+@media(max-width:760px){.callbar{display:block}}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Ace Of Barbers. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo"><span>✂</span>Ace Of Barbers</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">☰ Menu</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="circle c1"></div><div class="circle c2"></div><div class="circle c3"></div><div class="circle c4"></div>
+  <div class="hero-in">
+    <div class="badge"><span class="st">★★★★★</span> 4.8 · 109 Google reviews</div>
+    <h1>Ace Of Barbers</h1>
+    <p class="tag">Fresh cuts, clean lines and a friendly chair in Union City, NJ. ✂️</p>
+    <div class="btns">
+      <a class="btn primary" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+12017139137">📞 (201) 713-9137</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 class="fade">What a barber menu can look like</h2>
+    <p class="sub fade">Generic examples of typical barber shop services.</p>
+    <span class="note">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ico">💈</div><h3>Classic Haircut</h3><p>A tidy, tailored cut finished with clean edges.</p><span class="price">Price: add yours</span><span class="note">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">⚡</div><h3>Fade</h3><p>Smooth blended fades, from subtle to sharp.</p><span class="price">Price: add yours</span><span class="note">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🧔</div><h3>Beard Trim</h3><p>Shaped and softened beard lines.</p><span class="price">Price: add yours</span><span class="note">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🪒</div><h3>Hot Towel Shave</h3><p>A relaxing, close razor shave.</p><span class="price">Price: add yours</span><span class="note">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🧒</div><h3>Kids' Cut</h3><p>Patient, friendly cuts for younger clients.</p><span class="price">Price: add yours</span><span class="note">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Line-Up</h3><p>Crisp edges around the hairline and neck.</p><span class="price">Price: add yours</span><span class="note">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <span class="eyebrow">Hours</span>
+    <h2 class="fade">Opening hours</h2>
+    <div class="hours-box fade">
+      <table>
+        <tr><td>Monday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Saturday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2 class="fade">What the rating says</h2>
+    <div class="big fade">
+      <div class="score">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p>based on 109 Google reviews</p>
+        <a class="btn" href="https://maps.google.com/?cid=3617598549013736124&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 109 reviews on Google</a>
+      </div>
+    </div>
+    <div class="row-label">
+      <h3>Top reviews</h3>
+      <span class="note">Example layout - your best reviews show here</span>
+    </div>
+    <div class="reviews-row">
+      <div class="card rev fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="card rev fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="card rev fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="card rev fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="card rev fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2 class="fade">Find Ace Of Barbers</h2>
+    <div class="cgrid">
+      <div class="card fade"><div class="ico">📍</div><h3>Address</h3><p>2026 New York Ave<br>Union City, NJ 07087, USA</p></div>
+      <div class="card fade"><div class="ico">📞</div><h3>Phone</h3><p><a class="link" href="tel:+12017139137">(201) 713-9137</a></p></div>
+      <div class="card fade"><div class="ico">🧭</div><h3>Directions</h3><p><a class="link" href="https://maps.google.com/?cid=3617598549013736124&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Booking</span>
+    <h2 class="fade">Book an appointment</h2>
+    <form id="demoForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="off"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+      <div class="two">
+        <label>Preferred day<input type="text" name="day" placeholder="e.g. Tuesday"></label>
+        <label>Preferred time<input type="text" name="time" placeholder="e.g. 2:00 PM"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="small">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Ace Of Barbers</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+12017139137">📞 Call (201) 713-9137</a>
+
+<script>
+const btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',()=>{const o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+document.getElementById('demoBtn').addEventListener('click',()=>{document.getElementById('msg').style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
