@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: WARM SUNSET -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concourse Nail Bar – Sample Homepage Concept</title>
+<style>
+:root{
+  --terra:#B8532E;
+  --terra-d:#8A3A1C;
+  --peach:#F6C6A5;
+  --peach-l:#FBE3D0;
+  --cream:#FFF6EA;
+  --ink:#3A1F14;
+  --gold:#E9A23B;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1}
+.banner{background:var(--ink);color:var(--peach-l);text-align:center;font-size:13px;padding:8px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,246,234,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--peach)}
+.nav-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--terra-d);text-decoration:none}
+.links{display:none;gap:26px;list-style:none}
+.links a{text-decoration:none;font-weight:600;font-size:15px;padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.links a:hover{border-color:var(--terra);color:var(--terra)}
+.menu-btn{background:var(--terra);color:#fff;border:0;border-radius:999px;padding:9px 18px;font-weight:700;font-size:15px;cursor:pointer}
+.links.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--cream);padding:12px 24px 20px;gap:4px;border-bottom:1px solid var(--peach);box-shadow:0 12px 24px rgba(58,31,20,.12)}
+.links.open a{display:block;padding:12px 0;font-size:18px}
+@media(min-width:800px){.links{display:flex}.menu-btn{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+
+section{padding:84px 20px}
+.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:13px;font-weight:700;color:var(--terra)}
+h2{font-size:clamp(32px,6vw,52px);color:var(--terra-d);margin:8px 0 14px}
+.center{text-align:center}
+
+/* hero */
+#home{background:linear-gradient(180deg,var(--peach-l) 0%,var(--peach) 55%,#EE9E78 100%);text-align:center;position:relative;overflow:hidden;padding:60px 20px 0}
+.hero-in{position:relative;z-index:2;max-width:760px;margin:0 auto;padding-bottom:70px}
+.arch{position:absolute;left:50%;top:30px;transform:translateX(-50%);width:min(560px,125vw);height:min(640px,140vw);border-radius:999px 999px 0 0;background:radial-gradient(circle at 50% 38%,#FFE7B8 0 22%,var(--gold) 23% 38%,#E4733F 39% 60%,var(--terra) 61%);opacity:.9;z-index:1}
+.arch::after{content:"";position:absolute;inset:18px;border-radius:999px 999px 0 0;border:2px solid rgba(255,246,234,.55)}
+#home h1{font-size:clamp(46px,12vw,98px);color:var(--cream);text-shadow:0 3px 24px rgba(90,30,10,.45);margin:14px 0 14px}
+.tag{font-size:clamp(18px,3.4vw,24px);font-family:var(--serif);font-style:italic;color:#fff;text-shadow:0 2px 12px rgba(90,30,10,.5);max-width:560px;margin:0 auto 22px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--ink);padding:9px 18px;border-radius:999px;font-weight:700;box-shadow:0 8px 22px rgba(90,30,10,.25)}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:15px 30px;border:2px solid transparent;transition:transform .2s,box-shadow .2s;cursor:pointer;font-size:17px;font-family:var(--sans)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(90,30,10,.28)}
+.btn-p{background:var(--ink);color:var(--cream)}
+.btn-s{background:var(--cream);color:var(--terra-d);border-color:var(--cream)}
+.btn-t{background:var(--terra);color:#fff}
+.hills{position:relative;z-index:2;height:70px;margin:0 -20px}
+.hills svg{display:block;width:100%;height:100%}
+
+/* services */
+#services{background:var(--cream)}
+.ex{display:inline-block;background:var(--ink);color:var(--peach-l);font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px}
+.grid{display:grid;gap:22px;grid-template-columns:1fr;margin-top:34px}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:26px 26px 26px 26px;padding:28px;border:1px solid var(--peach);box-shadow:0 6px 18px rgba(184,83,46,.08);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 32px rgba(184,83,46,.18)}
+.ico{width:60px;height:60px;border-radius:50% 50% 14px 14px;background:linear-gradient(180deg,var(--peach),#EE9E78);display:grid;place-items:center;font-size:28px;margin-bottom:14px}
+.card h3{font-size:24px;color:var(--terra-d);margin-bottom:6px}
+.card .ex{margin:10px 0 10px;font-size:12px;border-radius:12px}
+.price{font-weight:700;color:var(--terra)}
+
+/* hours */
+#hours{background:linear-gradient(180deg,var(--peach-l),var(--peach))}
+.hours-box{max-width:620px;margin:30px auto 0;background:var(--cream);border-radius:28px;padding:14px 26px;box-shadow:0 14px 34px rgba(138,58,28,.18)}
+table{width:100%;border-collapse:collapse}
+td{padding:14px 4px;border-bottom:1px dashed #E3B79A;font-size:16px}
+tr:last-child td{border:0}
+td:first-child{font-weight:700;color:var(--terra-d)}
+td:last-child{text-align:right}
+
+/* reviews */
+#reviews{background:var(--cream)}
+.big{display:flex;flex-direction:column;align-items:center;gap:6px;margin:20px 0 22px}
+.num{font-family:var(--serif);font-size:clamp(76px,18vw,128px);font-weight:700;color:var(--terra);line-height:1}
+.stars{color:var(--gold);font-size:30px;letter-spacing:4px}
+.row-label{text-align:center;margin:46px 0 6px}
+.row-label h3{font-size:30px;color:var(--terra-d);margin-bottom:10px}
+.rev-row{display:grid;gap:18px;grid-template-columns:1fr;margin-top:24px}
+@media(min-width:620px){.rev-row{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.rev-row{grid-template-columns:repeat(5,1fr)}}
+.rev{background:#fff;border:1px solid var(--peach);border-radius:22px;padding:20px;transition:transform .25s;display:flex;flex-direction:column;gap:10px}
+.rev:hover{transform:translateY(-5px)}
+.rev .tagrow{display:block}
+.rev .ex{font-size:12px;padding:4px 12px}
+.rev .stars{font-size:20px;letter-spacing:2px}
+.rev p{font-style:italic;color:#6b4636;font-size:15px}
+.rev b{font-size:14px}
+
+/* contact */
+#contact{background:var(--terra-d);color:var(--cream)}
+#contact h2{color:var(--cream)}
+#contact .eyebrow{color:var(--peach)}
+.cgrid{display:grid;gap:22px;margin-top:30px}
+@media(min-width:760px){.cgrid{grid-template-columns:1fr 1fr}}
+.cbox{background:rgba(255,246,234,.1);border:1px solid rgba(255,246,234,.25);border-radius:26px;padding:28px}
+.cbox h3{font-size:22px;color:var(--peach);margin-bottom:8px}
+.cbox p{font-size:19px;margin-bottom:16px}
+.cbox a.tel{font-weight:700;text-decoration:none;font-size:24px}
+
+/* booking */
+#book{background:linear-gradient(160deg,var(--peach-l),var(--peach))}
+form{max-width:640px;margin:30px auto 0;background:var(--cream);border-radius:28px;padding:30px;box-shadow:0 16px 36px rgba(138,58,28,.2);display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--terra-d)}
+input,select,textarea{font:inherit;padding:13px 14px;border-radius:14px;border:2px solid var(--peach);background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terra)}
+.two{display:grid;gap:16px}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:var(--ink);color:var(--peach-l);padding:14px 16px;border-radius:14px;font-weight:700;text-align:center}
+.note{font-size:14px;color:#6b4636;text-align:center}
+
+footer{background:var(--ink);color:var(--peach-l);text-align:center;padding:36px 20px;font-size:15px}
+footer strong{font-family:var(--serif);font-size:22px;display:block;margin-bottom:6px;color:var(--cream)}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--terra);color:#fff;text-align:center;padding:16px;font-weight:700;text-decoration:none;font-size:18px;display:block;box-shadow:0 -6px 18px rgba(0,0,0,.25)}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Concourse Nail Bar. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">Concourse Nail Bar</a>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">☰ Menu</button>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="arch" aria-hidden="true"></div>
+  <div class="hero-in">
+    <div class="eyebrow" style="color:var(--terra-d)">Nails · Bronx, NY</div>
+    <h1>Concourse Nail Bar</h1>
+    <p class="tag">Polished hands, pretty nails and a little time for yourself.</p>
+    <div class="badge"><span class="st">★★★★★</span> 4.6 · 721 Google reviews</div>
+    <div class="btns">
+      <a class="btn btn-p" href="#book">Book Now</a>
+      <a class="btn btn-s" href="tel:+19175077004">📞 Call (917) 507-7004</a>
+    </div>
+  </div>
+  <div class="hills" aria-hidden="true">
+    <svg viewBox="0 0 1200 70" preserveAspectRatio="none"><path d="M0 40 C200 0 400 70 600 35 S1000 0 1200 40 V70 H0Z" fill="#FFF6EA"/></svg>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Services</div>
+      <h2>Treat your nails</h2>
+      <span class="ex">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid g3">
+      <article class="card fade"><div class="ico">💅</div><h3>Classic Manicure</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></article>
+      <article class="card fade"><div class="ico">🦶</div><h3>Pedicure</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></article>
+      <article class="card fade"><div class="ico">✨</div><h3>Gel Polish</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></article>
+      <article class="card fade"><div class="ico">🌸</div><h3>Nail Art</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></article>
+      <article class="card fade"><div class="ico">💎</div><h3>Acrylic Set</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></article>
+      <article class="card fade"><div class="ico">🧴</div><h3>Polish Change</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap center fade">
+    <div class="eyebrow">Hours</div>
+    <h2>When to visit</h2>
+    <div class="hours-box">
+      <table>
+        <tr><td>Monday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Tuesday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Saturday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Sunday</td><td>11:00 AM – 6:30 PM</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap center">
+    <div class="fade">
+      <div class="eyebrow">Reviews</div>
+      <h2>Loved by the neighborhood</h2>
+    </div>
+    <div class="big fade">
+      <div class="num">4.6</div>
+      <div class="stars" aria-label="4.6 out of 5 stars">★★★★★</div>
+      <div style="font-weight:700;font-size:18px">based on 721 Google reviews</div>
+    </div>
+    <a class="btn btn-t" target="_blank" rel="noopener" href="https://maps.google.com/?cid=14773518683157611019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 721 reviews on Google</a>
+
+    <div class="row-label fade">
+      <h3>Top reviews</h3>
+      <span class="ex">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rev-row">
+      <div class="rev fade"><div class="tagrow"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="tagrow"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="tagrow"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="tagrow"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="tagrow"><span class="ex">Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Contact</div>
+      <h2>Find Concourse Nail Bar</h2>
+    </div>
+    <div class="cgrid">
+      <div class="cbox fade">
+        <h3>📍 Address</h3>
+        <p>200 E 161st St, Bronx, NY 10451, USA</p>
+        <a class="btn btn-s" target="_blank" rel="noopener" href="https://maps.google.com/?cid=14773518683157611019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a>
+      </div>
+      <div class="cbox fade">
+        <h3>📞 Phone</h3>
+        <p><a class="tel" href="tel:+19175077004">(917) 507-7004</a></p>
+        <a class="btn btn-s" href="tel:+19175077004">Tap to call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Reserve a time</div>
+      <h2>Book an appointment</h2>
+    </div>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn btn-t" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <strong>Concourse Nail Bar</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+19175077004">📞 Call (917) 507-7004</a>
+
+<script>
+var btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',function(){
+  var o=links.classList.toggle('open');
+  btn.setAttribute('aria-expanded',o);
+});
+links.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded',false);}
+});
+document.getElementById('demoBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('in');});}
+</script>
+</body>
+</html>
