@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: STREET INK -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shiny Paws Grooming &amp; Day Care – Sample Homepage Concept</title>
+<style>
+:root{--bg:#141516;--bg2:#1d1f21;--bg3:#26292c;--acid:#c6ff1a;--acid2:#9be000;--text:#f2f4ef;--mute:#aab0a6;--line:#3a3e42}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:"Arial Narrow","Roboto Condensed",Impact,"Helvetica Neue",Arial,sans-serif;line-height:1.55;font-size:17px;padding-bottom:64px;overflow-x:hidden}
+.body-font,p,li,td,label,input,textarea,select,.note{font-family:"Helvetica Neue",Arial,sans-serif}
+h1,h2,h3,.cond{font-family:Impact,"Arial Narrow Bold","Haettenschweiler","Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em;font-weight:900}
+a{color:inherit}
+.banner{background:var(--acid);color:#111;text-align:center;font-size:13px;font-weight:700;padding:7px 12px;font-family:Arial,sans-serif}
+nav{position:sticky;top:0;z-index:50;background:rgba(20,21,22,.95);backdrop-filter:blur(8px);border-bottom:3px solid var(--acid)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:Impact,sans-serif;font-size:20px;text-transform:uppercase;color:var(--acid);text-decoration:none;letter-spacing:.04em}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;padding:8px 14px;text-decoration:none;font-family:Impact,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:16px;transition:.2s;transform:skew(-10deg)}
+.menu a:hover{background:var(--acid);color:#111}
+.burger{display:none;background:var(--acid);border:0;color:#111;font-family:Impact,sans-serif;font-size:16px;padding:8px 14px;cursor:pointer;text-transform:uppercase}
+@media(max-width:760px){
+.burger{display:block}
+.menu{position:absolute;top:100%;left:0;right:0;background:var(--bg2);flex-direction:column;padding:10px 18px 18px;display:none;border-bottom:3px solid var(--acid)}
+.menu.open{display:flex}
+.menu a{transform:none;font-size:22px;border-bottom:1px solid var(--line)}
+}
+section{padding:80px 18px;position:relative}
+.wrap{max-width:1100px;margin:auto;position:relative;z-index:2}
+.hero{min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--bg);padding-top:50px}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent 0 60px,rgba(198,255,26,.07) 60px 90px)}
+.hero::after{content:"";position:absolute;right:-120px;top:-60px;width:380px;height:130%;background:var(--acid);transform:skew(-18deg);opacity:.95;z-index:1}
+.ghost{position:absolute;left:-10px;top:8%;font-family:Impact,sans-serif;text-transform:uppercase;font-size:clamp(90px,24vw,300px);line-height:.85;color:transparent;-webkit-text-stroke:2px rgba(242,244,239,.22);z-index:1;white-space:nowrap;pointer-events:none}
+.ghost.b{top:auto;bottom:4%;left:auto;right:-10px;-webkit-text-stroke-color:rgba(198,255,26,.3)}
+.badge{display:inline-flex;gap:10px;align-items:center;background:var(--bg3);border:2px solid var(--acid);padding:8px 16px;font-family:Arial,sans-serif;font-weight:700;font-size:15px;transform:skew(-8deg)}
+.badge .st{color:var(--acid);letter-spacing:2px}
+h1{font-size:clamp(48px,11vw,128px);line-height:.92;margin:22px 0 14px}
+h1 span{color:transparent;-webkit-text-stroke:2px var(--acid)}
+.tag{font-size:clamp(18px,2.6vw,24px);max-width:560px;color:var(--text);margin-bottom:30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;font-family:Impact,sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:20px;padding:16px 30px;text-decoration:none;border:3px solid var(--acid);cursor:pointer;transition:.2s;transform:skew(-8deg)}
+.btn.p{background:var(--acid);color:#111}
+.btn.s{background:#141516;color:var(--acid)}
+.btn:hover{transform:skew(-8deg) translateY(-4px);box-shadow:6px 6px 0 rgba(198,255,26,.4)}
+.sec-h{margin-bottom:34px}
+.sec-h h2{font-size:clamp(40px,8vw,80px);line-height:1}
+.sec-h h2::after{content:"";display:block;width:110px;height:10px;background:var(--acid);margin-top:10px;transform:skew(-30deg)}
+.lab{display:inline-block;background:var(--acid);color:#111;font-family:Arial,sans-serif;font-weight:800;font-size:12px;padding:5px 10px;text-transform:uppercase;letter-spacing:.04em;margin-top:14px}
+#services{background:var(--bg2)}
+#services::before,#reviews::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent 0 80px,rgba(255,255,255,.025) 80px 110px)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--bg3);border:2px solid var(--line);border-left:8px solid var(--acid);padding:26px;transition:.25s}
+.card:hover{transform:translateY(-6px);border-color:var(--acid)}
+.card .ic{font-size:40px}
+.card h3{font-size:28px;margin:10px 0 6px}
+.card p{color:var(--mute);font-size:15px}
+.card .price{color:var(--acid);font-weight:700;margin-top:12px;font-family:Arial,sans-serif}
+.card .lab{margin-top:14px}
+table{width:100%;max-width:640px;border-collapse:collapse;background:var(--bg2);border:2px solid var(--line)}
+td{padding:15px 20px;border-bottom:1px solid var(--line);font-size:18px}
+td:first-child{font-family:Impact,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--acid);width:42%}
+tr:last-child td{border:0}
+tr:hover td{background:var(--bg3)}
+#reviews{background:var(--bg2);overflow:hidden}
+.big{display:flex;gap:30px;align-items:center;flex-wrap:wrap;margin-bottom:26px}
+.num{font-family:Impact,sans-serif;font-size:clamp(90px,18vw,170px);line-height:.9;color:var(--acid)}
+.stars{color:var(--acid);font-size:32px;letter-spacing:4px}
+.based{font-size:18px;color:var(--mute)}
+.rcards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:20px}
+.rc{background:var(--bg3);border:2px dashed var(--line);padding:18px;transition:.25s}
+.rc:hover{transform:translateY(-5px);border-color:var(--acid)}
+.rc .ex{display:block;margin-bottom:12px}
+.rc .ex span{display:inline-block;background:var(--acid);color:#111;font-family:Arial,sans-serif;font-size:11px;font-weight:800;padding:3px 9px;text-transform:uppercase}
+.rc .stars{font-size:20px;letter-spacing:2px;display:block;margin-bottom:10px}
+.rc p{color:var(--mute);font-size:15px;font-style:italic}
+.rc .nm{margin-top:12px;font-weight:700;font-style:normal;color:var(--text)}
+.sub-t{font-size:34px;margin-top:44px}
+.contact-g{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.ci{background:var(--bg2);border:2px solid var(--line);padding:28px;transform:skew(-2deg)}
+.ci h3{color:var(--acid);font-size:26px;margin-bottom:8px}
+.ci p{font-size:19px;margin-bottom:14px}
+#book{background:var(--acid);color:#111}
+#book .sec-h h2::after{background:#111}
+form{max-width:640px;display:grid;gap:16px}
+label{font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:5px}
+input,textarea{width:100%;padding:14px;font-size:16px;background:#fff;border:3px solid #111;color:#111;font-family:inherit;border-radius:0}
+input:focus,textarea:focus{outline:4px solid #111;outline-offset:2px}
+.row2{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.row2{grid-template-columns:1fr}}
+#book .btn{background:#141516;color:var(--acid);border-color:#141516;justify-self:start}
+#msg{font-weight:800;font-family:Arial,sans-serif;background:#141516;color:var(--acid);padding:12px 16px;display:none}
+.note{font-size:14px;margin-top:14px;font-weight:600}
+footer{background:#0c0d0d;padding:40px 18px;text-align:center;border-top:6px solid var(--acid)}
+footer h3{color:var(--acid);font-size:30px;margin-bottom:6px}
+footer p{color:var(--mute);font-size:14px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--acid);color:#111;text-align:center;padding:16px;font-family:Impact,sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;display:none;border-top:3px solid #111}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(max-width:700px){.hero::after{width:200px;right:-100px;opacity:.8}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Shiny Paws Grooming &amp; Day Care. Not their official website.</div>
+<nav>
+<div class="nav-in">
+<a class="logo" href="#home">Shiny Paws 🐾</a>
+<button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+<ul class="menu" id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero" id="home">
+<div class="ghost">GROOM</div>
+<div class="ghost b">PAWS</div>
+<div class="wrap">
+<div class="badge"><span class="st">★★★★★</span> 4.9 · 443 Google reviews</div>
+<h1>Shiny Paws<br><span>Grooming &amp; Day Care</span></h1>
+<p class="tag">Fresh cuts, clean coats and happy tails in Brooklyn. 🐕✂️</p>
+<div class="btns">
+<a class="btn p" href="#book">Book Now</a>
+<a class="btn s" href="tel:+19173042445">📞 Call (917) 304-2445</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="sec-h fade">
+<h2>Services</h2>
+<span class="lab">Example layout - the owner's real services and prices go here</span>
+</div>
+<div class="grid">
+<div class="card fade"><div class="ic">🛁</div><h3>Bath &amp; Brush</h3><p>A sample card for a wash, dry and brush-out style service.</p><div class="price">Price: add yours</div><span class="lab">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">✂️</div><h3>Full Haircut</h3><p>A sample card for breed-style trims and finishing.</p><div class="price">Price: add yours</div><span class="lab">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">💅</div><h3>Nail Trim</h3><p>A sample card for paw care and nail trimming.</p><div class="price">Price: add yours</div><span class="lab">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🐶</div><h3>Day Care</h3><p>A sample card for daytime play and supervision.</p><div class="price">Price: add yours</div><span class="lab">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🫧</div><h3>De-Shedding Treatment</h3><p>A sample card for coat care and shedding control.</p><div class="price">Price: add yours</div><span class="lab">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🦷</div><h3>Add-On Extras</h3><p>A sample card for extras like teeth brushing or ear cleaning.</p><div class="price">Price: add yours</div><span class="lab">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<div class="sec-h fade"><h2>Hours</h2></div>
+<table class="fade">
+<tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+<tr><td>Sunday</td><td>9:00 AM – 7:00 PM</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<div class="sec-h fade"><h2>Reviews</h2></div>
+<div class="big fade">
+<div class="num">4.9</div>
+<div>
+<div class="stars">★★★★★</div>
+<div class="based">based on 443 Google reviews</div>
+<br>
+<a class="btn p" href="https://maps.google.com/?cid=1919405492486982191&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 443 reviews on Google</a>
+</div>
+</div>
+<h3 class="sub-t">Top reviews</h3>
+<span class="lab">Example layout - your best reviews show here</span>
+<div class="rcards">
+<div class="rc fade"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+<div class="rc fade"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+<div class="rc fade"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+<div class="rc fade"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+<div class="rc fade"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<div class="sec-h fade"><h2>Contact</h2></div>
+<div class="contact-g">
+<div class="ci fade"><h3>📍 Address</h3><p>331 Whitman Dr, Brooklyn, NY 11234, USA</p><a class="btn p" href="https://maps.google.com/?cid=1919405492486982191&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+<div class="ci fade"><h3>📞 Phone</h3><p>(917) 304-2445</p><a class="btn s" href="tel:+19173042445">Tap to call</a></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<div class="sec-h fade"><h2>Book an appointment</h2></div>
+<form id="bf" class="fade" onsubmit="return false">
+<div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+<div class="row2">
+<div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+<div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. Morning"></div>
+</div>
+<div><label for="no">Notes</label><textarea id="no" rows="4"></textarea></div>
+<button type="button" class="btn" id="sub">Request Appointment</button>
+<div id="msg" role="status"></div>
+</form>
+<p class="note">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<h3>Shiny Paws Grooming &amp; Day Care</h3>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+19173042445">📞 Call</a>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+document.getElementById('sub').addEventListener('click',function(){var s=document.getElementById('msg');s.textContent='Demo only: online booking is not connected yet.';s.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
