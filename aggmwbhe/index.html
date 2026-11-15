@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: SOFT LUXE -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lola's Hair & Beauty Boutique - Sample Homepage Concept</title>
+<style>
+:root{
+  --greige:#efe7e0;
+  --greige2:#e4d8cf;
+  --cream:#faf6f2;
+  --blush:#f3d9d4;
+  --rose:#b76e79;
+  --rose-dark:#8c4a55;
+  --gold:#c9966f;
+  --ink:#3a2f2d;
+  --muted:#6e5f5b;
+  --serif:"Cormorant Garamond","Didot","Bodoni MT","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.65;font-size:16px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--ink);color:#f6ece6;text-align:center;font-size:.8rem;padding:8px 12px;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:50;background:rgba(250,246,242,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--greige2)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:var(--serif);font-size:1.25rem;font-weight:500;text-decoration:none;color:var(--rose-dark);letter-spacing:.02em}
+nav ul{display:none;list-style:none;gap:28px}
+nav a{text-decoration:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+nav a:hover{color:var(--rose)}
+.menu-btn{background:none;border:1px solid var(--rose);color:var(--rose-dark);border-radius:99px;padding:7px 16px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+nav ul.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--cream);padding:18px 24px 24px;border-bottom:1px solid var(--greige2);gap:16px}
+@media(min-width:800px){nav ul{display:flex}.menu-btn{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+section{padding:90px 22px}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.1}
+h2{font-size:clamp(2.1rem,6vw,3.2rem);color:var(--ink);margin-bottom:18px}
+.center{text-align:center}
+.lead{color:var(--muted);max-width:600px}
+.center .lead{margin:auto}
+/* hero */
+#home{background:linear-gradient(160deg,var(--greige),var(--blush) 120%);padding:50px 22px 90px}
+.hero{max-width:1100px;margin:auto;display:grid;gap:36px;align-items:center}
+@media(min-width:850px){.hero{grid-template-columns:1.1fr .9fr}}
+.hero h1{font-size:clamp(2.8rem,10vw,5.6rem);font-weight:300;color:var(--ink);letter-spacing:-.01em;margin:10px 0 18px}
+.hero h1 em{color:var(--rose);font-style:italic}
+.tag{font-size:1.1rem;color:var(--muted);max-width:480px;margin-bottom:24px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--greige2);border-radius:99px;padding:8px 18px;margin-bottom:28px;box-shadow:0 6px 20px rgba(140,74,85,.08);font-size:.92rem}
+.stars{color:var(--gold);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;border-radius:99px;padding:15px 30px;font-size:.88rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--rose);cursor:pointer;font-family:var(--sans);transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(183,110,121,.3)}
+.btn.primary{background:linear-gradient(135deg,var(--rose),var(--gold));color:#fff;border-color:transparent}
+.btn.ghost{background:transparent;color:var(--rose-dark)}
+.frame{position:relative;border-radius:200px 200px 40px 40px;aspect-ratio:4/5;max-width:420px;width:100%;margin:auto;background:linear-gradient(170deg,#fbeae6,#e8c3bf 55%,#d3a38c);border:10px solid #fff;box-shadow:0 30px 60px rgba(140,74,85,.18);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.frame::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.7),transparent 70%);top:8%;left:-10%}
+.frame svg{width:62%;position:relative;filter:drop-shadow(0 8px 14px rgba(140,74,85,.25))}
+.frame span.sp{position:absolute;font-size:1.6rem}
+/* services */
+#services{background:var(--cream)}
+.note{display:inline-block;background:var(--blush);color:var(--rose-dark);font-size:.78rem;padding:6px 14px;border-radius:99px;margin-top:6px;letter-spacing:.03em}
+.grid{display:grid;gap:22px;margin-top:44px}
+@media(min-width:620px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:950px){.grid.three{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--greige2);border-radius:28px;padding:30px;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 40px rgba(140,74,85,.12)}
+.ico{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--blush),var(--greige));display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin-bottom:18px}
+.card h3{font-size:1.7rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.95rem}
+.price{margin-top:14px;font-size:.85rem;color:var(--rose-dark);font-weight:600}
+.ex{display:block;margin-top:14px;font-size:.72rem;color:var(--rose-dark);background:var(--blush);padding:6px 12px;border-radius:12px}
+/* hours */
+#hours{background:var(--greige)}
+.hours-box{max-width:620px;margin:40px auto 0;background:#fff;border-radius:32px;padding:14px 30px;box-shadow:0 20px 50px rgba(140,74,85,.1)}
+table{width:100%;border-collapse:collapse}
+td{padding:16px 4px;border-bottom:1px solid var(--greige2);font-size:1rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--serif);font-size:1.3rem}
+td:last-child{text-align:right;color:var(--muted)}
+/* reviews */
+#reviews{background:linear-gradient(180deg,var(--cream),var(--blush))}
+.big{display:flex;flex-direction:column;align-items:center;gap:6px;margin:30px 0}
+.big .num{font-family:var(--serif);font-size:6rem;line-height:1;font-weight:300;color:var(--rose-dark)}
+.big .stars{font-size:1.9rem}
+.big p{color:var(--muted)}
+.rowlabel{margin:56px 0 6px;text-align:center}
+.rowlabel h3{font-size:2rem}
+.rev-row{display:grid;gap:18px;margin-top:22px;grid-template-columns:1fr}
+@media(min-width:620px){.rev-row{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rev-row{grid-template-columns:repeat(5,1fr)}}
+.rev{background:#fff;border-radius:24px;padding:22px;border:1px dashed var(--rose);transition:transform .3s}
+.rev:hover{transform:translateY(-5px)}
+.rev .tagrow{display:block;margin-bottom:10px}
+.rev .tagrow span{display:inline-block;background:var(--blush);color:var(--rose-dark);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 12px;border-radius:99px}
+.rev .stars{display:block;font-size:1.05rem;margin-bottom:10px;white-space:nowrap}
+.rev p{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.rev strong{font-family:var(--serif);font-size:1.1rem;font-weight:500}
+/* contact */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;gap:22px;margin-top:40px}
+@media(min-width:760px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.contact-grid .card{text-align:center}
+.contact-grid .ico{margin:0 auto 16px}
+.contact-grid a.link{color:var(--rose-dark);font-weight:600;text-decoration:none;border-bottom:1px solid var(--rose)}
+/* booking */
+#book{background:var(--greige)}
+form{max-width:640px;margin:40px auto 0;background:#fff;border-radius:32px;padding:34px 28px;box-shadow:0 20px 50px rgba(140,74,85,.1);display:grid;gap:18px}
+label{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+input,select,textarea{width:100%;padding:14px 16px;border:1px solid var(--greige2);border-radius:16px;background:var(--cream);font:inherit;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rose);border-color:transparent}
+.two{display:grid;gap:18px}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:var(--blush);color:var(--rose-dark);padding:14px;border-radius:16px;text-align:center;font-weight:600}
+.small{text-align:center;font-size:.85rem;color:var(--muted);margin-top:16px}
+footer{background:var(--ink);color:#e9ddd6;text-align:center;padding:50px 22px}
+footer h3{font-size:1.8rem;color:#fff;margin-bottom:8px}
+footer p{font-size:.88rem;opacity:.85}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex}
+.callbar a{flex:1;text-align:center;background:linear-gradient(135deg,var(--rose),var(--gold));color:#fff;text-decoration:none;padding:17px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Lola's Hair &amp; Beauty Boutique. Not their official website.</div>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">Lola's Hair &amp; Beauty</a>
+    <nav>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="home">
+  <div class="hero">
+    <div class="fade">
+      <span class="eyebrow">Bronx, New York</span>
+      <h1>Lola's Hair &amp; Beauty Boutique</h1>
+      <p class="tag">A calm, polished place to refresh your look.</p>
+      <div class="badge"><span class="stars">★★★★★</span><strong>4.9</strong> · 616 Google reviews</div>
+      <div class="btns">
+        <a class="btn primary" href="#book">Book Now</a>
+        <a class="btn ghost" href="tel:+13472402322">📞 Call (347) 240-2322</a>
+      </div>
+    </div>
+    <div class="frame fade" aria-hidden="true">
+      <span class="sp" style="top:14%;right:16%">✨</span>
+      <span class="sp" style="bottom:16%;left:14%">🌸</span>
+      <svg viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+        <circle cx="30" cy="72" r="10"/><circle cx="52" cy="80" r="10"/>
+        <path d="M37 65 L72 18"/><path d="M57 72 L82 28"/>
+        <circle cx="76" cy="23" r="2.5" fill="#fff"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="center fade">
+      <span class="eyebrow">Services</span>
+      <h2>Beauty, beautifully done</h2>
+      <span class="note">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid three">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><p>A sample card for cuts and styling.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Color &amp; Highlights</h3><p>A sample card for color services.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💨</div><h3>Blowout</h3><p>A sample card for blowouts and finishing.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🌿</div><h3>Treatments</h3><p>A sample card for conditioning treatments.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">👑</div><h3>Braids &amp; Updos</h3><p>A sample card for braiding and special-occasion styles.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💅</div><h3>Beauty Extras</h3><p>A sample card for other beauty add-ons.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap center fade">
+    <span class="eyebrow">Hours</span>
+    <h2>When to visit</h2>
+    <div class="hours-box">
+      <table>
+        <tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Sunday</td><td>9:00 AM – 5:00 PM</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="center fade">
+      <span class="eyebrow">Reviews</span>
+      <h2>Loved on Google</h2>
+      <div class="big">
+        <div class="num">4.9</div>
+        <div class="stars">★★★★★</div>
+        <p>based on 616 Google reviews</p>
+      </div>
+      <a class="btn primary" target="_blank" rel="noopener" href="https://maps.google.com/?cid=2935848963749282403&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 616 reviews on Google</a>
+    </div>
+    <div class="rowlabel fade">
+      <h3>Top reviews</h3>
+      <span class="note">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rev-row">
+      <div class="rev fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="center fade">
+      <span class="eyebrow">Contact</span>
+      <h2>Find the boutique</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="card fade"><div class="ico">📍</div><h3>Address</h3><p>1753 Crosby Ave<br>Bronx, NY 10461, USA</p></div>
+      <div class="card fade"><div class="ico">📞</div><h3>Phone</h3><p><a class="link" href="tel:+13472402322">(347) 240-2322</a></p></div>
+      <div class="card fade"><div class="ico">🧭</div><h3>Directions</h3><p><a class="link" target="_blank" rel="noopener" href="https://maps.google.com/?cid=2935848963749282403&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap fade">
+    <div class="center">
+      <span class="eyebrow">Reserve</span>
+      <h2>Book an appointment</h2>
+    </div>
+    <form id="demoForm" onsubmit="return false">
+      <div class="two">
+        <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+      </div>
+      <div class="two">
+        <div><label for="d">Preferred day</label>
+          <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+        <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="small">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <h3>Lola's Hair &amp; Beauty Boutique</h3>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+13472402322">📞 Call</a></div>
+
+<script>
+var mb=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');mb.setAttribute('aria-expanded',false)})});
+document.getElementById('demoBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
