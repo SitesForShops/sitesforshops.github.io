@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JSP Car Care | Ceramic Coating &amp; Mobile Detailing – Sample Concept</title>
+<style>
+:root{--ink:#0b0b0b;--paper:#fff;--coral:#ff5a45;--grey:#6b6b6b;--rule:#e4e4e4;--soft:#f6f5f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;padding-bottom:64px}
+.sans,nav,button,.btn,label,input,select,textarea,th,.tag,.banner{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:inherit}
+.banner{background:var(--coral);color:#fff;text-align:center;font-size:13px;padding:8px 12px;font-weight:600}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ink)}
+.bar{max-width:1100px;margin:0 auto;padding:0 20px;height:58px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.04em;text-decoration:none;font-size:15px;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+.logo span{color:var(--coral)}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{text-decoration:none;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{border-color:var(--coral)}
+.menu-btn{display:none;background:none;border:1px solid var(--ink);padding:8px 14px;font-size:13px;font-weight:700;letter-spacing:.08em;cursor:pointer}
+@media(max-width:760px){
+.menu-btn{display:block}
+nav ul{display:none;position:absolute;top:58px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--ink)}
+nav ul.open{display:flex}
+nav li a{display:block;padding:16px 20px;border-bottom:1px solid var(--rule)}
+}
+section{padding:96px 20px;border-bottom:1px solid var(--ink)}
+.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.eyebrow:before{content:"";width:36px;height:2px;background:var(--coral)}
+h1{font-size:clamp(44px,10vw,112px);line-height:.98;letter-spacing:-.03em;font-weight:700;margin-bottom:28px}
+h1 em{font-style:normal;color:var(--coral)}
+h2{font-size:clamp(36px,7vw,72px);line-height:1;letter-spacing:-.025em;margin-bottom:24px}
+.lead{font-size:clamp(18px,2.4vw,22px);max-width:560px;color:#333;margin-bottom:32px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:8px 16px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:14px;font-weight:600;margin-bottom:32px}
+.badge .st{color:var(--coral);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:16px 30px;font-weight:700;font-size:15px;text-decoration:none;letter-spacing:.04em;border:2px solid var(--ink);cursor:pointer;transition:transform .2s,background .2s,color .2s;background:none;color:var(--ink)}
+.btn:hover{transform:translateY(-3px)}
+.btn.primary{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+#home{padding-top:80px;position:relative;overflow:hidden}
+.hero-rule{display:flex;justify-content:space-between;border-top:1px solid var(--ink);margin-top:64px;padding-top:14px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--grey);gap:10px;flex-wrap:wrap}
+.circle{position:absolute;right:-90px;top:60px;width:300px;height:300px;border-radius:50%;background:var(--coral);opacity:.12;z-index:0}
+#home .wrap{position:relative;z-index:1}
+.note{display:inline-block;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--coral);border:1px solid var(--coral);padding:6px 12px;margin-bottom:28px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.card{padding:32px 28px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:#fff;transition:transform .25s,box-shadow .25s,background .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 0 var(--coral);background:#fff;position:relative;z-index:2}
+.card .ic{font-size:34px;margin-bottom:16px}
+.card h3{font-size:26px;margin-bottom:8px;letter-spacing:-.01em}
+.card p{color:#444;font-size:16px;margin-bottom:14px}
+.card .tag{display:block;font-size:11px;font-weight:700;color:var(--coral);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;line-height:1.4}
+.card .price{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:700;font-size:14px;border-top:1px solid var(--rule);padding-top:12px}
+#hours{background:var(--ink);color:#fff}
+#hours .eyebrow{color:var(--coral)}
+table{width:100%;max-width:640px;border-collapse:collapse;margin-top:20px}
+th,td{text-align:left;padding:18px 0;border-bottom:1px solid #444;font-size:18px;font-weight:400}
+th{font-weight:700;letter-spacing:.04em}
+td{text-align:right}
+.rating{display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px;margin-bottom:32px}
+.big{font-size:clamp(90px,20vw,180px);line-height:.85;font-weight:700;letter-spacing:-.05em}
+.stars{color:var(--coral);font-size:32px;letter-spacing:4px;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+.rating p{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:16px;color:var(--grey)}
+.rev-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;margin:64px 0 20px;border-top:1px solid var(--ink);padding-top:20px}
+.rev-head h3{font-size:30px}
+.rev-row{display:grid;grid-template-columns:repeat(5,minmax(220px,1fr));gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+.rev{border:1px solid var(--ink);padding:20px;scroll-snap-align:start;background:var(--soft);transition:transform .25s}
+.rev:hover{transform:translateY(-5px)}
+.rev .ex{display:block;margin-bottom:12px}
+.rev .ex span{display:inline-block;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:var(--ink);color:#fff;padding:4px 10px}
+.rev .stars{font-size:22px;display:block;margin-bottom:10px;letter-spacing:2px}
+.rev p{color:#444;margin-bottom:14px;font-style:italic}
+.rev b{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:14px}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:32px}
+.contact-grid div{border-top:2px solid var(--ink);padding-top:16px}
+.contact-grid small{display:block;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.contact-grid .v{font-size:24px;line-height:1.3}
+#book{background:var(--soft)}
+form{max-width:640px;margin-top:28px;display:grid;gap:20px}
+label{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;padding:14px;border:1px solid var(--ink);background:#fff;font-size:16px;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--coral);outline-offset:0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.two{grid-template-columns:1fr}section{padding:72px 20px}}
+#msg{display:none;background:var(--ink);color:#fff;padding:16px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:600;border-left:6px solid var(--coral)}
+.small{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;color:var(--grey);margin-top:16px;max-width:640px}
+footer{padding:48px 20px;background:#fff;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:14px}
+footer b{font-size:18px;display:block;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--coral);color:#fff;text-align:center;padding:18px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:800;text-decoration:none;font-size:17px;letter-spacing:.06em}
+@media(max-width:760px){.callbar{display:block}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for JSP Car Care | Ceramic Coating &amp; Mobile Detailing. Not their official website.</div>
+<header>
+<div class="bar">
+<a href="#home" class="logo">JSP<span>.</span>CAR CARE</a>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="menu">MENU</button>
+<nav><ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+</div>
+</header>
+
+<section id="home">
+<div class="circle"></div>
+<div class="wrap">
+<div class="eyebrow">Passaic, New Jersey</div>
+<h1>JSP Car Care | Ceramic Coating &amp; Mobile Detailing</h1>
+<p class="lead">A clean car, a clear finish, and a little more shine in every drive.</p>
+<div class="badge"><span class="st">★★★★★</span> 4.8 · 41 Google reviews</div>
+<div class="btns">
+<a href="#book" class="btn primary">Book Now</a>
+<a href="tel:+18624141555" class="btn dark">📞 Call (862) 414-1555</a>
+</div>
+<div class="hero-rule"><span>Auto detailing</span><span>Ceramic coating</span><span>Mobile detailing</span></div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="eyebrow fade">Services</div>
+<h2 class="fade">What a detailer might offer.</h2>
+<span class="note fade">Example layout - the owner's real services and prices go here</span>
+<div class="cards">
+<div class="card fade"><div class="ic">🚗</div><span class="tag">Example layout - the owner's real services and prices go here</span><h3>Exterior Detail</h3><p>Hand wash, dry and a glossy finish for the outside of the vehicle.</p><div class="price">Price: add yours</div></div>
+<div class="card fade"><div class="ic">🛋️</div><span class="tag">Example layout - the owner's real services and prices go here</span><h3>Interior Detail</h3><p>Vacuuming, wipe-down and fresh-feeling seats, mats and surfaces.</p><div class="price">Price: add yours</div></div>
+<div class="card fade"><div class="ic">💎</div><span class="tag">Example layout - the owner's real services and prices go here</span><h3>Ceramic Coating</h3><p>A protective coating layer designed to add depth and shine.</p><div class="price">Price: add yours</div></div>
+<div class="card fade"><div class="ic">🚐</div><span class="tag">Example layout - the owner's real services and prices go here</span><h3>Mobile Detailing</h3><p>Detailing that comes to the customer's home or workplace.</p><div class="price">Price: add yours</div></div>
+<div class="card fade"><div class="ic">✨</div><span class="tag">Example layout - the owner's real services and prices go here</span><h3>Polish &amp; Wax</h3><p>Paint enhancement to bring back gloss and smoothness.</p><div class="price">Price: add yours</div></div>
+<div class="card fade"><div class="ic">🧽</div><span class="tag">Example layout - the owner's real services and prices go here</span><h3>Wash Packages</h3><p>Simple maintenance washes to keep a car looking sharp.</p><div class="price">Price: add yours</div></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<div class="eyebrow fade">Hours</div>
+<h2 class="fade">Open every day.</h2>
+<table class="fade">
+<tr><th>Monday</th><td>6:00 AM – 7:00 PM</td></tr>
+<tr><th>Tuesday</th><td>6:00 AM – 7:00 PM</td></tr>
+<tr><th>Wednesday</th><td>6:00 AM – 7:00 PM</td></tr>
+<tr><th>Thursday</th><td>6:00 AM – 7:00 PM</td></tr>
+<tr><th>Friday</th><td>6:00 AM – 7:00 PM</td></tr>
+<tr><th>Saturday</th><td>6:00 AM – 7:00 PM</td></tr>
+<tr><th>Sunday</th><td>6:00 AM – 7:00 PM</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<div class="eyebrow fade">Reviews</div>
+<div class="rating fade">
+<div class="big">4.8</div>
+<div><div class="stars">★★★★★</div><p>based on 41 Google reviews</p></div>
+</div>
+<a class="btn primary fade" href="https://maps.google.com/?cid=11097461613907275432&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 41 reviews on Google</a>
+<div class="rev-head fade"><h3>Top reviews</h3><span class="note" style="margin:0">Example layout - your best reviews show here</span></div>
+<div class="rev-row">
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<div class="eyebrow fade">Contact</div>
+<h2 class="fade">Find the shop.</h2>
+<div class="contact-grid fade">
+<div><small>Address</small><p class="v">266 Sherman St<br>Passaic, NJ 07055, USA</p></div>
+<div><small>Phone</small><p class="v"><a href="tel:+18624141555">(862) 414-1555</a></p></div>
+<div><small>Directions</small><p class="v"><a href="https://maps.google.com/?cid=11097461613907275432&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener" style="color:var(--coral)">Get directions →</a></p></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<div class="eyebrow fade">Booking</div>
+<h2 class="fade">Book an appointment</h2>
+<form id="bf" class="fade" onsubmit="return false">
+<div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+<div class="two">
+<div><label for="d">Preferred day</label><select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+<div><label for="t">Preferred time</label><input id="t" type="time"></div>
+</div>
+<div><label for="o">Notes</label><textarea id="o" rows="4"></textarea></div>
+<button type="button" class="btn primary" id="sb">Request appointment</button>
+<div id="msg" role="status"></div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<b>JSP Car Care | Ceramic Coating &amp; Mobile Detailing</b>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</div>
+</footer>
+
+<a class="callbar" href="tel:+18624141555">📞 CALL (862) 414-1555</a>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+document.getElementById('sb').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
