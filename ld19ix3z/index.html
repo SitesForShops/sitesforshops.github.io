@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfect Paws Grooming – Sample Homepage Concept</title>
+<style>
+:root{--ink:#111;--coral:#ff5a46;--coral-d:#e0412e;--mute:#666;--rule:#111;--soft:#f6f4f1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:#fff;line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.sans,button,input,select,textarea,nav,.btn,.tag,.banner,th,td,.label{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.banner{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:8px 12px}
+header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--rule)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;text-decoration:none;font-size:17px;letter-spacing:-.01em}
+.logo span{color:var(--coral)}
+nav ul{display:none;list-style:none;gap:28px}
+nav a{text-decoration:none;font-size:14px;font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+nav a:hover{color:var(--coral)}
+.menu-btn{background:none;border:1px solid var(--ink);padding:8px 14px;font-size:13px;font-weight:700;letter-spacing:.08em;cursor:pointer;text-transform:uppercase}
+nav ul.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:#fff;padding:10px 20px 20px;border-bottom:1px solid var(--rule);gap:0}
+nav ul.open li{border-top:1px solid #ddd}
+nav ul.open a{display:block;padding:14px 0}
+@media(min-width:800px){.menu-btn{display:none}nav ul{display:flex}body{padding-bottom:0}.callbar{display:none!important}}
+section{padding:90px 20px;border-bottom:1px solid var(--rule)}
+.wrap{max-width:1100px;margin:auto}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;color:var(--coral);margin-bottom:18px;display:block}
+h1{font-size:clamp(3rem,13vw,8.5rem);line-height:.95;letter-spacing:-.04em;font-weight:800;margin-bottom:28px}
+h1 em{color:var(--coral);font-style:normal}
+h2{font-size:clamp(2.4rem,8vw,5rem);line-height:1;letter-spacing:-.03em;font-weight:800;margin-bottom:24px}
+.lead{font-size:clamp(1.1rem,2.5vw,1.5rem);max-width:600px;color:#333;margin-bottom:32px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:8px 16px;border-radius:99px;font-size:15px;font-weight:700;margin-bottom:30px}
+.badge .st{color:var(--coral);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:16px 30px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:.2s;background:#fff;color:var(--ink)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 6px 0 var(--ink)}
+.btn.primary{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn.primary:hover{box-shadow:0 6px 0 var(--coral-d)}
+.hero{padding-top:70px;position:relative;overflow:hidden}
+.paw{position:absolute;right:-40px;top:40px;width:min(55vw,380px);opacity:.1;color:var(--coral);pointer-events:none}
+.note{display:inline-block;background:var(--ink);color:#fff;font-size:13px;font-family:-apple-system,Segoe UI,Arial,sans-serif;padding:6px 12px;margin-bottom:28px;font-weight:600}
+.cards{display:grid;gap:0;grid-template-columns:1fr;border-top:1px solid var(--rule)}
+@media(min-width:700px){.cards{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{padding:32px 26px;border-bottom:1px solid var(--rule);transition:.25s;background:#fff}
+@media(min-width:700px){.card{border-right:1px solid var(--rule)}}
+.card:hover{background:var(--soft);transform:translateY(-4px)}
+.card .ic{font-size:38px;display:block;margin-bottom:14px}
+.card h3{font-size:1.5rem;letter-spacing:-.01em;margin-bottom:8px}
+.card p{color:var(--mute);font-size:15px;margin-bottom:14px}
+.card .tag{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--coral-d);border-top:1px solid #ddd;padding-top:12px;margin-top:10px}
+.card .price{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-weight:700;font-size:14px}
+table{width:100%;max-width:640px;border-collapse:collapse;margin-top:20px}
+td{padding:18px 4px;border-top:1px solid var(--rule);font-size:18px}
+tr:last-child td{border-bottom:1px solid var(--rule)}
+td:last-child{text-align:right;font-weight:600}
+tr.closed td:last-child{color:var(--coral-d)}
+.score{display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:24px}
+.big{font-size:clamp(5rem,20vw,11rem);line-height:.85;font-weight:800;letter-spacing:-.05em}
+.stars{color:var(--coral);font-size:2rem;letter-spacing:4px}
+.based{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-weight:600}
+.row-title{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px;margin:64px 0 18px;border-top:1px solid var(--rule);padding-top:20px}
+.row-title h3{font-size:1.8rem;letter-spacing:-.02em}
+.reviews{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:700px){.reviews{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.reviews{grid-template-columns:repeat(5,1fr)}}
+.rev{border:1px solid var(--rule);padding:18px;transition:.25s;background:#fff}
+.rev:hover{transform:translateY(-5px);box-shadow:5px 5px 0 var(--coral)}
+.ex{display:block;margin-bottom:12px}
+.ex span{display:inline-block;background:var(--ink);color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;font-family:-apple-system,Segoe UI,Arial,sans-serif}
+.rev .stars{font-size:1.15rem;letter-spacing:2px;display:block;margin-bottom:10px;line-height:1.2}
+.rev p{font-size:15px;color:#444;margin-bottom:12px}
+.rev b{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:14px}
+.contact-grid{display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:800px){.contact-grid{grid-template-columns:1fr 1fr}}
+.info dt{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--coral-d);font-weight:700;margin-top:24px}
+.info dd{font-size:1.4rem;border-bottom:1px solid var(--rule);padding-bottom:14px}
+.info dd a{text-decoration:none}
+.info dd a:hover{color:var(--coral)}
+form{max-width:640px;display:grid;gap:20px}
+label{display:block;font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;margin-bottom:6px}
+input,select,textarea{width:100%;font-size:17px;padding:14px;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--coral);outline-offset:0}
+.two{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:var(--ink);color:#fff;padding:16px;font-family:-apple-system,Segoe UI,Arial,sans-serif;font-weight:600;border-left:6px solid var(--coral)}
+.small{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:13px;color:var(--mute);margin-top:16px;max-width:640px}
+footer{background:var(--ink);color:#fff;padding:50px 20px}
+footer .n{font-size:2rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+footer .n span{color:var(--coral)}
+footer p{font-family:-apple-system,Segoe UI,Arial,sans-serif;font-size:14px;color:#ccc}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:center;align-items:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font-family:-apple-system,Segoe UI,Arial,sans-serif;font-weight:800;font-size:18px;padding:16px;border-top:2px solid var(--ink)}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Perfect Paws Grooming. Not their official website.</div>
+<header>
+<div class="nav">
+<a class="logo" href="#home">Perfect Paws<span>.</span></a>
+<nav>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section id="home" class="hero">
+<svg class="paw" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><ellipse cx="50" cy="66" rx="22" ry="18"/><ellipse cx="22" cy="42" rx="9" ry="12"/><ellipse cx="42" cy="25" rx="9" ry="13"/><ellipse cx="62" cy="25" rx="9" ry="13"/><ellipse cx="80" cy="42" rx="9" ry="12"/></svg>
+<div class="wrap fade">
+<span class="label">Dog grooming · Eastchester, NY</span>
+<h1>Perfect Paws Grooming<em>.</em></h1>
+<p class="lead">Fresh, clean and happy dogs, from nose to tail.</p>
+<div class="badge"><span class="st">★★★★★</span> 4.9 · 59 Google reviews</div>
+<div class="btns">
+<a class="btn primary" href="#book">Book Now</a>
+<a class="btn" href="tel:+19145685018">📞 Call (914) 568-5018</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="fade">
+<span class="label">Services</span>
+<h2>What a grooming menu can look like.</h2>
+<span class="note">Example layout - the owner's real services and prices go here</span>
+</div>
+<div class="cards">
+<div class="card fade"><span class="ic">🛁</span><h3>Bath &amp; Brush</h3><p>A simple example of a wash, dry and brush-out service.</p><span class="price">Price: add yours</span><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">✂️</span><h3>Full Haircut</h3><p>An example card for breed-style or custom trims.</p><span class="price">Price: add yours</span><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">💅</span><h3>Nail Trim</h3><p>An example card for nail trimming and filing.</p><span class="price">Price: add yours</span><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">🦷</span><h3>Teeth &amp; Ears</h3><p>An example card for ear cleaning and teeth care add-ons.</p><span class="price">Price: add yours</span><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">🐾</span><h3>Puppy Intro</h3><p>An example card for a gentle first grooming visit.</p><span class="price">Price: add yours</span><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><span class="ic">🧴</span><h3>Spa Extras</h3><p>An example card for conditioning or special shampoo options.</p><span class="price">Price: add yours</span><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap fade">
+<span class="label">Hours</span>
+<h2>When to visit.</h2>
+<table>
+<tr class="closed"><td>Monday</td><td>Closed</td></tr>
+<tr><td>Tuesday</td><td>9:30 AM – 5:30 PM</td></tr>
+<tr><td>Wednesday</td><td>9:30 AM – 5:30 PM</td></tr>
+<tr><td>Thursday</td><td>9:30 AM – 5:30 PM</td></tr>
+<tr><td>Friday</td><td>9:30 AM – 5:30 PM</td></tr>
+<tr><td>Saturday</td><td>11:00 AM – 5:00 PM</td></tr>
+<tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<div class="fade">
+<span class="label">Reviews</span>
+<h2>Rated 4.9 on Google.</h2>
+<div class="score">
+<div class="big">4.9</div>
+<div><div class="stars" aria-label="4.9 out of 5 stars">★★★★★</div><p class="based">based on 59 Google reviews</p></div>
+</div>
+<a class="btn primary" href="https://maps.google.com/?cid=15631446818706840835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 59 reviews on Google</a>
+</div>
+<div class="row-title fade">
+<h3>Top reviews</h3>
+<span class="note" style="margin:0">Example layout - your best reviews show here</span>
+</div>
+<div class="reviews">
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rev fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap contact-grid fade">
+<div>
+<span class="label">Contact</span>
+<h2>Find the shop.</h2>
+<div class="btns"><a class="btn primary" href="https://maps.google.com/?cid=15631446818706840835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+</div>
+<dl class="info">
+<dt>Address</dt><dd>367 White Plains Rd Suite B,<br>Eastchester, NY 10709, USA</dd>
+<dt>Phone</dt><dd><a href="tel:+19145685018">(914) 568-5018</a></dd>
+</dl>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<div class="fade">
+<span class="label">Booking</span>
+<h2>Book an appointment</h2>
+</div>
+<form id="bf" class="fade" onsubmit="return false">
+<div class="two">
+<div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+</div>
+<div class="two">
+<div><label for="d">Preferred day</label><select id="d"><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+<div><label for="t">Preferred time</label><input id="t" type="time"></div>
+</div>
+<div><label for="no">Notes</label><textarea id="no" rows="4"></textarea></div>
+<div><button type="button" class="btn primary" id="sub">Request appointment</button></div>
+<div id="msg" role="status"></div>
+</form>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="n">Perfect Paws Grooming<span>.</span></div>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</div>
+</footer>
+
+<a class="callbar" href="tel:+19145685018">📞 Call (914) 568-5018</a>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');mb.setAttribute('aria-expanded',false)})});
+document.getElementById('sub').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
