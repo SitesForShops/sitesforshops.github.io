@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FRESH MINT -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dog's World Grooming | Sample homepage concept</title>
+<style>
+:root{
+  --deep:#0b4a3a;
+  --green:#136f55;
+  --leaf:#2fbf8f;
+  --mint:#d9f5e8;
+  --mint2:#b8ecd2;
+  --mint3:#eefbf4;
+  --white:#fff;
+  --ink:#0a3329;
+  --radius:28px;
+  --shadow:0 10px 30px rgba(11,74,58,.12);
+  --font:ui-rounded,"SF Pro Rounded","Nunito","Varela Round","Segoe UI","Trebuchet MS",system-ui,-apple-system,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--mint3);line-height:1.6;font-size:17px;-webkit-text-size-adjust:100%}
+a{color:inherit}
+section{scroll-margin-top:72px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* banner */
+.banner{background:var(--deep);color:#e8fff4;text-align:center;font-size:13.5px;padding:8px 14px;font-weight:600}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:2px solid var(--mint2)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;color:var(--deep);text-decoration:none;font-size:18px;display:flex;align-items:center;gap:8px}
+.brand span.dot{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--mint2)}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;padding:8px 16px;border-radius:999px;text-decoration:none;font-weight:700;color:var(--deep);transition:background .2s,transform .2s}
+.menu a:hover{background:var(--mint);transform:translateY(-2px)}
+.burger{display:none;background:var(--deep);color:#fff;border:0;border-radius:999px;padding:10px 18px;font:inherit;font-weight:700;cursor:pointer}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:999px;font:inherit;font-weight:800;font-size:17px;text-decoration:none;border:3px solid var(--deep);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(11,74,58,.2)}
+.btn.primary{background:var(--deep);color:#fff}
+.btn.ghost{background:#fff;color:var(--deep)}
+.btn.leaf{background:var(--leaf);border-color:var(--leaf);color:var(--deep)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--mint) 0%,#c9f2de 55%,var(--mint2) 100%);padding:70px 0 90px}
+.circle{position:absolute;border-radius:50%;pointer-events:none}
+.c1{width:420px;height:420px;right:-90px;top:-80px;background:radial-gradient(circle at 30% 30%,#fff 0%,rgba(255,255,255,.4) 70%);opacity:.8}
+.c2{width:300px;height:300px;right:120px;bottom:-110px;background:var(--leaf);opacity:.28}
+.c3{width:200px;height:200px;left:-60px;bottom:30px;background:var(--green);opacity:.15}
+.c4{width:120px;height:120px;left:42%;top:30px;background:#fff;opacity:.6}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:999px;padding:8px 18px 8px 12px;font-weight:800;color:var(--deep);box-shadow:var(--shadow);margin-bottom:22px;flex-wrap:wrap}
+.badge .stars{color:#f5a400;letter-spacing:2px;font-size:18px}
+.hero h1{font-size:clamp(42px,8vw,86px);line-height:1.02;color:var(--deep);letter-spacing:-1.5px;font-weight:900}
+.hero p.tag{font-size:clamp(18px,2.6vw,23px);margin:20px 0 32px;max-width:540px;color:var(--green);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-art{position:relative;height:320px}
+.hero-art .big{position:absolute;right:10px;top:10px;width:260px;height:260px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:120px;box-shadow:var(--shadow)}
+.hero-art .mid{position:absolute;left:0;bottom:10px;width:130px;height:130px;border-radius:50%;background:var(--leaf);display:grid;place-items:center;font-size:58px;box-shadow:var(--shadow);border:6px solid #fff}
+.hero-art .sm{position:absolute;right:0;bottom:0;width:90px;height:90px;border-radius:50%;background:var(--deep);display:grid;place-items:center;font-size:38px;border:5px solid #fff}
+
+/* sections */
+.sec{padding:84px 0}
+.sec.white{background:#fff}
+.eyebrow{display:inline-block;background:var(--mint2);color:var(--deep);font-weight:800;border-radius:999px;padding:5px 16px;font-size:14px;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+h2{font-size:clamp(32px,5vw,50px);line-height:1.1;color:var(--deep);letter-spacing:-.8px;font-weight:900;margin-bottom:14px}
+.lead{max-width:640px;color:var(--green);font-weight:600;margin-bottom:12px}
+.example{display:inline-block;background:#fff4c9;color:#5c4400;border:2px dashed #e0b400;border-radius:14px;padding:6px 14px;font-weight:800;font-size:14px;line-height:1.35}
+.head{margin-bottom:38px}
+
+/* services */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border:2px solid var(--mint2);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(11,74,58,.18)}
+.ico{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--mint2));display:grid;place-items:center;font-size:34px}
+.card h3{font-size:22px;color:var(--deep)}
+.card p{color:#25584a;font-size:16px}
+.price{font-weight:800;color:var(--green);background:var(--mint);border-radius:999px;padding:4px 14px;font-size:15px}
+
+/* hours */
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+table.hours{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:2px solid var(--mint2)}
+.hours th,.hours td{padding:15px 22px;text-align:left;border-bottom:1px solid var(--mint)}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:0}
+.hours th{color:var(--deep);font-weight:800}
+.hours td{font-weight:600}
+.hours tr.today{background:var(--mint)}
+.hours tr.closed td{color:#8a3b3b}
+.hours-side{background:linear-gradient(150deg,var(--deep),var(--green));color:#fff;border-radius:var(--radius);padding:36px;position:relative;overflow:hidden}
+.hours-side::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:var(--leaf);opacity:.3;right:-60px;bottom:-60px}
+.hours-side h3{font-size:26px;margin-bottom:10px}
+.hours-side .btn{margin-top:18px;position:relative;z-index:1}
+
+/* reviews */
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:30px;background:linear-gradient(135deg,var(--mint),var(--mint2));border-radius:36px;padding:36px;margin-bottom:46px}
+.big-num{font-size:clamp(80px,14vw,130px);font-weight:900;color:var(--deep);line-height:1}
+.big-stars{color:#f5a400;font-size:clamp(30px,6vw,44px);letter-spacing:4px;line-height:1}
+.rating-box p{font-weight:700;color:var(--green);font-size:19px;margin:6px 0 16px}
+.row-label{margin-bottom:8px}
+.rev-title{font-size:28px;color:var(--deep);margin-bottom:10px;font-weight:900}
+.rev-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:18px}
+.rev{background:#fff;border-radius:24px;padding:20px;border:2px solid var(--mint2);box-shadow:var(--shadow);transition:transform .25s;display:flex;flex-direction:column;gap:8px}
+.rev:hover{transform:translateY(-5px)}
+.rev .tagrow{display:block}
+.rev .tagrow span{display:inline-block;background:#fff4c9;color:#5c4400;border:2px dashed #e0b400;border-radius:999px;padding:2px 12px;font-size:12px;font-weight:800}
+.rev .st{color:#f5a400;font-size:19px;letter-spacing:2px;line-height:1.2}
+.rev p{color:#3d6b5d;font-size:15px;font-style:italic}
+.rev .who{font-weight:800;color:var(--deep);font-size:15px;margin-top:auto}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.info{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);border:2px solid var(--mint2);display:flex;flex-direction:column;gap:20px}
+.line{display:flex;gap:16px;align-items:flex-start}
+.line .ico{flex:none;width:54px;height:54px;font-size:26px}
+.line b{display:block;color:var(--deep);font-size:14px;text-transform:uppercase;letter-spacing:1px}
+.line a.tel{font-size:24px;font-weight:800;text-decoration:none;color:var(--green)}
+.mapcard{border-radius:var(--radius);min-height:280px;background:
+ radial-gradient(circle at 70% 30%,rgba(255,255,255,.7) 0 60px,transparent 61px),
+ radial-gradient(circle at 20% 80%,rgba(47,191,143,.35) 0 90px,transparent 91px),
+ linear-gradient(135deg,var(--mint2),var(--mint));
+ display:grid;place-items:center;text-align:center;padding:30px;border:2px solid var(--mint2);position:relative;overflow:hidden}
+.mapcard .pin{font-size:64px;display:block;margin-bottom:6px}
+.mapcard strong{font-size:22px;color:var(--deep);display:block}
+
+/* booking */
+.book{background:linear-gradient(160deg,var(--deep),var(--green));color:#fff;position:relative;overflow:hidden}
+.book::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--leaf);opacity:.22;left:-120px;top:-120px}
+.book::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#fff;opacity:.08;right:-60px;bottom:-60px}
+.book h2{color:#fff}
+.book .lead{color:var(--mint2)}
+.book .wrap{position:relative;z-index:1}
+form{background:#fff;color:var(--ink);border-radius:32px;padding:32px;max-width:720px;box-shadow:0 20px 50px rgba(0,0,0,.25);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label{font-weight:800;color:var(--deep);font-size:14px}
+input,select,textarea{font:inherit;padding:13px 16px;border-radius:16px;border:2px solid var(--mint2);background:var(--mint3);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--leaf);border-color:var(--leaf)}
+textarea{min-height:100px;resize:vertical}
+#demoMsg{grid-column:1/-1;background:var(--mint);color:var(--deep);border-radius:16px;padding:14px 18px;font-weight:800;display:none}
+#demoMsg.show{display:block}
+.note{max-width:720px;margin-top:16px;font-size:14.5px;color:var(--mint2)}
+
+/* footer */
+footer{background:#06291f;color:#cfeee0;text-align:center;padding:40px 20px 48px}
+footer strong{display:block;color:#fff;font-size:22px;margin-bottom:6px}
+footer p{font-size:14.5px}
+
+/* call bar */
+.callbar{display:none}
+
+/* fade in */
+.js .fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .fade.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr 1fr}
+  .rev-row{grid-template-columns:1fr 1fr}
+  .hours-grid,.contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  body{padding-bottom:70px;font-size:16.5px}
+  .burger{display:block}
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;flex-direction:column;padding:12px 20px 20px;border-bottom:2px solid var(--mint2);box-shadow:var(--shadow)}
+  .menu.open{display:flex}
+  .menu a{padding:14px 16px;font-size:18px}
+  .hero{padding:48px 0 60px}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-art{height:230px;order:-1}
+  .hero-art .big{width:190px;height:190px;font-size:90px;left:50%;right:auto;transform:translateX(-30%)}
+  .hero-art .mid{left:8%;width:100px;height:100px;font-size:44px}
+  .hero-art .sm{display:none}
+  .sec{padding:60px 0}
+  .cards{grid-template-columns:1fr}
+  .rev-row{grid-template-columns:1fr}
+  form{grid-template-columns:1fr;padding:22px}
+  .rating-box{padding:26px}
+  .btn{width:100%;justify-content:center}
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--deep);padding:10px 16px;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+  .callbar a{flex:1;text-align:center;background:var(--leaf);color:var(--deep);font-weight:900;font-size:18px;border-radius:999px;padding:12px;text-decoration:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .fade{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js');</script>
+
+<div class="banner">Sample homepage concept for Dog's World Grooming. Not their official website.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#home"><span class="dot">🐾</span>Dog's World Grooming</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="circle c1"></div><div class="circle c2"></div><div class="circle c3"></div><div class="circle c4"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge"><span class="stars" aria-hidden="true">★★★★★</span><span>5 rating · 68 Google reviews</span></div>
+      <h1>Dog's World Grooming</h1>
+      <p class="tag">Fresh, clean and happy pups, groomed with a gentle touch in Yonkers, NY.</p>
+      <div class="cta">
+        <a class="btn primary" href="#book">Book Now</a>
+        <a class="btn ghost" href="tel:+19147767913">📞 Call (914) 776-7913</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="big">🐶</div>
+      <div class="mid">🛁</div>
+      <div class="sm">✂️</div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="sec white">
+  <div class="wrap">
+    <div class="head fade">
+      <span class="eyebrow">Services</span>
+      <h2>Grooming made easy</h2>
+      <p class="lead">A sample of how a grooming menu could look on this page.</p>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="cards">
+      <article class="card fade"><div class="ico">🛁</div><h3>Bath &amp; Brush</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ico">✂️</div><h3>Full Groom</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ico">💈</div><h3>Haircut &amp; Styling</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ico">🐾</div><h3>Nail Trim</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ico">🫧</div><h3>De-shedding Treatment</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example">Example layout - the owner's real services and prices go here</span></article>
+      <article class="card fade"><div class="ico">🐕</div><h3>Puppy Intro Groom</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example">Example layout - the owner's real services and prices go here</span></article>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="sec">
+  <div class="wrap">
+    <div class="head fade">
+      <span class="eyebrow">Hours</span>
+      <h2>When to visit</h2>
+    </div>
+    <div class="hours-grid">
+      <table class="hours fade" id="hoursTable">
+        <tbody>
+          <tr data-d="1"><th>Monday</th><td>8:45 AM – 3:00 PM</td></tr>
+          <tr data-d="2"><th>Tuesday</th><td>10:00 AM – 2:00 PM</td></tr>
+          <tr data-d="3"><th>Wednesday</th><td>8:45 AM – 3:00 PM</td></tr>
+          <tr data-d="4"><th>Thursday</th><td>8:45 AM – 2:00 PM</td></tr>
+          <tr data-d="5"><th>Friday</th><td>8:45 AM – 3:00 PM</td></tr>
+          <tr data-d="6"><th>Saturday</th><td>8:45 AM – 3:00 PM</td></tr>
+          <tr data-d="0" class="closed"><th>Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+      <div class="hours-side fade">
+        <h3>🐩 Ready for a fresh cut?</h3>
+        <p>Pick a day and time that suits you and send a request using the demo form.</p>
+        <a class="btn leaf" href="#book">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews" class="sec white">
+  <div class="wrap">
+    <div class="head fade">
+      <span class="eyebrow">Reviews</span>
+      <h2>What Google says</h2>
+    </div>
+    <div class="rating-box fade">
+      <div class="big-num">5</div>
+      <div>
+        <div class="big-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>based on 68 Google reviews</p>
+        <a class="btn primary" href="https://maps.google.com/?cid=7482552778817393762&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 68 reviews on Google</a>
+      </div>
+    </div>
+    <h3 class="rev-title fade">Top reviews</h3>
+    <span class="example row-label">Example layout - your best reviews show here</span>
+    <div class="rev-row">
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="st" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="st" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="st" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="st" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+      <div class="rev fade"><div class="tagrow"><span>Example</span></div><div class="st" aria-label="5 stars">★★★★★</div><p>Your customer's review goes here</p><div class="who">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="sec">
+  <div class="wrap">
+    <div class="head fade">
+      <span class="eyebrow">Contact</span>
+      <h2>Find Dog's World Grooming</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="info fade">
+        <div class="line"><div class="ico">📍</div><div><b>Address</b>77 Glen Rd, Yonkers, NY 10704, USA</div></div>
+        <div class="line"><div class="ico">📞</div><div><b>Phone</b><a class="tel" href="tel:+19147767913">(914) 776-7913</a></div></div>
+        <a class="btn primary" href="https://maps.google.com/?cid=7482552778817393762&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="mapcard fade" aria-hidden="true">
+        <div><span class="pin">📍</span><strong>77 Glen Rd</strong>Yonkers, NY 10704</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="sec book">
+  <div class="wrap">
+    <div class="head fade">
+      <span class="eyebrow" style="background:var(--leaf);color:var(--deep)">Booking</span>
+      <h2>Book an appointment</h2>
+      <p class="lead">Tell us... rather, tell the groomer, which day and time suit you best.</p>
+    </div>
+    <form id="demoForm" class="fade" novalidate>
+      <div class="f"><label for="n">Name</label><input id="n" name="name" type="text" autocomplete="name"></div>
+      <div class="f"><label for="p">Phone</label><input id="p" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="f"><label for="d">Preferred day</label>
+        <select id="d" name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+      <div class="f"><label for="t">Preferred time</label><input id="t" name="time" type="time"></div>
+      <div class="f full"><label for="no">Notes</label><textarea id="no" name="notes"></textarea></div>
+      <div class="f full"><button class="btn primary" type="submit">Request appointment</button></div>
+      <div id="demoMsg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>Dog's World Grooming</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+19147767913">📞 Call</a></div>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');
+    b.setAttribute('aria-expanded',o);
+  });
+  m.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+
+  var f=document.getElementById('demoForm'),msg=document.getElementById('demoMsg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    msg.textContent='Demo only: online booking is not connected yet.';
+    msg.classList.add('show');
+  });
+
+  var today=new Date().getDay();
+  var r=document.querySelector('#hoursTable tr[data-d="'+today+'"]');
+  if(r){r.classList.add('today');}
+
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
