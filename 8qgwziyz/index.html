@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: ELECTRIC SPORT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Color Lab Salon by TSR - Sample Homepage Concept</title>
+<style>
+:root{--red:#e4172b;--red2:#ff4d5e;--blue:#1639c9;--blue2:#0b1f7a;--navy:#070f33;--white:#fff;--ink:#0d1330;--soft:#f2f5ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;overflow-x:hidden;padding-bottom:64px}
+h1,h2,h3{font-style:italic;text-transform:uppercase;font-weight:900;letter-spacing:-.5px;line-height:1.02}
+a{color:inherit}
+.banner{background:var(--navy);color:#fff;font-size:.78rem;text-align:center;padding:7px 12px;letter-spacing:.2px}
+nav{position:sticky;top:0;z-index:50;background:var(--blue);box-shadow:0 4px 18px rgba(7,15,51,.35)}
+.nav-in{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;text-decoration:none;font-size:1rem;display:flex;align-items:center;gap:8px}
+.logo span{background:var(--red);padding:2px 9px;transform:skewX(-12deg);display:inline-block}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;font-style:italic;font-size:.85rem;padding:8px 14px;display:block;transform:skewX(-12deg);transition:.2s}
+.menu a:hover{background:var(--red)}
+.burger{display:none;background:var(--red);border:0;color:#fff;font-weight:900;font-size:.85rem;text-transform:uppercase;font-style:italic;padding:9px 14px;cursor:pointer}
+@media(max-width:820px){
+.burger{display:block}
+.menu{position:absolute;left:0;right:0;top:100%;background:var(--blue2);flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .35s}
+.menu.open{max-height:400px}
+.menu a{transform:none;padding:15px 22px;border-top:1px solid rgba(255,255,255,.12)}
+}
+.hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;padding:60px 18px 130px}
+.hero:before{content:"";position:absolute;top:0;right:0;width:55%;height:100%;background:linear-gradient(160deg,var(--red),#a5001a);clip-path:polygon(35% 0,100% 0,100% 100%,0 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 40px,rgba(255,255,255,.04) 40px 80px)}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.kicker{display:inline-block;background:#fff;color:var(--red);font-weight:900;font-style:italic;text-transform:uppercase;padding:5px 14px;transform:skewX(-12deg);font-size:.85rem;margin-bottom:18px}
+.hero h1{font-size:clamp(2.6rem,8vw,5.8rem);text-shadow:4px 4px 0 var(--blue2)}
+.hero h1 em{color:#fff;-webkit-text-stroke:0}
+.tag{font-size:1.2rem;margin:18px 0 22px;max-width:480px;font-weight:600}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);padding:10px 18px;border-left:6px solid var(--red);box-shadow:6px 6px 0 var(--navy);margin-bottom:26px;font-weight:700}
+.badge b{font-size:1.6rem;font-style:italic;color:var(--blue)}
+.stars{color:#ffb400;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;font-weight:900;text-transform:uppercase;font-style:italic;text-decoration:none;padding:16px 30px;border:0;cursor:pointer;font-size:1rem;transform:skewX(-10deg);transition:.2s;font-family:inherit}
+.btn:hover{transform:skewX(-10deg) translateY(-4px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--navy)}
+.btn-white{background:#fff;color:var(--blue);box-shadow:5px 5px 0 var(--navy)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:5px 5px 0 var(--navy)}
+.hero-art{display:flex;justify-content:center}
+.art{width:min(300px,80%);aspect-ratio:1;background:#fff;border-radius:12px;transform:rotate(6deg);display:grid;place-items:center;font-size:7rem;box-shadow:12px 12px 0 var(--navy);position:relative}
+.art:before{content:"";position:absolute;inset:12px;border:4px solid var(--blue);border-radius:6px}
+@media(max-width:820px){.hero-in{grid-template-columns:1fr}.hero:before{width:100%;clip-path:polygon(0 70%,100% 40%,100% 100%,0 100%);opacity:.9}.hero-art{order:-1}.art{width:150px;font-size:4rem}}
+section{position:relative;padding:100px 18px}
+.wrap{max-width:1180px;margin:auto}
+.cut-top{clip-path:polygon(0 60px,100% 0,100% 100%,0 100%);margin-top:-60px}
+.cut-both{clip-path:polygon(0 60px,100% 0,100% calc(100% - 60px),0 100%);margin-top:-60px;padding-bottom:140px}
+h2{font-size:clamp(2rem,6vw,3.6rem);margin-bottom:14px;color:var(--blue)}
+h2 span{color:var(--red)}
+.sub{max-width:640px;margin-bottom:34px;font-size:1.05rem}
+.example{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:.8rem;text-transform:uppercase;padding:6px 12px;margin-bottom:18px;letter-spacing:.3px}
+#services{background:var(--soft);padding-top:120px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;padding:26px;border-top:6px solid var(--blue);box-shadow:0 10px 28px rgba(22,57,201,.14);transition:.25s;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%)}
+.card:nth-child(even){border-top-color:var(--red)}
+.card:hover{transform:translateY(-8px)}
+.card .ic{font-size:2.4rem}
+.card h3{font-size:1.3rem;margin:10px 0 8px;color:var(--blue2)}
+.card p{font-size:.95rem}
+.card .ex{display:block;background:var(--navy);color:#fff;font-size:.7rem;font-weight:800;text-transform:uppercase;padding:6px 8px;margin:14px 0 8px}
+.price{font-weight:800;color:var(--red)}
+#hours{background:var(--blue);color:#fff;padding-top:130px}
+#hours h2{color:#fff}#hours h2 span{color:#fff;background:var(--red);padding:0 10px}
+.hours-box{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+table{width:100%;border-collapse:collapse;background:#fff;color:var(--ink);box-shadow:10px 10px 0 var(--navy)}
+td{padding:14px 18px;border-bottom:1px solid #dfe5ff;font-weight:600}
+tr:last-child td{border:0}
+tr td:first-child{font-weight:900;font-style:italic;text-transform:uppercase;color:var(--blue)}
+tr:nth-child(odd){background:var(--soft)}
+.big-clock{font-size:6rem;line-height:1}
+@media(max-width:820px){.hours-box{grid-template-columns:1fr}.big-clock{display:none}td{padding:12px 10px;font-size:.88rem}}
+#reviews{background:#fff;padding-top:130px}
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:26px;background:linear-gradient(120deg,var(--red),#a5001a);color:#fff;padding:30px;margin-bottom:30px;box-shadow:10px 10px 0 var(--blue)}
+.rate .num{font-size:clamp(4rem,12vw,7rem);font-weight:900;font-style:italic;line-height:1}
+.rate .stars{font-size:2rem;display:block}
+.rate p{font-weight:700;font-size:1.1rem}
+.rev-row{margin-top:46px}
+.rev-row h3{font-size:1.8rem;color:var(--blue);margin-bottom:10px}
+.rev{background:var(--soft);padding:20px;border-left:6px solid var(--blue);transition:.25s}
+.rev:hover{transform:translateY(-6px)}
+.rev .tagx{display:block;margin-bottom:10px}
+.rev .tagx span{display:inline-block;background:var(--navy);color:#fff;font-size:.7rem;font-weight:800;text-transform:uppercase;padding:3px 9px}
+.rev .stars{display:block;font-size:1.2rem;margin-bottom:8px}
+.rev p{font-style:italic;color:#444}
+.rev strong{display:block;margin-top:10px;color:var(--blue2)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+#contact{background:var(--navy);color:#fff;padding-top:130px}
+#contact h2{color:#fff}#contact h2 span{color:var(--red2)}
+.c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.c-card{background:rgba(255,255,255,.07);border:2px solid var(--blue);padding:26px;transition:.25s}
+.c-card:hover{transform:translateY(-6px);border-color:var(--red)}
+.c-card .ic{font-size:2rem}
+.c-card h3{font-size:1.1rem;margin:8px 0;color:var(--red2)}
+.c-card a{font-weight:700}
+#book{background:linear-gradient(135deg,var(--red) 0,#b80d20 100%);color:#fff;padding-top:120px;padding-bottom:110px;margin-top:-60px;clip-path:polygon(0 60px,100% 0,100% 100%,0 100%)}
+#book h2{color:#fff}
+form{background:#fff;color:var(--ink);padding:28px;max-width:640px;box-shadow:10px 10px 0 var(--navy);display:grid;gap:16px}
+label{font-weight:800;font-size:.85rem;text-transform:uppercase;font-style:italic;color:var(--blue);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:13px;border:2px solid #c9d3ff;font:inherit;background:var(--soft)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--red)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--blue);color:#fff;padding:14px;font-weight:800}
+.note{font-size:.85rem;color:#555}
+footer{background:#030720;color:#cfd6ff;text-align:center;padding:40px 18px 30px;font-size:.9rem}
+footer strong{display:block;color:#fff;font-size:1.3rem;font-style:italic;text-transform:uppercase;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--red);color:#fff;text-align:center;text-decoration:none;font-weight:900;font-style:italic;text-transform:uppercase;padding:18px;font-size:1.1rem;box-shadow:0 -4px 16px rgba(0,0,0,.3)}
+@media(max-width:820px){.callbar{display:block}}
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Color Lab Salon by TSR. Not their official website.</div>
+<nav>
+<div class="nav-in">
+<a class="logo" href="#home"><span>CL</span> Color Lab</a>
+<button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">Menu ☰</button>
+<ul class="menu" id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<header class="hero" id="home">
+<div class="hero-in">
+<div>
+<span class="kicker">Hair salon · Washington, DC</span>
+<h1>Color Lab Salon by TSR</h1>
+<p class="tag">Fresh looks, bold color and a salon visit made easy.</p>
+<div class="badge"><b>4.8</b><span><span class="stars">★★★★★</span><br>828 Google reviews</span></div>
+<div class="btns">
+<a class="btn btn-white" href="#book">Book Now</a>
+<a class="btn btn-red" href="tel:+12028008816">📞 Call (202) 800-8816</a>
+</div>
+</div>
+<div class="hero-art" aria-hidden="true"><div class="art">💇</div></div>
+</div>
+</header>
+
+<section id="services" class="cut-top">
+<div class="wrap">
+<h2 class="fade">Our-style <span>Services</span></h2>
+<span class="example">Example layout - the owner's real services and prices go here</span>
+<p class="sub fade">A sample of how a service menu could look on this page.</p>
+<div class="grid">
+<div class="card fade"><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><p>Example description of a cut and finish.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+<div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><p>Example description of a color service.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+<div class="card fade"><div class="ic">✨</div><h3>Highlights</h3><p>Example description of a highlight service.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+<div class="card fade"><div class="ic">💧</div><h3>Treatments</h3><p>Example description of a conditioning treatment.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+<div class="card fade"><div class="ic">💨</div><h3>Blowout</h3><p>Example description of a wash and blow-dry.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+<div class="card fade"><div class="ic">👰</div><h3>Special Occasion Styling</h3><p>Example description of an event style.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours" class="cut-both">
+<div class="wrap hours-box">
+<div class="fade">
+<h2>Opening <span>Hours</span></h2>
+<div class="big-clock" aria-hidden="true">⏰</div>
+</div>
+<table class="fade">
+<tbody>
+<tr><td>Monday</td><td>10:00 AM – 7:00 PM</td></tr>
+<tr><td>Tuesday</td><td>10:00 AM – 7:00 PM</td></tr>
+<tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+<tr><td>Thursday</td><td>10:00 AM – 7:00 PM</td></tr>
+<tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+<tr><td>Saturday</td><td>10:00 AM – 6:00 PM</td></tr>
+<tr><td>Sunday</td><td>10:00 AM – 6:00 PM</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="reviews" class="cut-top" style="margin-top:-60px">
+<div class="wrap">
+<h2 class="fade">Google <span>Reviews</span></h2>
+<div class="rate fade">
+<div class="num">4.8</div>
+<div><span class="stars" style="color:#ffd34d">★★★★★</span><p>based on 828 Google reviews</p></div>
+<a class="btn btn-white" style="margin-left:auto" href="https://maps.google.com/?cid=5204720034219347873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 828 reviews on Google</a>
+</div>
+<div class="rev-row">
+<h3>Top reviews</h3>
+<span class="example">Example layout - your best reviews show here</span>
+<div class="rev-grid">
+<div class="rev fade"><span class="tagx"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rev fade"><span class="tagx"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rev fade"><span class="tagx"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rev fade"><span class="tagx"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rev fade"><span class="tagx"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="cut-both">
+<div class="wrap">
+<h2 class="fade">Find the <span>Salon</span></h2>
+<div class="c-grid">
+<div class="c-card fade"><div class="ic">📍</div><h3>Address</h3><p>1607 Connecticut Ave NW<br>Washington, DC 20009, USA</p></div>
+<div class="c-card fade"><div class="ic">📞</div><h3>Phone</h3><p><a href="tel:+12028008816">(202) 800-8816</a></p></div>
+<div class="c-card fade"><div class="ic">🧭</div><h3>Directions</h3><p><a href="https://maps.google.com/?cid=5204720034219347873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a></p></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<h2 class="fade">Book an appointment</h2>
+<form id="demoForm" class="fade" onsubmit="return false">
+<div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+<div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+<div class="two">
+<div><label for="d">Preferred day</label><select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+<div><label for="t">Preferred time</label><input id="t" type="time"></div>
+</div>
+<div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+<button type="button" class="btn btn-blue" id="sendBtn">Request Appointment</button>
+<div id="msg" role="status"></div>
+<p class="note">This is a sample of how online booking could work.</p>
+</form>
+</div>
+</section>
+
+<footer>
+<strong>Color Lab Salon by TSR</strong>
+Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+12028008816">📞 Call</a>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+document.getElementById('sendBtn').addEventListener('click',function(){var x=document.getElementById('msg');x.textContent='Demo only: online booking is not connected yet.';x.style.display='block'});
+var io=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting){i.target.classList.add('in');io.unobserve(i.target)}})},{threshold:.12});
+document.querySelectorAll('.fade').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
