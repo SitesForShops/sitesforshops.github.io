@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aloha Nails Lounge | Sample homepage concept</title>
+<meta name="description" content="Sample homepage concept for Aloha Nails Lounge. Not their official website.">
+<style>
+:root{
+  --ink:#0d0d0d;
+  --paper:#ffffff;
+  --coral:#ff5a4d;
+  --coral-dark:#e63e30;
+  --grey:#5c5c5c;
+  --soft:#f6f4f2;
+  --rule:#0d0d0d;
+  --font:"Helvetica Neue",Helvetica,Arial,"Segoe UI",Roboto,system-ui,sans-serif;
+  --serif:Georgia,"Times New Roman",Times,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased;padding-bottom:72px}
+a{color:inherit}
+section{scroll-margin-top:70px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+
+/* banner */
+.banner{background:var(--ink);color:#fff;font-size:12.5px;text-align:center;padding:8px 14px;letter-spacing:.02em}
+.banner b{color:var(--coral);font-weight:700}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-weight:800;letter-spacing:-.02em;text-decoration:none;font-size:18px;display:flex;align-items:center;gap:8px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--coral);display:inline-block}
+.menu{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;border-bottom:1px solid var(--rule);flex-direction:column}
+.menu.open{display:flex}
+.menu a{padding:16px 22px;border-top:1px solid #e5e5e5;text-decoration:none;font-weight:600;font-size:18px}
+.menu a:hover{color:var(--coral-dark)}
+.burger{background:none;border:1px solid var(--ink);padding:8px 14px;font:inherit;font-weight:700;font-size:14px;cursor:pointer;border-radius:99px}
+@media(min-width:820px){
+  .burger{display:none}
+  .menu{display:flex;position:static;flex-direction:row;border:0;background:none;gap:34px}
+  .menu a{padding:0;border:0;font-size:15px;position:relative}
+  .menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--coral);transition:width .25s}
+  .menu a:hover::after{width:100%}
+}
+
+/* hero */
+.hero{padding:56px 0 70px;position:relative;overflow:hidden}
+.kicker{font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--grey);display:flex;align-items:center;gap:12px;margin-bottom:26px}
+.kicker::before{content:"";width:40px;height:1px;background:var(--ink)}
+h1{font-size:clamp(52px,13vw,160px);line-height:.92;letter-spacing:-.045em;font-weight:900;max-width:10ch}
+h1 .c{color:var(--coral)}
+.hero-grid{display:grid;gap:40px}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(21px,3vw,30px);margin-top:30px;max-width:26ch;line-height:1.25}
+.badge{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--ink);border-radius:99px;padding:10px 20px 10px 14px;margin-top:30px;font-weight:700;font-size:15px}
+.badge .stars{color:var(--coral);letter-spacing:2px;font-size:17px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:17px 32px;border-radius:0;font-weight:800;font-size:16px;text-decoration:none;border:2px solid var(--ink);cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.btn.primary{background:var(--coral);border-color:var(--ink);color:var(--ink)}
+.btn.ghost{background:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.dark:hover{box-shadow:5px 5px 0 var(--coral)}
+.art{position:relative;height:260px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;align-items:center;justify-content:center;gap:0;overflow:hidden}
+.art .circle{position:absolute;width:240px;height:240px;border-radius:50%;background:var(--coral);right:8%;top:50%;transform:translateY(-50%)}
+.art .ring{position:absolute;width:240px;height:240px;border-radius:50%;border:1px solid var(--ink);right:calc(8% + 50px);top:50%;transform:translateY(-50%)}
+.art .hand{position:relative;font-size:120px;z-index:2;filter:grayscale(0);}
+.art .lbl{position:absolute;left:0;bottom:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+@media(min-width:900px){
+  .hero{padding:80px 0 90px}
+  .art{height:340px}
+  .art .circle,.art .ring{width:320px;height:320px}
+  .art .hand{font-size:170px}
+}
+
+/* sections */
+.sec{padding:84px 0;border-top:1px solid var(--rule)}
+.sec-head{display:grid;gap:14px;margin-bottom:46px}
+.num{font-size:13px;letter-spacing:.2em;font-weight:700;color:var(--coral-dark)}
+h2{font-size:clamp(40px,8vw,88px);line-height:.98;letter-spacing:-.04em;font-weight:900}
+.lead{color:var(--grey);max-width:52ch}
+.example{display:inline-block;background:var(--coral);color:var(--ink);font-weight:800;font-size:12px;letter-spacing:.04em;padding:6px 12px;border:1px solid var(--ink);width:fit-content}
+
+/* services */
+.cards{display:grid;gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.card{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:30px 26px 28px;display:flex;flex-direction:column;gap:12px;transition:background .25s,transform .25s;background:#fff}
+.card:hover{background:var(--soft);transform:translateY(-4px)}
+.card .ico{font-size:38px}
+.card h3{font-size:26px;letter-spacing:-.02em;font-weight:800}
+.card p{color:var(--grey);font-size:15.5px}
+.card .price{font-weight:700;border-top:1px solid var(--ink);padding-top:12px;margin-top:auto;font-size:15px}
+.card .example{font-size:11px;line-height:1.3}
+@media(min-width:640px){.cards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.cards{grid-template-columns:repeat(3,1fr)}}
+
+/* hours */
+.hours-grid{display:grid;gap:40px}
+table.hours{width:100%;border-collapse:collapse;font-size:18px}
+.hours th,.hours td{text-align:left;padding:18px 4px;border-top:1px solid var(--rule);font-weight:500}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:1px solid var(--rule)}
+.hours th{font-weight:800;width:42%}
+.hours td{white-space:nowrap}
+.hours tr{transition:background .2s}
+.hours tr:hover{background:var(--soft)}
+.hours-note{background:var(--ink);color:#fff;padding:34px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+.hours-note .big{font-size:clamp(30px,5vw,48px);font-weight:900;letter-spacing:-.03em;line-height:1}
+.hours-note .big span{color:var(--coral)}
+@media(min-width:900px){.hours-grid{grid-template-columns:1.3fr 1fr;align-items:stretch}}
+@media(max-width:420px){.hours th,.hours td{font-size:15px}.hours td{white-space:normal}}
+
+/* reviews */
+.rating{display:flex;flex-wrap:wrap;align-items:flex-end;gap:30px;padding-bottom:40px;border-bottom:1px solid var(--rule);margin-bottom:46px}
+.rating .score{font-size:clamp(100px,22vw,220px);font-weight:900;letter-spacing:-.06em;line-height:.8}
+.rating .meta{display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.star-row{display:flex;gap:4px}
+.star-row svg{width:34px;height:34px}
+.rating .based{font-size:18px;font-weight:600}
+.row-label{margin-bottom:20px}
+h3.top{font-size:30px;letter-spacing:-.02em;font-weight:900;margin-bottom:14px}
+.rev-row{display:grid;gap:16px;grid-template-columns:1fr}
+.rev{border:1px solid var(--ink);padding:20px;display:flex;flex-direction:column;gap:12px;background:#fff;transition:transform .25s,box-shadow .25s}
+.rev:hover{transform:translateY(-5px);box-shadow:0 8px 0 var(--coral)}
+.rev .tagrow{display:block}
+.rev .tagrow span{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink);padding:3px 10px;border-radius:99px;background:var(--soft)}
+.rev .stars{display:flex;gap:2px}
+.rev .stars svg{width:20px;height:20px}
+.rev p{color:var(--grey);font-family:var(--serif);font-style:italic}
+.rev .who{font-weight:800;font-size:14px;border-top:1px solid #ddd;padding-top:10px;margin-top:auto}
+@media(min-width:640px){.rev-row{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rev-row{grid-template-columns:repeat(5,1fr)}}
+
+/* contact */
+.contact-grid{display:grid;gap:0;border-top:1px solid var(--rule)}
+.crow{display:grid;gap:6px;padding:26px 0;border-bottom:1px solid var(--rule)}
+.crow small{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--grey)}
+.crow .v{font-size:clamp(24px,4.5vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.crow a.v{text-decoration:none}
+.crow a.v:hover{color:var(--coral-dark)}
+@media(min-width:760px){.crow{grid-template-columns:220px 1fr;align-items:baseline}}
+.contact-btns{margin-top:34px}
+
+/* book */
+.book{background:var(--soft)}
+form.demo{display:grid;gap:22px;max-width:760px}
+.field{display:grid;gap:8px}
+.two{display:grid;gap:22px}
+@media(min-width:640px){.two{grid-template-columns:1fr 1fr}}
+label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+input,select,textarea{font:inherit;font-size:17px;padding:14px 4px;border:0;border-bottom:2px solid var(--ink);background:transparent;border-radius:0;color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--coral);background:#fff}
+textarea{min-height:100px;resize:vertical}
+.msg{display:none;border:2px solid var(--ink);background:var(--coral);padding:16px 20px;font-weight:800}
+.msg.show{display:block}
+.fnote{font-size:14px;color:var(--grey)}
+
+/* footer */
+footer{background:var(--ink);color:#fff;padding:56px 0 40px}
+footer .fname{font-size:clamp(32px,7vw,64px);font-weight:900;letter-spacing:-.04em;line-height:1}
+footer .fname span{color:var(--coral)}
+footer p{margin-top:18px;color:#c9c9c9;font-size:14px;border-top:1px solid #444;padding-top:18px}
+
+/* call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--coral);border-top:2px solid var(--ink);display:flex;justify-content:center;padding:10px}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:10px;font-weight:900;font-size:18px;text-decoration:none;color:var(--ink);width:100%;padding:8px}
+@media(min-width:820px){.callbar{display:none}body{padding-bottom:0}}
+
+/* reveal */
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for <b>Aloha Nails Lounge</b>. Not their official website.</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#home"><span class="dot"></span>Aloha Nails Lounge</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Main">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kicker">Nail salon · Washington, DC</div>
+      <h1>Aloha Nails Lounge</h1>
+      <p class="tag">Nails, polish and a little time for yourself.</p>
+      <div class="badge" aria-label="Google rating 4.5 from 384 reviews">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span>4.5 · 384 Google reviews</span>
+      </div>
+      <div class="btns">
+        <a class="btn primary" href="#book">Book Now →</a>
+        <a class="btn ghost" href="tel:+12028788652">📞 Call (202) 878-8652</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="circle"></div>
+      <div class="ring"></div>
+      <div class="hand">💅</div>
+      <div class="lbl">Polish · Shape · Shine</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="sec">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="num">01 — SERVICES</span>
+      <h2>Services</h2>
+      <span class="example">Example layout - the owner's real services and prices go here</span>
+      <p class="lead">A sample of how a service menu could look on this page.</p>
+    </div>
+    <div class="cards">
+      <article class="card fade">
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+        <div class="ico">💅</div>
+        <h3>Classic Manicure</h3>
+        <p>Nail shaping, cuticle care and polish.</p>
+        <div class="price">Price: add yours</div>
+      </article>
+      <article class="card fade">
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+        <div class="ico">🦶</div>
+        <h3>Spa Pedicure</h3>
+        <p>A soak, scrub and polish for the feet.</p>
+        <div class="price">Price: add yours</div>
+      </article>
+      <article class="card fade">
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+        <div class="ico">✨</div>
+        <h3>Gel Polish</h3>
+        <p>Long-wearing color with a glossy finish.</p>
+        <div class="price">Price: add yours</div>
+      </article>
+      <article class="card fade">
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+        <div class="ico">💎</div>
+        <h3>Acrylic or Dip Set</h3>
+        <p>Added length and strength in the shape of your choice.</p>
+        <div class="price">Price: add yours</div>
+      </article>
+      <article class="card fade">
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+        <div class="ico">🎨</div>
+        <h3>Nail Art</h3>
+        <p>Designs, accents and decoration.</p>
+        <div class="price">Price: add yours</div>
+      </article>
+      <article class="card fade">
+        <span class="example">Example layout - the owner's real services and prices go here</span>
+        <div class="ico">🌸</div>
+        <h3>Polish Change</h3>
+        <p>A quick color refresh for hands or toes.</p>
+        <div class="price">Price: add yours</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<section id="hours" class="sec">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="num">02 — HOURS</span>
+      <h2>Hours</h2>
+    </div>
+    <div class="hours-grid fade">
+      <table class="hours">
+        <tbody>
+          <tr><th scope="row">Monday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:30&#8239;PM</td></tr>
+          <tr><th scope="row">Tuesday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:30&#8239;PM</td></tr>
+          <tr><th scope="row">Wednesday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:30&#8239;PM</td></tr>
+          <tr><th scope="row">Thursday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:30&#8239;PM</td></tr>
+          <tr><th scope="row">Friday:</th><td>10:00&#8239;AM&#8201;–&#8201;7:30&#8239;PM</td></tr>
+          <tr><th scope="row">Saturday:</th><td>9:00&#8239;AM&#8201;–&#8201;7:00&#8239;PM</td></tr>
+          <tr><th scope="row">Sunday:</th><td>11:00&#8239;AM&#8201;–&#8201;6:00&#8239;PM</td></tr>
+        </tbody>
+      </table>
+      <div class="hours-note">
+        <div class="big">Open <span>7 days</span> a week.</div>
+        <p>Call to check availability before visiting.</p>
+        <a class="btn primary" href="tel:+12028788652">📞 (202) 878-8652</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="sec">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="num">03 — REVIEWS</span>
+      <h2>Reviews</h2>
+    </div>
+    <div class="rating fade">
+      <div class="score">4.5</div>
+      <div class="meta">
+        <div class="star-row" role="img" aria-label="4.5 out of 5 stars">
+          <svg viewBox="0 0 24 24"><path fill="#ff5a4d" stroke="#0d0d0d" stroke-width="1" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#ff5a4d" stroke="#0d0d0d" stroke-width="1" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#ff5a4d" stroke="#0d0d0d" stroke-width="1" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><path fill="#ff5a4d" stroke="#0d0d0d" stroke-width="1" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+          <svg viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset="50%" stop-color="#ff5a4d"/><stop offset="50%" stop-color="#ffffff"/></linearGradient></defs><path fill="url(#half)" stroke="#0d0d0d" stroke-width="1" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
+        </div>
+        <div class="based">based on 384 Google reviews</div>
+        <a class="btn dark" href="https://maps.google.com/?cid=750924242762544357&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 384 reviews on Google ↗</a>
+      </div>
+    </div>
+
+    <h3 class="top fade">Top reviews</h3>
+    <div class="row-label fade"><span class="example">Example layout - your best reviews show here</span></div>
+    <div class="rev-row">
+      <article class="rev fade">
+        <div class="tagrow"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev fade">
+        <div class="tagrow"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev fade">
+        <div class="tagrow"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev fade">
+        <div class="tagrow"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+      <article class="rev fade">
+        <div class="tagrow"><span>Example</span></div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <p>Your customer's review goes here</p>
+        <div class="who">Customer name</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="num">04 — CONTACT</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-grid fade">
+      <div class="crow"><small>Address</small><div class="v">1304 5th St NE,<br>Washington, DC 20002, USA</div></div>
+      <div class="crow"><small>Phone</small><a class="v" href="tel:+12028788652">(202) 878-8652</a></div>
+    </div>
+    <div class="btns contact-btns">
+      <a class="btn primary" href="https://maps.google.com/?cid=750924242762544357&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions ↗</a>
+      <a class="btn ghost" href="tel:+12028788652">📞 Call now</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="sec book">
+  <div class="wrap">
+    <div class="sec-head fade">
+      <span class="num">05 — BOOKING</span>
+      <h2>Book an appointment</h2>
+    </div>
+    <form class="demo fade" id="demoForm" onsubmit="return false" novalidate>
+      <div class="two">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="two">
+        <div class="field">
+          <label for="f-day">Preferred day</label>
+          <select id="f-day">
+            <option value="">Choose a day</option>
+            <option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-time">Preferred time</label><input id="f-time" type="time"></div>
+      </div>
+      <div class="field"><label for="f-notes">Notes</label><textarea id="f-notes"></textarea></div>
+      <div><button type="button" class="btn primary" id="demoBtn">Request appointment</button></div>
+      <div class="msg" id="demoMsg" role="status" aria-live="polite">Demo only: online booking is not connected yet.</div>
+      <p class="fnote">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fname">Aloha Nails Lounge<span>.</span></div>
+    <p>Sample homepage concept made by a third party. Not their official website.</p>
+  </div>
+</footer>
+
+<div class="callbar"><a href="tel:+12028788652">📞 Call (202) 878-8652</a></div>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){
+    var o=menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded',o);
+    burger.textContent=o?'Close':'Menu';
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){menu.classList.remove('open');burger.setAttribute('aria-expanded',false);burger.textContent='Menu';});
+  });
+  document.getElementById('demoBtn').addEventListener('click',function(){
+    document.getElementById('demoMsg').classList.add('show');
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
