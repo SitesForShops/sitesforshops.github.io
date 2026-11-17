@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FRESH MINT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saint Germain DC - Sample Homepage Concept</title>
+<style>
+:root{
+  --mint:#d9f5e8;
+  --mint2:#b5ead0;
+  --mint3:#8fdcb8;
+  --green:#0b4d3a;
+  --green2:#0f6b50;
+  --ink:#0d2b22;
+  --white:#ffffff;
+  --soft:#f2fbf7;
+  --gold:#f5b301;
+  --radius:26px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Nunito","Quicksand","Segoe UI Rounded","Trebuchet MS",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--green);color:var(--mint);text-align:center;font-size:13px;padding:8px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--mint2)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:900;color:var(--green);font-size:18px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--mint2)}
+.links{display:flex;gap:6px;list-style:none}
+.links a{text-decoration:none;font-weight:700;padding:8px 14px;border-radius:999px;color:var(--green);transition:.2s}
+.links a:hover{background:var(--mint)}
+.menu-btn{display:none;background:var(--green);color:#fff;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:800;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;padding:10px 18px 16px;border-bottom:1px solid var(--mint2);display:none;gap:2px}
+  .links.open{display:flex}
+  .links a{display:block;padding:12px 14px}
+}
+section{padding:80px 20px}
+.wrap{max-width:1100px;margin:auto}
+h2{font-size:clamp(30px,5vw,46px);color:var(--green);line-height:1.1;margin-bottom:12px;font-weight:900}
+.eyebrow{display:inline-block;background:var(--mint);color:var(--green2);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:14px}
+.lead{max-width:640px;color:#35574b}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--mint) 0%,#eefaf4 60%,#fff 100%);padding:90px 20px 100px}
+.circle{position:absolute;border-radius:50%;opacity:.75;animation:float 9s ease-in-out infinite}
+.c1{width:420px;height:420px;background:var(--mint3);right:-120px;top:-100px}
+.c2{width:300px;height:300px;background:var(--mint2);right:60px;top:140px;mix-blend-mode:multiply;animation-delay:-3s}
+.c3{width:220px;height:220px;background:var(--green2);opacity:.15;left:-70px;bottom:-60px;animation-delay:-5s}
+.c4{width:120px;height:120px;background:#fff;left:42%;top:30px;opacity:.7;animation-delay:-2s}
+@keyframes float{50%{transform:translateY(-18px) scale(1.04)}}
+.hero .wrap{position:relative;z-index:2}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 18px;font-weight:800;color:var(--green);box-shadow:0 6px 20px rgba(11,77,58,.12);margin-bottom:22px}
+.badge .st{color:var(--gold)}
+.hero h1{font-size:clamp(46px,10vw,104px);line-height:.98;color:var(--green);font-weight:900;letter-spacing:-.03em;max-width:800px}
+.hero p.tag{font-size:clamp(18px,2.4vw,24px);margin:22px 0 32px;max-width:520px;color:#2c5a4a}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:800;font-size:17px;padding:16px 30px;border-radius:999px;border:2px solid var(--green);cursor:pointer;font-family:inherit;transition:.2s}
+.btn.primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(11,77,58,.28)}
+.btn.ghost{background:#fff;color:var(--green)}
+.btn:hover{transform:translateY(-3px)}
+.btn.primary:hover{background:var(--green2)}
+
+/* services */
+#services{background:#fff}
+.example-tag{display:inline-block;background:#fff6d6;color:#7a5600;border:1px dashed #d9a400;font-weight:700;font-size:13px;padding:6px 12px;border-radius:12px;margin-top:10px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:38px}
+.card{background:var(--soft);border:2px solid var(--mint);border-radius:var(--radius);padding:28px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(11,77,58,.14);border-color:var(--mint3)}
+.ico{width:60px;height:60px;border-radius:20px;background:var(--mint2);display:grid;place-items:center;font-size:30px;margin-bottom:16px}
+.card h3{color:var(--green);font-size:22px;margin-bottom:6px}
+.price{display:inline-block;margin:10px 0;font-weight:800;color:var(--green2)}
+.card .example-tag{display:block;font-size:12px;margin-top:8px}
+
+/* hours */
+#hours{background:var(--mint)}
+.hours-box{background:#fff;border-radius:var(--radius);padding:12px 28px;margin-top:30px;max-width:640px;box-shadow:0 12px 30px rgba(11,77,58,.1)}
+table{width:100%;border-collapse:collapse}
+td{padding:15px 4px;border-bottom:1px solid var(--mint)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;color:var(--green)}
+td:last-child{text-align:right}
+.closed{color:#7b8f87}
+
+/* reviews */
+#reviews{background:#fff}
+.rating-card{display:flex;flex-wrap:wrap;gap:28px;align-items:center;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;border-radius:34px;padding:36px;margin-top:30px}
+.big{font-size:clamp(64px,12vw,110px);font-weight:900;line-height:1}
+.stars{color:var(--gold);letter-spacing:3px;font-size:28px}
+.rating-card .btn{background:#fff;color:var(--green);border-color:#fff;margin-top:14px}
+.row-label{margin:44px 0 6px}
+.row-label h3{font-size:26px;color:var(--green)}
+.rgrid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:16px}
+.rcard{background:var(--soft);border:2px solid var(--mint);border-radius:22px;padding:20px;transition:.25s}
+.rcard:hover{transform:translateY(-5px)}
+.ex-badge{display:block;margin-bottom:10px}
+.ex-badge span{display:inline-block;background:#fff6d6;color:#7a5600;border:1px dashed #d9a400;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
+.rcard .stars{font-size:20px;display:block;margin-bottom:8px}
+.rcard p{color:#4a665b;font-size:15px}
+.rcard .nm{margin-top:12px;font-weight:800;color:var(--green)}
+
+/* contact */
+#contact{background:var(--mint)}
+.cgrid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:32px}
+.ccard{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:0 10px 26px rgba(11,77,58,.08)}
+.ccard .ico{margin-bottom:12px}
+.ccard h3{color:var(--green);margin-bottom:6px}
+.ccard a.link{font-weight:800;color:var(--green2)}
+
+/* booking */
+#book{background:#fff}
+form{background:var(--soft);border:2px solid var(--mint);border-radius:30px;padding:30px;margin-top:30px;max-width:680px;display:grid;gap:16px}
+label{font-weight:800;color:var(--green);display:grid;gap:6px;font-size:15px}
+input,textarea{font:inherit;padding:14px 16px;border-radius:16px;border:2px solid var(--mint2);background:#fff;color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:var(--green2)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--green);color:#fff;padding:14px 18px;border-radius:16px;font-weight:800}
+.note{font-size:14px;color:#4a665b;margin-top:14px;max-width:680px}
+
+footer{background:var(--green);color:var(--mint);text-align:center;padding:40px 20px}
+footer strong{display:block;font-size:22px;color:#fff;margin-bottom:6px}
+
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--green);color:#fff;text-align:center;padding:15px;font-weight:900;text-decoration:none;font-size:18px;box-shadow:0 -6px 20px rgba(0,0,0,.2)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.circle{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Saint Germain DC. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo"><span>🌿</span>Saint Germain DC</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="circle c1"></div><div class="circle c2"></div><div class="circle c3"></div><div class="circle c4"></div>
+  <div class="wrap">
+    <div class="badge"><span class="st">★</span> 4.8 on Google · 234 reviews</div>
+    <h1>Saint Germain DC</h1>
+    <p class="tag">Fresh looks, friendly care and a hair salon experience in the heart of Washington, DC.</p>
+    <div class="btns">
+      <a class="btn primary" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+12028240444">📞 (202) 824-0444</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 class="fade">Hair services</h2>
+    <p class="lead fade">A friendly layout for showing what a hair salon can offer.</p>
+    <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Styling</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example-tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Hair Color</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example-tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💆</div><h3>Treatments</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example-tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💨</div><h3>Blowout</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example-tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Hair</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example-tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🧴</div><h3>Consultation</h3><p>A short description of the service goes here.</p><span class="price">Price: add yours</span><span class="example-tag">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <span class="eyebrow" style="background:#fff">Hours</span>
+    <h2 class="fade">Opening hours</h2>
+    <div class="hours-box fade">
+      <table>
+        <tr><td>Monday</td><td class="closed">Closed</td></tr>
+        <tr><td>Tuesday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2 class="fade">What Google says</h2>
+    <div class="rating-card fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div style="font-weight:800;font-size:20px">based on 234 Google reviews</div>
+        <a class="btn" href="https://maps.google.com/?cid=16288687129197551721&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 234 reviews on Google</a>
+      </div>
+    </div>
+    <div class="row-label">
+      <h3>Top reviews</h3>
+      <span class="example-tag">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rgrid">
+      <div class="rcard fade"><div class="ex-badge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><div class="ex-badge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><div class="ex-badge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><div class="ex-badge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard fade"><div class="ex-badge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="background:#fff">Contact</span>
+    <h2 class="fade">Find Saint Germain DC</h2>
+    <div class="cgrid">
+      <div class="ccard fade"><div class="ico">📍</div><h3>Address</h3><p>1301 Pennsylvania Ave NW<br>Washington, DC 20004, USA</p></div>
+      <div class="ccard fade"><div class="ico">📞</div><h3>Phone</h3><p><a class="link" href="tel:+12028240444">(202) 824-0444</a></p></div>
+      <div class="ccard fade"><div class="ico">🗺️</div><h3>Directions</h3><p><a class="link" href="https://maps.google.com/?cid=16288687129197551721&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Booking</span>
+    <h2 class="fade">Book an appointment</h2>
+    <form id="demoForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" placeholder="Your name"></label>
+      <label>Phone<input type="tel" name="phone" placeholder="Your phone number"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3" placeholder="Anything to add?"></textarea></label>
+      <button type="button" class="btn primary" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Saint Germain DC</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+12028240444">📞 Call (202) 824-0444</a>
+
+<script>
+const btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',()=>{const o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+document.getElementById('demoBtn').addEventListener('click',()=>{document.getElementById('msg').style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
