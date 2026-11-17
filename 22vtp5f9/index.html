@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: WARM SUNSET -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InStyle Nail Bar – Sample Homepage Concept</title>
+<style>
+:root{
+  --terra:#b8512f;
+  --terra-d:#8f3a1f;
+  --peach:#f6b99a;
+  --peach-l:#fde3d0;
+  --cream:#fff6ec;
+  --ink:#3a1f14;
+  --gold:#e9a23b;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.1}
+.banner{background:var(--ink);color:var(--peach-l);text-align:center;font-size:13px;padding:8px 12px}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,246,236,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--peach)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--terra-d);text-decoration:none}
+.menu{display:none;list-style:none;gap:26px}
+.menu a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink);padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover{border-color:var(--terra);color:var(--terra)}
+.burger{background:var(--terra);color:#fff;border:0;border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px;cursor:pointer}
+.menu.open{display:flex;flex-direction:column;gap:0;position:absolute;left:0;right:0;top:100%;background:var(--cream);border-bottom:1px solid var(--peach);padding:8px 20px 16px}
+.menu.open a{display:block;padding:13px 0;border-bottom:1px solid var(--peach-l);font-size:17px}
+@media(min-width:800px){.menu{display:flex}.burger{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+/* HERO */
+.hero{position:relative;overflow:hidden;text-align:center;padding:60px 20px 90px;background:linear-gradient(180deg,var(--peach-l) 0%,var(--peach) 55%,#e98b62 100%);min-height:640px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.arch{position:absolute;left:50%;bottom:-40px;transform:translateX(-50%);width:min(620px,130vw);height:min(560px,110vw);border-radius:999px 999px 0 0;background:linear-gradient(180deg,#f0845a,var(--terra));opacity:.9}
+.arch::before{content:"";position:absolute;inset:26px 26px 0;border-radius:999px 999px 0 0;border:2px solid rgba(255,246,236,.55)}
+.arch::after{content:"";position:absolute;inset:56px 56px 0;border-radius:999px 999px 0 0;border:2px solid rgba(255,246,236,.3)}
+.sun{position:absolute;top:36px;left:50%;transform:translateX(-50%);width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,#ffe2a8 0%,var(--gold) 60%,transparent 72%);opacity:.65;animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{50%{transform:translateX(-50%) scale(1.12)}}
+.hero-c{position:relative;z-index:2;max-width:720px}
+.eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:13px;font-weight:700;color:var(--terra-d)}
+.hero h1{font-size:clamp(46px,12vw,98px);color:var(--ink);margin:14px 0 14px;text-shadow:0 2px 0 rgba(255,246,236,.5)}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(19px,4vw,26px);color:var(--ink);margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--cream);border-radius:999px;padding:9px 20px;font-weight:700;box-shadow:0 6px 20px rgba(143,58,31,.25);margin-bottom:26px}
+.badge .st{color:var(--gold);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:999px;padding:15px 30px;font-size:17px;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:var(--sans)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(58,31,20,.25)}
+.btn-p{background:var(--ink);color:var(--cream)}
+.btn-s{background:var(--cream);color:var(--terra-d);border-color:var(--cream)}
+.btn-t{background:var(--terra);color:#fff}
+/* SECTIONS */
+section{padding:84px 20px}
+.wrap{max-width:1100px;margin:auto}
+.sh{text-align:center;margin-bottom:44px}
+.sh h2{font-size:clamp(34px,7vw,56px);color:var(--terra-d)}
+.sh .orn{color:var(--terra);letter-spacing:.5em;margin-top:6px}
+.ex{display:inline-block;background:var(--peach-l);color:var(--terra-d);border:1.5px dashed var(--terra);border-radius:10px;padding:6px 14px;font-size:13px;font-weight:700;margin-top:14px}
+.grid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:26px 26px 26px 26px;padding:28px;box-shadow:0 8px 26px rgba(143,58,31,.12);transition:transform .25s,box-shadow .25s;border-top:6px solid var(--terra)}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(143,58,31,.22)}
+.card .ic{width:62px;height:62px;border-radius:50% 50% 0 0;background:linear-gradient(180deg,var(--peach),var(--peach-l));display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:16px}
+.card h3{font-size:24px;margin-bottom:8px}
+.card p.pr{font-weight:700;color:var(--terra);margin:8px 0 12px}
+.card .ex{margin-top:0;font-size:12px}
+#services{background:var(--cream)}
+#hours{background:linear-gradient(180deg,var(--peach-l),var(--cream))}
+table{width:100%;max-width:640px;margin:auto;border-collapse:separate;border-spacing:0;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 8px 26px rgba(143,58,31,.13)}
+td{padding:16px 22px;border-bottom:1px solid var(--peach-l);font-size:17px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--serif);font-weight:700;color:var(--terra-d)}
+td:last-child{text-align:right}
+@media(max-width:480px){td{padding:14px 12px;font-size:15px}}
+#reviews{background:var(--terra);color:var(--cream)}
+#reviews .sh h2{color:var(--cream)}
+#reviews .orn{color:var(--peach)}
+.big{text-align:center;margin-bottom:30px}
+.big .n{font-family:var(--serif);font-size:clamp(80px,22vw,150px);font-weight:700;line-height:1;color:var(--cream)}
+.big .stars{font-size:34px;color:var(--gold);letter-spacing:4px}
+.big p{font-size:19px;margin:6px 0 22px}
+.big .btn{background:var(--cream);color:var(--terra-d)}
+.top{text-align:center;margin:50px 0 24px}
+.top h3{font-size:32px}
+.top .ex{background:rgba(255,246,236,.15);color:var(--cream);border-color:var(--peach)}
+.rrow{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:700px){.rrow{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rrow{grid-template-columns:repeat(5,1fr)}}
+.rc{background:var(--cream);color:var(--ink);border-radius:20px;padding:20px;transition:transform .25s}
+.rc:hover{transform:translateY(-5px)}
+.rc .eb{display:block;margin-bottom:10px}
+.rc .eb span{display:inline-block;background:var(--peach-l);color:var(--terra-d);border:1px dashed var(--terra);font-size:12px;font-weight:700;border-radius:8px;padding:3px 10px}
+.rc .stars{color:var(--gold);font-size:20px;letter-spacing:2px;margin-bottom:8px}
+.rc p{font-style:italic;font-family:var(--serif);margin-bottom:10px}
+.rc b{font-size:14px;color:var(--terra-d)}
+#contact{background:var(--cream)}
+.cgrid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:800px){.cgrid{grid-template-columns:1fr 1fr}}
+.cc{background:#fff;border-radius:26px;padding:32px;box-shadow:0 8px 26px rgba(143,58,31,.12)}
+.cc h3{font-size:26px;margin-bottom:6px;color:var(--terra-d)}
+.cc p{margin-bottom:16px;font-size:18px}
+.mapart{border-radius:26px;min-height:240px;background:linear-gradient(160deg,var(--peach),#e98b62 60%,var(--terra));display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--cream);text-align:center;padding:30px;position:relative;overflow:hidden}
+.mapart svg{width:70px;height:70px;margin-bottom:10px}
+.mapart .btn{background:var(--cream);color:var(--terra-d)}
+#book{background:linear-gradient(180deg,var(--peach-l),var(--peach))}
+form{max-width:620px;margin:auto;background:var(--cream);border-radius:28px;padding:32px;box-shadow:0 12px 34px rgba(143,58,31,.22)}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px;color:var(--terra-d)}
+input,textarea,select{width:100%;padding:13px 15px;border:2px solid var(--peach);border-radius:14px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--terra)}
+.two{display:grid;gap:0 14px;grid-template-columns:1fr}
+@media(min-width:520px){.two{grid-template-columns:1fr 1fr}}
+form .btn{width:100%;margin-top:22px}
+#msg{display:none;margin-top:16px;background:var(--ink);color:var(--cream);padding:14px 16px;border-radius:14px;text-align:center;font-weight:700}
+.note{font-size:14px;text-align:center;margin-top:14px;color:var(--terra-d)}
+footer{background:var(--ink);color:var(--peach-l);text-align:center;padding:40px 20px}
+footer h3{font-size:26px;margin-bottom:8px;color:var(--cream)}
+footer p{font-size:14px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--terra);color:#fff;text-align:center;padding:16px;font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.sun{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for InStyle Nail Bar. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">InStyle Nail Bar</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="sun"></div>
+  <div class="arch"></div>
+  <div class="hero-c">
+    <div class="eyebrow">Washington, DC · Southwest</div>
+    <h1>InStyle Nail Bar</h1>
+    <p class="tag">Polished looks, relaxed moments.</p>
+    <div class="badge"><span class="st">★★★★★</span> 4.6 · 507 Google reviews</div>
+    <div class="btns">
+      <a href="#book" class="btn btn-p">Book Now</a>
+      <a href="tel:+12023328565" class="btn btn-s">📞 Call (202) 332-8565</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sh fade">
+      <h2>Services</h2>
+      <div class="orn">✦ ✦ ✦</div>
+      <div class="ex">Example layout - the owner's real services and prices go here</div>
+    </div>
+    <div class="grid g3">
+      <div class="card fade"><div class="ic">💅</div><h3>Classic Manicure</h3><p>A short description of this service goes here.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🦶</div><h3>Pedicure</h3><p>A short description of this service goes here.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Gel Polish</h3><p>A short description of this service goes here.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🌸</div><h3>Nail Art</h3><p>A short description of this service goes here.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💎</div><h3>Acrylic Set</h3><p>A short description of this service goes here.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🌿</div><h3>Polish Change</h3><p>A short description of this service goes here.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="sh fade"><h2>Hours</h2><div class="orn">✦ ✦ ✦</div></div>
+    <table class="fade">
+      <tr><td>Monday</td><td>10:00 AM – 7:30 PM</td></tr>
+      <tr><td>Tuesday</td><td>10:00 AM – 7:30 PM</td></tr>
+      <tr><td>Wednesday</td><td>10:00 AM – 7:30 PM</td></tr>
+      <tr><td>Thursday</td><td>10:00 AM – 7:30 PM</td></tr>
+      <tr><td>Friday</td><td>10:00 AM – 7:30 PM</td></tr>
+      <tr><td>Saturday</td><td>10:00 AM – 7:30 PM</td></tr>
+      <tr><td>Sunday</td><td>10:00 AM – 6:30 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="sh fade"><h2>Reviews</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="big fade">
+      <div class="n">4.6</div>
+      <div class="stars">★★★★★</div>
+      <p>based on 507 Google reviews</p>
+      <a class="btn" href="https://maps.google.com/?cid=8200089190745667697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 507 reviews on Google</a>
+    </div>
+    <div class="top fade">
+      <h3>Top reviews</h3>
+      <div class="ex">Example layout - your best reviews show here</div>
+    </div>
+    <div class="rrow">
+      <div class="rc fade"><div class="eb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="eb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="eb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="eb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="eb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sh fade"><h2>Contact</h2><div class="orn">✦ ✦ ✦</div></div>
+    <div class="cgrid">
+      <div class="cc fade">
+        <h3>📍 Address</h3>
+        <p>980 Maine Ave SW<br>Washington, DC 20024, USA</p>
+        <h3>📞 Phone</h3>
+        <p><a href="tel:+12023328565">(202) 332-8565</a></p>
+        <a class="btn btn-t" href="https://maps.google.com/?cid=8200089190745667697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div class="mapart fade">
+        <svg viewBox="0 0 24 24" fill="#fff6ec" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg>
+        <h3 style="font-size:28px;margin-bottom:12px">InStyle Nail Bar</h3>
+        <a class="btn" href="https://maps.google.com/?cid=8200089190745667697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="sh fade"><h2>Book an appointment</h2><div class="orn">✦ ✦ ✦</div></div>
+    <form class="fade" id="bookform" onsubmit="return false">
+      <label for="n">Name</label>
+      <input id="n" type="text" autocomplete="name">
+      <label for="p">Phone</label>
+      <input id="p" type="tel" autocomplete="tel">
+      <div class="two">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. 2:00 PM"></div>
+      </div>
+      <label for="z">Notes</label>
+      <textarea id="z" rows="3"></textarea>
+      <button type="button" class="btn btn-t" id="send">Request appointment</button>
+      <div id="msg" role="status"></div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <h3>InStyle Nail Bar</h3>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+12023328565">📞 Call (202) 332-8565</a>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+document.getElementById('send').addEventListener('click',function(){
+  var s=document.getElementById('msg');s.textContent='Demo only: online booking is not connected yet.';s.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
