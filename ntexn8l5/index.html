@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FRESH MINT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ferro Salon-Washington D.C. | Sample Homepage Concept</title>
+<style>
+:root{
+  --mint:#b9f0d8;
+  --mint2:#dcf8ec;
+  --mint3:#f2fcf8;
+  --green:#0b4a3a;
+  --green2:#0f6b52;
+  --accent:#19b88a;
+  --ink:#123229;
+  --white:#fff;
+  --radius:26px;
+  --shadow:0 10px 30px rgba(11,74,58,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{font-family:"Nunito","Segoe UI",ui-rounded,"SF Pro Rounded",system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--mint3);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--green);color:#e8fff6;text-align:center;font-size:.82rem;padding:8px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--mint);}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:900;color:var(--green);text-decoration:none;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+.logo span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--mint);}
+.menu{display:none;list-style:none;gap:6px}
+.menu a{display:block;text-decoration:none;font-weight:800;color:var(--green);padding:8px 16px;border-radius:99px;transition:.2s}
+.menu a:hover{background:var(--mint)}
+.burger{border:0;background:var(--mint);color:var(--green);font-weight:900;font-size:.95rem;padding:9px 16px;border-radius:99px;cursor:pointer;font-family:inherit}
+.menu.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:#fff;padding:12px 20px 18px;border-bottom:1px solid var(--mint);box-shadow:var(--shadow)}
+@media(min-width:800px){.menu{display:flex}.burger{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+
+section{padding:80px 20px}
+.wrap{max-width:1100px;margin:auto}
+h2{font-size:clamp(2rem,6vw,3rem);line-height:1.1;color:var(--green);font-weight:900;letter-spacing:-.02em}
+.eyebrow{display:inline-block;background:var(--mint);color:var(--green);font-weight:800;font-size:.8rem;padding:5px 14px;border-radius:99px;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--mint2),var(--mint) 70%);padding:90px 20px 100px;min-height:80vh;display:flex;align-items:center}
+.circle{position:absolute;border-radius:50%;opacity:.7}
+.c1{width:420px;height:420px;background:radial-gradient(circle at 30% 30%,#fff,var(--mint2));right:-120px;top:-100px}
+.c2{width:300px;height:300px;background:rgba(25,184,138,.28);right:12%;bottom:-120px}
+.c3{width:200px;height:200px;background:rgba(11,74,58,.12);left:-70px;bottom:40px}
+.c4{width:120px;height:120px;background:#fff;left:40%;top:30px;opacity:.55}
+.hero-in{position:relative;z-index:2;max-width:1100px;margin:auto;width:100%}
+.hero h1{font-size:clamp(2.6rem,10vw,5.8rem);line-height:1;color:var(--green);font-weight:900;letter-spacing:-.03em;max-width:12ch}
+.hero p.tag{font-size:clamp(1.1rem,3vw,1.4rem);margin:22px 0 24px;max-width:34ch;color:var(--green2);font-weight:600}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:99px;padding:10px 20px;box-shadow:var(--shadow);font-weight:800;color:var(--green);margin-bottom:28px}
+.badge .st{color:#f5a623;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:900;font-family:inherit;font-size:1.05rem;padding:16px 30px;border-radius:99px;border:2px solid var(--green);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(11,74,58,.22)}
+.btn.primary{background:var(--green);color:#fff}
+.btn.ghost{background:#fff;color:var(--green)}
+
+/* cards */
+.label{display:inline-block;background:#fff4c9;color:#6a4b00;border:1.5px dashed #d9a900;font-weight:800;font-size:.82rem;padding:6px 14px;border-radius:14px;margin-top:14px}
+.grid{display:grid;gap:22px;margin-top:36px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.s{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;border:1px solid var(--mint)}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(11,74,58,.18)}
+.ico{width:60px;height:60px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-size:1.9rem;margin-bottom:14px}
+.card h3{color:var(--green);font-size:1.3rem;margin-bottom:6px}
+.price{font-weight:800;color:var(--green2);margin:8px 0}
+.card .label{margin-top:8px;font-size:.74rem}
+
+/* hours */
+.hours-bg{background:var(--green);color:#fff}
+.hours-bg h2{color:#fff}
+.hours-bg .eyebrow{background:var(--accent);color:#04281f}
+table{width:100%;max-width:600px;border-collapse:separate;border-spacing:0 10px;margin-top:30px}
+td{background:rgba(255,255,255,.1);padding:15px 22px;font-weight:700}
+td:first-child{border-radius:99px 0 0 99px;color:var(--mint)}
+td:last-child{border-radius:0 99px 99px 0;text-align:right}
+tr.closed td:last-child{opacity:.7}
+
+/* reviews */
+.rate{display:flex;flex-wrap:wrap;gap:28px;align-items:center;background:#fff;border-radius:34px;padding:34px;box-shadow:var(--shadow);margin-top:30px;border:1px solid var(--mint)}
+.big{font-size:clamp(4rem,14vw,6.5rem);font-weight:900;color:var(--green);line-height:1}
+.stars{color:#f5a623;font-size:1.7rem;letter-spacing:3px}
+.row-title{margin-top:50px;font-size:1.6rem;color:var(--green);font-weight:900}
+.rgrid{display:grid;gap:18px;margin-top:18px;grid-template-columns:1fr}
+@media(min-width:700px){.rgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rgrid{grid-template-columns:repeat(3,1fr)}}
+.rc{background:#fff;border-radius:var(--radius);padding:22px;border:1px solid var(--mint);box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;transition:transform .25s}
+.rc:hover{transform:translateY(-5px)}
+.ex{align-self:flex-start;background:var(--mint);color:var(--green);font-size:.75rem;font-weight:900;padding:3px 12px;border-radius:99px;text-transform:uppercase;letter-spacing:.06em}
+.rc .stars{font-size:1.3rem}
+.rc p{color:#5a7068;font-style:italic}
+.rc b{color:var(--green)}
+
+/* contact */
+.contact-bg{background:linear-gradient(180deg,var(--mint2),var(--mint3))}
+.ci{display:flex;gap:16px;align-items:flex-start}
+.ci .ico{flex:none;margin:0}
+.ci a{font-weight:800;color:var(--green2)}
+
+/* form */
+.formcard{background:#fff;border-radius:34px;padding:clamp(24px,5vw,44px);box-shadow:var(--shadow);margin-top:30px;max-width:700px;border:1px solid var(--mint)}
+label{display:block;font-weight:800;color:var(--green);margin:14px 0 6px}
+input,textarea{width:100%;font:inherit;padding:14px 18px;border-radius:18px;border:2px solid var(--mint);background:var(--mint3);color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+.two{display:grid;gap:0 16px;grid-template-columns:1fr}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;margin-top:18px;background:var(--green);color:#fff;padding:14px 20px;border-radius:18px;font-weight:800}
+.note{font-size:.88rem;color:#4d6a60;margin-top:14px}
+
+footer{background:var(--green);color:#d5f5e8;text-align:center;padding:40px 20px;font-size:.95rem}
+footer b{display:block;color:#fff;font-size:1.2rem;margin-bottom:6px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:flex}
+.callbar a{flex:1;text-align:center;background:var(--accent);color:#04281f;font-weight:900;text-decoration:none;padding:17px;font-size:1.1rem;box-shadow:0 -4px 20px rgba(0,0,0,.15)}
+
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Ferro Salon-Washington D.C.. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo"><span>🌿</span>Ferro Salon</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="circle c1"></div><div class="circle c2"></div><div class="circle c3"></div><div class="circle c4"></div>
+  <div class="hero-in">
+    <div class="badge"><span class="st">★★★★★</span> 4.8 · 460 Google reviews</div>
+    <h1>Ferro Salon-Washington D.C.</h1>
+    <p class="tag">Fresh looks, friendly vibes, and hair that feels like you.</p>
+    <div class="btns">
+      <a class="btn primary" href="#book">✨ Book Now</a>
+      <a class="btn ghost" href="tel:+12027852222">📞 Call (202) 785-2222</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2>Hair services at a glance</h2>
+    <p class="label">Example layout - the owner's real services and prices go here</p>
+    <div class="grid s">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><p>A short description of the service can go here.</p><p class="price">Price: add yours</p><p class="label">Example layout - the owner's real services and prices go here</p></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Hair Color</h3><p>A short description of the service can go here.</p><p class="price">Price: add yours</p><p class="label">Example layout - the owner's real services and prices go here</p></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Highlights &amp; Balayage</h3><p>A short description of the service can go here.</p><p class="price">Price: add yours</p><p class="label">Example layout - the owner's real services and prices go here</p></div>
+      <div class="card fade"><div class="ico">💆</div><h3>Treatments</h3><p>A short description of the service can go here.</p><p class="price">Price: add yours</p><p class="label">Example layout - the owner's real services and prices go here</p></div>
+      <div class="card fade"><div class="ico">💨</div><h3>Blowout</h3><p>A short description of the service can go here.</p><p class="price">Price: add yours</p><p class="label">Example layout - the owner's real services and prices go here</p></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Styling</h3><p>A short description of the service can go here.</p><p class="price">Price: add yours</p><p class="label">Example layout - the owner's real services and prices go here</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="hours-bg">
+  <div class="wrap">
+    <span class="eyebrow">Hours</span>
+    <h2>When to visit</h2>
+    <table>
+      <tr class="closed"><td>Monday</td><td>Closed</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+      <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What the rating says</h2>
+    <div class="rate fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p style="font-weight:800;color:var(--green);font-size:1.15rem">based on 460 Google reviews</p>
+        <p style="margin:14px 0 0"><a class="btn primary" target="_blank" rel="noopener" href="https://maps.google.com/?cid=11219785896994290313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 460 reviews on Google</a></p>
+      </div>
+    </div>
+    <h3 class="row-title">Top reviews</h3>
+    <p class="label">Example layout - your best reviews show here</p>
+    <div class="rgrid">
+      <div class="rc fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="ex">Example</span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-bg">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Find the salon</h2>
+    <div class="grid">
+      <div class="card fade ci"><div class="ico">📍</div><div><h3>Address</h3><p>1125 18th St NW<br>Washington, DC 20036, USA</p><p style="margin-top:10px"><a target="_blank" rel="noopener" href="https://maps.google.com/?cid=11219785896994290313&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions →</a></p></div></div>
+      <div class="card fade ci"><div class="ico">📞</div><div><h3>Phone</h3><p><a href="tel:+12027852222">(202) 785-2222</a></p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Booking</span>
+    <h2>Book an appointment</h2>
+    <form class="formcard fade" id="bookForm" onsubmit="return false">
+      <div class="two">
+        <div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+        <div><label for="d">Preferred day</label><input id="d" type="date"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+      </div>
+      <label for="no">Notes</label>
+      <textarea id="no" rows="4"></textarea>
+      <p style="margin-top:20px"><button type="button" class="btn primary" id="sendBtn">Request appointment</button></p>
+      <div id="msg" role="status"></div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <b>Ferro Salon-Washington D.C.</b>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<div class="callbar"><a href="tel:+12027852222">📞 Call</a></div>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+document.getElementById('sendBtn').addEventListener('click',function(){
+  var s=document.getElementById('msg');s.textContent='Demo only: online booking is not connected yet.';s.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
