@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: WARM SUNSET -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Village Salon at Oberlin – Sample Homepage Concept</title>
+<style>
+:root{
+  --terra:#b8512e;
+  --terra-d:#8a3a1e;
+  --peach:#f6b99a;
+  --peach-l:#fde3d2;
+  --cream:#fff6ec;
+  --ink:#3a1f14;
+  --gold:#e9a23b;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--ink);color:var(--peach-l);text-align:center;font-size:13px;padding:8px 12px;letter-spacing:.2px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,246,236,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--peach)}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--terra-d);text-decoration:none}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink);padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{color:var(--terra);border-color:var(--terra)}
+.menu-btn{display:none;background:var(--terra);color:#fff;border:0;border-radius:999px;padding:8px 16px;font-weight:700;font-size:15px;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);flex-direction:column;gap:0;border-bottom:1px solid var(--peach);padding:8px 20px 16px}
+  nav ul.open{display:flex}
+  nav li a{display:block;padding:14px 0;border-bottom:1px solid var(--peach-l);font-size:17px}
+}
+section{padding:84px 20px}
+.wrap{max-width:1100px;margin:0 auto}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:13px;font-weight:700;color:var(--terra);text-align:center}
+h2{font-family:var(--serif);font-size:clamp(32px,6vw,50px);text-align:center;color:var(--terra-d);line-height:1.15;margin:8px 0 14px;font-weight:700}
+.lead{text-align:center;max-width:620px;margin:0 auto 40px}
+
+/* hero */
+#home{position:relative;overflow:hidden;text-align:center;padding:60px 20px 90px;background:linear-gradient(180deg,#ffd9bd 0%,#fbc3a0 45%,#f4a07a 100%);color:var(--ink)}
+.sun{position:absolute;left:50%;top:-120px;transform:translateX(-50%);width:min(760px,150vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#fff0d6 0%,#ffd08a 40%,rgba(255,190,120,.0) 70%);opacity:.9;pointer-events:none}
+.arch{position:relative;max-width:640px;margin:0 auto;padding:70px 28px 56px;border-radius:320px 320px 24px 24px;background:linear-gradient(180deg,var(--terra) 0%,var(--terra-d) 100%);color:#fff6ec;box-shadow:0 30px 60px rgba(138,58,30,.35),inset 0 0 0 8px rgba(255,246,236,.18)}
+.arch::before{content:"";position:absolute;inset:14px;border-radius:310px 310px 14px 14px;border:2px solid rgba(255,246,236,.4);pointer-events:none}
+.arch .mini{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--peach)}
+h1{font-family:var(--serif);font-size:clamp(40px,9vw,76px);line-height:1.02;margin:14px 0 14px;font-weight:700}
+h1 em{display:block;font-style:italic;font-weight:400;font-size:.55em;color:var(--peach);margin-bottom:4px}
+.tag{font-size:19px;max-width:420px;margin:0 auto 20px;color:var(--peach-l)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--cream);color:var(--ink);border-radius:999px;padding:8px 18px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.18);margin-bottom:26px;font-size:15px}
+.badge .st{color:var(--gold);letter-spacing:1px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:700;padding:15px 30px;border-radius:999px;transition:transform .2s,box-shadow .2s;font-size:17px}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(58,31,20,.3)}
+.btn-primary{background:var(--cream);color:var(--terra-d)}
+.btn-ghost{background:transparent;color:var(--cream);border:2px solid var(--cream)}
+.btn-solid{background:var(--terra);color:#fff}
+.hills{position:absolute;left:0;right:0;bottom:-1px;height:60px;background:var(--cream);border-radius:50% 50% 0 0/100% 100% 0 0}
+
+/* services */
+#services{background:var(--cream)}
+.ex-label{display:block;text-align:center;margin:0 auto 30px;max-width:560px;background:var(--peach-l);border:2px dashed var(--terra);color:var(--terra-d);font-weight:700;border-radius:14px;padding:10px 16px;font-size:15px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:#fff;border-radius:26px 26px 26px 26px;padding:28px 24px;border:1px solid var(--peach);transition:transform .25s,box-shadow .25s;position:relative}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(184,81,46,.2)}
+.ico{width:64px;height:64px;border-radius:50% 50% 12px 12px;background:linear-gradient(180deg,var(--peach),var(--peach-l));display:grid;place-items:center;font-size:30px;margin-bottom:14px}
+.card h3{font-family:var(--serif);font-size:23px;color:var(--terra-d);margin-bottom:6px}
+.card p.pr{font-weight:700;color:var(--terra);margin:8px 0 12px}
+.card .tagx{display:block;font-size:12.5px;font-weight:700;background:var(--peach-l);border:1px dashed var(--terra);color:var(--terra-d);border-radius:10px;padding:6px 10px}
+
+/* hours */
+#hours{background:linear-gradient(180deg,var(--peach-l),#fbd3b8)}
+.hours-box{max-width:600px;margin:0 auto;background:var(--cream);border-radius:300px 300px 28px 28px;padding:60px 28px 28px;box-shadow:0 20px 40px rgba(138,58,30,.18)}
+@media(max-width:560px){.hours-box{border-radius:180px 180px 24px 24px;padding-top:50px}}
+table{width:100%;border-collapse:collapse}
+td{padding:13px 10px;border-bottom:1px solid var(--peach);font-size:16.5px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--terra-d)}
+td:last-child{text-align:right}
+tr.closed td:last-child{color:var(--terra);font-weight:700}
+
+/* reviews */
+#reviews{background:var(--cream)}
+.big{text-align:center;margin-bottom:26px}
+.big .num{font-family:var(--serif);font-size:clamp(72px,16vw,128px);line-height:1;color:var(--terra);font-weight:700}
+.stars{color:var(--gold);font-size:30px;letter-spacing:4px}
+.big p{font-size:18px;margin-top:4px}
+.center{text-align:center;margin-bottom:50px}
+.row-title{font-family:var(--serif);font-size:28px;text-align:center;color:var(--terra-d);margin-bottom:10px}
+.rv-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rv{background:#fff;border:1px solid var(--peach);border-radius:22px;padding:18px;transition:transform .25s,box-shadow .25s}
+.rv:hover{transform:translateY(-5px);box-shadow:0 14px 28px rgba(184,81,46,.18)}
+.rv .ex{display:block;margin-bottom:10px}
+.rv .ex span{display:inline-block;background:var(--terra);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:999px}
+.rv .stars{font-size:20px;letter-spacing:2px;display:block;margin-bottom:8px}
+.rv p{color:#6b4a3c;font-style:italic;margin-bottom:10px}
+.rv strong{font-size:14px}
+
+/* contact */
+#contact{background:linear-gradient(160deg,var(--terra) 0%,var(--terra-d) 100%);color:var(--cream)}
+#contact h2{color:#fff}
+#contact .eyebrow{color:var(--peach)}
+.cgrid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:860px;margin:30px auto 0}
+.cbox{background:rgba(255,246,236,.12);border:1px solid rgba(255,246,236,.3);border-radius:24px;padding:28px;text-align:center}
+.cbox .big-i{font-size:34px}
+.cbox h3{font-family:var(--serif);font-size:22px;margin:6px 0}
+.cbox a.tel{font-size:24px;font-weight:700;text-decoration:none}
+.cbox .btn{margin-top:14px}
+
+/* booking */
+#book{background:var(--cream)}
+form{max-width:600px;margin:0 auto;background:#fff;border:1px solid var(--peach);border-radius:28px;padding:30px;box-shadow:0 20px 40px rgba(184,81,46,.12)}
+label{display:block;font-weight:700;font-size:14px;color:var(--terra-d);margin:14px 0 6px}
+input,select,textarea{width:100%;font:inherit;padding:12px 14px;border:2px solid var(--peach);border-radius:14px;background:var(--cream);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terra)}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+form .btn{width:100%;margin-top:22px}
+#msg{display:none;margin-top:16px;background:var(--peach-l);border:2px solid var(--terra);color:var(--terra-d);padding:12px 16px;border-radius:14px;font-weight:700;text-align:center}
+.note{text-align:center;font-size:14px;color:#7a5a4c;margin-top:14px}
+
+footer{background:var(--ink);color:var(--peach-l);text-align:center;padding:40px 20px}
+footer strong{font-family:var(--serif);font-size:22px;display:block;margin-bottom:6px}
+footer small{opacity:.85}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--terra);color:#fff;text-align:center;padding:16px;font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.25)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Village Salon at Oberlin. Not their official website.</div>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">Village Salon at Oberlin</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="home">
+  <div class="sun"></div>
+  <div class="arch fade">
+    <div class="mini">✂ Hair Salon · Raleigh, NC</div>
+    <h1>Village Salon at Oberlin</h1>
+    <p class="tag">Where great hair days begin.</p>
+    <div class="badge"><span class="st">★★★★★</span> 4.8 · 677 Google reviews</div>
+    <div class="btns">
+      <a class="btn btn-primary" href="#book">Book Now</a>
+      <a class="btn btn-ghost" href="tel:+19198408855">📞 Call (919) 840-8855</a>
+    </div>
+  </div>
+  <div class="hills"></div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <p class="eyebrow">Services</p>
+    <h2>Treat yourself</h2>
+    <span class="ex-label">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><p class="pr">Price: add yours</p><span class="tagx">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Color &amp; Highlights</h3><p class="pr">Price: add yours</p><span class="tagx">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💨</div><h3>Blowout &amp; Styling</h3><p class="pr">Price: add yours</p><span class="tagx">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🧴</div><h3>Conditioning Treatment</h3><p class="pr">Price: add yours</p><span class="tagx">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Hair</h3><p class="pr">Price: add yours</p><span class="tagx">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <p class="eyebrow">Hours</p>
+    <h2>Opening hours</h2>
+    <div class="hours-box fade">
+      <table>
+        <tr><td>Monday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:30 AM – 6:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+        <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <p class="eyebrow">Reviews</p>
+    <h2>Loved by the neighborhood</h2>
+    <div class="big fade">
+      <div class="num">4.8</div>
+      <div class="stars">★★★★★</div>
+      <p>based on 677 Google reviews</p>
+    </div>
+    <div class="center">
+      <a class="btn btn-solid" href="https://maps.google.com/?cid=13821663622740185689&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 677 reviews on Google</a>
+    </div>
+    <h3 class="row-title">Top reviews</h3>
+    <span class="ex-label">Example layout - your best reviews show here</span>
+    <div class="rv-grid">
+      <div class="rv fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Visit the salon</h2>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="big-i">📍</div><h3>Address</h3><p>402 Oberlin Rd #116<br>Raleigh, NC 27605, USA</p>
+        <a class="btn btn-primary" href="https://maps.google.com/?cid=13821663622740185689&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="cbox fade"><div class="big-i">📞</div><h3>Phone</h3><a class="tel" href="tel:+19198408855">(919) 840-8855</a><br>
+        <a class="btn btn-ghost" href="tel:+19198408855">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <p class="eyebrow">Reserve a time</p>
+    <h2>Book an appointment</h2>
+    <p class="lead">Choose a day and time that suits you.</p>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label for="n">Name</label>
+      <input id="n" type="text" autocomplete="off">
+      <label for="p">Phone</label>
+      <input id="p" type="tel" autocomplete="off">
+      <div class="two">
+        <div><label for="d">Preferred day</label>
+          <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+        <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+      </div>
+      <label for="o">Notes</label>
+      <textarea id="o" rows="3"></textarea>
+      <button type="button" class="btn btn-solid" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <strong>Village Salon at Oberlin</strong>
+  <small>Sample homepage concept made by a third party. Not their official website.</small>
+</footer>
+
+<a class="callbar" href="tel:+19198408855">📞 Call (919) 840-8855</a>
+
+<script>
+var mb=document.getElementById('menuBtn'),mn=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=mn.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+document.getElementById('demoBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
