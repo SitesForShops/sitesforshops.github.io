@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Legacy Salon Raleigh - Sample Homepage Concept</title>
+<style>
+:root{
+  --green:#0f3a2a;
+  --green2:#165239;
+  --green3:#0a2a1e;
+  --cream:#f6efdc;
+  --cream2:#ece2c6;
+  --brass:#b98a3e;
+  --brass2:#d9b26a;
+  --ink:#16221b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;
+  padding-bottom:64px;
+}
+h1,h2,h3,.slab{font-family:Rockwell,"Roboto Slab","Courier New",Georgia,serif;letter-spacing:.2px}
+a{color:inherit}
+.banner{background:var(--brass);color:#1b1305;text-align:center;font-size:.82rem;padding:7px 12px;font-weight:600}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:var(--green3);border-bottom:3px solid var(--brass);}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.brand{font-family:Rockwell,"Roboto Slab",Georgia,serif;color:var(--cream);font-weight:700;text-decoration:none;font-size:1.05rem}
+.brand span{color:var(--brass2)}
+nav ul{list-style:none;display:flex;gap:6px}
+nav a{display:block;text-decoration:none;color:var(--cream);padding:8px 14px;border-radius:4px;font-size:.95rem;transition:.2s}
+nav a:hover{background:var(--brass);color:#1b1305}
+.menu-btn{display:none;background:none;border:2px solid var(--brass);color:var(--cream);padding:6px 12px;border-radius:4px;font-size:1rem;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green3);flex-direction:column;padding:8px 18px 16px;border-bottom:3px solid var(--brass)}
+  nav ul.open{display:flex}
+  nav a{padding:12px 6px;border-bottom:1px solid rgba(255,255,255,.1)}
+}
+
+/* sections */
+section{padding:84px 20px;position:relative}
+.wrap{max-width:1100px;margin:0 auto}
+.stripe{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 18px)}
+.eyebrow{color:var(--brass);text-transform:uppercase;letter-spacing:3px;font-size:.78rem;font-weight:700}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);color:var(--green);line-height:1.15;margin:8px 0 14px}
+.rule{width:70px;height:4px;background:var(--brass);margin-bottom:22px}
+
+/* hero */
+#home{background:linear-gradient(160deg,var(--green) 0%,var(--green3) 100%);color:var(--cream);padding:70px 20px 90px;overflow:hidden}
+#home .wrap{display:grid;gap:40px;grid-template-columns:1.3fr .9fr;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.6rem,9vw,5.2rem);line-height:1.02;color:var(--cream);margin:14px 0 18px}
+.hero h1 em{font-style:normal;color:var(--brass2)}
+.hero p.tag{font-size:1.2rem;max-width:520px;color:#e3dcc3;margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;padding:15px 28px;border-radius:4px;font-weight:700;font-size:1rem;border:2px solid var(--brass);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.3)}
+.btn-brass{background:var(--brass);color:#1b1305}
+.btn-brass:hover{background:var(--brass2)}
+.btn-line{background:transparent;color:var(--cream)}
+.frame{border:3px solid var(--brass);padding:10px;border-radius:6px;max-width:340px;justify-self:center;width:100%}
+.frame-in{border:1px solid var(--brass2);padding:34px 22px;text-align:center;background:rgba(0,0,0,.2)}
+.frame-in .big{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-size:4.2rem;color:var(--brass2);line-height:1}
+.stars{color:var(--brass2);letter-spacing:4px;font-size:1.4rem;margin:8px 0}
+.frame-in small{display:block;color:#e3dcc3;font-size:.95rem}
+.scissor{font-size:2rem;margin-bottom:8px}
+@media(max-width:820px){#home .wrap{grid-template-columns:1fr}.frame{justify-self:start}}
+
+/* services */
+#services{background:var(--cream)}
+.example-label{display:inline-block;background:var(--green);color:var(--cream);font-size:.82rem;font-weight:700;padding:6px 12px;border-radius:3px;border-left:4px solid var(--brass)}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:32px}
+.card{background:#fffaf0;border:1px solid var(--cream2);border-top:5px solid var(--brass);border-radius:6px;padding:26px;transition:transform .25s,box-shadow .25s;box-shadow:0 2px 0 var(--cream2)}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(15,58,42,.18)}
+.card .ico{font-size:2.2rem;width:62px;height:62px;display:grid;place-items:center;background:var(--green);border-radius:50%;margin-bottom:14px}
+.card h3{color:var(--green);font-size:1.3rem;margin-bottom:6px}
+.card .price{font-weight:700;color:var(--brass);margin:10px 0}
+.card .ex{display:block;font-size:.76rem;font-weight:700;color:var(--green);background:var(--cream2);padding:6px 9px;border-radius:3px;margin-top:12px}
+
+/* hours */
+#hours{background:var(--green);color:var(--cream)}
+#hours h2{color:var(--cream)}
+.hours-box{display:grid;gap:36px;grid-template-columns:1fr 1fr;align-items:start}
+table{width:100%;border-collapse:collapse;background:rgba(0,0,0,.22);border:2px solid var(--brass);border-radius:6px;overflow:hidden}
+td{padding:14px 18px;border-bottom:1px solid rgba(217,178,106,.3)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:Rockwell,"Roboto Slab",Georgia,serif;color:var(--brass2);font-weight:700}
+td:last-child{text-align:right}
+.closed td:last-child{opacity:.7}
+@media(max-width:820px){.hours-box{grid-template-columns:1fr}}
+
+/* reviews */
+#reviews{background:var(--cream2)}
+.rating-big{display:flex;flex-wrap:wrap;align-items:center;gap:26px;background:var(--green);color:var(--cream);padding:30px;border-radius:6px;border:3px solid var(--brass);margin:24px 0 30px}
+.rating-big .num{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-size:5rem;line-height:1;color:var(--brass2)}
+.rating-big .stars{font-size:1.8rem;margin:0}
+.rating-big p{font-size:1.1rem}
+.reviews-row{display:flex;gap:18px;overflow-x:auto;padding:6px 2px 18px;scroll-snap-type:x mandatory}
+.rcard{flex:0 0 260px;scroll-snap-align:start;background:#fffaf0;border:1px solid #d8cba5;border-radius:6px;padding:20px;transition:transform .25s,box-shadow .25s}
+.rcard:hover{transform:translateY(-5px);box-shadow:0 14px 26px rgba(15,58,42,.18)}
+.badge-row{display:block;margin-bottom:10px}
+.badge{display:inline-block;background:var(--brass);color:#1b1305;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:3px}
+.rcard .stars{color:var(--brass);margin:0 0 10px;font-size:1.2rem;letter-spacing:2px}
+.rcard .nm{margin-top:12px;font-weight:700;color:var(--green)}
+.rcard .tx{color:#4a554e;font-style:italic}
+
+/* contact */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:28px}
+.info{background:var(--green);color:var(--cream);padding:28px;border-radius:6px;border-bottom:5px solid var(--brass)}
+.info .ico{font-size:1.8rem}
+.info h3{color:var(--brass2);margin:6px 0}
+.info a{color:var(--cream)}
+.info .btn{margin-top:14px}
+
+/* booking */
+#book{background:linear-gradient(160deg,var(--green) 0%,var(--green3) 100%);color:var(--cream)}
+#book h2{color:var(--cream)}
+form{background:var(--cream);color:var(--ink);padding:30px;border-radius:6px;border:3px solid var(--brass);display:grid;gap:16px;grid-template-columns:1fr 1fr;max-width:760px}
+form .full{grid-column:1/-1}
+label{font-weight:700;font-size:.9rem;color:var(--green);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:12px;border:2px solid #cdbf98;border-radius:4px;font:inherit;background:#fffdf6;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
+#msg{display:none;background:var(--green);color:var(--cream);padding:14px;border-left:5px solid var(--brass);border-radius:3px;font-weight:700}
+.note{margin-top:14px;font-size:.9rem;color:#d7d0b7}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+
+footer{background:var(--green3);color:var(--cream);text-align:center;padding:36px 20px;border-top:4px solid var(--brass)}
+footer strong{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-size:1.2rem;color:var(--brass2)}
+footer p{font-size:.9rem;margin-top:6px;color:#d7d0b7}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--brass);color:#1b1305;text-align:center;text-decoration:none;font-weight:800;padding:16px;font-size:1.05rem;border-top:3px solid var(--green3)}
+@media(max-width:760px){.callbar{display:block}}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for The Legacy Salon Raleigh. Not their official website.</div>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#home">The Legacy <span>Salon</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="stripe hero">
+  <div class="wrap">
+    <div class="fade">
+      <div class="eyebrow" style="color:var(--brass2)">Hair salon · Raleigh, NC</div>
+      <h1>The Legacy <em>Salon</em> Raleigh</h1>
+      <p class="tag">Hair care with craft, comfort and a personal touch.</p>
+      <div class="btns">
+        <a class="btn btn-brass" href="#book">Book Now</a>
+        <a class="btn btn-line" href="tel:+19198661533">📞 Call (919) 866-1533</a>
+      </div>
+    </div>
+    <div class="frame fade">
+      <div class="frame-in">
+        <div class="scissor">✂️</div>
+        <div class="big">4.9</div>
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <small>Google rating · 116 reviews</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2 class="fade">What a salon menu can look like</h2>
+    <div class="rule"></div>
+    <span class="example-label">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><p>A sample card for cuts and everyday styling.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Color</h3><p>A sample card for color services.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Highlights</h3><p>A sample card for highlights and lightening.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💧</div><h3>Treatments</h3><p>A sample card for conditioning treatments.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💇</div><h3>Special Occasion Styling</h3><p>A sample card for event-ready looks.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="stripe">
+  <div class="wrap hours-box">
+    <div class="fade">
+      <div class="eyebrow" style="color:var(--brass2)">Hours</div>
+      <h2>Opening hours</h2>
+      <div class="rule"></div>
+      <p>Hours as listed for The Legacy Salon Raleigh. Call <a href="tel:+19198661533" style="color:var(--brass2)">(919) 866-1533</a> to confirm before visiting.</p>
+    </div>
+    <table class="fade">
+      <tr class="closed"><td>Monday</td><td>Closed</td></tr>
+      <tr class="closed"><td>Tuesday</td><td>Closed</td></tr>
+      <tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>12:00 – 7:00 PM</td></tr>
+      <tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>10:00 AM – 7:00 PM</td></tr>
+      <tr><td>Sunday</td><td>11:00 AM – 4:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Reviews</div>
+    <h2 class="fade">What the rating says</h2>
+    <div class="rule"></div>
+    <div class="rating-big fade">
+      <div class="num">4.9</div>
+      <div>
+        <div class="stars" aria-label="4.9 out of 5 stars">★★★★★</div>
+        <p>based on 116 Google reviews</p>
+      </div>
+      <a class="btn btn-brass" href="https://maps.google.com/?cid=10216868555872077659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 116 reviews on Google</a>
+    </div>
+    <h3 style="color:var(--green);font-size:1.5rem;margin-bottom:8px">Top reviews</h3>
+    <span class="example-label">Example layout - your best reviews show here</span>
+    <div class="reviews-row" style="margin-top:20px">
+      <div class="rcard"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p class="tx">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p class="tx">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p class="tx">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p class="tx">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rcard"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p class="tx">Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2 class="fade">Find the salon</h2>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div class="info fade"><div class="ico">📍</div><h3>Address</h3><p>200 Sawmill Rd 101 #101<br>Raleigh, NC 27615, USA</p><a class="btn btn-brass" href="https://maps.google.com/?cid=10216868555872077659&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+      <div class="info fade"><div class="ico">📞</div><h3>Phone</h3><p><a href="tel:+19198661533" style="font-size:1.4rem;font-weight:700">(919) 866-1533</a></p><a class="btn btn-line" href="tel:+19198661533">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="stripe">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--brass2)">Booking</div>
+    <h2 class="fade">Book an appointment</h2>
+    <div class="rule"></div>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+      <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+      <div><label for="d">Preferred day</label>
+        <select id="d"><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+      <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+      <div class="full"><label for="nt">Notes</label><textarea id="nt" rows="3"></textarea></div>
+      <div class="full"><button type="button" class="btn btn-brass" id="sendBtn">Request appointment</button></div>
+      <div class="full" id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>The Legacy Salon Raleigh</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+19198661533">📞 Call (919) 866-1533</a>
+
+<script>
+var btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');btn.setAttribute('aria-expanded',false)})});
+document.getElementById('sendBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('show')})}
+</script>
+</body>
+</html>
