@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mane Salon | Sample Homepage Concept</title>
+<style>
+:root{
+  --green:#12362a;
+  --green2:#1c4c3b;
+  --green3:#0b241b;
+  --cream:#f6efdc;
+  --cream2:#ece2c6;
+  --brass:#b8893a;
+  --brass2:#d6aa5c;
+  --ink:#17261f;
+  --slab:Rockwell,"Roboto Slab","Courier New",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--slab);line-height:1.1}
+.stripes{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 14px)}
+.banner{background:var(--brass);color:var(--green3);text-align:center;font-size:.82rem;font-weight:700;padding:7px 12px;letter-spacing:.02em}
+nav{position:sticky;top:0;z-index:50;background:var(--green3);border-bottom:3px solid var(--brass)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font-family:var(--slab);color:var(--cream);font-weight:800;font-size:1.25rem;text-decoration:none;letter-spacing:.03em}
+.logo span{color:var(--brass2)}
+.links{display:flex;gap:6px;list-style:none}
+.links a{display:block;color:var(--cream);text-decoration:none;padding:8px 14px;font-weight:600;font-size:.95rem;border-radius:4px;transition:.2s}
+.links a:hover{background:var(--brass);color:var(--green3)}
+.menu-btn{display:none;background:none;border:2px solid var(--brass2);color:var(--cream);font-size:1rem;font-weight:700;padding:7px 14px;border-radius:4px;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green3);flex-direction:column;padding:10px 20px 18px;border-bottom:3px solid var(--brass)}
+  .links.open{display:flex}
+  .links a{padding:13px 10px;border-bottom:1px solid rgba(255,255,255,.1)}
+}
+section{padding:84px 20px}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{font-family:var(--slab);color:var(--brass);text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;font-weight:700;margin-bottom:10px}
+h2{font-size:clamp(2rem,5vw,3rem);color:var(--green);margin-bottom:14px}
+.rule{width:70px;height:5px;background:var(--brass);margin-bottom:24px;border-radius:2px}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--green3),var(--green2));color:var(--cream);position:relative;overflow:hidden;padding:90px 20px 100px}
+.hero::before{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.04) 0 2px,transparent 2px 14px)}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border:2px solid rgba(214,170,92,.35);border-radius:50%;box-shadow:0 0 0 30px rgba(214,170,92,.06)}
+.hero .wrap{position:relative;z-index:1}
+.frame{display:inline-flex;align-items:center;gap:12px;border:2px solid var(--brass2);padding:10px 18px;outline:1px solid var(--brass2);outline-offset:4px;margin-bottom:28px;background:rgba(0,0,0,.2)}
+.frame .big{font-family:var(--slab);font-size:1.7rem;font-weight:800;color:var(--brass2)}
+.stars{color:var(--brass2);letter-spacing:2px}
+.frame small{display:block;font-size:.8rem;opacity:.9}
+.hero h1{font-size:clamp(3.2rem,12vw,7rem);font-weight:800;letter-spacing:-.01em;max-width:800px}
+.hero h1 em{font-style:normal;color:var(--brass2)}
+.hero p.tag{font-size:1.25rem;max-width:520px;margin:20px 0 34px;opacity:.92}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;padding:15px 30px;border-radius:4px;border:2px solid var(--brass2);cursor:pointer;font-size:1rem;font-family:var(--sans);transition:.2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.3)}
+.btn.primary{background:var(--brass2);color:var(--green3)}
+.btn.ghost{background:transparent;color:var(--cream)}
+.btn.dark{background:var(--green);color:var(--cream);border-color:var(--green)}
+/* services */
+#services{background:var(--cream)}
+.example-tag{display:inline-block;background:var(--green);color:var(--cream2);font-size:.8rem;font-weight:700;padding:5px 12px;border-left:4px solid var(--brass);margin-bottom:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px;margin-top:20px}
+.card{background:#fffaf0;border:2px solid var(--green);padding:26px;position:relative;transition:.25s;box-shadow:6px 6px 0 var(--brass)}
+.card:hover{transform:translate(-3px,-5px);box-shadow:10px 11px 0 var(--brass)}
+.card .ic{font-size:2.2rem;margin-bottom:8px}
+.card h3{color:var(--green);font-size:1.35rem;margin-bottom:6px}
+.card .price{color:var(--brass);font-weight:800;margin:10px 0}
+.card .ex{font-size:.75rem;font-weight:700;color:var(--green);background:var(--cream2);padding:5px 8px;display:block;border-left:3px solid var(--brass)}
+/* hours */
+#hours{background:var(--green);color:var(--cream)}
+#hours h2{color:var(--cream)}
+.hours-box{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;align-items:center}
+@media(max-width:800px){.hours-box{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;background:var(--cream);color:var(--ink);border:3px solid var(--brass)}
+td{padding:14px 18px;border-bottom:1px solid var(--cream2);font-weight:600}
+tr:last-child td{border-bottom:0}
+tr:nth-child(even){background:#efe6cd}
+tr.closed td{color:#8a3a2a}
+/* reviews */
+#reviews{background:var(--cream2)}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin:10px 0 28px}
+.rating .num{font-family:var(--slab);font-size:clamp(4.5rem,15vw,7rem);font-weight:800;color:var(--green);line-height:1}
+.rating .stars{font-size:2rem}
+.rating p{font-size:1.1rem;font-weight:600}
+.row-label{font-family:var(--slab);font-size:1.5rem;color:var(--green);margin:46px 0 6px}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px}
+.rev{background:#fffaf0;border:2px solid var(--green);padding:18px;transition:.25s}
+.rev:hover{transform:translateY(-5px)}
+.badge-row{margin-bottom:10px}
+.badge{display:inline-block;background:var(--brass);color:var(--green3);font-size:.72rem;font-weight:800;padding:3px 10px;text-transform:uppercase;letter-spacing:.08em}
+.rev .stars{font-size:1.2rem;display:block;margin-bottom:8px;color:var(--brass)}
+.rev p{font-size:.95rem;font-style:italic;margin-bottom:10px}
+.rev b{font-size:.9rem;color:var(--green)}
+/* contact */
+#contact{background:var(--green3);color:var(--cream)}
+#contact h2{color:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:16px}
+.cbox{border:2px solid var(--brass);padding:26px;background:rgba(255,255,255,.04)}
+.cbox .ic{font-size:2rem}
+.cbox h3{color:var(--brass2);margin:6px 0 8px}
+.cbox a{color:var(--cream)}
+/* booking */
+#book{background:var(--cream)}
+form{background:#fffaf0;border:3px solid var(--green);padding:30px;max-width:640px;box-shadow:8px 8px 0 var(--brass)}
+label{display:block;font-weight:700;color:var(--green);margin:14px 0 5px;font-size:.92rem}
+input,select,textarea{width:100%;padding:12px;border:2px solid var(--green);background:#fff;font:inherit;border-radius:3px}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--brass2)}
+form .btn{margin-top:22px;width:100%}
+#msg{display:none;margin-top:16px;padding:14px;background:var(--green);color:var(--cream);border-left:6px solid var(--brass2);font-weight:700}
+.note{font-size:.85rem;margin-top:14px;color:#4a5a50}
+/* footer */
+footer{background:#07170f;color:var(--cream2);text-align:center;padding:36px 20px;font-size:.9rem}
+footer strong{font-family:var(--slab);font-size:1.3rem;color:var(--brass2);display:block;margin-bottom:6px}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--brass2);color:var(--green3);text-align:center;font-weight:800;font-size:1.1rem;padding:16px;text-decoration:none;border-top:3px solid var(--green3)}
+@media(max-width:760px){.callbar{display:block}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Mane Salon. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">✂ MANE <span>SALON</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">☰ Menu</button>
+    <ul class="links" id="links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <div class="frame">
+      <span class="big">4.9</span>
+      <div><span class="stars">★★★★★</span><small>Google rating · 631 reviews</small></div>
+    </div>
+    <h1>Mane Salon</h1>
+    <p class="tag">Hair, styled with care. Raleigh, North Carolina.</p>
+    <div class="btns">
+      <a class="btn primary" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+19195037755">📞 Call (919) 503-7755</a>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2 class="fade">What a salon menu can look like</h2>
+    <div class="rule"></div>
+    <span class="example-tag">Example layout - the owner's real services and prices go here</span>
+    <div class="grid">
+      <div class="card fade"><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Color</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Highlights</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💆</div><h3>Treatments</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💨</div><h3>Blowout</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">👰</div><h3>Special Occasion Styling</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="stripes">
+  <div class="wrap hours-box">
+    <div class="fade">
+      <div class="eyebrow">Hours</div>
+      <h2>Opening hours</h2>
+      <div class="rule"></div>
+      <p>Open six days a week, with Sunday closed. Call <a href="tel:+19195037755" style="color:var(--brass2);font-weight:700">(919) 503-7755</a> with any questions.</p>
+    </div>
+    <table class="fade">
+      <tr><td>Monday: 10:00 AM – 8:00 PM</td></tr>
+      <tr><td>Tuesday: 9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Wednesday: 9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Thursday: 9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Friday: 9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Saturday: 9:00 AM – 5:00 PM</td></tr>
+      <tr class="closed"><td>Sunday: Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Reviews</div>
+    <h2 class="fade">Rated 4.9 on Google</h2>
+    <div class="rule"></div>
+    <div class="rating fade">
+      <div class="num">4.9</div>
+      <div>
+        <div class="stars" style="color:var(--brass)">★★★★★</div>
+        <p>based on 631 Google reviews</p>
+      </div>
+    </div>
+    <a class="btn dark" target="_blank" rel="noopener" href="https://maps.google.com/?cid=1979960811380154298&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 631 reviews on Google</a>
+
+    <h3 class="row-label">Top reviews</h3>
+    <span class="example-tag">Example layout - your best reviews show here</span>
+    <div class="rev-grid">
+      <div class="rev fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rev fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="stripes">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2 class="fade">Find Mane Salon</h2>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div class="cbox fade"><div class="ic">📍</div><h3>Address</h3><p>1301 Hillsborough St Suite 102<br>Raleigh, NC 27605, USA</p></div>
+      <div class="cbox fade"><div class="ic">📞</div><h3>Phone</h3><p><a href="tel:+19195037755">(919) 503-7755</a></p></div>
+      <div class="cbox fade"><div class="ic">🧭</div><h3>Directions</h3><p style="margin-bottom:14px">Open the location in Google Maps.</p><a class="btn primary" target="_blank" rel="noopener" href="https://maps.google.com/?cid=1979960811380154298&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" style="color:var(--green3)">Get directions</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="eyebrow">Booking</div>
+    <h2 class="fade">Book an appointment</h2>
+    <div class="rule"></div>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label for="n">Name</label>
+      <input id="n" type="text" autocomplete="name">
+      <label for="p">Phone</label>
+      <input id="p" type="tel" autocomplete="tel">
+      <label for="d">Preferred day</label>
+      <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select>
+      <label for="t">Preferred time</label>
+      <input id="t" type="time">
+      <label for="o">Notes</label>
+      <textarea id="o" rows="3"></textarea>
+      <button type="button" class="btn primary" id="sendBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <strong>Mane Salon</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+19195037755">📞 Call (919) 503-7755</a>
+
+<script>
+const btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',()=>{const o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+document.getElementById('sendBtn').addEventListener('click',()=>{
+  const m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
