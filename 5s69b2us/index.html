@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LUX Salon - Lafayette Village | Sample Homepage Concept</title>
+<style>
+:root{
+  --green:#0f3b2b;
+  --green2:#17533c;
+  --green3:#0a281d;
+  --cream:#f6efdc;
+  --cream2:#ece2c6;
+  --brass:#b98b3a;
+  --brass2:#d6aa57;
+  --ink:#1b2a22;
+  --slab:Rockwell,"Roboto Slab","Courier New",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:16px;padding-bottom:64px}
+h1,h2,h3{font-family:var(--slab);line-height:1.15;letter-spacing:.2px}
+a{color:inherit}
+.stripes{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 18px)}
+.stripes-dark{background-image:repeating-linear-gradient(90deg,rgba(15,59,43,.045) 0 2px,transparent 2px 18px)}
+.banner{background:var(--brass);color:var(--green3);text-align:center;font-size:.8rem;padding:7px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--green3);border-bottom:3px solid var(--brass);box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:var(--slab);color:var(--cream);font-weight:700;text-decoration:none;letter-spacing:1px}
+.logo span{color:var(--brass2)}
+.links{display:flex;gap:6px}
+.links a{color:var(--cream);text-decoration:none;padding:8px 14px;font-size:.95rem;border-radius:3px;transition:.2s}
+.links a:hover{background:var(--brass);color:var(--green3)}
+.menu-btn{display:none;background:none;border:2px solid var(--brass);color:var(--cream);padding:6px 12px;font-size:1rem;border-radius:3px;cursor:pointer;font-family:var(--slab)}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green3);flex-direction:column;padding:8px 18px 16px;border-bottom:3px solid var(--brass)}
+  .links.open{display:flex}
+  .links a{padding:12px;border-bottom:1px solid rgba(255,255,255,.1)}
+}
+section{padding:80px 18px}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{font-family:var(--slab);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;color:var(--brass);font-weight:700}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);color:var(--green);margin:6px 0 14px}
+.rule{width:70px;height:4px;background:var(--brass);margin-bottom:22px;border-radius:2px}
+/* hero */
+#home{background:linear-gradient(135deg,var(--green3),var(--green2));color:var(--cream);padding:70px 18px 90px;position:relative;overflow:hidden}
+#home::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border:2px solid rgba(214,170,87,.25);border-radius:50%}
+#home::before{content:"";position:absolute;right:-60px;top:-60px;width:300px;height:300px;border:2px solid rgba(214,170,87,.2);border-radius:50%}
+.hero-in{position:relative;z-index:2;max-width:1100px;margin:auto}
+.frame{display:inline-block;border:2px solid var(--brass2);padding:6px;margin-bottom:26px}
+.frame div{border:1px solid var(--brass2);padding:8px 16px;font-family:var(--slab);font-weight:700;color:var(--cream);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.frame b{color:var(--brass2);font-size:1.15rem}
+#home h1{font-size:clamp(2.6rem,9vw,5.8rem);max-width:850px;color:var(--cream);text-shadow:3px 3px 0 rgba(0,0,0,.25)}
+#home h1 em{font-style:normal;color:var(--brass2)}
+.tag{font-size:1.2rem;max-width:560px;margin:20px 0 32px;color:var(--cream2)}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 30px;font-family:var(--slab);font-weight:700;text-decoration:none;border-radius:3px;border:2px solid var(--brass2);cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.btn-primary{background:var(--brass2);color:var(--green3)}
+.btn-ghost{background:transparent;color:var(--cream)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.btn-dark{background:var(--green);color:var(--cream);border-color:var(--green)}
+/* services */
+#services{background:var(--cream)}
+.example-note{display:inline-block;background:var(--green);color:var(--cream);font-size:.82rem;padding:6px 12px;border-left:4px solid var(--brass);margin-bottom:26px;font-weight:600}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fffaf0;border:2px solid var(--green);padding:26px;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:6px 6px 0 var(--brass)}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--brass)}
+.card .ic{font-size:2.2rem;width:62px;height:62px;display:grid;place-items:center;background:var(--green);border-radius:50%;margin-bottom:14px}
+.card h3{color:var(--green);margin-bottom:8px;font-size:1.3rem}
+.card p{font-size:.95rem;margin-bottom:12px}
+.card .price{font-weight:700;color:var(--brass);font-family:var(--slab);margin-bottom:12px}
+.card .ex{font-size:.75rem;background:var(--cream2);border:1px dashed var(--green);padding:5px 8px;color:var(--green);font-weight:600}
+/* hours */
+#hours{background:var(--green);color:var(--cream)}
+#hours h2{color:var(--cream)}
+.hours-grid{display:grid;gap:36px;grid-template-columns:1fr;align-items:center}
+@media(min-width:800px){.hours-grid{grid-template-columns:1fr 1.2fr}}
+table{width:100%;border-collapse:collapse;background:var(--cream);color:var(--ink);border:3px solid var(--brass);box-shadow:8px 8px 0 rgba(0,0,0,.25)}
+td{padding:14px 18px;border-bottom:1px solid var(--cream2)}
+td:first-child{font-family:var(--slab);font-weight:700;color:var(--green)}
+td:last-child{text-align:right}
+tr:last-child td{border-bottom:none}
+tr.closed td:last-child{color:#8a3b2a;font-weight:700}
+/* reviews */
+#reviews{background:var(--cream2)}
+.rating-box{display:flex;gap:30px;align-items:center;flex-wrap:wrap;background:var(--green);color:var(--cream);padding:30px;border:3px solid var(--brass);margin-bottom:36px}
+.big{font-family:var(--slab);font-size:clamp(4rem,14vw,6.5rem);line-height:1;color:var(--brass2);font-weight:800}
+.stars{color:var(--brass2);letter-spacing:3px;font-size:1.5rem}
+.rating-box p{color:var(--cream2)}
+.row-label{font-family:var(--slab);font-size:1.5rem;color:var(--green);margin-bottom:6px}
+.rev-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:18px}
+.rev{background:#fffaf0;border:2px solid var(--green);padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rev:hover{transform:translateY(-5px)}
+.badge-row{display:block}
+.badge{display:inline-block;background:var(--brass);color:var(--green3);font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:2px}
+.rev .stars{font-size:1.15rem;letter-spacing:2px;color:var(--brass)}
+.rev p{font-style:italic;color:#4a5a50}
+.rev strong{font-family:var(--slab);color:var(--green);font-size:.95rem}
+/* contact */
+#contact{background:var(--cream)}
+.contact-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.c-card{border:2px solid var(--green);background:#fffaf0;padding:28px;box-shadow:6px 6px 0 var(--green)}
+.c-card .ic{font-size:2rem}
+.c-card h3{color:var(--green);margin:8px 0}
+.c-card a.link{color:var(--green2);font-weight:700}
+/* booking */
+#book{background:linear-gradient(135deg,var(--green3),var(--green2));color:var(--cream)}
+#book h2{color:var(--cream)}
+form{background:var(--cream);color:var(--ink);padding:30px;border:3px solid var(--brass);max-width:640px;display:grid;gap:16px;box-shadow:8px 8px 0 rgba(0,0,0,.25)}
+label{font-family:var(--slab);font-weight:700;color:var(--green);font-size:.9rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;padding:12px;border:2px solid var(--green);background:#fffdf6;border-radius:2px;width:100%}
+input:focus,textarea:focus{outline:3px solid var(--brass2)}
+.two{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:var(--green);color:var(--cream);padding:14px;border-left:5px solid var(--brass2);font-weight:700}
+.note{font-size:.85rem;color:var(--cream2);margin-top:14px;max-width:640px}
+/* footer */
+footer{background:var(--green3);color:var(--cream2);text-align:center;padding:40px 18px;border-top:4px solid var(--brass)}
+footer strong{display:block;font-family:var(--slab);font-size:1.25rem;color:var(--cream);margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--brass2);color:var(--green3);text-align:center;padding:16px;font-family:var(--slab);font-weight:800;text-decoration:none;font-size:1.1rem;border-top:3px solid var(--green3)}
+@media(max-width:760px){.callbar{display:block}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for LUX Salon - Lafayette Village. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">LUX <span>Salon</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Toggle menu">☰ Menu</button>
+    <div class="links" id="links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section id="home" class="stripes">
+  <div class="hero-in">
+    <div class="frame"><div><b>★ 4.8</b><span>236 Google reviews</span></div></div>
+    <h1>LUX Salon - Lafayette Village</h1>
+    <p class="tag">Hair, style and a little everyday luxury in Raleigh, North Carolina.</p>
+    <div class="btns">
+      <a href="#book" class="btn btn-primary">Book Now</a>
+      <a href="tel:+19842478600" class="btn btn-ghost">📞 Call (984) 247-8600</a>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="stripes-dark">
+  <div class="wrap">
+    <div class="eyebrow fade">What to expect</div>
+    <h2 class="fade">Services</h2>
+    <div class="rule"></div>
+    <div class="example-note fade">Example layout - the owner's real services and prices go here</div>
+    <div class="grid">
+      <div class="card fade"><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><p>A sample card for cuts and finishing styles.</p><div class="price">Price: add yours</div><div class="ex">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><p>A sample card for color services.</p><div class="price">Price: add yours</div><div class="ex">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Highlights</h3><p>A sample card for highlight and balayage style services.</p><div class="price">Price: add yours</div><div class="ex">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ic">💆</div><h3>Treatments</h3><p>A sample card for conditioning and care treatments.</p><div class="price">Price: add yours</div><div class="ex">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ic">💇</div><h3>Blowout</h3><p>A sample card for wash and blow-dry services.</p><div class="price">Price: add yours</div><div class="ex">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ic">👰</div><h3>Special Occasion Hair</h3><p>A sample card for event and formal styling.</p><div class="price">Price: add yours</div><div class="ex">Example layout - the owner's real services and prices go here</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="stripes">
+  <div class="wrap hours-grid">
+    <div class="fade">
+      <div class="eyebrow" style="color:var(--brass2)">Plan your visit</div>
+      <h2>Hours</h2>
+      <div class="rule"></div>
+      <p>Opening hours for LUX Salon - Lafayette Village, as listed publicly. Call ahead to confirm before visiting.</p>
+    </div>
+    <table class="fade">
+      <tr><td>Monday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+      <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow fade">Google rating</div>
+    <h2 class="fade">Reviews</h2>
+    <div class="rule"></div>
+    <div class="rating-box fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
+        <p>based on 236 Google reviews</p>
+        <br>
+        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://maps.google.com/?cid=120698874313733252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 236 reviews on Google</a>
+      </div>
+    </div>
+    <h3 class="row-label fade">Top reviews</h3>
+    <div class="example-note fade">Example layout - your best reviews show here</div>
+    <div class="rev-grid">
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rev fade"><span class="badge-row"><span class="badge">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="stripes-dark">
+  <div class="wrap">
+    <div class="eyebrow fade">Find the salon</div>
+    <h2 class="fade">Contact</h2>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div class="c-card fade"><div class="ic">📍</div><h3>Address</h3><p>8470 Honeycutt Rd #106<br>Raleigh, NC 27615, USA</p><br><a class="link" target="_blank" rel="noopener" href="https://maps.google.com/?cid=120698874313733252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions →</a></div>
+      <div class="c-card fade"><div class="ic">📞</div><h3>Phone</h3><p><a class="link" href="tel:+19842478600">(984) 247-8600</a></p><br><a class="btn btn-dark" href="tel:+19842478600">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="stripes">
+  <div class="wrap">
+    <div class="eyebrow fade" style="color:var(--brass2)">Reserve a time</div>
+    <h2 class="fade">Book an appointment</h2>
+    <div class="rule"></div>
+    <form class="fade" id="bookForm" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="off"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+      <div class="two">
+        <label>Preferred day<input type="text" name="day" placeholder="e.g. Thursday"></label>
+        <label>Preferred time<input type="text" name="time" placeholder="e.g. 2:00 PM"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn btn-primary" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>LUX Salon - Lafayette Village</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a href="tel:+19842478600" class="callbar">📞 Call (984) 247-8600</a>
+
+<script>
+var btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+document.getElementById('demoBtn').addEventListener('click',function(){
+  var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
