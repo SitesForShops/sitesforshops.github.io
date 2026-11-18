@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: STREET INK -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>David Rios Salon & Spa - Sample Homepage Concept</title>
+<style>
+:root{
+  --char:#16181a;
+  --char2:#1f2225;
+  --char3:#2a2e32;
+  --acid:#b6ff1a;
+  --acid2:#8fd400;
+  --white:#f4f6f0;
+  --muted:#aab0a4;
+  --cond:"Arial Narrow","Roboto Condensed","Helvetica Neue Condensed",Impact,"Franklin Gothic Medium",Arial,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--char);color:var(--white);line-height:1.6;overflow-x:hidden;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--cond);text-transform:uppercase;line-height:.95;letter-spacing:.5px;font-weight:900}
+.banner{background:var(--acid);color:#111;text-align:center;font-size:.8rem;font-weight:700;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(22,24,26,.96);backdrop-filter:blur(8px);border-bottom:3px solid var(--acid)}
+.nav-in{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:var(--cond);font-weight:900;text-transform:uppercase;font-size:1.25rem;text-decoration:none;letter-spacing:1px}
+.logo span{color:var(--acid)}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;text-decoration:none;font-family:var(--cond);text-transform:uppercase;font-weight:800;letter-spacing:1px;padding:8px 14px;transform:skewX(-12deg);transition:.2s}
+.menu a:hover{background:var(--acid);color:#111}
+.burger{display:none;background:var(--acid);color:#111;border:0;font-family:var(--cond);font-weight:900;font-size:1rem;letter-spacing:1px;padding:8px 14px;cursor:pointer;text-transform:uppercase}
+@media(max-width:780px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--char);border-bottom:3px solid var(--acid);padding:8px 18px 16px}
+  .menu.open{display:flex}
+  .menu a{transform:none;font-size:1.2rem;border-bottom:1px solid var(--char3)}
+}
+section{position:relative;padding:84px 20px}
+.wrap{max-width:1150px;margin:auto;position:relative;z-index:2}
+.stripes{position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent 0 38px,rgba(182,255,26,.05) 38px 56px);pointer-events:none}
+.tag{display:inline-block;background:var(--acid);color:#111;font-family:var(--cond);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;padding:4px 12px;transform:skewX(-12deg);font-size:.85rem}
+h2{font-size:clamp(2.6rem,8vw,5rem);margin:14px 0 10px}
+h2 em{font-style:normal;color:var(--acid)}
+.lead{color:var(--muted);max-width:640px}
+
+/* hero */
+#home{min-height:88vh;display:flex;align-items:center;background:linear-gradient(120deg,#111314 0%,var(--char) 55%,#20260f 100%);overflow:hidden;padding-top:60px}
+.ghost{position:absolute;left:-2%;right:-2%;font-family:var(--cond);font-weight:900;text-transform:uppercase;line-height:.85;font-size:clamp(7rem,32vw,24rem);color:transparent;-webkit-text-stroke:2px rgba(182,255,26,.35);white-space:nowrap;pointer-events:none;user-select:none}
+.ghost.g1{top:2%}
+.ghost.g2{bottom:0;-webkit-text-stroke-color:rgba(255,255,255,.12);left:10%}
+.slash{position:absolute;right:-60px;top:-20%;width:180px;height:160%;background:var(--acid);transform:rotate(20deg);opacity:.9}
+.slash.s2{right:90px;width:30px;opacity:.5}
+#home h1{font-size:clamp(3.6rem,15vw,9.5rem);margin:18px 0 18px;text-shadow:4px 4px 0 #000}
+#home h1 span{display:block;color:var(--acid)}
+#home h1 .out{color:transparent;-webkit-text-stroke:2px var(--white);text-shadow:none}
+.tagline{font-size:1.2rem;max-width:520px;margin-bottom:22px}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--char2);border:2px solid var(--acid);padding:10px 16px;margin-bottom:26px;font-weight:700}
+.badge .stars{color:var(--acid);letter-spacing:2px}
+.badge b{font-family:var(--cond);font-size:1.6rem}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;font-family:var(--cond);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:1.2rem;text-decoration:none;padding:14px 30px;border:3px solid var(--acid);cursor:pointer;transition:.2s;clip-path:polygon(0 0,100% 0,calc(100% - 14px) 100%,0 100%);background:none;color:var(--white)}
+.btn.primary{background:var(--acid);color:#111}
+.btn:hover{transform:translateY(-4px);box-shadow:0 8px 0 rgba(182,255,26,.3)}
+.btn.ghostbtn:hover{background:var(--acid);color:#111}
+
+/* services */
+#services{background:var(--char2)}
+.notice{display:inline-block;border:2px dashed var(--acid);color:var(--acid);padding:6px 12px;font-weight:700;font-size:.85rem;margin-top:14px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:34px}
+.card{background:var(--char);border:2px solid var(--char3);border-left:8px solid var(--acid);padding:26px;transition:.25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px);border-color:var(--acid);box-shadow:8px 8px 0 var(--acid)}
+.card .ic{font-size:2.4rem}
+.card h3{font-size:2rem;margin:10px 0}
+.card p{color:var(--muted);margin-bottom:12px}
+.price{font-weight:800;color:var(--acid);margin-bottom:12px}
+.ex{display:block;font-size:.75rem;font-weight:700;color:#111;background:var(--acid);padding:4px 8px;text-transform:uppercase;letter-spacing:.5px}
+
+/* hours */
+#hours{background:linear-gradient(160deg,var(--char) 0%,#1a2008 100%)}
+table{width:100%;max-width:640px;border-collapse:collapse;margin-top:30px;background:var(--char2);border:2px solid var(--char3)}
+td{padding:15px 20px;border-bottom:1px solid var(--char3);font-size:1.05rem}
+td:first-child{font-family:var(--cond);text-transform:uppercase;font-weight:900;letter-spacing:1px;color:var(--acid);font-size:1.2rem;width:45%}
+tr:hover td{background:var(--char3)}
+tr.today td{background:var(--acid);color:#111}
+tr.today td:first-child{color:#111}
+
+/* reviews */
+#reviews{background:var(--char2)}
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin:28px 0}
+.big{font-family:var(--cond);font-weight:900;font-size:clamp(6rem,24vw,11rem);line-height:.8;color:var(--acid)}
+.rate .stars{font-size:2.2rem;color:var(--acid);letter-spacing:4px}
+.sub{font-size:1.2rem;font-weight:600}
+.rowlabel{margin:44px 0 8px}
+.rowlabel h3{font-size:2.2rem}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:18px;padding:18px;border:2px dashed var(--acid)}
+.rcard{background:var(--char);border:2px solid var(--char3);padding:18px;transition:.25s}
+.rcard:hover{transform:translateY(-6px);border-color:var(--acid)}
+.rcard .exrow{display:block;margin-bottom:10px}
+.rcard .exrow span{display:inline-block;background:var(--acid);color:#111;font-weight:800;font-size:.7rem;padding:3px 10px;text-transform:uppercase}
+.rcard .stars{color:var(--acid);font-size:1.2rem;letter-spacing:2px;margin-bottom:8px;display:block}
+.rcard p{color:var(--muted);font-style:italic;margin-bottom:10px}
+.rcard strong{font-family:var(--cond);text-transform:uppercase;letter-spacing:1px}
+
+/* contact */
+#contact{background:var(--char)}
+.cgrid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:34px}
+.cbox{background:var(--char2);padding:26px;border-top:6px solid var(--acid)}
+.cbox h3{font-size:1.6rem;color:var(--acid);margin-bottom:8px}
+.cbox a.link{color:var(--white);font-weight:700;font-size:1.3rem;text-decoration-color:var(--acid)}
+.cbox .btn{margin-top:6px;font-size:1rem}
+
+/* booking */
+#book{background:linear-gradient(135deg,var(--acid) 0 30%,var(--char2) 30% 100%);}
+#book h2{color:var(--white)}
+form{background:var(--char);border:3px solid var(--acid);padding:28px;max-width:640px;margin-top:26px;display:grid;gap:16px;box-shadow:10px 10px 0 #000}
+label{display:grid;gap:6px;font-family:var(--cond);text-transform:uppercase;font-weight:800;letter-spacing:1px}
+input,textarea,select{font:inherit;font-family:var(--body);padding:12px;background:var(--char3);border:2px solid transparent;color:var(--white);width:100%}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--acid)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--acid);color:#111;padding:12px;font-weight:800}
+.note{font-size:.85rem;color:var(--muted);margin-top:14px;max-width:640px}
+
+footer{background:#0c0d0e;padding:34px 20px;text-align:center;border-top:4px solid var(--acid)}
+footer strong{font-family:var(--cond);text-transform:uppercase;font-size:1.5rem;letter-spacing:1px;display:block;margin-bottom:6px}
+footer p{color:var(--muted);font-size:.9rem}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--acid);color:#111;text-align:center;font-family:var(--cond);font-weight:900;font-size:1.3rem;text-transform:uppercase;letter-spacing:2px;padding:15px;text-decoration:none;border-top:3px solid #000}
+@media(max-width:780px){.callbar{display:block}}
+@media(min-width:781px){body{padding-bottom:0}}
+
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for David Rios Salon & Spa. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">David Rios <span>Salon & Spa</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="ghost g1" aria-hidden="true">HAIR</div>
+  <div class="ghost g2" aria-hidden="true">STYLE</div>
+  <div class="slash" aria-hidden="true"></div><div class="slash s2" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="tag">Hair salon · Washington, DC</span>
+    <h1><span class="out">David Rios</span><span>Salon &amp; Spa</span></h1>
+    <p class="tagline">Fresh cuts, bold color and a little time for you.</p>
+    <div class="badge"><span class="stars">★★★★★</span><b>4.8</b><span>Google rating · 588 reviews</span></div>
+    <div class="btns">
+      <a class="btn primary" href="#book">Book Now</a>
+      <a class="btn ghostbtn" href="tel:+12025252613">📞 Call (202) 525-2613</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="stripes"></div>
+  <div class="wrap">
+    <span class="tag fade">Services</span>
+    <h2 class="fade">What could <em>go here</em></h2>
+    <p class="lead fade">A sample set of service cards typical for a hair salon.</p>
+    <div class="notice fade">Example layout - the owner's real services and prices go here</div>
+    <div class="grid">
+      <div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><p>A place to describe cuts and finishing styles.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">🎨</div><h3>Color</h3><p>A place to describe color services.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">✨</div><h3>Highlights</h3><p>A place to describe highlight and lightening options.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">💆</div><h3>Spa Treatment</h3><p>A place to describe relaxing spa services.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">💧</div><h3>Blowout</h3><p>A place to describe wash and blow-dry services.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">💅</div><h3>Nails</h3><p>A place to describe nail services.</p><div class="price">Price: add yours</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <span class="tag fade">Hours</span>
+    <h2 class="fade">Open <em>7 days</em></h2>
+    <table class="fade" id="hoursTable">
+      <tr><td>Monday</td><td>10:00 AM – 6:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+      <tr><td>Sunday</td><td>9:00 AM – 6:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="stripes"></div>
+  <div class="wrap">
+    <span class="tag fade">Reviews</span>
+    <h2 class="fade">Google <em>rating</em></h2>
+    <div class="rate fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="sub">based on 588 Google reviews</div>
+      </div>
+    </div>
+    <a class="btn primary fade" href="https://maps.google.com/?cid=8835951841752490697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 588 reviews on Google</a>
+
+    <div class="rowlabel fade">
+      <h3>Top reviews</h3>
+      <div class="notice">Example layout - your best reviews show here</div>
+    </div>
+    <div class="cards">
+      <div class="rcard fade"><div class="exrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="exrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="exrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="exrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+      <div class="rcard fade"><div class="exrow"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="tag fade">Contact</span>
+    <h2 class="fade">Find the <em>salon</em></h2>
+    <div class="cgrid">
+      <div class="cbox fade"><h3>📍 Address</h3><p style="font-size:1.2rem">David Rios Salon &amp; Spa<br>1519 Wisconsin Ave NW<br>Washington, DC 20007, USA</p></div>
+      <div class="cbox fade"><h3>📞 Phone</h3><a class="link" href="tel:+12025252613">(202) 525-2613</a></div>
+      <div class="cbox fade"><h3>🧭 Directions</h3><p>Open the location in Google Maps.</p><a class="btn primary" href="https://maps.google.com/?cid=8835951841752490697&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="tag" style="background:#111;color:var(--acid)">Demo</span>
+    <h2>Book an appointment</h2>
+    <form id="bookForm" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="off"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn primary" id="bookBtn">Request appointment</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>David Rios Salon &amp; Spa</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+12025252613">📞 Call</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+document.getElementById('bookBtn').addEventListener('click',()=>{
+  const m=document.getElementById('msg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.style.display='block';
+});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+// highlight today's row
+const rows=document.querySelectorAll('#hoursTable tr');
+const d=(new Date().getDay()+6)%7;
+if(rows[d])rows[d].classList.add('today');
+</script>
+</body>
+</html>
