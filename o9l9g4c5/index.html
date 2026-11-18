@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro Nails - Sample Homepage Concept</title>
+<style>
+:root{
+  --green:#0f3d2e;
+  --green2:#1b5e46;
+  --deep:#0a2a20;
+  --cream:#f6efdc;
+  --cream2:#efe5c8;
+  --brass:#b8893a;
+  --brass2:#d9ae5c;
+  --ink:#1c2a24;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--ink);line-height:1.6;font-size:17px;padding-bottom:64px}
+h1,h2,h3,.slab{font-family:Rockwell,"Roboto Slab","Courier New",Georgia,serif;font-weight:800;letter-spacing:.2px}
+a{color:inherit}
+.sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.banner{background:var(--deep);color:var(--brass2);text-align:center;font:600 13px/1.4 system-ui,sans-serif;padding:8px 12px}
+nav{position:sticky;top:0;z-index:50;background:var(--green);border-bottom:3px solid var(--brass);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:Rockwell,"Roboto Slab",Georgia,serif;font-weight:800;color:var(--cream);text-decoration:none;font-size:20px}
+.logo span{color:var(--brass2)}
+.links{display:flex;gap:6px}
+.links a{color:var(--cream);text-decoration:none;font:600 15px system-ui,sans-serif;padding:8px 14px;border-radius:4px;transition:.2s}
+.links a:hover{background:var(--brass);color:var(--deep)}
+.burger{display:none;background:var(--brass);border:0;color:var(--deep);font:700 15px system-ui,sans-serif;padding:8px 14px;border-radius:4px;cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--green);flex-direction:column;padding:10px 18px 16px;border-bottom:3px solid var(--brass)}
+  .links.open{display:flex}
+  .links a{padding:12px}
+}
+section{padding:80px 18px}
+.wrap{max-width:1100px;margin:auto}
+.stripes{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 2px,transparent 2px 14px)}
+.hero{background:linear-gradient(135deg,var(--deep),var(--green) 60%,var(--green2));color:var(--cream);padding:90px 18px 100px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:40px solid rgba(184,137,58,.18)}
+.hero .wrap{position:relative;z-index:1;display:grid;gap:36px;grid-template-columns:1.4fr 1fr;align-items:center}
+.eyebrow{font:700 13px system-ui,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--brass2);margin-bottom:14px}
+.hero h1{font-size:clamp(46px,9vw,92px);line-height:1;margin-bottom:18px}
+.hero p.tag{font-size:20px;max-width:520px;color:var(--cream2);margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font:700 17px system-ui,sans-serif;padding:15px 28px;border-radius:4px;border:2px solid var(--brass);cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+.btn.primary{background:var(--brass);color:var(--deep)}
+.btn.ghost{background:transparent;color:var(--cream)}
+.frame{border:3px solid var(--brass);outline:1px solid var(--brass);outline-offset:8px;padding:32px 22px;text-align:center;background:rgba(0,0,0,.18);max-width:320px;justify-self:center}
+.frame .big{font:800 64px Rockwell,"Roboto Slab",Georgia,serif;color:var(--brass2);line-height:1}
+.stars{color:var(--brass2);letter-spacing:4px;font-size:24px;margin:6px 0}
+.frame small{font:600 14px system-ui,sans-serif;color:var(--cream2)}
+@media(max-width:800px){.hero .wrap{grid-template-columns:1fr}.frame{justify-self:start}}
+h2{font-size:clamp(32px,5vw,48px);color:var(--green);margin-bottom:10px}
+h2::after{content:"";display:block;width:70px;height:4px;background:var(--brass);margin-top:12px}
+.lead{margin:16px 0 30px;max-width:640px}
+.label{display:inline-block;background:var(--brass);color:var(--deep);font:700 13px system-ui,sans-serif;padding:6px 12px;border-radius:3px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fffaf0;border:2px solid var(--green);border-radius:6px;padding:26px;position:relative;transition:.25s;box-shadow:6px 6px 0 var(--brass)}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--brass)}
+.card .ico{font-size:38px;margin-bottom:8px}
+.card h3{color:var(--green);font-size:22px;margin-bottom:6px}
+.card .price{font:700 14px system-ui,sans-serif;color:var(--brass);margin:10px 0}
+.card .label{font-size:12px;margin-top:6px}
+.dark{background:var(--green);color:var(--cream)}
+.dark h2{color:var(--cream)}
+table{width:100%;max-width:640px;border-collapse:collapse;background:#fffaf0;color:var(--ink);border:3px solid var(--brass);border-radius:6px;overflow:hidden}
+td{padding:14px 20px;border-bottom:1px solid var(--cream2);font:600 16px system-ui,sans-serif}
+tr:last-child td{border-bottom:0}
+td:first-child{color:var(--green);font-family:Rockwell,Georgia,serif;font-weight:800}
+tr:nth-child(odd){background:#f6efdc}
+.rate{display:flex;flex-wrap:wrap;align-items:center;gap:28px;margin:24px 0 36px}
+.rate .num{font:800 96px/1 Rockwell,Georgia,serif;color:var(--green)}
+.rate .stars{font-size:32px;color:var(--brass)}
+.row-label{margin:34px 0 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.row-label h3{font-size:28px;color:var(--green)}
+.rv{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rv .card{box-shadow:4px 4px 0 var(--brass);padding:20px}
+.rv .badge{display:block;margin-bottom:10px}
+.rv .badge span{display:inline-block;background:var(--green);color:var(--cream);font:700 12px system-ui,sans-serif;padding:4px 10px;border-radius:3px}
+.rv .stars{margin:0 0 10px;font-size:20px;color:var(--brass)}
+.rv p{color:#5a6a62;font-style:italic}
+.rv .nm{font:700 14px system-ui,sans-serif;margin-top:10px;color:var(--green)}
+.contact{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.contact .card h3{margin-bottom:8px}
+.contact a.lnk{color:var(--green);font-weight:700}
+form{background:#fffaf0;border:3px solid var(--green);border-radius:6px;padding:28px;max-width:640px;box-shadow:8px 8px 0 var(--brass);display:grid;gap:16px}
+label{font:700 14px system-ui,sans-serif;color:var(--green);display:grid;gap:6px}
+input,textarea{font:16px system-ui,sans-serif;padding:12px;border:2px solid var(--green2);border-radius:4px;background:#fff;width:100%}
+input:focus,textarea:focus{outline:3px solid var(--brass2)}
+.msg{display:none;background:var(--green);color:var(--cream);padding:12px 16px;border-radius:4px;font:700 15px system-ui,sans-serif;border-left:6px solid var(--brass2)}
+.note{font:14px system-ui,sans-serif;color:#4a5a52;margin-top:14px;max-width:640px}
+footer{background:var(--deep);color:var(--cream2);text-align:center;padding:36px 18px;font:15px system-ui,sans-serif}
+footer b{display:block;font:800 22px Rockwell,Georgia,serif;color:var(--brass2);margin-bottom:6px}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--brass);color:var(--deep);text-align:center;font:800 18px system-ui,sans-serif;padding:16px;text-decoration:none;border-top:3px solid var(--deep)}
+@media(max-width:760px){.callbar{display:block}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Pro Nails. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">🌿 Pro <span>Nails</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="links">☰ Menu</button>
+    <div class="links" id="links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero stripes" id="home">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Nail salon · Raleigh, NC</div>
+      <h1>Pro Nails</h1>
+      <p class="tag">Polished looks and a relaxed visit, crafted with care.</p>
+      <div class="btns">
+        <a class="btn primary" href="#book">Book Now</a>
+        <a class="btn ghost" href="tel:+19198726193">📞 Call (919) 872-6193</a>
+      </div>
+    </div>
+    <div class="frame">
+      <div class="big">4.8</div>
+      <div class="stars">★★★★★</div>
+      <small>Google rating · 985 reviews</small>
+    </div>
+  </div>
+</header>
+
+<section id="services" class="stripes">
+  <div class="wrap">
+    <h2 class="fade">Services</h2>
+    <span class="label fade">Example layout - the owner's real services and prices go here</span>
+    <p class="lead fade">A sample of how a service menu could look on this page.</p>
+    <div class="grid">
+      <div class="card fade"><div class="ico">💅</div><h3>Manicure</h3><p>A classic nail care service description goes here.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🦶</div><h3>Pedicure</h3><p>A relaxing foot care service description goes here.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Gel Polish</h3><p>A long-lasting color service description goes here.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🌸</div><h3>Nail Art</h3><p>A custom design service description goes here.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">💎</div><h3>Acrylic Full Set</h3><p>An extensions service description goes here.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ico">🍃</div><h3>Polish Change</h3><p>A quick color refresh description goes here.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="dark stripes">
+  <div class="wrap">
+    <h2 class="fade">Hours</h2>
+    <p class="lead fade">Opening hours as listed for Pro Nails.</p>
+    <table class="fade">
+      <tr><td>Monday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Friday</td><td>9:30 AM – 7:00 PM</td></tr>
+      <tr><td>Saturday</td><td>9:30 AM – 6:00 PM</td></tr>
+      <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="fade">Reviews</h2>
+    <div class="rate fade">
+      <div class="num">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="sans"><b>based on 985 Google reviews</b></div>
+      </div>
+      <a class="btn primary" href="https://maps.google.com/?cid=1178860129014332387&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 985 reviews on Google</a>
+    </div>
+    <div class="row-label fade">
+      <h3>Top reviews</h3>
+      <span class="label">Example layout - your best reviews show here</span>
+    </div>
+    <div class="rv">
+      <div class="card fade"><span class="badge"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card fade"><span class="badge"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card fade"><span class="badge"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card fade"><span class="badge"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="card fade"><span class="badge"><span>Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="dark stripes">
+  <div class="wrap">
+    <h2 class="fade">Contact</h2>
+    <div class="contact" style="margin-top:30px">
+      <div class="card fade" style="color:var(--ink)"><h3>📍 Address</h3><p>Pro Nails<br>4721 Atlantic Ave Ste 115<br>Raleigh, NC 27604, USA</p></div>
+      <div class="card fade" style="color:var(--ink)"><h3>📞 Phone</h3><p><a class="lnk" href="tel:+19198726193">(919) 872-6193</a></p></div>
+      <div class="card fade" style="color:var(--ink)"><h3>🧭 Directions</h3><p style="margin-bottom:14px">Find the way to the salon.</p><a class="btn primary" href="https://maps.google.com/?cid=1178860129014332387&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book" class="stripes">
+  <div class="wrap">
+    <h2 class="fade">Book an appointment</h2>
+    <p class="lead fade">Choose a preferred day and time below.</p>
+    <form class="fade" id="bookForm" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <label>Preferred day<input type="date" name="day"></label>
+      <label>Preferred time<input type="time" name="time"></label>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn primary" id="bookBtn">Request appointment</button>
+      <div class="msg" id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <b>Pro Nails</b>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+19198726193">📞 Call</a>
+
+<script>
+var burger=document.getElementById('burger'),links=document.getElementById('links');
+burger.addEventListener('click',function(){
+  var o=links.classList.toggle('open');
+  burger.setAttribute('aria-expanded',o);
+});
+links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');burger.setAttribute('aria-expanded','false')})});
+document.getElementById('bookBtn').addEventListener('click',function(){
+  document.getElementById('msg').style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('show')})}
+</script>
+</body>
+</html>
