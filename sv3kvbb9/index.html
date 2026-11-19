@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: STREET INK -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inizio Hair Salon - Sample Homepage Concept</title>
+<style>
+:root{
+  --bg:#141517;
+  --bg2:#1d1f22;
+  --bg3:#26292d;
+  --acid:#c6ff1a;
+  --text:#f2f3f0;
+  --muted:#b4b8b0;
+  --line:#34383d;
+  --display:"Arial Narrow","Franklin Gothic Condensed","Haettenschweiler","Impact","Oswald",system-ui,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;font-size:17px;overflow-x:hidden;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.02em;line-height:.95;font-weight:900}
+.banner{background:var(--acid);color:#111;text-align:center;font-size:13px;font-weight:700;padding:7px 12px}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(20,21,23,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--acid)}
+.nav-in{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font-family:var(--display);font-weight:900;font-size:22px;text-transform:uppercase;text-decoration:none;letter-spacing:.04em}
+.logo span{color:var(--acid)}
+.menu{display:none;list-style:none;gap:6px}
+.menu a{display:block;text-decoration:none;font-family:var(--display);text-transform:uppercase;font-weight:800;letter-spacing:.06em;padding:8px 14px;font-size:17px;transition:.2s}
+.menu a:hover{background:var(--acid);color:#111;transform:skewX(-8deg)}
+.burger{background:var(--acid);color:#111;border:0;font-family:var(--display);font-weight:900;text-transform:uppercase;padding:9px 16px;font-size:16px;cursor:pointer;letter-spacing:.06em;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:2px solid var(--acid);padding:10px 20px 16px}
+@media(min-width:820px){.menu{display:flex}.burger{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+/* HERO */
+section{position:relative}
+.hero{min-height:88vh;display:flex;align-items:center;overflow:hidden;background:
+ repeating-linear-gradient(115deg,transparent 0 38px,rgba(198,255,26,.05) 38px 42px),
+ linear-gradient(160deg,#141517 40%,#1e2210);padding:60px 20px 80px}
+.hero::after{content:"";position:absolute;right:-10%;bottom:-20%;width:60%;height:70%;background:var(--acid);transform:skewY(-12deg);opacity:.9;z-index:0}
+.hero-in{max-width:1200px;margin:auto;position:relative;z-index:2;width:100%}
+.outline{font-size:clamp(70px,22vw,260px);color:transparent;-webkit-text-stroke:2px var(--acid);line-height:.82;display:block;margin-bottom:6px;user-select:none}
+.hero h1{font-size:clamp(46px,11vw,128px);margin-bottom:18px;text-shadow:4px 4px 0 #000}
+.hero h1 em{font-style:normal;color:var(--acid)}
+.tag{font-size:clamp(18px,3vw,24px);max-width:520px;margin-bottom:22px;font-weight:600;background:rgba(20,21,23,.8);padding:6px 10px 6px 0}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#000;border:2px solid var(--acid);padding:8px 16px;margin-bottom:26px;font-weight:800;transform:rotate(-2deg)}
+.badge .st{color:var(--acid);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font-family:var(--display);font-weight:900;text-transform:uppercase;letter-spacing:.07em;font-size:20px;padding:15px 30px;border:3px solid var(--acid);cursor:pointer;transition:.2s;clip-path:polygon(4% 0,100% 0,96% 100%,0 100%);background:none;color:var(--text)}
+.btn.pri{background:var(--acid);color:#111}
+.btn.dark{background:#000;border-color:#000;color:var(--acid)}
+.btn:hover{transform:translateY(-4px)}
+.btn.pri:hover{box-shadow:0 8px 0 #000}
+/* SECTIONS */
+.sec{padding:90px 20px}
+.wrap{max-width:1200px;margin:auto}
+.sec h2{font-size:clamp(44px,8vw,88px);margin-bottom:14px}
+.sec h2::after{content:"";display:block;width:90px;height:8px;background:var(--acid);margin-top:14px;transform:skewX(-30deg)}
+.kicker{font-family:var(--display);color:var(--acid);letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin-bottom:6px}
+.stripe{height:26px;background:repeating-linear-gradient(115deg,var(--acid) 0 16px,#141517 16px 32px)}
+.example{display:inline-block;background:transparent;border:2px dashed var(--acid);color:var(--acid);padding:6px 12px;font-weight:800;font-size:14px;margin:8px 0 28px}
+/* SERVICES */
+#services{background:var(--bg2)}
+.grid{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.grid.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--bg3);border-left:6px solid var(--acid);padding:26px;transition:.25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:8px 8px 0 var(--acid)}
+.card .ico{font-size:40px;margin-bottom:10px}
+.card h3{font-size:30px;margin-bottom:8px}
+.card .ex{display:block;font-size:12.5px;font-weight:800;color:var(--acid);border:1px dashed var(--acid);padding:4px 8px;margin-bottom:12px}
+.card p{color:var(--muted);margin-bottom:10px}
+.card .price{font-weight:800;color:var(--text)}
+/* HOURS */
+.hours-grid{display:grid;gap:30px;align-items:center}
+@media(min-width:860px){.hours-grid{grid-template-columns:1.2fr 1fr}}
+table{width:100%;border-collapse:collapse;background:var(--bg2);border:2px solid var(--line)}
+td{padding:15px 20px;border-bottom:1px solid var(--line);font-size:18px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:var(--display);text-transform:uppercase;font-weight:800;letter-spacing:.05em;color:var(--acid);font-size:20px;width:42%}
+tr:hover td{background:var(--bg3)}
+.big-clock{font-size:90px;text-align:center;background:var(--acid);color:#111;padding:40px 20px;transform:rotate(2deg);font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:1}
+.big-clock small{display:block;font-size:24px;margin-top:10px}
+/* REVIEWS */
+#reviews{background:var(--bg2)}
+.rating-box{display:flex;flex-wrap:wrap;gap:28px;align-items:center;margin-bottom:30px}
+.score{font-family:var(--display);font-weight:900;font-size:clamp(110px,24vw,200px);line-height:.85;color:var(--acid)}
+.stars{color:var(--acid);font-size:34px;letter-spacing:4px}
+.rcards{display:grid;gap:18px;grid-template-columns:1fr}
+@media(min-width:620px){.rcards{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.rcards{grid-template-columns:repeat(5,1fr)}}
+.rc{background:var(--bg3);padding:20px;border-top:5px solid var(--acid);transition:.25s}
+.rc:hover{transform:translateY(-6px)}
+.rc .tagrow{display:block;margin-bottom:12px}
+.rc .tagrow span{display:inline-block;background:var(--acid);color:#111;font-weight:800;font-size:12px;text-transform:uppercase;padding:3px 10px}
+.rc .stars{font-size:22px;letter-spacing:2px;display:block;margin-bottom:10px;line-height:1.2}
+.rc p{color:var(--muted);margin-bottom:10px;font-style:italic}
+.rc b{font-family:var(--display);text-transform:uppercase;letter-spacing:.05em}
+h3.top{font-size:36px;margin:40px 0 6px}
+/* CONTACT */
+.contact-grid{display:grid;gap:20px}
+@media(min-width:800px){.contact-grid{grid-template-columns:repeat(3,1fr)}}
+.cbox{background:var(--bg2);border:2px solid var(--line);padding:28px;transition:.25s}
+.cbox:hover{border-color:var(--acid);transform:translateY(-5px)}
+.cbox .ico{font-size:36px}
+.cbox h3{font-size:26px;color:var(--acid);margin:8px 0}
+.cbox a{font-weight:700}
+/* BOOKING */
+#book{background:var(--acid);color:#111;overflow:hidden}
+#book h2::after{background:#111}
+#book .kicker{color:#111}
+form{display:grid;gap:16px;max-width:680px;background:#141517;color:var(--text);padding:30px;transform:rotate(-.6deg);box-shadow:10px 10px 0 #000}
+label{display:block;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-weight:800;font-size:17px;margin-bottom:4px;color:var(--acid)}
+input,textarea{width:100%;padding:13px;background:var(--bg3);border:2px solid var(--line);color:var(--text);font:inherit;border-radius:0}
+input:focus,textarea:focus{outline:none;border-color:var(--acid)}
+.row2{display:grid;gap:16px}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:#000;color:var(--acid);border:2px solid var(--acid);padding:14px;font-weight:800}
+.note{margin-top:20px;font-weight:700;font-size:15px}
+/* FOOTER */
+footer{background:#000;padding:40px 20px;text-align:center;border-top:6px solid var(--acid)}
+footer h3{font-size:34px;color:var(--acid);margin-bottom:8px}
+footer p{color:var(--muted);font-size:14px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--acid);color:#111;text-align:center;padding:16px;font-family:var(--display);font-weight:900;font-size:22px;text-transform:uppercase;letter-spacing:.1em;text-decoration:none;display:block;border-top:3px solid #000}
+/* anim */
+.fade{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Inizio Hair Salon. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">Inizio<span>.</span></a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-in">
+    <span class="outline" aria-hidden="true">HAIR</span>
+    <h1>Inizio <em>Hair</em> Salon</h1>
+    <p class="tag">Fresh cuts. Bold color. Your style, sharpened.</p>
+    <div class="badge"><span class="st">★★★★★</span> 4.9 · 323 Google reviews</div>
+    <div class="btns">
+      <a href="#book" class="btn pri">Book Now</a>
+      <a href="tel:+12028089287" class="btn dark">📞 (202) 808-9287</a>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<section class="sec" id="services">
+  <div class="wrap">
+    <p class="kicker">What's on the menu</p>
+    <h2>Services</h2>
+    <span class="example">Example layout - the owner's real services and prices go here</span>
+    <div class="grid g3">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A placeholder for a cut and finish description.</p><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Color</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A placeholder for color service details.</p><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Highlights</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A placeholder for highlight and balayage details.</p><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">💧</div><h3>Treatments</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A placeholder for conditioning and care treatments.</p><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">💨</div><h3>Blowout</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A placeholder for wash and blow-dry details.</p><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Styling</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A placeholder for event and updo styling.</p><p class="price">Price: add yours</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="hours">
+  <div class="wrap">
+    <p class="kicker">Come through</p>
+    <h2>Hours</h2>
+    <div class="hours-grid">
+      <table class="fade">
+        <tr><td>Monday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>10:00 AM – 6:00 PM</td></tr>
+        <tr><td>Sunday</td><td>10:00 AM – 4:00 PM</td></tr>
+      </table>
+      <div class="big-clock fade">🕙<small>Open 7 days a week</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="reviews">
+  <div class="wrap">
+    <p class="kicker">Word on the street</p>
+    <h2>Reviews</h2>
+    <div class="rating-box fade">
+      <div class="score">4.9</div>
+      <div>
+        <div class="stars" aria-label="4.9 out of 5 stars">★★★★★</div>
+        <p style="font-size:20px;font-weight:700;margin:6px 0 16px">based on 323 Google reviews</p>
+        <a class="btn pri" target="_blank" rel="noopener" href="https://maps.google.com/?cid=2607193877396313183&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 323 reviews on Google</a>
+      </div>
+    </div>
+    <h3 class="top">Top reviews</h3>
+    <span class="example">Example layout - your best reviews show here</span>
+    <div class="rcards">
+      <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><span class="tagrow"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <p class="kicker">Find the chair</p>
+    <h2>Contact</h2>
+    <div class="contact-grid">
+      <div class="cbox fade"><div class="ico">📍</div><h3>Address</h3><p>641 Florida Ave NW<br>Washington, DC 20001, USA</p></div>
+      <div class="cbox fade"><div class="ico">📞</div><h3>Phone</h3><p><a href="tel:+12028089287">(202) 808-9287</a></p></div>
+      <div class="cbox fade"><div class="ico">🧭</div><h3>Directions</h3><p><a target="_blank" rel="noopener" href="https://maps.google.com/?cid=2607193877396313183&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="book">
+  <div class="wrap">
+    <p class="kicker">Lock in your spot</p>
+    <h2>Book an appointment</h2>
+    <form id="bookForm" onsubmit="return false">
+      <div class="row2">
+        <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+      </div>
+      <div class="row2">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. 2:00 PM"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn pri" id="sendBtn">Request Appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <h3>Inizio Hair Salon</h3>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+12028089287">📞 Call</a>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded',false)})});
+document.getElementById('sendBtn').addEventListener('click',function(){document.getElementById('msg').style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
