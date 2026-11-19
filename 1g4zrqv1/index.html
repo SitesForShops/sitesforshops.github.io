@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noire Nail and Lash Bar – Sample Homepage Concept</title>
+<style>
+:root{--coral:#ff5a4d;--ink:#0d0d0d;--mute:#5c5c5c;--rule:#d9d9d9;--bg:#fff;--soft:#f6f4f2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--ink);color:#fff;font-size:.78rem;text-align:center;padding:8px 12px;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--ink)}
+.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem;text-decoration:none}
+.logo span{color:var(--coral)}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{text-decoration:none;font-size:.9rem;font-weight:600;padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{border-color:var(--coral)}
+.menu-btn{display:none;background:none;border:1px solid var(--ink);padding:8px 14px;font-weight:700;font-size:.85rem;cursor:pointer;font-family:inherit}
+@media(max-width:760px){
+.menu-btn{display:block}
+nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--ink);display:none}
+nav.open{display:block}
+nav ul{flex-direction:column;gap:0}
+nav a{display:block;padding:16px 20px;border-bottom:1px solid var(--rule)}
+}
+section{padding:96px 20px}
+.wrap{max-width:1100px;margin:auto}
+.eyebrow{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);font-weight:800;margin-bottom:16px}
+h2{font-size:clamp(2.4rem,8vw,5rem);line-height:1;letter-spacing:-.035em;font-weight:900;margin-bottom:24px}
+.rule{border:0;border-top:1px solid var(--ink);margin:0 0 40px}
+#home{padding:72px 20px 96px}
+h1{font-size:clamp(3rem,13vw,9rem);line-height:.92;letter-spacing:-.05em;font-weight:900;margin:12px 0 28px}
+h1 em{font-style:normal;color:var(--coral)}
+.tag{font-size:clamp(1.1rem,3vw,1.5rem);max-width:560px;color:var(--mute);margin-bottom:32px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:10px 18px;border-radius:99px;font-weight:700;margin-bottom:32px;font-size:.95rem}
+.badge .st{color:var(--coral);letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:16px 30px;font-weight:800;text-decoration:none;border:2px solid var(--ink);font-size:1rem;cursor:pointer;font-family:inherit;transition:.2s;background:#fff;color:var(--ink)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 rgba(13,13,13,.12)}
+.btn.primary{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.heroart{display:flex;gap:10px;margin-top:64px;border-top:1px solid var(--ink);padding-top:18px;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;justify-content:space-between;flex-wrap:wrap}
+.label{display:inline-block;background:var(--soft);border:1px dashed var(--coral);color:var(--ink);font-size:.78rem;font-weight:700;padding:6px 12px;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.card{padding:30px 26px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);transition:.25s;background:#fff}
+.card:hover{transform:translateY(-6px);background:var(--soft);box-shadow:0 12px 24px rgba(0,0,0,.08)}
+.card .ic{font-size:2.2rem;margin-bottom:14px}
+.card h3{font-size:1.4rem;letter-spacing:-.02em;margin-bottom:8px}
+.card p{color:var(--mute);font-size:.95rem;margin-bottom:12px}
+.card .pr{font-weight:800;color:var(--coral);margin-bottom:12px}
+.card .label{margin:0;font-size:.7rem}
+#hours{background:var(--soft)}
+table{width:100%;max-width:720px;border-collapse:collapse;font-size:1.1rem}
+td{padding:18px 4px;border-bottom:1px solid var(--ink)}
+tr:first-child td{border-top:1px solid var(--ink)}
+td:last-child{text-align:right;font-weight:700}
+.rate{display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px;margin-bottom:32px}
+.big{font-size:clamp(5rem,20vw,11rem);line-height:.8;font-weight:900;letter-spacing:-.06em}
+.stars{color:var(--coral);font-size:2rem;letter-spacing:4px}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+.rc{border:1px solid var(--ink);padding:20px;background:#fff;transition:.25s}
+.rc:hover{transform:translateY(-5px);box-shadow:0 10px 20px rgba(0,0,0,.08)}
+.ex{display:block;margin-bottom:12px}
+.ex span{display:inline-block;background:var(--ink);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px}
+.rc .stars{font-size:1.2rem;letter-spacing:2px;margin-bottom:10px}
+.rc p{color:var(--mute);margin-bottom:12px;font-size:.95rem}
+.rc b{font-size:.9rem}
+h3.top{font-size:1.6rem;margin:48px 0 8px;letter-spacing:-.02em}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px}
+.contact h3{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:8px}
+.contact p{font-size:1.4rem;font-weight:700;line-height:1.3;margin-bottom:24px}
+#book{background:var(--ink);color:#fff}
+#book .rule{border-color:#fff}
+form{max-width:640px;display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:700;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase}
+input,textarea{font:inherit;padding:14px;border:1px solid #fff;background:transparent;color:#fff;border-radius:0;font-size:1rem;text-transform:none;letter-spacing:0}
+input:focus,textarea:focus{outline:2px solid var(--coral)}
+input::-webkit-calendar-picker-indicator{filter:invert(1)}
+#msg{display:none;background:var(--coral);color:#fff;padding:14px;font-weight:700}
+.note{font-size:.85rem;color:#bbb;margin-top:16px;max-width:640px}
+footer{padding:40px 20px;border-top:1px solid var(--ink);text-align:left}
+footer b{font-size:1.2rem;display:block}
+footer p{color:var(--mute);font-size:.9rem}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--coral);color:#fff;text-align:center;padding:18px;font-weight:900;text-decoration:none;letter-spacing:.05em}
+@media(max-width:760px){.callbar{display:block}section{padding:72px 20px}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Noire Nail and Lash Bar. Not their official website.</div>
+<header>
+<div class="nav">
+<a class="logo" href="#home">Noire<span>.</span></a>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav"><ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+</div>
+</header>
+
+<section id="home">
+<div class="wrap">
+<div class="eyebrow">Nails · Lashes · Orlando, FL</div>
+<h1>Noire Nail and Lash Bar<em>.</em></h1>
+<p class="tag">Polished nails and beautiful lashes, all in one place.</p>
+<div class="badge"><span class="st">★★★★★</span> 4.8 · 1,055 Google reviews</div>
+<div class="btns">
+<a class="btn primary" href="#book">Book Now</a>
+<a class="btn dark" href="tel:+14074207276">📞 Call (407) 420-7276</a>
+</div>
+<div class="heroart"><span>💅 Nails</span><span>👁️ Lashes</span><span>✨ Self-care</span></div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap fade">
+<div class="eyebrow">Services</div>
+<h2>Treatments.</h2>
+<hr class="rule">
+<div class="label">Example layout - the owner's real services and prices go here</div>
+<div class="grid">
+<div class="card"><div class="ic">💅</div><h3>Manicure</h3><p>A short description of the service goes here.</p><div class="pr">Price: add yours</div><div class="label">Example layout - the owner's real services and prices go here</div></div>
+<div class="card"><div class="ic">🦶</div><h3>Pedicure</h3><p>A short description of the service goes here.</p><div class="pr">Price: add yours</div><div class="label">Example layout - the owner's real services and prices go here</div></div>
+<div class="card"><div class="ic">✨</div><h3>Gel or Acrylic Nails</h3><p>A short description of the service goes here.</p><div class="pr">Price: add yours</div><div class="label">Example layout - the owner's real services and prices go here</div></div>
+<div class="card"><div class="ic">🎨</div><h3>Nail Art</h3><p>A short description of the service goes here.</p><div class="pr">Price: add yours</div><div class="label">Example layout - the owner's real services and prices go here</div></div>
+<div class="card"><div class="ic">👁️</div><h3>Lash Extensions</h3><p>A short description of the service goes here.</p><div class="pr">Price: add yours</div><div class="label">Example layout - the owner's real services and prices go here</div></div>
+<div class="card"><div class="ic">🌸</div><h3>Lash Lift</h3><p>A short description of the service goes here.</p><div class="pr">Price: add yours</div><div class="label">Example layout - the owner's real services and prices go here</div></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap fade">
+<div class="eyebrow">Hours</div>
+<h2>Opening times.</h2>
+<hr class="rule">
+<table>
+<tr><td>Monday</td><td>9:00 AM – 7:30 PM</td></tr>
+<tr><td>Tuesday</td><td>9:00 AM – 7:30 PM</td></tr>
+<tr><td>Wednesday</td><td>9:00 AM – 7:30 PM</td></tr>
+<tr><td>Thursday</td><td>9:00 AM – 7:30 PM</td></tr>
+<tr><td>Friday</td><td>9:00 AM – 7:30 PM</td></tr>
+<tr><td>Saturday</td><td>9:00 AM – 7:30 PM</td></tr>
+<tr><td>Sunday</td><td>11:00 AM – 6:00 PM</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap fade">
+<div class="eyebrow">Reviews</div>
+<h2>Rated 4.8.</h2>
+<hr class="rule">
+<div class="rate">
+<div class="big">4.8</div>
+<div><div class="stars">★★★★★</div><p style="font-size:1.2rem;font-weight:700">based on 1,055 Google reviews</p></div>
+</div>
+<a class="btn primary" href="https://maps.google.com/?cid=16269095235954258230&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 1,055 reviews on Google</a>
+<h3 class="top">Top reviews</h3>
+<div class="label">Example layout - your best reviews show here</div>
+<div class="rev">
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+<div class="rc"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap fade">
+<div class="eyebrow">Contact</div>
+<h2>Find the bar.</h2>
+<hr class="rule">
+<div class="contact">
+<div><h3>Address</h3><p>2437 S Hiawassee Rd<br>Orlando, FL 32835, USA</p>
+<a class="btn dark" href="https://maps.google.com/?cid=16269095235954258230&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a></div>
+<div><h3>Phone</h3><p><a href="tel:+14074207276" style="text-decoration:none">(407) 420-7276</a></p>
+<a class="btn" href="tel:+14074207276">Tap to call</a></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap fade">
+<div class="eyebrow">Booking</div>
+<h2>Book an appointment</h2>
+<hr class="rule">
+<form id="bf" onsubmit="return false">
+<label>Name<input type="text" name="name" autocomplete="name"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+<label>Preferred day<input type="date" name="day"></label>
+<label>Preferred time<input type="time" name="time"></label>
+<label>Notes<textarea name="notes" rows="4"></textarea></label>
+<button type="button" class="btn primary" id="sub">Request appointment</button>
+<div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+</form>
+<p class="note">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<b>Noire Nail and Lash Bar</b>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</div>
+</footer>
+
+<a class="callbar" href="tel:+14074207276">📞 Call (407) 420-7276</a>
+
+<script>
+var mb=document.getElementById('mb'),nav=document.getElementById('nav');
+mb.addEventListener('click',function(){var o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)})});
+document.getElementById('sub').addEventListener('click',function(){document.getElementById('msg').style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('in')})}
+</script>
+</body>
+</html>
