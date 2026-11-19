@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: STREET INK -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Educe Salon – Sample Homepage Concept</title>
+<style>
+:root{--bg:#141414;--bg2:#1d1d1d;--bg3:#262626;--acid:#c6ff00;--txt:#f4f4f0;--mute:#b5b5ae;--line:#383838;--display:Impact,"Haettenschweiler","Arial Narrow Bold","Franklin Gothic Condensed","Arial Narrow",sans-serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--body);background:var(--bg);color:var(--txt);line-height:1.6;padding-bottom:64px;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+.banner{background:var(--acid);color:#111;text-align:center;font-size:.78rem;font-weight:700;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(20,20,20,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--acid)}
+.nav-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:var(--display);font-size:1.5rem;text-transform:uppercase;text-decoration:none;letter-spacing:.04em}
+.logo span{color:var(--acid)}
+.links{display:flex;gap:22px;list-style:none}
+.links a{text-decoration:none;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:1.05rem;color:var(--mute);transition:color .2s}
+.links a:hover{color:var(--acid)}
+.burger{display:none;background:var(--acid);color:#111;border:0;font-family:var(--display);font-size:1rem;letter-spacing:.06em;padding:8px 14px;cursor:pointer;text-transform:uppercase;clip-path:polygon(8% 0,100% 0,92% 100%,0 100%)}
+@media(max-width:760px){
+.burger{display:block}
+.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;border-bottom:2px solid var(--acid)}
+.links.open{display:flex}
+.links a{display:block;padding:15px 22px;border-top:1px solid var(--line);font-size:1.3rem}
+}
+section{position:relative;padding:84px 18px}
+.wrap{max-width:1100px;margin:0 auto;position:relative}
+.stripes{position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(198,255,0,.05) 38px 52px);pointer-events:none}
+#home{padding:60px 18px 90px;background:radial-gradient(circle at 85% 20%,rgba(198,255,0,.16),transparent 45%),var(--bg);overflow:hidden}
+.outline{font-family:var(--display);text-transform:uppercase;font-size:clamp(4.2rem,22vw,13rem);line-height:.85;color:transparent;-webkit-text-stroke:2px var(--acid);letter-spacing:.01em}
+.solid{font-family:var(--display);text-transform:uppercase;font-size:clamp(3rem,13vw,8rem);line-height:.9;color:var(--txt);margin-top:-.1em}
+.solid em{font-style:normal;color:var(--acid)}
+.tag{font-size:1.2rem;color:var(--mute);max-width:520px;margin:22px 0}
+.badge{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--acid);padding:8px 16px;margin-bottom:6px;font-weight:700;background:rgba(198,255,0,.08);transform:skew(-8deg)}
+.badge>*{transform:skew(8deg)}
+.badge .st{color:var(--acid)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:1.3rem;padding:15px 30px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s;clip-path:polygon(5% 0,100% 0,95% 100%,0 100%)}
+.btn:hover{transform:translateY(-4px)}
+.btn.p{background:var(--acid);color:#111}
+.btn.s{background:var(--txt);color:#111}
+.bar{position:absolute;right:-60px;top:80px;width:240px;height:600px;background:var(--acid);opacity:.9;transform:rotate(22deg);z-index:0}
+#home .wrap{z-index:1}
+h2{font-size:clamp(2.6rem,9vw,5rem);margin-bottom:12px}
+h2 b{font-weight:400;color:var(--acid)}
+.lead{color:var(--mute);margin-bottom:34px;max-width:620px}
+.ex{display:inline-block;background:var(--acid);color:#111;font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;padding:5px 10px;margin-bottom:16px}
+#services{background:var(--bg2)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--bg3);border:1px solid var(--line);border-left:6px solid var(--acid);padding:24px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--acid)}
+.card .ic{font-size:2.2rem}
+.card h3{font-size:1.8rem;margin:10px 0 8px}
+.card p{color:var(--mute);font-size:.95rem;margin-bottom:12px}
+.card .ex{font-size:.68rem;margin:0 0 10px}
+.price{font-weight:700;color:var(--acid)}
+#hours{background:var(--bg)}
+table{width:100%;max-width:640px;border-collapse:collapse;background:var(--bg2)}
+td{padding:15px 18px;border-bottom:1px solid var(--line);font-size:1.05rem}
+td:first-child{font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;font-size:1.25rem;color:var(--acid);width:42%}
+tr.closed td:last-child{color:var(--mute)}
+tr:hover td{background:var(--bg3)}
+#reviews{background:var(--bg2)}
+.big{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin-bottom:28px}
+.num{font-family:var(--display);font-size:clamp(6rem,24vw,10rem);line-height:.85;color:var(--acid)}
+.stars{color:var(--acid);letter-spacing:3px;font-size:1.7rem}
+.rcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:10px}
+.rc{background:var(--bg3);border:1px dashed #5a5a5a;padding:18px;display:flex;flex-direction:column;gap:8px;transition:transform .25s}
+.rc:hover{transform:translateY(-5px)}
+.rc .row{display:block}
+.rc .tagx{display:inline-block;background:var(--txt);color:#111;font-size:.7rem;font-weight:800;text-transform:uppercase;padding:3px 9px}
+.rc .stars{font-size:1.2rem}
+.rc p{color:var(--mute);font-style:italic}
+.rc strong{font-size:.9rem}
+h3.tt{font-size:2rem;margin-top:44px}
+#contact{background:var(--bg)}
+.cgrid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cbox{background:var(--bg2);padding:28px;border-top:6px solid var(--acid)}
+.cbox h3{font-size:1.5rem;color:var(--acid);margin-bottom:8px}
+.cbox p{font-size:1.15rem;margin-bottom:14px}
+#book{background:var(--acid);color:#111}
+#book h2 b{color:#111;-webkit-text-stroke:0}
+#book .lead{color:#2a2a2a}
+form{display:grid;gap:14px;max-width:640px}
+label{font-family:var(--display);text-transform:uppercase;letter-spacing:.06em;font-size:1.1rem;display:grid;gap:5px}
+input,textarea{font:inherit;padding:13px;border:3px solid #111;background:#fff;color:#111;border-radius:0}
+input:focus,textarea:focus{outline:3px solid #111;outline-offset:2px}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#book .btn{background:#111;color:var(--acid);justify-self:start}
+#msg{font-weight:800;min-height:1.5em;background:#111;color:var(--acid);padding:0;display:none}
+#msg.show{display:block;padding:12px 16px}
+.note{font-size:.88rem;margin-top:14px;color:#2a2a2a}
+footer{background:#0b0b0b;padding:40px 18px;text-align:center;border-top:4px solid var(--acid)}
+footer h3{font-size:2rem;color:var(--acid);margin-bottom:8px}
+footer p{color:var(--mute);font-size:.9rem}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--acid);color:#111;text-align:center;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:1.4rem;padding:15px;text-decoration:none;border-top:3px solid #111}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Educe Salon. Not their official website.</div>
+<nav>
+<div class="nav-in">
+<a class="logo" href="#home">Educe<span>.</span>Salon</a>
+<button class="burger" id="burger" aria-expanded="false" aria-controls="links">Menu</button>
+<ul class="links" id="links">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<section id="home">
+<div class="bar"></div><div class="stripes"></div>
+<div class="wrap">
+<div class="badge"><span class="st">★</span><span>4.7 on Google · 881 reviews</span></div>
+<div class="outline" aria-hidden="true">Educe</div>
+<h1 class="solid">Educe <em>Salon</em></h1>
+<p class="tag">Hair, style and attitude in Orlando. Sharp looks start with a great chair.</p>
+<div class="btns">
+<a class="btn p" href="#book">Book Now</a>
+<a class="btn s" href="tel:+14074402840">📞 (407) 440-2840</a>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="stripes"></div>
+<div class="wrap">
+<h2 class="fade">Our <b>Services</b></h2>
+<span class="ex">Example layout - the owner's real services and prices go here</span>
+<p class="lead">These cards show how a service menu could look. They are generic placeholders, not a list of what this business offers.</p>
+<div class="grid">
+<div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><p>Placeholder description for a cut and finish service.</p><span class="price">Price: add yours</span></div>
+<div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">🎨</div><h3>Color</h3><p>Placeholder description for a hair color service.</p><span class="price">Price: add yours</span></div>
+<div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">✨</div><h3>Highlights</h3><p>Placeholder description for a highlighting service.</p><span class="price">Price: add yours</span></div>
+<div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">💧</div><h3>Treatments</h3><p>Placeholder description for a conditioning treatment.</p><span class="price">Price: add yours</span></div>
+<div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">💇</div><h3>Blowout</h3><p>Placeholder description for a wash and blowout service.</p><span class="price">Price: add yours</span></div>
+<div class="card fade"><span class="ex">Example layout - the owner's real services and prices go here</span><div class="ic">👰</div><h3>Special Event Styling</h3><p>Placeholder description for an event styling service.</p><span class="price">Price: add yours</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap">
+<h2 class="fade">Opening <b>Hours</b></h2>
+<p class="lead">Open Tuesday through Saturday. Closed Monday and Sunday.</p>
+<table class="fade">
+<tr class="closed"><td>Monday</td><td>Closed</td></tr>
+<tr><td>Tuesday</td><td>8:30 AM – 9:00 PM</td></tr>
+<tr><td>Wednesday</td><td>8:30 AM – 9:00 PM</td></tr>
+<tr><td>Thursday</td><td>8:30 AM – 9:00 PM</td></tr>
+<tr><td>Friday</td><td>8:30 AM – 9:00 PM</td></tr>
+<tr><td>Saturday</td><td>8:30 AM – 9:00 PM</td></tr>
+<tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="stripes"></div>
+<div class="wrap">
+<h2 class="fade">Google <b>Reviews</b></h2>
+<div class="big fade">
+<div class="num">4.7</div>
+<div>
+<div class="stars" aria-label="4.7 out of 5 stars">★★★★★</div>
+<p style="font-size:1.2rem">based on 881 Google reviews</p>
+</div>
+</div>
+<a class="btn p" href="https://maps.google.com/?cid=11077103464691984123&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 881 reviews on Google</a>
+<h3 class="tt">Top reviews</h3>
+<span class="ex" style="margin-top:12px">Example layout - your best reviews show here</span>
+<div class="rcards">
+<div class="rc fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+<div class="rc fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><strong>Customer name</strong></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<h2 class="fade">Get in <b>Touch</b></h2>
+<div class="cgrid">
+<div class="cbox fade"><h3>📍 Address</h3><p>1901 E Colonial Dr<br>Orlando, FL 32803, USA</p><a class="btn s" href="https://maps.google.com/?cid=11077103464691984123&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+<div class="cbox fade"><h3>📞 Phone</h3><p><a href="tel:+14074402840">(407) 440-2840</a></p><a class="btn p" href="tel:+14074402840">Tap to call</a></div>
+</div>
+</div>
+</section>
+
+<section id="book">
+<div class="wrap">
+<h2 class="fade"><b>Book an appointment</b></h2>
+<p class="lead">Pick a day and time that suits you.</p>
+<form id="bform" class="fade" onsubmit="return false">
+<label>Name<input type="text" name="name" autocomplete="off"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+<div class="two">
+<label>Preferred day<input type="text" name="day" placeholder="e.g. Friday"></label>
+<label>Preferred time<input type="text" name="time" placeholder="e.g. 2:00 PM"></label>
+</div>
+<label>Notes<textarea name="notes" rows="4"></textarea></label>
+<button type="button" class="btn" id="sendbtn">Request booking</button>
+<div id="msg" role="status"></div>
+</form>
+<p class="note">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<h3>Educe Salon</h3>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+14074402840">📞 Call</a>
+
+<script>
+var b=document.getElementById('burger'),l=document.getElementById('links');
+b.addEventListener('click',function(){var o=l.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+l.addEventListener('click',function(e){if(e.target.tagName==='A'){l.classList.remove('open');b.setAttribute('aria-expanded',false)}});
+document.getElementById('sendbtn').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.className='show'});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.fade').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
