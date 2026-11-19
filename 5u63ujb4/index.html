@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: WARM SUNSET -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanctuary Salon & Med Spa | Sample Homepage Concept</title>
+<style>
+:root{
+  --terra:#b8512f;
+  --terra-dark:#8a3519;
+  --peach:#f6c3a0;
+  --peach-soft:#fde4d0;
+  --cream:#fff7ee;
+  --ink:#3a1f14;
+  --gold:#e8a23a;
+  --serif:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--ink);color:var(--peach-soft);text-align:center;font-size:.8rem;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,247,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--peach)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:var(--serif);font-weight:700;color:var(--terra-dark);text-decoration:none;font-size:1.1rem}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;padding:8px 14px;border-radius:99px;text-decoration:none;font-weight:600;font-size:.95rem;transition:.2s}
+.menu a:hover{background:var(--peach-soft);color:var(--terra)}
+.burger{display:none;background:var(--terra);color:#fff;border:0;border-radius:10px;padding:9px 14px;font-size:1rem;font-weight:700;cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{position:absolute;left:0;right:0;top:100%;background:var(--cream);flex-direction:column;padding:10px 18px 16px;border-bottom:1px solid var(--peach);display:none}
+  .menu.open{display:flex}
+  .menu a{padding:12px 14px}
+}
+section{padding:80px 20px}
+.wrap{max-width:1100px;margin:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15}
+h2{font-size:clamp(2rem,5vw,3rem);color:var(--terra-dark);text-align:center;margin-bottom:12px}
+.sub{text-align:center;max-width:620px;margin:0 auto 40px;opacity:.85}
+/* hero */
+#home{position:relative;overflow:hidden;text-align:center;padding:60px 20px 90px;background:linear-gradient(180deg,#f3a779 0%,#f8c9a4 40%,var(--cream) 100%)}
+.sun{position:absolute;left:50%;top:-120px;transform:translateX(-50%);width:min(780px,150vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ffe7b8 0%,#ffd08a 35%,rgba(255,190,130,.4) 60%,transparent 70%);z-index:0;animation:glow 6s ease-in-out infinite alternate}
+@keyframes glow{to{transform:translateX(-50%) scale(1.06)}}
+.arch{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:60px 26px 46px;background:rgba(255,247,238,.82);border:3px solid var(--terra);border-radius:320px 320px 28px 28px;box-shadow:0 20px 50px rgba(138,53,25,.25)}
+.arch .eyebrow{letter-spacing:.25em;text-transform:uppercase;font-size:.75rem;color:var(--terra);font-weight:700}
+h1{font-size:clamp(2.4rem,8vw,4.4rem);color:var(--terra-dark);margin:12px 0}
+.tag{font-family:var(--serif);font-style:italic;font-size:1.2rem;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px solid var(--gold);border-radius:99px;padding:8px 18px;font-weight:700;margin-bottom:24px}
+.badge .st{color:var(--gold)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-block;padding:14px 28px;border-radius:99px;font-weight:700;text-decoration:none;border:2px solid var(--terra);cursor:pointer;font-size:1rem;font-family:var(--sans);transition:.25s}
+.btn.primary{background:var(--terra);color:#fff;box-shadow:0 8px 20px rgba(184,81,47,.35)}
+.btn.ghost{background:transparent;color:var(--terra-dark)}
+.btn:hover{transform:translateY(-3px)}
+.btn.ghost:hover{background:var(--peach-soft)}
+/* services */
+#services{background:var(--cream)}
+.example{display:inline-block;background:var(--ink);color:var(--peach-soft);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:8px;letter-spacing:.02em}
+.center{text-align:center;margin-bottom:26px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:22px;padding:28px 24px;border:1px solid var(--peach);box-shadow:0 6px 18px rgba(138,53,25,.08);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 30px rgba(138,53,25,.18)}
+.ico{width:60px;height:60px;border-radius:50% 50% 14px 14px;background:linear-gradient(180deg,var(--peach),var(--peach-soft));display:grid;place-items:center;font-size:1.8rem;margin-bottom:14px}
+.card h3{font-size:1.35rem;color:var(--terra-dark);margin-bottom:6px}
+.card .ex{display:block;margin:12px 0 8px;font-size:.75rem;font-weight:700;color:var(--terra-dark);background:var(--peach-soft);padding:6px 10px;border-radius:8px}
+.price{font-weight:700;color:var(--terra)}
+/* hours */
+#hours{background:linear-gradient(180deg,var(--peach-soft),var(--peach))}
+table{width:100%;max-width:560px;margin:auto;border-collapse:collapse;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(138,53,25,.15)}
+td,th{padding:15px 22px;text-align:left;border-bottom:1px solid var(--peach-soft)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;color:var(--terra-dark)}
+tr.closed td{opacity:.65}
+/* reviews */
+#reviews{background:var(--cream);text-align:center}
+.big{font-family:var(--serif);font-size:clamp(4rem,14vw,7rem);color:var(--terra);line-height:1}
+.stars{color:var(--gold);letter-spacing:4px;font-size:1.6rem}
+.rev-row{margin-top:50px;padding:28px 18px;border:2px dashed var(--terra);border-radius:26px;background:var(--peach-soft)}
+.rev-row h3{font-size:1.7rem;color:var(--terra-dark);margin-bottom:10px}
+.rcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:22px;text-align:left}
+.rcard{background:#fff;border-radius:18px;padding:18px;transition:.3s;border:1px solid var(--peach)}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .eb{display:block;margin-bottom:10px}
+.rcard .eb span{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:99px}
+.rcard .stars{font-size:1.15rem;letter-spacing:2px;display:block;margin-bottom:8px}
+.rcard p{font-size:.95rem;margin-bottom:8px}
+.rcard b{font-size:.9rem;color:var(--terra-dark)}
+/* contact */
+#contact{background:var(--terra-dark);color:var(--cream)}
+#contact h2{color:var(--peach)}
+.cgrid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:900px;margin:auto}
+.cbox{background:rgba(255,255,255,.08);border:1px solid rgba(246,195,160,.4);border-radius:22px;padding:28px;text-align:center}
+.cbox .ci{font-size:2rem}
+.cbox h3{color:var(--peach);margin:6px 0}
+.cbox a{color:#fff;font-weight:700}
+.cbox .btn{margin-top:14px;background:var(--peach);color:var(--terra-dark);border-color:var(--peach)}
+/* booking */
+#book{background:linear-gradient(180deg,var(--peach-soft),var(--cream))}
+form{max-width:560px;margin:auto;background:#fff;border-radius:26px;padding:30px 24px;box-shadow:0 14px 36px rgba(138,53,25,.15);border:1px solid var(--peach)}
+label{display:block;font-weight:700;font-size:.9rem;margin:14px 0 6px;color:var(--terra-dark)}
+input,select,textarea{width:100%;padding:12px 14px;border:2px solid var(--peach);border-radius:12px;font:inherit;background:var(--cream);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--terra)}
+form .btn{width:100%;margin-top:22px}
+#msg{margin-top:16px;text-align:center;font-weight:700;color:var(--terra-dark);min-height:1.5em}
+.note{text-align:center;font-size:.85rem;opacity:.75;margin-top:14px}
+footer{background:var(--ink);color:var(--peach-soft);text-align:center;padding:36px 20px;font-size:.9rem}
+footer strong{font-family:var(--serif);font-size:1.2rem;display:block;margin-bottom:6px;color:var(--peach)}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--terra);color:#fff;text-align:center;padding:16px;font-weight:700;text-decoration:none;font-size:1.1rem;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+@media(max-width:760px){.callbar{display:block}section{padding:64px 18px}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.sun{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Sanctuary Salon &amp; Med Spa. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">☀ Sanctuary Salon &amp; Med Spa</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="sun"></div>
+  <div class="arch">
+    <div class="eyebrow">Orlando, Florida</div>
+    <h1>Sanctuary Salon &amp; Med Spa</h1>
+    <p class="tag">Relax, refresh and feel like yourself.</p>
+    <div class="badge"><span class="st">★★★★★</span> 4.8 · 830 Google reviews</div>
+    <div class="btns">
+      <a class="btn primary" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+14079091011">📞 Call (407) 909-1011</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="fade">Services</h2>
+    <div class="center fade"><span class="example">Example layout - the owner's real services and prices go here</span></div>
+    <p class="sub fade">A sample of how a service menu could look on this page.</p>
+    <div class="grid">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircuts &amp; Styling</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Hair Color</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">💆‍♀️</div><h3>Facials</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">💅</div><h3>Nails</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">🌿</div><h3>Treatments</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Styling</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p class="price">Price: add yours</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <h2 class="fade">Hours</h2>
+    <p class="sub fade">Weekly opening hours.</p>
+    <table class="fade">
+      <tbody>
+        <tr><td>Monday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Thursday</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2 class="fade">Reviews</h2>
+    <div class="big fade">4.8</div>
+    <div class="stars fade">★★★★★</div>
+    <p class="fade" style="margin:8px 0 22px;font-weight:600">based on 830 Google reviews</p>
+    <a class="btn primary" target="_blank" rel="noopener" href="https://maps.google.com/?cid=8748801223111452723&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 830 reviews on Google</a>
+
+    <div class="rev-row fade">
+      <h3>Top reviews</h3>
+      <span class="example">Example layout - your best reviews show here</span>
+      <div class="rcards">
+        <div class="rcard"><span class="eb"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+        <div class="rcard"><span class="eb"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+        <div class="rcard"><span class="eb"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+        <div class="rcard"><span class="eb"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+        <div class="rcard"><span class="eb"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="fade">Contact</h2>
+    <p class="sub fade">Visit or call Sanctuary Salon &amp; Med Spa.</p>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="ci">📍</div><h3>Address</h3><p>Windermere Business Center<br>6735 Conroy Rd Ste 104<br>Orlando, FL 32835, USA</p>
+        <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=8748801223111452723&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></div>
+      <div class="cbox fade"><div class="ci">📞</div><h3>Phone</h3><p><a href="tel:+14079091011">(407) 909-1011</a></p>
+        <a class="btn" href="tel:+14079091011">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <h2 class="fade">Book an appointment</h2>
+    <p class="sub fade">Choose a day and time that suits you.</p>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label for="n">Name</label><input id="n" type="text" autocomplete="off">
+      <label for="p">Phone</label><input id="p" type="tel" autocomplete="off">
+      <label for="d">Preferred day</label>
+      <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select>
+      <label for="t">Preferred time</label><input id="t" type="time">
+      <label for="o">Notes</label><textarea id="o" rows="3"></textarea>
+      <button type="button" class="btn primary" id="sendBtn">Request appointment</button>
+      <div id="msg" role="status" aria-live="polite"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Sanctuary Salon &amp; Med Spa</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+14079091011">📞 Call (407) 909-1011</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded','false')}));
+document.getElementById('sendBtn').addEventListener('click',()=>{document.getElementById('msg').textContent='Demo only: online booking is not connected yet.'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
