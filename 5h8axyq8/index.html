@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: MIDNIGHT NEON -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nail Place of Orlando – Sample Homepage Concept</title>
+<style>
+:root{
+  --bg:#070b1c;--bg2:#0d1330;--card:#121a3d;--line:#25306a;
+  --cyan:#19f0ff;--mag:#ff2bd6;--text:#eaf0ff;--muted:#a9b4dd;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--text);font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;font-size:17px;overflow-x:hidden;padding-bottom:64px}
+h1,h2,h3{font-family:"Trebuchet MS","Segoe UI",Verdana,sans-serif;letter-spacing:-.02em;line-height:1.1}
+a{color:inherit}
+.banner{background:linear-gradient(90deg,var(--mag),#7a3cff,var(--cyan));color:#06081a;text-align:center;font-size:.85rem;font-weight:700;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;background:rgba(7,11,28,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;font-family:"Trebuchet MS",sans-serif;text-decoration:none;color:var(--cyan);text-shadow:0 0 12px rgba(25,240,255,.6)}
+nav ul{display:flex;gap:6px;list-style:none}
+nav a{text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:600;font-size:.95rem;color:var(--muted);transition:.2s}
+nav a:hover{color:#fff;background:var(--bg2);box-shadow:0 0 0 1px var(--mag),0 0 14px rgba(255,43,214,.5)}
+.menu-btn{display:none;background:none;border:1px solid var(--cyan);color:var(--cyan);border-radius:10px;padding:8px 12px;font-size:1rem;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--bg2);border-bottom:1px solid var(--line);display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;padding:10px 20px 18px}
+}
+section{padding:84px 20px;position:relative}
+.wrap{max-width:1150px;margin:auto}
+.eyebrow{color:var(--mag);font-weight:800;text-transform:uppercase;letter-spacing:.18em;font-size:.8rem}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin:8px 0 14px}
+.lead{color:var(--muted);max-width:640px}
+/* hero */
+#home{padding-top:60px;background:radial-gradient(800px 500px at 85% 20%,rgba(255,43,214,.18),transparent 60%),radial-gradient(700px 500px at 0% 90%,rgba(25,240,255,.14),transparent 60%),var(--bg)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+h1{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:900;background:linear-gradient(100deg,#fff 20%,var(--cyan) 60%,var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent;margin:14px 0 16px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--cyan);border-radius:999px;padding:7px 16px;font-weight:700;box-shadow:0 0 18px rgba(25,240,255,.35);background:rgba(25,240,255,.07)}
+.badge .st{color:#ffd54a}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{display:inline-block;text-decoration:none;border:0;cursor:pointer;font:inherit;font-weight:800;padding:15px 28px;border-radius:14px;transition:.25s}
+.btn:hover{transform:translateY(-4px)}
+.btn.pri{background:linear-gradient(90deg,var(--mag),#a43cff);color:#fff;box-shadow:0 0 26px rgba(255,43,214,.55)}
+.btn.sec{background:transparent;color:var(--cyan);border:2px solid var(--cyan);box-shadow:0 0 18px rgba(25,240,255,.3) inset,0 0 18px rgba(25,240,255,.25)}
+.glow-wrap{display:flex;justify-content:center}
+.glow{width:min(380px,80vw);aspect-ratio:1;position:relative;display:grid;place-items:center}
+.glow .ring{position:absolute;inset:0;border-radius:38% 62% 55% 45%/48% 40% 60% 52%;background:conic-gradient(from 0deg,var(--cyan),var(--mag),#7a3cff,var(--cyan));filter:blur(2px);animation:spin 14s linear infinite;box-shadow:0 0 70px rgba(255,43,214,.5),0 0 120px rgba(25,240,255,.3)}
+.glow .inner{position:absolute;inset:14px;border-radius:38% 62% 55% 45%/48% 40% 60% 52%;background:var(--bg);animation:spin 14s linear infinite}
+.glow .em{position:relative;font-size:7rem;filter:drop-shadow(0 0 20px var(--mag));animation:float 4s ease-in-out infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes float{50%{transform:translateY(-14px)}}
+/* services */
+#services{background:var(--bg2)}
+.tag{display:inline-block;background:rgba(255,43,214,.12);border:1px dashed var(--mag);color:#ff8ae9;padding:6px 12px;border-radius:10px;font-size:.82rem;font-weight:700;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:34px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:.3s}
+.card:hover{transform:translateY(-8px);border-color:var(--cyan);box-shadow:0 12px 36px rgba(25,240,255,.2)}
+.card .ic{font-size:2.4rem;width:62px;height:62px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,rgba(255,43,214,.3),rgba(25,240,255,.25));margin-bottom:14px}
+.card h3{font-size:1.3rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.price{margin-top:12px;font-weight:700;color:var(--cyan)}
+.card .tag{display:block;margin-top:14px;font-size:.75rem}
+/* hours */
+.hours{max-width:620px;margin-top:30px;width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.hours td{padding:15px 22px;border-bottom:1px solid var(--line)}
+.hours tr:last-child td{border-bottom:0}
+.hours td:first-child{font-weight:800;color:var(--cyan)}
+.hours td:last-child{text-align:right}
+.hours tr:hover td{background:rgba(255,43,214,.08)}
+/* reviews */
+#reviews{background:var(--bg2)}
+.rating{display:flex;flex-wrap:wrap;align-items:center;gap:28px;margin:26px 0}
+.big{font-size:clamp(4.5rem,14vw,8rem);font-weight:900;font-family:"Trebuchet MS",sans-serif;line-height:1;color:var(--cyan);text-shadow:0 0 30px rgba(25,240,255,.6)}
+.stars{color:#ffd54a;letter-spacing:3px;font-size:1.6rem}
+.rcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:20px}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;transition:.3s}
+.rc:hover{transform:translateY(-6px);border-color:var(--mag)}
+.ex{display:block;margin-bottom:10px}
+.ex span{display:inline-block;background:var(--mag);color:#fff;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px}
+.rc .stars{font-size:1.15rem;margin-bottom:8px;display:block}
+.rc p{color:var(--muted);font-style:italic;margin-bottom:10px}
+.rc b{font-size:.9rem}
+h3.top{margin-top:44px;font-size:1.7rem}
+/* contact */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:30px}
+.cbox{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.cbox .ic{font-size:2rem}
+.cbox h3{margin:8px 0;color:var(--cyan)}
+.cbox a.link{color:var(--mag);font-weight:700}
+/* form */
+#book{background:radial-gradient(700px 400px at 50% 0,rgba(122,60,255,.25),transparent 70%),var(--bg2)}
+form{max-width:640px;margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:16px;box-shadow:0 0 40px rgba(255,43,214,.15)}
+label{font-weight:700;font-size:.9rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--cyan)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:rgba(25,240,255,.12);border:1px solid var(--cyan);color:var(--cyan);padding:12px 16px;border-radius:12px;font-weight:700}
+.note{color:var(--muted);font-size:.85rem;margin-top:12px;max-width:640px}
+footer{padding:40px 20px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+footer strong{display:block;color:var(--cyan);font-size:1.2rem;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:linear-gradient(90deg,var(--mag),#7a3cff);color:#fff;text-align:center;text-decoration:none;font-weight:800;padding:16px;box-shadow:0 -4px 20px rgba(255,43,214,.4)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.glow .ring,.glow .inner,.glow .em{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Nail Place of Orlando. Not their official website.</div>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home">💅 Nail Place of Orlando</a>
+    <button class="menu-btn" id="mb" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="home">
+  <div class="wrap hero">
+    <div class="fade">
+      <span class="badge"><span class="st">★</span> 4.8 · 793 Google reviews</span>
+      <h1>Nail Place of Orlando</h1>
+      <p class="lead">Colorful nails, a relaxed mood and a fresh new look, right on Vineland Ave.</p>
+      <div class="btns">
+        <a class="btn pri" href="#book">Book Now</a>
+        <a class="btn sec" href="tel:+14077784080">📞 Call (407) 778-4080</a>
+      </div>
+    </div>
+    <div class="glow-wrap fade">
+      <div class="glow"><div class="ring"></div><div class="inner"></div><div class="em">💅</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Services</span>
+      <h2>What a nail salon menu can look like</h2>
+      <span class="tag">Example layout - the owner's real services and prices go here</span>
+    </div>
+    <div class="grid">
+      <div class="card fade"><div class="ic">💅</div><h3>Manicure</h3><p>A classic nail shaping and polish service.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🦶</div><h3>Pedicure</h3><p>Relaxing foot care with a polished finish.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Gel Nails</h3><p>Long-lasting, glossy color.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💎</div><h3>Acrylic Full Set</h3><p>Sculpted length and strength.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Nail Art</h3><p>Custom designs, accents and details.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🌸</div><h3>Polish Change</h3><p>A quick refresh of color.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Hours</span>
+      <h2>When to visit</h2>
+    </div>
+    <table class="hours fade">
+      <tr><td>Monday</td><td>9:00 AM – 7:30 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 7:30 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 7:30 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 7:30 PM</td></tr>
+      <tr><td>Friday</td><td>9:00 AM – 7:30 PM</td></tr>
+      <tr><td>Saturday</td><td>9:00 AM – 7:30 PM</td></tr>
+      <tr><td>Sunday</td><td>9:00 AM – 5:00 PM</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Reviews</span>
+      <h2>Loved on Google</h2>
+    </div>
+    <div class="rating fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p class="lead">based on 793 Google reviews</p>
+        <div class="btns" style="margin-top:14px"><a class="btn pri" target="_blank" rel="noopener" href="https://maps.google.com/?cid=11532846289546676264&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 793 reviews on Google</a></div>
+      </div>
+    </div>
+    <h3 class="top fade">Top reviews</h3>
+    <span class="tag fade">Example layout - your best reviews show here</span>
+    <div class="rcards">
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Contact</span>
+      <h2>Find the salon</h2>
+    </div>
+    <div class="cgrid">
+      <div class="cbox fade"><div class="ic">📍</div><h3>Address</h3><p>8125 Vineland Ave, Orlando, FL 32821, USA</p><p style="margin-top:10px"><a class="link" target="_blank" rel="noopener" href="https://maps.google.com/?cid=11532846289546676264&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions →</a></p></div>
+      <div class="cbox fade"><div class="ic">📞</div><h3>Phone</h3><p><a class="link" href="tel:+14077784080">(407) 778-4080</a></p><p style="margin-top:10px;color:var(--muted)">Tap to call from your phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="fade">
+      <span class="eyebrow">Booking</span>
+      <h2>Book an appointment</h2>
+    </div>
+    <form id="bf" class="fade">
+      <label>Name<input type="text" name="name" autocomplete="off"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="off"></label>
+      <div class="two">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn pri" id="bb">Request appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Nail Place of Orlando</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+14077784080">📞 Call (407) 778-4080</a>
+
+<script>
+const mb=document.getElementById('mb'),nav=document.getElementById('nav');
+mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}));
+document.getElementById('bb').addEventListener('click',()=>{document.getElementById('msg').style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
