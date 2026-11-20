@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: OCEAN BREEZE -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>79 Nails – Sample Homepage Concept</title>
+<style>
+:root{
+  --teal:#0e7c86;
+  --teal-d:#075a63;
+  --deep:#0a3d47;
+  --sky:#bfe8f5;
+  --sky-l:#e6f6fb;
+  --sand:#f6ecd9;
+  --sand-d:#e8d5b0;
+  --coral:#ff7a59;
+  --ink:#10333a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--deep);color:#fff;text-align:center;font-size:.8rem;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(10,61,71,.12)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.logo{font-weight:800;font-size:1.25rem;color:var(--teal-d);text-decoration:none;letter-spacing:.3px}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600;color:var(--deep);transition:.2s}
+.menu a:hover{background:var(--sky)}
+.burger{display:none;background:var(--teal);color:#fff;border:0;border-radius:12px;padding:9px 14px;font-size:1rem;font-weight:700;cursor:pointer}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;padding:10px 20px 16px;display:none;box-shadow:0 10px 20px rgba(0,0,0,.1)}
+  .menu.open{display:flex}
+}
+section{position:relative}
+.wrap{max-width:1100px;margin:auto;padding:80px 20px}
+.hero{background:linear-gradient(160deg,var(--teal) 0%,#27a4b5 55%,var(--sky) 120%);color:#fff;overflow:hidden}
+.hero .wrap{padding-top:70px;padding-bottom:150px;position:relative;z-index:2}
+.hero h1{font-size:clamp(3rem,13vw,7rem);line-height:.98;font-weight:900;letter-spacing:-2px;margin:16px 0}
+.hero p.tag{font-size:clamp(1.1rem,3vw,1.5rem);max-width:520px;opacity:.95}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);color:var(--deep);padding:8px 16px;border-radius:999px;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,.15)}
+.badge .st{color:#f5a623}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-block;padding:15px 30px;border-radius:999px;font-weight:800;font-size:1.05rem;text-decoration:none;border:0;cursor:pointer;transition:.25s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 22px rgba(0,0,0,.2)}
+.btn-p{background:var(--coral);color:#fff}
+.btn-s{background:#fff;color:var(--teal-d)}
+.btn-t{background:var(--teal);color:#fff}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.14);z-index:1}
+.wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;z-index:2}
+.wave svg{display:block;width:100%;height:80px}
+h2{font-size:clamp(2rem,6vw,3rem);color:var(--teal-d);line-height:1.1;margin-bottom:10px}
+.sub{color:#35666e;max-width:620px;margin-bottom:30px}
+.example{display:inline-block;background:#fff3cf;color:#7a5600;border:1.5px dashed #d9a521;padding:6px 14px;border-radius:12px;font-size:.85rem;font-weight:700;margin-bottom:22px}
+.services{background:var(--sand)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:24px;padding:26px;box-shadow:0 8px 24px rgba(10,61,71,.1);transition:.25s;display:flex;flex-direction:column;gap:8px}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(10,61,71,.18)}
+.card .ic{width:60px;height:60px;border-radius:20px;background:linear-gradient(135deg,var(--sky),#8fd3e4);display:grid;place-items:center;font-size:1.9rem}
+.card h3{color:var(--deep);font-size:1.25rem}
+.card .ex{font-size:.78rem;font-weight:700;color:#7a5600;background:#fff3cf;border:1px dashed #d9a521;border-radius:10px;padding:4px 10px;align-self:flex-start}
+.card .pr{font-weight:700;color:var(--teal)}
+.hours{background:var(--sky-l)}
+.hours .wrap{padding-top:60px}
+table{width:100%;max-width:560px;border-collapse:collapse;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(10,61,71,.1)}
+td,th{padding:14px 22px;text-align:left}
+tr:nth-child(even){background:#f2fafc}
+th{width:42%;color:var(--teal-d)}
+.reviews{background:var(--sand)}
+.big{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-bottom:26px}
+.score{font-size:clamp(4rem,14vw,6.5rem);font-weight:900;color:var(--teal-d);line-height:1}
+.stars{color:#f5a623;letter-spacing:2px;font-size:1.6rem}
+.rc{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;margin-top:10px}
+.rcard{background:#fff;border-radius:20px;padding:18px;box-shadow:0 6px 18px rgba(10,61,71,.1);transition:.25s}
+.rcard:hover{transform:translateY(-5px)}
+.rcard .row{display:block;margin-bottom:8px}
+.rcard .tagx{display:inline-block;font-size:.72rem;font-weight:800;background:#fff3cf;color:#7a5600;border:1px dashed #d9a521;border-radius:8px;padding:2px 10px}
+.rcard .stars{font-size:1.2rem;margin-bottom:6px}
+.rcard p{color:#4a6b72;font-style:italic;font-size:.95rem}
+.rcard b{display:block;margin-top:10px;font-size:.9rem}
+.contact{background:linear-gradient(160deg,var(--teal-d),var(--teal));color:#fff}
+.contact h2{color:#fff}
+.contact .wrap{padding-top:70px}
+.cinfo{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.cbox{background:rgba(255,255,255,.14);border-radius:22px;padding:24px}
+.cbox h3{margin-bottom:6px}
+.cbox a{font-weight:700}
+.book{background:var(--sky-l)}
+form{background:#fff;padding:28px;border-radius:26px;max-width:620px;box-shadow:0 10px 30px rgba(10,61,71,.12);display:grid;gap:16px}
+label{font-weight:700;font-size:.9rem;color:var(--deep);display:block;margin-bottom:4px}
+input,select,textarea{width:100%;padding:13px 14px;border:2px solid #cfe6ec;border-radius:14px;font:inherit;background:#fbfeff}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:#e0f6ec;color:#0b5b3a;border-radius:14px;padding:12px 16px;font-weight:700}
+.note{font-size:.85rem;color:#4a6b72;margin-top:14px;max-width:620px}
+footer{background:var(--deep);color:#cfe8ee;text-align:center;padding:36px 20px}
+footer strong{display:block;color:#fff;font-size:1.3rem;margin-bottom:4px}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--coral);color:#fff;text-align:center;padding:16px;font-weight:800;font-size:1.1rem;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for 79 Nails. Not their official website.</div>
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">💅 79 Nails</a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="bubble" style="width:260px;height:260px;right:-60px;top:40px"></div>
+  <div class="bubble" style="width:120px;height:120px;right:25%;bottom:120px"></div>
+  <div class="bubble" style="width:70px;height:70px;right:12%;top:60%"></div>
+  <div class="wrap">
+    <span class="badge"><span class="st">★★★★★</span> 4.8 · 255 Google reviews</span>
+    <h1>79 Nails</h1>
+    <p class="tag">Fresh color, calm vibes and a little seaside sparkle for your next nail day. 🌊</p>
+    <div class="btns">
+      <a class="btn btn-p" href="#book">Book Now</a>
+      <a class="btn btn-s" href="tel:+15023399080">📞 Call (502) 339-9080</a>
+    </div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 40C180 90 360 0 540 30s360 60 540 20 260-30 360 0V80H0z"/></svg></div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2 class="fade">Services</h2>
+    <p class="sub fade">A sample of how a nail salon's service menu could look.</p>
+    <div class="example fade">Example layout - the owner's real services and prices go here</div>
+    <div class="grid">
+      <div class="card fade"><div class="ic">💅</div><h3>Classic Manicure</h3><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">🦶</div><h3>Spa Pedicure</h3><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Gel Polish</h3><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">💎</div><h3>Acrylic / Full Set</h3><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Nail Art</h3><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">🌸</div><h3>Polish Change</h3><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+    </div>
+  </div>
+  <div class="wave" style="position:relative"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#e6f6fb" d="M0 30C200 80 400 0 640 35s480 50 800 0V80H0z"/></svg></div>
+</section>
+
+<section class="hours" id="hours">
+  <div class="wrap">
+    <h2 class="fade">Hours</h2>
+    <p class="sub fade">Opening hours as listed for 79 Nails.</p>
+    <table class="fade">
+      <tr><th>Monday</th><td>10:00 AM – 8:00 PM</td></tr>
+      <tr><th>Tuesday</th><td>10:00 AM – 8:00 PM</td></tr>
+      <tr><th>Wednesday</th><td>10:00 AM – 8:00 PM</td></tr>
+      <tr><th>Thursday</th><td>10:00 AM – 8:00 PM</td></tr>
+      <tr><th>Friday</th><td>10:00 AM – 8:00 PM</td></tr>
+      <tr><th>Saturday</th><td>9:30 AM – 7:30 PM</td></tr>
+      <tr><th>Sunday</th><td>11:00 AM – 5:00 PM</td></tr>
+    </table>
+  </div>
+  <div class="wave" style="position:relative"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 50C240 0 480 80 720 40s500-40 720 10V80H0z"/></svg></div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2 class="fade">Reviews</h2>
+    <div class="big fade">
+      <div class="score">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div style="font-weight:700;font-size:1.1rem">based on 255 Google reviews</div>
+      </div>
+    </div>
+    <a class="btn btn-t fade" target="_blank" rel="noopener" href="https://maps.google.com/?cid=5538570090305767701&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 255 reviews on Google</a>
+    <h3 style="margin:40px 0 8px;font-size:1.5rem;color:var(--deep)">Top reviews</h3>
+    <div class="example">Example layout - your best reviews show here</div>
+    <div class="rc">
+      <div class="rcard fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rcard fade"><span class="row"><span class="tagx">Example</span></span><div class="stars">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+  <div class="wave" style="position:relative"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0e7c86" d="M0 40C220 0 420 80 700 40s480-30 740 10V80H0z"/></svg></div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="fade">Contact</h2>
+    <div class="cinfo">
+      <div class="cbox fade"><h3>📍 Address</h3><p>2813 N Hurstbourne Pkwy Ste 103<br>Louisville, KY 40223, USA</p></div>
+      <div class="cbox fade"><h3>📞 Phone</h3><p><a href="tel:+15023399080">(502) 339-9080</a></p></div>
+      <div class="cbox fade"><h3>🧭 Directions</h3><p><a target="_blank" rel="noopener" href="https://maps.google.com/?cid=5538570090305767701&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></p></div>
+    </div>
+  </div>
+  <div class="wave" style="position:relative;background:#0e7c86"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#e6f6fb" d="M0 50C260 0 460 80 760 40s420-30 680 10V80H0z"/></svg></div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap" style="padding-top:40px">
+    <h2 class="fade">Book an appointment</h2>
+    <p class="sub fade">Pick a day and time you'd like.</p>
+    <form id="bform" class="fade" onsubmit="return false">
+      <div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+      <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+      <div class="two">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. 2:00 PM"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn btn-p" id="sub">Request appointment</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>79 Nails</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+15023399080">📞 Call</a>
+
+<script>
+const b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{m.classList.remove('open');b.setAttribute('aria-expanded',false)}));
+document.getElementById('sub').addEventListener('click',()=>{
+  const x=document.getElementById('msg');x.textContent='Demo only: online booking is not connected yet.';x.style.display='block';
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
