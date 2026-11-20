@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: FOREST CRAFT -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neatbeat – Sample homepage concept</title>
+<style>
+:root{
+  --green:#10321f;
+  --green2:#1b4d31;
+  --green3:#0a2315;
+  --cream:#f6efdc;
+  --cream2:#ebe1c6;
+  --brass:#b98a35;
+  --brass2:#d9b05c;
+  --ink:#1a1f1a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;padding-bottom:64px}
+h1,h2,h3,.slab{font-family:Rockwell,"Roboto Slab","Courier New",Georgia,serif;font-weight:700;letter-spacing:.2px}
+a{color:inherit}
+.stripes{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 14px)}
+.banner{background:var(--brass);color:var(--green3);text-align:center;font-size:.8rem;padding:6px 12px;font-weight:600}
+nav{position:sticky;top:0;z-index:50;background:var(--green3);border-bottom:3px solid var(--brass);}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-family:Rockwell,"Roboto Slab",Georgia,serif;color:var(--cream);font-size:1.3rem;font-weight:800;text-decoration:none}
+.logo span{color:var(--brass2)}
+.links{display:flex;gap:6px}
+.links a{color:var(--cream);text-decoration:none;padding:8px 14px;border-radius:4px;font-weight:600;font-size:.95rem;transition:.2s}
+.links a:hover{background:var(--brass);color:var(--green3)}
+.menu-btn{display:none;background:none;border:2px solid var(--brass2);color:var(--cream);border-radius:6px;padding:6px 12px;font-size:1rem;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--green3);padding:10px 18px 16px;border-bottom:3px solid var(--brass)}
+  .links.open{display:flex}
+  .links a{padding:12px}
+}
+section{padding:80px 20px}
+.wrap{max-width:1100px;margin:auto}
+.hero{background:linear-gradient(135deg,var(--green) 0%,var(--green2) 100%);color:var(--cream);min-height:84vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:380px;height:380px;border:2px solid rgba(217,176,92,.35);border-radius:50%}
+.hero::before{content:"";position:absolute;right:-60px;bottom:-60px;width:260px;height:260px;border:2px solid rgba(217,176,92,.25);border-radius:50%}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.frame{display:inline-flex;align-items:center;gap:12px;border:2px solid var(--brass2);padding:10px 16px;outline:1px solid var(--brass2);outline-offset:4px;margin-bottom:28px;background:rgba(0,0,0,.18)}
+.frame .big{font-family:Rockwell,Georgia,serif;font-size:1.8rem;font-weight:800;color:var(--brass2)}
+.frame small{display:block;font-size:.8rem;color:var(--cream2);line-height:1.2}
+.stars{color:var(--brass2);letter-spacing:2px}
+.hero h1{font-size:clamp(3.2rem,12vw,7.5rem);line-height:1;margin-bottom:16px}
+.hero p.tag{font-size:clamp(1.1rem,3vw,1.5rem);max-width:560px;color:var(--cream2);margin-bottom:34px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:15px 28px;font-weight:700;text-decoration:none;border-radius:4px;font-size:1.05rem;border:2px solid var(--brass2);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(0,0,0,.3)}
+.btn.primary{background:var(--brass2);color:var(--green3)}
+.btn.ghost{background:transparent;color:var(--cream)}
+.btn.dark{background:var(--green);color:var(--cream);border-color:var(--green)}
+.eyebrow{color:var(--brass);text-transform:uppercase;letter-spacing:3px;font-size:.8rem;font-weight:700;margin-bottom:8px}
+h2{font-size:clamp(2rem,6vw,3.2rem);color:var(--green);line-height:1.1;margin-bottom:14px}
+.example{display:inline-block;background:var(--green);color:var(--brass2);padding:6px 12px;font-size:.8rem;font-weight:700;border-left:4px solid var(--brass);margin-bottom:26px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fffaf0;border:2px solid var(--green);padding:26px;position:relative;transition:transform .25s,box-shadow .25s;box-shadow:6px 6px 0 var(--brass)}
+.card:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--brass)}
+.card .ico{font-size:2.2rem;margin-bottom:8px}
+.card h3{color:var(--green);font-size:1.3rem;margin-bottom:6px}
+.card .ex{display:block;font-size:.75rem;font-weight:700;color:var(--green3);background:var(--cream2);padding:4px 8px;margin-bottom:12px}
+.card .price{margin-top:12px;font-weight:700;color:var(--brass)}
+#services{background:var(--cream)}
+#hours{background:var(--green);color:var(--cream)}
+#hours h2{color:var(--cream)}
+table{width:100%;max-width:560px;border-collapse:collapse;background:rgba(0,0,0,.2);border:2px solid var(--brass2)}
+td{padding:14px 18px;border-bottom:1px solid rgba(217,176,92,.3)}
+td:first-child{font-weight:700;color:var(--brass2);font-family:Rockwell,Georgia,serif}
+tr:last-child td{border-bottom:none}
+.hours-flex{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:center}
+.clock{font-size:6rem;text-align:center;opacity:.9}
+#reviews{background:var(--cream2)}
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin:20px 0 30px}
+.rating-num{font-family:Rockwell,Georgia,serif;font-size:clamp(4.5rem,16vw,7rem);font-weight:800;color:var(--green);line-height:1}
+.rating-box .stars{font-size:2rem}
+.rcard{background:#fffaf0;border:2px solid var(--green);padding:20px;transition:transform .25s}
+.rcard:hover{transform:translateY(-5px)}
+.badge-row{margin-bottom:10px}
+.badge{display:inline-block;background:var(--brass);color:var(--green3);font-size:.72rem;font-weight:800;padding:3px 10px;text-transform:uppercase;letter-spacing:1px}
+.rcard .stars{font-size:1.2rem;display:block;margin-bottom:8px;color:var(--brass)}
+.rcard p{font-style:italic;color:#444}
+.rcard .name{margin-top:12px;font-weight:700;color:var(--green)}
+h3.top{font-size:1.6rem;color:var(--green);margin:46px 0 8px}
+.rgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+#contact{background:var(--green3);color:var(--cream)}
+#contact h2{color:var(--cream)}
+.cinfo{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cbox{border:2px solid var(--brass2);padding:24px;background:rgba(255,255,255,.04)}
+.cbox h3{color:var(--brass2);margin-bottom:8px}
+.cbox a{color:var(--cream)}
+#book{background:var(--cream)}
+form{max-width:640px;background:#fffaf0;border:2px solid var(--green);padding:28px;box-shadow:8px 8px 0 var(--brass);display:grid;gap:16px}
+label{font-weight:700;color:var(--green);font-size:.9rem;display:block;margin-bottom:4px}
+input,textarea,select{width:100%;padding:12px;border:2px solid var(--green2);background:#fff;font:inherit;border-radius:3px}
+input:focus,textarea:focus{outline:3px solid var(--brass2)}
+.two{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:var(--green);color:var(--cream);padding:12px 16px;font-weight:700;border-left:5px solid var(--brass2)}
+.note{font-size:.85rem;color:#555;margin-top:14px;max-width:640px}
+footer{background:var(--green3);color:var(--cream2);text-align:center;padding:36px 20px;border-top:4px solid var(--brass)}
+footer strong{font-family:Rockwell,Georgia,serif;font-size:1.3rem;color:var(--brass2);display:block;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--brass2);color:var(--green3);text-align:center;font-weight:800;padding:16px;text-decoration:none;font-size:1.1rem;border-top:3px solid var(--green3)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Neatbeat. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">Neat<span>beat</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">☰ Menu</button>
+    <div class="links" id="links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#hours">Hours</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero stripes" id="home">
+  <div class="wrap">
+    <div class="frame">
+      <span class="big">4.9</span>
+      <span><span class="stars">★★★★★</span><small>905 Google reviews</small></span>
+    </div>
+    <h1>Neatbeat</h1>
+    <p class="tag">Hair care in Louisville, KY. Fresh looks, crafted with care. ✂️</p>
+    <div class="btns">
+      <a class="btn primary" href="#book">Book Now</a>
+      <a class="btn ghost" href="tel:+15023651273">📞 Call (502) 365-1273</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow fade">Services</div>
+    <h2 class="fade">What a visit could include</h2>
+    <div class="example fade">Example layout - the owner's real services and prices go here</div>
+    <div class="grid">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A short description of the service goes here.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Color</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A short description of the service goes here.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Highlights</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A short description of the service goes here.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">💆</div><h3>Treatments</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A short description of the service goes here.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">💇</div><h3>Blowout</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A short description of the service goes here.</p><div class="price">Price: add yours</div></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Styling</h3><span class="ex">Example layout - the owner's real services and prices go here</span><p>A short description of the service goes here.</p><div class="price">Price: add yours</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours" class="stripes">
+  <div class="wrap">
+    <div class="eyebrow fade">Hours</div>
+    <h2 class="fade">Opening hours</h2>
+    <div class="hours-flex">
+      <table class="fade">
+        <tr><td>Monday</td><td>Closed</td></tr>
+        <tr><td>Tuesday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 8:00 PM</td></tr>
+        <tr><td>Friday</td><td>9:00 AM – 6:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 5:00 PM</td></tr>
+        <tr><td>Sunday</td><td>Closed</td></tr>
+      </table>
+      <div class="clock fade">🕰️</div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow fade">Reviews</div>
+    <h2 class="fade">Rated 4.9 on Google</h2>
+    <div class="rating-box fade">
+      <div class="rating-num">4.9</div>
+      <div>
+        <div class="stars" style="color:var(--brass)">★★★★★</div>
+        <p style="font-size:1.1rem;font-weight:600">based on 905 Google reviews</p>
+      </div>
+    </div>
+    <a class="btn dark fade" href="https://maps.google.com/?cid=12690074061713846039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 905 reviews on Google</a>
+
+    <h3 class="top fade">Top reviews</h3>
+    <div class="example fade">Example layout - your best reviews show here</div>
+    <div class="rgrid">
+      <div class="rcard fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="name">Customer name</div></div>
+      <div class="rcard fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="name">Customer name</div></div>
+      <div class="rcard fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="name">Customer name</div></div>
+      <div class="rcard fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="name">Customer name</div></div>
+      <div class="rcard fade"><div class="badge-row"><span class="badge">Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="name">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="stripes">
+  <div class="wrap">
+    <div class="eyebrow fade">Contact</div>
+    <h2 class="fade">Find Neatbeat</h2>
+    <div class="cinfo">
+      <div class="cbox fade"><h3>📍 Address</h3><p>9200 Taylorsville Rd<br>Louisville, KY 40299, USA</p><br><a class="btn primary" href="https://maps.google.com/?cid=12690074061713846039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener" style="color:var(--green3)">Get directions</a></div>
+      <div class="cbox fade"><h3>📞 Phone</h3><p><a href="tel:+15023651273" style="font-size:1.5rem;font-family:Rockwell,Georgia,serif">(502) 365-1273</a></p><br><a class="btn ghost" href="tel:+15023651273">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="eyebrow fade">Booking</div>
+    <h2 class="fade">Book an appointment</h2>
+    <form class="fade" id="bookForm" onsubmit="return false">
+      <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+      <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+      <div class="two">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Thursday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. Afternoon"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no" rows="3"></textarea></div>
+      <button type="button" class="btn dark" id="bookBtn">Request appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <strong>Neatbeat</strong>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+15023651273">📞 Call Neatbeat</a>
+
+<script>
+var btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+btn.addEventListener('click',function(){
+  var o=links.classList.toggle('open');
+  btn.setAttribute('aria-expanded',o);
+});
+links.addEventListener('click',function(e){
+  if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+});
+document.getElementById('bookBtn').addEventListener('click',function(){
+  document.getElementById('msg').style.display='block';
+});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el);});
+}else{els.forEach(function(el){el.classList.add('in');});}
+</script>
+</body>
+</html>
