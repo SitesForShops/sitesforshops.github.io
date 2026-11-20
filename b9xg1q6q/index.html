@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: OCEAN BREEZE -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LaVee Nails Louisville KY – Sample Homepage Concept</title>
+<style>
+:root{
+  --teal:#0e7c86;--teal-d:#0a5560;--sky:#7cc8e8;--sky-l:#e6f6fc;--sand:#f6ecd9;--sand-d:#e9d8b4;--ink:#10343a;--coral:#ff7a59;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Avenir Next","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--ink);color:#fff;font-size:.8rem;text-align:center;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);box-shadow:0 2px 14px rgba(14,124,134,.15)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:800;color:var(--teal-d);text-decoration:none;font-size:1.05rem}
+.menu{display:flex;gap:22px;list-style:none}
+.menu a{text-decoration:none;font-weight:600;color:var(--teal-d);padding:6px 2px;border-bottom:2px solid transparent;transition:.2s}
+.menu a:hover{border-color:var(--coral)}
+.burger{display:none;background:var(--teal);color:#fff;border:0;border-radius:10px;padding:8px 14px;font-size:1rem;font-weight:700;cursor:pointer}
+@media(max-width:760px){
+ .burger{display:block}
+ .menu{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;gap:0;padding:6px 18px 14px;box-shadow:0 10px 20px rgba(0,0,0,.1)}
+ .menu.open{display:flex}
+ .menu a{display:block;padding:12px 0;border-bottom:1px solid var(--sky-l)}
+}
+section{position:relative}
+.wrap{max-width:1100px;margin:auto;padding:70px 20px}
+.hero{background:linear-gradient(170deg,var(--teal) 0%,#2aa3b5 55%,var(--sky) 100%);color:#fff;overflow:hidden}
+.hero .wrap{padding-top:70px;padding-bottom:150px;text-align:left;position:relative;z-index:2}
+.hero h1{font-size:clamp(2.4rem,9vw,5rem);line-height:1.05;font-weight:900;letter-spacing:-.02em;max-width:800px}
+.hero p.tag{font-size:clamp(1.05rem,3.5vw,1.4rem);margin:18px 0 22px;max-width:560px;opacity:.95}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);color:var(--teal-d);padding:8px 16px;border-radius:999px;font-weight:700;box-shadow:0 6px 16px rgba(0,0,0,.15)}
+.badge .st{color:#f5a623}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s;font-family:inherit}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.2)}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-ghost{background:#fff;color:var(--teal-d)}
+.btn-teal{background:var(--teal);color:#fff}
+.bubble{position:absolute;border-radius:50%;background:rgba(255,255,255,.14);z-index:1}
+.wave{position:absolute;left:0;width:100%;line-height:0;z-index:2}
+.wave svg{display:block;width:100%;height:70px}
+.wave.bottom{bottom:-1px}
+.wave.top{top:-1px}
+h2{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.1;color:var(--teal-d);margin-bottom:10px;font-weight:900}
+.lead{max-width:640px;margin-bottom:18px}
+.example-label{display:inline-block;background:#fff3cf;border:1.5px dashed #c99a1b;color:#6b4e00;padding:6px 12px;border-radius:10px;font-size:.85rem;font-weight:700;margin:6px 0 24px}
+.services{background:var(--sand)}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:22px;padding:24px;box-shadow:0 8px 24px rgba(14,124,134,.12);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(14,124,134,.2)}
+.card .ic{width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,var(--sky),var(--teal));display:grid;place-items:center;font-size:1.8rem;margin-bottom:12px}
+.card h3{color:var(--teal-d);margin-bottom:6px}
+.card .ex{font-size:.78rem;font-weight:700;background:#fff3cf;color:#6b4e00;border-radius:8px;padding:4px 8px;display:block;margin:10px 0 8px}
+.card .pr{font-weight:700;color:var(--coral)}
+.hours{background:var(--sky-l)}
+.hours .wrap{padding-top:100px;padding-bottom:100px}
+table{width:100%;max-width:560px;border-collapse:separate;border-spacing:0;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 24px rgba(14,124,134,.12)}
+td{padding:14px 20px;border-bottom:1px solid var(--sky-l)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:800;color:var(--teal-d)}
+tr:nth-child(even) td{background:#f7fcfe}
+.reviews{background:var(--sand)}
+.reviews .wrap{padding-top:100px;padding-bottom:100px}
+.big{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin:14px 0 22px}
+.num{font-size:clamp(4rem,16vw,6.5rem);font-weight:900;color:var(--teal);line-height:1}
+.stars{color:#f5a623;font-size:1.6rem;letter-spacing:2px}
+.rcard{background:#fff;border-radius:20px;padding:20px;box-shadow:0 8px 20px rgba(14,124,134,.1);transition:transform .25s}
+.rcard:hover{transform:translateY(-5px)}
+.rrow{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.exb{display:block;margin-bottom:10px}
+.exb span{display:inline-block;background:#fff3cf;color:#6b4e00;font-size:.75rem;font-weight:800;padding:3px 10px;border-radius:999px;border:1px dashed #c99a1b}
+.rcard .stars{font-size:1.2rem;margin-bottom:8px}
+.rcard p{color:#4b6a70;font-style:italic}
+.rcard .nm{font-weight:700;margin-top:10px;font-style:normal;color:var(--teal-d)}
+h3.sub{margin:36px 0 4px;font-size:1.4rem;color:var(--teal-d)}
+.contact{background:linear-gradient(170deg,var(--teal-d),var(--teal));color:#fff}
+.contact h2{color:#fff}
+.contact .wrap{padding-top:110px;padding-bottom:110px}
+.cinfo{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.cbox{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:22px}
+.cbox b{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-bottom:6px}
+.cbox a{font-weight:800;font-size:1.2rem}
+.book{background:var(--sky-l)}
+.book .wrap{padding-top:110px;padding-bottom:90px;max-width:760px}
+form{background:#fff;border-radius:24px;padding:26px;box-shadow:0 10px 28px rgba(14,124,134,.15);display:grid;gap:14px}
+label{font-weight:700;font-size:.9rem;color:var(--teal-d);display:grid;gap:5px}
+input,select,textarea{font:inherit;padding:12px 14px;border:2px solid #cfe6ee;border-radius:12px;background:#fbfeff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#msg{display:none;background:#e3f7ea;border:2px solid #3aa86a;color:#17603a;padding:12px;border-radius:12px;font-weight:700}
+.note{font-size:.85rem;color:#4b6a70;margin-top:12px}
+footer{background:var(--ink);color:#d8eef2;text-align:center;padding:34px 20px}
+footer b{color:#fff;font-size:1.1rem;display:block;margin-bottom:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--coral);color:#fff;text-align:center;font-weight:800;font-size:1.1rem;padding:16px;text-decoration:none;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for LaVee Nails Louisville KY. Not their official website.</div>
+
+<nav>
+ <div class="nav-in">
+  <a class="logo" href="#home">💅 LaVee Nails</a>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+  <ul class="menu" id="menu">
+   <li><a href="#home">Home</a></li>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#hours">Hours</a></li>
+   <li><a href="#reviews">Reviews</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </div>
+</nav>
+
+<section class="hero" id="home">
+ <div class="bubble" style="width:260px;height:260px;right:-60px;top:40px"></div>
+ <div class="bubble" style="width:120px;height:120px;right:25%;bottom:120px"></div>
+ <div class="bubble" style="width:70px;height:70px;right:12%;top:60%"></div>
+ <div class="wrap">
+  <span class="badge"><span class="st">★★★★★</span> 4.6 · 365 Google reviews</span>
+  <h1 style="margin-top:20px">LaVee Nails Louisville KY</h1>
+  <p class="tag">Fresh color, clean lines and a calm, breezy visit. 🌊</p>
+  <div class="btns">
+   <a class="btn btn-primary" href="#book">Book Now</a>
+   <a class="btn btn-ghost" href="tel:+15023278007">📞 Call (502) 327-8007</a>
+  </div>
+ </div>
+ <div class="wave bottom"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 40C180 80 360 0 600 30s420 60 620 20c80-16 160-20 220-10v40H0z"/></svg></div>
+</section>
+
+<section class="services" id="services">
+ <div class="wrap">
+  <h2 class="fade">Services</h2>
+  <p class="lead fade">A sample of how a nail salon's service menu could look.</p>
+  <div class="example-label fade">Example layout - the owner's real services and prices go here</div>
+  <div class="grid">
+   <div class="card fade"><div class="ic">💅</div><h3>Classic Manicure</h3><p>Shaping, cuticle care and polish.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+   <div class="card fade"><div class="ic">🦶</div><h3>Pedicure</h3><p>A relaxing foot soak and polish.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+   <div class="card fade"><div class="ic">✨</div><h3>Gel Polish</h3><p>Long-lasting shine and color.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+   <div class="card fade"><div class="ic">💎</div><h3>Nail Extensions</h3><p>Added length and shape.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+   <div class="card fade"><div class="ic">🎨</div><h3>Nail Art</h3><p>Custom designs and accents.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+   <div class="card fade"><div class="ic">🌸</div><h3>Polish Change</h3><p>A quick color refresh.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="pr">Price: add yours</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="hours" id="hours">
+ <div class="wave top"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 0h1440v30c-120 40-260 40-420 10S700 10 500 40 160 70 0 30z"/></svg></div>
+ <div class="wrap">
+  <h2 class="fade">Hours</h2>
+  <p class="lead fade">Opening hours as listed.</p>
+  <table class="fade">
+   <tr><td>Monday</td><td>9:30 AM – 7:30 PM</td></tr>
+   <tr><td>Tuesday</td><td>9:30 AM – 7:30 PM</td></tr>
+   <tr><td>Wednesday</td><td>9:30 AM – 7:30 PM</td></tr>
+   <tr><td>Thursday</td><td>9:30 AM – 7:30 PM</td></tr>
+   <tr><td>Friday</td><td>9:30 AM – 7:30 PM</td></tr>
+   <tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+   <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
+  </table>
+ </div>
+ <div class="wave bottom"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 80V40c160 30 300 30 480 0s380-30 560 0 280 10 400-10v50z"/></svg></div>
+</section>
+
+<section class="reviews" id="reviews">
+ <div class="wrap">
+  <h2 class="fade">Reviews</h2>
+  <div class="big fade">
+   <div class="num">4.6</div>
+   <div><div class="stars">★★★★★</div><p>based on 365 Google reviews</p></div>
+  </div>
+  <a class="btn btn-teal fade" target="_blank" rel="noopener" href="https://maps.google.com/?cid=12466501843873379973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 365 reviews on Google</a>
+  <h3 class="sub fade">Top reviews</h3>
+  <div class="example-label fade">Example layout - your best reviews show here</div>
+  <div class="rrow">
+   <div class="rcard fade"><div class="exb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+   <div class="rcard fade"><div class="exb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+   <div class="rcard fade"><div class="exb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+   <div class="rcard fade"><div class="exb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+   <div class="rcard fade"><div class="exb"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><p class="nm">Customer name</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <div class="wave top"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 0h1440v40c-200 40-340-30-560-20S420 70 220 50 60 30 0 40z"/></svg></div>
+ <div class="wrap">
+  <h2 class="fade">Contact</h2>
+  <div class="cinfo">
+   <div class="cbox fade"><b>📍 Address</b>2809 N Hurstbourne Pkwy #113<br>Louisville, KY 40223, USA</div>
+   <div class="cbox fade"><b>📞 Phone</b><a href="tel:+15023278007">(502) 327-8007</a></div>
+   <div class="cbox fade"><b>🧭 Directions</b><a target="_blank" rel="noopener" href="https://maps.google.com/?cid=12466501843873379973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="book" id="book">
+ <div class="wave top"><svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="#0e7c86" d="M0 0h1440v30c-180 40-320 40-500 10S600 10 400 40 120 60 0 30z"/></svg></div>
+ <div class="wrap">
+  <h2 class="fade">Book an appointment</h2>
+  <p class="lead fade">Pick a day and time that suits you.</p>
+  <form class="fade" id="bookForm" onsubmit="return false">
+   <label>Name<input type="text" name="name" placeholder="Your name"></label>
+   <label>Phone<input type="tel" name="phone" placeholder="Your phone number"></label>
+   <div class="two">
+    <label>Preferred day<select name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></label>
+    <label>Preferred time<input type="time" name="time"></label>
+   </div>
+   <label>Notes<textarea name="notes" rows="3" placeholder="Anything to add?"></textarea></label>
+   <button type="button" class="btn btn-primary" id="bookBtn">Request appointment</button>
+   <div id="msg" role="status"></div>
+  </form>
+  <p class="note">This is a sample of how online booking could work.</p>
+ </div>
+</section>
+
+<footer>
+ <b>LaVee Nails Louisville KY</b>
+ Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+15023278007">📞 Call (502) 327-8007</a>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+document.getElementById('bookBtn').addEventListener('click',()=>{
+  const m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block';
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
