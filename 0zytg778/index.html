@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: OCEAN BREEZE -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hudson Styling Co. | Sample Homepage Concept</title>
+<style>
+:root{
+  --teal:#0b7a82;
+  --teal-d:#075a61;
+  --deep:#06393f;
+  --sky:#bfe7f5;
+  --sky-l:#e6f6fc;
+  --sand:#f6ecd9;
+  --sand-d:#e9d6b2;
+  --coral:#ff8a6b;
+  --ink:#10343a;
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.6;font-size:17px;padding-bottom:64px}
+a{color:inherit}
+.banner{background:var(--deep);color:#fff;text-align:center;font-size:.82rem;padding:8px 12px;letter-spacing:.2px}
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 2px 14px rgba(6,57,63,.12)}
+.nav-in{max-width:1150px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;color:var(--teal-d);text-decoration:none;font-size:1.1rem;display:flex;align-items:center;gap:8px}
+.logo span{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--teal),#3bb7d6);color:#fff;font-size:1rem}
+.menu{display:flex;gap:6px;list-style:none}
+.menu a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:600;color:var(--teal-d);transition:.2s}
+.menu a:hover{background:var(--sky);transform:translateY(-1px)}
+.burger{display:none;background:var(--teal);color:#fff;border:0;border-radius:12px;padding:9px 14px;font-size:1rem;font-weight:700;cursor:pointer}
+section{position:relative;padding:84px 20px 140px;scroll-margin-top:60px}
+.wrap{max-width:1150px;margin:0 auto}
+.wave{position:absolute;left:0;right:0;bottom:-1px;line-height:0;pointer-events:none}
+.wave svg{display:block;width:100%;height:90px}
+h1,h2,h3{line-height:1.1}
+h2{font-size:clamp(2rem,5vw,3rem);color:var(--teal-d);margin-bottom:12px;letter-spacing:-.5px}
+.eyebrow{display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:.78rem;color:var(--teal);margin-bottom:10px}
+.lead{max-width:640px;margin-bottom:28px;opacity:.9}
+
+/* hero */
+#home{background:linear-gradient(160deg,#0b7a82 0%,#2aa4c4 55%,#8fd5ea 100%);color:#fff;padding-top:70px;overflow:hidden}
+#home .bub{position:absolute;border-radius:50%;background:rgba(255,255,255,.12)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.hero-text{text-align:left}
+h1{font-size:clamp(2.8rem,9vw,5.8rem);font-weight:800;letter-spacing:-2px;margin:14px 0 16px}
+.tag{font-size:clamp(1.1rem,2.5vw,1.45rem);max-width:520px;margin-bottom:24px;opacity:.95}
+.badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.95);color:var(--ink);padding:9px 18px;border-radius:999px;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.15)}
+.badge .st{color:#f5a623;letter-spacing:1px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 28px;border-radius:999px;font-weight:800;text-decoration:none;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.2)}
+.btn-main{background:var(--sand);color:var(--deep)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid #fff}
+.btn-teal{background:var(--teal);color:#fff}
+.shell{justify-self:center;width:min(300px,70vw);aspect-ratio:1;border-radius:50% 50% 46% 54% / 55% 45% 55% 45%;background:linear-gradient(145deg,var(--sand),#fff6e4);display:grid;place-items:center;font-size:5.5rem;box-shadow:0 24px 50px rgba(6,57,63,.3);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px) rotate(2deg)}}
+
+/* services */
+#services{background:var(--sand)}
+.exlabel{display:inline-block;background:#fff3cf;border:2px dashed #d9a62e;color:#6b4b00;font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:28px}
+.card{background:#fff;border-radius:var(--radius);padding:26px;box-shadow:0 10px 26px rgba(11,122,130,.12);transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column;gap:10px}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(11,122,130,.2)}
+.ico{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:1.9rem;background:linear-gradient(135deg,var(--sky),#e9f9ff)}
+.card h3{font-size:1.3rem;color:var(--teal-d)}
+.price{font-weight:700;color:var(--teal)}
+.card .exlabel{font-size:.78rem;align-self:flex-start;margin-top:auto}
+
+/* hours */
+#hours{background:var(--sky-l)}
+.hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 26px rgba(11,122,130,.14)}
+th,td{padding:15px 20px;text-align:left}
+td:last-child{text-align:right;font-weight:600}
+tr+tr td{border-top:1px solid #e3eef2}
+tr.closed td:last-child{color:#a14b3a}
+tr.today{background:var(--sky)}
+.hours-side{font-size:5rem;text-align:center}
+
+/* reviews */
+#reviews{background:#fff}
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:26px;background:linear-gradient(135deg,var(--sky-l),var(--sand));border-radius:28px;padding:30px;margin:20px 0 40px}
+.big{font-size:clamp(4rem,12vw,6.5rem);font-weight:800;color:var(--teal-d);line-height:1}
+.stars{position:relative;display:inline-block;font-size:2rem;letter-spacing:3px;color:#d8e4e8;line-height:1}
+.stars i{position:absolute;left:0;top:0;overflow:hidden;white-space:nowrap;color:#f5a623;font-style:normal}
+.based{font-weight:600;margin-top:6px}
+.rv-title{font-size:1.7rem;color:var(--teal-d);margin-bottom:10px}
+.rv-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:18px}
+.rv{background:var(--sand);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rv:hover{transform:translateY(-5px)}
+.rv .ex{display:block}
+.rv .ex span{display:inline-block;background:#fff3cf;border:1px dashed #d9a62e;color:#6b4b00;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:1px}
+.rv .full{color:#f5a623;letter-spacing:2px;font-size:1.1rem}
+.rv p{font-size:.95rem}
+.rv b{color:var(--teal-d);font-size:.92rem}
+
+/* contact */
+#contact{background:linear-gradient(160deg,var(--teal-d),var(--teal));color:#fff}
+#contact h2{color:#fff}
+#contact .eyebrow{color:var(--sky)}
+.c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:24px}
+.c-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius);padding:26px;transition:transform .25s}
+.c-card:hover{transform:translateY(-5px)}
+.c-card .ci{font-size:2rem}
+.c-card h3{margin:8px 0}
+.c-card a{font-weight:700}
+
+/* booking */
+#book{background:var(--sand);padding-bottom:90px}
+.form{background:#fff;max-width:680px;border-radius:28px;padding:30px;box-shadow:0 14px 34px rgba(11,122,130,.16);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-weight:700;font-size:.9rem;color:var(--teal-d)}
+input,select,textarea{font:inherit;padding:13px 14px;border:2px solid #cfe3e8;border-radius:14px;background:#fbfeff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
+#demoMsg{grid-column:1/-1;display:none;background:#e1f5ee;color:#075a45;border-radius:14px;padding:14px;font-weight:700}
+.note{max-width:680px;margin-top:14px;font-size:.9rem;opacity:.8}
+
+footer{background:var(--deep);color:#d8eef2;text-align:center;padding:36px 20px}
+footer b{display:block;font-size:1.3rem;color:#fff;margin-bottom:6px}
+
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--teal);color:#fff;text-align:center;padding:16px;font-weight:800;text-decoration:none;font-size:1.1rem;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
+
+.js .fade{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.js .fade.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .rv-row{grid-template-columns:repeat(2,1fr)}
+  .hero-grid,.hours-grid{grid-template-columns:1fr}
+  .shell{display:none}
+  .hours-side{display:none}
+}
+@media(max-width:760px){
+  .burger{display:block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;padding:10px 20px 18px;box-shadow:0 12px 18px rgba(6,57,63,.15)}
+  .menu.open{display:flex}
+  .callbar{display:block}
+  section{padding:64px 18px 120px}
+  .form{grid-template-columns:1fr}
+}
+@media(max-width:480px){.rv-row{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.shell{animation:none}.js .fade{transition:none}}
+</style>
+</head>
+<body>
+<script>document.body.classList.add('js')</script>
+
+<div class="banner">Sample homepage concept for Hudson Styling Co.. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo"><span>✂</span>Hudson Styling Co.</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="bub" style="width:320px;height:320px;right:-80px;top:-100px"></div>
+  <div class="bub" style="width:160px;height:160px;left:40%;bottom:60px"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="badge"><span class="st">★★★★★</span> 4.8 · 145 Google reviews</span>
+      <h1>Hudson Styling Co.</h1>
+      <p class="tag">Fresh looks, relaxed vibes. A hair salon in Detroit, Michigan.</p>
+      <div class="btns">
+        <a class="btn btn-main" href="#book">Book Now</a>
+        <a class="btn btn-ghost" href="tel:+13134740823">📞 Call (313) 474-0823</a>
+      </div>
+    </div>
+    <div class="shell" aria-hidden="true">💇</div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 50c120 40 240 40 360 10s240-50 360-30 240 60 360 50 240-40 360-20v40H0z"/></svg></div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">Services</span>
+    <h2 class="fade">Hair services</h2>
+    <p class="exlabel fade">Example layout - the owner's real services and prices go here</p>
+    <div class="cards">
+      <div class="card fade"><div class="ico">✂️</div><h3>Haircut &amp; Style</h3><p>A sample card for a cut and finish service.</p><div class="price">Price: add yours</div><div class="exlabel">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ico">🎨</div><h3>Color</h3><p>A sample card for single-process or all-over color.</p><div class="price">Price: add yours</div><div class="exlabel">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ico">✨</div><h3>Highlights</h3><p>A sample card for highlights or balayage.</p><div class="price">Price: add yours</div><div class="exlabel">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ico">💨</div><h3>Blowout</h3><p>A sample card for a wash and blowout.</p><div class="price">Price: add yours</div><div class="exlabel">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ico">💧</div><h3>Conditioning Treatment</h3><p>A sample card for a deep conditioning service.</p><div class="price">Price: add yours</div><div class="exlabel">Example layout - the owner's real services and prices go here</div></div>
+      <div class="card fade"><div class="ico">👰</div><h3>Special Occasion Styling</h3><p>A sample card for updos and event styling.</p><div class="price">Price: add yours</div><div class="exlabel">Example layout - the owner's real services and prices go here</div></div>
+    </div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#e6f6fc" d="M0 30c140-30 280-20 420 10s280 50 420 30 380-60 600-10v40H0z"/></svg></div>
+</section>
+
+<section id="hours">
+  <div class="wrap hours-grid">
+    <div>
+      <span class="eyebrow">Hours</span>
+      <h2 class="fade">Opening hours</h2>
+      <p class="lead fade">Listed hours for Hudson Styling Co. in Detroit.</p>
+      <table class="fade" id="hoursTable"><tbody></tbody></table>
+    </div>
+    <div class="hours-side" aria-hidden="true">🕒🌊</div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#ffffff" d="M0 60c200-60 340-30 520 0s300 40 460 10 300-40 460 0v20H0z"/></svg></div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2 class="fade">Loved on Google</h2>
+    <div class="rating-box fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars" aria-label="4.8 out of 5 stars">★★★★★<i style="width:96%">★★★★★</i></div>
+        <div class="based">based on 145 Google reviews</div>
+      </div>
+      <a class="btn btn-teal" target="_blank" rel="noopener" href="https://maps.google.com/?cid=16995027058992923989&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 145 reviews on Google</a>
+    </div>
+    <h3 class="rv-title">Top reviews</h3>
+    <p class="exlabel">Example layout - your best reviews show here</p>
+    <div class="rv-row">
+      <div class="rv fade"><div class="ex"><span>Example</span></div><div class="full">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><div class="full">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><div class="full">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><div class="full">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+      <div class="rv fade"><div class="ex"><span>Example</span></div><div class="full">★★★★★</div><p>Your customer's review goes here</p><b>Customer name</b></div>
+    </div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#0b7a82" d="M0 40c180 40 300 40 480 0s320-40 480 0 320 40 480 0v50H0z"/></svg></div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2 class="fade">Find Hudson Styling Co.</h2>
+    <div class="c-grid">
+      <div class="c-card fade"><div class="ci">📍</div><h3>Address</h3><p>1414 W Elizabeth St<br>Detroit, MI 48216, USA</p></div>
+      <div class="c-card fade"><div class="ci">📞</div><h3>Phone</h3><p><a href="tel:+13134740823">(313) 474-0823</a></p></div>
+      <div class="c-card fade"><div class="ci">🧭</div><h3>Directions</h3><p><a target="_blank" rel="noopener" href="https://maps.google.com/?cid=16995027058992923989&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions →</a></p></div>
+    </div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#f6ecd9" d="M0 50c160-50 320-30 480 0s320 40 480 10 320-40 480-10v40H0z"/></svg></div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="eyebrow">Booking</span>
+    <h2 class="fade">Book an appointment</h2>
+    <p class="lead fade">Pick a day and time that suits you.</p>
+    <form class="form fade" id="bookForm" onsubmit="return false">
+      <div class="field"><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+      <div class="field"><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="d">Preferred day</label>
+        <select id="d"><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option></select></div>
+      <div class="field"><label for="t">Preferred time</label><input id="t" type="time"></div>
+      <div class="field full"><label for="o">Notes</label><textarea id="o" rows="3"></textarea></div>
+      <div class="field full"><button type="button" class="btn btn-teal" id="demoBtn">Request appointment</button></div>
+      <div id="demoMsg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <b>Hudson Styling Co.</b>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+13134740823">📞 Call (313) 474-0823</a>
+
+<script>
+// mobile menu
+var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',function(){
+  var o=menu.classList.toggle('open');
+  burger.setAttribute('aria-expanded',o);
+});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');burger.setAttribute('aria-expanded','false');}});
+
+// hours table
+var hours=["Monday: Closed","Tuesday: Closed","Wednesday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM","Thursday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM","Friday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM","Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM","Sunday: Closed"];
+var days=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var today=days[new Date().getDay()];
+var tb=document.querySelector('#hoursTable tbody');
+hours.forEach(function(l){
+  var i=l.indexOf(': ');
+  var day=l.slice(0,i),val=l.slice(i+2);
+  var tr=document.createElement('tr');
+  if(/closed/i.test(val))tr.className='closed';
+  if(day===today)tr.className+=' today';
+  var a=document.createElement('td');a.textContent=day;
+  var b=document.createElement('td');b.textContent=val;
+  tr.appendChild(a);tr.appendChild(b);tb.appendChild(tr);
+});
+
+// demo form
+document.getElementById('demoBtn').addEventListener('click',function(){
+  var m=document.getElementById('demoMsg');
+  m.textContent='Demo only: online booking is not connected yet.';
+  m.style.display='block';
+});
+
+// fade in
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')});}
+</script>
+</body>
+</html>
