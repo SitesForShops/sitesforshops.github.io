@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: ELECTRIC SPORT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Bearded Lady - Sample Homepage Concept</title>
+<style>
+:root{
+  --red:#e8112d;
+  --red-d:#b30a20;
+  --blue:#1747d6;
+  --blue-d:#0a1f6b;
+  --navy:#07123a;
+  --white:#fff;
+  --ink:#0d1330;
+  --soft:#f1f4ff;
+  --font:"Helvetica Neue",Arial,"Segoe UI",Roboto,system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--font);color:var(--ink);background:#fff;line-height:1.6;overflow-x:hidden;padding-bottom:64px}
+a{color:inherit}
+h1,h2,h3{font-style:italic;text-transform:uppercase;font-weight:900;letter-spacing:-.01em;line-height:1.02}
+.banner{background:var(--navy);color:#fff;text-align:center;font-size:.78rem;padding:7px 12px;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:50;background:var(--blue-d);box-shadow:0 4px 18px rgba(0,0,0,.3);border-bottom:4px solid var(--red)}
+.nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;text-decoration:none;font-size:1.05rem}
+.logo span{color:var(--red);background:#fff;padding:0 6px;margin-right:4px;transform:skew(-10deg);display:inline-block}
+nav ul{list-style:none;display:flex;gap:6px}
+nav a{display:block;color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;font-style:italic;font-size:.85rem;padding:8px 14px;transform:skew(-10deg);transition:.2s}
+nav a:hover{background:var(--red)}
+.menu-btn{display:none;background:var(--red);color:#fff;border:0;font-weight:900;font-size:.85rem;text-transform:uppercase;font-style:italic;padding:9px 14px;cursor:pointer}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--blue-d);max-height:0;overflow:hidden;transition:max-height .35s}
+  nav.open{max-height:380px}
+  nav ul{flex-direction:column;padding:10px 18px 18px;gap:4px}
+  nav a{transform:none;padding:12px;border-left:4px solid var(--red)}
+}
+.hero{position:relative;background:linear-gradient(115deg,var(--blue) 0 58%,var(--red) 58% 100%);color:#fff;padding:60px 18px 120px;clip-path:polygon(0 0,100% 0,100% 90%,0 100%);overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 2px,transparent 2px 28px)}
+.hero-in{position:relative;max-width:1150px;margin:auto;display:grid;grid-template-columns:1.3fr .9fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,9vw,6rem);text-shadow:4px 4px 0 var(--navy)}
+.tag{font-size:1.2rem;font-weight:700;margin:16px 0 20px;max-width:30ch;font-style:italic}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);padding:8px 16px;font-weight:800;transform:skew(-8deg);box-shadow:5px 5px 0 var(--navy)}
+.badge .st{color:#f5a400;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;font-weight:900;text-transform:uppercase;font-style:italic;padding:15px 28px;border:0;cursor:pointer;font-size:1rem;transform:skew(-8deg);transition:.2s;font-family:var(--font)}
+.btn:hover{transform:skew(-8deg) translateY(-4px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:5px 5px 0 var(--navy)}
+.btn-white{background:#fff;color:var(--blue-d);box-shadow:5px 5px 0 var(--navy)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:5px 5px 0 var(--navy)}
+.hero-art{display:flex;justify-content:center}
+.burst{width:min(300px,70vw);aspect-ratio:1;background:#fff;clip-path:polygon(50% 0,61% 15%,79% 9%,81% 28%,98% 35%,87% 50%,98% 65%,81% 72%,79% 91%,61% 85%,50% 100%,39% 85%,21% 91%,19% 72%,2% 65%,13% 50%,2% 35%,19% 28%,21% 9%,39% 15%);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--red);text-align:center;animation:spin 1s ease both}
+.burst b{font-size:5rem;line-height:1}
+.burst small{font-weight:900;text-transform:uppercase;font-style:italic;color:var(--blue-d);font-size:.95rem}
+@keyframes spin{from{transform:rotate(-30deg) scale(.5);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:760px){
+  .hero{background:linear-gradient(160deg,var(--blue) 0 65%,var(--red) 65% 100%);padding-bottom:110px}
+  .hero-in{grid-template-columns:1fr}
+  .burst b{font-size:4rem}
+}
+section{padding:80px 18px}
+.wrap{max-width:1150px;margin:auto}
+.kicker{display:inline-block;background:var(--red);color:#fff;font-weight:900;font-style:italic;text-transform:uppercase;font-size:.8rem;padding:4px 12px;transform:skew(-10deg);margin-bottom:10px}
+h2{font-size:clamp(2rem,6vw,3.6rem);color:var(--blue-d);margin-bottom:14px}
+.example-note{display:inline-block;background:#fff3b0;color:#4a3b00;border:2px dashed #b38b00;font-weight:800;font-size:.85rem;padding:6px 12px;margin-bottom:24px}
+#services{background:var(--soft);clip-path:polygon(0 4%,100% 0,100% 96%,0 100%);margin-top:-60px;padding-top:130px;padding-bottom:130px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{background:#fff;padding:24px;border-top:6px solid var(--red);box-shadow:0 8px 0 var(--blue);transition:.25s}
+.card:nth-child(even){border-top-color:var(--blue);box-shadow:0 8px 0 var(--red)}
+.card:hover{transform:translateY(-8px)}
+.card .ic{font-size:2.4rem}
+.card h3{font-size:1.4rem;color:var(--blue-d);margin:8px 0}
+.card p{font-size:.95rem}
+.card .ex{display:block;background:#fff3b0;color:#4a3b00;border:2px dashed #b38b00;font-size:.75rem;font-weight:800;padding:5px 8px;margin:10px 0}
+.price{font-weight:900;color:var(--red)}
+#hours{background:var(--blue-d);color:#fff}
+#hours h2{color:#fff}
+.hours-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center}
+table{width:100%;border-collapse:collapse;background:#fff;color:var(--ink);box-shadow:8px 8px 0 var(--red)}
+td{padding:14px 18px;border-bottom:1px solid #dde3f7;font-weight:600}
+td:first-child{font-weight:900;text-transform:uppercase;font-style:italic;color:var(--blue)}
+td:last-child{text-align:right}
+tr:last-child td{border:0}
+tr.closed td:last-child{color:var(--red);font-weight:900}
+@media(max-width:760px){.hours-grid{grid-template-columns:1fr}td{padding:12px}}
+#reviews{background:#fff}
+.rating-box{display:flex;flex-wrap:wrap;align-items:center;gap:24px;margin-bottom:30px}
+.big{font-size:clamp(5rem,16vw,8rem);font-weight:900;font-style:italic;color:var(--red);line-height:.9;text-shadow:4px 4px 0 var(--blue-d)}
+.stars{color:#f5a400;font-size:1.8rem;letter-spacing:3px}
+.row-label{margin:34px 0 8px}
+.rev-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.rev{background:var(--soft);padding:18px;border-left:6px solid var(--blue);transition:.25s}
+.rev:hover{transform:translateY(-6px)}
+.rev .ex-b{display:block;margin-bottom:10px}
+.rev .ex-b span{display:inline-block;background:var(--navy);color:#fff;font-size:.7rem;font-weight:900;text-transform:uppercase;padding:3px 10px}
+.rev .stars{font-size:1.2rem;letter-spacing:2px;margin-bottom:8px}
+.rev p{font-style:italic}
+.rev small{display:block;margin-top:10px;font-weight:800;color:var(--blue-d)}
+#contact{background:linear-gradient(120deg,var(--red) 0 50%,var(--blue) 50%);color:#fff;clip-path:polygon(0 5%,100% 0,100% 100%,0 100%);padding-top:120px}
+#contact h2{color:#fff;text-shadow:3px 3px 0 var(--navy)}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.cbox{background:#fff;color:var(--ink);padding:26px;box-shadow:8px 8px 0 var(--navy)}
+.cbox h3{color:var(--red);margin-bottom:8px;font-size:1.2rem}
+.cbox a.link{color:var(--blue);font-weight:800}
+.cbox .btn{margin-top:14px}
+@media(max-width:760px){#contact{background:linear-gradient(170deg,var(--red) 0 40%,var(--blue) 40%)}}
+#book{background:var(--soft);padding-bottom:100px}
+form{background:#fff;padding:28px;max-width:640px;border-top:8px solid var(--red);box-shadow:8px 8px 0 var(--blue);display:grid;gap:16px}
+label{font-weight:800;text-transform:uppercase;font-size:.78rem;font-style:italic;color:var(--blue-d);display:grid;gap:6px}
+input,textarea{font:inherit;padding:12px;border:2px solid #c6cff0;background:#fff;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--blue)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:520px){.two{grid-template-columns:1fr}}
+#demoMsg{display:none;background:var(--navy);color:#fff;padding:12px;font-weight:800}
+.note{font-size:.85rem;margin-top:14px;color:#444}
+footer{background:var(--navy);color:#fff;text-align:center;padding:36px 18px 30px}
+footer b{font-style:italic;text-transform:uppercase;font-size:1.2rem}
+footer p{font-size:.85rem;opacity:.85;margin-top:6px}
+.callbar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--red);color:#fff;text-align:center;text-decoration:none;font-weight:900;font-style:italic;text-transform:uppercase;padding:16px;font-size:1.05rem;border-top:4px solid var(--blue-d)}
+@media(max-width:760px){.callbar{display:block}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(30px);transition:.7s}
+.fade.show{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for The Bearded Lady. Not their official website.</div>
+<header>
+  <div class="nav">
+    <a class="logo" href="#home"><span>TBL</span>The Bearded Lady</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">☰ Menu</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#hours">Hours</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home" style="padding-top:60px;padding-bottom:120px">
+  <div class="hero-in">
+    <div>
+      <h1>The Bearded Lady</h1>
+      <p class="tag">Fresh look. Big energy. Hair salon in Detroit.</p>
+      <div class="badge"><span class="st">★★★★★</span> 4.8 · 224 Google reviews</div>
+      <div class="btns">
+        <a class="btn btn-white" href="#book">Book Now</a>
+        <a class="btn btn-red" href="tel:+13133385122">📞 Call (313) 338-5122</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="burst"><b>✂️</b><small>Detroit · MI</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <span class="kicker fade">Services</span>
+    <h2 class="fade">What a salon menu looks like</h2>
+    <div class="example-note fade">Example layout - the owner's real services and prices go here</div>
+    <div class="grid">
+      <div class="card fade"><div class="ic">💇</div><h3>Haircut &amp; Style</h3><p>A sample card for cuts and styling.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Color</h3><p>A sample card for color services.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Highlights</h3><p>A sample card for highlight work.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">🧴</div><h3>Treatments</h3><p>A sample card for conditioning treatments.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">🧔</div><h3>Beard Trim</h3><p>A sample card for grooming services.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+      <div class="card fade"><div class="ic">👰</div><h3>Special Occasion Styling</h3><p>A sample card for event styling.</p><span class="ex">Example layout - the owner's real services and prices go here</span><span class="price">Price: add yours</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap hours-grid">
+    <div class="fade">
+      <span class="kicker">Hours</span>
+      <h2>When to stop by</h2>
+      <p>Weekly hours for The Bearded Lady, as listed.</p>
+    </div>
+    <table class="fade" aria-label="Opening hours">
+      <tr><td>Monday</td><td>9:00 AM – 4:30 PM</td></tr>
+      <tr><td>Tuesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM – 7:00 PM</td></tr>
+      <tr><td>Friday</td><td>12:00 – 8:00 PM</td></tr>
+      <tr><td>Saturday</td><td>10:00 AM – 3:00 PM</td></tr>
+      <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="kicker fade">Reviews</span>
+    <h2 class="fade">Rated by Detroit</h2>
+    <div class="rating-box fade">
+      <div class="big">4.8</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <p style="font-weight:800">based on 224 Google reviews</p>
+        <div class="btns" style="margin-top:14px"><a class="btn btn-blue" target="_blank" rel="noopener" href="https://maps.google.com/?cid=2956647109113473135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 224 reviews on Google</a></div>
+      </div>
+    </div>
+    <h3 class="row-label fade" style="color:var(--blue-d);font-size:1.6rem">Top reviews</h3>
+    <div class="example-note fade">Example layout - your best reviews show here</div>
+    <div class="rev-row">
+      <div class="rev fade"><div class="ex-b"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rev fade"><div class="ex-b"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rev fade"><div class="ex-b"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rev fade"><div class="ex-b"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rev fade"><div class="ex-b"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="kicker fade" style="background:#fff;color:var(--red)">Contact</span>
+    <h2 class="fade">Find the chair</h2>
+    <div class="contact-grid">
+      <div class="cbox fade"><h3>📍 Address</h3><p>1701 Trumbull Ste A<br>Detroit, MI 48216, USA</p><a class="btn btn-red" target="_blank" rel="noopener" href="https://maps.google.com/?cid=2956647109113473135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a></div>
+      <div class="cbox fade"><h3>📞 Phone</h3><p><a class="link" href="tel:+13133385122">(313) 338-5122</a></p><a class="btn btn-blue" href="tel:+13133385122">Tap to call</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="kicker fade">Book</span>
+    <h2 class="fade">Book an appointment</h2>
+    <form class="fade" id="demoForm" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <div class="two">
+        <label>Preferred day<input type="text" name="day" placeholder="e.g. Thursday"></label>
+        <label>Preferred time<input type="text" name="time" placeholder="e.g. 2:00 PM"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn btn-red" id="demoBtn">Request Appointment</button>
+      <div id="demoMsg" role="status">Demo only: online booking is not connected yet.</div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <b>The Bearded Lady</b>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+13133385122">📞 Call</a>
+
+<script>
+var btn=document.getElementById('menuBtn'),nav=document.getElementById('mainNav');
+btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded',false)})});
+document.getElementById('demoBtn').addEventListener('click',function(){document.getElementById('demoMsg').style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add('show')})}
+</script>
+</body>
+</html>
