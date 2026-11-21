@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: BOLD BRUTALIST -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nails Bar – Allen Park, MI (Sample Concept)</title>
+<style>
+:root{
+  --y:#FFE600;
+  --k:#0a0a0a;
+  --w:#ffffff;
+  --p:#ff4fa3;
+  --b:4px solid var(--k);
+  --sh:8px 8px 0 var(--k);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  font-family:Impact,"Arial Black","Helvetica Neue",Arial,sans-serif;
+  background:var(--y);color:var(--k);line-height:1.5;
+  padding-bottom:70px;overflow-x:hidden;
+}
+p,td,th,label,input,textarea,select,li,.body{font-family:"Helvetica Neue",Arial,system-ui,sans-serif;font-weight:600}
+a{color:inherit}
+h1,h2,h3{text-transform:uppercase;letter-spacing:-.01em;line-height:.95}
+.banner{background:var(--k);color:var(--y);text-align:center;font:700 12px/1.3 "Helvetica Neue",Arial,sans-serif;padding:8px 12px;letter-spacing:.04em;text-transform:uppercase}
+nav{position:sticky;top:0;z-index:50;background:var(--w);border-bottom:var(--b)}
+.nav-in{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+.logo{font-size:1.5rem;text-transform:uppercase;text-decoration:none;background:var(--k);color:var(--y);padding:2px 10px;transform:rotate(-2deg)}
+.menu{display:none;gap:8px;list-style:none}
+.menu a{display:block;text-decoration:none;text-transform:uppercase;font-family:Impact,"Arial Black",sans-serif;padding:8px 14px;border:3px solid transparent;font-size:1rem}
+.menu a:hover{border-color:var(--k);background:var(--y);box-shadow:4px 4px 0 var(--k)}
+.burger{background:var(--y);border:3px solid var(--k);box-shadow:4px 4px 0 var(--k);font:inherit;font-family:Impact,sans-serif;text-transform:uppercase;padding:6px 14px;font-size:1rem;cursor:pointer}
+.burger:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--k)}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--w);border-bottom:var(--b);padding:12px 16px;gap:6px}
+.menu.open a{border:3px solid var(--k);background:var(--y);text-align:center}
+@media(min-width:820px){.menu{display:flex}.burger{display:none}}
+
+section{padding:64px 18px;border-bottom:var(--b)}
+.wrap{max-width:1180px;margin:auto}
+.tag{display:inline-block;background:var(--k);color:var(--y);font:800 12px "Helvetica Neue",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;margin-bottom:14px}
+h2{font-size:clamp(2.4rem,9vw,5rem);margin-bottom:18px}
+.btn{display:inline-block;text-decoration:none;text-transform:uppercase;font-family:Impact,"Arial Black",sans-serif;font-size:1.2rem;letter-spacing:.03em;padding:14px 26px;border:var(--b);box-shadow:var(--sh);background:var(--k);color:var(--y);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:11px 11px 0 var(--k)}
+.btn:active{transform:translate(6px,6px);box-shadow:2px 2px 0 var(--k)}
+.btn.alt{background:var(--w);color:var(--k)}
+.btn.pink{background:var(--p);color:var(--k)}
+
+/* hero */
+.hero{padding:48px 18px 64px;position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:34px;align-items:center}
+.hero h1{font-size:clamp(3.8rem,19vw,10rem);text-shadow:6px 6px 0 var(--w);word-break:break-word}
+.hero .tagline{font-size:1.2rem;max-width:520px;margin:18px 0 22px;font-weight:700}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--w);border:var(--b);box-shadow:6px 6px 0 var(--k);padding:8px 14px;margin-bottom:22px;font-family:"Helvetica Neue",Arial,sans-serif;font-weight:800}
+.badge .st{color:var(--k);letter-spacing:2px}
+.badge b{font-family:Impact,sans-serif;font-size:1.5rem;font-weight:400}
+.cta{display:flex;flex-wrap:wrap;gap:16px}
+.art{position:relative;min-height:280px;display:flex;align-items:center;justify-content:center}
+.block{position:absolute;border:var(--b);box-shadow:var(--sh)}
+.b1{width:70%;height:70%;background:var(--k);transform:rotate(4deg)}
+.b2{width:60%;height:60%;background:var(--p);transform:rotate(-5deg);left:6%;top:6%}
+.art .big{position:relative;font-size:clamp(6rem,28vw,12rem);filter:drop-shadow(6px 6px 0 var(--k));animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px) rotate(6deg)}}
+@media(min-width:820px){.hero-grid{grid-template-columns:1.4fr .8fr}.art{min-height:400px}}
+.marquee{background:var(--k);color:var(--y);border-bottom:var(--b);overflow:hidden;white-space:nowrap;font-family:Impact,sans-serif;text-transform:uppercase;font-size:1.3rem;padding:10px 0}
+.marquee span{display:inline-block;padding-left:100%;animation:mq 22s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+
+/* services */
+#services{background:var(--w)}
+.example{display:inline-block;background:var(--p);border:3px solid var(--k);padding:6px 12px;font:800 13px "Helvetica Neue",Arial,sans-serif;text-transform:uppercase;letter-spacing:.04em;margin-bottom:22px}
+.grid{display:grid;gap:26px;grid-template-columns:1fr}
+@media(min-width:620px){.grid.s{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid.s{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--y);border:var(--b);box-shadow:var(--sh);padding:22px;transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--k)}
+.card .ic{font-size:2.6rem;display:block;margin-bottom:8px}
+.card h3{font-size:1.8rem;margin-bottom:8px}
+.card p{margin-bottom:12px}
+.card .ex{display:block;background:var(--k);color:var(--y);font:700 11px/1.3 "Helvetica Neue",Arial,sans-serif;text-transform:uppercase;padding:6px 8px;margin-bottom:10px;letter-spacing:.03em}
+.card .pr{display:inline-block;background:var(--w);border:3px solid var(--k);padding:3px 10px;font-weight:800;font-size:.9rem}
+
+/* hours */
+.hours-grid{display:grid;gap:30px}
+@media(min-width:820px){.hours-grid{grid-template-columns:1fr 1fr;align-items:start}}
+table{width:100%;border-collapse:collapse;background:var(--w);border:var(--b);box-shadow:var(--sh)}
+td{padding:14px 16px;border-bottom:3px solid var(--k);font-size:1rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;font-weight:400;font-size:1.1rem;background:var(--y);border-right:3px solid var(--k);width:42%}
+.hours-side{background:var(--k);color:var(--y);border:var(--b);box-shadow:var(--sh);padding:26px;transform:rotate(1deg)}
+.hours-side h3{font-size:2.2rem;margin-bottom:10px}
+.hours-side p{color:var(--w)}
+
+/* reviews */
+#reviews{background:var(--p)}
+.rate{display:flex;flex-wrap:wrap;gap:24px;align-items:center;background:var(--w);border:var(--b);box-shadow:var(--sh);padding:24px;margin-bottom:28px}
+.rate .num{font-family:Impact,sans-serif;font-size:clamp(5rem,22vw,9rem);line-height:.9}
+.stars{font-size:2rem;letter-spacing:3px}
+.rate p{font-size:1.15rem}
+.reviews-row-title{font-size:2rem;margin:36px 0 8px}
+.rgrid{display:grid;gap:22px;grid-template-columns:1fr}
+@media(min-width:640px){.rgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.rgrid{grid-template-columns:repeat(3,1fr)}}
+.rc{background:var(--w);border:var(--b);box-shadow:6px 6px 0 var(--k);padding:18px;transition:transform .2s}
+.rc:hover{transform:translate(-3px,-3px) rotate(-.5deg)}
+.rc .ebadge{display:block;margin-bottom:10px}
+.rc .ebadge span{display:inline-block;background:var(--k);color:var(--y);font:800 12px "Helvetica Neue",Arial,sans-serif;text-transform:uppercase;padding:4px 10px;letter-spacing:.08em}
+.rc .stars{font-size:1.5rem;display:block;margin-bottom:8px;color:var(--k)}
+.rc .nm{margin-top:10px;font-weight:800;text-transform:uppercase;font-size:.85rem}
+
+/* contact */
+#contact{background:var(--w)}
+.cgrid{display:grid;gap:26px}
+@media(min-width:820px){.cgrid{grid-template-columns:1fr 1fr}}
+.cbox{background:var(--y);border:var(--b);box-shadow:var(--sh);padding:26px}
+.cbox h3{font-size:1.5rem;margin:14px 0 4px}
+.cbox h3:first-child{margin-top:0}
+.cbox p{font-size:1.15rem}
+.cbox .btn{margin-top:18px}
+.mapart{border:var(--b);box-shadow:var(--sh);background:
+ repeating-linear-gradient(0deg,transparent 0 38px,var(--k) 38px 41px),
+ repeating-linear-gradient(90deg,transparent 0 38px,var(--k) 38px 41px),var(--y);
+ min-height:260px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative}
+.mapart span{background:var(--p);border:var(--b);padding:10px 20px;box-shadow:var(--sh)}
+
+/* form */
+#book{background:var(--y)}
+form{background:var(--w);border:var(--b);box-shadow:var(--sh);padding:26px;display:grid;gap:18px;max-width:760px}
+@media(min-width:620px){.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}}
+.f2>div{margin-bottom:0}
+label{display:block;font-weight:800;text-transform:uppercase;font-size:.85rem;letter-spacing:.06em;margin-bottom:6px}
+input,textarea,select{width:100%;font-size:1rem;padding:12px;border:3px solid var(--k);background:var(--y);color:var(--k);border-radius:0}
+input:focus,textarea:focus,select:focus{outline:none;box-shadow:5px 5px 0 var(--k);background:var(--w)}
+textarea{min-height:100px;resize:vertical}
+.f2{display:grid;gap:18px}
+@media(min-width:620px){.f2{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:var(--k);color:var(--y);padding:14px;border:var(--b);font-weight:800;font-family:"Helvetica Neue",Arial,sans-serif}
+.note{font-size:.9rem;margin-top:16px;max-width:760px;font-weight:700}
+
+footer{background:var(--k);color:var(--y);padding:40px 18px;text-align:center}
+footer h3{font-size:2.4rem;margin-bottom:8px}
+footer p{color:var(--w);font-size:.95rem}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--k);border-top:var(--b);padding:8px}
+.callbar a{display:block;text-align:center;text-decoration:none;background:var(--y);color:var(--k);border:3px solid var(--w);font-family:Impact,"Arial Black",sans-serif;text-transform:uppercase;font-size:1.25rem;padding:10px}
+@media(min-width:820px){.callbar{display:none}body{padding-bottom:0}}
+
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}.art .big,.marquee span{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for Nails Bar. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">Nails Bar</a>
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu ☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">💅 Allen Park, Michigan</span>
+      <h1>Nails Bar</h1>
+      <p class="tagline">Fresh color, clean lines and a little bit of attitude for your next nail day.</p>
+      <div class="badge" aria-label="Google rating 4.6 from 730 reviews">
+        <b>4.6</b><span class="st">★★★★★</span><span>730 Google reviews</span>
+      </div>
+      <div class="cta">
+        <a href="#book" class="btn">Book Now</a>
+        <a href="tel:+13137224472" class="btn alt">📞 (313) 722-4472</a>
+      </div>
+    </div>
+    <div class="art" aria-hidden="true">
+      <div class="block b1"></div>
+      <div class="block b2"></div>
+      <div class="big">💅</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true"><span>★ Manicures ★ Pedicures ★ Nail Art ★ Gel ★ Acrylics ★ Polish ★ Manicures ★ Pedicures ★ Nail Art ★ Gel ★ Acrylics ★ Polish</span></div>
+
+<section id="services">
+  <div class="wrap">
+    <span class="tag">Services</span>
+    <h2 class="fade">What's on the menu</h2>
+    <div class="example">Example layout - the owner's real services and prices go here</div>
+    <div class="grid s">
+      <article class="card fade">
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+        <span class="ic">💅</span><h3>Classic Manicure</h3>
+        <p>A placeholder card for a basic manicure service description.</p>
+        <span class="pr">Price: add yours</span>
+      </article>
+      <article class="card fade">
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+        <span class="ic">🦶</span><h3>Spa Pedicure</h3>
+        <p>A placeholder card for a pedicure service description.</p>
+        <span class="pr">Price: add yours</span>
+      </article>
+      <article class="card fade">
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+        <span class="ic">✨</span><h3>Gel Polish</h3>
+        <p>A placeholder card for a gel polish service description.</p>
+        <span class="pr">Price: add yours</span>
+      </article>
+      <article class="card fade">
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+        <span class="ic">💎</span><h3>Acrylic Full Set</h3>
+        <p>A placeholder card for an acrylic nails service description.</p>
+        <span class="pr">Price: add yours</span>
+      </article>
+      <article class="card fade">
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+        <span class="ic">🎨</span><h3>Nail Art</h3>
+        <p>A placeholder card for custom designs and nail art.</p>
+        <span class="pr">Price: add yours</span>
+      </article>
+      <article class="card fade">
+        <span class="ex">Example layout - the owner's real services and prices go here</span>
+        <span class="ic">🧴</span><h3>Polish Change</h3>
+        <p>A placeholder card for a quick polish change service.</p>
+        <span class="pr">Price: add yours</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap">
+    <span class="tag">Hours</span>
+    <h2 class="fade">Open 7 days</h2>
+    <div class="hours-grid">
+      <table class="fade">
+        <tr><td>Monday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Tuesday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Wednesday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Thursday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Friday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Saturday</td><td>10:00 AM – 7:30 PM</td></tr>
+        <tr><td>Sunday</td><td>11:00 AM – 4:00 PM</td></tr>
+      </table>
+      <div class="hours-side fade">
+        <h3>Plan your visit</h3>
+        <p>Nails Bar is listed at 6540 Allen Rd in Allen Park. Call (313) 722-4472 to ask about availability.</p>
+        <br><a href="tel:+13137224472" class="btn">Call now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <span class="tag">Reviews</span>
+    <h2 class="fade">Rated 4.6</h2>
+    <div class="rate fade">
+      <div class="num">4.6</div>
+      <div>
+        <div class="stars" aria-label="4.6 out of 5 stars">★★★★★</div>
+        <p>based on 730 Google reviews</p>
+        <br>
+        <a class="btn alt" target="_blank" rel="noopener" href="https://maps.google.com/?cid=8685824524815162618&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Read all 730 reviews on Google</a>
+      </div>
+    </div>
+    <h3 class="reviews-row-title">Top reviews</h3>
+    <div class="example">Example layout - your best reviews show here</div>
+    <div class="rgrid">
+      <div class="rc fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rc fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rc fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rc fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+      <div class="rc fade"><div class="ebadge"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><div class="nm">Customer name</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="tag">Contact</span>
+    <h2 class="fade">Find the bar</h2>
+    <div class="cgrid">
+      <div class="cbox fade">
+        <h3>Address</h3>
+        <p>Nails Bar<br>6540 Allen Rd<br>Allen Park, MI 48101, USA</p>
+        <h3>Phone</h3>
+        <p><a href="tel:+13137224472">(313) 722-4472</a></p>
+        <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?cid=8685824524815162618&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA">Get directions</a>
+      </div>
+      <div class="mapart fade" aria-hidden="true"><span>📍</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <span class="tag">Booking</span>
+    <h2 class="fade">Book an appointment</h2>
+    <form id="bform" class="fade" onsubmit="return false">
+      <div class="f2">
+        <div><label for="n">Name</label><input id="n" type="text" autocomplete="name"></div>
+        <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="f2">
+        <div><label for="d">Preferred day</label><input id="d" type="text" placeholder="e.g. Saturday"></div>
+        <div><label for="t">Preferred time</label><input id="t" type="text" placeholder="e.g. 2:00 PM"></div>
+      </div>
+      <div><label for="no">Notes</label><textarea id="no"></textarea></div>
+      <button type="button" class="btn" id="sub">Request booking</button>
+      <div id="msg" role="status"></div>
+    </form>
+    <p class="note">This is a sample of how online booking could work.</p>
+  </div>
+</section>
+
+<footer>
+  <h3>Nails Bar</h3>
+  <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+13137224472">📞 Call (313) 722-4472</a></div>
+
+<script>
+(function(){
+  var b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){
+    var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);
+  });
+  m.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}
+  });
+  document.getElementById('sub').addEventListener('click',function(){
+    var s=document.getElementById('msg');
+    s.textContent='Demo only: online booking is not connected yet.';
+    s.style.display='block';
+  });
+  var els=document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
