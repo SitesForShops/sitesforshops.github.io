@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: CLEAN EDITORIAL -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BeLaVie Hair Salon - Premier Hair Salon and Extensions | Sample Concept</title>
+<style>
+:root{--ink:#0b0b0b;--paper:#fff;--coral:#ff5a4d;--grey:#6b6b6b;--rule:#0b0b0b;--soft:#f6f4f1}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px;padding-bottom:64px}
+.sans,nav,button,.btn,label,input,select,textarea,.tag,th,td,.banner{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+a{color:inherit}
+.banner{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:8px 12px;letter-spacing:.02em}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+.nav{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:14px;text-decoration:none;font-family:-apple-system,"Segoe UI",Arial,sans-serif}
+.logo span{color:var(--coral)}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{border-color:var(--coral);color:var(--coral)}
+.menu-btn{display:none;background:none;border:1px solid var(--ink);padding:8px 14px;font-weight:700;font-size:13px;letter-spacing:.08em;cursor:pointer}
+@media(max-width:760px){
+.menu-btn{display:block}
+nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--rule)}
+nav ul.open{display:flex}
+nav li a{display:block;padding:16px 20px;border-bottom:1px solid #e5e5e5}
+}
+section{padding:96px 20px;border-bottom:1px solid var(--rule)}
+.wrap{max-width:1200px;margin:0 auto}
+.kicker{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--coral);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.kicker:after{content:"";height:1px;background:var(--ink);width:60px}
+h1{font-size:clamp(44px,10.5vw,128px);line-height:.95;letter-spacing:-.03em;font-weight:700;margin-bottom:28px}
+h1 em{color:var(--coral);font-style:italic}
+h2{font-size:clamp(40px,8vw,88px);line-height:1;letter-spacing:-.025em;font-weight:700;margin-bottom:24px}
+.lead{font-size:clamp(18px,2.4vw,24px);max-width:620px;color:#333;margin-bottom:34px}
+.hero{padding-top:70px}
+.badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--ink);padding:8px 16px;border-radius:999px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:14px;font-weight:600;margin-bottom:28px}
+.badge b{color:var(--coral)}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:16px 30px;border:2px solid var(--ink);cursor:pointer;transition:transform .2s,background .2s,color .2s,box-shadow .2s;background:#fff;color:var(--ink)}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 0 -2px rgba(0,0,0,.12)}
+.btn.coral{background:var(--coral);border-color:var(--coral);color:#fff}
+.btn.coral:hover{background:var(--ink);border-color:var(--ink)}
+.btn.dark{background:var(--ink);color:#fff}
+.hero-rule{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:70px;border-top:1px solid var(--ink);padding-top:16px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
+.note{display:inline-block;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;font-weight:700;background:var(--coral);color:#fff;padding:6px 12px;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.card{padding:32px 26px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);transition:.25s;background:#fff}
+.card:hover{background:var(--soft);transform:translateY(-4px)}
+.card .n{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;font-weight:700;color:var(--coral);letter-spacing:.15em}
+.card .ico{font-size:34px;margin:14px 0 8px}
+.card h3{font-size:28px;line-height:1.1;margin-bottom:10px}
+.card p{color:#444;font-size:16px;margin-bottom:14px}
+.tag{display:block;font-size:12px;font-weight:700;color:var(--coral);border-top:1px solid var(--ink);padding-top:10px;margin-top:10px;line-height:1.4}
+.price{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:14px;font-weight:700}
+.hours-grid{display:grid;grid-template-columns:1fr;gap:40px}
+@media(min-width:900px){.hours-grid{grid-template-columns:1fr 1.2fr;align-items:start}}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:18px 4px;border-bottom:1px solid var(--ink);font-size:17px}
+th{font-weight:700;width:42%}
+td{color:#222}
+tr:first-child th,tr:first-child td{border-top:1px solid var(--ink)}
+tr:hover td,tr:hover th{color:var(--coral)}
+.rating-row{display:flex;flex-wrap:wrap;align-items:flex-end;gap:30px;margin-bottom:30px}
+.big{font-size:clamp(100px,22vw,220px);line-height:.8;font-weight:700;letter-spacing:-.05em}
+.stars{color:var(--coral);font-size:32px;letter-spacing:4px;line-height:1}
+.based{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:16px;margin-top:10px}
+.rev-label{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:700;font-size:14px;color:var(--coral);margin:56px 0 8px}
+.rev-title{font-size:32px;margin-bottom:18px}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;border:1px dashed var(--ink);padding:16px}
+.rc{border:1px solid var(--ink);padding:18px;background:#fff;transition:.25s}
+.rc:hover{transform:translateY(-4px);box-shadow:6px 6px 0 var(--coral)}
+.ex{display:block;margin-bottom:12px}
+.ex span{display:inline-block;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#fff;padding:4px 10px}
+.rc .stars{font-size:22px;margin-bottom:12px;letter-spacing:2px}
+.rc p{font-style:italic;color:#444;margin-bottom:10px}
+.rc small{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:700;font-size:13px}
+.contact-grid{display:grid;gap:0;grid-template-columns:1fr;border-top:1px solid var(--ink)}
+@media(min-width:800px){.contact-grid{grid-template-columns:repeat(3,1fr)}.contact-grid .c{border-right:1px solid var(--ink)}.contact-grid .c:last-child{border-right:0}}
+.c{padding:30px 20px 30px 0;border-bottom:1px solid var(--ink)}
+@media(min-width:800px){.c{padding:30px 24px}.c:first-child{padding-left:0}}
+.c h3{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);margin-bottom:10px}
+.c p,.c a.t{font-size:22px;line-height:1.35}
+.c .btn{margin-top:14px;font-size:13px;padding:12px 20px}
+.book{background:var(--ink);color:#fff}
+.book .kicker:after{background:#fff}
+.book .lead{color:#ddd}
+form{display:grid;gap:20px;max-width:760px;grid-template-columns:1fr 1fr}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+@media(max-width:600px){form{grid-template-columns:1fr}}
+label{font-size:12px;letter-spacing:.15em;text-transform:uppercase;font-weight:700}
+input,select,textarea{font-size:16px;padding:14px 4px;background:transparent;border:0;border-bottom:1px solid #fff;color:#fff;border-radius:0;outline:none}
+select option{color:#000}
+input:focus,select:focus,textarea:focus{border-color:var(--coral);border-bottom-width:2px}
+textarea{min-height:90px;resize:vertical}
+#msg{display:none;margin-top:22px;padding:16px 20px;background:var(--coral);color:#fff;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:700;max-width:760px}
+.small{font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:13px;color:#bbb;margin-top:18px}
+footer{padding:50px 20px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-size:14px}
+footer strong{display:block;font-size:20px;margin-bottom:6px;font-family:Georgia,serif}
+.callbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--coral);color:#fff;text-align:center;padding:16px;font-family:-apple-system,"Segoe UI",Arial,sans-serif;font-weight:800;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;font-size:16px}
+@media(max-width:760px){.callbar{display:block}section{padding:70px 20px}}
+@media(min-width:761px){body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for BeLaVie Hair Salon - Premier Hair Salon and Extensions. Not their official website.</div>
+<header>
+<div class="nav">
+<a class="logo" href="#home">BeLa<span>Vie</span></a>
+<nav aria-label="Main">
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="menu">MENU</button>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="wrap">
+<div class="kicker fade">Hair salon · Indianapolis, IN</div>
+<h1 class="fade">BeLaVie Hair Salon - Premier Hair Salon and <em>Extensions</em></h1>
+<p class="lead fade">Fresh color, confident cuts and a look that feels like you.</p>
+<div class="badge fade"><b>★ 4.8</b> Google rating · 453 reviews</div>
+<div class="btns fade">
+<a class="btn coral" href="#book">Book Now</a>
+<a class="btn" href="tel:+13179921111">📞 Call (317) 992-1111</a>
+</div>
+<div class="hero-rule fade"><span>1930 E Stop 13 Rd</span><span>Indianapolis, IN 46227</span><span>Open 7 days</span></div>
+</div>
+</section>
+
+<section id="services">
+<div class="wrap">
+<div class="kicker fade">Services</div>
+<h2 class="fade">What a salon visit could include.</h2>
+<span class="note fade">Example layout - the owner's real services and prices go here</span>
+<div class="grid">
+<div class="card fade"><div class="n">01</div><div class="ico">✂️</div><h3>Haircut &amp; Styling</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="n">02</div><div class="ico">🎨</div><h3>Hair Color</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="n">03</div><div class="ico">💫</div><h3>Hair Extensions</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="n">04</div><div class="ico">🌿</div><h3>Treatments</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="n">05</div><div class="ico">👰</div><h3>Special Occasion Hair</h3><p>A short description of the service goes here.</p><div class="price">Price: add yours</div><span class="tag">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section id="hours">
+<div class="wrap hours-grid">
+<div>
+<div class="kicker fade">Hours</div>
+<h2 class="fade">Open every day.</h2>
+<p class="lead fade">Weekly opening hours as listed for the salon.</p>
+</div>
+<table class="fade">
+<tr><th>Monday</th><td>9:00 AM – 8:00 PM</td></tr>
+<tr><th>Tuesday</th><td>9:00 AM – 8:00 PM</td></tr>
+<tr><th>Wednesday</th><td>9:00 AM – 8:00 PM</td></tr>
+<tr><th>Thursday</th><td>9:00 AM – 8:00 PM</td></tr>
+<tr><th>Friday</th><td>9:00 AM – 8:00 PM</td></tr>
+<tr><th>Saturday</th><td>9:00 AM – 5:00 PM</td></tr>
+<tr><th>Sunday</th><td>10:00 AM – 5:00 PM</td></tr>
+</table>
+</div>
+</section>
+
+<section id="reviews">
+<div class="wrap">
+<div class="kicker fade">Reviews</div>
+<h2 class="fade">Rated 4.8 on Google.</h2>
+<div class="rating-row fade">
+<div class="big">4.8</div>
+<div>
+<div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
+<div class="based">based on 453 Google reviews</div>
+</div>
+</div>
+<a class="btn dark fade" href="https://maps.google.com/?cid=10162153939340344083&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 453 reviews on Google</a>
+<div class="rev-label fade">Example layout - your best reviews show here</div>
+<h3 class="rev-title fade">Top reviews</h3>
+<div class="revs">
+<div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<div class="kicker fade">Contact</div>
+<h2 class="fade">Find the salon.</h2>
+<div class="contact-grid fade">
+<div class="c"><h3>Address</h3><p>1930 E Stop 13 Rd<br>Indianapolis, IN 46227, USA</p></div>
+<div class="c"><h3>Phone</h3><a class="t" href="tel:+13179921111">(317) 992-1111</a></div>
+<div class="c"><h3>Directions</h3><p>Open in Google Maps</p><a class="btn coral" href="https://maps.google.com/?cid=10162153939340344083&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+</div>
+</div>
+</section>
+
+<section class="book" id="book">
+<div class="wrap">
+<div class="kicker fade">Booking</div>
+<h2 class="fade">Book an appointment</h2>
+<p class="lead fade">Pick a day and time that suits you.</p>
+<form id="bf" class="fade" onsubmit="return false">
+<div class="f"><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+<div class="f"><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+<div class="f"><label for="d">Preferred day</label><select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+<div class="f"><label for="t">Preferred time</label><input id="t" type="time"></div>
+<div class="f full"><label for="x">Notes</label><textarea id="x"></textarea></div>
+<div class="f full"><button type="button" class="btn coral" id="sb">Request appointment</button></div>
+</form>
+<div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+<p class="small">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<strong>BeLaVie Hair Salon - Premier Hair Salon and Extensions</strong>
+Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<a class="callbar" href="tel:+13179921111">📞 Call</a>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+document.getElementById('sb').addEventListener('click',function(){document.getElementById('msg').style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+els.forEach(function(el){io.observe(el)});
+}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
