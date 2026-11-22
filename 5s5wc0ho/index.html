@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: MIDNIGHT NEON -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Mae Salon & Spa - Sample Homepage Concept</title>
+<style>
+:root{
+  --bg:#070b1c;--bg2:#0d1330;--card:#121a3d;--line:#233063;
+  --cyan:#22e6ff;--mag:#ff2bd6;--text:#eef2ff;--muted:#aab4de;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{
+  font-family:"Avenir Next","Century Gothic","Segoe UI",Futura,system-ui,-apple-system,Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;font-size:17px;
+  padding-bottom:64px;overflow-x:hidden;
+}
+a{color:inherit}
+h1,h2,h3{font-family:"Century Gothic","Avenir Next","Trebuchet MS",Futura,"Segoe UI",sans-serif;letter-spacing:-.02em;line-height:1.1}
+.banner{background:linear-gradient(90deg,var(--mag),#7a2bff,var(--cyan));color:#07091a;font-size:13px;font-weight:700;text-align:center;padding:7px 12px}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,11,28,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+.logo{font-weight:800;text-decoration:none;font-size:18px;letter-spacing:.02em}
+.logo span{color:var(--cyan);text-shadow:0 0 12px var(--cyan)}
+.menu{display:none;list-style:none;gap:26px}
+.menu a{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted);transition:.2s}
+.menu a:hover{color:var(--cyan);text-shadow:0 0 10px var(--cyan)}
+.burger{background:none;border:1px solid var(--cyan);color:var(--cyan);border-radius:10px;padding:8px 12px;font-size:15px;font-weight:700;cursor:pointer}
+.menu.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg2);padding:18px 24px;gap:16px;border-bottom:1px solid var(--line)}
+@media(min-width:800px){.menu{display:flex}.burger{display:none}body{padding-bottom:0}.callbar{display:none!important}}
+section{padding:80px 20px;position:relative}
+.wrap{max-width:1150px;margin:auto}
+.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:13px;margin-bottom:10px}
+h2{font-size:clamp(30px,6vw,48px);margin-bottom:14px}
+.sub{color:var(--muted);max-width:640px;margin-bottom:34px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid transparent;cursor:pointer;font-size:16px;font-family:inherit;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn-p{background:linear-gradient(90deg,var(--mag),#a02bff);color:#fff;box-shadow:0 0 24px rgba(255,43,214,.5)}
+.btn-p:hover{box-shadow:0 0 38px rgba(255,43,214,.8)}
+.btn-s{border-color:var(--cyan);color:var(--cyan);background:transparent}
+.btn-s:hover{background:rgba(34,230,255,.12);box-shadow:0 0 24px rgba(34,230,255,.4)}
+/* hero */
+#home{padding-top:50px;background:radial-gradient(circle at 80% 30%,#1a1250 0,transparent 55%),var(--bg);overflow:hidden}
+.hero{display:grid;gap:40px;align-items:center}
+@media(min-width:850px){.hero{grid-template-columns:1.1fr .9fr}}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--cyan);border-radius:999px;padding:7px 16px;font-weight:700;font-size:14px;box-shadow:0 0 18px rgba(34,230,255,.3);margin-bottom:20px}
+.badge b{color:#ffd84a}
+h1{font-size:clamp(42px,9vw,84px);font-weight:900;margin-bottom:18px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-size:19px;color:var(--muted);max-width:520px;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.glow{position:relative;aspect-ratio:1;max-width:420px;width:100%;margin:auto;display:grid;place-items:center}
+.glow .ring{position:absolute;inset:0;border-radius:50%;border:3px solid var(--cyan);box-shadow:0 0 40px var(--cyan),inset 0 0 40px rgba(34,230,255,.5);animation:spin 18s linear infinite;border-right-color:transparent;border-bottom-color:var(--mag)}
+.glow .ring2{position:absolute;inset:12%;border-radius:30% 70% 60% 40%/50% 40% 60% 50%;background:linear-gradient(135deg,var(--mag),#5b2bff 55%,var(--cyan));box-shadow:0 0 70px rgba(255,43,214,.6);animation:morph 9s ease-in-out infinite}
+.glow .emo{position:relative;font-size:clamp(70px,16vw,130px);filter:drop-shadow(0 0 20px #fff)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes morph{50%{border-radius:60% 40% 30% 70%/40% 60% 50% 60%;transform:rotate(25deg)}}
+/* services */
+#services{background:var(--bg2)}
+.label{display:inline-block;background:rgba(255,43,214,.15);border:1px dashed var(--mag);color:#ff8fea;font-size:13px;font-weight:700;padding:5px 12px;border-radius:8px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 10px 34px rgba(34,230,255,.2)}
+.card .ic{font-size:38px;width:68px;height:68px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(255,43,214,.25),rgba(34,230,255,.25));margin-bottom:16px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card .price{color:var(--cyan);font-weight:700;margin:10px 0 14px}
+.card .label{font-size:12px}
+/* hours */
+.hours-box{display:grid;gap:30px;align-items:center}
+@media(min-width:850px){.hours-box{grid-template-columns:1fr 1fr}}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:20px;overflow:hidden;border:1px solid var(--line)}
+td{padding:15px 22px;border-bottom:1px solid var(--line)}
+tr:last-child td{border:0}
+td:first-child{font-weight:800;color:var(--cyan)}
+td.closed{color:#ff8fea}
+tr:hover{background:rgba(255,255,255,.04)}
+/* reviews */
+#reviews{background:var(--bg2)}
+.big{display:flex;flex-wrap:wrap;align-items:center;gap:26px;margin-bottom:30px}
+.score{font-size:clamp(72px,16vw,120px);font-weight:900;line-height:1;background:linear-gradient(135deg,var(--cyan),var(--mag));-webkit-background-clip:text;background-clip:text;color:transparent}
+.stars{color:#ffd84a;letter-spacing:3px;font-size:26px;text-shadow:0 0 12px rgba(255,216,74,.5)}
+.rcards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:20px}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:10px;transition:transform .25s}
+.rc:hover{transform:translateY(-5px)}
+.rc .ex{display:block}
+.rc .ex span{display:inline-block;background:var(--mag);color:#fff;font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
+.rc .stars{font-size:20px}
+.rc p{color:var(--muted);font-style:italic}
+.rc small{font-weight:700}
+h3.top{font-size:26px;margin:44px 0 10px}
+/* contact */
+.cgrid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cgrid .card a{color:var(--cyan);font-weight:700}
+/* form */
+#book{background:radial-gradient(circle at 15% 20%,#2a0f4d 0,transparent 50%),var(--bg2)}
+form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;max-width:640px;display:grid;gap:16px;box-shadow:0 0 50px rgba(255,43,214,.12)}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,textarea{font:inherit;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:13px 14px;width:100%}
+input:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 14px rgba(34,230,255,.4)}
+.row{display:grid;gap:16px}
+@media(min-width:600px){.row{grid-template-columns:1fr 1fr}}
+#msg{display:none;background:rgba(34,230,255,.12);border:1px solid var(--cyan);color:var(--cyan);padding:14px;border-radius:12px;font-weight:700}
+.note{font-size:13px;color:var(--muted)}
+footer{padding:40px 20px;text-align:center;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer strong{display:block;color:var(--text);font-size:20px;margin-bottom:6px}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex}
+.callbar a{flex:1;text-align:center;padding:17px;background:linear-gradient(90deg,var(--mag),#a02bff);color:#fff;font-weight:800;text-decoration:none;font-size:17px}
+.fade{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.ring,.ring2{animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="banner">Sample homepage concept for The Mae Salon &amp; Spa. Not their official website.</div>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#home">The Mae <span>Salon &amp; Spa</span></a>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰ Menu</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#hours">Hours</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="home">
+  <div class="wrap hero">
+    <div class="fade">
+      <div class="badge"><b>★</b> 4.9 on Google · 317 reviews</div>
+      <h1>The Mae <em>Salon &amp; Spa</em></h1>
+      <p class="tag">Hair, beauty and relaxation, all in one glowing spot in Indianapolis.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="#book">Book Now</a>
+        <a class="btn btn-s" href="tel:+13176023740">📞 Call (317) 602-3740</a>
+      </div>
+    </div>
+    <div class="glow fade" aria-hidden="true">
+      <div class="ring"></div><div class="ring2"></div><div class="emo">💇‍♀️</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h2>Treat yourself</h2>
+    <p style="margin-bottom:14px"><span class="label">Example layout - the owner's real services and prices go here</span></p>
+    <p class="sub">A sample of how a service menu could look on this page.</p>
+    <div class="grid">
+      <div class="card fade"><div class="ic">✂️</div><h3>Haircut &amp; Style</h3><p>A fresh cut and finished style.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><p>Color, highlights and glossing.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💆‍♀️</div><h3>Spa Treatments</h3><p>Relaxing time out for body and mind.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">💅</div><h3>Nails</h3><p>Manicure and pedicure options.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+      <div class="card fade"><div class="ic">✨</div><h3>Special Occasion Styling</h3><p>Hair for events and big days.</p><div class="price">Price: add yours</div><span class="label">Example layout - the owner's real services and prices go here</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="hours">
+  <div class="wrap hours-box">
+    <div class="fade">
+      <div class="eyebrow">Hours</div>
+      <h2>When to visit</h2>
+      <p class="sub">Opening hours for The Mae Salon &amp; Spa. Tap to call with any questions.</p>
+      <a class="btn btn-s" href="tel:+13176023740">📞 (317) 602-3740</a>
+    </div>
+    <table class="fade">
+      <tbody>
+        <tr><td>Monday</td><td class="closed">Closed</td></tr>
+        <tr><td>Tuesday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Thursday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Friday</td><td>8:30 AM – 9:00 PM</td></tr>
+        <tr><td>Saturday</td><td>9:00 AM – 4:00 PM</td></tr>
+        <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <div class="eyebrow">Reviews</div>
+    <h2>Loved on Google</h2>
+    <div class="big fade">
+      <div class="score">4.9</div>
+      <div>
+        <div class="stars" style="font-size:34px">★★★★★</div>
+        <p style="color:var(--muted);margin:4px 0 14px">based on 317 Google reviews</p>
+        <a class="btn btn-p" href="https://maps.google.com/?cid=10873276182579948129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 317 reviews on Google</a>
+      </div>
+    </div>
+    <h3 class="top">Top reviews</h3>
+    <p><span class="label">Example layout - your best reviews show here</span></p>
+    <div class="rcards">
+      <div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+      <div class="rc fade"><div class="ex"><span>Example</span></div><div class="stars">★★★★★</div><p>Your customer's review goes here</p><small>Customer name</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Contact</div>
+    <h2>Find The Mae</h2>
+    <div class="cgrid">
+      <div class="card fade"><div class="ic">📍</div><h3>Address</h3><p>4907 N Pennsylvania St<br>Indianapolis, IN 46205, USA</p><p style="margin-top:12px"><a href="https://maps.google.com/?cid=10873276182579948129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions →</a></p></div>
+      <div class="card fade"><div class="ic">📞</div><h3>Phone</h3><p><a href="tel:+13176023740" style="font-size:22px">(317) 602-3740</a></p><p style="margin-top:12px;color:var(--muted)">Tap to call from your phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="eyebrow">Booking</div>
+    <h2>Book an appointment</h2>
+    <p class="sub">Pick a day and time you like.</p>
+    <form id="bookForm" class="fade" onsubmit="return false">
+      <label>Name<input type="text" name="name" autocomplete="name"></label>
+      <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+      <div class="row">
+        <label>Preferred day<input type="date" name="day"></label>
+        <label>Preferred time<input type="time" name="time"></label>
+      </div>
+      <label>Notes<textarea name="notes" rows="3"></textarea></label>
+      <button type="button" class="btn btn-p" id="demoBtn">Request appointment</button>
+      <div id="msg" role="status">Demo only: online booking is not connected yet.</div>
+      <p class="note">This is a sample of how online booking could work.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <strong>The Mae Salon &amp; Spa</strong>
+  Sample homepage concept made by a third party. Not their official website.
+</footer>
+
+<div class="callbar"><a href="tel:+13176023740">📞 Call (317) 602-3740</a></div>
+
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');burger.setAttribute('aria-expanded',false)}));
+document.getElementById('demoBtn').addEventListener('click',()=>{document.getElementById('msg').style.display='block'});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
