@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: BOLD BRUTALIST -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LUXORI HAIR SALON - PREMIER HAIR SALON and MAKE UP STUDIO | Sample Concept</title>
+<style>
+:root{--y:#FFE600;--k:#0a0a0a;--w:#fff;--p:#ff3d81;--b:4px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Impact,"Arial Black","Helvetica Neue",Arial,sans-serif;background:var(--y);color:var(--k);line-height:1.5;padding-bottom:70px;overflow-x:hidden}
+p,li,td,label,input,textarea,select,.body{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:600}
+a{color:inherit}
+.banner{background:var(--k);color:var(--y);text-align:center;font:700 .78rem/1.3 Arial,sans-serif;padding:8px 10px;text-transform:uppercase;letter-spacing:.04em}
+nav{position:sticky;top:0;z-index:50;background:var(--k);border-bottom:var(--b) solid var(--k)}
+.nav-in{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:8px 16px}
+.logo{color:var(--y);font-size:1.4rem;letter-spacing:.06em;text-decoration:none;text-transform:uppercase}
+.menu{display:none;list-style:none;gap:8px}
+.menu a{display:block;color:var(--y);text-decoration:none;text-transform:uppercase;font-family:Impact,Arial Black,sans-serif;letter-spacing:.06em;padding:8px 12px;border:3px solid transparent}
+.menu a:hover{background:var(--y);color:var(--k)}
+.burger{background:var(--y);border:3px solid var(--y);font:900 .95rem Arial,sans-serif;padding:8px 14px;cursor:pointer;box-shadow:4px 4px 0 var(--p);text-transform:uppercase}
+.menu.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--k);padding:10px 16px 16px;border-top:3px solid var(--y)}
+@media(min-width:800px){.menu{display:flex;position:static}.burger{display:none}}
+section{padding:70px 18px;border-bottom:var(--b) solid var(--k)}
+.wrap{max-width:1100px;margin:auto}
+h1,h2,h3{text-transform:uppercase;font-weight:400;line-height:.98}
+h2{font-size:clamp(2.2rem,8vw,4.2rem);display:inline-block;background:var(--k);color:var(--y);padding:6px 16px;margin-bottom:22px;transform:rotate(-1deg)}
+.btn{display:inline-block;font:400 1.15rem Impact,Arial Black,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border:var(--b) solid var(--k);box-shadow:6px 6px 0 var(--k);cursor:pointer;transition:.15s;background:var(--w);color:var(--k)}
+.btn:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--k)}
+.btn:active{transform:translate(4px,4px);box-shadow:2px 2px 0 var(--k)}
+.btn.k{background:var(--k);color:var(--y);box-shadow:6px 6px 0 var(--p)}
+.btn.k:hover{box-shadow:9px 9px 0 var(--p)}
+.btn.p{background:var(--p);color:var(--k)}
+/* hero */
+#home{padding-top:50px;position:relative;overflow:hidden}
+.hero-grid{display:grid;gap:30px}
+.hero h1{font-size:clamp(2.6rem,12vw,7rem);letter-spacing:-.01em;word-break:break-word}
+.hero h1 span{display:block;background:var(--k);color:var(--y);padding:0 12px;margin-top:8px;font-size:.5em;line-height:1.1;transform:rotate(-1deg)}
+.tag{font-size:1.25rem;max-width:520px;margin:22px 0;font-weight:800}
+.badge{display:inline-flex;align-items:center;gap:10px;background:var(--w);border:var(--b) solid var(--k);box-shadow:6px 6px 0 var(--k);padding:10px 16px;margin-bottom:10px;font-family:Arial,sans-serif;font-weight:900}
+.badge .st{color:var(--k);letter-spacing:2px}
+.badge b{font-size:1.5rem}
+.cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
+.art{position:relative;min-height:240px;border:var(--b) solid var(--k);background:repeating-linear-gradient(45deg,var(--k) 0 14px,var(--y) 14px 28px);box-shadow:10px 10px 0 var(--k)}
+.art .big{position:absolute;inset:26px;background:var(--p);border:var(--b) solid var(--k);display:flex;align-items:center;justify-content:center;font-size:clamp(4rem,16vw,8rem);box-shadow:8px 8px 0 var(--k)}
+.art .big small{position:absolute;bottom:8px;right:12px;font:900 .8rem Arial;text-transform:uppercase}
+@media(min-width:850px){.hero-grid{grid-template-columns:1.4fr 1fr;align-items:center}.art{min-height:420px}}
+.marquee{background:var(--k);color:var(--y);overflow:hidden;white-space:nowrap;border-bottom:var(--b) solid var(--k);font-size:1.3rem;padding:10px 0;text-transform:uppercase;letter-spacing:.08em}
+.marquee div{display:inline-block;animation:mq 22s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* services */
+#services{background:var(--w)}
+.label{display:inline-block;background:var(--y);border:3px solid var(--k);padding:6px 12px;font:900 .8rem Arial,sans-serif;text-transform:uppercase;letter-spacing:.03em;margin-bottom:22px}
+.cards{display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--y);border:var(--b) solid var(--k);box-shadow:8px 8px 0 var(--k);padding:22px;transition:.2s}
+.card:hover{transform:translate(-4px,-4px);box-shadow:12px 12px 0 var(--k)}
+.card .ic{font-size:2.6rem;background:var(--w);border:3px solid var(--k);display:inline-block;width:70px;height:70px;line-height:64px;text-align:center;margin-bottom:12px}
+.card h3{font-size:1.8rem;margin-bottom:8px}
+.card .ex{display:block;background:var(--k);color:var(--y);font:800 .72rem Arial,sans-serif;text-transform:uppercase;padding:6px 8px;margin:12px 0}
+.card .pr{font:900 .9rem Arial,sans-serif;text-transform:uppercase;border-top:3px solid var(--k);padding-top:10px}
+/* hours */
+.hours-grid{display:grid;gap:30px}
+@media(min-width:850px){.hours-grid{grid-template-columns:1.2fr 1fr}}
+table{width:100%;border-collapse:collapse;background:var(--w);border:var(--b) solid var(--k);box-shadow:8px 8px 0 var(--k)}
+td{padding:14px 16px;border-bottom:3px solid var(--k);font-size:1.05rem}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:900;text-transform:uppercase;background:var(--k);color:var(--y);width:42%}
+.side{background:var(--p);border:var(--b) solid var(--k);box-shadow:8px 8px 0 var(--k);padding:26px;align-self:start}
+.side h3{font-size:2rem;margin-bottom:10px}
+/* reviews */
+#reviews{background:var(--k);color:var(--w)}
+#reviews h2{background:var(--y);color:var(--k)}
+.rate{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin-bottom:34px}
+.score{font-size:clamp(5rem,22vw,10rem);line-height:.9;color:var(--y)}
+.rate .stars{color:var(--y);font-size:2rem;letter-spacing:4px}
+.rate p{font-size:1.2rem}
+.rev-row{border:var(--b) dashed var(--y);padding:20px;margin-top:40px}
+.rev-row h3{color:var(--y);font-size:2rem;margin-bottom:10px}
+.rev-row .label{background:var(--p)}
+.rcards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.rc{background:var(--y);color:var(--k);border:var(--b) solid var(--w);padding:16px;box-shadow:6px 6px 0 var(--p)}
+.rc .ex{display:block;margin-bottom:10px}
+.rc .ex span{display:inline-block;background:var(--k);color:var(--y);font:900 .72rem Arial;text-transform:uppercase;padding:4px 8px}
+.rc .stars{font-size:1.3rem;letter-spacing:2px;margin-bottom:8px;display:block}
+.rc p{font-style:italic;margin-bottom:10px}
+.rc b{text-transform:uppercase;font-family:Arial;font-size:.85rem}
+/* contact */
+.cgrid{display:grid;gap:24px}
+@media(min-width:850px){.cgrid{grid-template-columns:1fr 1fr}}
+.cbox{background:var(--w);border:var(--b) solid var(--k);box-shadow:8px 8px 0 var(--k);padding:24px}
+.cbox h3{font-size:1.6rem;margin-bottom:6px}
+.cbox p{font-size:1.15rem;margin-bottom:18px}
+.cbox a.t{font-weight:900}
+/* booking */
+#book{background:var(--w)}
+form{background:var(--y);border:var(--b) solid var(--k);box-shadow:10px 10px 0 var(--k);padding:24px;max-width:700px;display:grid;gap:16px}
+.row2{display:grid;gap:16px}
+@media(min-width:600px){.row2{grid-template-columns:1fr 1fr}}
+label{display:block;font-weight:900;text-transform:uppercase;font-size:.85rem;margin-bottom:6px}
+input,select,textarea{width:100%;font:600 1rem Arial,sans-serif;padding:12px;border:var(--b) solid var(--k);background:var(--w);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:5px 5px 0 var(--k)}
+#msg{display:none;background:var(--k);color:var(--y);padding:14px;border:var(--b) solid var(--k);font-family:Arial;font-weight:900}
+.note{margin-top:18px;font-size:.9rem;max-width:700px}
+footer{background:var(--k);color:var(--y);padding:36px 18px;text-align:center}
+footer b{display:block;font-size:1.3rem;font-family:Impact,Arial Black,sans-serif;text-transform:uppercase;margin-bottom:8px;letter-spacing:.04em}
+footer p{color:var(--w);font-size:.9rem}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--k);padding:8px;border-top:var(--b) solid var(--y)}
+.callbar a{display:block;text-align:center;background:var(--y);color:var(--k);font:400 1.3rem Impact,Arial Black,sans-serif;text-transform:uppercase;letter-spacing:.08em;padding:12px;text-decoration:none;border:3px solid var(--k)}
+@media(min-width:800px){.callbar{display:none}body{padding-bottom:0}}
+.fade{opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.marquee div{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for LUXORI HAIR SALON - PREMIER HAIR SALON and MAKE UP STUDIO. Not their official website.</div>
+<nav>
+ <div class="nav-in">
+  <a class="logo" href="#home">✂ LUXORI</a>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu ☰</button>
+  <ul class="menu" id="menu">
+   <li><a href="#home">Home</a></li>
+   <li><a href="#services">Services</a></li>
+   <li><a href="#hours">Hours</a></li>
+   <li><a href="#reviews">Reviews</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </div>
+</nav>
+
+<section id="home" class="hero">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="badge" aria-label="Google rating 4.8 from 480 reviews"><b>4.8</b><span class="st">★★★★★</span><span>480 Google reviews</span></div>
+   <h1>LUXORI HAIR SALON - PREMIER HAIR SALON and MAKE UP STUDIO</h1>
+   <p class="tag">Hair. Color. Make up. Walk in looking ordinary, walk out looking bold.</p>
+   <div class="cta">
+    <a class="btn k" href="#book">Book Now</a>
+    <a class="btn" href="tel:+13179122222">📞 (317) 912-2222</a>
+   </div>
+  </div>
+  <div class="art" aria-hidden="true"><div class="big">💇‍♀️<small>💄 ✂ ✨</small></div></div>
+ </div>
+</section>
+<div class="marquee" aria-hidden="true"><div>HAIR ★ MAKE UP ★ STYLE ★ INDIANAPOLIS ★ HAIR ★ MAKE UP ★ STYLE ★ INDIANAPOLIS ★ HAIR ★ MAKE UP ★ STYLE ★ INDIANAPOLIS ★ HAIR ★ MAKE UP ★ STYLE ★ INDIANAPOLIS ★ </div></div>
+
+<section id="services">
+ <div class="wrap">
+  <h2 class="fade">Services</h2><br>
+  <span class="label fade">Example layout - the owner's real services and prices go here</span>
+  <div class="cards">
+   <div class="card fade"><div class="ic">✂️</div><h3>Haircuts &amp; Styling</h3><span class="ex">Example layout - the owner's real services and prices go here</span><div class="pr">Price: add yours</div></div>
+   <div class="card fade"><div class="ic">🎨</div><h3>Hair Color</h3><span class="ex">Example layout - the owner's real services and prices go here</span><div class="pr">Price: add yours</div></div>
+   <div class="card fade"><div class="ic">💄</div><h3>Make Up</h3><span class="ex">Example layout - the owner's real services and prices go here</span><div class="pr">Price: add yours</div></div>
+   <div class="card fade"><div class="ic">💆‍♀️</div><h3>Treatments</h3><span class="ex">Example layout - the owner's real services and prices go here</span><div class="pr">Price: add yours</div></div>
+   <div class="card fade"><div class="ic">👰</div><h3>Special Occasion Looks</h3><span class="ex">Example layout - the owner's real services and prices go here</span><div class="pr">Price: add yours</div></div>
+  </div>
+ </div>
+</section>
+
+<section id="hours">
+ <div class="wrap">
+  <h2 class="fade">Hours</h2>
+  <div class="hours-grid">
+   <table class="fade">
+    <tr><td>Monday</td><td>9:00 AM – 8:00 PM</td></tr>
+    <tr><td>Tuesday</td><td>9:00 AM – 8:00 PM</td></tr>
+    <tr><td>Wednesday</td><td>8:00 AM – 8:00 PM</td></tr>
+    <tr><td>Thursday</td><td>8:00 AM – 8:00 PM</td></tr>
+    <tr><td>Friday</td><td>8:00 AM – 7:00 PM</td></tr>
+    <tr><td>Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
+    <tr><td>Sunday</td><td>7:00 AM – 7:00 PM</td></tr>
+   </table>
+   <div class="side fade">
+    <h3>Open 7 days a week</h3>
+    <p>Pick a day and time that suits you, then send a booking request below.</p><br>
+    <a class="btn" href="#book">Book Now</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="reviews">
+ <div class="wrap">
+  <h2 class="fade">Reviews</h2>
+  <div class="rate fade">
+   <div class="score">4.8</div>
+   <div>
+    <div class="stars" aria-label="4.8 out of 5 stars">★★★★★</div>
+    <p>based on 480 Google reviews</p><br>
+    <a class="btn" href="https://maps.google.com/?cid=17167620221074523709&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 480 reviews on Google</a>
+   </div>
+  </div>
+  <div class="rev-row fade">
+   <h3>Top reviews</h3>
+   <span class="label">Example layout - your best reviews show here</span>
+   <div class="rcards">
+    <div class="rc"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    <div class="rc"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    <div class="rc"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    <div class="rc"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+    <div class="rc"><span class="ex"><span>Example</span></span><span class="stars">★★★★★</span><p>Your customer's review goes here</p><b>Customer name</b></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap">
+  <h2 class="fade">Contact</h2>
+  <div class="cgrid">
+   <div class="cbox fade">
+    <h3>📍 Address</h3>
+    <p>55 Monument Cir Ste 222a<br>Indianapolis, IN 46204, USA</p>
+    <a class="btn k" href="https://maps.google.com/?cid=17167620221074523709&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a>
+   </div>
+   <div class="cbox fade">
+    <h3>📞 Phone</h3>
+    <p><a class="t" href="tel:+13179122222">(317) 912-2222</a></p>
+    <a class="btn p" href="tel:+13179122222">Tap to call</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="book">
+ <div class="wrap">
+  <h2 class="fade">Book an appointment</h2>
+  <form class="fade" id="bf" onsubmit="return false">
+   <div class="row2">
+    <div><label for="n">Name</label><input id="n" type="text" autocomplete="off"></div>
+    <div><label for="p">Phone</label><input id="p" type="tel" autocomplete="off"></div>
+   </div>
+   <div class="row2">
+    <div><label for="d">Preferred day</label>
+     <select id="d"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option></select></div>
+    <div><label for="t">Preferred time</label><input id="t" type="time"></div>
+   </div>
+   <div><label for="no">Notes</label><textarea id="no" rows="4"></textarea></div>
+   <button type="button" class="btn k" id="sub">Request appointment</button>
+   <div id="msg" role="status"></div>
+  </form>
+  <p class="note">This is a sample of how online booking could work.</p>
+ </div>
+</section>
+
+<footer>
+ <b>LUXORI HAIR SALON - PREMIER HAIR SALON and MAKE UP STUDIO</b>
+ <p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<div class="callbar"><a href="tel:+13179122222">📞 Call</a></div>
+
+<script>
+var b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('open');b.setAttribute('aria-expanded','false')})});
+document.getElementById('sub').addEventListener('click',function(){var x=document.getElementById('msg');x.textContent='Demo only: online booking is not connected yet.';x.style.display='block'});
+var els=document.querySelectorAll('.fade');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(i){if(i.isIntersecting){i.target.classList.add('in');io.unobserve(i.target)}})},{threshold:.12});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+</script>
+</body>
+</html>
