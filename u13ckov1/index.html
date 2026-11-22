@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="robots" content="noindex"><!-- design: ELECTRIC SPORT -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madame Beaute – Sample Homepage Concept</title>
+<style>
+:root{--red:#e10b2b;--blue:#0b2fc4;--navy:#071a73;--white:#fff;--ink:#0c1233;--soft:#eef1ff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55;padding-bottom:64px}
+h1,h2,h3{font-style:italic;text-transform:uppercase;font-weight:900;letter-spacing:-.01em;line-height:1}
+a{color:inherit}
+.banner{background:var(--ink);color:#fff;font-size:.78rem;text-align:center;padding:7px 12px}
+header{position:sticky;top:0;z-index:50;background:var(--blue);box-shadow:0 4px 18px rgba(7,26,115,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1150px;margin:auto;padding:12px 18px}
+.logo{font-weight:900;font-style:italic;text-transform:uppercase;color:#fff;text-decoration:none;font-size:1.15rem}
+.logo span{color:var(--red);background:#fff;padding:0 6px;margin-right:4px;transform:skew(-10deg);display:inline-block}
+nav ul{display:none;list-style:none;gap:6px}
+nav a{color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;font-style:italic;font-size:.9rem;padding:8px 12px;display:block;border-radius:4px}
+nav a:hover{background:var(--red)}
+.menu-btn{background:var(--red);color:#fff;border:0;font-weight:900;font-style:italic;text-transform:uppercase;padding:9px 14px;border-radius:4px;font-size:.85rem;cursor:pointer}
+nav ul.open{display:flex;flex-direction:column;position:absolute;left:0;right:0;top:100%;background:var(--navy);padding:10px 18px 16px}
+@media(min-width:820px){.menu-btn{display:none}nav ul{display:flex}}
+section{position:relative}
+.wrap{max-width:1150px;margin:auto;padding:0 20px}
+/* hero */
+.hero{background:linear-gradient(115deg,var(--blue) 0 58%,var(--red) 58% 100%);color:#fff;padding:60px 0 130px;clip-path:polygon(0 0,100% 0,100% 90%,0 100%);overflow:hidden}
+.hero .wrap{display:grid;gap:34px;align-items:center}
+@media(min-width:820px){.hero .wrap{grid-template-columns:1.25fr .75fr}.hero{padding:90px 0 150px}}
+.hero h1{font-size:clamp(2.8rem,10vw,6rem);text-shadow:4px 4px 0 var(--red)}
+.tag{font-size:1.2rem;font-weight:700;margin:18px 0 22px;max-width:30ch;font-style:italic}
+.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--ink);padding:10px 16px;border-radius:6px;font-weight:800;transform:skew(-8deg);box-shadow:5px 5px 0 var(--ink)}
+.badge b{color:var(--red);font-size:1.4rem}
+.stars{color:#ffb400;letter-spacing:2px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;font-weight:900;font-style:italic;text-transform:uppercase;padding:15px 26px;border-radius:4px;border:3px solid #fff;transition:.2s;cursor:pointer;font-size:1rem;transform:skew(-8deg)}
+.btn:hover{transform:skew(-8deg) translateY(-4px);box-shadow:0 8px 0 rgba(0,0,0,.3)}
+.btn.red{background:var(--red);color:#fff}
+.btn.white{background:#fff;color:var(--blue)}
+.btn.blue{background:var(--blue);color:#fff;border-color:var(--blue)}
+.art{display:flex;justify-content:center}
+.circle{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#dfe4ff 60%,#aab6ff);border:8px solid #fff;box-shadow:12px 12px 0 var(--ink);display:grid;place-items:center;font-size:7rem;transform:rotate(-6deg)}
+/* generic */
+.sec{padding:90px 0}
+.sec h2{font-size:clamp(2rem,6vw,3.6rem);color:var(--blue);margin-bottom:12px}
+.sec h2::after{content:"";display:block;width:90px;height:8px;background:var(--red);margin-top:12px;transform:skew(-20deg)}
+.label{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:.8rem;padding:6px 12px;text-transform:uppercase;font-style:italic;margin:10px 0 24px;border-radius:3px}
+.fade{opacity:0;transform:translateY(30px);transition:.7s}
+.fade.show{opacity:1;transform:none}
+/* services */
+.services{background:var(--soft);clip-path:polygon(0 4%,100% 0,100% 96%,0 100%);margin-top:-60px;padding-top:130px;padding-bottom:130px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:#fff;border-radius:8px;padding:24px;border-top:8px solid var(--red);box-shadow:0 8px 24px rgba(11,47,196,.15);transition:.25s}
+.card:nth-child(even){border-top-color:var(--blue)}
+.card:hover{transform:translateY(-8px)}
+.card .ic{font-size:2.4rem}
+.card h3{color:var(--blue);margin:10px 0 8px;font-size:1.4rem}
+.card .ex{font-size:.72rem;font-weight:800;color:var(--red);text-transform:uppercase;margin-top:12px;display:block}
+.card .pr{font-weight:700;margin-top:10px}
+/* hours */
+.hours table{width:100%;max-width:640px;border-collapse:collapse;background:#fff;box-shadow:8px 8px 0 var(--blue);border-radius:6px;overflow:hidden}
+.hours td{padding:14px 18px;border-bottom:2px solid var(--soft);font-weight:700}
+.hours td:first-child{color:var(--red);text-transform:uppercase;font-style:italic;font-weight:900}
+.hours tr:nth-child(even){background:var(--soft)}
+/* reviews */
+.reviews{background:var(--blue);color:#fff;clip-path:polygon(0 5%,100% 0,100% 95%,0 100%);padding:140px 0}
+.reviews h2{color:#fff}
+.reviews h2::after{background:var(--red)}
+.big{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:20px 0}
+.big .num{font-size:clamp(4rem,14vw,7rem);font-weight:900;font-style:italic;line-height:1}
+.big .stars{font-size:2rem}
+.rcards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:10px}
+.rc{background:#fff;color:var(--ink);padding:18px;border-radius:8px;transition:.25s}
+.rc:hover{transform:translateY(-6px)}
+.rc .exr{display:block;margin-bottom:10px}
+.rc .exr span{background:var(--ink);color:#fff;font-size:.7rem;font-weight:800;padding:3px 10px;border-radius:3px;text-transform:uppercase}
+.rc .stars{font-size:1.2rem;display:block;margin-bottom:8px}
+.rc p{font-style:italic}
+.rc small{display:block;margin-top:10px;font-weight:800;color:var(--blue)}
+.reviews h3{margin:34px 0 6px;font-size:1.6rem}
+/* contact */
+.contact .cbox{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.cb{background:var(--soft);padding:26px;border-left:10px solid var(--red);border-radius:6px}
+.cb h3{color:var(--blue);margin-bottom:8px}
+.cb p{font-size:1.1rem;font-weight:600;margin-bottom:14px}
+/* booking */
+.book{background:linear-gradient(115deg,var(--red),#a00019);color:#fff;clip-path:polygon(0 6%,100% 0,100% 100%,0 100%);padding:130px 0 80px}
+.book h2{color:#fff}
+.book h2::after{background:#fff}
+form{background:#fff;color:var(--ink);padding:26px;border-radius:8px;max-width:640px;display:grid;gap:14px;box-shadow:10px 10px 0 var(--ink);margin-top:20px}
+label{font-weight:800;text-transform:uppercase;font-size:.78rem;font-style:italic;color:var(--blue);display:grid;gap:5px}
+input,textarea,select{font:inherit;padding:12px;border:2px solid #c6cdf5;border-radius:4px;width:100%}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--red)}
+#msg{display:none;background:var(--blue);color:#fff;padding:12px;font-weight:800;border-radius:4px}
+.note{font-size:.85rem;margin-top:14px;opacity:.95}
+footer{background:var(--ink);color:#fff;text-align:center;padding:40px 20px}
+footer b{font-style:italic;text-transform:uppercase;font-size:1.3rem;display:block;margin-bottom:6px}
+.callbar{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--red);color:#fff;text-align:center;padding:16px;font-weight:900;font-style:italic;text-transform:uppercase;text-decoration:none;border-top:3px solid #fff}
+@media(min-width:820px){.callbar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="banner">Sample homepage concept for Madame Beaute. Not their official website.</div>
+<header>
+<div class="nav">
+<a class="logo" href="#home"><span>MB</span>Madame Beaute</a>
+<nav>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="menu">☰ Menu</button>
+<ul id="menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#hours">Hours</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="wrap">
+<div>
+<h1>Madame Beaute</h1>
+<p class="tag">Polished nails, bold style, big energy.</p>
+<div class="badge"><span class="stars">★</span><b>4.8</b><span>on Google · 2,597 reviews</span></div>
+<div class="btns">
+<a class="btn white" href="#book">Book Now</a>
+<a class="btn red" href="tel:+13178835947">📞 Call (317) 883-5947</a>
+</div>
+</div>
+<div class="art"><div class="circle" aria-hidden="true">💅</div></div>
+</div>
+</section>
+
+<section class="sec services" id="services">
+<div class="wrap">
+<h2 class="fade">Services</h2>
+<span class="label">Example layout - the owner's real services and prices go here</span>
+<div class="grid">
+<div class="card fade"><div class="ic">💅</div><h3>Classic Manicure</h3><p>A simple example card for a core nail service.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🦶</div><h3>Pedicure</h3><p>A simple example card for a foot care service.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">✨</div><h3>Gel Nails</h3><p>A simple example card for a long-wear polish service.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🎨</div><h3>Nail Art</h3><p>A simple example card for custom designs.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">💎</div><h3>Acrylic Full Set</h3><p>A simple example card for nail extensions.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+<div class="card fade"><div class="ic">🧴</div><h3>Polish Change</h3><p>A simple example card for a quick refresh.</p><p class="pr">Price: add yours</p><span class="ex">Example layout - the owner's real services and prices go here</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec hours" id="hours">
+<div class="wrap">
+<h2 class="fade">Hours</h2>
+<table class="fade">
+<tr><td>Monday</td><td>9:30 AM – 7:30 PM</td></tr>
+<tr><td>Tuesday</td><td>9:30 AM – 7:30 PM</td></tr>
+<tr><td>Wednesday</td><td>9:30 AM – 7:30 PM</td></tr>
+<tr><td>Thursday</td><td>9:30 AM – 7:30 PM</td></tr>
+<tr><td>Friday</td><td>9:30 AM – 7:30 PM</td></tr>
+<tr><td>Saturday</td><td>9:30 AM – 7:30 PM</td></tr>
+<tr><td>Sunday</td><td>11:30 AM – 5:30 PM</td></tr>
+</table>
+</div>
+</section>
+
+<section class="reviews" id="reviews">
+<div class="wrap">
+<h2 class="fade">Reviews</h2>
+<div class="big fade">
+<div class="num">4.8</div>
+<div><div class="stars">★★★★★</div><div style="font-weight:800;font-size:1.1rem">based on 2,597 Google reviews</div></div>
+</div>
+<a class="btn red" href="https://maps.google.com/?cid=18137105715352005427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read all 2,597 reviews on Google</a>
+<h3>Top reviews</h3>
+<span class="label">Example layout - your best reviews show here</span>
+<div class="rcards">
+<div class="rc fade"><div class="exr"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="exr"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="exr"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="exr"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><small>Customer name</small></div>
+<div class="rc fade"><div class="exr"><span>Example</span></div><span class="stars">★★★★★</span><p>Your customer's review goes here</p><small>Customer name</small></div>
+</div>
+</div>
+</section>
+
+<section class="sec contact" id="contact" style="padding-bottom:40px">
+<div class="wrap">
+<h2 class="fade">Contact</h2>
+<div class="cbox">
+<div class="cb fade"><h3>Address</h3><p>5335 E Southport Rd<br>Indianapolis, IN 46237, USA</p><a class="btn blue" href="https://maps.google.com/?cid=18137105715352005427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Get directions</a></div>
+<div class="cb fade"><h3>Phone</h3><p>(317) 883-5947</p><a class="btn red" href="tel:+13178835947">📞 Call now</a></div>
+</div>
+</div>
+</section>
+
+<section class="book" id="book">
+<div class="wrap">
+<h2>Book an appointment</h2>
+<form id="bf" onsubmit="return false">
+<label>Name<input type="text" name="name" autocomplete="name"></label>
+<label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
+<label>Preferred day<input type="date" name="day"></label>
+<label>Preferred time<input type="time" name="time"></label>
+<label>Notes<textarea name="notes" rows="3"></textarea></label>
+<button type="button" class="btn red" id="demoBtn" style="transform:none">Request appointment</button>
+<div id="msg" role="status"></div>
+</form>
+<p class="note">This is a sample of how online booking could work.</p>
+</div>
+</section>
+
+<footer>
+<b>Madame Beaute</b>
+<p>Sample homepage concept made by a third party. Not their official website.</p>
+</footer>
+
+<a class="callbar" href="tel:+13178835947">📞 Call</a>
+
+<script>
+var mb=document.getElementById('mb'),menu=document.getElementById('menu');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.classList.remove('open');mb.setAttribute('aria-expanded',false)})});
+document.getElementById('demoBtn').addEventListener('click',function(){var m=document.getElementById('msg');m.textContent='Demo only: online booking is not connected yet.';m.style.display='block'});
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.fade').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
